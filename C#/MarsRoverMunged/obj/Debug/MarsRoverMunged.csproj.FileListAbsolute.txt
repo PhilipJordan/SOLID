@@ -1,6 +1,0 @@
-C:\github\WP7\katas\MarsRoverKata\MarsRoverMunged\bin\Debug\MarsRoverMunged.exe.config
-C:\github\WP7\katas\MarsRoverKata\MarsRoverMunged\bin\Debug\MarsRoverMunged.exe
-C:\github\WP7\katas\MarsRoverKata\MarsRoverMunged\bin\Debug\MarsRoverMunged.pdb
-C:\github\WP7\katas\MarsRoverKata\MarsRoverMunged\obj\Debug\MarsRoverMunged.csprojResolveAssemblyReference.cache
-C:\github\WP7\katas\MarsRoverKata\MarsRoverMunged\obj\Debug\MarsRoverMunged.exe
-C:\github\WP7\katas\MarsRoverKata\MarsRoverMunged\obj\Debug\MarsRoverMunged.pdb
