@@ -1,0 +1,14 @@
+C:\github\WP7\katas\MarsRoverKata\UnitTest\bin\Debug\UnitTest.dll
+C:\github\WP7\katas\MarsRoverKata\UnitTest\bin\Debug\UnitTest.pdb
+C:\github\WP7\katas\MarsRoverKata\UnitTest\bin\Debug\FluentAssertions.dll
+C:\github\WP7\katas\MarsRoverKata\UnitTest\bin\Debug\MarsRoverKata.exe
+C:\github\WP7\katas\MarsRoverKata\UnitTest\bin\Debug\Moq.dll
+C:\github\WP7\katas\MarsRoverKata\UnitTest\bin\Debug\nunit.framework.dll
+C:\github\WP7\katas\MarsRoverKata\UnitTest\bin\Debug\MarsRoverKata.pdb
+C:\github\WP7\katas\MarsRoverKata\UnitTest\bin\Debug\FluentAssertions.pdb
+C:\github\WP7\katas\MarsRoverKata\UnitTest\bin\Debug\FluentAssertions.xml
+C:\github\WP7\katas\MarsRoverKata\UnitTest\bin\Debug\Moq.xml
+C:\github\WP7\katas\MarsRoverKata\UnitTest\bin\Debug\nunit.framework.xml
+C:\github\WP7\katas\MarsRoverKata\UnitTest\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache
+C:\github\WP7\katas\MarsRoverKata\UnitTest\obj\Debug\UnitTest.dll
+C:\github\WP7\katas\MarsRoverKata\UnitTest\obj\Debug\UnitTest.pdb
