@@ -1,0 +1,9 @@
+C:\katas\C#\MarsRover\MarsRoverMunged\bin\Debug\MarsRoverMunged.exe.config
+C:\katas\C#\MarsRover\MarsRoverMunged\bin\Debug\MarsRoverMunged.exe
+C:\katas\C#\MarsRover\MarsRoverMunged\bin\Debug\MarsRoverMunged.pdb
+C:\katas\C#\MarsRover\MarsRoverMunged\obj\Debug\MarsRover.csprojResolveAssemblyReference.cache
+C:\katas\C#\MarsRover\MarsRoverMunged\obj\Debug\MarsRoverMunged.exe
+C:\katas\C#\MarsRover\MarsRoverMunged\obj\Debug\MarsRoverMunged.pdb
+C:\github\PhilipJordan\SOLID\C#\MarsRover\MarsRoverMunged\bin\Debug\MarsRoverMunged.exe.config
+C:\github\PhilipJordan\SOLID\C#\MarsRover\MarsRoverMunged\obj\Debug\MarsRoverMunged.exe
+C:\github\PhilipJordan\SOLID\C#\MarsRover\MarsRoverMunged\obj\Debug\MarsRoverMunged.pdb
