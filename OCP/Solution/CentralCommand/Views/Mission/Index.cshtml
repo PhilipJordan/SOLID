@@ -1,0 +1,22 @@
+﻿@model ATDD_and_MVC.Models.BasicViewModel
+
+
+<div class="controlPanel">
+    @Html.ActionLink("Ima Action Link", "Index")
+    @Html.Label(Model.LinkResult)<br />
+    @Html.CheckBox("IsFoo", true)
+</div>
+<div class="terrainMap">
+    @foreach(var row in Model.Map)
+    {
+        for (int columnIndex = 0; columnIndex < row.Count; columnIndex++)
+        { 
+            var rowIndex = Model.Map.IndexOf(row);
+                
+            var id = rowIndex + "_" + columnIndex;
+            var imagePath = "~/Images/" + row[columnIndex];
+                
+            <img id="@id" src="@Url.Content(imagePath)" alt="Image" />
+        }
+    }
+</div>

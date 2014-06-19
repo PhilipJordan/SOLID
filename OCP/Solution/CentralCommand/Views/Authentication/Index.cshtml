@@ -1,0 +1,22 @@
+﻿@model ATDD_and_MVC.Models.LoginViewModel
+
+<section style="text-align:center">
+@using (Html.BeginForm())
+{
+<div>
+    <div>
+        @Html.LabelFor(m => m.UserName)<br />
+        @Html.TextBoxFor(m => m.UserName)<br />
+        @Html.ValidationMessageFor(m => m.UserName)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Password)<br />
+        @Html.PasswordFor(m => m.Password)<br />
+        @Html.ValidationMessageFor(m => m.Password)
+    </div>
+    
+    <input id="loginButton" type="submit" value="Log In" />
+    @Html.ValidationSummary(false)  @*true), "Login failed. Check yourself!")*@
+</div>
+}
+</section>

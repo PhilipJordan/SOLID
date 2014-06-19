@@ -1,0 +1,119 @@
+﻿@model ATDD_and_MVC.Models.BasicViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Basic ATDD Testing</title>
+    <style>
+        /*div
+        {
+            margin: 5px;
+        }
+
+
+        .top-margin
+        {
+            margin-top:20px;
+        }
+
+
+        .first
+        {
+            min-width:300px;
+            min-height:300px;
+            float:left;
+            display:inline-block;
+            border:1px solid red;
+        }
+
+        .second
+        {
+            min-width:300px;
+            min-height:300px;
+            float:left;
+            display:inline-block;
+            border:1px solid blue;
+        }
+
+
+        body
+        {
+            background-color:#1A0000;
+            color:#AC3030;
+        }*/
+        .terrainMap img
+        {
+            float:left;
+            display:block;
+            padding:0;
+            margin:0;
+            width:2%;
+            height:2%;
+        }
+        a:link
+        {
+            color:cyan;
+        }
+        a:visited
+        {
+            color:#A31919;
+        }
+
+        .controlPanel
+        {
+            max-width:30%;
+            float:left;
+            display:inline-block;
+        }
+
+        .terrainMap
+        {
+            max-width:70%;
+            float:left;
+            display:inline-block;
+        }
+
+    </style>
+</head>
+<body>
+    @*<div class="top-margin">
+        @Html.ActionLink("Ima Action Link", "Index")
+        @Html.Label(Model.LinkResult)<br />
+        @Html.CheckBox("IsFoo", true)
+
+        
+
+    </div>
+    <br /><br /><br /><br /><br /><br />
+    <div class="first"></div>
+    <div class="second"></div>*@
+  @**@   
+   <div class="controlPanel">
+        @Html.ActionLink("Ima Action Link", "Index")
+        @Html.Label(Model.LinkResult)<br />
+        @Html.CheckBox("IsFoo", true)
+    </div>
+    <div class="terrainMap">
+        @foreach(var row in Model.Map)
+        {
+            for (int columnIndex = 0; columnIndex < row.Count; columnIndex++)
+            { 
+                var rowIndex = Model.Map.IndexOf(row);
+                
+                var id = rowIndex + "_" + columnIndex;
+                var imagePath = "~/Images/" + row[columnIndex];
+                
+                <img id="@id" src="@Url.Content(imagePath)" alt="Image" />
+            }
+        }
+
+    </div>
+    
+</body>
+</html>

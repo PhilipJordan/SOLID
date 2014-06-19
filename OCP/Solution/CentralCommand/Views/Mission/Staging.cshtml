@@ -1,0 +1,72 @@
+﻿@model ATDD_and_MVC.Models.BasicViewModel
+
+@{
+    Layout = "../Shared/_Layout.cshtml";
+}
+<style>
+    
+    .terrainMap img
+    {
+        float:left;
+        display:block;
+        padding:0;
+        margin:0;
+        width:2%;
+        height:2%;
+    }
+    
+    .controlPanel
+    {
+        max-width:30%;
+        float:left;
+        display:inline-block;
+    }
+
+        .controlPanel input, span, select
+        {
+            width:90%;
+            padding:5px;
+        }
+
+    .terrainMap
+    {
+        max-width:70%;
+        float:left;
+        display:inline-block;
+    }
+
+</style>
+<script type="text/javascript" src="~/Scripts/RoverScripts/MissionScripts.js" ></script>
+
+<section style="text-align:center">
+    <h3 id="MissionControl">Mission Control</h3>
+   <div class="controlPanel">
+       @Html.ActionLink("Ima Action Link", "Index")
+       @Html.Label(Model.LinkResult)<br />
+       @Html.CheckBox("IsFoo", true)
+       @Html.TextBox("Bazz")
+
+       
+    </div>
+    <div class="terrainMap">
+        @foreach(var row in Model.Map)
+        {
+            for (int columnIndex = 0; columnIndex < row.Count; columnIndex++)
+            { 
+                var rowIndex = Model.Map.IndexOf(row);
+                
+                var id = rowIndex + "_" + columnIndex;
+                var imagePath = "~/Images/" + row[columnIndex];
+                
+                <img id="@id" class="mapImage" src="@Url.Content(imagePath)" alt="Image" />
+            }
+        }
+
+    </div>
+</section>
+<script type="text/javascript">
+    $(document).ready(function () {
+        //PreparePage();
+        
+    });
+</script>
