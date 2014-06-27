@@ -3,15 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using ATDD_and_MVC.Models;
+using CentralCommand.Models;
 
-namespace ATDD_and_MVC.Controllers
+namespace CentralCommand.Controllers
 {
     public class AuthenticationController : Controller
     {
         
         public ActionResult Index()
         {
+            //HACK - skipping the login screen for the 'O' in SOLID talk
+            return RedirectToAction("Staging", "Mission");
+
+
             LoginViewModel viewModel = new LoginViewModel();
 
             return View(viewModel);
@@ -20,6 +24,10 @@ namespace ATDD_and_MVC.Controllers
         [HttpPost]
         public ActionResult Index(LoginViewModel viewModel)
         {
+
+            
+
+
             //bool bothHaveValues = !String.IsNullOrEmpty(viewModel.UserName) && !String.IsNullOrEmpty(viewModel.Password);
 
             //if (bothHaveValues && !viewModel.UserName.ToLower().Equals("red") && !viewModel.Password.Equals("Rover123"))

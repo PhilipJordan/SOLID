@@ -5,7 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace ATDD_and_MVC.Controllers
+namespace CentralCommand.Controllers
 {
     public class ValuesController : ApiController
     {

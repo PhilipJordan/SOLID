@@ -1,32 +1,28 @@
-﻿@model ATDD_and_MVC.Models.BasicViewModel
+﻿@model CentralCommand.Models.MissionViewModel
 
 @{
     Layout = "../Shared/_Layout.cshtml";
 }
 <style>
     
-    .terrainMap img
+    textarea
     {
-        float:left;
-        display:block;
-        padding:0;
-        margin:0;
-        width:2%;
-        height:2%;
-    }
-    
-    .controlPanel
-    {
-        max-width:30%;
-        float:left;
-        display:inline-block;
+        height:100px;
+        overflow:hidden;
     }
 
-        .controlPanel input, span, select
-        {
-            width:90%;
-            padding:5px;
-        }
+    .controlContainer
+    {
+        /*border:1px solid #00FF00;*/
+    }
+
+    .mapContainer
+    {
+        padding:50px 50px 50px 50px;
+        margin: 10px;
+        /*border: solid 1px #dd0000;*/
+        clear:right;
+    }
 
     .terrainMap
     {
@@ -35,38 +31,142 @@
         display:inline-block;
     }
 
-</style>
-<script type="text/javascript" src="~/Scripts/RoverScripts/MissionScripts.js" ></script>
+        .terrainMap img
+        {
+            float:left;
+            display:block;
+            padding:0;
+            margin:0;
+            width:2%;
+            height:2%;
+        }
+
+    
+    .controlPanel
+    {
+        max-width:30%;
+        float:left;
+        display:inline-block;
+    }
+
+        .controlPanel input[type="text"], span, select, textarea
+        {
+            width:90%;
+            padding:5px;
+        }
+
+
+        .controlPanel ul
+        {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            text-align: center;
+        }
+
+            .controlPanel ul li
+            {
+                display:inline-block;
+                color: #fff;
+                background-color: #036;
+                padding: .2em 1em;
+                margin: 4px 1px;
+                border-radius:10px;
+                
+            }
+                           
+              
+
+
+    
+input[type="submit"] {
+    margin-top:5px;
+	background-color:#f24537;
+    border-radius:30px;
+	text-indent:0px;
+	border:1px solid #d02718;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial Black;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	height:30px;
+	line-height:20px;
+	width:50px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:3px 5px 2px #810e05;
+}
+input[type="submit"]:hover {
+	background-color:#c62d1f;
+}
+input[type="submit"]:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+</style>@**@
 
 <section style="text-align:center">
     <h3 id="MissionControl">Mission Control</h3>
-   <div class="controlPanel">
-       @Html.ActionLink("Ima Action Link", "Index")
-       @Html.Label(Model.LinkResult)<br />
-       @Html.CheckBox("IsFoo", true)
-       @Html.TextBox("Bazz")
+    <div class="controlContrainer">
+        
+        <div class="controlPanel">
+          @* @Html.ActionLink("Ima Action Link", "Index")
+           @Html.Label(Model.LinkResult)<br />
+           @Html.CheckBox("IsFoo", true)
+           @Html.TextBox("Bazz")
 
-       
+           @Html.TextArea("obstacles")*@
+
+
+
+            <ul id="newObstacles"></ul>
+            <input id="addObstacles" class="missionButton" type="submit" value="Add" />
+
+            <br /><br /><br />
+            <ul id="newCommands">
+                <li data-item="f">forward</li>
+            </ul>
+            <input id="forward" type="image" value="Forward" alt="Forward Button" src="~/Images/forward.png" />
+            <br />
+            <input id="left" type="image" value="Left" alt="Turn Left Button" src="~/Images/left.png" />
+            <input id="right" type="image" value="Right" alt="Turn Right Button" src="~/Images/right.png" />
+            <br />
+            <input id="backward" type="image" value="Backward" alt="Backward Button" src="~/Images/backward.png" />
+            <br />
+            <input id="sendCommands" class="missionButton" type="submit" value="Send Commands" />
+        </div>
     </div>
-    <div class="terrainMap">
-        @foreach(var row in Model.Map)
-        {
-            for (int columnIndex = 0; columnIndex < row.Count; columnIndex++)
-            { 
-                var rowIndex = Model.Map.IndexOf(row);
+    <div class="mapContainer">
+        
+        <div class="terrainMap">
+            @foreach(var row in Model.Map)
+            {
+                for (int columnIndex = 0; columnIndex < row.Count; columnIndex++)
+                { 
+                    var rowIndex = Model.Map.IndexOf(row);
                 
-                var id = rowIndex + "_" + columnIndex;
-                var imagePath = "~/Images/" + row[columnIndex];
+                    var id = columnIndex + "_" + rowIndex;
+                    var imagePath = "~/Images/" + row[columnIndex];
                 
-                <img id="@id" class="mapImage" src="@Url.Content(imagePath)" alt="Image" />
+                    <img id="@id" class="mapImage" src="@Url.Content(imagePath)" alt="Image" />
+                }
             }
-        }
 
+        </div>
     </div>
 </section>
 <script type="text/javascript">
     $(document).ready(function () {
         //PreparePage();
-        
+        //$(".terrainMap input").click(function()  {
+        //    var element = this;
+        //});
+        pagePrep();
+        Foo();
     });
 </script>

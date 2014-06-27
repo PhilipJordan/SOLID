@@ -3,16 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using ATDD_and_MVC.Models;
+using CentralCommand.Models;
 
-namespace ATDD_and_MVC.Controllers
+namespace CentralCommand.Controllers
 {
     public class HomeController : Controller
     {
         
 
-        public ActionResult Index(BasicViewModel viewModel)
+        public ActionResult Index(MissionViewModel viewModel)
         {
+            
+
             //if (viewModel != null)
             //    return View(viewModel);
 
@@ -56,7 +58,7 @@ namespace ATDD_and_MVC.Controllers
         }
 
         [HttpPost]
-        public ActionResult DoAction(BasicViewModel viewModel)
+        public ActionResult DoAction(MissionViewModel viewModel)
         {
             if(viewModel != null)
                 viewModel.LinkResult = "Link clicked";

@@ -7,9 +7,9 @@ using System.Linq;
 using System.Net.Http.Headers;
 using System.Web.Http;
 using System.Web.Http.Description;
-using ATDD_and_MVC.Areas.HelpPage.Models;
+using CentralCommand.Areas.HelpPage.Models;
 
-namespace ATDD_and_MVC.Areas.HelpPage
+namespace CentralCommand.Areas.HelpPage
 {
     public static class HelpPageConfigurationExtensions
     {

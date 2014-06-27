@@ -1,4 +1,4 @@
-namespace ATDD_and_MVC.Areas.HelpPage
+namespace CentralCommand.Areas.HelpPage
 {
     /// <summary>
     /// Indicates whether the sample is used for request or response

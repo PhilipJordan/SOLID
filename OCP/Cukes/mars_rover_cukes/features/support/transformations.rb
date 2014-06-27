@@ -1,5 +1,5 @@
 Transform /^center of the map$/ do |something|
-	'24_24'
+	'25_25'
 end
 
 Transform /^location "(.*?)"$/ do |coordinates|

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 
-namespace ATDD_and_MVC
+namespace CentralCommand
 {
     public static class WebApiConfig
     {

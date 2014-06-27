@@ -62,17 +62,18 @@ namespace UnitTest
         [Test]
         public void WhenMarsIsCreated_ThenSurfaceBoundsShouldBeDefined()
         {
-            mars.Bounds.Height.Should().Be(100);
-            mars.Bounds.Width.Should().Be(100);
+            mars.Bounds.Height.Should().Be(50);
+            mars.Bounds.Width.Should().Be(50);
         }
     }
 
     public class WhileWorkingWithRover : GivenRover
     {
         [Test]
-        public void WhenRoverIsCreated_ThenLocationShouldBeZero()
+        public void WhenRoverIsCreated_ThenLocationShouldBeTheCenterOfThePlanet()
         {
-            rover.Location.ShouldBeEquivalentTo<Point>(new Point(0, 0));
+            var expectedLocation = mars.CenterOfThePlanet;
+            rover.Location.ShouldBeEquivalentTo<Point>(expectedLocation);
         }
 
         [Test]
@@ -98,7 +99,7 @@ namespace UnitTest
             rover.Facing = Direction.South;
             rover.MoveForward();
 
-            rover.Location.Should().Be(new Point(0, 100));
+            rover.Location.Should().Be(new Point(0, 50));
         }
 
         [Test]
@@ -108,7 +109,7 @@ namespace UnitTest
             rover.Facing = Direction.West;
             rover.MoveForward();
 
-            rover.Location.Should().Be(new Point(100, 0));
+            rover.Location.Should().Be(new Point(50, 0));
         }
 
         [Test]
@@ -220,88 +221,88 @@ namespace UnitTest
         public void WhenRoverIsFacingNorthAndMovesForward_ThenRoverShouldMoveNorth()
         {
             SetRoverFacing(Direction.North);
-            SetRoverLocation(new Point(50, 50));
+            SetRoverLocation(new Point(24, 24));
             AddCommandToCommander(new ForwardCommand(rover));
             ExecuteCommands();
 
-            rover.Location.ShouldBeEquivalentTo<Point>(new Point(50, 51));
+            rover.Location.ShouldBeEquivalentTo<Point>(new Point(24, 25));
         }
 
         [Test]
         public void WhenRoverIsFacingEastAndMovesForward_ThenRoverShouldMoveEast()
         {
             SetRoverFacing(Direction.East);
-            SetRoverLocation(new Point(50, 50));
+            SetRoverLocation(new Point(24, 24));
             AddCommandToCommander(new ForwardCommand(rover));
             ExecuteCommands();
 
-            rover.Location.ShouldBeEquivalentTo<Point>(new Point(51, 50));
+            rover.Location.ShouldBeEquivalentTo<Point>(new Point(25, 24));
         }
 
         [Test]
         public void WhenRoverIsFacingSouthAndMovesForward_ThenRoverShouldMoveSouth()
         {
             SetRoverFacing(Direction.South);
-            SetRoverLocation(new Point(50, 50));
+            SetRoverLocation(new Point(24, 24));
             AddCommandToCommander(new ForwardCommand(rover));
             ExecuteCommands();
 
-            rover.Location.ShouldBeEquivalentTo<Point>(new Point(50, 49));
+            rover.Location.ShouldBeEquivalentTo<Point>(new Point(24, 23));
         }
 
         [Test]
         public void WhenRoverIsFacingWestAndMovesForward_ThenRoverShouldMoveWest()
         {
             SetRoverFacing(Direction.West);
-            SetRoverLocation(new Point(50, 50));
+            SetRoverLocation(new Point(24, 24));
             AddCommandToCommander(new ForwardCommand(rover));
             ExecuteCommands();
 
-            rover.Location.ShouldBeEquivalentTo<Point>(new Point(49, 50));
+            rover.Location.ShouldBeEquivalentTo<Point>(new Point(23, 24));
         }
 
         [Test]
         public void WhenRoverIsFacingNorthAndMovesBackward_ThenRoverShouldMoveSouth()
         {
             SetRoverFacing(Direction.North);
-            SetRoverLocation(new Point(50, 50));
+            SetRoverLocation(new Point(24, 24));
             AddCommandToCommander(new BackwardCommand(rover));
             ExecuteCommands();
 
-            rover.Location.ShouldBeEquivalentTo<Point>(new Point(50, 49));
+            rover.Location.ShouldBeEquivalentTo<Point>(new Point(24, 23));
         }
 
         [Test]
         public void WhenRoverIsFacingEastAndMovesBackward_ThenRoverShouldMoveWest()
         {
             SetRoverFacing(Direction.East);
-            SetRoverLocation(new Point(50, 50));
+            SetRoverLocation(new Point(24, 24));
             AddCommandToCommander(new BackwardCommand(rover));
             ExecuteCommands();
 
-            rover.Location.ShouldBeEquivalentTo<Point>(new Point(49, 50));
+            rover.Location.ShouldBeEquivalentTo<Point>(new Point(23, 24));
         }
 
         [Test]
         public void WhenRoverIsFacingSouthAndMovesBackward_ThenRoverShouldMoveNorth()
         {
             SetRoverFacing(Direction.South);
-            SetRoverLocation(new Point(50, 50));
+            SetRoverLocation(new Point(24, 24));
             AddCommandToCommander(new BackwardCommand(rover));
             ExecuteCommands();
 
-            rover.Location.ShouldBeEquivalentTo<Point>(new Point(50, 51));
+            rover.Location.ShouldBeEquivalentTo<Point>(new Point(24, 25));
         }
 
         [Test]
         public void WhenRoverIsFacingWestAndMovesBackward_ThenRoverShouldMoveEast()
         {
             SetRoverFacing(Direction.West);
-            SetRoverLocation(new Point(50, 50));
+            SetRoverLocation(new Point(24, 24));
             AddCommandToCommander(new BackwardCommand(rover));
             ExecuteCommands();
 
-            rover.Location.ShouldBeEquivalentTo<Point>(new Point(51, 50));
+            rover.Location.ShouldBeEquivalentTo<Point>(new Point(25, 24));
         }
 
 
@@ -343,25 +344,25 @@ namespace UnitTest
         {
             commander.ExecuteCommands();
 
-            rover.Location.Should().Be(new Point(1, 100));
+            rover.Location.Should().Be(new Point(26, 24));
         }
 
         [Test]
         public void WhenObstacleIsInForwardPath()
         {
-            mars.Accept(new Obstacle(new Point(0, 1)));
+            mars.Accept(new Obstacle(new Point(25, 28)));
             commander.ExecuteCommands();
 
-            rover.Location.Should().Be(new Point(0, 0));
+            rover.Location.Should().Be(new Point(25, 27));
         }
 
         [Test]
         public void WhenObstacleIsInBackwardPath()
         {
-            mars.Accept(new Obstacle(new Point(0, 100)));
+            mars.Accept(new Obstacle(new Point(25, 24)));
             commander.ExecuteCommands();
 
-            rover.Location.Should().Be(new Point(0, 0));
+            rover.Location.Should().Be(new Point(25, 25));
         }
     }
   

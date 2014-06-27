@@ -4,7 +4,7 @@ using System.Net.Http.Headers;
 using System.Web;
 using System.Web.Http;
 
-namespace ATDD_and_MVC.Areas.HelpPage
+namespace CentralCommand.Areas.HelpPage
 {
     /// <summary>
     /// Use this class to customize the Help Page.

@@ -29,15 +29,15 @@ namespace MarsRoverKata
 
         private static void ProceedWithMission(Rover rover, MissionManager mission, string input)
         {
-                if (input.Equals("h", StringComparison.CurrentCultureIgnoreCase))
-                {
-                    PrintRoverInstructions();
-                }
-                else
-                {
+            if (input.Equals("h", StringComparison.CurrentCultureIgnoreCase))
+            {
+                PrintRoverInstructions();
+            }
+            else
+            {
                 ProcessCommands(mission, input);
-                    OutputMissionStatus(rover);
-                }
+                OutputMissionStatus(rover);
+            }
         }
 
         private static MissionManager CreateMission(Rover rover)
@@ -60,7 +60,7 @@ namespace MarsRoverKata
             CaptureObstacles(mars);
             return mars;
         }
-                
+
         private static void CaptureObstacles(Mars mars)
         {
             PrintObstacleInstructions();
@@ -82,11 +82,11 @@ namespace MarsRoverKata
         }
 
         private static Obstacle CreateObstacle(string input)
-            {
-                var coordinates = input.Split(',');
-                Point location = new Point(int.Parse(coordinates[0]), int.Parse(coordinates[1]));
+        {
+            var coordinates = input.Split(',');
+            Point location = new Point(int.Parse(coordinates[0]), int.Parse(coordinates[1]));
             return new Obstacle(location);
-            }
+        }
 
         private static void ProcessCommands(MissionManager mission, string input)
         {

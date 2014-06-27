@@ -10,6 +10,7 @@ namespace MarsRoverKata
     public class Mars 
     {
         public Size Bounds { get; private set; }
+        public Point CenterOfThePlanet { get; set; }
 
         private Point Position { get; set; }
         private List<IObstacle> _Obstacles { get; set; }
@@ -20,7 +21,8 @@ namespace MarsRoverKata
 
         public Mars()
         {
-            Bounds = new Size(100, 100);
+            Bounds = new Size(50, 50); //(100,100);
+            CenterOfThePlanet = new Point(Bounds.Width / 2, Bounds.Height / 2);
             _Obstacles = new List<IObstacle>();
         }
 

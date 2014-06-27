@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace ATDD_and_MVC
+namespace CentralCommand
 {
     public class RouteConfig
     {

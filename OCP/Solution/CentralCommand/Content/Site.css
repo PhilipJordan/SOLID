@@ -427,7 +427,7 @@ label.checkbox {
     display: inline;
 }
 
-input, textarea {
+/*input, textarea {
     border: 1px solid #e2e2e2;
     background: #fff;
     color: #333;
@@ -435,7 +435,7 @@ input, textarea {
     margin: 5px 0 6px 0;
     padding: 5px;
     width: 300px;
-}
+}*/
 
 textarea {
     font-family: inherit;
@@ -452,7 +452,7 @@ textarea {
         width: auto;
     }
 
-    input[type="submit"],
+    /*input[type="submit"],*/
     input[type="button"],
     button {
         background-color: #d3dce0;
@@ -465,7 +465,7 @@ textarea {
         width: auto;
     }
 
-    td input[type="submit"],
+    /*td input[type="submit"],*/
     td input[type="button"],
     td button {
         font-size: 1em;
@@ -756,4 +756,109 @@ tr.pager td {
         footer p {
             margin: 0;
         }
+
+
+    
+
+
+
+
+
+    /*MARS ROVER STUFF*/
+    /*
+        textarea
+    {
+        height:100px;
+        overflow:hidden;
+    }
+
+    
+
+    .mapContainer
+    {
+        padding:50px 50px 50px 50px;
+        margin: 10px;
+        clear:right;
+    }
+
+    .terrainMap
+    {
+        max-width:70%;
+        float:left;
+        display:inline-block;
+    }
+
+        .terrainMap img
+        {
+            float:left;
+            display:block;
+            padding:0;
+            margin:0;
+            width:2%;
+            height:2%;
+        }
+
+    
+    .controlPanel
+    {
+        max-width:30%;
+        float:left;
+        display:inline-block;
+    }
+
+        .controlPanel input[type="text"], span, select, textarea
+        {
+            width:90%;
+            padding:5px;
+        }
+
+
+        .controlPanel ul
+        {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            text-align: center;
+        }
+
+            .controlPanel ul li
+            {
+                display:inline-block;
+                color: #fff;
+                background-color: #036;
+                padding: .2em 1em;
+                margin: 4px 1px;
+                border-radius:10px;
+                
+            }
+    
+input[type="submit"] {
+    margin-top:5px;
+	background-color:#f24537;
+    border-radius:30px;
+	text-indent:0px;
+	border:1px solid #d02718;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial Black;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	height:30px;
+	line-height:20px;
+	width:50px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:3px 5px 2px #810e05;
+}
+input[type="submit"]:hover {
+	background-color:#c62d1f;
+}
+input[type="submit"]:active {
+	position:relative;
+	top:1px;
+}
+*/
+
+
 }

@@ -11,7 +11,7 @@
     <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ATDD_and_MVC</RootNamespace>
+    <RootNamespace>CentralCommand</RootNamespace>
     <AssemblyName>ATDD_and_MVC</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
@@ -167,7 +167,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\BasicViewModel.cs" />
+    <Compile Include="Models\FooViewModel.cs" />
+    <Compile Include="Models\MissionResponseViewModel.cs" />
+    <Compile Include="Models\MissionViewModel.cs" />
     <Compile Include="Models\LoginViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -241,8 +243,12 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Images\backward.png" />
+    <Content Include="Images\forward.png" />
     <Content Include="Images\Ground.png" />
+    <Content Include="Images\left.png" />
     <Content Include="Images\Obstical.png" />
+    <Content Include="Images\right.png" />
     <Content Include="Images\Rover.png" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
@@ -291,6 +297,7 @@
     <Content Include="Views\Authentication\Index.cshtml" />
     <Content Include="Views\Mission\Index.cshtml" />
     <Content Include="Views\Mission\Staging.cshtml" />
+    <Content Include="Views\Authentication\Foo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

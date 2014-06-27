@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace ATDD_and_MVC.Models
+namespace CentralCommand.Models
 {
     public class LoginViewModel 
     {
@@ -17,5 +17,8 @@ namespace ATDD_and_MVC.Models
         [DataType(DataType.Password)]
         [DisplayName("Password")]
         public string Password { get; set; }
+
+        public FooViewModel Foo { get; set; }
+
     }
 }

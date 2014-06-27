@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace ATDD_and_MVC
+namespace CentralCommand
 {
     public class FilterConfig
     {

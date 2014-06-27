@@ -22,7 +22,7 @@ namespace MarsRoverKata
         };
 
         public Rover(Mars mars)
-            :this(mars, new Point(0,0))
+            :this(mars, mars.CenterOfThePlanet)// new Point(0,0))
         { }
 
         public Rover(Mars mars, Point landingPoint)

@@ -1,7 +1,7 @@
 using System.Web.Http;
 using System.Web.Mvc;
 
-namespace ATDD_and_MVC.Areas.HelpPage
+namespace CentralCommand.Areas.HelpPage
 {
     public class HelpPageAreaRegistration : AreaRegistration
     {
