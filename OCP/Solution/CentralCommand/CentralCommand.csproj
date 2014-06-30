@@ -247,7 +247,7 @@
     <Content Include="Images\forward.png" />
     <Content Include="Images\Ground.png" />
     <Content Include="Images\left.png" />
-    <Content Include="Images\Obstical.png" />
+    <Content Include="Images\Obstacle.png" />
     <Content Include="Images\right.png" />
     <Content Include="Images\Rover.png" />
     <Content Include="Scripts\jquery-1.8.2.js" />

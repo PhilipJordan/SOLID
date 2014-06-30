@@ -8,7 +8,6 @@ namespace CentralCommand.Models
 {
     public class MissionViewModel
     {
-        public string LinkResult { get; set; }
         public List<List<string>> Map { get; set; }
 
 

@@ -10,9 +10,47 @@ namespace CentralCommand.Controllers
 {
     public class MissionController : Controller
     {
-        public List<List<string>> Map { get; set; }
-        public Rover Vehicle { get; set; }
-        public Mars Planet { get; set; }
+        public List<List<string>> Map 
+        { 
+            get 
+            {
+                if (ViewData["Map"] == null)
+                    ViewData["Map"] = new List<List<string>>();
+
+                return (List<List<string>>)ViewData["Map"];
+            } 
+            set {
+                ViewData["Map"] = value;
+            } 
+        }
+        public Rover Vehicle
+        {
+            get
+            {
+                if (ViewData["Rover"] == null)
+                    ViewData["Rover"] = new Rover(Planet);
+
+                return (Rover)ViewData["Rover"];
+            }
+            set
+            {
+                ViewData["Rover"] = value;
+            }
+        }
+        public Mars Planet
+        {
+            get
+            {
+                if (ViewData["Mars"] == null)
+                    ViewData["Mars"] = new Mars();
+
+                return (Mars)ViewData["Mars"];
+            }
+            set
+            {
+                ViewData["Mars"] = value;
+            }
+        }
 
         public ActionResult Index()
         {
@@ -24,22 +62,17 @@ namespace CentralCommand.Controllers
             Planet = new Mars();
             Vehicle = new Rover(Planet);
 
-
-
-
-            //Random rng = new Random(DateTime.Now.Millisecond);
             var initialMap = new List<List<string>>();
             for (int i = 0; i < 50; i++)
             {
                 if (i != Vehicle.Location.Y)
-                    initialMap.Add(GetGroundRow());   //GetObsticalRow(rng));
+                    initialMap.Add(GetGroundRow());   
                 else
                     initialMap.Add(GetRoverRow(Vehicle));
             }
 
             viewModel.Map = initialMap;
 
-            viewModel.LinkResult = "Just some text about nothin'";
 
             return PartialView(viewModel);
         }
@@ -47,17 +80,19 @@ namespace CentralCommand.Controllers
         [HttpPost]
         public JsonResult UpdateObstacles(List<string> locations)
         {
-            //locations are capable of having duplicates
             var distinctLocations = (from location in locations 
                        select location).Distinct().ToList<string>();
-
-
-
 
             return Json(new MissionResponseViewModel { Success = true, LocationUpdates = distinctLocations });
         }
 
+        [HttpPost]
+        public JsonResult SendCommands(List<string> commands)
+        {
+            var rovers_new_position = "";
 
+            return Json(new MissionResponseViewModel { Success = true, LocationUpdates = new List<string>() { rovers_new_position }});
+        }
 
 
         #region Fake Data
@@ -74,14 +109,14 @@ namespace CentralCommand.Controllers
             return result;
         }
 
-        private List<String> GetObsticalRow(Random rng)
-        {
-            var result = GetGroundRow();
+        //private List<String> GetObstacleRow(Random rng)
+        //{
+        //    var result = GetGroundRow();
 
-            result[rng.Next(0, 50)] = "Obstical.png";
+        //    result[rng.Next(0, 50)] = "Obstacle.png";
 
-            return result;
-        }
+        //    return result;
+        //}
 
         private List<String> GetRoverRow(Rover vehicle)//Random rng)
         {

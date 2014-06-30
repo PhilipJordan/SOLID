@@ -20,7 +20,6 @@
     {
         padding:50px 50px 50px 50px;
         margin: 10px;
-        /*border: solid 1px #dd0000;*/
         clear:right;
     }
 
@@ -44,7 +43,7 @@
     
     .controlPanel
     {
-        max-width:30%;
+        max-width:300px;
         float:left;
         display:inline-block;
     }
@@ -74,69 +73,83 @@
                 border-radius:10px;
                 
             }
-                           
-              
 
+    td
+    {
+        padding:0;
+        margin:0;
+    }  
+    
+    td input
+    {
+        height: 50px;
+        width: 50px;
+    }
+    
+    input[type="submit"] {
+        margin-top:5px;
+	    background-color:#f24537;
+        border-radius:30px;
+	    text-indent:0px;
+	    border:1px solid #d02718;
+	    display:inline-block;
+	    color:#ffffff;
+	    font-family:Arial Black;
+	    font-size:15px;
+	    font-weight:bold;
+	    font-style:normal;
+	    height:30px;
+	    line-height:20px;
+	    width:150px;
+	    text-decoration:none;
+	    text-align:center;
+	    text-shadow:3px 5px 2px #810e05;
+    }
+    input[type="submit"]:hover {
+	    background-color:#c62d1f;
+    }
+    input[type="submit"]:active {
+	    position:relative;
+	    top:1px;
+    }
 
     
-input[type="submit"] {
-    margin-top:5px;
-	background-color:#f24537;
-    border-radius:30px;
-	text-indent:0px;
-	border:1px solid #d02718;
-	display:inline-block;
-	color:#ffffff;
-	font-family:Arial Black;
-	font-size:15px;
-	font-weight:bold;
-	font-style:normal;
-	height:30px;
-	line-height:20px;
-	width:50px;
-	text-decoration:none;
-	text-align:center;
-	text-shadow:3px 5px 2px #810e05;
-}
-input[type="submit"]:hover {
-	background-color:#c62d1f;
-}
-input[type="submit"]:active {
-	position:relative;
-	top:1px;
-}
 
-
-
-</style>@**@
+</style>
 
 <section style="text-align:center">
     <h3 id="MissionControl">Mission Control</h3>
     <div class="controlContrainer">
         
         <div class="controlPanel">
-          @* @Html.ActionLink("Ima Action Link", "Index")
-           @Html.Label(Model.LinkResult)<br />
-           @Html.CheckBox("IsFoo", true)
-           @Html.TextBox("Bazz")
 
-           @Html.TextArea("obstacles")*@
-
-
-
-            <ul id="newObstacles"></ul>
+            <ul id="newObstacles" class="lists"></ul>
             <input id="addObstacles" class="missionButton" type="submit" value="Add" />
 
             <br /><br /><br />
-            <ul id="newCommands">
-                <li data-item="f">forward</li>
-            </ul>
-            <input id="forward" type="image" value="Forward" alt="Forward Button" src="~/Images/forward.png" />
-            <br />
-            <input id="left" type="image" value="Left" alt="Turn Left Button" src="~/Images/left.png" />
-            <input id="right" type="image" value="Right" alt="Turn Right Button" src="~/Images/right.png" />
-            <br />
-            <input id="backward" type="image" value="Backward" alt="Backward Button" src="~/Images/backward.png" />
+            
+            <table>
+                <tr>
+                    <td></td>
+                    <td><input id="forward" type="image" value="Forward" alt="Forward Button" data-field="f" src="~/Images/forward.png" /></td>
+                    <td></td>
+                </tr>
+                
+                <tr>
+                    <td><input id="left" type="image" value="Left" alt="Turn Left Button" data-field="l" src="~/Images/left.png" /></td>
+                    <td></td>
+                    <td><input id="right" type="image" value="Right" alt="Turn Right Button" data-field="r" src="~/Images/right.png" /></td>
+                </tr>
+                
+                <tr>
+                    <td></td>
+                    <td><input id="backward" type="image" value="Backward" alt="Backward Button" data-field="b" src="~/Images/backward.png" /></td>
+                    <td></td>
+                </tr>
+            </table>
+            <br /><br />
+            <ul id="newCommands" class="lists"></ul>
+            
             <br />
             <input id="sendCommands" class="missionButton" type="submit" value="Send Commands" />
         </div>
@@ -162,11 +175,6 @@ input[type="submit"]:active {
 </section>
 <script type="text/javascript">
     $(document).ready(function () {
-        //PreparePage();
-        //$(".terrainMap input").click(function()  {
-        //    var element = this;
-        //});
         pagePrep();
-        Foo();
     });
 </script>

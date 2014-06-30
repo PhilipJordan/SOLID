@@ -10,18 +10,30 @@ function pagePrep() {
     });
 
     $("#addObstacles").click(function () {
+        var element = $("#newObstacles");
         var itemsToSend = new Array();
         var callback = function (index, element) { itemsToSend[index] = $(element).text(); };
 
-        iterateObstacleItems(callback);
+        iterateListItems(callback, element);
         UpdateObstaclesOnServer(itemsToSend, locationUpdateSuccess, wtf);
     });
 
 
-    $("#forward").click(function () {
+    $("input[type='image']").click(function () {
         var element = this;
+        var value = element.value;
+        var field = $(this).data('field');
 
-        $("#newCommands").append('<li>' + location + '</li>');
+        $("#newCommands").append('<li data-field="' + field + '" >' + value + '</li>');
+    });
+
+    $("#sendCommands").click(function () {
+        var element = $("#newCommands");
+        var itemsToSend = new Array();
+        var callback = function (index, element) { itemsToSend[index] = $(element).data('field'); };
+
+        iterateListItems(callback, element);
+        //UpdateObstaclesOnServer(itemsToSend, locationUpdateSuccess, wtf);
     });
 
 
@@ -32,33 +44,49 @@ function pagePrep() {
             var locationsToUpdate = result.LocationUpdates;
 
             $(locationsToUpdate).each(updateMapLocation);
-            emptyObstacleList();
+            emptyListElement($("#newObstacles"));
         }
     }
 
-    function emptyObstacleList()
+    function emptyListElement(element)
     {
-        $("#newObstacles").empty();
+        element.empty();
     }
+
+
 
     function updateMapLocation(index, element)
     {
-        $("img[id='" + element + "']").attr('src', '/Images/Obstical.png');
+        $("img[id='" + element + "']").attr('src', '/Images/Obstacle.png');
     }
 
-    //"Obstical.png"
+    //"Obstacle.png"
     //"Rover.png"
     //"Ground.png"
 
     function wtf()
     {
-        alert("Something went wrong with updating obstacles!");
+        alert("Something went wrong with updating obstacles or sending commands! WTF!");
     }
 
-    function iterateObstacleItems(callback)
+    function iterateListItems(callback, element)
     {
-        $("#newObstacles li").each(function(index, element){
+        $("li", element).each(function(index, element){
             callback(index, element);
+        });
+    }
+
+    function SendCommandsToServer(itemsToSend, callback, wtf)
+    {
+        $.ajax({
+            type: 'post',
+            datatype: 'json',
+            url: "../Mission/SendCommands",
+            data: JSON.stringify({ locations: itemsToSend }),
+            contentType: 'application/json; charset=utf-8',
+            cache: false,
+            success: callback,
+            error: wtf
         });
     }
 
@@ -76,9 +104,4 @@ function pagePrep() {
         });
     }
 
-}
-
-function Foo()
-{
-    var moreFoo = "The most foo";
 }

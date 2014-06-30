@@ -13,19 +13,6 @@ namespace CentralCommand.Controllers
 
         public ActionResult Index(MissionViewModel viewModel)
         {
-            
-
-            //if (viewModel != null)
-            //    return View(viewModel);
-
-            //var imageRow = new List<string>() { "Ground.png", "Rover.png", "Obstical.png" };
-
-            //2 dimentional array of strings
-            //var grid = new List<List<string>>() { 
-            //    imageRow,
-            //    imageRow,
-            //    imageRow
-            //};
 
             //This will be replaced by the Rover code control
             Random rng = new Random(DateTime.Now.Millisecond);
@@ -33,38 +20,17 @@ namespace CentralCommand.Controllers
             for (int i = 0; i < 50; i++)
             {
                 if (i != 24)
-                    map.Add(GetObsticalRow(rng));
+                    map.Add(GetObstacleRow(rng));
                 else
                     map.Add(GetRoverRow(rng));
             }
 
-
             viewModel.Map = map;
-            //foreach(var row in grid)
-            //{
-            //    foreach(var column in row)
-            //    {
-                    
-            //    }
-            //}
-           
-
-
-            
-
-            viewModel.LinkResult = "Just some text about nothin'";
 
             return View(viewModel);
         }
 
-        [HttpPost]
-        public ActionResult DoAction(MissionViewModel viewModel)
-        {
-            if(viewModel != null)
-                viewModel.LinkResult = "Link clicked";
-            return Index(viewModel);
-        }
-
+        
 
         private List<string> GetGroundRow()
         { 
@@ -78,11 +44,11 @@ namespace CentralCommand.Controllers
             return result;
         }
 
-        private List<String> GetObsticalRow(Random rng)
+        private List<String> GetObstacleRow(Random rng)
         {
             var result = GetGroundRow();
 
-            result[rng.Next(0, 50)] = "Obstical.png";
+            result[rng.Next(0, 50)] = "Obstacle.png";
 
             return result;
         }
