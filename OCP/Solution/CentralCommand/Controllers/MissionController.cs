@@ -71,6 +71,8 @@ namespace CentralCommand.Controllers
                     initialMap.Add(GetRoverRow(Vehicle));
             }
 
+            Map = initialMap;
+            
             viewModel.Map = initialMap;
 
 

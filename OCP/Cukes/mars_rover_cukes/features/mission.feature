@@ -1,5 +1,5 @@
 
-
+@missionControl
 Feature: Beginning the Mission
 
    As a Rover Commander
@@ -27,7 +27,7 @@ Feature: Beginning the Mission
 	 And the image at location "10, 10" will display an obstacle 
 	 And the image at location "15, 15" will display an obstacle
 	 
-   @missionControl
+   
    Scenario: Giving commands
      Given the Mission page
 	 And default obstacles on the map 
