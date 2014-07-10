@@ -15,9 +15,8 @@ function pagePrep() {
         var callback = function (index, element) { itemsToSend[index] = $(element).text(); };
 
         iterateListItems(callback, element);
-        UpdateObstaclesOnServer(itemsToSend, locationUpdateSuccess, wtf);
+        UpdateObstaclesOnServer(itemsToSend, obstacleUpdateSuccess, wtf);
     });
-
 
     $("input[type='image']").click(function () {
         var element = this;
@@ -33,19 +32,28 @@ function pagePrep() {
         var callback = function (index, element) { itemsToSend[index] = $(element).data('field'); };
 
         iterateListItems(callback, element);
-        //UpdateObstaclesOnServer(itemsToSend, locationUpdateSuccess, wtf);
+        SendCommandsToServer(itemsToSend, commandUpdateSuccess, wtf);
     });
 
-
-    function locationUpdateSuccess(result)
-    {
-        if (result.Success)
-        {
+    function commandUpdateSuccess(result) {
+        if (result.Success) {
             var locationsToUpdate = result.LocationUpdates;
 
             $(locationsToUpdate).each(updateMapLocation);
             emptyListElement($("#newObstacles"));
         }
+        else { alert("Unable to update obstacles. Did you click on the map to add any?"); }
+    }
+
+    function obstacleUpdateSuccess(result)
+    {
+        if (result.Success) {
+            var locationsToUpdate = result.LocationUpdates;
+
+            $(locationsToUpdate).each(updateMapLocation);
+            emptyListElement($("#newObstacles"));
+        }
+        else { alert("Unable to update obstacles. Did you click on the map to add any?");}
     }
 
     function emptyListElement(element)
@@ -66,7 +74,7 @@ function pagePrep() {
 
     function wtf()
     {
-        alert("Something went wrong with updating obstacles or sending commands! WTF!");
+        alert("Something went wrong with communicating to the server! WTF!");
     }
 
     function iterateListItems(callback, element)

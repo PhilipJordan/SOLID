@@ -75,13 +75,15 @@ namespace CentralCommand.Controllers
             
             viewModel.Map = initialMap;
 
-
             return PartialView(viewModel);
         }
 
         [HttpPost]
         public JsonResult UpdateObstacles(List<string> locations)
         {
+            if(locations == null)
+                return Json(new MissionResponseViewModel { Success = false, LocationUpdates = new List<string>() });
+
             var distinctLocations = (from location in locations 
                        select location).Distinct().ToList<string>();
 
