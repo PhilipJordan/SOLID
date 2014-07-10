@@ -1,9 +1,5 @@
 source 'https://rubygems.org'
 
 gem 'cucumber'
-<<<<<<< HEAD
 gem 'rspec', '<3.0.0'
-=======
-gem 'rspec', '<=2.13.0'
->>>>>>> 9e8c35dbd7f61862d7d079e1a363ffc3d89f0d0a
 gem 'page-object'
