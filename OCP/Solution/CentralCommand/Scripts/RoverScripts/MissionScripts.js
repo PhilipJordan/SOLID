@@ -39,10 +39,10 @@ function pagePrep() {
         if (result.Success) {
             var locationsToUpdate = result.LocationUpdates;
 
-            $(locationsToUpdate).each(updateMapLocation);
-            emptyListElement($("#newObstacles"));
+            $(locationsToUpdate).each(updateMapLocationForRover);
+            emptyListElement($("#newCommands"));
         }
-        else { alert("Unable to update obstacles. Did you click on the map to add any?"); }
+        else { alert("Unable to send commands. Did you enter any?"); }
     }
 
     function obstacleUpdateSuccess(result)
@@ -61,7 +61,9 @@ function pagePrep() {
         element.empty();
     }
 
-
+    function updateMapLocationForRover(index, element) {
+        $("img[id='" + element + "']").attr('src', '/Images/Rover.png');
+    }
 
     function updateMapLocation(index, element)
     {
@@ -90,7 +92,7 @@ function pagePrep() {
             type: 'post',
             datatype: 'json',
             url: "../Mission/SendCommands",
-            data: JSON.stringify({ locations: itemsToSend }),
+            data: JSON.stringify({ commands: itemsToSend }),
             contentType: 'application/json; charset=utf-8',
             cache: false,
             success: callback,

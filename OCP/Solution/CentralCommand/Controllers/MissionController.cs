@@ -23,7 +23,7 @@ namespace CentralCommand.Controllers
                 ViewData["Map"] = value;
             } 
         }
-        public Rover Vehicle
+        private Rover Vehicle
         {
             get
             {
@@ -37,7 +37,7 @@ namespace CentralCommand.Controllers
                 ViewData["Rover"] = value;
             }
         }
-        public Mars Planet
+        private Mars Planet
         {
             get
             {
@@ -51,6 +51,21 @@ namespace CentralCommand.Controllers
                 ViewData["Mars"] = value;
             }
         }
+        public MissionManager MissionManager
+        {
+            get
+            {
+                if (ViewData["MissionManager"] == null)
+                    ViewData["MissionManager"] = new MissionManager(Vehicle);
+
+                return (MissionManager)ViewData["MissionManager"];
+            }
+            set
+            {
+                ViewData["Rover"] = value;
+            }
+        }
+
 
         public ActionResult Index()
         {
@@ -59,9 +74,15 @@ namespace CentralCommand.Controllers
 
         public ActionResult Staging(MissionViewModel viewModel)
         {
-            Planet = new Mars();
-            Vehicle = new Rover(Planet);
+            //Planet = new Mars();
+            //Vehicle = new Rover(Planet);
 
+            //Because MissionManager is not the single point of entry we have to make this call to ensure everything is 
+            //instantiated before we begin.
+            var foo = MissionManager;
+
+            //NOTE: This map is only used to draw the initial map on the view. Afterwards all updates rely on the 
+            //MissionManager and Mars objects (Refactor option: access to Mars should really be through MissionManager)
             var initialMap = new List<List<string>>();
             for (int i = 0; i < 50; i++)
             {
@@ -87,13 +108,37 @@ namespace CentralCommand.Controllers
             var distinctLocations = (from location in locations 
                        select location).Distinct().ToList<string>();
 
-            return Json(new MissionResponseViewModel { Success = true, LocationUpdates = distinctLocations });
+            //REFACTOR: Move this logic into MissionManager
+            foreach(var input in distinctLocations)
+            {
+                Obstacle obstacle = CreateObstacle(input);
+                Planet.Accept(obstacle);
+            }
+
+            var results = Planet.Obstacles.Select(x => x.Location.X + "_" + x.Location.Y).ToList<string>();
+
+            return Json(new MissionResponseViewModel { Success = true, LocationUpdates = results });
         }
+
+        //REFACTOR: Move this logic into MissionManager
+        private static Obstacle CreateObstacle(string input)
+        {
+            var coordinates = input.Split('_');
+            Point location = new Point(int.Parse(coordinates[0]), int.Parse(coordinates[1]));
+            return new Obstacle(location);
+        }
+
 
         [HttpPost]
         public JsonResult SendCommands(List<string> commands)
         {
-            var rovers_new_position = "";
+            
+
+            var commandString = String.Join(",", commands);
+            MissionManager.AcceptCommands(commandString);
+            MissionManager.ExecuteMission();
+
+            var rovers_new_position = Vehicle.Location.X + "_" + Vehicle.Location.Y;
 
             return Json(new MissionResponseViewModel { Success = true, LocationUpdates = new List<string>() { rovers_new_position }});
         }
