@@ -8,9 +8,12 @@ class MissionPage
   button(:moveForward, :id => 'forward')
   
   def click_button_with name
-    if(name == "Add")
-	   self.addObstacles
-    end
+    @message = self.alert do
+		if(name == "Add")
+		   self.addObstacles
+		end
+	end
+	@message
   end
   
   def get_image_at image_id
@@ -30,7 +33,16 @@ class MissionPage
 	@browser.img(:id => defaultObstacles[:westObstacle]).click
 	
 	self.addObstacles
-	sleep 10
+  end
+  
+  def alert_message
+	@message
+	
+	#message = self.alert do
+	#	self.addObstacles
+	#nd
+  
+	#p message
   end
   
 end

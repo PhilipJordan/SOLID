@@ -11,6 +11,11 @@ Feature: Beginning the Mission
      When I get the image at the center of the map
      Then it will be the "Rover" image
    
+   Scenario: Adding no Obstacles
+	 Given the Mission page
+	 When I click the "Add" button
+	 Then an alert message with "Unable to update obstacles" should be shown
+   
    Scenario: Adding an Obstacle
      Given the Mission page
 	 When I click on the map at location "10, 10"
@@ -27,7 +32,7 @@ Feature: Beginning the Mission
 	 And the image at location "10, 10" will display an obstacle 
 	 And the image at location "15, 15" will display an obstacle
 	 
-   
+   @foo
    Scenario: Giving commands
      Given the Mission page
 	 #And default obstacles on the map 

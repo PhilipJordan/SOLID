@@ -15,9 +15,8 @@ function pagePrep() {
         var callback = function (index, element) { itemsToSend[index] = $(element).text(); };
 
         iterateListItems(callback, element);
-        UpdateObstaclesOnServer(itemsToSend, locationUpdateSuccess, wtf);
+        UpdateObstaclesOnServer(itemsToSend, obstacleUpdateSuccess, wtf);
     });
-
 
     $("input[type='image']").click(function () {
         var element = this;
@@ -33,19 +32,28 @@ function pagePrep() {
         var callback = function (index, element) { itemsToSend[index] = $(element).data('field'); };
 
         iterateListItems(callback, element);
-        //UpdateObstaclesOnServer(itemsToSend, locationUpdateSuccess, wtf);
+        SendCommandsToServer(itemsToSend, commandUpdateSuccess, wtf);
     });
 
+    function commandUpdateSuccess(result) {
+        if (result.Success) {
+            var locationsToUpdate = result.LocationUpdates;
 
-    function locationUpdateSuccess(result)
+            $(locationsToUpdate).each(updateMapLocationForRover);
+            emptyListElement($("#newCommands"));
+        }
+        else { alert("Unable to send commands. Did you enter any?"); }
+    }
+
+    function obstacleUpdateSuccess(result)
     {
-        if (result.Success)
-        {
+        if (result.Success) {
             var locationsToUpdate = result.LocationUpdates;
 
             $(locationsToUpdate).each(updateMapLocation);
             emptyListElement($("#newObstacles"));
         }
+        else { alert("Unable to update obstacles. Did you click on the map to add any?");}
     }
 
     function emptyListElement(element)
@@ -53,7 +61,9 @@ function pagePrep() {
         element.empty();
     }
 
-
+    function updateMapLocationForRover(index, element) {
+        $("img[id='" + element + "']").attr('src', '/Images/Rover.png');
+    }
 
     function updateMapLocation(index, element)
     {
@@ -66,7 +76,7 @@ function pagePrep() {
 
     function wtf()
     {
-        alert("Something went wrong with updating obstacles or sending commands! WTF!");
+        alert("Something went wrong with communicating to the server! WTF!");
     }
 
     function iterateListItems(callback, element)
@@ -82,7 +92,7 @@ function pagePrep() {
             type: 'post',
             datatype: 'json',
             url: "../Mission/SendCommands",
-            data: JSON.stringify({ locations: itemsToSend }),
+            data: JSON.stringify({ commands: itemsToSend }),
             contentType: 'application/json; charset=utf-8',
             cache: false,
             success: callback,
