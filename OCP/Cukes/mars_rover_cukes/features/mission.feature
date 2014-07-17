@@ -30,7 +30,7 @@ Feature: Beginning the Mission
    
    Scenario: Giving commands
      Given the Mission page
-	 And default obstacles on the map 
+	 #And default obstacles on the map 
 	 When I send the forward command
-	 Then the rover will move forward
+	 Then the rover will 1 step to the north
 	 

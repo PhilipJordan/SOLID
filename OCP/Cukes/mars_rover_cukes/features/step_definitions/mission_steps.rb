@@ -30,11 +30,20 @@ Given(/^(default obstacles) on the map$/) do |blar|
 end
 
 When(/^I send the forward command$/) do
-	pending # express the regexp above with the code you wish you had
+	on(MissionPage) do |page|
+		page.moveForward
+		page.sendCommands
+	end
+	#on(MissionPage).sendCommands
 end
 
-Then(/^the rover will move forward$/) do
-	pending # express the regexp above with the code you wish you had
+Then(/^the rover will move (\d+) step to the (north)$/) do |number_of_steps, north_location|
+	on(MissionPage) do |page|
+	# $("img[src$='Rover.png']")
+		# TODO: make method that finds location of Rover by its value
+		#(page.get_image_at north_location).should include 
+		pending
+	end
 end                                                     
 
 

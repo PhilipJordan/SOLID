@@ -4,6 +4,8 @@ class MissionPage
   page_url("http://localhost:53332/mission/staging")
   h3(:title, :id => "MissionControl")
   button(:addObstacles, :value => 'Add')
+  button(:sendCommands, :id => 'sendCommands')
+  button(:moveForward, :id => 'forward')
   
   def click_button_with name
     if(name == "Add")
