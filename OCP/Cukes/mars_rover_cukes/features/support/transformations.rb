@@ -19,3 +19,7 @@ end
 Transform /^default obstacles$/ do |foo|
 	on(MissionPage)
 end
+
+Transform /^north$/ do 
+	'25_24'
+end
