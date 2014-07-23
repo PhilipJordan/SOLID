@@ -14,55 +14,55 @@ namespace CentralCommand.Controllers
         { 
             get 
             {
-                if (ViewData["Map"] == null)
-                    ViewData["Map"] = new List<List<string>>();
+                if (Session["Map"] == null)
+                    Session["Map"] = new List<List<string>>();
 
-                return (List<List<string>>)ViewData["Map"];
+                return (List<List<string>>)Session["Map"];
             } 
             set {
-                ViewData["Map"] = value;
+                Session["Map"] = value;
             } 
         }
         private Rover Vehicle
         {
             get
             {
-                if (ViewData["Rover"] == null)
-                    ViewData["Rover"] = new Rover(Planet);
+                if (Session["Rover"] == null)
+                    Session["Rover"] = new Rover(Planet);
 
-                return (Rover)ViewData["Rover"];
+                return (Rover)Session["Rover"];
             }
             set
             {
-                ViewData["Rover"] = value;
+                Session["Rover"] = value;
             }
         }
         private Mars Planet
         {
             get
             {
-                if (ViewData["Mars"] == null)
-                    ViewData["Mars"] = new Mars();
+                if (Session["Mars"] == null)
+                    Session["Mars"] = new Mars();
 
-                return (Mars)ViewData["Mars"];
+                return (Mars)Session["Mars"];
             }
             set
             {
-                ViewData["Mars"] = value;
+                Session["Mars"] = value;
             }
         }
         public MissionManager MissionManager
         {
             get
             {
-                if (ViewData["MissionManager"] == null)
-                    ViewData["MissionManager"] = new MissionManager(Vehicle);
+                if (Session["MissionManager"] == null)
+                    Session["MissionManager"] = new MissionManager(Vehicle);
 
-                return (MissionManager)ViewData["MissionManager"];
+                return (MissionManager)Session["MissionManager"];
             }
             set
             {
-                ViewData["Rover"] = value;
+                Session["Rover"] = value;
             }
         }
 
