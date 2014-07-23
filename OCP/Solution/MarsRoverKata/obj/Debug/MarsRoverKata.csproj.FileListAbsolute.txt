@@ -28,3 +28,9 @@ C:\github\SOLID\OCP\Solution\MarsRoverKata\bin\Debug\MarsRoverKata.pdb
 C:\github\SOLID\OCP\Solution\MarsRoverKata\obj\Debug\MarsRoverKata.csprojResolveAssemblyReference.cache
 C:\github\SOLID\OCP\Solution\MarsRoverKata\obj\Debug\MarsRoverKata.exe
 C:\github\SOLID\OCP\Solution\MarsRoverKata\obj\Debug\MarsRoverKata.pdb
+C:\Users\adeitz\Documents\GitHub\SOLID\OCP\Solution\MarsRoverKata\obj\Debug\MarsRoverKata.csprojResolveAssemblyReference.cache
+C:\Users\adeitz\Documents\GitHub\SOLID\OCP\Solution\MarsRoverKata\obj\Debug\MarsRoverKata.exe
+C:\Users\adeitz\Documents\GitHub\SOLID\OCP\Solution\MarsRoverKata\bin\Debug\MarsRoverKata.exe.config
+C:\Users\adeitz\Documents\GitHub\SOLID\OCP\Solution\MarsRoverKata\bin\Debug\MarsRoverKata.exe
+C:\Users\adeitz\Documents\GitHub\SOLID\OCP\Solution\MarsRoverKata\bin\Debug\MarsRoverKata.pdb
+C:\Users\adeitz\Documents\GitHub\SOLID\OCP\Solution\MarsRoverKata\obj\Debug\MarsRoverKata.pdb

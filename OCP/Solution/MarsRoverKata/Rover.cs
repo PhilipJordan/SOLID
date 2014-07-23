@@ -20,6 +20,8 @@ namespace MarsRoverKata
             { Direction.East, new Point(1, 0) },
             { Direction.West, new Point(-1, 0) }
         };
+        private List<Missile> Missiles { get; set; }
+        private SelfDestructor SelfDestructor { get; set; }
 
         public Rover(Mars mars)
             :this(mars, mars.CenterOfThePlanet)// new Point(0,0))
@@ -28,6 +30,13 @@ namespace MarsRoverKata
         public Rover(Mars mars, Point landingPoint)
         {
             Mars = mars;
+            Missiles = new List<Missile>
+            {
+                new Missile(Mars),
+                new Missile(Mars),
+                new Missile(Mars)
+            };
+            SelfDestructor = new SelfDestructor(Mars);
             LandOnMars(landingPoint);
         }
 
@@ -92,6 +101,23 @@ namespace MarsRoverKata
             else if (Facing == Direction.West)
                 Facing = Direction.South;
             
+            return true;
+        }
+
+        public bool FireMissile()
+        {
+            var missileToFire = Missiles.FirstOrDefault();
+            if (missileToFire == null)
+            {
+                return false;
+            }
+            missileToFire.Launch(Facing, Location);
+            return true;
+        }
+
+        public bool SelfDestruct()
+        {
+            SelfDestructor.Launch(Facing, Location);
             return true;
         }
     }

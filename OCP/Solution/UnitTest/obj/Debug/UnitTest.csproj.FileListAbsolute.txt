@@ -54,3 +54,17 @@ C:\github\PhilipJordan\SOLID\OCP\Solution\UnitTest\bin\Debug\nunit.framework.xml
 C:\github\PhilipJordan\SOLID\OCP\Solution\UnitTest\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache
 C:\github\PhilipJordan\SOLID\OCP\Solution\UnitTest\obj\Debug\UnitTest.dll
 C:\github\PhilipJordan\SOLID\OCP\Solution\UnitTest\obj\Debug\UnitTest.pdb
+C:\Users\adeitz\Documents\GitHub\SOLID\OCP\Solution\UnitTest\bin\Debug\UnitTest.dll
+C:\Users\adeitz\Documents\GitHub\SOLID\OCP\Solution\UnitTest\bin\Debug\UnitTest.pdb
+C:\Users\adeitz\Documents\GitHub\SOLID\OCP\Solution\UnitTest\bin\Debug\FluentAssertions.dll
+C:\Users\adeitz\Documents\GitHub\SOLID\OCP\Solution\UnitTest\bin\Debug\MarsRoverKata.exe
+C:\Users\adeitz\Documents\GitHub\SOLID\OCP\Solution\UnitTest\bin\Debug\Moq.dll
+C:\Users\adeitz\Documents\GitHub\SOLID\OCP\Solution\UnitTest\bin\Debug\nunit.framework.dll
+C:\Users\adeitz\Documents\GitHub\SOLID\OCP\Solution\UnitTest\bin\Debug\MarsRoverKata.pdb
+C:\Users\adeitz\Documents\GitHub\SOLID\OCP\Solution\UnitTest\bin\Debug\FluentAssertions.pdb
+C:\Users\adeitz\Documents\GitHub\SOLID\OCP\Solution\UnitTest\bin\Debug\FluentAssertions.xml
+C:\Users\adeitz\Documents\GitHub\SOLID\OCP\Solution\UnitTest\bin\Debug\Moq.xml
+C:\Users\adeitz\Documents\GitHub\SOLID\OCP\Solution\UnitTest\bin\Debug\nunit.framework.xml
+C:\Users\adeitz\Documents\GitHub\SOLID\OCP\Solution\UnitTest\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache
+C:\Users\adeitz\Documents\GitHub\SOLID\OCP\Solution\UnitTest\obj\Debug\UnitTest.dll
+C:\Users\adeitz\Documents\GitHub\SOLID\OCP\Solution\UnitTest\obj\Debug\UnitTest.pdb

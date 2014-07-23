@@ -112,7 +112,7 @@ namespace CentralCommand.Controllers
             foreach(var input in distinctLocations)
             {
                 Obstacle obstacle = CreateObstacle(input);
-                Planet.Accept(obstacle);
+                Planet.AddObstacle(obstacle);
             }
 
             var results = Planet.Obstacles.Select(x => x.Location.X + "_" + x.Location.Y).ToList<string>();
