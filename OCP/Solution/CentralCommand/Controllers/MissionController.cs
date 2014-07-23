@@ -132,8 +132,6 @@ namespace CentralCommand.Controllers
         [HttpPost]
         public JsonResult SendCommands(List<string> commands)
         {
-            
-
             var commandString = String.Join(",", commands);
             MissionManager.AcceptCommands(commandString);
             MissionManager.ExecuteMission();
