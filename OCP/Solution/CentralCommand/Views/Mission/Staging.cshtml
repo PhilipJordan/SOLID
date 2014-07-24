@@ -1,12 +1,11 @@
-<<<<<<< HEAD
-﻿@model CentralCommand.Models.MissionViewModel
+@model CentralCommand.Models.MissionViewModel
 
 @{
     Layout = "../Shared/_Layout.cshtml";
 }
-<style>
+    <style>
     
-    textarea
+        textarea
     {
         height:100px;
         overflow:hidden;
@@ -31,15 +30,15 @@
         display:inline-block;
     }
 
-        .terrainMap img
-        {
-            float:left;
-            display:block;
-            padding:0;
-            margin:0;
-            width:2%;
-            height:2%;
-        }
+    .terrainMap img
+    {
+        float:left;
+        display:block;
+        padding:0;
+        margin:0;
+        width:2%;
+        height:2%;
+    }
 
     
     .controlPanel
@@ -49,31 +48,31 @@
         display:inline-block;
     }
 
-        .controlPanel input[type="text"], span, select, textarea
-        {
-            width:90%;
-            padding:5px;
-        }
+    .controlPanel input[type="text"], span, select, textarea
+    {
+        width:90%;
+        padding:5px;
+    }
 
 
-        .controlPanel ul
-        {
-            margin: 0;
-            padding: 0;
-            list-style-type: none;
-            text-align: center;
-        }
+    .controlPanel ul
+    {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        text-align: center;
+    }
 
-            .controlPanel ul li
-            {
-                display:inline-block;
-                color: #fff;
-                background-color: #036;
-                padding: .2em 1em;
-                margin: 4px 1px;
-                border-radius:10px;
+    .controlPanel ul li
+    {
+        display:inline-block;
+        color: #fff;
+        background-color: #036;
+        padding: .2em 1em;
+        margin: 4px 1px;
+        border-radius:10px;
                 
-            }
+    }
 
     td
     {
@@ -89,90 +88,95 @@
     
     input[type="submit"] {
         margin-top:5px;
-	    background-color:#f24537;
+        background-color:#f24537;
         border-radius:30px;
-	    text-indent:0px;
-	    border:1px solid #d02718;
-	    display:inline-block;
-	    color:#ffffff;
-	    font-family:Arial Black;
-	    font-size:15px;
-	    font-weight:bold;
-	    font-style:normal;
-	    height:30px;
-	    line-height:20px;
-	    width:150px;
-	    text-decoration:none;
-	    text-align:center;
-	    text-shadow:3px 5px 2px #810e05;
+        text-indent:0px;
+        border:1px solid #d02718;
+        display:inline-block;
+        color:#ffffff;
+        font-family:Arial Black;
+        font-size:15px;
+        font-weight:bold;
+        font-style:normal;
+        height:30px;
+        line-height:20px;
+        width:150px;
+        text-decoration:none;
+        text-align:center;
+        text-shadow:3px 5px 2px #810e05;
     }
     input[type="submit"]:hover {
-	    background-color:#c62d1f;
+        background-color:#c62d1f;
     }
     input[type="submit"]:active {
-	    position:relative;
-	    top:1px;
+        position:relative;
+        top:1px;
     }
 
     
 
-</style>
+    </style>
 
-<section style="text-align:center">
-    <h3 id="MissionControl">Mission Control</h3>
-    <div class="controlContrainer">
+    <section style="text-align:center">
+        <h3 id="MissionControl">Mission Control</h3>
+        <div class="controlContrainer">
         
-        <div class="controlPanel">
+            <div class="controlPanel">
 
-            <ul id="newObstacles" class="lists"></ul>
-            <input id="addObstacles" class="missionButton" type="submit" value="Add" />
+                <ul id="newObstacles" class="lists"></ul>
+                <input id="addObstacles" class="missionButton" type="submit" value="Add" />
 
-            <br /><br /><br />
+                <br /><br /><br />
             
-            <table>
-                <tr>
-                    <td></td>
-                    <td><input id="forward" type="image" value="Forward" alt="Forward Button" data-field="f" src="~/Images/forward.png" /></td>
-                    <td></td>
-                </tr>
+                <table>
+                    <tr>
+                        <td></td>
+                        <td><input id="forward" type="image" value="Forward" alt="Forward Button" data-field="f" src="~/Images/forward.png" /></td>
+                        <td></td>
+                    </tr>
                 
-                <tr>
-                    <td><input id="left" type="image" value="Left" alt="Turn Left Button" data-field="l" src="~/Images/left.png" /></td>
-                    <td></td>
-                    <td><input id="right" type="image" value="Right" alt="Turn Right Button" data-field="r" src="~/Images/right.png" /></td>
-                </tr>
+                    <tr>
+                        <td><input id="left" type="image" value="Left" alt="Turn Left Button" data-field="l" src="~/Images/left.png" /></td>
+                        <td></td>
+                        <td><input id="right" type="image" value="Right" alt="Turn Right Button" data-field="r" src="~/Images/right.png" /></td>
+                    </tr>
                 
-                <tr>
-                    <td></td>
-                    <td><input id="backward" type="image" value="Backward" alt="Backward Button" data-field="b" src="~/Images/backward.png" /></td>
-                    <td></td>
-                </tr>
-            </table>
-            <br /><br />
-            <ul id="newCommands" class="lists"></ul>
+                    <tr>
+                        <td></td>
+                        <td><input id="backward" type="image" value="Backward" alt="Backward Button" data-field="b" src="~/Images/backward.png" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input id="fireMissile" type="image" value="FireMissile" alt="Fire Missile" data-field="m" src="~/Images/missileButton.jpg"/></td>
+                        <td></td>
+                    </tr>
+                </table>
+                <br /><br />
+                <ul id="newCommands" class="lists"></ul>
             
-            <br />
-            <input id="sendCommands" class="missionButton" type="submit" value="Send Commands" />
+                <br />
+                <input id="sendCommands" class="missionButton" type="submit" value="Send Commands" />
+            </div>
         </div>
-    </div>
-    <div class="mapContainer">
+        <div class="mapContainer">
         
-        <div class="terrainMap">
-            @for(int rowIndex = Model.Map.Count - 1; rowIndex >= 0; rowIndex--)//  each(var row in Model.Map)
-            {
-                var row = Model.Map[rowIndex];
-                for (int columnIndex = 0; columnIndex < row.Count; columnIndex++)
-                {
-                    //var lastRowIndex = row.Count - 1;
-                    //var rowIndex = lastRowIndex - Model.Map.IndexOf(row);
+            <div class="terrainMap">
+                @for(int rowIndex = Model.Map.Count - 1; rowIndex >= 0; rowIndex--)//  each(var row in Model.Map)
+    {
+        var row = Model.Map[rowIndex];
+        for (int columnIndex = 0; columnIndex < row.Count; columnIndex++)
+        {
+            //var lastRowIndex = row.Count - 1;
+            //var rowIndex = lastRowIndex - Model.Map.IndexOf(row);
                     
                 
-                    var id = columnIndex + "_" + rowIndex;
-                    var imagePath = "~/Images/" + row[columnIndex];
+            var id = columnIndex + "_" + rowIndex;
+            var imagePath = "~/Images/" + row[columnIndex];
                 
-                    <img id="@id" class="mapImage" src="@Url.Content(imagePath)" alt="Image" />
-                }
-            }
+            <img id="@id" class="mapImage" src="@Url.Content(imagePath)" alt="Image" />
+        }
+    }
 
         </div>
     </div>
@@ -181,190 +185,4 @@
     $(document).ready(function () {
         pagePrep();
     });
-=======
-﻿@model CentralCommand.Models.MissionViewModel
-
-@{
-    Layout = "../Shared/_Layout.cshtml";
-}
-<style>
-    
-    textarea
-    {
-        height:100px;
-        overflow:hidden;
-    }
-
-    .controlContainer
-    {
-        /*border:1px solid #00FF00;*/
-    }
-
-    .mapContainer
-    {
-        padding:50px 50px 50px 50px;
-        margin: 10px;
-        clear:right;
-    }
-
-    .terrainMap
-    {
-        max-width:70%;
-        float:left;
-        display:inline-block;
-    }
-
-        .terrainMap img
-        {
-            float:left;
-            display:block;
-            padding:0;
-            margin:0;
-            width:2%;
-            height:2%;
-        }
-
-    
-    .controlPanel
-    {
-        max-width:300px;
-        float:left;
-        display:inline-block;
-    }
-
-        .controlPanel input[type="text"], span, select, textarea
-        {
-            width:90%;
-            padding:5px;
-        }
-
-
-        .controlPanel ul
-        {
-            margin: 0;
-            padding: 0;
-            list-style-type: none;
-            text-align: center;
-        }
-
-            .controlPanel ul li
-            {
-                display:inline-block;
-                color: #fff;
-                background-color: #036;
-                padding: .2em 1em;
-                margin: 4px 1px;
-                border-radius:10px;
-                
-            }
-
-    td
-    {
-        padding:0;
-        margin:0;
-    }  
-    
-    td input
-    {
-        height: 50px;
-        width: 50px;
-    }
-    
-    input[type="submit"] {
-        margin-top:5px;
-	    background-color:#f24537;
-        border-radius:30px;
-	    text-indent:0px;
-	    border:1px solid #d02718;
-	    display:inline-block;
-	    color:#ffffff;
-	    font-family:Arial Black;
-	    font-size:15px;
-	    font-weight:bold;
-	    font-style:normal;
-	    height:30px;
-	    line-height:20px;
-	    width:150px;
-	    text-decoration:none;
-	    text-align:center;
-	    text-shadow:3px 5px 2px #810e05;
-    }
-    input[type="submit"]:hover {
-	    background-color:#c62d1f;
-    }
-    input[type="submit"]:active {
-	    position:relative;
-	    top:1px;
-    }
-
-    
-
-</style>
-
-<section style="text-align:center">
-    <h3 id="MissionControl">Mission Control</h3>
-    <div class="controlContrainer">
-        
-        <div class="controlPanel">
-
-            <ul id="newObstacles" class="lists"></ul>
-            <input id="addObstacles" class="missionButton" type="submit" value="Add" />
-
-            <br /><br /><br />
-            
-            <table>
-                <tr>
-                    <td></td>
-                    <td><input id="forward" type="image" value="Forward" alt="Forward Button" data-field="f" src="~/Images/forward.png" /></td>
-                    <td></td>
-                </tr>
-                
-                <tr>
-                    <td><input id="left" type="image" value="Left" alt="Turn Left Button" data-field="l" src="~/Images/left.png" /></td>
-                    <td></td>
-                    <td><input id="right" type="image" value="Right" alt="Turn Right Button" data-field="r" src="~/Images/right.png" /></td>
-                </tr>
-                
-                <tr>
-                    <td></td>
-                    <td><input id="backward" type="image" value="Backward" alt="Backward Button" data-field="b" src="~/Images/backward.png" /></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><input id="fireMissile" type="image" value="FireMissile" alt="Fire Missile" data-field="m" src="~/Images/missileButton.jpg"/></td>
-                    <td></td>
-                </tr>
-            </table>
-            <br /><br />
-            <ul id="newCommands" class="lists"></ul>
-            
-            <br />
-            <input id="sendCommands" class="missionButton" type="submit" value="Send Commands" />
-        </div>
-    </div>
-    <div class="mapContainer">
-        
-        <div class="terrainMap">
-            @foreach(var row in Model.Map)
-            {
-                for (int columnIndex = 0; columnIndex < row.Count; columnIndex++)
-                { 
-                    var rowIndex = Model.Map.IndexOf(row);
-                
-                    var id = columnIndex + "_" + rowIndex;
-                    var imagePath = "~/Images/" + row[columnIndex];
-                
-                    <img id="@id" class="mapImage" src="@Url.Content(imagePath)" alt="Image" />
-                }
-            }
-
-        </div>
-    </div>
-</section>
-<script type="text/javascript">
-    $(document).ready(function () {
-        pagePrep();
-    });
->>>>>>> 710e825580b7658d324b8b611f26ff37d8162d2b
 </script>
