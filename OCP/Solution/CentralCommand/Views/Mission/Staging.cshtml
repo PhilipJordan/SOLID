@@ -157,11 +157,14 @@
     <div class="mapContainer">
         
         <div class="terrainMap">
-            @foreach(var row in Model.Map)
+            @for(int rowIndex = Model.Map.Count - 1; rowIndex >= 0; rowIndex--)//  each(var row in Model.Map)
             {
+                var row = Model.Map[rowIndex];
                 for (int columnIndex = 0; columnIndex < row.Count; columnIndex++)
-                { 
-                    var rowIndex = Model.Map.IndexOf(row);
+                {
+                    //var lastRowIndex = row.Count - 1;
+                    //var rowIndex = lastRowIndex - Model.Map.IndexOf(row);
+                    
                 
                     var id = columnIndex + "_" + rowIndex;
                     var imagePath = "~/Images/" + row[columnIndex];

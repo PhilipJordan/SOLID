@@ -37,5 +37,6 @@ Feature: Beginning the Mission
      Given the Mission page
 	 #And default obstacles on the map 
 	 When I send the forward command
-	 Then the rover will 1 step to the north
+	 Then the rover will move 1 step to the north
+	 And the old position will display ground
 	 

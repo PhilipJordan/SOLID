@@ -41,21 +41,35 @@ end
 
 When(/^I send the forward command$/) do
 	on(MissionPage) do |page|
+		sleep 1
 		page.moveForward
 		page.sendCommands
 	end
 	#on(MissionPage).sendCommands
 end
 
-Then(/^the rover will move (\d+) step to the (north)$/) do |number_of_steps, north_location|
+Then(/^the rover will move (\d+) step to the north$/) do |number_of_steps| #, north_location|
 	on(MissionPage) do |page|
+	sleep 1
+	roverImage = page.get_image_at '25_26'
+	roverImage.should include 'Rover'
+	
 	# $("img[src$='Rover.png']")
 		# TODO: make method that finds location of Rover by its value
 		#(page.get_image_at north_location).should include 
-		pending
+		
 	end
-end                                                     
+end           
 
+Then(/^the old position will display ground$/) do 
+	on(MissionPage) do |page|
+	sleep 1
+		
+	oldRoverImage = page.get_image_at '25_25'
+	oldRoverImage.should include 'Ground'
+	end
+end                                                       
+#the old position will display ground
 
 
 
