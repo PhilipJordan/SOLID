@@ -350,7 +350,7 @@ namespace UnitTest
         [Test]
         public void WhenObstacleIsInForwardPath()
         {
-            mars.Accept(new Obstacle(new Point(25, 28)));
+            mars.AddObstacle(new Obstacle(new Point(25, 28)));
             commander.ExecuteCommands();
 
             rover.Location.Should().Be(new Point(25, 27));
@@ -359,7 +359,7 @@ namespace UnitTest
         [Test]
         public void WhenObstacleIsInBackwardPath()
         {
-            mars.Accept(new Obstacle(new Point(25, 24)));
+            mars.AddObstacle(new Obstacle(new Point(25, 24)));
             commander.ExecuteCommands();
 
             rover.Location.Should().Be(new Point(25, 25));
@@ -422,7 +422,7 @@ namespace UnitTest
 
             obstacleLocation = new Point(10, 10);
             obstacle = new Obstacle(new Point(10, 10));
-            mars.Accept(obstacle);
+            mars.AddObstacle(obstacle);
         }
     }
 

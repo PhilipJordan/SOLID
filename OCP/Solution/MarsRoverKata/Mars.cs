@@ -26,9 +26,14 @@ namespace MarsRoverKata
             _Obstacles = new List<IObstacle>();
         }
 
-        public void Accept(IObstacle obstacle)
+        public void AddObstacle(IObstacle obstacle)
         {
             _Obstacles.Add(obstacle);
+        }
+
+        public void RemoveObstacle(IObstacle obstacle)
+        {
+            _Obstacles.Remove(obstacle);
         }
 
         public Point CalculateFinalPosition(Point from, Point desired)
