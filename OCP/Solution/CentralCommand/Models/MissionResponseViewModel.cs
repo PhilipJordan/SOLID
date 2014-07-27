@@ -9,5 +9,7 @@ namespace CentralCommand.Models
     {
         public bool Success { get; set; }
         public List<string> LocationUpdates { get; set; }
+        public string PreviousRoverLocation { get; set; }
+        public string RoverFacing { get; set; }
     }
 }

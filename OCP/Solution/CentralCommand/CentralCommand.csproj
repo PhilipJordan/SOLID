@@ -250,6 +250,10 @@
     <Content Include="Images\missileButton.jpg" />
     <Content Include="Images\Obstacle.png" />
     <Content Include="Images\right.png" />
+    <Content Include="Images\Rover-E.png" />
+    <Content Include="Images\Rover-N.png" />
+    <Content Include="Images\Rover-S.png" />
+    <Content Include="Images\Rover-W.png" />
     <Content Include="Images\Rover.png" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />

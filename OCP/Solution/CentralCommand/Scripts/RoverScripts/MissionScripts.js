@@ -38,8 +38,19 @@ function pagePrep() {
     function commandUpdateSuccess(result) {
         if (result.Success) {
             var locationsToUpdate = result.LocationUpdates;
+            var oldRoverLocation = result.PreviousRoverLocation;
+            var roverFacing = result.RoverFacing;
 
-            $(locationsToUpdate).each(updateMapLocationForRover);
+
+            setOldRoverLocationToGround(oldRoverLocation);
+            //$(locationsToUpdate).each(updateMapLocationForRover);
+
+            $(locationsToUpdate).each(function updateMapLocationForRover(index, element) {
+                $("img[id='" + element + "']").attr('src', '/Images/Rover-' + roverFacing + '.png');
+            });
+
+
+
             emptyListElement($("#newCommands"));
         }
         else { alert("Unable to send commands. Did you enter any?"); }
@@ -59,6 +70,11 @@ function pagePrep() {
     function emptyListElement(element)
     {
         element.empty();
+    }
+
+    function setOldRoverLocationToGround(oldLocation)
+    {
+        $("img[id='" + oldLocation + "']").attr('src', '/Images/Ground.png');
     }
 
     function updateMapLocationForRover(index, element) {

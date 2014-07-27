@@ -132,15 +132,38 @@ namespace CentralCommand.Controllers
         [HttpPost]
         public JsonResult SendCommands(List<string> commands)
         {
+            var originalPosition = Vehicle.Location.X + "_" + Vehicle.Location.Y;
+
             var commandString = String.Join(",", commands);
             MissionManager.AcceptCommands(commandString);
             MissionManager.ExecuteMission();
 
             var rovers_new_position = Vehicle.Location.X + "_" + Vehicle.Location.Y;
+            var roverFacing = GetFacingAsString(Vehicle.Facing);
 
-            return Json(new MissionResponseViewModel { Success = true, LocationUpdates = new List<string>() { rovers_new_position }});
+            return Json(new MissionResponseViewModel {  Success = true, 
+                                                        LocationUpdates = new List<string>() { rovers_new_position },
+                                                        PreviousRoverLocation = originalPosition,
+                                                        RoverFacing = roverFacing
+                                                     });
         }
 
+        private string GetFacingAsString(Direction roverFacing)
+        {
+            switch (roverFacing)
+            { 
+                case Direction.North:
+                    return "N";
+                case Direction.East:
+                    return "E";
+                case Direction.South:
+                    return "S";
+                case Direction.West:
+                    return "W";
+            }
+
+            return "N";
+        }
 
         #region Fake Data
 
