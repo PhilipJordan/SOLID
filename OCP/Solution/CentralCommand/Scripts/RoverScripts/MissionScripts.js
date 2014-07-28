@@ -77,18 +77,14 @@ function pagePrep() {
         $("img[id='" + oldLocation + "']").attr('src', '/Images/Ground.png');
     }
 
-    function updateMapLocationForRover(index, element) {
-        $("img[id='" + element + "']").attr('src', '/Images/Rover.png');
-    }
+    //function updateMapLocationForRover(index, element) {
+    //    $("img[id='" + element + "']").attr('src', '/Images/Rover.png');
+    //}
 
     function updateMapLocation(index, element)
     {
         $("img[id='" + element + "']").attr('src', '/Images/Obstacle.png');
     }
-
-    //"Obstacle.png"
-    //"Rover.png"
-    //"Ground.png"
 
     function wtf()
     {

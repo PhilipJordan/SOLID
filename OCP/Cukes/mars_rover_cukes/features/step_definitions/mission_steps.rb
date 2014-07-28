@@ -41,11 +41,9 @@ end
 
 When(/^I send the forward command$/) do
 	on(MissionPage) do |page|
-		sleep 1
 		page.moveForward
 		page.sendCommands
 	end
-	#on(MissionPage).sendCommands
 end
 
 Then(/^the rover will move (\d+) step to the north$/) do |number_of_steps| #, north_location|

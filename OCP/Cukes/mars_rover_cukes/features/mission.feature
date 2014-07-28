@@ -32,7 +32,7 @@ Feature: Beginning the Mission
 	 And the image at location "10, 10" will display an obstacle 
 	 And the image at location "15, 15" will display an obstacle
 	 
-   @foo
+   
    Scenario: Giving commands
      Given the Mission page
 	 #And default obstacles on the map 
@@ -40,3 +40,9 @@ Feature: Beginning the Mission
 	 Then the rover will move 1 step to the north
 	 And the old position will display ground
 	 
+   @foo
+   Scenario: Giving commands
+     Given the Mission page 
+	 When I send the backward command
+	 Then the rover will move 1 step to the south
+	 And the old position will display ground
