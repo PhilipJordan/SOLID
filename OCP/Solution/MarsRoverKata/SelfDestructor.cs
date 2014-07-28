@@ -19,10 +19,6 @@ namespace MarsRoverKata
             Point target = location;
             target = CreateDesiredPosition(0, facing, target);
             detonated = TryDetonate(target);
-            //if (!detonated)
-            //{
-            //    CreateObstacle(target);
-            //}
         }
     }
 }

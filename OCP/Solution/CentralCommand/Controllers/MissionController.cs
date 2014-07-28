@@ -125,7 +125,7 @@ namespace CentralCommand.Controllers
         {
             var coordinates = input.Split('_');
             Point location = new Point(int.Parse(coordinates[0]), int.Parse(coordinates[1]));
-            return new Obstacle(location);
+            return new Rock(location);
         }
 
 

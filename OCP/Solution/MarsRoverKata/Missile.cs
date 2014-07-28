@@ -57,7 +57,7 @@ namespace MarsRoverKata
             newDestination = CalculatePositionX(desired, newDestination);
             var obstacle = FindObstacle(newDestination);
 
-            if (obstacle != null)
+            if (obstacle != null && (obstacle.GetType() != typeof(Crater)))
             {
                 DestroyObstacle(obstacle);
                 return true;
@@ -104,8 +104,12 @@ namespace MarsRoverKata
 
         protected void CreateObstacle(Point point)
         {
-            Obstacle obstacle = new Obstacle(point);
-            Mars.AddObstacle(obstacle);
+            if (!Mars.Obstacles.Any(o => o.Location.X == point.X 
+                && o.Location.Y == point.Y))
+            {
+                Crater obstacle = new Crater(point);
+                Mars.AddObstacle(obstacle);
+            }
         }
     }
 }
