@@ -123,6 +123,69 @@ namespace UnitTest
         }
     }
 
+    public class WhileWorkingWithMissile : GivenMissile
+    {
+        [Test]
+        public void WhenMissileIsLaunched_AndNoObstaclesInTheWay_ThenANewObstacleCreated()
+        {
+            var position = new Point(25, 25);
+            var expectedObstaclePosition = new Point(25, 15);
+            var expectedCount = mars.Obstacles.Count + 1;
+
+            missile.Launch(Direction.South, position);
+            var actualObstacle = mars.Obstacles.LastOrDefault();
+
+            mars.Obstacles.Count.Should().Be(expectedCount);
+            actualObstacle.Location.Should().Be(expectedObstaclePosition);
+            actualObstacle.GetType().Should().Be(typeof(Crater));
+        }
+
+        [Test]
+        public void WhenMissileIsLaunched_AndObstacleInTheWay_ThenANewObstacleCreated()
+        {
+            var obstacle = mars.Obstacles.FirstOrDefault();
+            var position = new Point(obstacle.Location.X, obstacle.Location.Y + 5);
+            var expectedObstaclePosition = obstacle.Location;
+            var expectedCount = mars.Obstacles.Count - 1;
+
+            missile.Launch(Direction.South, position);
+
+            mars.Obstacles.Count.Should().Be(expectedCount);
+        }
+    }
+
+    public class WhileWorkingWithMortar : GivenMortar
+    {
+        [Test]
+        public void WhenMortarIsLaunched_AndNoObstaclesInTheLandingPostion_ThenANewObstacleCreated()
+        {
+            var position = new Point(25, 25);
+            var expectedObstaclePosition = new Point(25, 5);
+            var expectedCount = mars.Obstacles.Count + 1;
+
+            mortar.Launch(Direction.South, position);
+            var actualObstacle = mars.Obstacles.LastOrDefault();
+
+            mars.Obstacles.Count.Should().Be(expectedCount);
+            actualObstacle.Location.Should().Be(expectedObstaclePosition);
+            actualObstacle.GetType().Should().Be(typeof(Crater));
+        }
+
+        [Test]
+        public void WhenMissileIsLaunched_AndObstacleInThePosition_ThenTheObstacleIsDestroyed()
+        {
+            var obstacle = mars.Obstacles.FirstOrDefault();
+            var position = new Point(obstacle.Location.X, obstacle.Location.Y + 20);
+            var expectedObstaclePosition = obstacle.Location;
+            var expectedCount = mars.Obstacles.Count - 1;
+
+            mortar.Launch(Direction.South, position);
+            var actualObstacle = mars.Obstacles.LastOrDefault();
+
+            mars.Obstacles.Count.Should().Be(expectedCount);
+        }
+    }
+
     public class WhileWorkingWithSingleTurnCommand : GivenCommander
     {
         [Test]
@@ -408,6 +471,30 @@ namespace UnitTest
         protected void SetRoverLocation(Point aLocation)
         {
             rover.Location = aLocation;
+        }
+    }
+
+    public class GivenMissile : GivenObstacle
+    {
+        protected Missile missile;
+
+        protected override void arrangement()
+        {
+            base.arrangement();
+
+            missile = new Missile(mars);
+        }
+    }
+
+    public class GivenMortar : GivenObstacle
+    {
+        protected Mortar mortar;
+
+        protected override void arrangement()
+        {
+            base.arrangement();
+
+            mortar = new Mortar(mars);
         }
     }
 

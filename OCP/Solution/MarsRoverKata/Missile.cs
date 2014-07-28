@@ -57,7 +57,6 @@ namespace MarsRoverKata
             //TODO: Look at this stuff!
             if (obstacle != null && (obstacle.GetType() != typeof(Crater)))
             {
-                DestroyObstacle(obstacle);
                 return true;
             }
 
