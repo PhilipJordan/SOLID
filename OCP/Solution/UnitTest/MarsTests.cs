@@ -172,6 +172,22 @@ namespace UnitTest
         }
 
         [Test]
+        public void WhenMortarIsLaunched_AndObstacleInTravelPath_AndNoObstaclesInTheLandingPostion_ThenANewObstacleCreated_AndPreviousObstacleIsNotDestroyed()
+        {
+            var obstacle = mars.Obstacles.FirstOrDefault();
+            var position = new Point(obstacle.Location.X, obstacle.Location.Y + 10);
+            var expectedObstaclePosition = new Point(obstacle.Location.X, obstacle.Location.Y - 10);
+            var expectedCount = mars.Obstacles.Count + 1;
+
+            mortar.Launch(Direction.South, position);
+            var actualObstacle = mars.Obstacles.LastOrDefault();
+
+            mars.Obstacles.Count.Should().Be(expectedCount);
+            actualObstacle.Location.Should().Be(expectedObstaclePosition);
+            actualObstacle.GetType().Should().Be(typeof(Crater));
+        }
+
+        [Test]
         public void WhenMissileIsLaunched_AndObstacleInThePosition_ThenTheObstacleIsDestroyed()
         {
             var obstacle = mars.Obstacles.FirstOrDefault();
