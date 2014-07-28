@@ -50,6 +50,7 @@
     <Compile Include="Commands\TurnLeftCommand.cs" />
     <Compile Include="Commands\TurnRightCommand.cs" />
     <Compile Include="CrashException.cs" />
+    <Compile Include="Crater.cs" />
     <Compile Include="Enumerations.cs" />
     <Compile Include="Mars.cs" />
     <Compile Include="Missile.cs" />
@@ -58,6 +59,7 @@
     <Compile Include="Point.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rock.cs" />
     <Compile Include="Rover.cs" />
     <Compile Include="SelfDestructor.cs" />
     <Compile Include="Size.cs" />

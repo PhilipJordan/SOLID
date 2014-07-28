@@ -112,6 +112,7 @@ namespace MarsRoverKata
                 return false;
             }
             missileToFire.Launch(Facing, Location);
+            Missiles.Remove(missileToFire);
             return true;
         }
 
