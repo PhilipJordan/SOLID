@@ -46,7 +46,6 @@
     <Compile Include="Commands\FireMissileCommand.cs" />
     <Compile Include="Commands\ForwardCommand.cs" />
     <Compile Include="Commands\ICommand.cs" />
-    <Compile Include="Commands\SelfDestructCommand.cs" />
     <Compile Include="Commands\TurnLeftCommand.cs" />
     <Compile Include="Commands\TurnRightCommand.cs" />
     <Compile Include="CrashException.cs" />
@@ -61,7 +60,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rock.cs" />
     <Compile Include="Rover.cs" />
-    <Compile Include="SelfDestructor.cs" />
     <Compile Include="Size.cs" />
   </ItemGroup>
   <ItemGroup>

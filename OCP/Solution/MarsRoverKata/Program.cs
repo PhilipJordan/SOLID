@@ -130,7 +130,6 @@ namespace MarsRoverKata
             Console.WriteLine("r - Turn Right");
             Console.WriteLine("l - Turn Left");
             Console.WriteLine("m - Fire Missile");
-            Console.WriteLine("s - Self Destruct");
             Console.WriteLine("q - End Mission (Single character command)");
             Console.WriteLine("h - Display Help (Single character command)");
             Console.WriteLine("You may issue multiple rover commands on one line.");
