@@ -7,20 +7,20 @@
 *.sln.docstates
 
 # Build results
-[Dd]ebug/
-[Dd]ebugPublic/
-[Rr]elease/
-[Rr]eleases/
-x64/
-x86/
-build/
-bld/
-[Bb]in/
-[Oo]bj/
+/[Dd]ebug/
+/[Dd]ebugPublic/
+/[Rr]elease/
+/[Rr]eleases/
+/x64/
+/x86/
+/build/
+/bld/
+/[Bb]in/
+/[Oo]bj/
 
 # MSTest test Results
-[Tt]est[Rr]esult*/
-[Bb]uild[Ll]og.*
+#[Tt]est[Rr]esult*/
+#[Bb]uild[Ll]og.*
 
 #NUNIT
 *.VisualState.xml
