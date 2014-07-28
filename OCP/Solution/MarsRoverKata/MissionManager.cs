@@ -44,6 +44,8 @@ namespace MarsRoverKata
                 commander.Accept(new TurnLeftCommand(rover));
             else if (command.Equals('m'))
                 commander.Accept(new FireMissileCommand(rover));
+            else if (command.Equals('g'))
+                commander.Accept(new FireMortarCommand(rover));
             else
                 success = false;
             return success;

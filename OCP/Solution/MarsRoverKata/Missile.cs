@@ -29,19 +29,16 @@ namespace MarsRoverKata
 
         public virtual void Launch(Direction facing, Point location)
         {
-            bool detonated = false;
+            bool collidedWithTarget = false;
             int moveIndex = 0;
             Point target = location;
-            while (!detonated && moveIndex < MaxDistance)
+            while (!collidedWithTarget && moveIndex < MaxDistance)
             {
                 target = CreateDesiredPosition(1, facing, target);
-                detonated = TryDetonate(target);
+                collidedWithTarget = IsCollisionDetected(target);
                 moveIndex++;
             }
-            if (!detonated)
-            {
-                CreateCrater(target);
-            }
+            HitTarget(target);
         }
 
         protected Point CreateDesiredPosition(int adjustmentFactor, Direction facing, Point location)
@@ -50,7 +47,7 @@ namespace MarsRoverKata
             return location + adjustment;
         }
 
-        protected virtual bool TryDetonate(Point desired)
+        protected virtual bool IsCollisionDetected(Point desired)
         {
             Point newDestination = desired;
             newDestination = CalculatePositionY(desired, newDestination);
@@ -103,12 +100,18 @@ namespace MarsRoverKata
             Mars.RemoveObstacle(obstacle);
         }
 
-        protected void CreateCrater(Point point)
+        protected void HitTarget(Point point)
         {
-            if (!Mars.Obstacles.Any(o => o.Location.X == point.X 
-                && o.Location.Y == point.Y))
+            var obstacle = FindObstacle(point);
+
+            //TODO: Look at this stuff!
+            if (obstacle != null && (obstacle.GetType() != typeof(Crater)))
             {
-                Crater obstacle = new Crater(point);
+                DestroyObstacle(obstacle);
+            }
+            else if (obstacle == null)
+            {
+                obstacle = new Crater(point);
                 Mars.AddObstacle(obstacle);
             }
         }
