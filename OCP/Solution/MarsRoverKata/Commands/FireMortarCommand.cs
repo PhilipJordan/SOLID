@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace MarsRoverKata.Commands
 {
-    public class SelfDestructCommand : ICommand
+    public class FireMortarCommand : ICommand
     {
         public Rover Rover { get; set; }
 
-        public SelfDestructCommand(Rover rover)
+        public FireMortarCommand(Rover rover)
         {
             Rover = rover;
         }
 
         public bool Execute()
         {
-            return Rover.SelfDestruct();
+            return Rover.FireMortar();
         }
     }
 }
