@@ -38,3 +38,4 @@ C:\Users\nmartin\Documents\GitHub\SOLID\OCP\Solution\MarsRoverKata\bin\Debug\Mar
 C:\Users\nmartin\Documents\GitHub\SOLID\OCP\Solution\MarsRoverKata\bin\Debug\MarsRoverKata.pdb
 C:\Users\nmartin\Documents\GitHub\SOLID\OCP\Solution\MarsRoverKata\obj\Debug\MarsRoverKata.exe
 C:\Users\nmartin\Documents\GitHub\SOLID\OCP\Solution\MarsRoverKata\obj\Debug\MarsRoverKata.pdb
+C:\Users\nmartin\Documents\GitHub\SOLID\OCP\Solution\MarsRoverKata\obj\Debug\MarsRoverKata.csprojResolveAssemblyReference.cache
