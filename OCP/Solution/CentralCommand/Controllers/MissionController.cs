@@ -103,7 +103,7 @@ namespace CentralCommand.Controllers
         public JsonResult UpdateObstacles(List<string> locations)
         {
             if(locations == null)
-                return Json(new MissionResponseViewModel { Success = false, Obstacles = new List<ObstacleViewModel>() });
+                return Json(new MissionResponseViewModel { Success = false, Obstacles = new List<MapPositionViewModel>() });
 
             var distinctLocations = (from location in locations 
                        select location).Distinct().ToList<string>();
@@ -115,14 +115,9 @@ namespace CentralCommand.Controllers
                 Planet.AddObstacle(obstacle);
             }
 
-            var results = Planet.Obstacles.Select(x =>
-                new ObstacleViewModel
-                {
-                    Location = x.Location.X + "_" + x.Location.Y,
-                    Image = x.GetType() == typeof(Rock) ? "rock.png" : "crater.jpg"
-                }).ToList();
+            var updatedObstacles = ConvertToViewModels(Planet.Obstacles);
 
-            return Json(new MissionResponseViewModel { Success = true, Obstacles = results });
+            return Json(new MissionResponseViewModel { Success = true, Obstacles = updatedObstacles });
         }
 
         //REFACTOR: Move this logic into MissionManager
@@ -151,7 +146,17 @@ namespace CentralCommand.Controllers
             var newCollection = Planet.Obstacles.ToList();
 
 
-            //compare 
+            ////compare 
+            //var addedObstacles = newCollection.Except(oldCollection).ToList();
+
+
+            var updatedObstacles = ConvertToViewModels(Planet.Obstacles);
+            var removedObstacles = oldCollection.Except(newCollection).Select(x =>
+                new MapPositionViewModel
+                {
+                    Location = x.Location.X + "_" + x.Location.Y,
+                    Image = "Ground.png"
+                }).ToList();
 
             var rovers_new_position = Vehicle.Location.X + "_" + Vehicle.Location.Y;
             var roverNewPosition = Vehicle.Location.X + "_" + Vehicle.Location.Y;
@@ -160,9 +165,23 @@ namespace CentralCommand.Controllers
             return Json(new MissionResponseViewModel {  Success = true, 
                                                         RoverLocation = roverNewPosition,
                                                         PreviousRoverLocation = originalPosition,
-                                                        RoverFacing = roverFacing
+                                                        RoverFacing = roverFacing,
+                                                        Obstacles = updatedObstacles,
+                                                        RemovedObstacles = removedObstacles
                                                      });
         }
+
+        private List<MapPositionViewModel> ConvertToViewModels(IReadOnlyList<IObstacle> obstacles)
+        {
+            return obstacles.Select(x =>
+                new MapPositionViewModel
+                {
+                    Location = x.Location.X + "_" + x.Location.Y,
+                    Image = x.GetType() == typeof(Rock) ? "rock.png" : "crater.jpg"
+                }).ToList();
+        }
+
+        
 
         private string GetFacingAsString(Direction roverFacing)
         {

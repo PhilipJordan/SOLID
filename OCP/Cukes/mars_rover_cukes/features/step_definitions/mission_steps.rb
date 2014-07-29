@@ -127,11 +127,55 @@ Then(/^the rover will still be at the (center of the map)$/) do |center_of_map|
 end  
 
 
+When(/^I fire a missile$/) do
+	on(MissionPage) do |page|
+		page.fireMissile
+		page.sendCommands
+	end
+end
+
+Then(/^a crater will be formed$/) do
+	on(MissionPage) do |page|
+		theImage = page.get_image_at '25_35'
+		theImage.should include 'crater'
+	end
+end
 
 
+Then(/^obstacle is destroyed$/) do
+	on(MissionPage) do |page|
+		theImage = page.get_image_at '25_26'
+		theImage.should include 'Ground'
+	end
+end
 
+Then(/^a crater will not be formed$/) do
+	on(MissionPage) do |page|
+		theImage = page.get_image_at '25_35'
+		theImage.should_not include 'crater'
+	end
+end
 
+Given(/^crater exists (\d+) steps to the north$/) do |number_of_steps|
+	on(MissionPage) do |page|
+		page.fireMissile
+		page.sendCommands
+	end
+end
 
+Then(/^obstacle is not destroyed$/) do
+	on(MissionPage) do |page|
+		theImage = page.get_image_at '25_35'
+		theImage.should include 'crater'
+	end
+end                                              
+                                                                   
+Then(/^obstacle is destroyed at (\d+)x(\d+)$/) do |x, y|
+	on(MissionPage) do |page|
+		theImage = page.get_image_at "#{x}_#{y}"
+		theImage.should include 'Ground'
+	end
+end                                                                
 
 
 

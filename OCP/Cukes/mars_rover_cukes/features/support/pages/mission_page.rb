@@ -9,6 +9,7 @@ class MissionPage
   button(:moveBackward, :id => 'backward')
   button(:turnRight, :id => 'right')
   button(:turnLeft, :id => 'left')
+  button(:fireMissile, :id => 'fireMissile')
   
   def click_button_with name
     @message = self.alert do

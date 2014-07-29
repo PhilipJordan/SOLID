@@ -5,7 +5,7 @@ using System.Web;
 
 namespace CentralCommand.Models
 {
-    public class ObstacleViewModel
+    public class MapPositionViewModel
     {
         public string Location { get; set; }
         public string Image { get; set; }

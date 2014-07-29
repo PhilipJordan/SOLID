@@ -171,7 +171,7 @@
     <Compile Include="Models\MissionResponseViewModel.cs" />
     <Compile Include="Models\MissionViewModel.cs" />
     <Compile Include="Models\LoginViewModel.cs" />
-    <Compile Include="Models\ObstacleViewModel.cs" />
+    <Compile Include="Models\MapPositionViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

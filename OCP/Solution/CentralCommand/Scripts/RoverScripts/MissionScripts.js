@@ -45,6 +45,8 @@ function pagePrep() {
             setOldRoverLocationToGround(oldRoverLocation);
             //$(locationsToUpdate).each(updateMapLocationForRover);
 
+            obstacleUpdateSuccess(result);
+
             $("img[id='" + locationToUpdate + "']").attr('src', '/Images/Rover-' + roverFacing + '.png');
 
             emptyListElement($("#newCommands"));
@@ -55,9 +57,8 @@ function pagePrep() {
     function obstacleUpdateSuccess(result)
     {
         if (result.Success) {
-            var locationsToUpdate = result.Obstacles;
-
-            $(locationsToUpdate).each(updateMapLocation);
+            $(result.Obstacles).each(updateMapLocation);
+            $(result.RemovedObstacles).each(updateMapLocation);
             emptyListElement($("#newObstacles"));
         }
         else { alert("Unable to update obstacles. Did you click on the map to add any?");}
