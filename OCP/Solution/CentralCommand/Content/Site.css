@@ -7,8 +7,21 @@ html body{
     background-color: #e6e8e8;
 }
 
-h1 {
+.div-header-title {
+    background-color: white;
+    border: 1px solid #dadddd;
+    border-radius: 3px;
+    width: 35%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+}
+
+#header-title {
     text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .controlContainer {
@@ -16,9 +29,13 @@ h1 {
 }
 
 .mapContainer {
-    padding: 50px 50px 50px 50px;
-    margin: 10px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 10px;
     clear: right;
+    background-color: white;
+    border: 1px solid #dadddd;
+    border-radius: 3px;
 }
 
 .terrainMap {
@@ -37,11 +54,17 @@ h1 {
 
 
 .controlPanel {
-    width: 300px;
-    max-width: 300px;
     float: left;
     display: inline-block;
+    background-color: white;
+    margin-top: 60px;
+    border: 1px solid #dadddd;
+    border-radius: 3px;
 }
+
+    .controlPanel .row {
+        text-align: center;
+    }
 
     .controlPanel input[type="text"], span, select, textarea {
         width: 90%;
@@ -70,11 +93,33 @@ h1 {
         width: 50px;
     }
 
-input[type="submit"] {
-    font-weight: bold;
+#table-control-panel {
+    margin: 30px auto;
 }
 
-#table-control-panel {
-    margin-top: 30px;
-    margin-bottom: 30px;
+#section-main {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #edf0f0;
+    border-radius: 3px;
+    border: 1px solid #DADDDD;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#controlPanel-header {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #DADDDD;
+}
+
+#MissionControl {
+    color: #2f323a;
+    font-size: 18px;
+}
+
+#sendCommands {
+    margin-bottom: 10px;
 }
