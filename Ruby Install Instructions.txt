@@ -1,12 +1,15 @@
 
 Go to http://rubyinstaller.org/ and download Ruby 1.9.3-p545 version
 
-Install and add to PATH (optional: Associate files if you want. Will not hurt)
+Install and choose add to PATH checkbox (optional: Associate files (and/or other checkbox) if you want. Will not hurt)
 
 CHECK POINT: Open command prompt and type 'irb' (this should display the basic interactive ruby shell)
              If you type '1 + 1' and hit enter it should return 2
 			 type 'exit' to exit the shell
 
+			 
+From command prompt:			 
+			 
 gem install watir-webdriver (this will also install several dependencies including selenium-webdriver)
 
 gem install rspec -v 2.99
@@ -16,6 +19,8 @@ gem install page-object
 gem install cucumber
 
 gem install bundler
+
+change directory to cucumber folder (c:\github\SOLID\OCP\Cukes\mars_rover_cukes)
 
 bundle install (from cuke directory)
 
