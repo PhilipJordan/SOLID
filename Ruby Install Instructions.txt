@@ -20,6 +20,8 @@ gem install cucumber
 
 gem install bundler
 
+change directory to cucumber folder (c:\github\SOLID\OCP\Cukes\mars_rover_cukes)
+
 bundle install (from cuke directory)
 
 CHECK POINT: Make sure you didn't get any errors during these installs.
