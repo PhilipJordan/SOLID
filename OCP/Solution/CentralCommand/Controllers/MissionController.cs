@@ -132,11 +132,21 @@ namespace CentralCommand.Controllers
         [HttpPost]
         public JsonResult SendCommands(List<string> commands)
         {
+            //grab existing collection
+            var oldCollection = Planet.Obstacles.ToList();
+
+
             var originalPosition = Vehicle.Location.X + "_" + Vehicle.Location.Y;
 
             var commandString = String.Join(",", commands);
             MissionManager.AcceptCommands(commandString);
             MissionManager.ExecuteMission();
+
+            //grab new collection
+            var newCollection = Planet.Obstacles.ToList();
+
+
+            //compare 
 
             var rovers_new_position = Vehicle.Location.X + "_" + Vehicle.Location.Y;
             var roverFacing = GetFacingAsString(Vehicle.Facing);
