@@ -1,7 +1,7 @@
 @withoutPageObject
 Feature: Access to the Mission
    
-     Just some text about nothing
+     Just some text about nothing and stuff
    
    @username
    Scenario: Logging in with invalid credentials
