@@ -37,7 +37,7 @@ function pagePrep() {
 
     function commandUpdateSuccess(result) {
         if (result.Success) {
-            var locationsToUpdate = result.LocationUpdates;
+            var locationToUpdate = result.RoverLocation;
             var oldRoverLocation = result.PreviousRoverLocation;
             var roverFacing = result.RoverFacing;
 
@@ -45,11 +45,7 @@ function pagePrep() {
             setOldRoverLocationToGround(oldRoverLocation);
             //$(locationsToUpdate).each(updateMapLocationForRover);
 
-            $(locationsToUpdate).each(function updateMapLocationForRover(index, element) {
-                $("img[id='" + element + "']").attr('src', '/Images/Rover-' + roverFacing + '.png');
-            });
-
-
+            $("img[id='" + locationToUpdate + "']").attr('src', '/Images/Rover-' + roverFacing + '.png');
 
             emptyListElement($("#newCommands"));
         }
@@ -59,7 +55,7 @@ function pagePrep() {
     function obstacleUpdateSuccess(result)
     {
         if (result.Success) {
-            var locationsToUpdate = result.LocationUpdates;
+            var locationsToUpdate = result.Obstacles;
 
             $(locationsToUpdate).each(updateMapLocation);
             emptyListElement($("#newObstacles"));
@@ -83,7 +79,7 @@ function pagePrep() {
 
     function updateMapLocation(index, element)
     {
-        $("img[id='" + element + "']").attr('src', '/Images/Obstacle.png');
+        $("img[id='" + element.Location + "']").attr('src', '/Images/' + element.Image);
     }
 
     function wtf()

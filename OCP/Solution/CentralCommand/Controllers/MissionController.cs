@@ -103,7 +103,7 @@ namespace CentralCommand.Controllers
         public JsonResult UpdateObstacles(List<string> locations)
         {
             if(locations == null)
-                return Json(new MissionResponseViewModel { Success = false, LocationUpdates = new List<string>() });
+                return Json(new MissionResponseViewModel { Success = false, Obstacles = new List<ObstacleViewModel>() });
 
             var distinctLocations = (from location in locations 
                        select location).Distinct().ToList<string>();
@@ -115,9 +115,14 @@ namespace CentralCommand.Controllers
                 Planet.AddObstacle(obstacle);
             }
 
-            var results = Planet.Obstacles.Select(x => x.Location.X + "_" + x.Location.Y).ToList<string>();
+            var results = Planet.Obstacles.Select(x =>
+                new ObstacleViewModel
+                {
+                    Location = x.Location.X + "_" + x.Location.Y,
+                    Image = x.GetType() == typeof(Rock) ? "Obstacle.png" : "crater.jpg"
+                }).ToList();
 
-            return Json(new MissionResponseViewModel { Success = true, LocationUpdates = results });
+            return Json(new MissionResponseViewModel { Success = true, Obstacles = results });
         }
 
         //REFACTOR: Move this logic into MissionManager
@@ -138,11 +143,11 @@ namespace CentralCommand.Controllers
             MissionManager.AcceptCommands(commandString);
             MissionManager.ExecuteMission();
 
-            var rovers_new_position = Vehicle.Location.X + "_" + Vehicle.Location.Y;
+            var roverNewPosition = Vehicle.Location.X + "_" + Vehicle.Location.Y;
             var roverFacing = GetFacingAsString(Vehicle.Facing);
 
             return Json(new MissionResponseViewModel {  Success = true, 
-                                                        LocationUpdates = new List<string>() { rovers_new_position },
+                                                        RoverLocation = roverNewPosition,
                                                         PreviousRoverLocation = originalPosition,
                                                         RoverFacing = roverFacing
                                                      });

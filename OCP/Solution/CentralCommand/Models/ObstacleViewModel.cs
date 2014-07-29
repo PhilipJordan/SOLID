@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using MarsRoverKata;
 
 namespace CentralCommand.Models
 {
-    public class MissionViewModel
+    public class ObstacleViewModel
     {
-        public List<List<string>> Map { get; set; }
+        public string Location { get; set; }
+        public string Image { get; set; }
     }
 }
