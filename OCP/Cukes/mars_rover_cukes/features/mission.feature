@@ -66,5 +66,57 @@ Feature: Beginning the Mission
 		When I send the backward command
 		Then the rover will still be at the center of the map 
 	 
-	 
-   	 
+	Scenario: Firing Rockets without obstacles
+		Given the Mission page 
+		When I fire a missile
+		Then a crater will be formed
+		
+	Scenario: Firing Rockets with obstacles
+		Given the Mission page
+		And default obstacles on the map		
+		When I fire a missile
+		Then obstacle is destroyed 
+		And a crater will not be formed
+		
+	Scenario: Firing Rockets at craters
+		Given the Mission page
+		And crater exists 10 steps to the north
+		When I fire a missile
+		Then obstacle is not destroyed
+		
+	Scenario: Firing Rockets over craters at obstacles
+		Given the Mission page
+		And I click on the map at location "25, 36"
+		And I click the "Add" button
+		And crater exists 10 steps to the north
+		And I send the forward command
+		When I fire a missile
+		Then obstacle is destroyed at 25x36
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

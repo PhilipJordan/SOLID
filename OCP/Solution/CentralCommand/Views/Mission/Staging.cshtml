@@ -3,188 +3,87 @@
 @{
     Layout = "../Shared/_Layout.cshtml";
 }
-    <style>
-    
-        textarea
-    {
-        height:100px;
-        overflow:hidden;
-    }
 
-    .controlContainer
-    {
-        /*border:1px solid #00FF00;*/
-    }
-
-    .mapContainer
-    {
-        padding:50px 50px 50px 50px;
-        margin: 10px;
-        clear:right;
-    }
-
-    .terrainMap
-    {
-        max-width:70%;
-        float:left;
-        display:inline-block;
-    }
-
-    .terrainMap img
-    {
-        float:left;
-        display:block;
-        padding:0;
-        margin:0;
-        width:2%;
-        height:2%;
-    }
-
-    
-    .controlPanel
-    {
-        width: 300px;
-        max-width:300px;
-        float:left;
-        display:inline-block;
-    }
-
-    .controlPanel input[type="text"], span, select, textarea
-    {
-        width:90%;
-        padding:5px;
-    }
-
-
-    .controlPanel ul
-    {
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-        text-align: center;
-    }
-
-    .controlPanel ul li
-    {
-        display:inline-block;
-        color: #fff;
-        background-color: #036;
-        padding: .2em 1em;
-        margin: 4px 1px;
-        border-radius:10px;
-                
-    }
-
-    td
-    {
-        padding:0;
-        margin:0;
-    }  
-    
-    td input
-    {
-        height: 50px;
-        width: 50px;
-    }
-    
-    input[type="submit"] {
-        margin-top:5px;
-        background-color:#f24537;
-        border-radius:30px;
-        text-indent:0px;
-        border:1px solid #d02718;
-        display:inline-block;
-        color:#ffffff;
-        font-family:Arial Black;
-        font-size:15px;
-        font-weight:bold;
-        font-style:normal;
-        height:30px;
-        line-height:20px;
-        width:150px;
-        text-decoration:none;
-        text-align:center;
-        text-shadow:3px 5px 2px #810e05;
-    }
-    input[type="submit"]:hover {
-        background-color:#c62d1f;
-    }
-    input[type="submit"]:active {
-        position:relative;
-        top:1px;
-    }
-
-    
-
-    </style>
-
-    <section style="text-align:center">
-        <h3 id="MissionControl">Mission Control</h3>
-        <div class="controlContrainer">
-        
-            <div class="controlPanel">
-
+<section style="text-align: center">
+    <h3 id="MissionControl">Mission Control</h3>
+    <div class="controlContrainer">
+        <div class="row">
+            <div class="controlPanel col-md-3">
                 <ul id="newObstacles" class="lists"></ul>
-                <input id="addObstacles" class="missionButton" type="submit" value="Add" />
+                <div class="row">
+                    <div class="col-md-3 col-md-offset-5">
+                        <input id="addObstacles" class="missionButton btn btn-primary" type="submit" value="Add" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-md-offset-3">
+                        <table id="table-control-panel">
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <input id="forward" type="image" value="Forward" alt="Forward Button" data-field="f" src="~/Images/forward.png" /></td>
+                                <td></td>
+                            </tr>
 
-                <br /><br /><br />
-            
-                <table>
-                    <tr>
-                        <td></td>
-                        <td><input id="forward" type="image" value="Forward" alt="Forward Button" data-field="f" src="~/Images/forward.png" /></td>
-                        <td></td>
-                    </tr>
-                
-                    <tr>
-                        <td><input id="left" type="image" value="Left" alt="Turn Left Button" data-field="l" src="~/Images/left.png" /></td>
-                        <td></td>
-                        <td><input id="right" type="image" value="Right" alt="Turn Right Button" data-field="r" src="~/Images/right.png" /></td>
-                    </tr>
-                
-                    <tr>
-                        <td></td>
-                        <td><input id="backward" type="image" value="Backward" alt="Backward Button" data-field="b" src="~/Images/backward.png" /></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td><input id="fireMissile" type="image" value="FireMissile" alt="Fire Missile" data-field="m" src="~/Images/missileButton.jpg"/></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td><input id="fireMortar" type="image" value="FireMortar" alt="Fire Mortar" data-field="g" src="~/Images/mortarButton.png"/></td>
-                        <td></td>
-                    </tr>
-                </table>
-                <br /><br />
+                            <tr>
+                                <td>
+                                    <input id="left" type="image" value="Left" alt="Turn Left Button" data-field="l" src="~/Images/left.png" /></td>
+                                <td></td>
+                                <td>
+                                    <input id="right" type="image" value="Right" alt="Turn Right Button" data-field="r" src="~/Images/right.png" /></td>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <input id="backward" type="image" value="Backward" alt="Backward Button" data-field="b" src="~/Images/backward.png" /></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <input id="fireMissile" type="image" value="FireMissile" alt="Fire Missile" data-field="m" src="~/Images/missileButton.jpg" /></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <input id="fireMortar" type="image" value="FireMortar" alt="Fire Mortar" data-field="g" src="~/Images/mortarButton.png" /></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
                 <ul id="newCommands" class="lists"></ul>
-            
-                <br />
-                <input id="sendCommands" class="missionButton" type="submit" value="Send Commands" />
+                <div class="row">
+                    <div class="col-md-3 col-md-offset-3">
+                        <input id="sendCommands" class="missionButton btn btn-primary" type="submit" value="Send Commands" />
+                    </div>
+                </div>
+            </div>
+            <div class="mapContainer col-md-5 col-md-offset-2">
+
+                <div class="terrainMap">
+                    @for (int rowIndex = Model.Map.Count - 1; rowIndex >= 0; rowIndex--)//  each(var row in Model.Map)
+                    {
+                        var row = Model.Map[rowIndex];
+                        for (int columnIndex = 0; columnIndex < row.Count; columnIndex++)
+                        {
+                            //var lastRowIndex = row.Count - 1;
+                            //var rowIndex = lastRowIndex - Model.Map.IndexOf(row);
+
+
+                            var id = columnIndex + "_" + rowIndex;
+                            var imagePath = "~/Images/" + row[columnIndex];
+                
+                        <img id="@id" class="mapImage" src="@Url.Content(imagePath)" alt="Image" />
+                        }
+                    }
+
+                </div>
             </div>
         </div>
-        <div class="mapContainer">
-        
-            <div class="terrainMap">
-                @for(int rowIndex = Model.Map.Count - 1; rowIndex >= 0; rowIndex--)//  each(var row in Model.Map)
-    {
-        var row = Model.Map[rowIndex];
-        for (int columnIndex = 0; columnIndex < row.Count; columnIndex++)
-        {
-            //var lastRowIndex = row.Count - 1;
-            //var rowIndex = lastRowIndex - Model.Map.IndexOf(row);
-                    
-                
-            var id = columnIndex + "_" + rowIndex;
-            var imagePath = "~/Images/" + row[columnIndex];
-                
-            <img id="@id" class="mapImage" src="@Url.Content(imagePath)" alt="Image" />
-        }
-    }
 
-        </div>
     </div>
 </section>
 <script type="text/javascript">
