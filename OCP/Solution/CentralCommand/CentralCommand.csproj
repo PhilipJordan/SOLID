@@ -251,7 +251,7 @@
     <Content Include="Images\left.png" />
     <Content Include="Images\missileButton.jpg" />
     <Content Include="Images\mortarButton.PNG" />
-    <Content Include="Images\Obstacle.png" />
+    <Content Include="Images\rock.png" />
     <Content Include="Images\right.png" />
     <Content Include="Images\Rover-E.png" />
     <Content Include="Images\Rover-N.png" />

@@ -119,7 +119,7 @@ namespace CentralCommand.Controllers
                 new ObstacleViewModel
                 {
                     Location = x.Location.X + "_" + x.Location.Y,
-                    Image = x.GetType() == typeof(Rock) ? "Obstacle.png" : "crater.jpg"
+                    Image = x.GetType() == typeof(Rock) ? "rock.png" : "crater.jpg"
                 }).ToList();
 
             return Json(new MissionResponseViewModel { Success = true, Obstacles = results });
@@ -188,7 +188,7 @@ namespace CentralCommand.Controllers
         //{
         //    var result = GetGroundRow();
 
-        //    result[rng.Next(0, 50)] = "Obstacle.png";
+        //    result[rng.Next(0, 50)] = "rock.png";
 
         //    return result;
         //}
