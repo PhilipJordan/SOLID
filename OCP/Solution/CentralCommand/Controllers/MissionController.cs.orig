@@ -137,6 +137,7 @@ namespace CentralCommand.Controllers
         [HttpPost]
         public JsonResult SendCommands(List<string> commands)
         {
+<<<<<<< HEAD
             //grab existing collection
             var oldCollection = Planet.Obstacles.ToList();
 
@@ -154,6 +155,20 @@ namespace CentralCommand.Controllers
             //compare 
 
             var rovers_new_position = Vehicle.Location.X + "_" + Vehicle.Location.Y;
+            var roverFacing = GetFacingAsString(Vehicle.Facing);
+
+            return Json(new MissionResponseViewModel {  Success = true, 
+                                                        LocationUpdates = new List<string>() { rovers_new_position },
+                                                        PreviousRoverLocation = originalPosition,
+                                                        RoverFacing = roverFacing
+                                                     });
+=======
+            var originalPosition = Vehicle.Location.X + "_" + Vehicle.Location.Y;
+
+            var commandString = String.Join(",", commands);
+            MissionManager.AcceptCommands(commandString);
+            MissionManager.ExecuteMission();
+
             var roverNewPosition = Vehicle.Location.X + "_" + Vehicle.Location.Y;
             var roverFacing = GetFacingAsString(Vehicle.Facing);
 
@@ -162,6 +177,7 @@ namespace CentralCommand.Controllers
                                                         PreviousRoverLocation = originalPosition,
                                                         RoverFacing = roverFacing
                                                      });
+>>>>>>> 21053be5002c6fc81b7875c73f803fcb5ece4081
         }
 
         private string GetFacingAsString(Direction roverFacing)

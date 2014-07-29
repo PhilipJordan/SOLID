@@ -48,7 +48,7 @@ namespace CentralCommand.Controllers
         {
             var result = GetGroundRow();
 
-            result[rng.Next(0, 50)] = "Obstacle.png";
+            result[rng.Next(0, 50)] = "rock.png";
 
             return result;
         }
