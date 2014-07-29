@@ -84,3 +84,4 @@ csx/
 
 # Windows Store app package directory
 AppPackages/
+OCP/Solution/UnitTest/bin/
