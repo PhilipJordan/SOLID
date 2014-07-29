@@ -6,6 +6,9 @@ class MissionPage
   button(:addObstacles, :value => 'Add')
   button(:sendCommands, :id => 'sendCommands')
   button(:moveForward, :id => 'forward')
+  button(:moveBackward, :id => 'backward')
+  button(:turnRight, :id => 'right')
+  button(:turnLeft, :id => 'left')
   
   def click_button_with name
     @message = self.alert do
@@ -25,7 +28,7 @@ class MissionPage
   end
   
   def add_default_obstacles  
-    defaultObstacles = {:northObstacle => "25_30", :eastObstacle => "30_25", :southObstacle => "25_20", :westObstacle => "20_25"}
+    defaultObstacles = {:northObstacle => "25_26", :eastObstacle => "26_25", :southObstacle => "25_24", :westObstacle => "24_25"}
     
 	@browser.img(:id => defaultObstacles[:northObstacle]).click
 	@browser.img(:id => defaultObstacles[:eastObstacle]).click

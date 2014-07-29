@@ -29,10 +29,10 @@ end
   
 #Added this special method until I figure out how I want to use page.alert feature  
 When(/^I click the add button$/) do                                           
-            
+		pending # express the regexp above with the code you wish you had
 end                                                                           
                                                                               
-                                                                              
+#Below this are prime candidates for re-factoring. Getting this done for the OCP presentation. Refactor for Code && Beer talk                                                                           
 
 Given(/^(default obstacles) on the map$/) do |blar|
 	on(MissionPage).add_default_obstacles
@@ -46,30 +46,85 @@ When(/^I send the forward command$/) do
 	end
 end
 
+
+#When(/^I send the forward command (\d+) times$/) do |number_of_moves|
+#  number_of_moves do 
+#	on(MissionPage) do |page|
+#		page.moveForward
+#		page.sendCommands
+#	end
+#  end
+#end
+
+#Then(/^the rover will move forward (\d+) times$/) do |number_of_moves|
+#	on(MissionPage) do |page|
+#		roverImage = page.get_image_at '25_29'
+#		roverImage.should include 'Rover'
+#	end
+#end
+
+
+
+When(/^I send the backward command$/) do
+	on(MissionPage) do |page|
+		page.moveBackward
+		page.sendCommands
+	end
+end
+
+Then(/^the rover will move (\d+) step to the south$/) do |number_of_steps|
+	on(MissionPage) do |page|
+		roverImage = page.get_image_at '25_24'
+		roverImage.should include 'Rover'
+	end
+end
+
 Then(/^the rover will move (\d+) step to the north$/) do |number_of_steps| #, north_location|
 	on(MissionPage) do |page|
-	sleep 1
-	roverImage = page.get_image_at '25_26'
-	roverImage.should include 'Rover'
-	
-	# $("img[src$='Rover.png']")
-		# TODO: make method that finds location of Rover by its value
-		#(page.get_image_at north_location).should include 
-		
+		roverImage = page.get_image_at '25_26'
+		roverImage.should include 'Rover'
 	end
 end           
 
 Then(/^the old position will display ground$/) do 
 	on(MissionPage) do |page|
-	sleep 1
-		
-	oldRoverImage = page.get_image_at '25_25'
-	oldRoverImage.should include 'Ground'
+		oldRoverImage = page.get_image_at '25_25'
+		oldRoverImage.should include 'Ground'
 	end
-end                                                       
-#the old position will display ground
+end   
 
+When(/^I send the turn right command$/) do
+	on(MissionPage) do |page|
+		page.turnRight
+		page.sendCommands
+	end
+end
 
+Then(/^the rover will be facing East$/) do
+	on(MissionPage) do |page|
+		roverImage = page.get_image_at '25_25'
+		roverImage.should include 'Rover-E'
+	end
+end
+                                                    
+When(/^I send the turn left command$/) do
+	on(MissionPage) do |page|
+		page.turnLeft
+		page.sendCommands
+	end
+end
+
+Then(/^the rover will be facing West$/) do
+	on(MissionPage) do |page|
+		roverImage = page.get_image_at '25_25'
+		roverImage.should include 'Rover-W'
+	end
+end
+
+Then(/^the rover will still be at the (center of the map)$/) do |center_of_map|                  
+	map_image = on(MissionPage).get_image_at center_of_map 
+	map_image.should include 'Rover'
+end  
 
 
 
