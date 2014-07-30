@@ -85,7 +85,7 @@ namespace MarsRoverKata
             Mars.RemoveObstacle(obstacle);
         }
 
-        protected void HitTarget(Point point)
+        private void HitTarget(Point point)
         {
             var obstacle = FindObstacle(point);
 
