@@ -97,8 +97,7 @@ namespace MarsRoverKata
         {
             var obstacle = FindObstacle(point);
 
-            //TODO: Look at this stuff!
-            if (obstacle != null && (obstacle.GetType() != typeof(Crater)))
+            if (obstacle != null && obstacle.IsDestructable)
             {
                 DestroyObstacle(obstacle);
             }
