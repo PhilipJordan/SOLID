@@ -227,6 +227,7 @@
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Images\backward.png" />
     <Content Include="Images\crater.jpg" />
+    <Content Include="Images\down.png" />
     <Content Include="Images\forward.png" />
     <Content Include="Images\Ground.png" />
     <Content Include="Images\left.png" />
@@ -240,6 +241,7 @@
     <Content Include="Images\Rover-W.png" />
     <Content Include="Images\Rover.png" />
     <None Include="Scripts\jquery-1.9.0.intellisense.js" />
+    <Content Include="Images\up.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.0.js" />
