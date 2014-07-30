@@ -13,7 +13,7 @@ end
 #end
 
 Transform /^display an obstacle$/ do |name|
-	"Obstacle.png"
+	"rock.png"
 end
 
 Transform /^default obstacles$/ do |foo|
