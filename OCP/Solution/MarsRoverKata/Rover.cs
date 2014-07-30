@@ -12,7 +12,7 @@ namespace MarsRoverKata
         public Point Location { get; set; }
         public Direction Facing { get; set; }
 
-        private Mars Mars { get; set; }
+        public Mars Mars { get; set; }
         private static readonly Dictionary<Direction, Point> PositionalAdjustments = new Dictionary<Direction, Point>() 
         { 
             { Direction.North, new Point(0, 1) },

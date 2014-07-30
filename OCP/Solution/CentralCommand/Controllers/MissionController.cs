@@ -10,45 +10,18 @@ namespace CentralCommand.Controllers
 {
     public class MissionController : Controller
     {
-        public List<List<string>> Map 
-        { 
-            get 
-            {
-                if (Session["Map"] == null)
-                    Session["Map"] = new List<List<string>>();
-
-                return (List<List<string>>)Session["Map"];
-            } 
-            set {
-                Session["Map"] = value;
-            } 
-        }
         private Rover Vehicle
         {
             get
             {
-                if (Session["Rover"] == null)
-                    Session["Rover"] = new Rover(Planet);
-
-                return (Rover)Session["Rover"];
-            }
-            set
-            {
-                Session["Rover"] = value;
+                return MissionManager.Rover;
             }
         }
         private Mars Planet
         {
             get
             {
-                if (Session["Mars"] == null)
-                    Session["Mars"] = new Mars();
-
-                return (Mars)Session["Mars"];
-            }
-            set
-            {
-                Session["Mars"] = value;
+                return MissionManager.Planet;
             }
         }
         public MissionManager MissionManager
@@ -56,16 +29,15 @@ namespace CentralCommand.Controllers
             get
             {
                 if (Session["MissionManager"] == null)
-                    Session["MissionManager"] = new MissionManager(Vehicle);
+                    Session["MissionManager"] = new MissionManager(new Rover(new Mars()));
 
                 return (MissionManager)Session["MissionManager"];
             }
             set
             {
-                Session["Rover"] = value;
+                Session["MissionManager"] = value;
             }
         }
-
 
         public ActionResult Index()
         {
@@ -74,10 +46,6 @@ namespace CentralCommand.Controllers
 
         public ActionResult Staging(MissionViewModel viewModel)
         {
-            //Because MissionManager is not the single point of entry we have to make this call to ensure everything is 
-            //instantiated before we begin.
-            var manager = MissionManager;
-
             var initialMap = new List<List<string>>();
             for (int i = 0; i < 50; i++)
             {
@@ -86,8 +54,6 @@ namespace CentralCommand.Controllers
                 else
                     initialMap.Add(GetRoverRow(Vehicle));
             }
-
-            Map = initialMap;
             
             viewModel.Map = initialMap;
 

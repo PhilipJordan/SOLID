@@ -9,12 +9,14 @@ namespace MarsRoverKata
 {
     public class MissionManager
     {
-        private Rover rover;
+        public Rover Rover;
+        public Mars Planet; 
         private Commander commander;
         
         public MissionManager(Rover rover)
         {
-            this.rover = rover;
+            Rover = rover;
+            Planet = rover.Mars;
             commander = new Commander();
         }
 
@@ -35,17 +37,17 @@ namespace MarsRoverKata
         private bool AcceptCommand(bool success, Char command)
         {
             if (command.Equals('f'))
-                commander.Accept(new ForwardCommand(rover));
+                commander.Accept(new ForwardCommand(Rover));
             else if (command.Equals('b'))
-                commander.Accept(new BackwardCommand(rover));
+                commander.Accept(new BackwardCommand(Rover));
             else if (command.Equals('r'))
-                commander.Accept(new TurnRightCommand(rover));
+                commander.Accept(new TurnRightCommand(Rover));
             else if (command.Equals('l'))
-                commander.Accept(new TurnLeftCommand(rover));
+                commander.Accept(new TurnLeftCommand(Rover));
             else if (command.Equals('m'))
-                commander.Accept(new FireMissileCommand(rover));
+                commander.Accept(new FireMissileCommand(Rover));
             else if (command.Equals('g'))
-                commander.Accept(new FireMortarCommand(rover));
+                commander.Accept(new FireMortarCommand(Rover));
             else
                 success = false;
             return success;
