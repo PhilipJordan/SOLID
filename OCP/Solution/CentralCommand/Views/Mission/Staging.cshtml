@@ -20,7 +20,7 @@
                         <tr>
                             <td></td>
                             <td>
-                                <input id="forward" type="image" value="Forward" alt="Forward Button" data-field="f" src="~/Images/forward.png" /></td>
+                                <input id="forward" type="image" value="Forward" alt="Forward Button" data-field="f" src="~/Images/up.png" /></td>
                             <td></td>
                         </tr>
 
@@ -35,7 +35,7 @@
                         <tr>
                             <td></td>
                             <td>
-                                <input id="backward" type="image" value="Backward" alt="Backward Button" data-field="b" src="~/Images/backward.png" /></td>
+                                <input id="backward" type="image" value="Backward" alt="Backward Button" data-field="b" src="~/Images/down.png" /></td>
                             <td></td>
                         </tr>
                         <tr>
@@ -57,7 +57,7 @@
             <input id="sendCommands" class="missionButton btn btn-primary" type="submit" value="Send Commands" />
         </div>
     </div>
-    <div class="mapContainer col-md-5 col-md-offset-2">
+    <div class="mapContainer col-md-6 col-md-offset-1">
 
         <div class="terrainMap">
             @for (int rowIndex = Model.Map.Count - 1; rowIndex >= 0; rowIndex--)//  each(var row in Model.Map)

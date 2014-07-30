@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MarsRoverKata
 {
-    public class Mortar : Missile
+    public class Mortar : Projectile
     {
         public Mortar(Mars mars)
             : base(mars)
@@ -19,11 +19,6 @@ namespace MarsRoverKata
             {
                 return 20;
             }
-        }
-
-        public override void Launch(Direction facing, Point location)
-        {
-            base.Launch(facing, location);
         }
 
         protected override bool IsCollisionDetected(Point desired)
