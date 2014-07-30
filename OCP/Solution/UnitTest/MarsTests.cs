@@ -54,7 +54,7 @@ namespace UnitTest
         [Test]
         public void ThenItWillAcceptObstacles()
         {
-            mars.Obstacles.Should().Contain(obstacle);
+            mars.Obstacles.Should().Contain(mockObstacle.Object);
         }
     }
 
@@ -144,9 +144,9 @@ namespace UnitTest
         [Test]
         public void WhenMissileIsLaunched_AndObstacleInTheWay_ThenANewObstacleCreated()
         {
-            var obstacle = mars.Obstacles.FirstOrDefault();
+            mockObstacle.Setup(m => m.IsDestructable).Returns(true);
+            var obstacle = mockObstacle.Object;
             var position = new Point(obstacle.Location.X, obstacle.Location.Y + 5);
-            var expectedObstaclePosition = obstacle.Location;
             var expectedCount = mars.Obstacles.Count - 1;
 
             missile.Launch(Direction.South, position);
@@ -190,7 +190,8 @@ namespace UnitTest
         [Test]
         public void WhenMortarIsLaunched_AndObstacleInTravelPath_AndNoObstaclesInTheLandingPostion_ThenANewObstacleCreated_AndPreviousObstacleIsNotDestroyed()
         {
-            var obstacle = mars.Obstacles.FirstOrDefault();
+            mockObstacle.Setup(m => m.IsDestructable).Returns(true);
+            var obstacle = mockObstacle.Object;
             var position = new Point(obstacle.Location.X, obstacle.Location.Y + 10);
             var expectedObstaclePosition = new Point(obstacle.Location.X, obstacle.Location.Y - 10);
             var expectedCount = mars.Obstacles.Count + 1;
@@ -206,7 +207,8 @@ namespace UnitTest
         [Test]
         public void WhenMortarIsLaunched_AndObstacleInThePosition_ThenTheObstacleIsDestroyed()
         {
-            var obstacle = mars.Obstacles.FirstOrDefault();
+            mockObstacle.Setup(m => m.IsDestructable).Returns(true);
+            var obstacle = mockObstacle.Object;
             var position = new Point(obstacle.Location.X, obstacle.Location.Y + 20);
             var expectedObstaclePosition = obstacle.Location;
             var expectedCount = mars.Obstacles.Count - 1;
@@ -549,7 +551,7 @@ namespace UnitTest
 
     public class GivenObstacle : GivenMars
     {
-        protected Obstacle obstacle;
+        protected Mock<Obstacle> mockObstacle;
         protected Point obstacleLocation;
 
         protected override void arrangement()
@@ -557,8 +559,8 @@ namespace UnitTest
             base.arrangement();
 
             obstacleLocation = new Point(10, 10);
-            obstacle = new Mock<Obstacle>(new Point(10, 10)).Object;
-            mars.AddObstacle(obstacle);
+            mockObstacle = new Mock<Obstacle>(new Point(10, 10));
+            mars.AddObstacle(mockObstacle.Object);
         }
     }
 
