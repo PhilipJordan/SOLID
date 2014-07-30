@@ -32,9 +32,11 @@ namespace MarsRoverKata
             bool collidedWithTarget = false;
             int moveIndex = 0;
             Point target = location;
+            Point desiredPosition;
             while (!collidedWithTarget && moveIndex < MaxDistance)
             {
-                target = CreateDesiredPosition(1, facing, target);
+                desiredPosition = CreateDesiredPosition(1, facing, target);
+                target = CalculateProjectileFinalPosition(target, desiredPosition);
                 collidedWithTarget = IsCollisionDetected(target);
                 moveIndex++;
             }
@@ -45,6 +47,15 @@ namespace MarsRoverKata
         {
             var adjustment = PositionalAdjustments[facing] * adjustmentFactor;
             return location + adjustment;
+        }
+
+        private Point CalculateProjectileFinalPosition(Point from, Point desired)
+        {
+            Point newDestination = desired;
+            newDestination = CalculatePositionY(desired, newDestination);
+            newDestination = CalculatePositionX(desired, newDestination);
+
+            return newDestination;
         }
 
         protected abstract bool IsCollisionDetected(Point desired);

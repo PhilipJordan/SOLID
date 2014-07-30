@@ -152,6 +152,21 @@ namespace UnitTest
 
             mars.Obstacles.Count.Should().Be(expectedCount);
         }
+
+        [Test]
+        public void WhenMissileIsLaunchedNearTheEdge_AndNoObstaclesInTheWay_ThenANewObstacleCreated_AndItsLocationWrappedAroundTheEdge()
+        {
+            var position = new Point(25, 0);
+            var expectedObstaclePosition = new Point(25, 41);
+            var expectedCount = mars.Obstacles.Count + 1;
+
+            missile.Launch(Direction.South, position);
+            var actualObstacle = mars.Obstacles.LastOrDefault();
+
+            mars.Obstacles.Count.Should().Be(expectedCount);
+            actualObstacle.Location.Should().Be(expectedObstaclePosition);
+            actualObstacle.GetType().Should().Be(typeof(Crater));
+        }
     }
 
     public class WhileWorkingWithMortar : GivenMortar
@@ -188,7 +203,7 @@ namespace UnitTest
         }
 
         [Test]
-        public void WhenMissileIsLaunched_AndObstacleInThePosition_ThenTheObstacleIsDestroyed()
+        public void WhenMortarIsLaunched_AndObstacleInThePosition_ThenTheObstacleIsDestroyed()
         {
             var obstacle = mars.Obstacles.FirstOrDefault();
             var position = new Point(obstacle.Location.X, obstacle.Location.Y + 20);
@@ -199,6 +214,21 @@ namespace UnitTest
             var actualObstacle = mars.Obstacles.LastOrDefault();
 
             mars.Obstacles.Count.Should().Be(expectedCount);
+        }
+
+        [Test]
+        public void WhenMortarIsLaunchedNearAnEdge_ThenAnObstacleIsCreated_AndItsLocationWrappedAroundTheEdge()
+        {
+            var position = new Point(25, 0);
+            var expectedObstaclePosition = new Point(25, 31);
+            var expectedCount = mars.Obstacles.Count + 1;
+
+            mortar.Launch(Direction.South, position);
+            var actualObstacle = mars.Obstacles.LastOrDefault();
+
+            mars.Obstacles.Count.Should().Be(expectedCount);
+            actualObstacle.Location.Should().Be(expectedObstaclePosition);
+            actualObstacle.GetType().Should().Be(typeof(Crater));
         }
     }
 
