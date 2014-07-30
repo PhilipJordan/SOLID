@@ -193,11 +193,6 @@ Then(/^((\d+)x(\d+)) will (display a crater)$/) do |image_location, x_location, 
 end
 
 
-	#puts "image_location is #{image_location}"
-	#puts "x_location is #{x_location}"
-	#puts "y_location is #{y_location}"
-	#puts "crater_name is #{crater_name}"
-
 
 
 

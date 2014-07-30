@@ -8,7 +8,7 @@ Transform /^location "(.*?)"$/ do |coordinates|
 end
 
 Transform /^display a crater$/ do |name|
-	"crater.png"
+	"crater.jpg"
 end
 
 Transform /^display an obstacle$/ do |name|
@@ -24,7 +24,6 @@ Transform /^default obstacles$/ do |foo|
 end
 
 Transform /^(\d+)x(\d+)$/ do |x,y|
-	puts "#{x}_#{y}"
 	"#{x}_#{y}"
 end
 

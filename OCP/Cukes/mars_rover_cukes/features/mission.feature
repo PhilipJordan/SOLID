@@ -92,7 +92,7 @@ Feature: Beginning the Mission
 		And I send the forward command
 		When I fire a missile
 		Then obstacle is destroyed at 25x36
-		
+	@foo	
 	Scenario: Firing a Rocket beyond the map border
 		Given the Mission page
 		And the rover moves forward 20 steps
