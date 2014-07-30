@@ -26,12 +26,8 @@ end
 Then(/^an alert message with "(.*?)" should be shown$/) do |message|
   @alert_message.should include message
 end
-  
-#Added this special method until I figure out how I want to use page.alert feature  
-When(/^I click the add button$/) do                                           
-		pending # express the regexp above with the code you wish you had
-end                                                                           
-                                                                              
+                                                        
+                                                                            
 #Below this are prime candidates for re-factoring. Getting this done for the OCP presentation. Refactor for Code && Beer talk                                                                           
 
 Given(/^(default obstacles) on the map$/) do |blar|
@@ -134,6 +130,13 @@ When(/^I fire a missile$/) do
 	end
 end
 
+When(/^I fire a mortar$/) do
+	on(MissionPage) do |page|
+		page.fireMortar
+		page.sendCommands
+	end
+end
+
 Then(/^a crater will be formed$/) do
 	on(MissionPage) do |page|
 		theImage = page.get_image_at '25_35'
@@ -177,7 +180,23 @@ Then(/^obstacle is destroyed at (\d+)x(\d+)$/) do |x, y|
 	end
 end                                                                
 
+Given(/^the rover moves forward (\d+) steps$/) do |steps|
+	steps.to_i.times {
+		on(MissionPage).moveForward
+	}
+	on(MissionPage).sendCommands
+end
 
+Then(/^((\d+)x(\d+)) will (display a crater)$/) do |image_location, x_location, y_location, crater_name|
+	image = on(MissionPage).get_image_at image_location  
+	image.should include crater_name
+end
+
+
+	#puts "image_location is #{image_location}"
+	#puts "x_location is #{x_location}"
+	#puts "y_location is #{y_location}"
+	#puts "crater_name is #{crater_name}"
 
 
 
