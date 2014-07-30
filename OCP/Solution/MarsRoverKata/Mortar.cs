@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MarsRoverKata
 {
-    public class Mortar : Missile
+    public class Mortar : Projectile
     {
         public Mortar(Mars mars)
             : base(mars)

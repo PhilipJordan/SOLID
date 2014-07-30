@@ -20,8 +20,7 @@ namespace MarsRoverKata
             { Direction.East, new Point(1, 0) },
             { Direction.West, new Point(-1, 0) }
         };
-        private List<Missile> Missiles { get; set; }
-        private List<Mortar> Mortars { get; set; }
+        private List<Projectile> Projectiles { get; set; }
 
         public Rover(Mars mars)
             :this(mars, mars.CenterOfThePlanet)// new Point(0,0))
@@ -30,14 +29,11 @@ namespace MarsRoverKata
         public Rover(Mars mars, Point landingPoint)
         {
             Mars = mars;
-            Missiles = new List<Missile>
+            Projectiles = new List<Projectile>
             {
                 new Missile(Mars),
                 new Missile(Mars),
-                new Missile(Mars)
-            };
-            Mortars = new List<Mortar>
-            {
+                new Missile(Mars),
                 new Mortar(Mars),
                 new Mortar(Mars),
                 new Mortar(Mars)
@@ -109,27 +105,15 @@ namespace MarsRoverKata
             return true;
         }
 
-        public bool FireMissile()
+        public bool FireProjectiles(Type t)
         {
-            var missileToFire = Missiles.FirstOrDefault();
-            if (missileToFire == null)
+            var projectileToFire = Projectiles.FirstOrDefault(p => p.GetType() == t);
+            if (projectileToFire == null)
             {
                 return false;
             }
-            missileToFire.Launch(Facing, Location);
-            Missiles.Remove(missileToFire);
-            return true;
-        }
-
-        public bool FireMortar()
-        {
-            var mortarToFire = Mortars.FirstOrDefault();
-            if (mortarToFire == null)
-            {
-                return false;
-            }
-            mortarToFire.Launch(Facing, Location);
-            Mortars.Remove(mortarToFire);
+            projectileToFire.Launch(Facing, Location);
+            Projectiles.Remove(projectileToFire);
             return true;
         }
     }
