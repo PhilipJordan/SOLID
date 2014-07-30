@@ -54,7 +54,7 @@ namespace UnitTest
         [Test]
         public void ThenItWillAcceptObstacles()
         {
-            mars.Obstacles.Should().Contain(mockObstacle.Object);
+            mars.Obstacles.Should().Contain(obstacle);
         }
     }
 
@@ -144,8 +144,6 @@ namespace UnitTest
         [Test]
         public void WhenMissileIsLaunched_AndObstacleInTheWay_ThenANewObstacleCreated()
         {
-            mockObstacle.Setup(m => m.IsDestructable).Returns(true);
-            var obstacle = mockObstacle.Object;
             var position = new Point(obstacle.Location.X, obstacle.Location.Y + 5);
             var expectedCount = mars.Obstacles.Count - 1;
 
@@ -190,8 +188,6 @@ namespace UnitTest
         [Test]
         public void WhenMortarIsLaunched_AndObstacleInTravelPath_AndNoObstaclesInTheLandingPostion_ThenANewObstacleCreated_AndPreviousObstacleIsNotDestroyed()
         {
-            mockObstacle.Setup(m => m.IsDestructable).Returns(true);
-            var obstacle = mockObstacle.Object;
             var position = new Point(obstacle.Location.X, obstacle.Location.Y + 10);
             var expectedObstaclePosition = new Point(obstacle.Location.X, obstacle.Location.Y - 10);
             var expectedCount = mars.Obstacles.Count + 1;
@@ -207,8 +203,6 @@ namespace UnitTest
         [Test]
         public void WhenMortarIsLaunched_AndObstacleInThePosition_ThenTheObstacleIsDestroyed()
         {
-            mockObstacle.Setup(m => m.IsDestructable).Returns(true);
-            var obstacle = mockObstacle.Object;
             var position = new Point(obstacle.Location.X, obstacle.Location.Y + 20);
             var expectedObstaclePosition = obstacle.Location;
             var expectedCount = mars.Obstacles.Count - 1;
@@ -551,7 +545,7 @@ namespace UnitTest
 
     public class GivenObstacle : GivenMars
     {
-        protected Mock<Obstacle> mockObstacle;
+        protected Obstacle obstacle;
         protected Point obstacleLocation;
 
         protected override void arrangement()
@@ -559,8 +553,8 @@ namespace UnitTest
             base.arrangement();
 
             obstacleLocation = new Point(10, 10);
-            mockObstacle = new Mock<Obstacle>(new Point(10, 10));
-            mars.AddObstacle(mockObstacle.Object);
+            obstacle = new Obstacle(new Point(10, 10));
+            mars.AddObstacle(obstacle);
         }
     }
 

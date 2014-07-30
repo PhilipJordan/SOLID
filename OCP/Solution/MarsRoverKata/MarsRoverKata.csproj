@@ -61,7 +61,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Projectile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rock.cs" />
     <Compile Include="Rover.cs" />
     <Compile Include="Size.cs" />
   </ItemGroup>
