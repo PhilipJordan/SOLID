@@ -42,25 +42,6 @@ When(/^I send the forward command$/) do
 	end
 end
 
-
-#When(/^I send the forward command (\d+) times$/) do |number_of_moves|
-#  number_of_moves do 
-#	on(MissionPage) do |page|
-#		page.moveForward
-#		page.sendCommands
-#	end
-#  end
-#end
-
-#Then(/^the rover will move forward (\d+) times$/) do |number_of_moves|
-#	on(MissionPage) do |page|
-#		roverImage = page.get_image_at '25_29'
-#		roverImage.should include 'Rover'
-#	end
-#end
-
-
-
 When(/^I send the backward command$/) do
 	on(MissionPage) do |page|
 		page.moveBackward
@@ -122,7 +103,6 @@ Then(/^the rover will still be at the (center of the map)$/) do |center_of_map|
 	map_image.should include 'Rover'
 end  
 
-
 When(/^I fire a missile$/) do
 	on(MissionPage) do |page|
 		page.fireMissile
@@ -143,7 +123,6 @@ Then(/^a crater will be formed$/) do
 		theImage.should include 'crater'
 	end
 end
-
 
 Then(/^obstacle is destroyed$/) do
 	on(MissionPage) do |page|

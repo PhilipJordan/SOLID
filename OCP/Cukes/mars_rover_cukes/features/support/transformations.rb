@@ -26,7 +26,3 @@ end
 Transform /^(\d+)x(\d+)$/ do |x,y|
 	"#{x}_#{y}"
 end
-
-#Transform /^north$/ do |foo|
-#	'25_24'
-#end

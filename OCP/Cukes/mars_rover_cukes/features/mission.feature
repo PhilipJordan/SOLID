@@ -92,14 +92,13 @@ Feature: Beginning the Mission
 		And I send the forward command
 		When I fire a missile
 		Then obstacle is destroyed at 25x36
-	@foo	
+		
 	Scenario: Firing a Rocket beyond the map border
 		Given the Mission page
 		And the rover moves forward 20 steps
 		When I fire a missile 
 		Then 25x4 will display a crater
 	
-	@foo
 	Scenario: Firing a Mortar beyond the map border
 		Given the Mission page
 		And the rover moves forward 10 steps
