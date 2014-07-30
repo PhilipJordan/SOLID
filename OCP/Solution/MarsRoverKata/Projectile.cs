@@ -24,7 +24,7 @@ namespace MarsRoverKata
 
         protected abstract int MaxRange { get; }
 
-        public virtual void Launch(Direction facing, Point location)
+        public void Launch(Direction facing, Point location)
         {
             bool collidedWithTarget = false;
             int moveIndex = 0;
@@ -40,7 +40,7 @@ namespace MarsRoverKata
             HitTarget(target);
         }
 
-        protected Point CreateDesiredPosition(int adjustmentFactor, Direction facing, Point location)
+        private Point CreateDesiredPosition(int adjustmentFactor, Direction facing, Point location)
         {
             var adjustment = PositionalAdjustments[facing] * adjustmentFactor;
             return location + adjustment;
@@ -88,7 +88,7 @@ namespace MarsRoverKata
             return Mars.Obstacles.SingleOrDefault(x => x.Location.Equals(point));
         }
 
-        private void DestroyObstacle(Obstacle obstacle)
+        protected virtual void DestroyObstacle(Obstacle obstacle)
         {
             Mars.RemoveObstacle(obstacle);
         }

@@ -142,10 +142,24 @@ namespace UnitTest
         }
 
         [Test]
-        public void WhenMissileIsLaunched_AndObstacleInTheWay_ThenANewObstacleCreated()
+        public void WhenMissileIsLaunched_AndObstacleInTheWay_ThenTheObstacleIsDestroyed()
         {
             var position = new Point(obstacle.Location.X, obstacle.Location.Y + 5);
             var expectedCount = mars.Obstacles.Count - 1;
+
+            missile.Launch(Direction.South, position);
+
+            mars.Obstacles.Count.Should().Be(expectedCount);
+        }
+
+        [Test]
+        public void WhenMissileIsLaunched_AndObstacleInTheWay_AndObstacleIsNotDestructable_ThenTheObstacleIsSkipped_AndANewObstacleCreated()
+        {
+            mars.RemoveObstacle(obstacle);
+            obstacle = new Crater(obstacle.Location);
+            mars.AddObstacle(obstacle);
+            var position = new Point(obstacle.Location.X, obstacle.Location.Y + 5);
+            var expectedCount = mars.Obstacles.Count + 1;
 
             missile.Launch(Direction.South, position);
 
