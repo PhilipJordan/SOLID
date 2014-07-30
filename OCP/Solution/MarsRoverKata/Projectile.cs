@@ -22,10 +22,7 @@ namespace MarsRoverKata
             { Direction.West, new Point(-1, 0) }
         };
 
-        protected virtual int MaxDistance
-        {
-            get { return 10; }
-        }
+        protected abstract int MaxRange { get; }
 
         public virtual void Launch(Direction facing, Point location)
         {
@@ -33,7 +30,7 @@ namespace MarsRoverKata
             int moveIndex = 0;
             Point target = location;
             Point desiredPosition;
-            while (!collidedWithTarget && moveIndex < MaxDistance)
+            while (!collidedWithTarget && moveIndex < MaxRange)
             {
                 desiredPosition = CreateDesiredPosition(1, facing, target);
                 target = CalculateProjectileFinalPosition(target, desiredPosition);
@@ -86,12 +83,12 @@ namespace MarsRoverKata
             return newDestination;
         }
 
-        protected IObstacle FindObstacle(Point point)
+        protected Obstacle FindObstacle(Point point)
         {
             return Mars.Obstacles.SingleOrDefault(x => x.Location.Equals(point));
         }
 
-        private void DestroyObstacle(IObstacle obstacle)
+        private void DestroyObstacle(Obstacle obstacle)
         {
             Mars.RemoveObstacle(obstacle);
         }

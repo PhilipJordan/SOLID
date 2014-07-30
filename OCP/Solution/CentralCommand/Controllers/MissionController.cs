@@ -171,7 +171,7 @@ namespace CentralCommand.Controllers
                                                      });
         }
 
-        private List<MapPositionViewModel> ConvertToViewModels(IReadOnlyList<IObstacle> obstacles)
+        private List<MapPositionViewModel> ConvertToViewModels(IReadOnlyList<Obstacle> obstacles)
         {
             return obstacles.Select(x =>
                 new MapPositionViewModel
