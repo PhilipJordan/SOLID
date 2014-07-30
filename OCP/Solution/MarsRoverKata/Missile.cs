@@ -25,7 +25,7 @@ namespace MarsRoverKata
             newDestination = CalculatePositionX(desired, newDestination);
             var obstacle = FindObstacle(newDestination);
 
-            if (obstacle != null && (obstacle.GetType() != typeof(Crater)))
+            if (obstacle != null && obstacle.IsDestructable)
             {
                 return true;
             }

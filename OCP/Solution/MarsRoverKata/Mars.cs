@@ -21,7 +21,7 @@ namespace MarsRoverKata
 
         public Mars()
         {
-            Bounds = new Size(50, 50); //(100,100);
+            Bounds = new Size(50, 50);
             CenterOfThePlanet = new Point(Bounds.Width / 2, Bounds.Height / 2);
             _Obstacles = new List<Obstacle>();
         }
