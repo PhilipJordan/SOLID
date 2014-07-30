@@ -21,11 +21,6 @@ namespace MarsRoverKata
             }
         }
 
-        public override void Launch(Direction facing, Point location)
-        {
-            base.Launch(facing, location);
-        }
-
         protected override bool IsCollisionDetected(Point desired)
         {
             return false;
