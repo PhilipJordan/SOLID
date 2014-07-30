@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MarsRoverKata
 {
-    public class Obstacle
+    public abstract class Obstacle
     {
         public Point Location { get; set; }
 
@@ -15,5 +15,7 @@ namespace MarsRoverKata
         {
             Location = location;
         }
+
+        public abstract bool IsDestructable { get; }
     }
 }
