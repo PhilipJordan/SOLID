@@ -9,6 +9,7 @@ using NUnit;
 using MarsRoverKata;
 using MarsRoverKata.Commands;
 using FluentAssertions;
+using Moq;
 
 namespace UnitTest
 {
@@ -53,7 +54,7 @@ namespace UnitTest
         [Test]
         public void ThenItWillAcceptObstacles()
         {
-            mars.Obstacles.Should().Contain(obstacle);
+            mars.Obstacles.Should().Contain(mockObstacle.Object);
         }
     }
 
@@ -143,14 +144,29 @@ namespace UnitTest
         [Test]
         public void WhenMissileIsLaunched_AndObstacleInTheWay_ThenANewObstacleCreated()
         {
-            var obstacle = mars.Obstacles.FirstOrDefault();
+            mockObstacle.Setup(m => m.IsDestructable).Returns(true);
+            var obstacle = mockObstacle.Object;
             var position = new Point(obstacle.Location.X, obstacle.Location.Y + 5);
-            var expectedObstaclePosition = obstacle.Location;
             var expectedCount = mars.Obstacles.Count - 1;
 
             missile.Launch(Direction.South, position);
 
             mars.Obstacles.Count.Should().Be(expectedCount);
+        }
+
+        [Test]
+        public void WhenMissileIsLaunchedNearTheEdge_AndNoObstaclesInTheWay_ThenANewObstacleCreated_AndItsLocationWrappedAroundTheEdge()
+        {
+            var position = new Point(25, 0);
+            var expectedObstaclePosition = new Point(25, 41);
+            var expectedCount = mars.Obstacles.Count + 1;
+
+            missile.Launch(Direction.South, position);
+            var actualObstacle = mars.Obstacles.LastOrDefault();
+
+            mars.Obstacles.Count.Should().Be(expectedCount);
+            actualObstacle.Location.Should().Be(expectedObstaclePosition);
+            actualObstacle.GetType().Should().Be(typeof(Crater));
         }
     }
 
@@ -174,7 +190,8 @@ namespace UnitTest
         [Test]
         public void WhenMortarIsLaunched_AndObstacleInTravelPath_AndNoObstaclesInTheLandingPostion_ThenANewObstacleCreated_AndPreviousObstacleIsNotDestroyed()
         {
-            var obstacle = mars.Obstacles.FirstOrDefault();
+            mockObstacle.Setup(m => m.IsDestructable).Returns(true);
+            var obstacle = mockObstacle.Object;
             var position = new Point(obstacle.Location.X, obstacle.Location.Y + 10);
             var expectedObstaclePosition = new Point(obstacle.Location.X, obstacle.Location.Y - 10);
             var expectedCount = mars.Obstacles.Count + 1;
@@ -188,9 +205,10 @@ namespace UnitTest
         }
 
         [Test]
-        public void WhenMissileIsLaunched_AndObstacleInThePosition_ThenTheObstacleIsDestroyed()
+        public void WhenMortarIsLaunched_AndObstacleInThePosition_ThenTheObstacleIsDestroyed()
         {
-            var obstacle = mars.Obstacles.FirstOrDefault();
+            mockObstacle.Setup(m => m.IsDestructable).Returns(true);
+            var obstacle = mockObstacle.Object;
             var position = new Point(obstacle.Location.X, obstacle.Location.Y + 20);
             var expectedObstaclePosition = obstacle.Location;
             var expectedCount = mars.Obstacles.Count - 1;
@@ -199,6 +217,21 @@ namespace UnitTest
             var actualObstacle = mars.Obstacles.LastOrDefault();
 
             mars.Obstacles.Count.Should().Be(expectedCount);
+        }
+
+        [Test]
+        public void WhenMortarIsLaunchedNearAnEdge_ThenAnObstacleIsCreated_AndItsLocationWrappedAroundTheEdge()
+        {
+            var position = new Point(25, 0);
+            var expectedObstaclePosition = new Point(25, 31);
+            var expectedCount = mars.Obstacles.Count + 1;
+
+            mortar.Launch(Direction.South, position);
+            var actualObstacle = mars.Obstacles.LastOrDefault();
+
+            mars.Obstacles.Count.Should().Be(expectedCount);
+            actualObstacle.Location.Should().Be(expectedObstaclePosition);
+            actualObstacle.GetType().Should().Be(typeof(Crater));
         }
     }
 
@@ -429,7 +462,8 @@ namespace UnitTest
         [Test]
         public void WhenObstacleIsInForwardPath()
         {
-            mars.AddObstacle(new Obstacle(new Point(25, 28)));
+            Mock<Obstacle> mockObstacle = new Mock<Obstacle>(new Point(25, 28));
+            mars.AddObstacle(mockObstacle.Object);
             commander.ExecuteCommands();
 
             rover.Location.Should().Be(new Point(25, 27));
@@ -438,7 +472,8 @@ namespace UnitTest
         [Test]
         public void WhenObstacleIsInBackwardPath()
         {
-            mars.AddObstacle(new Obstacle(new Point(25, 24)));
+            Mock<Obstacle> mockObstacle = new Mock<Obstacle>(new Point(25, 24));
+            mars.AddObstacle(mockObstacle.Object);
             commander.ExecuteCommands();
 
             rover.Location.Should().Be(new Point(25, 25));
@@ -516,7 +551,7 @@ namespace UnitTest
 
     public class GivenObstacle : GivenMars
     {
-        protected Obstacle obstacle;
+        protected Mock<Obstacle> mockObstacle;
         protected Point obstacleLocation;
 
         protected override void arrangement()
@@ -524,8 +559,8 @@ namespace UnitTest
             base.arrangement();
 
             obstacleLocation = new Point(10, 10);
-            obstacle = new Obstacle(new Point(10, 10));
-            mars.AddObstacle(obstacle);
+            mockObstacle = new Mock<Obstacle>(new Point(10, 10));
+            mars.AddObstacle(mockObstacle.Object);
         }
     }
 

@@ -12,5 +12,10 @@ namespace MarsRoverKata
             base(location)
         {
         }
+
+        public override bool IsDestructable
+        {
+            get { return false; }
+        }
     }
 }

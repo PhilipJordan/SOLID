@@ -22,19 +22,18 @@ namespace MarsRoverKata
             { Direction.West, new Point(-1, 0) }
         };
 
-        protected virtual int MaxDistance
-        {
-            get { return 10; }
-        }
+        protected abstract int MaxRange { get; }
 
         public virtual void Launch(Direction facing, Point location)
         {
             bool collidedWithTarget = false;
             int moveIndex = 0;
             Point target = location;
-            while (!collidedWithTarget && moveIndex < MaxDistance)
+            Point desiredPosition;
+            while (!collidedWithTarget && moveIndex < MaxRange)
             {
-                target = CreateDesiredPosition(1, facing, target);
+                desiredPosition = CreateDesiredPosition(1, facing, target);
+                target = CalculateProjectileFinalPosition(target, desiredPosition);
                 collidedWithTarget = IsCollisionDetected(target);
                 moveIndex++;
             }
@@ -45,6 +44,15 @@ namespace MarsRoverKata
         {
             var adjustment = PositionalAdjustments[facing] * adjustmentFactor;
             return location + adjustment;
+        }
+
+        private Point CalculateProjectileFinalPosition(Point from, Point desired)
+        {
+            Point newDestination = desired;
+            newDestination = CalculatePositionY(desired, newDestination);
+            newDestination = CalculatePositionX(desired, newDestination);
+
+            return newDestination;
         }
 
         protected abstract bool IsCollisionDetected(Point desired);
@@ -75,12 +83,12 @@ namespace MarsRoverKata
             return newDestination;
         }
 
-        protected IObstacle FindObstacle(Point point)
+        protected Obstacle FindObstacle(Point point)
         {
             return Mars.Obstacles.SingleOrDefault(x => x.Location.Equals(point));
         }
 
-        private void DestroyObstacle(IObstacle obstacle)
+        private void DestroyObstacle(Obstacle obstacle)
         {
             Mars.RemoveObstacle(obstacle);
         }
@@ -89,8 +97,7 @@ namespace MarsRoverKata
         {
             var obstacle = FindObstacle(point);
 
-            //TODO: Look at this stuff!
-            if (obstacle != null && (obstacle.GetType() != typeof(Crater)))
+            if (obstacle != null && obstacle.IsDestructable)
             {
                 DestroyObstacle(obstacle);
             }

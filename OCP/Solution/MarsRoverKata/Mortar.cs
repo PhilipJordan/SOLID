@@ -13,12 +13,9 @@ namespace MarsRoverKata
         {
         }
 
-        protected override int MaxDistance
+        protected override int MaxRange
         {
-            get
-            {
-                return 20;
-            }
+            get { return 20; }
         }
 
         protected override bool IsCollisionDetected(Point desired)

@@ -13,8 +13,8 @@ namespace MarsRoverKata
         public Point CenterOfThePlanet { get; set; }
 
         private Point Position { get; set; }
-        private List<IObstacle> _Obstacles { get; set; }
-        public IReadOnlyList<IObstacle> Obstacles
+        private List<Obstacle> _Obstacles { get; set; }
+        public IReadOnlyList<Obstacle> Obstacles
         {
             get { return _Obstacles; }
         }
@@ -23,15 +23,15 @@ namespace MarsRoverKata
         {
             Bounds = new Size(50, 50); //(100,100);
             CenterOfThePlanet = new Point(Bounds.Width / 2, Bounds.Height / 2);
-            _Obstacles = new List<IObstacle>();
+            _Obstacles = new List<Obstacle>();
         }
 
-        public void AddObstacle(IObstacle obstacle)
+        public void AddObstacle(Obstacle obstacle)
         {
             _Obstacles.Add(obstacle);
         }
 
-        public void RemoveObstacle(IObstacle obstacle)
+        public void RemoveObstacle(Obstacle obstacle)
         {
             _Obstacles.Remove(obstacle);
         }
