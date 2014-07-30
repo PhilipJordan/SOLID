@@ -125,7 +125,7 @@ namespace CentralCommand.Controllers
         {
             var coordinates = input.Split('_');
             Point location = new Point(int.Parse(coordinates[0]), int.Parse(coordinates[1]));
-            return new Rock(location);
+            return new Obstacle(location);
         }
 
 
@@ -177,7 +177,7 @@ namespace CentralCommand.Controllers
                 new MapPositionViewModel
                 {
                     Location = x.Location.X + "_" + x.Location.Y,
-                    Image = x.GetType() == typeof(Rock) ? "rock.png" : "crater.jpg"
+                    Image = x.GetType() == typeof(Crater) ? "crater.jpg" : "rock.png"
                 }).ToList();
         }
 
