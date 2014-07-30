@@ -74,15 +74,10 @@ namespace CentralCommand.Controllers
 
         public ActionResult Staging(MissionViewModel viewModel)
         {
-            //Planet = new Mars();
-            //Vehicle = new Rover(Planet);
-
             //Because MissionManager is not the single point of entry we have to make this call to ensure everything is 
             //instantiated before we begin.
-            var foo = MissionManager;
+            var manager = MissionManager;
 
-            //NOTE: This map is only used to draw the initial map on the view. Afterwards all updates rely on the 
-            //MissionManager and Mars objects (Refactor option: access to Mars should really be through MissionManager)
             var initialMap = new List<List<string>>();
             for (int i = 0; i < 50; i++)
             {
@@ -108,7 +103,6 @@ namespace CentralCommand.Controllers
             var distinctLocations = (from location in locations 
                        select location).Distinct().ToList<string>();
 
-            //REFACTOR: Move this logic into MissionManager
             foreach(var input in distinctLocations)
             {
                 Obstacle obstacle = CreateObstacle(input);
@@ -120,7 +114,6 @@ namespace CentralCommand.Controllers
             return Json(new MissionResponseViewModel { Success = true, Obstacles = updatedObstacles });
         }
 
-        //REFACTOR: Move this logic into MissionManager
         private static Obstacle CreateObstacle(string input)
         {
             var coordinates = input.Split('_');
@@ -128,27 +121,17 @@ namespace CentralCommand.Controllers
             return new Obstacle(location);
         }
 
-
         [HttpPost]
         public JsonResult SendCommands(List<string> commands)
         {
-            //grab existing collection
             var oldCollection = Planet.Obstacles.ToList();
-
-
             var originalPosition = Vehicle.Location.X + "_" + Vehicle.Location.Y;
-
             var commandString = String.Join(",", commands);
+
             MissionManager.AcceptCommands(commandString);
             MissionManager.ExecuteMission();
 
-            //grab new collection
             var newCollection = Planet.Obstacles.ToList();
-
-
-            ////compare 
-            //var addedObstacles = newCollection.Except(oldCollection).ToList();
-
 
             var updatedObstacles = ConvertToViewModels(Planet.Obstacles);
             var removedObstacles = oldCollection.Except(newCollection).Select(x =>
@@ -181,8 +164,6 @@ namespace CentralCommand.Controllers
                 }).ToList();
         }
 
-        
-
         private string GetFacingAsString(Direction roverFacing)
         {
             switch (roverFacing)
@@ -200,8 +181,6 @@ namespace CentralCommand.Controllers
             return "N";
         }
 
-        #region Fake Data
-
         private List<string> GetGroundRow()
         {
             var result = new List<string>();
@@ -214,25 +193,14 @@ namespace CentralCommand.Controllers
             return result;
         }
 
-        //private List<String> GetObstacleRow(Random rng)
-        //{
-        //    var result = GetGroundRow();
-
-        //    result[rng.Next(0, 50)] = "rock.png";
-
-        //    return result;
-        //}
-
-        private List<String> GetRoverRow(Rover vehicle)//Random rng)
+        private List<String> GetRoverRow(Rover vehicle)
         {
             var result = GetGroundRow();
 
-            int centerIndex = vehicle.Location.X;//25;
+            int centerIndex = vehicle.Location.X;
             result[centerIndex] = "Rover.png";
 
             return result;
         }
-
-        #endregion
     }
 }

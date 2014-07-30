@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
-//using NUnit.Core;
 using NUnit;
 using MarsRoverKata;
 using MarsRoverKata.Commands;
@@ -584,11 +583,7 @@ namespace UnitTest
         {
             cleanup();
         }
-
-        //[Test]
-        //public void Foo()
-        //{ }
-
+        
         protected virtual void cleanup() { }
 
         protected virtual void arrangement() { }
