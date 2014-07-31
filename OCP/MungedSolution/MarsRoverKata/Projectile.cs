@@ -128,7 +128,7 @@ namespace MarsRoverKata
 
         private void CreateObstacle(Point point)
         {
-            Obstacle obstacle = new Obstacle(point);
+            Obstacle obstacle = new Obstacle(point, false);
             Mars.AddObstacle(obstacle);
         }
     }

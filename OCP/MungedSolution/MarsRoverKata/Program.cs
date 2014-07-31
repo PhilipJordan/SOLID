@@ -85,7 +85,7 @@ namespace MarsRoverKata
         {
             var coordinates = input.Split(',');
             Point location = new Point(int.Parse(coordinates[0]), int.Parse(coordinates[1]));
-            return new Obstacle(location);
+            return new Obstacle(location, true);
         }
 
         private static void ProcessCommands(MissionManager mission, string input)

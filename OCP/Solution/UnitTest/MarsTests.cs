@@ -8,7 +8,6 @@ using NUnit;
 using MarsRoverKata;
 using MarsRoverKata.Commands;
 using FluentAssertions;
-using Moq;
 
 namespace UnitTest
 {
@@ -469,8 +468,8 @@ namespace UnitTest
         [Test]
         public void WhenObstacleIsInForwardPath()
         {
-            Mock<Obstacle> mockObstacle = new Mock<Obstacle>(new Point(25, 28));
-            mars.AddObstacle(mockObstacle.Object);
+            Obstacle obstacle = new Obstacle(new Point(25, 28));
+            mars.AddObstacle(obstacle);
             commander.ExecuteCommands();
 
             rover.Location.Should().Be(new Point(25, 27));
@@ -479,8 +478,8 @@ namespace UnitTest
         [Test]
         public void WhenObstacleIsInBackwardPath()
         {
-            Mock<Obstacle> mockObstacle = new Mock<Obstacle>(new Point(25, 24));
-            mars.AddObstacle(mockObstacle.Object);
+            Obstacle obstacle = new Obstacle(new Point(25, 24));
+            mars.AddObstacle(obstacle);
             commander.ExecuteCommands();
 
             rover.Location.Should().Be(new Point(25, 25));

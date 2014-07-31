@@ -11,11 +11,12 @@ namespace MarsRoverKata
     {
         public Point Location { get; set; }
 
-        public Obstacle(Point location)
+        public Obstacle(Point location, bool isDestructable)
         {
             Location = location;
+            IsDestructable = isDestructable;
         }
 
-        public bool IsDestructable { get { return true; } }
+        public bool IsDestructable { get; private set; }
     }
 }
