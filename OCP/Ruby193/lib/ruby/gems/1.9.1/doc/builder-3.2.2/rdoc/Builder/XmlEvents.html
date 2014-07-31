@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="IBM437"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=IBM437" http-equiv="Content-Type" />
+
+  <title>Class: Builder::XmlEvents</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/builder/xmlevents_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/builder/xmlevents.rb">lib/builder/xmlevents.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">XmlMarkup</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-_end_tag">#_end_tag</a></li>
+          
+          <li><a href="#method-i-_start_tag">#_start_tag</a></li>
+          
+          <li><a href="#method-i-text-21">#text!</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../CHANGES.html">CHANGES</a></li>
+        
+          <li class="file"><a href="../MIT-LICENSE.html">MIT-LICENSE</a></li>
+        
+          <li class="file"><a href="../Rakefile.html">Rakefile</a></li>
+        
+          <li class="file"><a href="../doc/releases/builder-1_2_4_rdoc.html">builder-1.2.4.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/releases/builder-2_0_0_rdoc.html">builder-2.0.0.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/releases/builder-2_1_1_rdoc.html">builder-2.1.1.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Builder.html">Builder</a></li>
+        
+          <li><a href="../BlankSlate.html">Builder::BlankSlate</a></li>
+        
+          <li><a href="../Builder/IllegalBlockError.html">Builder::IllegalBlockError</a></li>
+        
+          <li><a href="../Builder/XmlBase.html">Builder::XmlBase</a></li>
+        
+          <li><a href="../Builder/XmlEvents.html">Builder::XmlEvents</a></li>
+        
+          <li><a href="../Builder/XmlMarkup.html">Builder::XmlMarkup</a></li>
+        
+          <li><a href="../BlankSlate.html">BlankSlate</a></li>
+        
+          <li><a href="../Fixnum.html">Fixnum</a></li>
+        
+          <li><a href="../Kernel.html">Kernel</a></li>
+        
+          <li><a href="../Module.html">Module</a></li>
+        
+          <li><a href="../Object.html">Object</a></li>
+        
+          <li><a href="../String.html">String</a></li>
+        
+          <li><a href="../Symbol.html">Symbol</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Builder::XmlEvents</h1>
+
+    <div id="description" class="description">
+      
+<p>Create a series of SAX-like XML events (e.g. start_tag, end_tag) from the
+markup code.  XmlEvent objects are used in a way similar to <a
+href="XmlMarkup.html">XmlMarkup</a> objects, except that a series of events
+are generated and passed to a handler rather than generating
+character-based markup.</p>
+
+<p>Usage:</p>
+
+<pre>xe = Builder::XmlEvents.new(hander)
+xe.title(&quot;HI&quot;)    # Sends start_tag/end_tag/text messages to the handler.</pre>
+
+<p>Indentation may also be selected by providing value for the indentation
+size and initial indentation level.</p>
+
+<pre>xe = Builder::XmlEvents.new(handler, indent_size, initial_indent_level)</pre>
+
+<h2>XML Event Handler</h2>
+
+<p>The handler object must expect the following events.</p>
+<dl class="rdoc-list"><dt><tt>start_tag(tag, attrs)</tt></dt>
+<dd>
+<p>Announces that a new tag has been found.  <tt>tag</tt> is the name of the
+tag and <tt>attrs</tt> is a hash of attributes for the tag.</p>
+</dd><dt><tt>end_tag(tag)</tt></dt>
+<dd>
+<p>Announces that an end tag for <tt>tag</tt> has been found.</p>
+</dd><dt><tt>text(text)</tt></dt>
+<dd>
+<p>Announces that a string of characters (<tt>text</tt>) has been found. A
+series of characters may be broken up into more than one <tt>text</tt>
+call, so the client cannot assume that a single callback contains all the
+text data.</p>
+</dd></dl>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="_end_tag-method" class="method-detail ">
+          <a name="method-i-_end_tag"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">_end_tag</span><span
+              class="method-args">(sym)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="_end_tag-source">
+<pre>
+<span class="ruby-comment"># File lib/builder/xmlevents.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">_end_tag</span>(<span class="ruby-identifier">sym</span>)
+  <span class="ruby-ivar">@target</span>.<span class="ruby-identifier">end_tag</span>(<span class="ruby-identifier">sym</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- _end_tag-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- _end_tag-method -->
+
+      
+        <div id="_start_tag-method" class="method-detail ">
+          <a name="method-i-_start_tag"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">_start_tag</span><span
+              class="method-args">(sym, attrs, end_too=false)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="_start_tag-source">
+<pre>
+<span class="ruby-comment"># File lib/builder/xmlevents.rb, line 53</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">_start_tag</span>(<span class="ruby-identifier">sym</span>, <span class="ruby-identifier">attrs</span>, <span class="ruby-identifier">end_too</span>=<span class="ruby-keyword">false</span>)
+  <span class="ruby-ivar">@target</span>.<span class="ruby-identifier">start_tag</span>(<span class="ruby-identifier">sym</span>, <span class="ruby-identifier">attrs</span>)
+  <span class="ruby-identifier">_end_tag</span>(<span class="ruby-identifier">sym</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">end_too</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- _start_tag-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- _start_tag-method -->
+
+      
+        <div id="text-21-method" class="method-detail ">
+          <a name="method-i-text-21"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">text!</span><span
+              class="method-args">(text)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="text-21-source">
+<pre>
+<span class="ruby-comment"># File lib/builder/xmlevents.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">text!</span>(<span class="ruby-identifier">text</span>)
+  <span class="ruby-ivar">@target</span>.<span class="ruby-identifier">text</span>(<span class="ruby-identifier">text</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- text-21-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- text-21-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

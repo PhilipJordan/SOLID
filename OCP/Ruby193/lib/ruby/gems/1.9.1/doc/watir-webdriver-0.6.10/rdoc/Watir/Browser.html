@@ -1,0 +1,1849 @@
+<?xml version="1.0" encoding="IBM437"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=IBM437" http-equiv="Content-Type" />
+
+  <title>Class: Watir::Browser</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/watir-webdriver/browser_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/watir-webdriver/browser.rb">lib/watir-webdriver/browser.rb</a></li>
+          
+            <li><a href="../lib/watir-webdriver/extensions/alerts_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/watir-webdriver/extensions/alerts.rb">lib/watir-webdriver/extensions/alerts.rb</a></li>
+          
+            <li><a href="../lib/watir-webdriver/extensions/nokogiri_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/watir-webdriver/extensions/nokogiri.rb">lib/watir-webdriver/extensions/nokogiri.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-c-start">::start</a></li>
+          
+          <li><a href="#method-i-add_checker">#add_checker</a></li>
+          
+          <li><a href="#method-i-alert">#alert</a></li>
+          
+          <li><a href="#method-i-assert_exists">#assert_exists</a></li>
+          
+          <li><a href="#method-i-back">#back</a></li>
+          
+          <li><a href="#method-i-browser">#browser</a></li>
+          
+          <li><a href="#method-i-close">#close</a></li>
+          
+          <li><a href="#method-i-cookies">#cookies</a></li>
+          
+          <li><a href="#method-i-disable_checker">#disable_checker</a></li>
+          
+          <li><a href="#method-i-execute_script">#execute_script</a></li>
+          
+          <li><a href="#method-i-exist-3F">#exist?</a></li>
+          
+          <li><a href="#method-i-exists-3F">#exists?</a></li>
+          
+          <li><a href="#method-i-forward">#forward</a></li>
+          
+          <li><a href="#method-i-goto">#goto</a></li>
+          
+          <li><a href="#method-i-html">#html</a></li>
+          
+          <li><a href="#method-i-inspect">#inspect</a></li>
+          
+          <li><a href="#method-i-name">#name</a></li>
+          
+          <li><a href="#method-i-quit">#quit</a></li>
+          
+          <li><a href="#method-i-ready_state">#ready_state</a></li>
+          
+          <li><a href="#method-i-refresh">#refresh</a></li>
+          
+          <li><a href="#method-i-reset-21">#reset!</a></li>
+          
+          <li><a href="#method-i-run_checkers">#run_checkers</a></li>
+          
+          <li><a href="#method-i-screenshot">#screenshot</a></li>
+          
+          <li><a href="#method-i-send_keys">#send_keys</a></li>
+          
+          <li><a href="#method-i-status">#status</a></li>
+          
+          <li><a href="#method-i-text">#text</a></li>
+          
+          <li><a href="#method-i-title">#title</a></li>
+          
+          <li><a href="#method-i-url">#url</a></li>
+          
+          <li><a href="#method-i-wait">#wait</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Included Modules -->
+      <div id="includes-section" class="section">
+        <h3 class="section-header">Included Modules</h3>
+        <ul class="link-list">
+        
+        
+          <li><a class="include" href="Container.html">Watir::Container</a></li>
+        
+        
+        
+          <li><a class="include" href="HasWindow.html">Watir::HasWindow</a></li>
+        
+        
+        
+          <li><a class="include" href="Waitable.html">Watir::Waitable</a></li>
+        
+        
+        
+          <li><a class="include" href="AlertHelper.html">Watir::AlertHelper</a></li>
+        
+        
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../lib/watir-webdriver/atoms/README.html">README</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Watir.html">Watir</a></li>
+        
+          <li><a href="../Watir/Alert.html">Watir::Alert</a></li>
+        
+          <li><a href="../Watir/AlertHelper.html">Watir::AlertHelper</a></li>
+        
+          <li><a href="../Watir/Anchor.html">Watir::Anchor</a></li>
+        
+          <li><a href="../Watir/AnchorCollection.html">Watir::AnchorCollection</a></li>
+        
+          <li><a href="../Watir/Applet.html">Watir::Applet</a></li>
+        
+          <li><a href="../Watir/AppletCollection.html">Watir::AppletCollection</a></li>
+        
+          <li><a href="../Watir/Area.html">Watir::Area</a></li>
+        
+          <li><a href="../Watir/AreaCollection.html">Watir::AreaCollection</a></li>
+        
+          <li><a href="../Watir/Atoms.html">Watir::Atoms</a></li>
+        
+          <li><a href="../Watir/AttributeHelper.html">Watir::AttributeHelper</a></li>
+        
+          <li><a href="../Watir/Audio.html">Watir::Audio</a></li>
+        
+          <li><a href="../Watir/AudioCollection.html">Watir::AudioCollection</a></li>
+        
+          <li><a href="../Watir/BR.html">Watir::BR</a></li>
+        
+          <li><a href="../Watir/BRCollection.html">Watir::BRCollection</a></li>
+        
+          <li><a href="../Watir/Base.html">Watir::Base</a></li>
+        
+          <li><a href="../Watir/BaseCollection.html">Watir::BaseCollection</a></li>
+        
+          <li><a href="../Watir/Body.html">Watir::Body</a></li>
+        
+          <li><a href="../Watir/BodyCollection.html">Watir::BodyCollection</a></li>
+        
+          <li><a href="../Watir/Browser.html">Watir::Browser</a></li>
+        
+          <li><a href="../Watir/Button.html">Watir::Button</a></li>
+        
+          <li><a href="../Watir/ButtonCollection.html">Watir::ButtonCollection</a></li>
+        
+          <li><a href="../Watir/ButtonLocator.html">Watir::ButtonLocator</a></li>
+        
+          <li><a href="../Watir/Canvas.html">Watir::Canvas</a></li>
+        
+          <li><a href="../Watir/CanvasCollection.html">Watir::CanvasCollection</a></li>
+        
+          <li><a href="../Watir/CellContainer.html">Watir::CellContainer</a></li>
+        
+          <li><a href="../Watir/CheckBox.html">Watir::CheckBox</a></li>
+        
+          <li><a href="../Watir/CheckBoxCollection.html">Watir::CheckBoxCollection</a></li>
+        
+          <li><a href="../Watir/ChildCellLocator.html">Watir::ChildCellLocator</a></li>
+        
+          <li><a href="../Watir/ChildRowLocator.html">Watir::ChildRowLocator</a></li>
+        
+          <li><a href="../Watir/Container.html">Watir::Container</a></li>
+        
+          <li><a href="../Watir/Cookies.html">Watir::Cookies</a></li>
+        
+          <li><a href="../Watir/DList.html">Watir::DList</a></li>
+        
+          <li><a href="../Watir/DListCollection.html">Watir::DListCollection</a></li>
+        
+          <li><a href="../Watir/Data.html">Watir::Data</a></li>
+        
+          <li><a href="../Watir/DataCollection.html">Watir::DataCollection</a></li>
+        
+          <li><a href="../Watir/DataList.html">Watir::DataList</a></li>
+        
+          <li><a href="../Watir/DataListCollection.html">Watir::DataListCollection</a></li>
+        
+          <li><a href="../Watir/Details.html">Watir::Details</a></li>
+        
+          <li><a href="../Watir/DetailsCollection.html">Watir::DetailsCollection</a></li>
+        
+          <li><a href="../Watir/Dialog.html">Watir::Dialog</a></li>
+        
+          <li><a href="../Watir/DialogCollection.html">Watir::DialogCollection</a></li>
+        
+          <li><a href="../Watir/Directory.html">Watir::Directory</a></li>
+        
+          <li><a href="../Watir/DirectoryCollection.html">Watir::DirectoryCollection</a></li>
+        
+          <li><a href="../Watir/Div.html">Watir::Div</a></li>
+        
+          <li><a href="../Watir/DivCollection.html">Watir::DivCollection</a></li>
+        
+          <li><a href="../Watir/Element.html">Watir::Element</a></li>
+        
+          <li><a href="../Watir/ElementCollection.html">Watir::ElementCollection</a></li>
+        
+          <li><a href="../Watir/ElementLocator.html">Watir::ElementLocator</a></li>
+        
+          <li><a href="../Watir/Embed.html">Watir::Embed</a></li>
+        
+          <li><a href="../Watir/EmbedCollection.html">Watir::EmbedCollection</a></li>
+        
+          <li><a href="../Watir/EventuallyPresent.html">Watir::EventuallyPresent</a></li>
+        
+          <li><a href="../Watir/Exception.html">Watir::Exception</a></li>
+        
+          <li><a href="../Watir/Exception/Error.html">Watir::Exception::Error</a></li>
+        
+          <li><a href="../Watir/Exception/MissingWayOfFindingObjectException.html">Watir::Exception::MissingWayOfFindingObjectException</a></li>
+        
+          <li><a href="../Watir/Exception/NavigationException.html">Watir::Exception::NavigationException</a></li>
+        
+          <li><a href="../Watir/Exception/NoMatchingWindowFoundException.html">Watir::Exception::NoMatchingWindowFoundException</a></li>
+        
+          <li><a href="../Watir/Exception/NoStatusBarException.html">Watir::Exception::NoStatusBarException</a></li>
+        
+          <li><a href="../Watir/Exception/NoValueFoundException.html">Watir::Exception::NoValueFoundException</a></li>
+        
+          <li><a href="../Watir/Exception/ObjectDisabledException.html">Watir::Exception::ObjectDisabledException</a></li>
+        
+          <li><a href="../Watir/Exception/ObjectReadOnlyException.html">Watir::Exception::ObjectReadOnlyException</a></li>
+        
+          <li><a href="../Watir/Exception/UnknownCellException.html">Watir::Exception::UnknownCellException</a></li>
+        
+          <li><a href="../Watir/Exception/UnknownFrameException.html">Watir::Exception::UnknownFrameException</a></li>
+        
+          <li><a href="../Watir/Exception/UnknownObjectException.html">Watir::Exception::UnknownObjectException</a></li>
+        
+          <li><a href="../Watir/Exception/UnknownRowException.html">Watir::Exception::UnknownRowException</a></li>
+        
+          <li><a href="../Watir/FieldSet.html">Watir::FieldSet</a></li>
+        
+          <li><a href="../Watir/FieldSetCollection.html">Watir::FieldSetCollection</a></li>
+        
+          <li><a href="../Watir/FileField.html">Watir::FileField</a></li>
+        
+          <li><a href="../Watir/FileFieldCollection.html">Watir::FileFieldCollection</a></li>
+        
+          <li><a href="../Watir/Font.html">Watir::Font</a></li>
+        
+          <li><a href="../Watir/FontCollection.html">Watir::FontCollection</a></li>
+        
+          <li><a href="../Watir/Form.html">Watir::Form</a></li>
+        
+          <li><a href="../Watir/FormCollection.html">Watir::FormCollection</a></li>
+        
+          <li><a href="../Watir/Frame.html">Watir::Frame</a></li>
+        
+          <li><a href="../Watir/FrameCollection.html">Watir::FrameCollection</a></li>
+        
+          <li><a href="../Watir/FrameSet.html">Watir::FrameSet</a></li>
+        
+          <li><a href="../Watir/FrameSetCollection.html">Watir::FrameSetCollection</a></li>
+        
+          <li><a href="../Watir/FramedDriver.html">Watir::FramedDriver</a></li>
+        
+          <li><a href="../Watir/HR.html">Watir::HR</a></li>
+        
+          <li><a href="../Watir/HRCollection.html">Watir::HRCollection</a></li>
+        
+          <li><a href="../Watir/HTML.html">Watir::HTML</a></li>
+        
+          <li><a href="../Watir/HTML/Generator.html">Watir::HTML::Generator</a></li>
+        
+          <li><a href="../Watir/HTML/IDLSorter.html">Watir::HTML::IDLSorter</a></li>
+        
+          <li><a href="../Watir/HTML/SpecExtractor.html">Watir::HTML::SpecExtractor</a></li>
+        
+          <li><a href="../Watir/HTML/SpecExtractor/InterfaceNotFound.html">Watir::HTML::SpecExtractor::InterfaceNotFound</a></li>
+        
+          <li><a href="../Watir/HTML/Util.html">Watir::HTML::Util</a></li>
+        
+          <li><a href="../Watir/HTML/Visitor.html">Watir::HTML::Visitor</a></li>
+        
+          <li><a href="../Watir/HTMLElement.html">Watir::HTMLElement</a></li>
+        
+          <li><a href="../Watir/HTMLElementCollection.html">Watir::HTMLElementCollection</a></li>
+        
+          <li><a href="../Watir/HasWindow.html">Watir::HasWindow</a></li>
+        
+          <li><a href="../Watir/Head.html">Watir::Head</a></li>
+        
+          <li><a href="../Watir/HeadCollection.html">Watir::HeadCollection</a></li>
+        
+          <li><a href="../Watir/Heading.html">Watir::Heading</a></li>
+        
+          <li><a href="../Watir/HeadingCollection.html">Watir::HeadingCollection</a></li>
+        
+          <li><a href="../Watir/Hidden.html">Watir::Hidden</a></li>
+        
+          <li><a href="../Watir/HiddenCollection.html">Watir::HiddenCollection</a></li>
+        
+          <li><a href="../Watir/Html.html">Watir::Html</a></li>
+        
+          <li><a href="../Watir/HtmlCollection.html">Watir::HtmlCollection</a></li>
+        
+          <li><a href="../Watir/IFrame.html">Watir::IFrame</a></li>
+        
+          <li><a href="../Watir/IFrameCollection.html">Watir::IFrameCollection</a></li>
+        
+          <li><a href="../Watir/Image.html">Watir::Image</a></li>
+        
+          <li><a href="../Watir/ImageCollection.html">Watir::ImageCollection</a></li>
+        
+          <li><a href="../Watir/Input.html">Watir::Input</a></li>
+        
+          <li><a href="../Watir/InputCollection.html">Watir::InputCollection</a></li>
+        
+          <li><a href="../Watir/Keygen.html">Watir::Keygen</a></li>
+        
+          <li><a href="../Watir/KeygenCollection.html">Watir::KeygenCollection</a></li>
+        
+          <li><a href="../Watir/LI.html">Watir::LI</a></li>
+        
+          <li><a href="../Watir/LICollection.html">Watir::LICollection</a></li>
+        
+          <li><a href="../Watir/Label.html">Watir::Label</a></li>
+        
+          <li><a href="../Watir/LabelCollection.html">Watir::LabelCollection</a></li>
+        
+          <li><a href="../Watir/Legend.html">Watir::Legend</a></li>
+        
+          <li><a href="../Watir/LegendCollection.html">Watir::LegendCollection</a></li>
+        
+          <li><a href="../Watir/Map.html">Watir::Map</a></li>
+        
+          <li><a href="../Watir/MapCollection.html">Watir::MapCollection</a></li>
+        
+          <li><a href="../Watir/Marquee.html">Watir::Marquee</a></li>
+        
+          <li><a href="../Watir/MarqueeCollection.html">Watir::MarqueeCollection</a></li>
+        
+          <li><a href="../Watir/Media.html">Watir::Media</a></li>
+        
+          <li><a href="../Watir/MediaCollection.html">Watir::MediaCollection</a></li>
+        
+          <li><a href="../Watir/Menu.html">Watir::Menu</a></li>
+        
+          <li><a href="../Watir/MenuCollection.html">Watir::MenuCollection</a></li>
+        
+          <li><a href="../Watir/MenuItem.html">Watir::MenuItem</a></li>
+        
+          <li><a href="../Watir/MenuItemCollection.html">Watir::MenuItemCollection</a></li>
+        
+          <li><a href="../Watir/Meta.html">Watir::Meta</a></li>
+        
+          <li><a href="../Watir/MetaCollection.html">Watir::MetaCollection</a></li>
+        
+          <li><a href="../Watir/Meter.html">Watir::Meter</a></li>
+        
+          <li><a href="../Watir/MeterCollection.html">Watir::MeterCollection</a></li>
+        
+          <li><a href="../Watir/Mod.html">Watir::Mod</a></li>
+        
+          <li><a href="../Watir/ModCollection.html">Watir::ModCollection</a></li>
+        
+          <li><a href="../Watir/OList.html">Watir::OList</a></li>
+        
+          <li><a href="../Watir/OListCollection.html">Watir::OListCollection</a></li>
+        
+          <li><a href="../Watir/Object.html">Watir::Object</a></li>
+        
+          <li><a href="../Watir/ObjectCollection.html">Watir::ObjectCollection</a></li>
+        
+          <li><a href="../Watir/OptGroup.html">Watir::OptGroup</a></li>
+        
+          <li><a href="../Watir/OptGroupCollection.html">Watir::OptGroupCollection</a></li>
+        
+          <li><a href="../Watir/Option.html">Watir::Option</a></li>
+        
+          <li><a href="../Watir/OptionCollection.html">Watir::OptionCollection</a></li>
+        
+          <li><a href="../Watir/Output.html">Watir::Output</a></li>
+        
+          <li><a href="../Watir/OutputCollection.html">Watir::OutputCollection</a></li>
+        
+          <li><a href="../Watir/Paragraph.html">Watir::Paragraph</a></li>
+        
+          <li><a href="../Watir/ParagraphCollection.html">Watir::ParagraphCollection</a></li>
+        
+          <li><a href="../Watir/Param.html">Watir::Param</a></li>
+        
+          <li><a href="../Watir/ParamCollection.html">Watir::ParamCollection</a></li>
+        
+          <li><a href="../Watir/Pre.html">Watir::Pre</a></li>
+        
+          <li><a href="../Watir/PreCollection.html">Watir::PreCollection</a></li>
+        
+          <li><a href="../Watir/Progress.html">Watir::Progress</a></li>
+        
+          <li><a href="../Watir/ProgressCollection.html">Watir::ProgressCollection</a></li>
+        
+          <li><a href="../Watir/Quote.html">Watir::Quote</a></li>
+        
+          <li><a href="../Watir/QuoteCollection.html">Watir::QuoteCollection</a></li>
+        
+          <li><a href="../Watir/Radio.html">Watir::Radio</a></li>
+        
+          <li><a href="../Watir/RadioCollection.html">Watir::RadioCollection</a></li>
+        
+          <li><a href="../Watir/RowContainer.html">Watir::RowContainer</a></li>
+        
+          <li><a href="../Watir/Screenshot.html">Watir::Screenshot</a></li>
+        
+          <li><a href="../Watir/Script.html">Watir::Script</a></li>
+        
+          <li><a href="../Watir/ScriptCollection.html">Watir::ScriptCollection</a></li>
+        
+          <li><a href="../Watir/Select.html">Watir::Select</a></li>
+        
+          <li><a href="../Watir/SelectCollection.html">Watir::SelectCollection</a></li>
+        
+          <li><a href="../Watir/Source.html">Watir::Source</a></li>
+        
+          <li><a href="../Watir/SourceCollection.html">Watir::SourceCollection</a></li>
+        
+          <li><a href="../Watir/Span.html">Watir::Span</a></li>
+        
+          <li><a href="../Watir/SpanCollection.html">Watir::SpanCollection</a></li>
+        
+          <li><a href="../Watir/Style.html">Watir::Style</a></li>
+        
+          <li><a href="../Watir/StyleCollection.html">Watir::StyleCollection</a></li>
+        
+          <li><a href="../Watir/Table.html">Watir::Table</a></li>
+        
+          <li><a href="../Watir/TableCaption.html">Watir::TableCaption</a></li>
+        
+          <li><a href="../Watir/TableCaptionCollection.html">Watir::TableCaptionCollection</a></li>
+        
+          <li><a href="../Watir/TableCell.html">Watir::TableCell</a></li>
+        
+          <li><a href="../Watir/TableCellCollection.html">Watir::TableCellCollection</a></li>
+        
+          <li><a href="../Watir/TableCol.html">Watir::TableCol</a></li>
+        
+          <li><a href="../Watir/TableColCollection.html">Watir::TableColCollection</a></li>
+        
+          <li><a href="../Watir/TableCollection.html">Watir::TableCollection</a></li>
+        
+          <li><a href="../Watir/TableDataCell.html">Watir::TableDataCell</a></li>
+        
+          <li><a href="../Watir/TableDataCellCollection.html">Watir::TableDataCellCollection</a></li>
+        
+          <li><a href="../Watir/TableHeaderCell.html">Watir::TableHeaderCell</a></li>
+        
+          <li><a href="../Watir/TableHeaderCellCollection.html">Watir::TableHeaderCellCollection</a></li>
+        
+          <li><a href="../Watir/TableRow.html">Watir::TableRow</a></li>
+        
+          <li><a href="../Watir/TableRowCollection.html">Watir::TableRowCollection</a></li>
+        
+          <li><a href="../Watir/TableSection.html">Watir::TableSection</a></li>
+        
+          <li><a href="../Watir/TableSectionCollection.html">Watir::TableSectionCollection</a></li>
+        
+          <li><a href="../Watir/Template.html">Watir::Template</a></li>
+        
+          <li><a href="../Watir/TemplateCollection.html">Watir::TemplateCollection</a></li>
+        
+          <li><a href="../Watir/TextArea.html">Watir::TextArea</a></li>
+        
+          <li><a href="../Watir/TextAreaCollection.html">Watir::TextAreaCollection</a></li>
+        
+          <li><a href="../Watir/TextAreaLocator.html">Watir::TextAreaLocator</a></li>
+        
+          <li><a href="../Watir/TextField.html">Watir::TextField</a></li>
+        
+          <li><a href="../Watir/TextFieldCollection.html">Watir::TextFieldCollection</a></li>
+        
+          <li><a href="../Watir/TextFieldLocator.html">Watir::TextFieldLocator</a></li>
+        
+          <li><a href="../Watir/Time.html">Watir::Time</a></li>
+        
+          <li><a href="../Watir/TimeCollection.html">Watir::TimeCollection</a></li>
+        
+          <li><a href="../Watir/Title.html">Watir::Title</a></li>
+        
+          <li><a href="../Watir/TitleCollection.html">Watir::TitleCollection</a></li>
+        
+          <li><a href="../Watir/Track.html">Watir::Track</a></li>
+        
+          <li><a href="../Watir/TrackCollection.html">Watir::TrackCollection</a></li>
+        
+          <li><a href="../Watir/UList.html">Watir::UList</a></li>
+        
+          <li><a href="../Watir/UListCollection.html">Watir::UListCollection</a></li>
+        
+          <li><a href="../Watir/Unknown.html">Watir::Unknown</a></li>
+        
+          <li><a href="../Watir/UnknownCollection.html">Watir::UnknownCollection</a></li>
+        
+          <li><a href="../Watir/UserEditable.html">Watir::UserEditable</a></li>
+        
+          <li><a href="../Watir/Video.html">Watir::Video</a></li>
+        
+          <li><a href="../Watir/VideoCollection.html">Watir::VideoCollection</a></li>
+        
+          <li><a href="../Watir/Wait.html">Watir::Wait</a></li>
+        
+          <li><a href="../Watir/Wait/TimeoutError.html">Watir::Wait::TimeoutError</a></li>
+        
+          <li><a href="../Watir/Wait/Timer.html">Watir::Wait::Timer</a></li>
+        
+          <li><a href="../Watir/Waitable.html">Watir::Waitable</a></li>
+        
+          <li><a href="../Watir/WhenPresentDecorator.html">Watir::WhenPresentDecorator</a></li>
+        
+          <li><a href="../Watir/Window.html">Watir::Window</a></li>
+        
+          <li><a href="../Watir/XpathSupport.html">Watir::XpathSupport</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Watir::Browser</h1>
+
+    <div id="description" class="description">
+      
+<p>The main class through which you control the browser.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="driver-attribute-method" class="method-detail">
+          <a name="driver"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">driver</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="wd-attribute-method" class="method-detail">
+          <a name="wd"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">wd</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(browser = :firefox, *args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Creates a <a href="Browser.html">Watir::Browser</a> instance.</p>
+
+<p>@param [Symbol, Selenium::WebDriver] browser :firefox, :ie, :chrome,
+:remote or Selenium::WebDriver instance @param args Passed to the
+underlying driver</p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/watir-webdriver/browser.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">browser</span> = <span class="ruby-value">:firefox</span>, *<span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">browser</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Symbol</span>, <span class="ruby-constant">String</span>
+    <span class="ruby-ivar">@driver</span> = <span class="ruby-constant">Selenium</span><span class="ruby-operator">::</span><span class="ruby-constant">WebDriver</span>.<span class="ruby-identifier">for</span> <span class="ruby-identifier">browser</span>.<span class="ruby-identifier">to_sym</span>, *<span class="ruby-identifier">args</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Selenium</span><span class="ruby-operator">::</span><span class="ruby-constant">WebDriver</span><span class="ruby-operator">::</span><span class="ruby-constant">Driver</span>
+    <span class="ruby-ivar">@driver</span> = <span class="ruby-identifier">browser</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;expected Symbol or Selenium::WebDriver::Driver, got #{browser.class}&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@error_checkers</span> = []
+  <span class="ruby-ivar">@current_frame</span>  = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@closed</span>         = <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+        <div id="start-method" class="method-detail ">
+          <a name="method-c-start"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">start</span><span
+              class="method-args">(url, browser = :firefox, *args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Creates a <a href="Browser.html">Watir::Browser</a> instance and goes to
+URL.</p>
+
+<p>@example</p>
+
+<pre>browser = Watir::Browser.start &quot;www.google.com&quot;, :chrome
+#=&gt; #&lt;Watir::Browser:0x..fa45a499cb41e1752 url=&quot;http://www.google.com&quot; title=&quot;Google&quot;&gt;</pre>
+
+<p>@param [String] url @param [Symbol, Selenium::WebDriver] browser :firefox,
+:ie, :chrome, :remote or Selenium::WebDriver instance @return
+[Watir::Browser]</p>
+            
+
+            
+            <div class="method-source-code" id="start-source">
+<pre>
+<span class="ruby-comment"># File lib/watir-webdriver/browser.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">start</span>(<span class="ruby-identifier">url</span>, <span class="ruby-identifier">browser</span> = <span class="ruby-value">:firefox</span>, *<span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">b</span> = <span class="ruby-identifier">new</span>(<span class="ruby-identifier">browser</span>, *<span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">b</span>.<span class="ruby-identifier">goto</span> <span class="ruby-identifier">url</span>
+
+  <span class="ruby-identifier">b</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- start-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- start-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="add_checker-method" class="method-detail ">
+          <a name="method-i-add_checker"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">add_checker</span><span
+              class="method-args">(checker = nil, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Adds new checker.</p>
+
+<p>Checkers are generally used to ensure application under test does not
+encounter any error. They are automatically executed after following
+events:</p>
+
+<pre>1. Open URL
+2. Refresh page
+3. Click, double-click or right-click on element</pre>
+
+<p>@example</p>
+
+<pre>browser.add_checker do |page|
+  page.text.include?(&quot;Server Error&quot;) and puts &quot;Application exception or 500 error!&quot;
+end
+browser.goto &quot;www.mywebsite.com/page-with-error&quot;
+&quot;Server error! (RuntimeError)&quot;</pre>
+
+<p>@param [call] checker <a href="Object.html">Object</a> responding to call
+@yield Checker block @yieldparam [Watir::Browser]</p>
+            
+
+            
+            <div class="method-source-code" id="add_checker-source">
+<pre>
+<span class="ruby-comment"># File lib/watir-webdriver/browser.rb, line 309</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">add_checker</span>(<span class="ruby-identifier">checker</span> = <span class="ruby-keyword">nil</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-ivar">@error_checkers</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">block</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">checker</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:call</span>
+    <span class="ruby-ivar">@error_checkers</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">checker</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;expected block or object responding to #call&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- add_checker-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- add_checker-method -->
+
+      
+        <div id="alert-method" class="method-detail ">
+          <a name="method-i-alert"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">alert</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Handles JavaScript alerts, confirms and prompts.</p>
+
+<p>@return [Watir::Alert]</p>
+            
+
+            
+            <div class="method-source-code" id="alert-source">
+<pre>
+<span class="ruby-comment"># File lib/watir-webdriver/browser.rb, line 192</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">alert</span>
+  <span class="ruby-constant">Alert</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">driver</span>.<span class="ruby-identifier">switch_to</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- alert-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- alert-method -->
+
+      
+        <div id="assert_exists-method" class="method-detail ">
+          <a name="method-i-assert_exists"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">assert_exists</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Protocol shared with <a href="Element.html">Watir::Element</a></p>
+
+<p>@api private</p>
+            
+
+            
+            <div class="method-source-code" id="assert_exists-source">
+<pre>
+<span class="ruby-comment"># File lib/watir-webdriver/browser.rb, line 362</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">assert_exists</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@closed</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">Exception</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span>, <span class="ruby-string">&quot;browser was closed&quot;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">driver</span>.<span class="ruby-identifier">switch_to</span>.<span class="ruby-identifier">default_content</span>
+    <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- assert_exists-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- assert_exists-method -->
+
+      
+        <div id="back-method" class="method-detail ">
+          <a name="method-i-back"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">back</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Navigates back in history.</p>
+            
+
+            
+            <div class="method-source-code" id="back-source">
+<pre>
+<span class="ruby-comment"># File lib/watir-webdriver/browser.rb, line 86</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">back</span>
+  <span class="ruby-ivar">@driver</span>.<span class="ruby-identifier">navigate</span>.<span class="ruby-identifier">back</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- back-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- back-method -->
+
+      
+        <div id="browser-method" class="method-detail ">
+          <a name="method-i-browser"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">browser</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="browser-source">
+<pre>
+<span class="ruby-comment"># File lib/watir-webdriver/browser.rb, line 375</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">browser</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- browser-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- browser-method -->
+
+      
+        <div id="close-method" class="method-detail ">
+          <a name="method-i-close"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">close</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Closes browser.</p>
+            
+
+            
+            <div class="method-source-code" id="close-source">
+<pre>
+<span class="ruby-comment"># File lib/watir-webdriver/browser.rb, line 133</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">close</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@closed</span>
+  <span class="ruby-ivar">@driver</span>.<span class="ruby-identifier">quit</span>
+  <span class="ruby-ivar">@closed</span> = <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- close-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Browser.html#method-i-quit">quit</a>
+          </div>
+          
+
+          
+        </div><!-- close-method -->
+
+      
+        <div id="cookies-method" class="method-detail ">
+          <a name="method-i-cookies"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">cookies</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Handles cookies.</p>
+
+<p>@return [Watir::Cookies]</p>
+            
+
+            
+            <div class="method-source-code" id="cookies-source">
+<pre>
+<span class="ruby-comment"># File lib/watir-webdriver/browser.rb, line 146</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">cookies</span>
+  <span class="ruby-ivar">@cookies</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Cookies</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">driver</span>.<span class="ruby-identifier">manage</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- cookies-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- cookies-method -->
+
+      
+        <div id="disable_checker-method" class="method-detail ">
+          <a name="method-i-disable_checker"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">disable_checker</span><span
+              class="method-args">(checker)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Deletes checker.</p>
+
+<p>@example</p>
+
+<pre>checker = lambda do |page|
+  page.text.include?(&quot;Server Error&quot;) and puts &quot;Application exception or 500 error!&quot;
+end
+browser.add_checker checker
+browser.goto &quot;www.mywebsite.com/page-with-error&quot;
+&quot;Server error! (RuntimeError)&quot;
+browser.disable_checker checker
+browser.refresh</pre>
+            
+
+            
+            <div class="method-source-code" id="disable_checker-source">
+<pre>
+<span class="ruby-comment"># File lib/watir-webdriver/browser.rb, line 333</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">disable_checker</span>(<span class="ruby-identifier">checker</span>)
+  <span class="ruby-ivar">@error_checkers</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">checker</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- disable_checker-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- disable_checker-method -->
+
+      
+        <div id="execute_script-method" class="method-detail ">
+          <a name="method-i-execute_script"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">execute_script</span><span
+              class="method-args">(script, *args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Executes JavaScript snippet.</p>
+
+<p>If you are going to use the value snippet returns, make sure to use
+`return` explicitly.</p>
+
+<p>@example Check that Ajax requests are completed with jQuery</p>
+
+<pre>browser.execute_script(&quot;return jQuery.active&quot;) == '0'
+#=&gt; true</pre>
+
+<p>@example Get inner <a href="HTML.html">HTML</a> of element</p>
+
+<pre>span = browser.span(class: &quot;someclass&quot;)
+browser.execute_script &quot;return arguments[0].innerHTML&quot;, span
+#=&gt; &quot;Span innerHTML&quot;</pre>
+
+<p>@param [String] script JavaScript snippet to execute @param *args Arguments
+will be available in the given script in the 'arguments' pseudo-array</p>
+            
+
+            
+            <div class="method-source-code" id="execute_script-source">
+<pre>
+<span class="ruby-comment"># File lib/watir-webdriver/browser.rb, line 257</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">execute_script</span>(<span class="ruby-identifier">script</span>, *<span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">args</span>.<span class="ruby-identifier">map!</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Watir</span><span class="ruby-operator">::</span><span class="ruby-constant">Element</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">wd</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">e</span> }
+  <span class="ruby-identifier">returned</span> = <span class="ruby-ivar">@driver</span>.<span class="ruby-identifier">execute_script</span>(<span class="ruby-identifier">script</span>, *<span class="ruby-identifier">args</span>)
+
+  <span class="ruby-identifier">wrap_elements_in</span>(<span class="ruby-identifier">returned</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- execute_script-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- execute_script-method -->
+
+      
+        <div id="exist-3F-method" class="method-detail ">
+          <a name="method-i-exist-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">exist?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns true if browser is not closed and false otherwise.</p>
+
+<p>@return [Boolean]</p>
+            
+
+            
+            <div class="method-source-code" id="exist-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/watir-webdriver/browser.rb, line 351</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">exist?</span>
+  <span class="ruby-keyword">not</span> <span class="ruby-ivar">@closed</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- exist-3F-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Browser.html#method-i-exists-3F">exists?</a>
+          </div>
+          
+
+          
+        </div><!-- exist-3F-method -->
+
+      
+        <div id="exists-3F-method" class="method-detail method-alias">
+          <a name="method-i-exists-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">exists?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Browser.html#method-i-exist-3F">exist?</a>
+          </div>
+          
+        </div><!-- exists-3F-method -->
+
+      
+        <div id="forward-method" class="method-detail ">
+          <a name="method-i-forward"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">forward</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Navigates forward in history.</p>
+            
+
+            
+            <div class="method-source-code" id="forward-source">
+<pre>
+<span class="ruby-comment"># File lib/watir-webdriver/browser.rb, line 94</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">forward</span>
+  <span class="ruby-ivar">@driver</span>.<span class="ruby-identifier">navigate</span>.<span class="ruby-identifier">forward</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- forward-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- forward-method -->
+
+      
+        <div id="goto-method" class="method-detail ">
+          <a name="method-i-goto"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">goto</span><span
+              class="method-args">(uri)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Goes to the given URL.</p>
+
+<p>@example</p>
+
+<pre>browser.goto &quot;www.google.com&quot;</pre>
+
+<p>@param [String] uri The url. @return [String] The url you end up at.</p>
+            
+
+            
+            <div class="method-source-code" id="goto-source">
+<pre>
+<span class="ruby-comment"># File lib/watir-webdriver/browser.rb, line 73</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">goto</span>(<span class="ruby-identifier">uri</span>)
+  <span class="ruby-identifier">uri</span> = <span class="ruby-node">&quot;http://#{uri}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">uri</span> <span class="ruby-operator">=~</span> <span class="ruby-constant">URI</span>.<span class="ruby-identifier">regexp</span>
+
+  <span class="ruby-ivar">@driver</span>.<span class="ruby-identifier">navigate</span>.<span class="ruby-identifier">to</span> <span class="ruby-identifier">uri</span>
+  <span class="ruby-identifier">run_checkers</span>
+
+  <span class="ruby-identifier">url</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- goto-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- goto-method -->
+
+      
+        <div id="html-method" class="method-detail ">
+          <a name="method-i-html"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">html</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns <a href="HTML.html">HTML</a> code of current page.</p>
+
+<p>@return [String]</p>
+            
+
+            
+            <div class="method-source-code" id="html-source">
+<pre>
+<span class="ruby-comment"># File lib/watir-webdriver/browser.rb, line 181</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">html</span>
+  <span class="ruby-comment"># use body.html instead?</span>
+  <span class="ruby-ivar">@driver</span>.<span class="ruby-identifier">page_source</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- html-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- html-method -->
+
+      
+        <div id="inspect-method" class="method-detail ">
+          <a name="method-i-inspect"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">inspect</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="inspect-source">
+<pre>
+<span class="ruby-comment"># File lib/watir-webdriver/browser.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">inspect</span>
+  <span class="ruby-string">'#&lt;%s:0x%x url=%s title=%s&gt;'</span> <span class="ruby-operator">%</span> [<span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>, <span class="ruby-identifier">hash</span>*<span class="ruby-value">2</span>, <span class="ruby-identifier">url</span>.<span class="ruby-identifier">inspect</span>, <span class="ruby-identifier">title</span>.<span class="ruby-identifier">inspect</span>]
+<span class="ruby-keyword">rescue</span>
+  <span class="ruby-string">'#&lt;%s:0x%x closed=%s&gt;'</span> <span class="ruby-operator">%</span> [<span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>, <span class="ruby-identifier">hash</span>*<span class="ruby-value">2</span>, <span class="ruby-ivar">@closed</span>.<span class="ruby-identifier">to_s</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- inspect-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- inspect-method -->
+
+      
+        <div id="name-method" class="method-detail ">
+          <a name="method-i-name"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">name</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns browser name.</p>
+
+<p>@example</p>
+
+<pre>browser = Watir::Browser.new :chrome
+browser.name
+#=&gt; :chrome</pre>
+
+<p>@return [Symbol]</p>
+            
+
+            
+            <div class="method-source-code" id="name-source">
+<pre>
+<span class="ruby-comment"># File lib/watir-webdriver/browser.rb, line 161</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">name</span>
+  <span class="ruby-ivar">@driver</span>.<span class="ruby-identifier">browser</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- name-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- name-method -->
+
+      
+        <div id="quit-method" class="method-detail method-alias">
+          <a name="method-i-quit"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">quit</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Browser.html#method-i-close">close</a>
+          </div>
+          
+        </div><!-- quit-method -->
+
+      
+        <div id="ready_state-method" class="method-detail ">
+          <a name="method-i-ready_state"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ready_state</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns readyState of document.</p>
+
+<p>@return [String]</p>
+            
+
+            
+            <div class="method-source-code" id="ready_state-source">
+<pre>
+<span class="ruby-comment"># File lib/watir-webdriver/browser.rb, line 224</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ready_state</span>
+  <span class="ruby-identifier">execute_script</span> <span class="ruby-string">'return document.readyState'</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- ready_state-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- ready_state-method -->
+
+      
+        <div id="refresh-method" class="method-detail ">
+          <a name="method-i-refresh"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">refresh</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Refreshes current page.</p>
+            
+
+            
+            <div class="method-source-code" id="refresh-source">
+<pre>
+<span class="ruby-comment"># File lib/watir-webdriver/browser.rb, line 200</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">refresh</span>
+  <span class="ruby-ivar">@driver</span>.<span class="ruby-identifier">navigate</span>.<span class="ruby-identifier">refresh</span>
+  <span class="ruby-identifier">run_checkers</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- refresh-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- refresh-method -->
+
+      
+        <div id="reset-21-method" class="method-detail ">
+          <a name="method-i-reset-21"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">reset!</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="reset-21-source">
+<pre>
+<span class="ruby-comment"># File lib/watir-webdriver/browser.rb, line 371</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">reset!</span>
+  <span class="ruby-comment"># no-op</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- reset-21-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- reset-21-method -->
+
+      
+        <div id="run_checkers-method" class="method-detail ">
+          <a name="method-i-run_checkers"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">run_checkers</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Runs checkers.</p>
+            
+
+            
+            <div class="method-source-code" id="run_checkers-source">
+<pre>
+<span class="ruby-comment"># File lib/watir-webdriver/browser.rb, line 341</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">run_checkers</span>
+  <span class="ruby-ivar">@error_checkers</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">call</span>(<span class="ruby-keyword">self</span>) }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- run_checkers-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- run_checkers-method -->
+
+      
+        <div id="screenshot-method" class="method-detail ">
+          <a name="method-i-screenshot"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">screenshot</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Handles screenshots of current pages.</p>
+
+<p>@return [Watir::Screenshot]</p>
+            
+
+            
+            <div class="method-source-code" id="screenshot-source">
+<pre>
+<span class="ruby-comment"># File lib/watir-webdriver/browser.rb, line 284</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">screenshot</span>
+  <span class="ruby-constant">Screenshot</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">driver</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- screenshot-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- screenshot-method -->
+
+      
+        <div id="send_keys-method" class="method-detail ">
+          <a name="method-i-send_keys"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">send_keys</span><span
+              class="method-args">(*args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Sends sequence of keystrokes to currently active element.</p>
+
+<p>@example</p>
+
+<pre>browser.goto &quot;http://www.google.com&quot;
+browser.send_keys &quot;Watir&quot;, :return</pre>
+
+<p>@param [String, Symbol] *args</p>
+            
+
+            
+            <div class="method-source-code" id="send_keys-source">
+<pre>
+<span class="ruby-comment"># File lib/watir-webdriver/browser.rb, line 274</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">send_keys</span>(*<span class="ruby-identifier">args</span>)
+  <span class="ruby-ivar">@driver</span>.<span class="ruby-identifier">switch_to</span>.<span class="ruby-identifier">active_element</span>.<span class="ruby-identifier">send_keys</span>(*<span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- send_keys-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- send_keys-method -->
+
+      
+        <div id="status-method" class="method-detail ">
+          <a name="method-i-status"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">status</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns the text of status bar.</p>
+
+<p>@return [String]</p>
+            
+
+            
+            <div class="method-source-code" id="status-source">
+<pre>
+<span class="ruby-comment"># File lib/watir-webdriver/browser.rb, line 234</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">status</span>
+  <span class="ruby-identifier">execute_script</span> <span class="ruby-string">&quot;return window.status;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- status-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- status-method -->
+
+      
+        <div id="text-method" class="method-detail ">
+          <a name="method-i-text"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">text</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns text of page body.</p>
+
+<p>@return [String]</p>
+            
+
+            
+            <div class="method-source-code" id="text-source">
+<pre>
+<span class="ruby-comment"># File lib/watir-webdriver/browser.rb, line 171</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">text</span>
+  <span class="ruby-ivar">@driver</span>.<span class="ruby-identifier">find_element</span>(<span class="ruby-value">:tag_name</span>, <span class="ruby-string">&quot;body&quot;</span>).<span class="ruby-identifier">text</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- text-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- text-method -->
+
+      
+        <div id="title-method" class="method-detail ">
+          <a name="method-i-title"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">title</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns title of current page.</p>
+
+<p>@example</p>
+
+<pre>browser.goto &quot;http://www.google.com&quot;
+browser.title
+#=&gt; &quot;Google&quot;</pre>
+
+<p>@return [String]</p>
+            
+
+            
+            <div class="method-source-code" id="title-source">
+<pre>
+<span class="ruby-comment"># File lib/watir-webdriver/browser.rb, line 125</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">title</span>
+  <span class="ruby-ivar">@driver</span>.<span class="ruby-identifier">title</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- title-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- title-method -->
+
+      
+        <div id="url-method" class="method-detail ">
+          <a name="method-i-url"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">url</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns URL of current page.</p>
+
+<p>@example</p>
+
+<pre>browser.goto &quot;http://www.google.com&quot;
+browser.url
+#=&gt; &quot;http://www.google.com&quot;</pre>
+
+<p>@return [String]</p>
+            
+
+            
+            <div class="method-source-code" id="url-source">
+<pre>
+<span class="ruby-comment"># File lib/watir-webdriver/browser.rb, line 109</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">url</span>
+  <span class="ruby-identifier">assert_exists</span>
+  <span class="ruby-ivar">@driver</span>.<span class="ruby-identifier">current_url</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- url-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- url-method -->
+
+      
+        <div id="wait-method" class="method-detail ">
+          <a name="method-i-wait"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">wait</span><span
+              class="method-args">(timeout = 5)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Waits until readyState of document is complete.</p>
+
+<p>@param [Fixnum] timeout @raise [Watir::Wait::TimeoutError] if timeout is
+exceeded</p>
+            
+
+            
+            <div class="method-source-code" id="wait-source">
+<pre>
+<span class="ruby-comment"># File lib/watir-webdriver/browser.rb, line 212</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">wait</span>(<span class="ruby-identifier">timeout</span> = <span class="ruby-value">5</span>)
+  <span class="ruby-identifier">wait_until</span>(<span class="ruby-identifier">timeout</span>, <span class="ruby-string">&quot;waiting for document.readyState == 'complete'&quot;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">ready_state</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;complete&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- wait-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- wait-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

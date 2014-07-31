@@ -1,0 +1,3378 @@
+<?xml version="1.0" encoding="IBM437"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=IBM437" http-equiv="Content-Type" />
+
+  <title>Module: PageObject::Accessors</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/page-object/accessors_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/accessors.rb">lib/page-object/accessors.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-a">#a</a></li>
+          
+          <li><a href="#method-i-area">#area</a></li>
+          
+          <li><a href="#method-i-audio">#audio</a></li>
+          
+          <li><a href="#method-i-button">#button</a></li>
+          
+          <li><a href="#method-i-canvas">#canvas</a></li>
+          
+          <li><a href="#method-i-cell">#cell</a></li>
+          
+          <li><a href="#method-i-checkbox">#checkbox</a></li>
+          
+          <li><a href="#method-i-direct_url">#direct_url</a></li>
+          
+          <li><a href="#method-i-div">#div</a></li>
+          
+          <li><a href="#method-i-element">#element</a></li>
+          
+          <li><a href="#method-i-elements">#elements</a></li>
+          
+          <li><a href="#method-i-expected_element">#expected_element</a></li>
+          
+          <li><a href="#method-i-expected_element_visible">#expected_element_visible</a></li>
+          
+          <li><a href="#method-i-expected_title">#expected_title</a></li>
+          
+          <li><a href="#method-i-file_field">#file_field</a></li>
+          
+          <li><a href="#method-i-form">#form</a></li>
+          
+          <li><a href="#method-i-h1">#h1</a></li>
+          
+          <li><a href="#method-i-h2">#h2</a></li>
+          
+          <li><a href="#method-i-h3">#h3</a></li>
+          
+          <li><a href="#method-i-h4">#h4</a></li>
+          
+          <li><a href="#method-i-h5">#h5</a></li>
+          
+          <li><a href="#method-i-h6">#h6</a></li>
+          
+          <li><a href="#method-i-hidden">#hidden</a></li>
+          
+          <li><a href="#method-i-hidden_field">#hidden_field</a></li>
+          
+          <li><a href="#method-i-image">#image</a></li>
+          
+          <li><a href="#method-i-img">#img</a></li>
+          
+          <li><a href="#method-i-in_frame">#in_frame</a></li>
+          
+          <li><a href="#method-i-in_iframe">#in_iframe</a></li>
+          
+          <li><a href="#method-i-indexed_property">#indexed_property</a></li>
+          
+          <li><a href="#method-i-label">#label</a></li>
+          
+          <li><a href="#method-i-li">#li</a></li>
+          
+          <li><a href="#method-i-link">#link</a></li>
+          
+          <li><a href="#method-i-list_item">#list_item</a></li>
+          
+          <li><a href="#method-i-ol">#ol</a></li>
+          
+          <li><a href="#method-i-ordered_list">#ordered_list</a></li>
+          
+          <li><a href="#method-i-p">#p</a></li>
+          
+          <li><a href="#method-i-page_url">#page_url</a></li>
+          
+          <li><a href="#method-i-paragraph">#paragraph</a></li>
+          
+          <li><a href="#method-i-params">#params</a></li>
+          
+          <li><a href="#method-i-params-3D">#params=</a></li>
+          
+          <li><a href="#method-i-radio">#radio</a></li>
+          
+          <li><a href="#method-i-radio_button">#radio_button</a></li>
+          
+          <li><a href="#method-i-radio_button_group">#radio_button_group</a></li>
+          
+          <li><a href="#method-i-radio_group">#radio_group</a></li>
+          
+          <li><a href="#method-i-select">#select</a></li>
+          
+          <li><a href="#method-i-select_list">#select_list</a></li>
+          
+          <li><a href="#method-i-span">#span</a></li>
+          
+          <li><a href="#method-i-standard_methods">#standard_methods</a></li>
+          
+          <li><a href="#method-i-svg">#svg</a></li>
+          
+          <li><a href="#method-i-table">#table</a></li>
+          
+          <li><a href="#method-i-td">#td</a></li>
+          
+          <li><a href="#method-i-text_area">#text_area</a></li>
+          
+          <li><a href="#method-i-text_field">#text_field</a></li>
+          
+          <li><a href="#method-i-textarea">#textarea</a></li>
+          
+          <li><a href="#method-i-ul">#ul</a></li>
+          
+          <li><a href="#method-i-unordered_list">#unordered_list</a></li>
+          
+          <li><a href="#method-i-video">#video</a></li>
+          
+          <li><a href="#method-i-wait_for_expected_title">#wait_for_expected_title</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../PageObject.html">PageObject</a></li>
+        
+          <li><a href="../PageObject/Accessors.html">PageObject::Accessors</a></li>
+        
+          <li><a href="../PageObject/ElementLocators.html">PageObject::ElementLocators</a></li>
+        
+          <li><a href="../PageObject/Elements.html">PageObject::Elements</a></li>
+        
+          <li><a href="../PageObject/Elements/Area.html">PageObject::Elements::Area</a></li>
+        
+          <li><a href="../PageObject/Elements/Audio.html">PageObject::Elements::Audio</a></li>
+        
+          <li><a href="../PageObject/Elements/Button.html">PageObject::Elements::Button</a></li>
+        
+          <li><a href="../PageObject/Elements/Canvas.html">PageObject::Elements::Canvas</a></li>
+        
+          <li><a href="../PageObject/Elements/CheckBox.html">PageObject::Elements::CheckBox</a></li>
+        
+          <li><a href="../PageObject/Elements/Div.html">PageObject::Elements::Div</a></li>
+        
+          <li><a href="../PageObject/Elements/Element.html">PageObject::Elements::Element</a></li>
+        
+          <li><a href="../PageObject/Elements/FileField.html">PageObject::Elements::FileField</a></li>
+        
+          <li><a href="../PageObject/Elements/Form.html">PageObject::Elements::Form</a></li>
+        
+          <li><a href="../PageObject/Elements/Heading.html">PageObject::Elements::Heading</a></li>
+        
+          <li><a href="../PageObject/Elements/HiddenField.html">PageObject::Elements::HiddenField</a></li>
+        
+          <li><a href="../PageObject/Elements/Image.html">PageObject::Elements::Image</a></li>
+        
+          <li><a href="../PageObject/Elements/Label.html">PageObject::Elements::Label</a></li>
+        
+          <li><a href="../PageObject/Elements/Link.html">PageObject::Elements::Link</a></li>
+        
+          <li><a href="../PageObject/Elements/ListItem.html">PageObject::Elements::ListItem</a></li>
+        
+          <li><a href="../PageObject/Elements/Media.html">PageObject::Elements::Media</a></li>
+        
+          <li><a href="../PageObject/Elements/Option.html">PageObject::Elements::Option</a></li>
+        
+          <li><a href="../PageObject/Elements/OrderedList.html">PageObject::Elements::OrderedList</a></li>
+        
+          <li><a href="../PageObject/Elements/Paragraph.html">PageObject::Elements::Paragraph</a></li>
+        
+          <li><a href="../PageObject/Elements/RadioButton.html">PageObject::Elements::RadioButton</a></li>
+        
+          <li><a href="../PageObject/Elements/SelectList.html">PageObject::Elements::SelectList</a></li>
+        
+          <li><a href="../PageObject/Elements/Span.html">PageObject::Elements::Span</a></li>
+        
+          <li><a href="../PageObject/Elements/Table.html">PageObject::Elements::Table</a></li>
+        
+          <li><a href="../PageObject/Elements/TableCell.html">PageObject::Elements::TableCell</a></li>
+        
+          <li><a href="../PageObject/Elements/TableRow.html">PageObject::Elements::TableRow</a></li>
+        
+          <li><a href="../PageObject/Elements/TextArea.html">PageObject::Elements::TextArea</a></li>
+        
+          <li><a href="../PageObject/Elements/TextField.html">PageObject::Elements::TextField</a></li>
+        
+          <li><a href="../PageObject/Elements/UnorderedList.html">PageObject::Elements::UnorderedList</a></li>
+        
+          <li><a href="../PageObject/Elements/Video.html">PageObject::Elements::Video</a></li>
+        
+          <li><a href="../PageObject/IndexedProperties.html">PageObject::IndexedProperties</a></li>
+        
+          <li><a href="../PageObject/IndexedProperties/RowOfElements.html">PageObject::IndexedProperties::RowOfElements</a></li>
+        
+          <li><a href="../PageObject/IndexedProperties/TableOfElements.html">PageObject::IndexedProperties::TableOfElements</a></li>
+        
+          <li><a href="../PageObject/Javascript.html">PageObject::Javascript</a></li>
+        
+          <li><a href="../PageObject/Javascript/JQuery.html">PageObject::Javascript::JQuery</a></li>
+        
+          <li><a href="../PageObject/Javascript/Prototype.html">PageObject::Javascript::Prototype</a></li>
+        
+          <li><a href="../PageObject/Javascript/YUI.html">PageObject::Javascript::YUI</a></li>
+        
+          <li><a href="../PageObject/JavascriptFrameworkFacade.html">PageObject::JavascriptFrameworkFacade</a></li>
+        
+          <li><a href="../PageObject/LoadsPlatform.html">PageObject::LoadsPlatform</a></li>
+        
+          <li><a href="../PageObject/LocatorGenerator.html">PageObject::LocatorGenerator</a></li>
+        
+          <li><a href="../PageObject/NestedElements.html">PageObject::NestedElements</a></li>
+        
+          <li><a href="../PageObject/PageFactory.html">PageObject::PageFactory</a></li>
+        
+          <li><a href="../PageObject/PagePopulator.html">PageObject::PagePopulator</a></li>
+        
+          <li><a href="../PageObject/Platforms.html">PageObject::Platforms</a></li>
+        
+          <li><a href="../PageObject/Platforms/SeleniumWebDriver.html">PageObject::Platforms::SeleniumWebDriver</a></li>
+        
+          <li><a href="../PageObject/Platforms/SeleniumWebDriver/Button.html">PageObject::Platforms::SeleniumWebDriver::Button</a></li>
+        
+          <li><a href="../PageObject/Platforms/SeleniumWebDriver/CheckBox.html">PageObject::Platforms::SeleniumWebDriver::CheckBox</a></li>
+        
+          <li><a href="../PageObject/Platforms/SeleniumWebDriver/Element.html">PageObject::Platforms::SeleniumWebDriver::Element</a></li>
+        
+          <li><a href="../PageObject/Platforms/SeleniumWebDriver/FileField.html">PageObject::Platforms::SeleniumWebDriver::FileField</a></li>
+        
+          <li><a href="../PageObject/Platforms/SeleniumWebDriver/Form.html">PageObject::Platforms::SeleniumWebDriver::Form</a></li>
+        
+          <li><a href="../PageObject/Platforms/SeleniumWebDriver/Image.html">PageObject::Platforms::SeleniumWebDriver::Image</a></li>
+        
+          <li><a href="../PageObject/Platforms/SeleniumWebDriver/Link.html">PageObject::Platforms::SeleniumWebDriver::Link</a></li>
+        
+          <li><a href="../PageObject/Platforms/SeleniumWebDriver/OrderedList.html">PageObject::Platforms::SeleniumWebDriver::OrderedList</a></li>
+        
+          <li><a href="../PageObject/Platforms/SeleniumWebDriver/PageObject.html">PageObject::Platforms::SeleniumWebDriver::PageObject</a></li>
+        
+          <li><a href="../PageObject/Platforms/SeleniumWebDriver/RadioButton.html">PageObject::Platforms::SeleniumWebDriver::RadioButton</a></li>
+        
+          <li><a href="../PageObject/Platforms/SeleniumWebDriver/SelectList.html">PageObject::Platforms::SeleniumWebDriver::SelectList</a></li>
+        
+          <li><a href="../PageObject/Platforms/SeleniumWebDriver/SurrogateSeleniumElement.html">PageObject::Platforms::SeleniumWebDriver::SurrogateSeleniumElement</a></li>
+        
+          <li><a href="../PageObject/Platforms/SeleniumWebDriver/Table.html">PageObject::Platforms::SeleniumWebDriver::Table</a></li>
+        
+          <li><a href="../PageObject/Platforms/SeleniumWebDriver/TableRow.html">PageObject::Platforms::SeleniumWebDriver::TableRow</a></li>
+        
+          <li><a href="../PageObject/Platforms/SeleniumWebDriver/TextArea.html">PageObject::Platforms::SeleniumWebDriver::TextArea</a></li>
+        
+          <li><a href="../PageObject/Platforms/SeleniumWebDriver/TextField.html">PageObject::Platforms::SeleniumWebDriver::TextField</a></li>
+        
+          <li><a href="../PageObject/Platforms/SeleniumWebDriver/UnorderedList.html">PageObject::Platforms::SeleniumWebDriver::UnorderedList</a></li>
+        
+          <li><a href="../PageObject/Platforms/WatirWebDriver.html">PageObject::Platforms::WatirWebDriver</a></li>
+        
+          <li><a href="../PageObject/Platforms/WatirWebDriver/CheckBox.html">PageObject::Platforms::WatirWebDriver::CheckBox</a></li>
+        
+          <li><a href="../PageObject/Platforms/WatirWebDriver/Element.html">PageObject::Platforms::WatirWebDriver::Element</a></li>
+        
+          <li><a href="../PageObject/Platforms/WatirWebDriver/FileField.html">PageObject::Platforms::WatirWebDriver::FileField</a></li>
+        
+          <li><a href="../PageObject/Platforms/WatirWebDriver/Form.html">PageObject::Platforms::WatirWebDriver::Form</a></li>
+        
+          <li><a href="../PageObject/Platforms/WatirWebDriver/Image.html">PageObject::Platforms::WatirWebDriver::Image</a></li>
+        
+          <li><a href="../PageObject/Platforms/WatirWebDriver/Link.html">PageObject::Platforms::WatirWebDriver::Link</a></li>
+        
+          <li><a href="../PageObject/Platforms/WatirWebDriver/OrderedList.html">PageObject::Platforms::WatirWebDriver::OrderedList</a></li>
+        
+          <li><a href="../PageObject/Platforms/WatirWebDriver/PageObject.html">PageObject::Platforms::WatirWebDriver::PageObject</a></li>
+        
+          <li><a href="../PageObject/Platforms/WatirWebDriver/RadioButton.html">PageObject::Platforms::WatirWebDriver::RadioButton</a></li>
+        
+          <li><a href="../PageObject/Platforms/WatirWebDriver/SelectList.html">PageObject::Platforms::WatirWebDriver::SelectList</a></li>
+        
+          <li><a href="../PageObject/Platforms/WatirWebDriver/Table.html">PageObject::Platforms::WatirWebDriver::Table</a></li>
+        
+          <li><a href="../PageObject/Platforms/WatirWebDriver/TableRow.html">PageObject::Platforms::WatirWebDriver::TableRow</a></li>
+        
+          <li><a href="../PageObject/Platforms/WatirWebDriver/TextArea.html">PageObject::Platforms::WatirWebDriver::TextArea</a></li>
+        
+          <li><a href="../PageObject/Platforms/WatirWebDriver/TextField.html">PageObject::Platforms::WatirWebDriver::TextField</a></li>
+        
+          <li><a href="../PageObject/Platforms/WatirWebDriver/UnorderedList.html">PageObject::Platforms::WatirWebDriver::UnorderedList</a></li>
+        
+          <li><a href="../PageObject/Widgets.html">PageObject::Widgets</a></li>
+        
+          <li><a href="../String.html">String</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">PageObject::Accessors</h1>
+
+    <div id="description" class="description">
+      
+<p>Contains the class level methods that are inserted into your page objects
+when you include the <a href="../PageObject.html">PageObject</a> module. 
+These methods will generate another set of methods that provide access to
+the elements on the web pages.</p>
+
+<p>@see PageObject::WatirPageObject for the watir implementation of the
+platform delegate @see PageObject::SeleniumPageObject for the selenium
+implementation of the platform delegate</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="a-method" class="method-detail method-alias">
+          <a name="method-i-a"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">a</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Accessors.html#method-i-link">link</a>
+          </div>
+          
+        </div><!-- a-method -->
+
+      
+        <div id="area-method" class="method-detail ">
+          <a name="method-i-area"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">area</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>adds three methods - one to click the area, another to return the area
+element, and another to check the area's existence.</p>
+
+<p>@example</p>
+
+<pre>area(:message, :id =&gt; 'message')
+# will generate 'message', 'message_element', and 'message?' methods</pre>
+
+<p>@param [Symbol] the name used for the generated methods @param [Hash]
+identifier how we find an area.  You can use a multiple paramaters</p>
+
+<pre>by combining of any of the following except xpath.  The valid keys are:
+* :class =&gt; Watir and Selenium
+* :css =&gt; Watir and Selenium
+* :id =&gt; Watir and Selenium
+* :index =&gt; Watir and Selenium
+* :name =&gt; Watir and Selenium
+* :text =&gt; Watir and Selenium
+* :xpath =&gt; Watir and Selenium</pre>
+
+<p>@param optional block to be invoked when element method is called</p>
+            
+
+            
+            <div class="method-source-code" id="area-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 1051</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">area</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>={<span class="ruby-value">:index</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>}, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">standard_methods</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>, <span class="ruby-string">'area_for'</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-identifier">name</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">click_area_for</span> <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{name}_element&quot;</span>).<span class="ruby-identifier">click</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- area-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- area-method -->
+
+      
+        <div id="audio-method" class="method-detail ">
+          <a name="method-i-audio"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">audio</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>adds two methods - one to return the audio element and another to check the
+audio's existence.</p>
+
+<p>@example</p>
+
+<pre>audio(:acdc, :id =&gt; 'audio_id')
+# will generate 'acdc_element' and 'acdc?' methods</pre>
+
+<p>@param [Symbol] the name used for the generated methods @param [Hash]
+identifier how we find an audio element.  You can use a multiple paramaters</p>
+
+<pre>by combining of any of the following except xpath.  The valid keys are:
+* :class =&gt; Watir and Selenium
+* :css =&gt; Watir and Selenium
+* :id =&gt; Watir and Selenium
+* :index =&gt; Watir and Selenium
+* :name =&gt; Watir and Selenium
+* :xpath =&gt; Watir and Selenium</pre>
+
+<p>@param optional block to be invoked when element method is called</p>
+            
+
+            
+            <div class="method-source-code" id="audio-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 1101</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">audio</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>={<span class="ruby-value">:index</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>}, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">standard_methods</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>, <span class="ruby-string">'audio_for'</span>, &amp;<span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- audio-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- audio-method -->
+
+      
+        <div id="button-method" class="method-detail ">
+          <a name="method-i-button"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">button</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>adds three methods - one to click a button, another to return the button
+element, and another to check the button's existence.</p>
+
+<p>@example</p>
+
+<pre>button(:purchase, :id =&gt; 'purchase')
+# will generate 'purchase', 'purchase_element', and 'purchase?' methods</pre>
+
+<p>@param [Symbol] the name used for the generated methods @param [Hash]
+identifier how we find a button.  You can use a multiple paramaters</p>
+
+<pre>by combining of any of the following except xpath.  The valid keys are:
+* :class =&gt; Watir and Selenium
+* :css =&gt; Watir and Selenium
+* :id =&gt; Watir and Selenium
+* :index =&gt; Watir and Selenium
+* :name =&gt; Watir and Selenium
+* :text =&gt; Watir only
+* :value =&gt; Watir and Selenium
+* :xpath =&gt; Watir and Selenium
+* :src =&gt; Watir and Selenium (input type=image only)
+* :alt =&gt; Watir and Selenium (input type=image only)</pre>
+
+<p>@param optional block to be invoked when element method is called</p>
+            
+
+            
+            <div class="method-source-code" id="button-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 521</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">button</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>={<span class="ruby-value">:index</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>}, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">standard_methods</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>, <span class="ruby-string">'button_for'</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-identifier">name</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">click_button_for</span> <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{name}_element&quot;</span>).<span class="ruby-identifier">click</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- button-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- button-method -->
+
+      
+        <div id="canvas-method" class="method-detail ">
+          <a name="method-i-canvas"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">canvas</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>adds two methods - one to return the canvas element and another to check
+the canvas's existence.</p>
+
+<p>@example</p>
+
+<pre>canvas(:my_canvas, :id =&gt; 'canvas_id')
+# will generate 'my_canvas_element' and 'my_canvas?' methods</pre>
+
+<p>@param [Symbol] the name used for the generated methods @param [Hash]
+identifier how we find a canvas.  You can use a multiple paramaters</p>
+
+<pre>by combining of any of the following except xpath.  The valid keys are:
+* :class =&gt; Watir and Selenium
+* :css =&gt; Watir and Selenium
+* :id =&gt; Watir and Selenium
+* :index =&gt; Watir and Selenium
+* :name =&gt; Watir and Selenium
+* :xpath =&gt; Watir and Selenium</pre>
+
+<p>@param optional block to be invoked when element method is called</p>
+            
+
+            
+            <div class="method-source-code" id="canvas-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 1078</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">canvas</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>={<span class="ruby-value">:index</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>}, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">standard_methods</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>, <span class="ruby-string">'canvas_for'</span>, &amp;<span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- canvas-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- canvas-method -->
+
+      
+        <div id="cell-method" class="method-detail ">
+          <a name="method-i-cell"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">cell</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>adds three methods - one to retrieve the text from a table cell, another to
+return the table cell element, and another to check the cell's existence.</p>
+
+<p>@example</p>
+
+<pre>cell(:total, :id =&gt; 'total_cell')
+# will generate 'total', 'total_element', and 'total?' methods</pre>
+
+<p>@param [Symbol] the name used for the generated methods @param [Hash]
+identifier how we find a cell.  You can use a multiple paramaters</p>
+
+<pre>by combining of any of the following except xpath.  The valid keys are:
+* :class =&gt; Watir and Selenium
+* :css =&gt; Watir and Selenium
+* :id =&gt; Watir and Selenium
+* :index =&gt; Watir and Selenium
+* :name =&gt; Watir and Selenium
+* :text =&gt; Watir and Selenium
+* :xpath =&gt; Watir and Selenium
+* :css =&gt; Selenium only</pre>
+
+<p>@param optional block to be invoked when element method is called</p>
+            
+
+            
+            <div class="method-source-code" id="cell-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 638</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">cell</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>={<span class="ruby-value">:index</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>}, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">standard_methods</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>, <span class="ruby-string">'cell_for'</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-node">&quot;#{name}&quot;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">cell_text_for</span> <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{name}_element&quot;</span>).<span class="ruby-identifier">text</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- cell-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Accessors.html#method-i-td">td</a>
+          </div>
+          
+
+          
+        </div><!-- cell-method -->
+
+      
+        <div id="checkbox-method" class="method-detail ">
+          <a name="method-i-checkbox"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">checkbox</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>adds five methods - one to check, another to uncheck, another to return the
+state of a checkbox, another to return a <a
+href="Elements/CheckBox.html">PageObject::Elements::CheckBox</a> object
+representing the checkbox, and a final method to check the checkbox's
+existence.</p>
+
+<p>@example</p>
+
+<pre>checkbox(:active, :name =&gt; &quot;is_active&quot;)
+# will generate 'check_active', 'uncheck_active', 'active_checked?',
+# 'active_element', and 'active?' methods</pre>
+
+<p>@param [Symbol] the name used for the generated methods @param [Hash]
+identifier how we find a checkbox.  You can use a multiple paramaters</p>
+
+<pre>by combining of any of the following except xpath.  The valid keys are:
+* :class =&gt; Watir and Selenium
+* :css =&gt; Selenium only
+* :id =&gt; Watir and Selenium
+* :index =&gt; Watir and Selenium
+* :name =&gt; Watir and Selenium
+* :value =&gt; Watir and Selenium
+* :xpath =&gt; Watir and Selenium
+* :label =&gt; Watir and Selenium</pre>
+
+<p>@param optional block to be invoked when element method is called</p>
+            
+
+            
+            <div class="method-source-code" id="checkbox-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 390</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">checkbox</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>={<span class="ruby-value">:index</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>}, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">standard_methods</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>, <span class="ruby-string">'checkbox_for'</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-node">&quot;check_#{name}&quot;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">check_checkbox</span>(<span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{name}_element&quot;</span>).<span class="ruby-identifier">check</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-node">&quot;uncheck_#{name}&quot;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">uncheck_checkbox</span>(<span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{name}_element&quot;</span>).<span class="ruby-identifier">uncheck</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-node">&quot;#{name}_checked?&quot;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">checkbox_checked?</span>(<span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{name}_element&quot;</span>).<span class="ruby-identifier">checked?</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- checkbox-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- checkbox-method -->
+
+      
+        <div id="direct_url-method" class="method-detail method-alias">
+          <a name="method-i-direct_url"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">direct_url</span><span
+              class="method-args">(url)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Accessors.html#method-i-page_url">page_url</a>
+          </div>
+          
+        </div><!-- direct_url-method -->
+
+      
+        <div id="div-method" class="method-detail ">
+          <a name="method-i-div"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">div</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>adds three methods - one to retrieve the text from a div, another to return
+the div element, and another to check the div's existence.</p>
+
+<p>@example</p>
+
+<pre>div(:message, :id =&gt; 'message')
+# will generate 'message', 'message_element', and 'message?' methods</pre>
+
+<p>@param [Symbol] the name used for the generated methods @param [Hash]
+identifier how we find a div.  You can use a multiple paramaters</p>
+
+<pre>by combining of any of the following except xpath.  The valid keys are:
+* :class =&gt; Watir and Selenium
+* :css =&gt; Watir and Selenium
+* :id =&gt; Watir and Selenium
+* :index =&gt; Watir and Selenium
+* :name =&gt; Watir and Selenium
+* :text =&gt; Watir and Selenium
+* :title =&gt; Watir and Selenium
+* :xpath =&gt; Watir and Selenium</pre>
+
+<p>@param optional block to be invoked when element method is called</p>
+            
+
+            
+            <div class="method-source-code" id="div-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 550</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">div</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>={<span class="ruby-value">:index</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>}, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">standard_methods</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>, <span class="ruby-string">'div_for'</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-identifier">name</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">div_text_for</span> <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{name}_element&quot;</span>).<span class="ruby-identifier">text</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- div-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- div-method -->
+
+      
+        <div id="element-method" class="method-detail ">
+          <a name="method-i-element"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">element</span><span
+              class="method-args">(name, tag, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>adds three methods - one to retrieve the text of an element, another to
+retrieve an element, and another to check the element's existence.</p>
+
+<p>@example</p>
+
+<pre>element(:title, :header, :id =&gt; 'title')
+# will generate 'title', 'title_element', and 'title?' methods</pre>
+
+<p>@param [Symbol] the name used for the generated methods @param [Symbol] the
+name of the tag for the element @param [Hash] identifier how we find an
+element.  You can use a multiple paramaters</p>
+
+<pre>by combining of any of the following except xpath.  The valid keys are:
+* :class =&gt; Watir and Selenium
+* :css =&gt; Selenium only
+* :id =&gt; Watir and Selenium
+* :index =&gt; Watir and Selenium
+* :name =&gt; Watir and Selenium
+* :xpath =&gt; Watir and Selenium</pre>
+
+<p>@param optional block to be invoked when element method is called</p>
+            
+
+            
+            <div class="method-source-code" id="element-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 1172</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">element</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">tag</span>, <span class="ruby-identifier">identifier</span>={<span class="ruby-value">:index</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>}, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-node">&quot;#{name}&quot;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{name}_element&quot;</span>).<span class="ruby-identifier">text</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-node">&quot;#{name}_element&quot;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">call_block</span>(&amp;<span class="ruby-identifier">block</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">element_for</span>(<span class="ruby-identifier">tag</span>, <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-node">&quot;#{name}?&quot;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{name}_element&quot;</span>).<span class="ruby-identifier">exists?</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- element-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- element-method -->
+
+      
+        <div id="elements-method" class="method-detail ">
+          <a name="method-i-elements"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">elements</span><span
+              class="method-args">(name, tag, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>adds a method to return a collection of generic Element objects for a
+specific tag.</p>
+
+<p>@example</p>
+
+<pre>elements(:title, :header, :id =&gt; 'title')
+# will generate ''title_elements'</pre>
+
+<p>@param [Symbol] the name used for the generated methods @param [Symbol] the
+name of the tag for the element @param [Hash] identifier how we find an
+element.  You can use a multiple paramaters</p>
+
+<pre>by combining of any of the following except xpath.  The valid keys are:
+* :class =&gt; Watir and Selenium
+* :css =&gt; Selenium only
+* :id =&gt; Watir and Selenium
+* :index =&gt; Watir and Selenium
+* :name =&gt; Watir and Selenium
+* :xpath =&gt; Watir and Selenium</pre>
+
+<p>@param optional block to be invoked when element method is called</p>
+            
+
+            
+            <div class="method-source-code" id="elements-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 1205</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">elements</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">tag</span>, <span class="ruby-identifier">identifier</span>={<span class="ruby-value">:index</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>}, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-node">&quot;#{name}_elements&quot;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">call_block</span>(&amp;<span class="ruby-identifier">block</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">elements_for</span>(<span class="ruby-identifier">tag</span>, <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- elements-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- elements-method -->
+
+      
+        <div id="expected_element-method" class="method-detail ">
+          <a name="method-i-expected_element"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">expected_element</span><span
+              class="method-args">(element_name, timeout=::PageObject.default_element_wait)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Creates a method that provides a way to initialize a page based upon an
+expected element. This is useful for pages that load dynamic content.
+@param [Symbol] the name given to the element in the declaration @param
+[optional, Integer] timeout default value is 5 seconds @return [boolean]</p>
+
+<p>@example Specify a text box named :address expected on the page within 10
+seconds</p>
+
+<pre>expected_element(:address, 10)
+page.has_expected_element?</pre>
+            
+
+            
+            <div class="method-source-code" id="expected_element-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 114</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">expected_element</span>(<span class="ruby-identifier">element_name</span>, <span class="ruby-identifier">timeout</span>=<span class="ruby-operator">::</span><span class="ruby-constant">PageObject</span>.<span class="ruby-identifier">default_element_wait</span>)
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-string">&quot;has_expected_element?&quot;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-node">&quot;#{element_name}_element&quot;</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{element_name}_element&quot;</span>).<span class="ruby-identifier">when_present</span> <span class="ruby-identifier">timeout</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- expected_element-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- expected_element-method -->
+
+      
+        <div id="expected_element_visible-method" class="method-detail ">
+          <a name="method-i-expected_element_visible"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">expected_element_visible</span><span
+              class="method-args">(element_name, timeout=::PageObject.default_element_wait, check_visible=false)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Creates a method that provides a way to initialize a page based upon an
+expected element to become visible. This is useful for pages that load
+dynamic content and might have hidden elements that are not shown. @param
+[Symbol] the name given to the element in the declaration @param [optional,
+Integer] timeout default value is 5 seconds @param [optional, boolean] also
+check that element to be visible if set to true @return [boolean]</p>
+
+<p>@example Specify a text box named :address expected on the page within 10
+seconds</p>
+
+<pre>expected_element_visible(:address, 10)
+page.has_expected_element_visible?</pre>
+            
+
+            
+            <div class="method-source-code" id="expected_element_visible-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 132</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">expected_element_visible</span>(<span class="ruby-identifier">element_name</span>, <span class="ruby-identifier">timeout</span>=<span class="ruby-operator">::</span><span class="ruby-constant">PageObject</span>.<span class="ruby-identifier">default_element_wait</span>, <span class="ruby-identifier">check_visible</span>=<span class="ruby-keyword">false</span>)
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-string">&quot;has_expected_element_visible?&quot;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-node">&quot;#{element_name}_element&quot;</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{element_name}_element&quot;</span>).<span class="ruby-identifier">when_present</span> <span class="ruby-identifier">timeout</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-node">&quot;#{element_name}_element&quot;</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{element_name}_element&quot;</span>).<span class="ruby-identifier">when_visible</span> <span class="ruby-identifier">timeout</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- expected_element_visible-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- expected_element_visible-method -->
+
+      
+        <div id="expected_title-method" class="method-detail ">
+          <a name="method-i-expected_title"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">expected_title</span><span
+              class="method-args">(expected_title)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Creates a method that compares the <a
+href="Accessors.html#method-i-expected_title">expected_title</a> of a page
+against the actual. @param [String] <a
+href="Accessors.html#method-i-expected_title">expected_title</a> the
+literal expected title for the page @param [Regexp] <a
+href="Accessors.html#method-i-expected_title">expected_title</a> the
+expected title pattern for the page @return [boolean] @raise An exception
+if <a href="Accessors.html#method-i-expected_title">expected_title</a> does
+not match actual title</p>
+
+<p>@example Specify 'Google' as the expected title of a page</p>
+
+<pre>expected_title &quot;Google&quot;
+page.has_expected_title?</pre>
+            
+
+            
+            <div class="method-source-code" id="expected_title-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 94</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">expected_title</span>(<span class="ruby-identifier">expected_title</span>)
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-string">&quot;has_expected_title?&quot;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">page_title</span> = <span class="ruby-identifier">title</span>
+    <span class="ruby-identifier">has_expected_title</span> = (<span class="ruby-identifier">expected_title</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">page_title</span>)
+    <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Expected title '#{expected_title}' instead of '#{page_title}'&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">has_expected_title</span>
+    <span class="ruby-identifier">has_expected_title</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- expected_title-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- expected_title-method -->
+
+      
+        <div id="file_field-method" class="method-detail ">
+          <a name="method-i-file_field"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">file_field</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>adds three methods - one to set the file for a file field, another to
+retrieve the file field element, and another to check it's existence.</p>
+
+<p>@example</p>
+
+<pre>file_field(:the_file, :id =&gt; 'file_to_upload')
+# will generate 'the_file=', 'the_file_element', and 'the_file?' methods</pre>
+
+<p>@param [Symbol] the name used for the generated methods @param [Hash]
+identifier how we find a file_field.  You can use a multiple paramaters</p>
+
+<pre>by combining of any of the following except xpath.  The valid keys are:
+* :class =&gt; Watir and Selenium
+* :css =&gt; Selenium only
+* :id =&gt; Watir and Selenium
+* :index =&gt; Watir and Selenium
+* :name =&gt; Watir and Selenium
+* :title =&gt; Watir and Selenium
+* :xpath =&gt; Watir and Selenium
+* :label =&gt; Watir and Selenium</pre>
+
+<p>@param optional block to be invoked when element method is called</p>
+            
+
+            
+            <div class="method-source-code" id="file_field-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 995</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">file_field</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>={<span class="ruby-value">:index</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>}, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">standard_methods</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>, <span class="ruby-string">'file_field_for'</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-node">&quot;#{name}=&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">file_field_value_set</span>(<span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span>, <span class="ruby-identifier">value</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{name}_element&quot;</span>).<span class="ruby-identifier">value</span> = <span class="ruby-identifier">value</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- file_field-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- file_field-method -->
+
+      
+        <div id="form-method" class="method-detail ">
+          <a name="method-i-form"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">form</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>adds two methods - one to retrieve the form element, and another to check
+the form's existence.</p>
+
+<p>@example</p>
+
+<pre>form(:login, :id =&gt; 'login')
+# will generate 'login_element' and 'login?' methods</pre>
+
+<p>@param [Symbol] the name used for the generated methods @param [Hash]
+identifier how we find a form.  You can use a multiple paramaters</p>
+
+<pre>by combining of any of the following except xpath.  The valid keys are:
+* :action =&gt; Watir and Selenium
+* :class =&gt; Watir and Selenium
+* :css =&gt; Selenium only
+* :id =&gt; Watir and Selenium
+* :index =&gt; Watir and Selenium
+* :xpath =&gt; Watir and Selenium</pre>
+
+<p>@param optional block to be invoked when element method is called</p>
+            
+
+            
+            <div class="method-source-code" id="form-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 692</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">form</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>={<span class="ruby-value">:index</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>}, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">standard_methods</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>, <span class="ruby-string">'form_for'</span>, &amp;<span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- form-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- form-method -->
+
+      
+        <div id="h1-method" class="method-detail ">
+          <a name="method-i-h1"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">h1</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>adds three methods - one to retrieve the text of a h1 element, another to
+retrieve a h1 element, and another to check for it's existence.</p>
+
+<p>@example</p>
+
+<pre>h1(:title, :id =&gt; 'title')
+# will generate 'title', 'title_element', and 'title?' methods</pre>
+
+<p>@param [Symbol] the name used for the generated methods @param [Hash]
+identifier how we find a H1.  You can use a multiple paramaters</p>
+
+<pre>by combining of any of the following except xpath.  The valid keys are:
+* :class =&gt; Watir and Selenium
+* :css =&gt; Watir and Selenium
+* :id =&gt; Watir and Selenium
+* :index =&gt; Watir and Selenium
+* :name =&gt; Watir and Selenium
+* :xpath =&gt; Watir and Selenium</pre>
+
+<p>@param optional block to be invoked when element method is called</p>
+            
+
+            
+            <div class="method-source-code" id="h1-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 803</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">h1</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>={<span class="ruby-value">:index</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>}, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">standard_methods</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>,<span class="ruby-string">'h1_for'</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-identifier">name</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">h1_text_for</span> <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{name}_element&quot;</span>).<span class="ruby-identifier">text</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- h1-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- h1-method -->
+
+      
+        <div id="h2-method" class="method-detail ">
+          <a name="method-i-h2"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">h2</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>adds three methods - one to retrieve the text of a h2 element, another to
+retrieve a h2 element, and another to check for it's existence.</p>
+
+<p>@example</p>
+
+<pre>h2(:title, :id =&gt; 'title')
+# will generate 'title', 'title_element', and 'title?' methods</pre>
+
+<p>@param [Symbol] the name used for the generated methods @param [Hash]
+identifier how we find a H2.  You can use a multiple paramaters</p>
+
+<pre>by combining of any of the following except xpath.  The valid keys are:
+* :class =&gt; Watir and Selenium
+* :css =&gt; Watir and Selenium
+* :id =&gt; Watir and Selenium
+* :index =&gt; Watir and Selenium
+* :name =&gt; Watir and Selenium
+* :xpath =&gt; Watir and Selenium</pre>
+
+<p>@param optional block to be invoked when element method is called</p>
+            
+
+            
+            <div class="method-source-code" id="h2-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 830</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">h2</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>={<span class="ruby-value">:index</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>}, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">standard_methods</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>, <span class="ruby-string">'h2_for'</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-identifier">name</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">h2_text_for</span> <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{name}_element&quot;</span>).<span class="ruby-identifier">text</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- h2-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- h2-method -->
+
+      
+        <div id="h3-method" class="method-detail ">
+          <a name="method-i-h3"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">h3</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>adds three methods - one to retrieve the text of a h3 element, another to
+return a h3 element, and another to check for it's existence.</p>
+
+<p>@example</p>
+
+<pre>h3(:title, :id =&gt; 'title')
+# will generate 'title', 'title_element', and 'title?' methods</pre>
+
+<p>@param [Symbol] the name used for the generated methods @param [Hash]
+identifier how we find a H3.  You can use a multiple paramaters</p>
+
+<pre>by combining of any of the following except xpath.  The valid keys are:
+* :class =&gt; Watir and Selenium
+* :css =&gt; Watir and Selenium
+* :id =&gt; Watir and Selenium
+* :index =&gt; Watir and Selenium
+* :name =&gt; Watir and Selenium
+* :xpath =&gt; Watir and Selenium</pre>
+
+<p>@param optional block to be invoked when element method is called</p>
+            
+
+            
+            <div class="method-source-code" id="h3-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 857</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">h3</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>={<span class="ruby-value">:index</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>}, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">standard_methods</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>, <span class="ruby-string">'h3_for'</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-identifier">name</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">h3_text_for</span> <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{name}_element&quot;</span>).<span class="ruby-identifier">text</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- h3-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- h3-method -->
+
+      
+        <div id="h4-method" class="method-detail ">
+          <a name="method-i-h4"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">h4</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>adds three methods - one to retrieve the text of a h4 element, another to
+return a h4 element, and another to check for it's existence.</p>
+
+<p>@example</p>
+
+<pre>h4(:title, :id =&gt; 'title')
+# will generate 'title', 'title_element', and 'title?' methods</pre>
+
+<p>@param [Symbol] the name used for the generated methods @param [Hash]
+identifier how we find a H4.  You can use a multiple paramaters</p>
+
+<pre>by combining of any of the following except xpath.  The valid keys are:
+* :class =&gt; Watir and Selenium
+* :css =&gt; Watir and Selenium
+* :id =&gt; Watir and Selenium
+* :index =&gt; Watir and Selenium
+* :name =&gt; Watir and Selenium
+* :xpath =&gt; Watir and Selenium</pre>
+
+<p>@param optional block to be invoked when element method is called</p>
+            
+
+            
+            <div class="method-source-code" id="h4-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 884</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">h4</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>={<span class="ruby-value">:index</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>}, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">standard_methods</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>, <span class="ruby-string">'h4_for'</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-identifier">name</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">h4_text_for</span> <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{name}_element&quot;</span>).<span class="ruby-identifier">text</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- h4-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- h4-method -->
+
+      
+        <div id="h5-method" class="method-detail ">
+          <a name="method-i-h5"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">h5</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>adds three methods - one to retrieve the text of a h5 element, another to
+return a h5 element, and another to check for it's existence.</p>
+
+<p>@example</p>
+
+<pre>h5(:title, :id =&gt; 'title')
+# will generate 'title', 'title_element', and 'title?' methods</pre>
+
+<p>@param [Symbol] the name used for the generated methods @param [Hash]
+identifier how we find a H5.  You can use a multiple paramaters</p>
+
+<pre>by combining of any of the following except xpath.  The valid keys are:
+* :class =&gt; Watir and Selenium
+* :css =&gt; Watir and Selenium
+* :id =&gt; Watir and Selenium
+* :index =&gt; Watir and Selenium
+* :name =&gt; Watir and Selenium
+* :xpath =&gt; Watir and Selenium</pre>
+
+<p>@param optional block to be invoked when element method is called</p>
+            
+
+            
+            <div class="method-source-code" id="h5-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 911</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">h5</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>={<span class="ruby-value">:index</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>}, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">standard_methods</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>, <span class="ruby-string">'h5_for'</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-identifier">name</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">h5_text_for</span> <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{name}_element&quot;</span>).<span class="ruby-identifier">text</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- h5-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- h5-method -->
+
+      
+        <div id="h6-method" class="method-detail ">
+          <a name="method-i-h6"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">h6</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>adds three methods - one to retrieve the text of a h6 element, another to
+return a h6 element, and another to check for it's existence.</p>
+
+<p>@example</p>
+
+<pre>h6(:title, :id =&gt; 'title')
+# will generate 'title', 'title_element', and 'title?' methods</pre>
+
+<p>@param [Symbol] the name used for the generated methods @param [Hash]
+identifier how we find a H6.  You can use a multiple paramaters</p>
+
+<pre>by combining of any of the following except xpath.  The valid keys are:
+* :class =&gt; Watir and Selenium
+* :css =&gt; Watir and Selenium
+* :id =&gt; Watir and Selenium
+* :index =&gt; Watir and Selenium
+* :name =&gt; Watir and Selenium
+* :xpath =&gt; Watir and Selenium</pre>
+
+<p>@param optional block to be invoked when element method is called</p>
+            
+
+            
+            <div class="method-source-code" id="h6-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 938</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">h6</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>={<span class="ruby-value">:index</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>}, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">standard_methods</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>, <span class="ruby-string">'h6_for'</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-identifier">name</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">h6_text_for</span> <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{name}_element&quot;</span>).<span class="ruby-identifier">text</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- h6-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- h6-method -->
+
+      
+        <div id="hidden-method" class="method-detail method-alias">
+          <a name="method-i-hidden"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">hidden</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Accessors.html#method-i-hidden_field">hidden_field</a>
+          </div>
+          
+        </div><!-- hidden-method -->
+
+      
+        <div id="hidden_field-method" class="method-detail ">
+          <a name="method-i-hidden_field"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">hidden_field</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>adds three methods to the page object - one to get the text from a hidden
+field, another to retrieve the hidden field element, and another to check
+the hidden field's existence.</p>
+
+<p>@example</p>
+
+<pre>hidden_field(:user_id, :id =&gt; &quot;user_identity&quot;)
+# will generate 'user_id', 'user_id_element' and 'user_id?' methods</pre>
+
+<p>@param [String] the name used for the generated methods @param [Hash]
+identifier how we find a hidden field.  You can use a multiple paramaters</p>
+
+<pre>by combining of any of the following except xpath.  The valid keys are:
+* :class =&gt; Watir and Selenium
+* :css =&gt; Selenium only
+* :id =&gt; Watir and Selenium
+* :index =&gt; Watir and Selenium
+* :name =&gt; Watir and Selenium
+* :text =&gt; Watir and Selenium
+* :value =&gt; Watir and Selenium
+* :xpath =&gt; Watir and Selenium</pre>
+
+<p>@param optional block to be invoked when element method is called</p>
+            
+
+            
+            <div class="method-source-code" id="hidden_field-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 246</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">hidden_field</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>={<span class="ruby-value">:index</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>}, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">standard_methods</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>, <span class="ruby-string">'hidden_field_for'</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-identifier">name</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">hidden_field_value_for</span> <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{name}_element&quot;</span>).<span class="ruby-identifier">value</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- hidden_field-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Accessors.html#method-i-hidden">hidden</a>
+          </div>
+          
+
+          
+        </div><!-- hidden_field-method -->
+
+      
+        <div id="image-method" class="method-detail ">
+          <a name="method-i-image"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">image</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>adds two methods - one to retrieve the image element, and another to check
+the image's existence.</p>
+
+<p>@example</p>
+
+<pre>image(:logo, :id =&gt; 'logo')
+# will generate 'logo_element' and 'logo?' methods</pre>
+
+<p>@param [Symbol] the name used for the generated methods @param [Hash]
+identifier how we find an image.  You can use a multiple paramaters</p>
+
+<pre>by combining of any of the following except xpath.  The valid keys are:
+* :alt =&gt; Watir and Selenium
+* :class =&gt; Watir and Selenium
+* :css =&gt; Selenium only
+* :id =&gt; Watir and Selenium
+* :index =&gt; Watir and Selenium
+* :name =&gt; Watir and Selenium
+* :src =&gt; Watir and Selenium
+* :xpath =&gt; Watir and Selenium</pre>
+
+<p>@param optional block to be invoked when element method is called</p>
+            
+
+            
+            <div class="method-source-code" id="image-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 668</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">image</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>={<span class="ruby-value">:index</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>}, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">standard_methods</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>, <span class="ruby-string">'image_for'</span>, &amp;<span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- image-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Accessors.html#method-i-img">img</a>
+          </div>
+          
+
+          
+        </div><!-- image-method -->
+
+      
+        <div id="img-method" class="method-detail method-alias">
+          <a name="method-i-img"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">img</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Accessors.html#method-i-image">image</a>
+          </div>
+          
+        </div><!-- img-method -->
+
+      
+        <div id="in_frame-method" class="method-detail ">
+          <a name="method-i-in_frame"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">in_frame</span><span
+              class="method-args">(identifier, frame=nil, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Identify an element as existing within a frame .  A frame parameter is
+passed to the block and must be passed to the other calls to <a
+href="../PageObject.html">PageObject</a>. You can nest calls to <a
+href="Accessors.html#method-i-in_frame">in_frame</a> by passing the frame
+to the next level.</p>
+
+<p>@example</p>
+
+<pre>in_frame(:id =&gt; 'frame_id') do |frame|
+  text_field(:first_name, :id =&gt; 'fname', :frame =&gt; frame)
+end</pre>
+
+<p>@param [Hash] identifier how we find the frame.  The valid keys are:</p>
+
+<pre>* :id =&gt; Watir and Selenium
+* :index =&gt; Watir and Selenium
+* :name =&gt; Watir and Selenium
+* :regexp =&gt; Watir only</pre>
+
+<p>@param frame passed from a previous call to in_frame.  Used to nest calls
+@param block that contains the calls to elements that exist inside the
+frame.</p>
+            
+
+            
+            <div class="method-source-code" id="in_frame-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 157</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">in_frame</span>(<span class="ruby-identifier">identifier</span>, <span class="ruby-identifier">frame</span>=<span class="ruby-keyword">nil</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">frame</span> = [] <span class="ruby-keyword">if</span> <span class="ruby-identifier">frame</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-identifier">frame</span> <span class="ruby-operator">&lt;&lt;</span> {<span class="ruby-identifier">frame</span><span class="ruby-operator">:</span> <span class="ruby-identifier">identifier</span>}
+  <span class="ruby-identifier">block</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">frame</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- in_frame-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- in_frame-method -->
+
+      
+        <div id="in_iframe-method" class="method-detail ">
+          <a name="method-i-in_iframe"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">in_iframe</span><span
+              class="method-args">(identifier, frame=nil, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Identify an element as existing within an iframe.  A frame parameter is
+passed to the block and must be passed to the other calls to <a
+href="../PageObject.html">PageObject</a>. You can nest calls to <a
+href="Accessors.html#method-i-in_frame">in_frame</a> by passing the frame
+to the next level.</p>
+
+<p>@example</p>
+
+<pre>in_iframe(:id =&gt; 'frame_id') do |frame|
+  text_field(:first_name, :id =&gt; 'fname', :frame =&gt; frame)
+end</pre>
+
+<p>@param [Hash] identifier how we find the frame.  The valid keys are:</p>
+
+<pre>* :id =&gt; Watir and Selenium
+* :index =&gt; Watir and Selenium
+* :name =&gt; Watir and Selenium
+* :regexp =&gt; Watir only</pre>
+
+<p>@param frame passed from a previous call to in_iframe.  Used to nest calls
+@param block that contains the calls to elements that exist inside the
+iframe.</p>
+            
+
+            
+            <div class="method-source-code" id="in_iframe-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 181</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">in_iframe</span>(<span class="ruby-identifier">identifier</span>, <span class="ruby-identifier">frame</span>=<span class="ruby-keyword">nil</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">frame</span> = [] <span class="ruby-keyword">if</span> <span class="ruby-identifier">frame</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-identifier">frame</span> <span class="ruby-operator">&lt;&lt;</span> {<span class="ruby-identifier">iframe</span><span class="ruby-operator">:</span> <span class="ruby-identifier">identifier</span>}
+  <span class="ruby-identifier">block</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">frame</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- in_iframe-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- in_iframe-method -->
+
+      
+        <div id="indexed_property-method" class="method-detail ">
+          <a name="method-i-indexed_property"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">indexed_property</span><span
+              class="method-args">(name, identifier_list)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>adds a method that will return an indexed property.  The property will
+respond to the [] method with an object that has a set of normal
+page_object properties that correspond to the definitions included in the
+identifier_list parameter, with the "what" of the "how and what"
+substituted based on the index provided to the [] method.</p>
+
+<p>@example</p>
+
+<pre>indexed_property(:title, [
+  [:text_field,  :field_1,   :id =&gt; 'table[%s].field_1'],
+  [:button,      :button_1,  :id =&gt; 'table[%s].button_1'],
+  [:text_field,  :field_2,   :name =&gt; 'table[%s].field_2']
+])
+# will generate a title method that responds to [].  title['foo'] will return an object
+# that responds to the normal methods expected for two text_fields and a button with the
+# given names, using the given how and what with 'foo' substituted for the %s.  title[123]
+# will do the same, using the integer 123 instead.</pre>
+
+<p>@param [Symbol] the name used for the generated method @param [Array]
+definitions an array of definitions to define on the indexed property. 
+Each</p>
+
+<pre>entry in the array should contain two symbols and a hash, corresponding to one of the standard
+page_object properties with a single substitution marker in each value in the hash,
+e.g. [:text_field, :field_1, :id =&gt; 'table[%s].field_1']</pre>
+            
+
+            
+            <div class="method-source-code" id="indexed_property-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 1280</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">indexed_property</span> (<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier_list</span>)
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-node">&quot;#{name}&quot;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-constant">IndexedProperties</span><span class="ruby-operator">::</span><span class="ruby-constant">TableOfElements</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@browser</span>, <span class="ruby-identifier">identifier_list</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- indexed_property-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- indexed_property-method -->
+
+      
+        <div id="label-method" class="method-detail ">
+          <a name="method-i-label"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">label</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>adds three methods - one to retrieve the text from a label, another to
+return the label element, and another to check the label's existence.</p>
+
+<p>@example</p>
+
+<pre>label(:message, :id =&gt; 'message')
+# will generate 'message', 'message_element', and 'message?' methods</pre>
+
+<p>@param [Symbol] the name used for the generated methods @param [Hash]
+identifier how we find a label.  You can use a multiple paramaters</p>
+
+<pre>by combining of any of the following except xpath.  The valid keys are:
+* :class =&gt; Watir and Selenium
+* :css =&gt; Watir and Selenium
+* :id =&gt; Watir and Selenium
+* :index =&gt; Watir and Selenium
+* :name =&gt; Watir and Selenium
+* :text =&gt; Watir and Selenium
+* :xpath =&gt; Watir and Selenium</pre>
+
+<p>@param optional block to be invoked when element method is called</p>
+            
+
+            
+            <div class="method-source-code" id="label-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 1023</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">label</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>={<span class="ruby-value">:index</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>}, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">standard_methods</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>, <span class="ruby-string">'label_for'</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-identifier">name</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">label_text_for</span> <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{name}_element&quot;</span>).<span class="ruby-identifier">text</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- label-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- label-method -->
+
+      
+        <div id="li-method" class="method-detail method-alias">
+          <a name="method-i-li"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">li</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Accessors.html#method-i-list_item">list_item</a>
+          </div>
+          
+        </div><!-- li-method -->
+
+      
+        <div id="link-method" class="method-detail ">
+          <a name="method-i-link"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">link</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>adds three methods - one to select a link, another to return a <a
+href="Elements/Link.html">PageObject::Elements::Link</a> object
+representing the link, and another that checks the link's existence.</p>
+
+<p>@example</p>
+
+<pre>link(:add_to_cart, :text =&gt; &quot;Add to Cart&quot;)
+# will generate 'add_to_cart', 'add_to_cart_element', and 'add_to_cart?' methods</pre>
+
+<p>@param [Symbol] the name used for the generated methods @param [Hash]
+identifier how we find a link.  You can use a multiple paramaters</p>
+
+<pre>by combining of any of the following except xpath.  The valid keys are:
+* :class =&gt; Watir and Selenium
+* :css =&gt; Watir and Selenium
+* :href =&gt; Watir and Selenium
+* :id =&gt; Watir and Selenium
+* :index =&gt; Watir and Selenium
+* :link =&gt; Watir and Selenium
+* :link_text =&gt; Watir and Selenium
+* :name =&gt; Watir and Selenium
+* :text =&gt; Watir and Selenium
+* :title =&gt; Watir and Selenium
+* :xpath =&gt; Watir and Selenium</pre>
+
+<p>@param optional block to be invoked when element method is called</p>
+            
+
+            
+            <div class="method-source-code" id="link-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 357</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">link</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>={<span class="ruby-value">:index</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>}, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">standard_methods</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>, <span class="ruby-string">'link_for'</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-identifier">name</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">click_link_for</span> <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{name}_element&quot;</span>).<span class="ruby-identifier">click</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- link-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Accessors.html#method-i-a">a</a>
+          </div>
+          
+
+          
+        </div><!-- link-method -->
+
+      
+        <div id="list_item-method" class="method-detail ">
+          <a name="method-i-list_item"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">list_item</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>adds three methods - one to retrieve the text from a list item, another to
+return the list item element, and another to check the list item's
+existence.</p>
+
+<p>@example</p>
+
+<pre>list_item(:item_one, :id =&gt; 'one')
+# will generate 'item_one', 'item_one_element', and 'item_one?' methods</pre>
+
+<p>@param [Symbol] the name used for the generated methods @param [Hash]
+identifier how we find a list item.  You can use a multiple paramaters</p>
+
+<pre>by combining of any of the following except xpath.  The valid keys are:
+* :class =&gt; Watir and Selenium
+* :css =&gt; Watir and Selenium
+* :id =&gt; Watir and Selenium
+* :index =&gt; Watir and Selenium
+* :name =&gt; Watir and Selenium
+* :text =&gt; Watir and Selenium
+* :xpath =&gt; Watir and Selenium</pre>
+
+<p>@param optional block to be invoked when element method is called</p>
+            
+
+            
+            <div class="method-source-code" id="list_item-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 717</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">list_item</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>={<span class="ruby-value">:index</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>}, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">standard_methods</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>, <span class="ruby-string">'list_item_for'</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-identifier">name</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">list_item_text_for</span> <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{name}_element&quot;</span>).<span class="ruby-identifier">text</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- list_item-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Accessors.html#method-i-li">li</a>
+          </div>
+          
+
+          
+        </div><!-- list_item-method -->
+
+      
+        <div id="ol-method" class="method-detail method-alias">
+          <a name="method-i-ol"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ol</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Accessors.html#method-i-ordered_list">ordered_list</a>
+          </div>
+          
+        </div><!-- ol-method -->
+
+      
+        <div id="ordered_list-method" class="method-detail ">
+          <a name="method-i-ordered_list"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ordered_list</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>adds three methods - one to return the text withing the ordered list, one
+to retrieve the ordered list element, and another to test it's existence.</p>
+
+<p>@example</p>
+
+<pre>ordered_list(:top_five, :id =&gt; 'top')
+# will generate 'top_five', 'top_five_element' and 'top_five?' methods</pre>
+
+<p>@param [Symbol] the name used for the generated methods @param [Hash]
+identifier how we find an ordered list.  You can use a multiple paramaters</p>
+
+<pre>by combining of any of the following except xpath.  The valid keys are:
+* :class =&gt; Watir and Selenium
+* :css =&gt; Selenium only
+* :id =&gt; Watir and Selenium
+* :index =&gt; Watir and Selenium
+* :name =&gt; Watir and Selenium
+* :xpath =&gt; Watir and Selenium</pre>
+
+<p>@param optional block to be invoked when element method is called</p>
+            
+
+            
+            <div class="method-source-code" id="ordered_list-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 775</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ordered_list</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>={<span class="ruby-value">:index</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>}, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">standard_methods</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>, <span class="ruby-string">'ordered_list_for'</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-identifier">name</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">ordered_list_text_for</span> <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{name}_element&quot;</span>).<span class="ruby-identifier">text</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- ordered_list-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Accessors.html#method-i-ol">ol</a>
+          </div>
+          
+
+          
+        </div><!-- ordered_list-method -->
+
+      
+        <div id="p-method" class="method-detail method-alias">
+          <a name="method-i-p"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">p</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Accessors.html#method-i-paragraph">paragraph</a>
+          </div>
+          
+        </div><!-- p-method -->
+
+      
+        <div id="page_url-method" class="method-detail ">
+          <a name="method-i-page_url"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">page_url</span><span
+              class="method-args">(url)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Specify the url for the page.  A call to this method will generate a 'goto'
+method to take you to the page.</p>
+
+<p>@param [String] the url for the page. @param [Symbol] a method name to call
+to get the url</p>
+            
+
+            
+            <div class="method-source-code" id="page_url-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">page_url</span>(<span class="ruby-identifier">url</span>)
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-string">&quot;goto&quot;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">navigate_to</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">page_url_value</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-string">'page_url_value'</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">lookup</span> = <span class="ruby-identifier">url</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Symbol</span>) <span class="ruby-operator">?</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">url</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">url</span>
+    <span class="ruby-identifier">erb</span> = <span class="ruby-constant">ERB</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">%{#{lookup}}</span>)
+    <span class="ruby-identifier">merged_params</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">instance_variable_get</span>(<span class="ruby-string">&quot;@merged_params&quot;</span>)
+    <span class="ruby-identifier">params</span> = <span class="ruby-identifier">merged_params</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">merged_params</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">params</span>
+    <span class="ruby-identifier">erb</span>.<span class="ruby-identifier">result</span>(<span class="ruby-identifier">binding</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- page_url-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Accessors.html#method-i-direct_url">direct_url</a>
+          </div>
+          
+
+          
+        </div><!-- page_url-method -->
+
+      
+        <div id="paragraph-method" class="method-detail ">
+          <a name="method-i-paragraph"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">paragraph</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>adds three methods - one to retrieve the text of a paragraph, another to
+retrieve a paragraph element, and another to check the paragraph's
+existence.</p>
+
+<p>@example</p>
+
+<pre>paragraph(:title, :id =&gt; 'title')
+# will generate 'title', 'title_element', and 'title?' methods</pre>
+
+<p>@param [Symbol] the name used for the generated methods @param [Hash]
+identifier how we find a paragraph.  You can use a multiple paramaters</p>
+
+<pre>by combining of any of the following except xpath.  The valid keys are:
+* :class =&gt; Watir and Selenium
+* :css =&gt; Watir and Selenium
+* :id =&gt; Watir and Selenium
+* :index =&gt; Watir and Selenium
+* :name =&gt; Watir and Selenium
+* :xpath =&gt; Watir and Selenium</pre>
+
+<p>@param optional block to be invoked when element method is called</p>
+            
+
+            
+            <div class="method-source-code" id="paragraph-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 965</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">paragraph</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>={<span class="ruby-value">:index</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>}, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">standard_methods</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>, <span class="ruby-string">'paragraph_for'</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-identifier">name</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">paragraph_text_for</span> <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{name}_element&quot;</span>).<span class="ruby-identifier">text</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- paragraph-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Accessors.html#method-i-p">p</a>
+          </div>
+          
+
+          
+        </div><!-- paragraph-method -->
+
+      
+        <div id="params-method" class="method-detail ">
+          <a name="method-i-params"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">params</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return the params that exist on this page class</p>
+            
+
+            
+            <div class="method-source-code" id="params-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">params</span>
+  <span class="ruby-ivar">@params</span> <span class="ruby-operator">||=</span> {}
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- params-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- params-method -->
+
+      
+        <div id="params-3D-method" class="method-detail ">
+          <a name="method-i-params-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">params=</span><span
+              class="method-args">(the_params)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Set some values that can be used withing the class.  This is typically used
+to provide values that help build dynamic urls in the <a
+href="Accessors.html#method-i-page_url">page_url</a> method</p>
+
+<p>@param [Hash] the value to set the params</p>
+            
+
+            
+            <div class="method-source-code" id="params-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 22</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">params=</span>(<span class="ruby-identifier">the_params</span>)
+  <span class="ruby-ivar">@params</span> = <span class="ruby-identifier">the_params</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- params-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- params-3D-method -->
+
+      
+        <div id="radio-method" class="method-detail method-alias">
+          <a name="method-i-radio"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">radio</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Accessors.html#method-i-radio_button">radio_button</a>
+          </div>
+          
+        </div><!-- radio-method -->
+
+      
+        <div id="radio_button-method" class="method-detail ">
+          <a name="method-i-radio_button"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">radio_button</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>adds five methods - one to select, another to clear, another to return if a
+radio button is selected, another method to return a <a
+href="Elements/RadioButton.html">PageObject::Elements::RadioButton</a>
+object representing the radio button element, and another to check the
+radio button's existence.</p>
+
+<p>@example</p>
+
+<pre>radio_button(:north, :id =&gt; &quot;north&quot;)
+# will generate 'select_north', 'clear_north', 'north_selected?',
+# 'north_element', and 'north?' methods</pre>
+
+<p>@param [Symbol] the name used for the generated methods @param [Hash]
+identifier how we find a radio button.  You can use a multiple paramaters</p>
+
+<pre>by combining of any of the following except xpath.  The valid keys are:
+* :class =&gt; Watir and Selenium
+* :css =&gt; Selenium only
+* :id =&gt; Watir and Selenium
+* :index =&gt; Watir and Selenium
+* :name =&gt; Watir and Selenium
+* :value =&gt; Watir and Selenium
+* :xpath =&gt; Watir and Selenium
+* :label =&gt; Watir and Selenium</pre>
+
+<p>@param optional block to be invoked when element method is called</p>
+            
+
+            
+            <div class="method-source-code" id="radio_button-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 431</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">radio_button</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>={<span class="ruby-value">:index</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>}, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">standard_methods</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>, <span class="ruby-string">'radio_button_for'</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-node">&quot;select_#{name}&quot;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">select_radio</span>(<span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{name}_element&quot;</span>).<span class="ruby-identifier">select</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-node">&quot;clear_#{name}&quot;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">clear_radio</span>(<span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{name}_element&quot;</span>).<span class="ruby-identifier">clear</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-node">&quot;#{name}_selected?&quot;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">radio_selected?</span>(<span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{name}_element&quot;</span>).<span class="ruby-identifier">selected?</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- radio_button-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Accessors.html#method-i-radio">radio</a>
+          </div>
+          
+
+          
+        </div><!-- radio_button-method -->
+
+      
+        <div id="radio_button_group-method" class="method-detail ">
+          <a name="method-i-radio_button_group"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">radio_button_group</span><span
+              class="method-args">(name, identifier)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>adds five methods to help interact with a radio button group - a method to
+select a radio button in the group by given value/text, a method to return
+the values of all radio buttins in the group, a method to return if a radio
+button in the group is selected (will return the text of the selected radio
+button, if true), a method to return an array of <a
+href="Elements/RadioButton.html">PageObject::Elements::RadioButton</a>
+objects representing the radio button group, and finally a method to check
+the existence of the radio button group.</p>
+
+<p>@example <a
+href="Accessors.html#method-i-radio_button_group">radio_button_group</a>(:color,
+:name =&gt; "preferred_color") will generate 'select_color',
+'color_values', 'color_selected?', 'color_elements', and 'color?' methods</p>
+
+<p>@param [Symbol] the name used for the generated methods @param [Hash]
+shared identifier for the radio button group. Typically, a 'name'
+attribute. The valid keys are:</p>
+<ul><li>
+<p>:name =&gt; Watir and Selenium</p>
+</li></ul>
+            
+
+            
+            <div class="method-source-code" id="radio_button_group-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 468</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">radio_button_group</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>)
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-node">&quot;select_#{name}&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">radio_buttons_for</span>(<span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">radio_elem</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">radio_elem</span>.<span class="ruby-identifier">value</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">value</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">radio_elem</span>.<span class="ruby-identifier">select</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-node">&quot;#{name}_values&quot;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">result</span> = []
+    <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">radio_buttons_for</span>(<span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">radio_elem</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">radio_elem</span>.<span class="ruby-identifier">value</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-node">&quot;#{name}_selected?&quot;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">radio_buttons_for</span>(<span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">radio_elem</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-identifier">radio_elem</span>.<span class="ruby-identifier">value</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">radio_elem</span>.<span class="ruby-identifier">selected?</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-node">&quot;#{name}_elements&quot;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">radio_buttons_for</span>(<span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-node">&quot;#{name}?&quot;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">radio_buttons_for</span>(<span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span>).<span class="ruby-identifier">any?</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- radio_button_group-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Accessors.html#method-i-radio_group">radio_group</a>
+          </div>
+          
+
+          
+        </div><!-- radio_button_group-method -->
+
+      
+        <div id="radio_group-method" class="method-detail method-alias">
+          <a name="method-i-radio_group"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">radio_group</span><span
+              class="method-args">(name, identifier)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Accessors.html#method-i-radio_button_group">radio_button_group</a>
+          </div>
+          
+        </div><!-- radio_group-method -->
+
+      
+        <div id="select-method" class="method-detail method-alias">
+          <a name="method-i-select"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">select</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Accessors.html#method-i-select_list">select_list</a>
+          </div>
+          
+        </div><!-- select-method -->
+
+      
+        <div id="select_list-method" class="method-detail ">
+          <a name="method-i-select_list"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">select_list</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>adds five methods - one to select an item in a drop-down, another to fetch
+the currently selected item text, another to retrieve the select list
+element, another to check the drop down's existence and another to get all
+the available options to select from.</p>
+
+<p>@example</p>
+
+<pre>select_list(:state, :id =&gt; &quot;state&quot;)
+# will generate 'state', 'state=', 'state_element', 'state?', &quot;state_options&quot; methods</pre>
+
+<p>@param [Symbol] the name used for the generated methods @param [Hash]
+identifier how we find a select list.  You can use a multiple paramaters</p>
+
+<pre>by combining of any of the following except xpath.  The valid keys are:
+* :class =&gt; Watir and Selenium
+* :css =&gt; Selenium only
+* :id =&gt; Watir and Selenium
+* :index =&gt; Watir and Selenium
+* :name =&gt; Watir and Selenium
+* :text =&gt; Watir only
+* :value =&gt; Watir only
+* :xpath =&gt; Watir and Selenium
+* :label =&gt; Watir and Selenium</pre>
+
+<p>@param optional block to be invoked when element method is called</p>
+            
+
+            
+            <div class="method-source-code" id="select_list-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 315</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">select_list</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>={<span class="ruby-value">:index</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>}, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">standard_methods</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>, <span class="ruby-string">'select_list_for'</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-identifier">name</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">select_list_value_for</span> <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{name}_element&quot;</span>).<span class="ruby-identifier">value</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-node">&quot;#{name}=&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">select_list_value_set</span>(<span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span>, <span class="ruby-identifier">value</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{name}_element&quot;</span>).<span class="ruby-identifier">select</span>(<span class="ruby-identifier">value</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-node">&quot;#{name}_options&quot;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">element</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{name}_element&quot;</span>)
+    (<span class="ruby-identifier">element</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">element</span>.<span class="ruby-identifier">options</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">element</span>.<span class="ruby-identifier">options</span>.<span class="ruby-identifier">collect</span>(&amp;<span class="ruby-value">:text</span>) <span class="ruby-operator">:</span> []
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- select_list-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Accessors.html#method-i-select">select</a>
+          </div>
+          
+
+          
+        </div><!-- select_list-method -->
+
+      
+        <div id="span-method" class="method-detail ">
+          <a name="method-i-span"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">span</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>adds three methods - one to retrieve the text from a span, another to
+return the span element, and another to check the span's existence.</p>
+
+<p>@example</p>
+
+<pre>span(:alert, :id =&gt; 'alert')
+# will generate 'alert', 'alert_element', and 'alert?' methods</pre>
+
+<p>@param [Symbol] the name used for the generated methods @param [Hash]
+identifier how we find a span.  You can use a multiple paramaters</p>
+
+<pre>by combining of any of the following except xpath.  The valid keys are:
+* :class =&gt; Watir and Selenium
+* :css =&gt; Watir and Selenium
+* :id =&gt; Watir and Selenium
+* :index =&gt; Watir and Selenium
+* :name =&gt; Watir and Selenium
+* :text =&gt; Watir and Selenium
+* :title =&gt; Watir and Selenium
+* :xpath =&gt; Watir and Selenium</pre>
+
+<p>@param optional block to be invoked when element method is called</p>
+            
+
+            
+            <div class="method-source-code" id="span-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 579</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">span</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>={<span class="ruby-value">:index</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>}, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">standard_methods</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>, <span class="ruby-string">'span_for'</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-identifier">name</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">span_text_for</span> <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{name}_element&quot;</span>).<span class="ruby-identifier">text</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- span-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- span-method -->
+
+      
+        <div id="standard_methods-method" class="method-detail ">
+          <a name="method-i-standard_methods"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">standard_methods</span><span
+              class="method-args">(name, identifier, method, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="standard_methods-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 1245</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">standard_methods</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>, <span class="ruby-identifier">method</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-node">&quot;#{name}_element&quot;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">call_block</span>(&amp;<span class="ruby-identifier">block</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">method</span>, <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-node">&quot;#{name}?&quot;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">call_block</span>(&amp;<span class="ruby-identifier">block</span>).<span class="ruby-identifier">exists?</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">method</span>, <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span>).<span class="ruby-identifier">exists?</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- standard_methods-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- standard_methods-method -->
+
+      
+        <div id="svg-method" class="method-detail ">
+          <a name="method-i-svg"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">svg</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>adds two methods - one to retrieve a svg, and another to check the svg's
+existence.</p>
+
+<p>@example</p>
+
+<pre>svg(:circle, :id =&gt; 'circle')
+# will generate 'circle_element', and 'circle?' methods</pre>
+
+<p>@param [Symbol] the name used for the generated methods @param [Hash]
+identifier how we find a svg.  You can use a multiple paramaters</p>
+
+<pre>by combining of any of the following except xpath.  The valid keys are:
+* :class =&gt; Watir and Selenium
+* :css =&gt; Selenium only
+* :id =&gt; Watir and Selenium
+* :index =&gt; Watir and Selenium
+* :name =&gt; Watir and Selenium
+* :xpath =&gt; Watir and Selenium</pre>
+
+<p>@param optional block to be invoked when element method is called</p>
+            
+
+            
+            <div class="method-source-code" id="svg-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 1147</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">svg</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>={<span class="ruby-value">:index</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>}, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">standard_methods</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>, <span class="ruby-string">'svg_for'</span>, &amp;<span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- svg-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- svg-method -->
+
+      
+        <div id="table-method" class="method-detail ">
+          <a name="method-i-table"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">table</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>adds three methods - one to return the text for the table, one to  retrieve
+the table element, and another to check the table's existence.  The
+existence method does not work on Selenium so it should not be called.</p>
+
+<p>@example</p>
+
+<pre>table(:cart, :id =&gt; 'shopping_cart')
+# will generate a 'cart', 'cart_element' and 'cart?' method</pre>
+
+<p>@param [Symbol] the name used for the generated methods @param [Hash]
+identifier how we find a table.  You can use a multiple paramaters</p>
+
+<pre>by combining of any of the following except xpath.  The valid keys are:
+* :class =&gt; Watir and Selenium
+* :css =&gt; Selenium only
+* :id =&gt; Watir and Selenium
+* :index =&gt; Watir and Selenium
+* :name =&gt; Watir and Selenium
+* :xpath =&gt; Watir and Selenium</pre>
+
+<p>@param optional block to be invoked when element method is called</p>
+            
+
+            
+            <div class="method-source-code" id="table-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 608</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">table</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>={<span class="ruby-value">:index</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>}, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">standard_methods</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>, <span class="ruby-string">'table_for'</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-identifier">name</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">table_text_for</span> <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{name}_element&quot;</span>).<span class="ruby-identifier">text</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- table-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- table-method -->
+
+      
+        <div id="td-method" class="method-detail method-alias">
+          <a name="method-i-td"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">td</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Accessors.html#method-i-cell">cell</a>
+          </div>
+          
+        </div><!-- td-method -->
+
+      
+        <div id="text_area-method" class="method-detail ">
+          <a name="method-i-text_area"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">text_area</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>adds four methods to the page object - one to set text in a text area,
+another to retrieve text from a text area, another to return the text area
+element, and another to check the text area's existence.</p>
+
+<p>@example</p>
+
+<pre>text_area(:address, :id =&gt; &quot;address&quot;)
+# will generate 'address', 'address=', 'address_element',
+# 'address?' methods</pre>
+
+<p>@param  [String] the name used for the generated methods @param [Hash]
+identifier how we find a text area.  You can use a multiple paramaters</p>
+
+<pre>by combining of any of the following except xpath.  The valid keys are:
+* :class =&gt; Watir and Selenium
+* :css =&gt; Selenium only
+* :id =&gt; Watir and Selenium
+* :index =&gt; Watir and Selenium
+* :name =&gt; Watir and Selenium
+* :xpath =&gt; Watir and Selenium
+* :label =&gt; Watir and Selenium</pre>
+
+<p>@param optional block to be invoked when element method is called</p>
+            
+
+            
+            <div class="method-source-code" id="text_area-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 277</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">text_area</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>={<span class="ruby-value">:index</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>}, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">standard_methods</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>, <span class="ruby-string">'text_area_for'</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-identifier">name</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">text_area_value_for</span> <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{name}_element&quot;</span>).<span class="ruby-identifier">value</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-node">&quot;#{name}=&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">text_area_value_set</span>(<span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span>, <span class="ruby-identifier">value</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{name}_element&quot;</span>).<span class="ruby-identifier">value</span> = <span class="ruby-identifier">value</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- text_area-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Accessors.html#method-i-textarea">textarea</a>
+          </div>
+          
+
+          
+        </div><!-- text_area-method -->
+
+      
+        <div id="text_field-method" class="method-detail ">
+          <a name="method-i-text_field"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">text_field</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>adds four methods to the page object - one to set text in a text field,
+another to retrieve text from a text field, another to return the text
+field element, another to check the text field's existence.</p>
+
+<p>@example</p>
+
+<pre>text_field(:first_name, :id =&gt; &quot;first_name&quot;)
+# will generate 'first_name', 'first_name=', 'first_name_element',
+# 'first_name?' methods</pre>
+
+<p>@param  [String] the name used for the generated methods @param [Hash]
+identifier how we find a text field.  You can use a multiple paramaters</p>
+
+<pre>by combining of any of the following except xpath.  The valid keys are:
+* :class =&gt; Watir and Selenium
+* :css =&gt; Selenium only
+* :id =&gt; Watir and Selenium
+* :index =&gt; Watir and Selenium
+* :label =&gt; Watir and Selenium
+* :name =&gt; Watir and Selenium
+* :text =&gt; Watir and Selenium
+* :title =&gt; Watir and Selenium
+* :value =&gt; Watir only
+* :xpath =&gt; Watir and Selenium</pre>
+
+<p>@param optional block to be invoked when element method is called</p>
+            
+
+            
+            <div class="method-source-code" id="text_field-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 212</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">text_field</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>={<span class="ruby-value">:index</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>}, &amp;<span class="ruby-identifier">block</span>) 
+  <span class="ruby-identifier">standard_methods</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>, <span class="ruby-string">'text_field_for'</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-identifier">name</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">text_field_value_for</span> <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{name}_element&quot;</span>).<span class="ruby-identifier">value</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-node">&quot;#{name}=&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">text_field_value_set</span>(<span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span>, <span class="ruby-identifier">value</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{name}_element&quot;</span>).<span class="ruby-identifier">value</span> = <span class="ruby-identifier">value</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- text_field-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- text_field-method -->
+
+      
+        <div id="textarea-method" class="method-detail method-alias">
+          <a name="method-i-textarea"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">textarea</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Accessors.html#method-i-text_area">text_area</a>
+          </div>
+          
+        </div><!-- textarea-method -->
+
+      
+        <div id="ul-method" class="method-detail method-alias">
+          <a name="method-i-ul"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ul</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Accessors.html#method-i-unordered_list">unordered_list</a>
+          </div>
+          
+        </div><!-- ul-method -->
+
+      
+        <div id="unordered_list-method" class="method-detail ">
+          <a name="method-i-unordered_list"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">unordered_list</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>adds three methods - one to return the text within the unorderd list, one
+to retrieve the unordered list element, and another to check it's
+existence.</p>
+
+<p>@example</p>
+
+<pre>unordered_list(:menu, :id =&gt; 'main_menu')
+# will generate 'menu', 'menu_element' and 'menu?' methods</pre>
+
+<p>@param [Symbol] the name used for the generated methods @param [Hash]
+identifier how we find an unordered list.  You can use a multiple
+paramaters</p>
+
+<pre>by combining of any of the following except xpath.  The valid keys are:
+* :class =&gt; Watir and Selenium
+* :css =&gt; Selenium only
+* :id =&gt; Watir and Selenium
+* :index =&gt; Watir and Selenium
+* :name =&gt; Watir and Selenium
+* :xpath =&gt; Watir and Selenium</pre>
+
+<p>@param optional block to be invoked when element method is called</p>
+            
+
+            
+            <div class="method-source-code" id="unordered_list-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 746</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unordered_list</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>={<span class="ruby-value">:index</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>}, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">standard_methods</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>, <span class="ruby-string">'unordered_list_for'</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-identifier">name</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">unordered_list_text_for</span> <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{name}_element&quot;</span>).<span class="ruby-identifier">text</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- unordered_list-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Accessors.html#method-i-ul">ul</a>
+          </div>
+          
+
+          
+        </div><!-- unordered_list-method -->
+
+      
+        <div id="video-method" class="method-detail ">
+          <a name="method-i-video"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">video</span><span
+              class="method-args">(name, identifier={:index => 0}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>adds two methods - one to return the video element and another to check the
+video's existence.</p>
+
+<p>@example</p>
+
+<pre>video(:movie, :id =&gt; 'video_id')
+# will generate 'movie_element' and 'movie?' methods</pre>
+
+<p>@param [Symbol] the name used for the generated methods @param [Hash]
+identifier how we find a video element.  You can use a multiple paramaters</p>
+
+<pre>by combining of any of the following except xpath.  The valid keys are:
+* :class =&gt; Watir and Selenium
+* :css =&gt; Watir and Selenium
+* :id =&gt; Watir and Selenium
+* :index =&gt; Watir and Selenium
+* :name =&gt; Watir and Selenium
+* :xpath =&gt; Watir and Selenium</pre>
+
+<p>@param optional block to be invoked when element method is called</p>
+            
+
+            
+            <div class="method-source-code" id="video-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 1124</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">video</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>={<span class="ruby-value">:index</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>}, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">standard_methods</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">identifier</span>, <span class="ruby-string">'video_for'</span>, &amp;<span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- video-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- video-method -->
+
+      
+        <div id="wait_for_expected_title-method" class="method-detail ">
+          <a name="method-i-wait_for_expected_title"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">wait_for_expected_title</span><span
+              class="method-args">(expected_title, timeout=::PageObject.default_element_wait)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Creates a method that waits the <a
+href="Accessors.html#method-i-expected_title">expected_title</a> of a page
+to match the actual. @param [String] <a
+href="Accessors.html#method-i-expected_title">expected_title</a> the
+literal expected title for the page @param [Regexp] <a
+href="Accessors.html#method-i-expected_title">expected_title</a> the
+expected title pattern for the page @param [optional, Integer] timeout
+default value is nil - do not wait @return [boolean] @raise An exception if
+<a href="Accessors.html#method-i-expected_title">expected_title</a> does
+not match actual title</p>
+
+<p>@example Specify 'Google' as the expected title of a page</p>
+
+<pre>expected_title &quot;Google&quot;
+page.has_expected_title?</pre>
+            
+
+            
+            <div class="method-source-code" id="wait_for_expected_title-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/accessors.rb, line 67</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">wait_for_expected_title</span>(<span class="ruby-identifier">expected_title</span>, <span class="ruby-identifier">timeout</span>=<span class="ruby-operator">::</span><span class="ruby-constant">PageObject</span>.<span class="ruby-identifier">default_element_wait</span>)
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-string">&quot;wait_for_expected_title?&quot;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">page_title</span> = <span class="ruby-identifier">title</span>
+    <span class="ruby-identifier">has_expected_title</span> = (<span class="ruby-identifier">expected_title</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">page_title</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">has_expected_title</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">timeout</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">wait_until</span>(<span class="ruby-identifier">timeout</span>, <span class="ruby-node">&quot;Expected title '#{expected_title}' instead of '#{page_title}'&quot;</span>) <span class="ruby-keyword">do</span> 
+        <span class="ruby-identifier">has_expected_title</span> = (<span class="ruby-identifier">expected_title</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">page_title</span>)
+        <span class="ruby-identifier">has_expected_title</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Expected title '#{expected_title}' instead of '#{page_title}'&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">has_expected_title</span>
+    <span class="ruby-identifier">has_expected_title</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- wait_for_expected_title-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- wait_for_expected_title-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

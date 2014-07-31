@@ -1,0 +1,1559 @@
+<?xml version="1.0" encoding="IBM437"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=IBM437" http-equiv="Content-Type" />
+
+  <title>Class: FFI::Pointer</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/ffi/pointer_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/ffi/pointer.rb">lib/ffi/pointer.rb</a></li>
+          
+            <li><a href="../ext/ffi_c/ffi_c.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="ext/ffi_c/ffi.c">ext/ffi_c/ffi.c</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">FFI::AbstractMemory</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-c-size">::size</a></li>
+          
+          <li><a href="#method-i-2B">#+</a></li>
+          
+          <li><a href="#method-i-3D-3D">#==</a></li>
+          
+          <li><a href="#method-i-address">#address</a></li>
+          
+          <li><a href="#method-i-autorelease-3D">#autorelease=</a></li>
+          
+          <li><a href="#method-i-autorelease-3F">#autorelease?</a></li>
+          
+          <li><a href="#method-i-free">#free</a></li>
+          
+          <li><a href="#method-i-initialize_copy">#initialize_copy</a></li>
+          
+          <li><a href="#method-i-inspect">#inspect</a></li>
+          
+          <li><a href="#method-i-null-3F">#null?</a></li>
+          
+          <li><a href="#method-i-order">#order</a></li>
+          
+          <li><a href="#method-i-read_array_of_type">#read_array_of_type</a></li>
+          
+          <li><a href="#method-i-read_string">#read_string</a></li>
+          
+          <li><a href="#method-i-read_string_length">#read_string_length</a></li>
+          
+          <li><a href="#method-i-read_string_to_null">#read_string_to_null</a></li>
+          
+          <li><a href="#method-i-slice">#slice</a></li>
+          
+          <li><a href="#method-i-to_i">#to_i</a></li>
+          
+          <li><a href="#method-i-to_s">#to_s</a></li>
+          
+          <li><a href="#method-i-type_size">#type_size</a></li>
+          
+          <li><a href="#method-i-write_array_of_type">#write_array_of_type</a></li>
+          
+          <li><a href="#method-i-write_string">#write_string</a></li>
+          
+          <li><a href="#method-i-write_string_length">#write_string_length</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/ChangeLog.html">ChangeLog</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/README.html">README</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/compile.html">compile</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/configure.html">configure</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/depcomp.html">depcomp</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/doc/stamp-vti.html">stamp-vti</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/install-sh.html">install-sh</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/libtool-version.html">libtool-version</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/mdate-sh.html">mdate-sh</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/missing.html">missing</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../FFI.html">FFI</a></li>
+        
+          <li><a href="../FFI/AutoPointer.html">FFI::AutoPointer</a></li>
+        
+          <li><a href="../FFI/AutoPointer/CallableReleaser.html">FFI::AutoPointer::CallableReleaser</a></li>
+        
+          <li><a href="../FFI/AutoPointer/DefaultReleaser.html">FFI::AutoPointer::DefaultReleaser</a></li>
+        
+          <li><a href="../FFI/AutoPointer/Releaser.html">FFI::AutoPointer::Releaser</a></li>
+        
+          <li><a href="../FFI/ConstGenerator.html">FFI::ConstGenerator</a></li>
+        
+          <li><a href="../FFI/ConstGenerator/Constant.html">FFI::ConstGenerator::Constant</a></li>
+        
+          <li><a href="../FFI/Enum.html">FFI::Enum</a></li>
+        
+          <li><a href="../FFI/Enums.html">FFI::Enums</a></li>
+        
+          <li><a href="../FFI/Function.html">FFI::Function</a></li>
+        
+          <li><a href="../FFI/FunctionType.html">FFI::FunctionType</a></li>
+        
+          <li><a href="../FFI/Generator.html">FFI::Generator</a></li>
+        
+          <li><a href="../FFI/Generator/Task.html">FFI::Generator::Task</a></li>
+        
+          <li><a href="../FFI/IO.html">FFI::IO</a></li>
+        
+          <li><a href="../FFI/LastError.html">FFI::LastError</a></li>
+        
+          <li><a href="../FFI/Library.html">FFI::Library</a></li>
+        
+          <li><a href="../FFI/ManagedStruct.html">FFI::ManagedStruct</a></li>
+        
+          <li><a href="../FFI/MemoryPointer.html">FFI::MemoryPointer</a></li>
+        
+          <li><a href="../FFI/NativeType.html">FFI::NativeType</a></li>
+        
+          <li><a href="../FFI/NotFoundError.html">FFI::NotFoundError</a></li>
+        
+          <li><a href="../FFI/Platform.html">FFI::Platform</a></li>
+        
+          <li><a href="../FFI/PlatformError.html">FFI::PlatformError</a></li>
+        
+          <li><a href="../FFI/Pointer.html">FFI::Pointer</a></li>
+        
+          <li><a href="../FFI/StrPtrConverter.html">FFI::StrPtrConverter</a></li>
+        
+          <li><a href="../FFI/Struct.html">FFI::Struct</a></li>
+        
+          <li><a href="../FFI/Struct/InlineArray.html">FFI::Struct::InlineArray</a></li>
+        
+          <li><a href="../FFI/Struct/ManagedStructConverter.html">FFI::Struct::ManagedStructConverter</a></li>
+        
+          <li><a href="../FFI/StructByReference.html">FFI::StructByReference</a></li>
+        
+          <li><a href="../FFI/StructByValue.html">FFI::StructByValue</a></li>
+        
+          <li><a href="../FFI/StructGenerator.html">FFI::StructGenerator</a></li>
+        
+          <li><a href="../FFI/StructGenerator/Field.html">FFI::StructGenerator::Field</a></li>
+        
+          <li><a href="../FFI/StructLayout.html">FFI::StructLayout</a></li>
+        
+          <li><a href="../FFI/StructLayout/Array.html">FFI::StructLayout::Array</a></li>
+        
+          <li><a href="../FFI/StructLayout/Enum.html">FFI::StructLayout::Enum</a></li>
+        
+          <li><a href="../FFI/StructLayout/Field.html">FFI::StructLayout::Field</a></li>
+        
+          <li><a href="../FFI/StructLayout/Function.html">FFI::StructLayout::Function</a></li>
+        
+          <li><a href="../FFI/StructLayout/InnerStruct.html">FFI::StructLayout::InnerStruct</a></li>
+        
+          <li><a href="../FFI/StructLayout/Mapped.html">FFI::StructLayout::Mapped</a></li>
+        
+          <li><a href="../FFI/StructLayout/Number.html">FFI::StructLayout::Number</a></li>
+        
+          <li><a href="../FFI/StructLayout/Pointer.html">FFI::StructLayout::Pointer</a></li>
+        
+          <li><a href="../FFI/StructLayout/String.html">FFI::StructLayout::String</a></li>
+        
+          <li><a href="../FFI/StructLayoutBuilder.html">FFI::StructLayoutBuilder</a></li>
+        
+          <li><a href="../FFI/Type.html">FFI::Type</a></li>
+        
+          <li><a href="../FFI/Type/Builtin.html">FFI::Type::Builtin</a></li>
+        
+          <li><a href="../FFI/TypesGenerator.html">FFI::TypesGenerator</a></li>
+        
+          <li><a href="../FFI/Union.html">FFI::Union</a></li>
+        
+          <li><a href="../FFI/VariadicInvoker.html">FFI::VariadicInvoker</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">FFI::Pointer</h1>
+
+    <div id="description" class="description">
+      
+<p><a href="Pointer.html">Pointer</a> class is used to manage C pointers with
+ease. A {Pointer} object is defined by his {<a
+href="Pointer.html#method-i-address">address</a>} (as a C pointer). It
+permits additions with an integer for pointer arithmetic.</p>
+
+<h2>Autorelease</h2>
+
+<p>A pointer object may autorelease his contents when freed (by default). This
+behaviour may be changed with {<a
+href="Pointer.html#method-i-autorelease-3D">autorelease=</a>} method.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="NULL">NULL</a></dt>
+          
+          <dd class="description"><p><a href="Pointer.html#NULL">NULL</a> pointer</p></dd>
+          
+        
+          <dt><a name="SIZE">SIZE</a></dt>
+          
+          <dd class="description"><p><a href="Pointer.html">Pointer</a> size</p></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(p1, p2 = v2)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@overload initialize(pointer)</p>
+
+<pre>@param [Pointer] pointer another pointer to initialize from
+Create a new pointer from another {Pointer}.</pre>
+
+<p>@overload initialize(type, address)</p>
+
+<pre>@param [Type] type type for pointer
+@param [Integer] address base address for pointer
+Create a new pointer from a {Type} and a base adresse</pre>
+
+<p>@return [self] A new instance of <a href="Pointer.html">Pointer</a>.</p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+static VALUE
+ptr_initialize(int argc, VALUE* argv, VALUE self)
+{
+    Pointer* p;
+    VALUE rbType = Qnil, rbAddress = Qnil;
+    int typeSize = 1;
+
+    Data_Get_Struct(self, Pointer, p);
+
+    switch (rb_scan_args(argc, argv, &quot;11&quot;, &amp;rbType, &amp;rbAddress)) {
+        case 1:
+            rbAddress = rbType;
+            typeSize = 1;
+            break;
+        case 2:
+            typeSize = rbffi_type_size(rbType);
+            break;
+        default:
+            rb_raise(rb_eArgError, &quot;Invalid arguments&quot;);
+    }
+
+    switch (TYPE(rbAddress)) {
+        case T_FIXNUM:
+        case T_BIGNUM:
+            p-&gt;memory.address = (void*) (uintptr_t) NUM2LL(rbAddress);
+            p-&gt;memory.size = LONG_MAX;
+            if (p-&gt;memory.address == NULL) {
+                p-&gt;memory.flags = 0;
+            }
+            break;
+
+        default:
+            if (rb_obj_is_kind_of(rbAddress, rbffi_PointerClass)) {
+                Pointer* orig;
+
+                p-&gt;rbParent = rbAddress;
+                Data_Get_Struct(rbAddress, Pointer, orig);
+                p-&gt;memory = orig-&gt;memory;
+            } else {
+                rb_raise(rb_eTypeError, &quot;wrong argument type, expected Integer or FFI::Pointer&quot;);
+            }
+            break;
+    }
+
+    p-&gt;memory.typeSize = typeSize;
+
+    return self;
+}</pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+        <div id="size-method" class="method-detail ">
+          <a name="method-c-size"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">size</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return the size of a pointer on the current platform, in bytes @return
+[Numeric]</p>
+            
+
+            
+            <div class="method-source-code" id="size-source">
+<pre>
+<span class="ruby-comment"># File lib/ffi/pointer.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">size</span>
+  <span class="ruby-constant">SIZE</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- size-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- size-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="2B-method" class="method-detail ">
+          <a name="method-i-2B"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">ptr + offset</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">@param [Numeric] offset</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">@return [Pointer]</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">Return a new {Pointer} from an existing pointer and an +offset+.</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="2B-source">
+<pre>
+static VALUE
+ptr_plus(VALUE self, VALUE offset)
+{
+    AbstractMemory* ptr;
+    long off = NUM2LONG(offset);
+
+    Data_Get_Struct(self, AbstractMemory, ptr);
+
+    return slice(self, off, ptr-&gt;size == LONG_MAX ? LONG_MAX : ptr-&gt;size - off);
+}</pre>
+            </div><!-- 2B-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 2B-method -->
+
+      
+        <div id="3D-3D-method" class="method-detail ">
+          <a name="method-i-3D-3D"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">ptr == other</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">@param [Pointer] other</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">Check equality between +self+ and +other+. Equality is tested on {#address}.</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="3D-3D-source">
+<pre>
+static VALUE
+ptr_equals(VALUE self, VALUE other)
+{
+    Pointer* ptr;
+    
+    Data_Get_Struct(self, Pointer, ptr);
+
+    if (NIL_P(other)) {
+        return ptr-&gt;memory.address == NULL ? Qtrue : Qfalse;
+    }
+
+    return ptr-&gt;memory.address == POINTER(other)-&gt;address ? Qtrue : Qfalse;
+}</pre>
+            </div><!-- 3D-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 3D-3D-method -->
+
+      
+        <div id="address-method" class="method-detail ">
+          <a name="method-i-address"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">address</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">@return [Numeric] pointer's base address</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">Return +self+'s base address (alias: #to_i).</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="address-source">
+<pre>
+static VALUE
+ptr_address(VALUE self)
+{
+    Pointer* ptr;
+    
+    Data_Get_Struct(self, Pointer, ptr);
+
+    return ULL2NUM((uintptr_t) ptr-&gt;memory.address);
+}</pre>
+            </div><!-- address-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Pointer.html#method-i-to_i">to_i</a>
+          </div>
+          
+
+          
+        </div><!-- address-method -->
+
+      
+        <div id="autorelease-3D-method" class="method-detail ">
+          <a name="method-i-autorelease-3D"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">autorelease = autorelease</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">@param [Boolean] autorelease</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">@return [Boolean] +autorelease+</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">Set +autorelease+ attribute. See also Autorelease section.</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="autorelease-3D-source">
+<pre>
+static VALUE
+ptr_autorelease(VALUE self, VALUE autorelease)
+{
+    Pointer* ptr;
+
+    Data_Get_Struct(self, Pointer, ptr);
+    ptr-&gt;autorelease = autorelease == Qtrue;
+
+    return autorelease;
+}</pre>
+            </div><!-- autorelease-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- autorelease-3D-method -->
+
+      
+        <div id="autorelease-3F-method" class="method-detail ">
+          <a name="method-i-autorelease-3F"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">autorelease?</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">@return [Boolean]</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">Get +autorelease+ attribute. See also Autorelease section.</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="autorelease-3F-source">
+<pre>
+static VALUE
+ptr_autorelease_p(VALUE self)
+{
+    Pointer* ptr;
+
+    Data_Get_Struct(self, Pointer, ptr);
+    
+    return ptr-&gt;autorelease ? Qtrue : Qfalse;
+}</pre>
+            </div><!-- autorelease-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- autorelease-3F-method -->
+
+      
+        <div id="free-method" class="method-detail ">
+          <a name="method-i-free"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">free</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">@return [self]</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">Free memory pointed by +self+.</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="free-source">
+<pre>
+static VALUE
+ptr_free(VALUE self)
+{
+    Pointer* ptr;
+
+    Data_Get_Struct(self, Pointer, ptr);
+
+    if (ptr-&gt;allocated) {
+        if (ptr-&gt;storage != NULL) {
+            xfree(ptr-&gt;storage);
+            ptr-&gt;storage = NULL;
+        }
+        ptr-&gt;allocated = false;
+
+    } else {
+        VALUE caller = rb_funcall(rb_funcall(Qnil, rb_intern(&quot;caller&quot;), 0), rb_intern(&quot;first&quot;), 0);
+        
+        rb_warn(&quot;calling free on non allocated pointer %s from %s&quot;, RSTRING_PTR(ptr_inspect(self)), RSTRING_PTR(rb_str_to_str(caller)));
+    }
+
+    return self;
+}</pre>
+            </div><!-- free-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- free-method -->
+
+      
+        <div id="initialize_copy-method" class="method-detail ">
+          <a name="method-i-initialize_copy"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">initialize_copy(other)</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">@param [Pointer] other source for cloning or dupping</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">@return [self]</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">@raise {RuntimeError} if +other+ is an unbounded memory area, or is unreable/unwritable</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">@raise {NoMemError} if failed to allocate memory for new object</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">DO NOT CALL THIS METHOD.</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>This method is internally used by dup and clone. Memory contents is copied
+from <tt>other</tt>.</p>
+            
+
+            
+            <div class="method-source-code" id="initialize_copy-source">
+<pre>
+static VALUE
+ptr_initialize_copy(VALUE self, VALUE other)
+{
+    AbstractMemory* src;
+    Pointer* dst;
+    
+    Data_Get_Struct(self, Pointer, dst);
+    src = POINTER(other);
+    if (src-&gt;size == LONG_MAX) {
+        rb_raise(rb_eRuntimeError, &quot;cannot duplicate unbounded memory area&quot;);
+        return Qnil;
+    }
+    
+    if ((dst-&gt;memory.flags &amp; (MEM_RD | MEM_WR)) != (MEM_RD | MEM_WR)) {
+        rb_raise(rb_eRuntimeError, &quot;cannot duplicate unreadable/unwritable memory area&quot;);
+        return Qnil;
+    }
+
+    if (dst-&gt;storage != NULL) {
+        xfree(dst-&gt;storage);
+        dst-&gt;storage = NULL;
+    }
+
+    dst-&gt;storage = xmalloc(src-&gt;size + 7);
+    if (dst-&gt;storage == NULL) {
+        rb_raise(rb_eNoMemError, &quot;failed to allocate memory size=%lu bytes&quot;, src-&gt;size);
+        return Qnil;
+    }
+    
+    dst-&gt;allocated = true;
+    dst-&gt;autorelease = true;
+    dst-&gt;memory.address = (void *) (((uintptr_t) dst-&gt;storage + 0x7) &amp; (uintptr_t) ~0x7UL);
+    dst-&gt;memory.size = src-&gt;size;
+    dst-&gt;memory.typeSize = src-&gt;typeSize;
+    
+    /* finally, copy the actual memory contents */
+    memcpy(dst-&gt;memory.address, src-&gt;address, src-&gt;size);
+
+    return self;
+}</pre>
+            </div><!-- initialize_copy-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- initialize_copy-method -->
+
+      
+        <div id="inspect-method" class="method-detail ">
+          <a name="method-i-inspect"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">inspect</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">@return [String]</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">Inspect pointer object.</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="inspect-source">
+<pre>
+static VALUE
+ptr_inspect(VALUE self)
+{
+    char buf[100];
+    Pointer* ptr;
+    
+    Data_Get_Struct(self, Pointer, ptr);
+
+    if (ptr-&gt;memory.size != LONG_MAX) {
+        snprintf(buf, sizeof(buf), &quot;#&lt;%s address=%p size=%lu&gt;&quot;,
+                rb_obj_classname(self), ptr-&gt;memory.address, ptr-&gt;memory.size);
+    } else {
+        snprintf(buf, sizeof(buf), &quot;#&lt;%s address=%p&gt;&quot;, rb_obj_classname(self), ptr-&gt;memory.address);
+    }
+
+    return rb_str_new2(buf);
+}</pre>
+            </div><!-- inspect-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- inspect-method -->
+
+      
+        <div id="null-3F-method" class="method-detail ">
+          <a name="method-i-null-3F"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">null?</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">@return [Boolean]</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">Return +true+ if +self+ is a {NULL} pointer.</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="null-3F-source">
+<pre>
+static VALUE
+ptr_null_p(VALUE self)
+{
+    Pointer* ptr;
+
+    Data_Get_Struct(self, Pointer, ptr);
+
+    return ptr-&gt;memory.address == NULL ? Qtrue : Qfalse;
+}</pre>
+            </div><!-- null-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- null-3F-method -->
+
+      
+        <div id="order-method" class="method-detail ">
+          <a name="method-i-order"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">order</span><span
+              class="method-args">(p1)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get or set <tt>self</tt>'s endianness @overload order</p>
+
+<pre>@return [:big, :little] endianness of +self+</pre>
+
+<p>@overload order(order)</p>
+
+<pre>@param  [Symbol] order endianness to set (+:little+, +:big+ or +:network+). +:big+ and +:network+ 
+ are synonymous.
+@return [self]</pre>
+            
+
+            
+            <div class="method-source-code" id="order-source">
+<pre>
+static VALUE
+ptr_order(int argc, VALUE* argv, VALUE self)
+{
+    Pointer* ptr;
+
+    Data_Get_Struct(self, Pointer, ptr);
+    if (argc == 0) {
+        int order = (ptr-&gt;memory.flags &amp; MEM_SWAP) == 0 ? BYTE_ORDER : SWAPPED_ORDER;
+        return order == BIG_ENDIAN ? ID2SYM(rb_intern(&quot;big&quot;)) : ID2SYM(rb_intern(&quot;little&quot;));
+    } else {
+        VALUE rbOrder = Qnil;
+        int order = BYTE_ORDER;
+
+        if (rb_scan_args(argc, argv, &quot;1&quot;, &amp;rbOrder) &lt; 1) {
+            rb_raise(rb_eArgError, &quot;need byte order&quot;);
+        }
+        if (SYMBOL_P(rbOrder)) {
+            ID id = SYM2ID(rbOrder);
+            if (id == rb_intern(&quot;little&quot;)) {
+                order = LITTLE_ENDIAN;
+
+            } else if (id == rb_intern(&quot;big&quot;) || id == rb_intern(&quot;network&quot;)) {
+                order = BIG_ENDIAN;
+            }
+        }
+        if (order != BYTE_ORDER) {
+            Pointer* p2;
+            VALUE retval = slice(self, 0, ptr-&gt;memory.size);
+
+            Data_Get_Struct(retval, Pointer, p2);
+            p2-&gt;memory.flags |= MEM_SWAP;
+            return retval;
+        }
+
+        return self;
+    }
+}</pre>
+            </div><!-- order-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- order-method -->
+
+      
+        <div id="read_array_of_type-method" class="method-detail ">
+          <a name="method-i-read_array_of_type"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">read_array_of_type</span><span
+              class="method-args">(type, reader, length)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@param [Type] type type of data to read from pointer's contents @param
+[Symbol] reader method to send to <tt>self</tt> to read <tt>type</tt>
+@param [Numeric] length @return [Array] Read an array of <tt>type</tt> of
+length <tt>length</tt>. @example</p>
+
+<pre>ptr.read_array_of_type(TYPE_UINT8, :get_uint8, 4) # -&gt; [1, 2, 3, 4]</pre>
+            
+
+            
+            <div class="method-source-code" id="read_array_of_type-source">
+<pre>
+<span class="ruby-comment"># File lib/ffi/pointer.rb, line 106</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">read_array_of_type</span>(<span class="ruby-identifier">type</span>, <span class="ruby-identifier">reader</span>, <span class="ruby-identifier">length</span>)
+  <span class="ruby-identifier">ary</span> = []
+  <span class="ruby-identifier">size</span> = <span class="ruby-constant">FFI</span>.<span class="ruby-identifier">type_size</span>(<span class="ruby-identifier">type</span>)
+  <span class="ruby-identifier">tmp</span> = <span class="ruby-keyword">self</span>
+  <span class="ruby-identifier">length</span>.<span class="ruby-identifier">times</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">ary</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">tmp</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">reader</span>)
+    <span class="ruby-identifier">tmp</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">size</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">j</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">length</span><span class="ruby-operator">-</span><span class="ruby-value">1</span> <span class="ruby-comment"># avoid OOB</span>
+  }
+  <span class="ruby-identifier">ary</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- read_array_of_type-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- read_array_of_type-method -->
+
+      
+        <div id="read_string-method" class="method-detail ">
+          <a name="method-i-read_string"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">read_string</span><span
+              class="method-args">(len=nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@param [nil,Numeric] len length of string to return @return [String] Read
+pointer's contents as a string, or the first <tt>len</tt> bytes of the 
+equivalent string if <tt>len</tt> is not <tt>nil</tt>.</p>
+            
+
+            
+            <div class="method-source-code" id="read_string-source">
+<pre>
+<span class="ruby-comment"># File lib/ffi/pointer.rb, line 50</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">read_string</span>(<span class="ruby-identifier">len</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">len</span>
+    <span class="ruby-identifier">get_bytes</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">len</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">get_string</span>(<span class="ruby-value">0</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- read_string-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- read_string-method -->
+
+      
+        <div id="read_string_length-method" class="method-detail ">
+          <a name="method-i-read_string_length"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">read_string_length</span><span
+              class="method-args">(len)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@param [Numeric] len length of string to return @return [String] Read the
+first <tt>len</tt> bytes of pointer's contents as a string.</p>
+
+<p>Same as:</p>
+
+<pre>ptr.read_string(len)  # with len not nil</pre>
+            
+
+            
+            <div class="method-source-code" id="read_string_length-source">
+<pre>
+<span class="ruby-comment"># File lib/ffi/pointer.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">read_string_length</span>(<span class="ruby-identifier">len</span>)
+  <span class="ruby-identifier">get_bytes</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">len</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- read_string_length-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- read_string_length-method -->
+
+      
+        <div id="read_string_to_null-method" class="method-detail ">
+          <a name="method-i-read_string_to_null"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">read_string_to_null</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@return [String] Read pointer's contents as a string.</p>
+
+<p>Same as:</p>
+
+<pre>ptr.read_string  # with no len</pre>
+            
+
+            
+            <div class="method-source-code" id="read_string_to_null-source">
+<pre>
+<span class="ruby-comment"># File lib/ffi/pointer.rb, line 73</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">read_string_to_null</span>
+  <span class="ruby-identifier">get_string</span>(<span class="ruby-value">0</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- read_string_to_null-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- read_string_to_null-method -->
+
+      
+        <div id="slice-method" class="method-detail ">
+          <a name="method-i-slice"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">slice(offset, length)</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">@param [Numeric] offset</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">@param [Numeric] length</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">@return [Pointer]</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">Return a new {Pointer} from an existing one. This pointer points on same contents</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">from +offset+ for a length +length+.</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="slice-source">
+<pre>
+static VALUE
+ptr_slice(VALUE self, VALUE rbOffset, VALUE rbLength)
+{
+    return slice(self, NUM2LONG(rbOffset), NUM2LONG(rbLength));
+}</pre>
+            </div><!-- slice-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- slice-method -->
+
+      
+        <div id="to_i-method" class="method-detail method-alias">
+          <a name="method-i-to_i"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">to_i</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Pointer.html#method-i-address">address</a>
+          </div>
+          
+        </div><!-- to_i-method -->
+
+      
+        <div id="to_s-method" class="method-detail ">
+          <a name="method-i-to_s"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">inspect</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">@return [String]</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">Inspect pointer object.</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="to_s-source">
+<pre>
+static VALUE
+ptr_inspect(VALUE self)
+{
+    char buf[100];
+    Pointer* ptr;
+    
+    Data_Get_Struct(self, Pointer, ptr);
+
+    if (ptr-&gt;memory.size != LONG_MAX) {
+        snprintf(buf, sizeof(buf), &quot;#&lt;%s address=%p size=%lu&gt;&quot;,
+                rb_obj_classname(self), ptr-&gt;memory.address, ptr-&gt;memory.size);
+    } else {
+        snprintf(buf, sizeof(buf), &quot;#&lt;%s address=%p&gt;&quot;, rb_obj_classname(self), ptr-&gt;memory.address);
+    }
+
+    return rb_str_new2(buf);
+}</pre>
+            </div><!-- to_s-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- to_s-method -->
+
+      
+        <div id="type_size-method" class="method-detail ">
+          <a name="method-i-type_size"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">type_size</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="type_size-source">
+<pre>
+static VALUE
+ptr_type_size(VALUE self)
+{
+    Pointer* ptr;
+
+    Data_Get_Struct(self, Pointer, ptr);
+    
+    return INT2NUM(ptr-&gt;memory.typeSize);
+}</pre>
+            </div><!-- type_size-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- type_size-method -->
+
+      
+        <div id="write_array_of_type-method" class="method-detail ">
+          <a name="method-i-write_array_of_type"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">write_array_of_type</span><span
+              class="method-args">(type, writer, ary)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@param [Type] type type of data to write to pointer's contents @param
+[Symbol] writer method to send to <tt>self</tt> to write <tt>type</tt>
+@param [Array] ary @return [self] Write <tt>ary</tt> in pointer's contents
+as <tt>type</tt>. @example</p>
+
+<pre>ptr.write_array_of_type(TYPE_UINT8, :put_uint8, [1, 2, 3 ,4])</pre>
+            
+
+            
+            <div class="method-source-code" id="write_array_of_type-source">
+<pre>
+<span class="ruby-comment"># File lib/ffi/pointer.rb, line 124</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">write_array_of_type</span>(<span class="ruby-identifier">type</span>, <span class="ruby-identifier">writer</span>, <span class="ruby-identifier">ary</span>)
+  <span class="ruby-identifier">size</span> = <span class="ruby-constant">FFI</span>.<span class="ruby-identifier">type_size</span>(<span class="ruby-identifier">type</span>)
+  <span class="ruby-identifier">tmp</span> = <span class="ruby-keyword">self</span>
+  <span class="ruby-identifier">ary</span>.<span class="ruby-identifier">each_with_index</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span>, <span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">tmp</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">writer</span>, <span class="ruby-identifier">i</span>)
+    <span class="ruby-identifier">tmp</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">size</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">j</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">ary</span>.<span class="ruby-identifier">length</span><span class="ruby-operator">-</span><span class="ruby-value">1</span> <span class="ruby-comment"># avoid OOB</span>
+  }
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- write_array_of_type-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- write_array_of_type-method -->
+
+      
+        <div id="write_string-method" class="method-detail ">
+          <a name="method-i-write_string"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">write_string</span><span
+              class="method-args">(str, len=nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@param [String] str string to write @param [Numeric] len length of string
+to return @return [self] Write <tt>str</tt> in pointer's contents, or first
+<tt>len</tt> bytes if  <tt>len</tt> is not <tt>nil</tt>.</p>
+            
+
+            
+            <div class="method-source-code" id="write_string-source">
+<pre>
+<span class="ruby-comment"># File lib/ffi/pointer.rb, line 93</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">write_string</span>(<span class="ruby-identifier">str</span>, <span class="ruby-identifier">len</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">len</span> = <span class="ruby-identifier">str</span>.<span class="ruby-identifier">bytesize</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">len</span>
+  <span class="ruby-comment"># Write the string data without NUL termination</span>
+  <span class="ruby-identifier">put_bytes</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">str</span>, <span class="ruby-value">0</span>, <span class="ruby-identifier">len</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- write_string-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- write_string-method -->
+
+      
+        <div id="write_string_length-method" class="method-detail ">
+          <a name="method-i-write_string_length"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">write_string_length</span><span
+              class="method-args">(str, len)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@param [String] str string to write @param [Numeric] len length of string
+to return @return [self] Write <tt>len</tt> first bytes of <tt>str</tt> in
+pointer's contents.</p>
+
+<p>Same as:</p>
+
+<pre>ptr.write_string(str, len)   # with len not nil</pre>
+            
+
+            
+            <div class="method-source-code" id="write_string_length-source">
+<pre>
+<span class="ruby-comment"># File lib/ffi/pointer.rb, line 84</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">write_string_length</span>(<span class="ruby-identifier">str</span>, <span class="ruby-identifier">len</span>)
+  <span class="ruby-identifier">put_bytes</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">str</span>, <span class="ruby-value">0</span>, <span class="ruby-identifier">len</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- write_string_length-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- write_string_length-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

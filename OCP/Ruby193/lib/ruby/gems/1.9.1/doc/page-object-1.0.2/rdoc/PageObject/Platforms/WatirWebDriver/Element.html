@@ -1,0 +1,1207 @@
+<?xml version="1.0" encoding="IBM437"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=IBM437" http-equiv="Content-Type" />
+
+  <title>Module: PageObject::Platforms::WatirWebDriver::Element</title>
+
+  <link rel="stylesheet" href="../../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../../index.html">Home</a>
+          <a href="../../../index.html#classes">Classes</a>
+          <a href="../../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../../lib/page-object/platforms/watir_webdriver/element_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/platforms/watir_webdriver/element.rb">lib/page-object/platforms/watir_webdriver/element.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-3D-3D">#==</a></li>
+          
+          <li><a href="#method-i-attribute">#attribute</a></li>
+          
+          <li><a href="#method-i-clear">#clear</a></li>
+          
+          <li><a href="#method-i-double_click">#double_click</a></li>
+          
+          <li><a href="#method-i-exists-3F">#exists?</a></li>
+          
+          <li><a href="#method-i-fire_event">#fire_event</a></li>
+          
+          <li><a href="#method-i-flash">#flash</a></li>
+          
+          <li><a href="#method-i-focus">#focus</a></li>
+          
+          <li><a href="#method-i-hover">#hover</a></li>
+          
+          <li><a href="#method-i-html">#html</a></li>
+          
+          <li><a href="#method-i-id">#id</a></li>
+          
+          <li><a href="#method-i-parent">#parent</a></li>
+          
+          <li><a href="#method-i-scroll_into_view">#scroll_into_view</a></li>
+          
+          <li><a href="#method-i-select_text">#select_text</a></li>
+          
+          <li><a href="#method-i-send_keys">#send_keys</a></li>
+          
+          <li><a href="#method-i-tag_name">#tag_name</a></li>
+          
+          <li><a href="#method-i-text">#text</a></li>
+          
+          <li><a href="#method-i-value">#value</a></li>
+          
+          <li><a href="#method-i-visible-3F">#visible?</a></li>
+          
+          <li><a href="#method-i-wait_until">#wait_until</a></li>
+          
+          <li><a href="#method-i-when_not_present">#when_not_present</a></li>
+          
+          <li><a href="#method-i-when_not_visible">#when_not_visible</a></li>
+          
+          <li><a href="#method-i-when_present">#when_present</a></li>
+          
+          <li><a href="#method-i-when_visible">#when_visible</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../../PageObject.html">PageObject</a></li>
+        
+          <li><a href="../../../PageObject/Accessors.html">PageObject::Accessors</a></li>
+        
+          <li><a href="../../../PageObject/ElementLocators.html">PageObject::ElementLocators</a></li>
+        
+          <li><a href="../../../PageObject/Elements.html">PageObject::Elements</a></li>
+        
+          <li><a href="../../../PageObject/Elements/Area.html">PageObject::Elements::Area</a></li>
+        
+          <li><a href="../../../PageObject/Elements/Audio.html">PageObject::Elements::Audio</a></li>
+        
+          <li><a href="../../../PageObject/Elements/Button.html">PageObject::Elements::Button</a></li>
+        
+          <li><a href="../../../PageObject/Elements/Canvas.html">PageObject::Elements::Canvas</a></li>
+        
+          <li><a href="../../../PageObject/Elements/CheckBox.html">PageObject::Elements::CheckBox</a></li>
+        
+          <li><a href="../../../PageObject/Elements/Div.html">PageObject::Elements::Div</a></li>
+        
+          <li><a href="../../../PageObject/Elements/Element.html">PageObject::Elements::Element</a></li>
+        
+          <li><a href="../../../PageObject/Elements/FileField.html">PageObject::Elements::FileField</a></li>
+        
+          <li><a href="../../../PageObject/Elements/Form.html">PageObject::Elements::Form</a></li>
+        
+          <li><a href="../../../PageObject/Elements/Heading.html">PageObject::Elements::Heading</a></li>
+        
+          <li><a href="../../../PageObject/Elements/HiddenField.html">PageObject::Elements::HiddenField</a></li>
+        
+          <li><a href="../../../PageObject/Elements/Image.html">PageObject::Elements::Image</a></li>
+        
+          <li><a href="../../../PageObject/Elements/Label.html">PageObject::Elements::Label</a></li>
+        
+          <li><a href="../../../PageObject/Elements/Link.html">PageObject::Elements::Link</a></li>
+        
+          <li><a href="../../../PageObject/Elements/ListItem.html">PageObject::Elements::ListItem</a></li>
+        
+          <li><a href="../../../PageObject/Elements/Media.html">PageObject::Elements::Media</a></li>
+        
+          <li><a href="../../../PageObject/Elements/Option.html">PageObject::Elements::Option</a></li>
+        
+          <li><a href="../../../PageObject/Elements/OrderedList.html">PageObject::Elements::OrderedList</a></li>
+        
+          <li><a href="../../../PageObject/Elements/Paragraph.html">PageObject::Elements::Paragraph</a></li>
+        
+          <li><a href="../../../PageObject/Elements/RadioButton.html">PageObject::Elements::RadioButton</a></li>
+        
+          <li><a href="../../../PageObject/Elements/SelectList.html">PageObject::Elements::SelectList</a></li>
+        
+          <li><a href="../../../PageObject/Elements/Span.html">PageObject::Elements::Span</a></li>
+        
+          <li><a href="../../../PageObject/Elements/Table.html">PageObject::Elements::Table</a></li>
+        
+          <li><a href="../../../PageObject/Elements/TableCell.html">PageObject::Elements::TableCell</a></li>
+        
+          <li><a href="../../../PageObject/Elements/TableRow.html">PageObject::Elements::TableRow</a></li>
+        
+          <li><a href="../../../PageObject/Elements/TextArea.html">PageObject::Elements::TextArea</a></li>
+        
+          <li><a href="../../../PageObject/Elements/TextField.html">PageObject::Elements::TextField</a></li>
+        
+          <li><a href="../../../PageObject/Elements/UnorderedList.html">PageObject::Elements::UnorderedList</a></li>
+        
+          <li><a href="../../../PageObject/Elements/Video.html">PageObject::Elements::Video</a></li>
+        
+          <li><a href="../../../PageObject/IndexedProperties.html">PageObject::IndexedProperties</a></li>
+        
+          <li><a href="../../../PageObject/IndexedProperties/RowOfElements.html">PageObject::IndexedProperties::RowOfElements</a></li>
+        
+          <li><a href="../../../PageObject/IndexedProperties/TableOfElements.html">PageObject::IndexedProperties::TableOfElements</a></li>
+        
+          <li><a href="../../../PageObject/Javascript.html">PageObject::Javascript</a></li>
+        
+          <li><a href="../../../PageObject/Javascript/JQuery.html">PageObject::Javascript::JQuery</a></li>
+        
+          <li><a href="../../../PageObject/Javascript/Prototype.html">PageObject::Javascript::Prototype</a></li>
+        
+          <li><a href="../../../PageObject/Javascript/YUI.html">PageObject::Javascript::YUI</a></li>
+        
+          <li><a href="../../../PageObject/JavascriptFrameworkFacade.html">PageObject::JavascriptFrameworkFacade</a></li>
+        
+          <li><a href="../../../PageObject/LoadsPlatform.html">PageObject::LoadsPlatform</a></li>
+        
+          <li><a href="../../../PageObject/LocatorGenerator.html">PageObject::LocatorGenerator</a></li>
+        
+          <li><a href="../../../PageObject/NestedElements.html">PageObject::NestedElements</a></li>
+        
+          <li><a href="../../../PageObject/PageFactory.html">PageObject::PageFactory</a></li>
+        
+          <li><a href="../../../PageObject/PagePopulator.html">PageObject::PagePopulator</a></li>
+        
+          <li><a href="../../../PageObject/Platforms.html">PageObject::Platforms</a></li>
+        
+          <li><a href="../../../PageObject/Platforms/SeleniumWebDriver.html">PageObject::Platforms::SeleniumWebDriver</a></li>
+        
+          <li><a href="../../../PageObject/Platforms/SeleniumWebDriver/Button.html">PageObject::Platforms::SeleniumWebDriver::Button</a></li>
+        
+          <li><a href="../../../PageObject/Platforms/SeleniumWebDriver/CheckBox.html">PageObject::Platforms::SeleniumWebDriver::CheckBox</a></li>
+        
+          <li><a href="../../../PageObject/Platforms/SeleniumWebDriver/Element.html">PageObject::Platforms::SeleniumWebDriver::Element</a></li>
+        
+          <li><a href="../../../PageObject/Platforms/SeleniumWebDriver/FileField.html">PageObject::Platforms::SeleniumWebDriver::FileField</a></li>
+        
+          <li><a href="../../../PageObject/Platforms/SeleniumWebDriver/Form.html">PageObject::Platforms::SeleniumWebDriver::Form</a></li>
+        
+          <li><a href="../../../PageObject/Platforms/SeleniumWebDriver/Image.html">PageObject::Platforms::SeleniumWebDriver::Image</a></li>
+        
+          <li><a href="../../../PageObject/Platforms/SeleniumWebDriver/Link.html">PageObject::Platforms::SeleniumWebDriver::Link</a></li>
+        
+          <li><a href="../../../PageObject/Platforms/SeleniumWebDriver/OrderedList.html">PageObject::Platforms::SeleniumWebDriver::OrderedList</a></li>
+        
+          <li><a href="../../../PageObject/Platforms/SeleniumWebDriver/PageObject.html">PageObject::Platforms::SeleniumWebDriver::PageObject</a></li>
+        
+          <li><a href="../../../PageObject/Platforms/SeleniumWebDriver/RadioButton.html">PageObject::Platforms::SeleniumWebDriver::RadioButton</a></li>
+        
+          <li><a href="../../../PageObject/Platforms/SeleniumWebDriver/SelectList.html">PageObject::Platforms::SeleniumWebDriver::SelectList</a></li>
+        
+          <li><a href="../../../PageObject/Platforms/SeleniumWebDriver/SurrogateSeleniumElement.html">PageObject::Platforms::SeleniumWebDriver::SurrogateSeleniumElement</a></li>
+        
+          <li><a href="../../../PageObject/Platforms/SeleniumWebDriver/Table.html">PageObject::Platforms::SeleniumWebDriver::Table</a></li>
+        
+          <li><a href="../../../PageObject/Platforms/SeleniumWebDriver/TableRow.html">PageObject::Platforms::SeleniumWebDriver::TableRow</a></li>
+        
+          <li><a href="../../../PageObject/Platforms/SeleniumWebDriver/TextArea.html">PageObject::Platforms::SeleniumWebDriver::TextArea</a></li>
+        
+          <li><a href="../../../PageObject/Platforms/SeleniumWebDriver/TextField.html">PageObject::Platforms::SeleniumWebDriver::TextField</a></li>
+        
+          <li><a href="../../../PageObject/Platforms/SeleniumWebDriver/UnorderedList.html">PageObject::Platforms::SeleniumWebDriver::UnorderedList</a></li>
+        
+          <li><a href="../../../PageObject/Platforms/WatirWebDriver.html">PageObject::Platforms::WatirWebDriver</a></li>
+        
+          <li><a href="../../../PageObject/Platforms/WatirWebDriver/CheckBox.html">PageObject::Platforms::WatirWebDriver::CheckBox</a></li>
+        
+          <li><a href="../../../PageObject/Platforms/WatirWebDriver/Element.html">PageObject::Platforms::WatirWebDriver::Element</a></li>
+        
+          <li><a href="../../../PageObject/Platforms/WatirWebDriver/FileField.html">PageObject::Platforms::WatirWebDriver::FileField</a></li>
+        
+          <li><a href="../../../PageObject/Platforms/WatirWebDriver/Form.html">PageObject::Platforms::WatirWebDriver::Form</a></li>
+        
+          <li><a href="../../../PageObject/Platforms/WatirWebDriver/Image.html">PageObject::Platforms::WatirWebDriver::Image</a></li>
+        
+          <li><a href="../../../PageObject/Platforms/WatirWebDriver/Link.html">PageObject::Platforms::WatirWebDriver::Link</a></li>
+        
+          <li><a href="../../../PageObject/Platforms/WatirWebDriver/OrderedList.html">PageObject::Platforms::WatirWebDriver::OrderedList</a></li>
+        
+          <li><a href="../../../PageObject/Platforms/WatirWebDriver/PageObject.html">PageObject::Platforms::WatirWebDriver::PageObject</a></li>
+        
+          <li><a href="../../../PageObject/Platforms/WatirWebDriver/RadioButton.html">PageObject::Platforms::WatirWebDriver::RadioButton</a></li>
+        
+          <li><a href="../../../PageObject/Platforms/WatirWebDriver/SelectList.html">PageObject::Platforms::WatirWebDriver::SelectList</a></li>
+        
+          <li><a href="../../../PageObject/Platforms/WatirWebDriver/Table.html">PageObject::Platforms::WatirWebDriver::Table</a></li>
+        
+          <li><a href="../../../PageObject/Platforms/WatirWebDriver/TableRow.html">PageObject::Platforms::WatirWebDriver::TableRow</a></li>
+        
+          <li><a href="../../../PageObject/Platforms/WatirWebDriver/TextArea.html">PageObject::Platforms::WatirWebDriver::TextArea</a></li>
+        
+          <li><a href="../../../PageObject/Platforms/WatirWebDriver/TextField.html">PageObject::Platforms::WatirWebDriver::TextField</a></li>
+        
+          <li><a href="../../../PageObject/Platforms/WatirWebDriver/UnorderedList.html">PageObject::Platforms::WatirWebDriver::UnorderedList</a></li>
+        
+          <li><a href="../../../PageObject/Widgets.html">PageObject::Widgets</a></li>
+        
+          <li><a href="../../../String.html">String</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">PageObject::Platforms::WatirWebDriver::Element</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="3D-3D-method" class="method-detail ">
+          <a name="method-i-3D-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">==</span><span
+              class="method-args">(other)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>compare this element to another to determine if they are equal</p>
+            
+
+            
+            <div class="method-source-code" id="3D-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/platforms/watir_webdriver/element.rb, line 62</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">==</span>(<span class="ruby-identifier">other</span>)
+  <span class="ruby-identifier">element</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">element</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- 3D-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 3D-3D-method -->
+
+      
+        <div id="attribute-method" class="method-detail ">
+          <a name="method-i-attribute"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">attribute</span><span
+              class="method-args">(attribute_name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get the value of a the given attribute of the element.  Will return the
+current value, even if this has been modified after the page has been
+loaded. More exactly, this method will  return the value of the given
+attribute, unless that attribute is not present, in which case the value of
+the property with the same name is returned. If neither value is set, nil
+is returned. The "style" attribute is converted as best can be to a text
+representation with a trailing semi-colon. The following are deemed to be
+"boolean" attributes, and will return either "true" or "false":</p>
+
+<p>async, autofocus, autoplay, checked, compact, complete, controls, declare,
+defaultchecked, defaultselected, defer, disabled, draggable, ended,
+formnovalidate, hidden, indeterminate, iscontenteditable, ismap, itemscope,
+loop, multiple, muted, nohref, noresize, noshade, novalidate, nowrap, open,
+paused, pubdate, readonly, required, reversed, scoped, seamless, seeking,
+selected, spellcheck, truespeed, willvalidate</p>
+
+<p>Finally, the following commonly mis-capitalized attribute/property names
+are evaluated as expected:</p>
+
+<p>class, readonly</p>
+
+<p>@param [String]</p>
+
+<pre>attribute name</pre>
+
+<p>@return [<a href="../../../String.html">String</a>,nil]</p>
+
+<pre>attribute value</pre>
+            
+
+            
+            <div class="method-source-code" id="attribute-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/platforms/watir_webdriver/element.rb, line 105</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">attribute</span>(<span class="ruby-identifier">attribute_name</span>)
+  <span class="ruby-identifier">element</span>.<span class="ruby-identifier">attribute_value</span> <span class="ruby-identifier">attribute_name</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- attribute-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- attribute-method -->
+
+      
+        <div id="clear-method" class="method-detail ">
+          <a name="method-i-clear"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">clear</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>clear the contents of the element</p>
+            
+
+            
+            <div class="method-source-code" id="clear-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/platforms/watir_webdriver/element.rb, line 229</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">clear</span>
+  <span class="ruby-identifier">element</span>.<span class="ruby-identifier">clear</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- clear-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- clear-method -->
+
+      
+        <div id="double_click-method" class="method-detail ">
+          <a name="method-i-double_click"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">double_click</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>double click the element</p>
+            
+
+            
+            <div class="method-source-code" id="double_click-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/platforms/watir_webdriver/element.rb, line 126</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">double_click</span>
+  <span class="ruby-identifier">element</span>.<span class="ruby-identifier">double_click</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- double_click-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- double_click-method -->
+
+      
+        <div id="exists-3F-method" class="method-detail ">
+          <a name="method-i-exists-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">exists?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>return true if an element exists</p>
+            
+
+            
+            <div class="method-source-code" id="exists-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/platforms/watir_webdriver/element.rb, line 21</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">exists?</span>
+  <span class="ruby-identifier">element</span>.<span class="ruby-identifier">exists?</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- exists-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- exists-3F-method -->
+
+      
+        <div id="fire_event-method" class="method-detail ">
+          <a name="method-i-fire_event"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">fire_event</span><span
+              class="method-args">(event_name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Fire the provided event on the current element</p>
+            
+
+            
+            <div class="method-source-code" id="fire_event-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/platforms/watir_webdriver/element.rb, line 112</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">fire_event</span>(<span class="ruby-identifier">event_name</span>)
+  <span class="ruby-identifier">element</span>.<span class="ruby-identifier">fire_event</span>(<span class="ruby-identifier">event_name</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- fire_event-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- fire_event-method -->
+
+      
+        <div id="flash-method" class="method-detail ">
+          <a name="method-i-flash"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">flash</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>flash the element by temporarily changing the background color</p>
+            
+
+            
+            <div class="method-source-code" id="flash-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/platforms/watir_webdriver/element.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">flash</span>
+  <span class="ruby-identifier">element</span>.<span class="ruby-identifier">flash</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- flash-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- flash-method -->
+
+      
+        <div id="focus-method" class="method-detail ">
+          <a name="method-i-focus"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">focus</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Set the focus to the current element</p>
+            
+
+            
+            <div class="method-source-code" id="focus-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/platforms/watir_webdriver/element.rb, line 143</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">focus</span>
+  <span class="ruby-identifier">element</span>.<span class="ruby-identifier">focus</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- focus-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- focus-method -->
+
+      
+        <div id="hover-method" class="method-detail ">
+          <a name="method-i-hover"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">hover</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>hover over the element</p>
+            
+
+            
+            <div class="method-source-code" id="hover-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/platforms/watir_webdriver/element.rb, line 119</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">hover</span>
+  <span class="ruby-identifier">element</span>.<span class="ruby-identifier">hover</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- hover-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- hover-method -->
+
+      
+        <div id="html-method" class="method-detail ">
+          <a name="method-i-html"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">html</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get the html for the element</p>
+
+<p>@return [String]</p>
+            
+
+            
+            <div class="method-source-code" id="html-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/platforms/watir_webdriver/element.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">html</span>
+  <span class="ruby-identifier">element</span>.<span class="ruby-identifier">html</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- html-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- html-method -->
+
+      
+        <div id="id-method" class="method-detail ">
+          <a name="method-i-id"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">id</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>get the id of the element</p>
+            
+
+            
+            <div class="method-source-code" id="id-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/platforms/watir_webdriver/element.rb, line 236</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">id</span>
+  <span class="ruby-identifier">element</span>.<span class="ruby-identifier">id</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- id-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- id-method -->
+
+      
+        <div id="parent-method" class="method-detail ">
+          <a name="method-i-parent"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">parent</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>find the parent element</p>
+            
+
+            
+            <div class="method-source-code" id="parent-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/platforms/watir_webdriver/element.rb, line 133</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">parent</span>
+  <span class="ruby-identifier">parent</span> = <span class="ruby-identifier">element</span>.<span class="ruby-identifier">parent</span>
+  <span class="ruby-identifier">type</span> = <span class="ruby-identifier">element</span>.<span class="ruby-identifier">type</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">tag_name</span>.<span class="ruby-identifier">to_sym</span> <span class="ruby-operator">==</span> <span class="ruby-value">:input</span>
+  <span class="ruby-identifier">cls</span> = <span class="ruby-operator">::</span><span class="ruby-constant">PageObject</span><span class="ruby-operator">::</span><span class="ruby-constant">Elements</span>.<span class="ruby-identifier">element_class_for</span>(<span class="ruby-identifier">parent</span>.<span class="ruby-identifier">tag_name</span>, <span class="ruby-identifier">type</span>)
+  <span class="ruby-identifier">cls</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-value">:platform</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:watir_webdriver</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- parent-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- parent-method -->
+
+      
+        <div id="scroll_into_view-method" class="method-detail ">
+          <a name="method-i-scroll_into_view"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">scroll_into_view</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Scroll until the element is viewable</p>
+            
+
+            
+            <div class="method-source-code" id="scroll_into_view-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/platforms/watir_webdriver/element.rb, line 243</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">scroll_into_view</span>
+  <span class="ruby-identifier">element</span>.<span class="ruby-identifier">wd</span>.<span class="ruby-identifier">location_once_scrolled_into_view</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- scroll_into_view-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- scroll_into_view-method -->
+
+      
+        <div id="select_text-method" class="method-detail ">
+          <a name="method-i-select_text"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">select_text</span><span
+              class="method-args">(text)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Select the provided text</p>
+            
+
+            
+            <div class="method-source-code" id="select_text-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/platforms/watir_webdriver/element.rb, line 150</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">select_text</span>(<span class="ruby-identifier">text</span>)
+  <span class="ruby-identifier">element</span>.<span class="ruby-identifier">select_text</span> <span class="ruby-identifier">text</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- select_text-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- select_text-method -->
+
+      
+        <div id="send_keys-method" class="method-detail ">
+          <a name="method-i-send_keys"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">send_keys</span><span
+              class="method-args">(*args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Send keystrokes to this element</p>
+
+<p>@param [<a href="../../../String.html">String</a>, Symbol, Array]</p>
+
+<p>Examples:</p>
+
+<pre>element.send_keys &quot;foo&quot;                     #=&gt; value: 'foo'
+element.send_keys &quot;tet&quot;, :arrow_left, &quot;s&quot;   #=&gt; value: 'test'
+element.send_keys [:control, 'a'], :space   #=&gt; value: ' '</pre>
+
+<p>@see Selenium::WebDriver::Keys::KEYS</p>
+            
+
+            
+            <div class="method-source-code" id="send_keys-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/platforms/watir_webdriver/element.rb, line 222</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">send_keys</span>(*<span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">element</span>.<span class="ruby-identifier">send_keys</span>(*<span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- send_keys-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- send_keys-method -->
+
+      
+        <div id="tag_name-method" class="method-detail ">
+          <a name="method-i-tag_name"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">tag_name</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get the tag name of this element</p>
+
+<p>@return [String]</p>
+            
+
+            
+            <div class="method-source-code" id="tag_name-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/platforms/watir_webdriver/element.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">tag_name</span>
+  <span class="ruby-identifier">element</span>.<span class="ruby-identifier">tag_name</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- tag_name-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- tag_name-method -->
+
+      
+        <div id="text-method" class="method-detail ">
+          <a name="method-i-text"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">text</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get the text for the element</p>
+
+<p>@return [String]</p>
+            
+
+            
+            <div class="method-source-code" id="text-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/platforms/watir_webdriver/element.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">text</span>
+  <span class="ruby-identifier">element</span>.<span class="ruby-identifier">text</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- text-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- text-method -->
+
+      
+        <div id="value-method" class="method-detail ">
+          <a name="method-i-value"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">value</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get the value of this element</p>
+
+<p>@return [String]</p>
+            
+
+            
+            <div class="method-source-code" id="value-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/platforms/watir_webdriver/element.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">value</span>
+  <span class="ruby-identifier">element</span>.<span class="ruby-identifier">value</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- value-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- value-method -->
+
+      
+        <div id="visible-3F-method" class="method-detail ">
+          <a name="method-i-visible-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">visible?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>return true if an element is visible</p>
+            
+
+            
+            <div class="method-source-code" id="visible-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/platforms/watir_webdriver/element.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">visible?</span>
+  <span class="ruby-identifier">element</span>.<span class="ruby-identifier">present?</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- visible-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- visible-3F-method -->
+
+      
+        <div id="wait_until-method" class="method-detail ">
+          <a name="method-i-wait_until"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">wait_until</span><span
+              class="method-args">(timeout=::PageObject.default_element_wait, message=nil, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Waits until the block returns true</p>
+
+<p>@param [Integer] (defaults to: 5) seconds to wait before timing out @param
+[String] the message to display if the event timeouts @param the block to
+execute when the event occurrs</p>
+            
+
+            
+            <div class="method-source-code" id="wait_until-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/platforms/watir_webdriver/element.rb, line 205</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">wait_until</span>(<span class="ruby-identifier">timeout</span>=<span class="ruby-operator">::</span><span class="ruby-constant">PageObject</span>.<span class="ruby-identifier">default_element_wait</span>, <span class="ruby-identifier">message</span>=<span class="ruby-keyword">nil</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-constant">Object</span><span class="ruby-operator">::</span><span class="ruby-constant">Watir</span><span class="ruby-operator">::</span><span class="ruby-constant">Wait</span>.<span class="ruby-identifier">until</span>(<span class="ruby-identifier">timeout</span>, <span class="ruby-identifier">message</span>, &amp;<span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- wait_until-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- wait_until-method -->
+
+      
+        <div id="when_not_present-method" class="method-detail ">
+          <a name="method-i-when_not_present"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">when_not_present</span><span
+              class="method-args">(timeout=::PageObject.default_element_wait)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Waits until the element is not present</p>
+
+<p>@param [Integer] (defaults to: 5) seconds to wait before timing out</p>
+            
+
+            
+            <div class="method-source-code" id="when_not_present-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/platforms/watir_webdriver/element.rb, line 170</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">when_not_present</span>(<span class="ruby-identifier">timeout</span>=<span class="ruby-operator">::</span><span class="ruby-constant">PageObject</span>.<span class="ruby-identifier">default_element_wait</span>)
+  <span class="ruby-identifier">element</span>.<span class="ruby-identifier">wait_while_present</span>(<span class="ruby-identifier">timeout</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- when_not_present-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- when_not_present-method -->
+
+      
+        <div id="when_not_visible-method" class="method-detail ">
+          <a name="method-i-when_not_visible"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">when_not_visible</span><span
+              class="method-args">(timeout=::PageObject.default_element_wait)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Waits until the element is not visible</p>
+
+<p>@param [Integer] (defaults to: 5) seconds to wait before timing out</p>
+            
+
+            
+            <div class="method-source-code" id="when_not_visible-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/platforms/watir_webdriver/element.rb, line 191</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">when_not_visible</span>(<span class="ruby-identifier">timeout</span>=<span class="ruby-operator">::</span><span class="ruby-constant">PageObject</span>.<span class="ruby-identifier">default_element_wait</span>)
+  <span class="ruby-constant">Object</span><span class="ruby-operator">::</span><span class="ruby-constant">Watir</span><span class="ruby-operator">::</span><span class="ruby-constant">Wait</span>.<span class="ruby-identifier">while</span>(<span class="ruby-identifier">timeout</span>, <span class="ruby-node">&quot;Element still visible after #{timeout} seconds&quot;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">visible?</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- when_not_visible-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- when_not_visible-method -->
+
+      
+        <div id="when_present-method" class="method-detail ">
+          <a name="method-i-when_present"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">when_present</span><span
+              class="method-args">(timeout=::PageObject.default_element_wait)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Waits until the element is present</p>
+
+<p>@param [Integer] (defaults to: 5) seconds to wait before timing out</p>
+            
+
+            
+            <div class="method-source-code" id="when_present-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/platforms/watir_webdriver/element.rb, line 159</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">when_present</span>(<span class="ruby-identifier">timeout</span>=<span class="ruby-operator">::</span><span class="ruby-constant">PageObject</span>.<span class="ruby-identifier">default_element_wait</span>)
+  <span class="ruby-identifier">element</span>.<span class="ruby-identifier">wait_until_present</span>(<span class="ruby-identifier">timeout</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- when_present-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- when_present-method -->
+
+      
+        <div id="when_visible-method" class="method-detail ">
+          <a name="method-i-when_visible"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">when_visible</span><span
+              class="method-args">(timeout=::PageObject.default_element_wait)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Waits until the element is visible</p>
+
+<p>@param [Integer] (defaults to: 5) seconds to wait before timing out</p>
+            
+
+            
+            <div class="method-source-code" id="when_visible-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object/platforms/watir_webdriver/element.rb, line 179</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">when_visible</span>(<span class="ruby-identifier">timeout</span>=<span class="ruby-operator">::</span><span class="ruby-constant">PageObject</span>.<span class="ruby-identifier">default_element_wait</span>)
+  <span class="ruby-constant">Object</span><span class="ruby-operator">::</span><span class="ruby-constant">Watir</span><span class="ruby-operator">::</span><span class="ruby-constant">Wait</span>.<span class="ruby-identifier">until</span>(<span class="ruby-identifier">timeout</span>, <span class="ruby-node">&quot;Element was not visible in #{timeout} seconds&quot;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">visible?</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- when_visible-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- when_visible-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="IBM437"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=IBM437" http-equiv="Content-Type" />
+
+  <title>Class: FFI::AutoPointer</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/ffi/autopointer_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/ffi/autopointer.rb">lib/ffi/autopointer.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Pointer</p>
+        
+      </div>
+      
+
+      
+
+      
+      <!-- Namespace Contents -->
+      <div id="namespace-list-section" class="section">
+        <h3 class="section-header">Namespace</h3>
+        <ul class="link-list">
+          
+          <li><span class="type">CLASS</span> <a href="AutoPointer/CallableReleaser.html">FFI::AutoPointer::CallableReleaser</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="AutoPointer/DefaultReleaser.html">FFI::AutoPointer::DefaultReleaser</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="AutoPointer/Releaser.html">FFI::AutoPointer::Releaser</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-from_native">::from_native</a></li>
+          
+          <li><a href="#method-c-native_type">::native_type</a></li>
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-autorelease-3D">#autorelease=</a></li>
+          
+          <li><a href="#method-i-autorelease-3F">#autorelease?</a></li>
+          
+          <li><a href="#method-i-free">#free</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/ChangeLog.html">ChangeLog</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/README.html">README</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/compile.html">compile</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/configure.html">configure</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/depcomp.html">depcomp</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/doc/stamp-vti.html">stamp-vti</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/install-sh.html">install-sh</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/libtool-version.html">libtool-version</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/mdate-sh.html">mdate-sh</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/missing.html">missing</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../FFI.html">FFI</a></li>
+        
+          <li><a href="../FFI/AutoPointer.html">FFI::AutoPointer</a></li>
+        
+          <li><a href="../FFI/AutoPointer/CallableReleaser.html">FFI::AutoPointer::CallableReleaser</a></li>
+        
+          <li><a href="../FFI/AutoPointer/DefaultReleaser.html">FFI::AutoPointer::DefaultReleaser</a></li>
+        
+          <li><a href="../FFI/AutoPointer/Releaser.html">FFI::AutoPointer::Releaser</a></li>
+        
+          <li><a href="../FFI/ConstGenerator.html">FFI::ConstGenerator</a></li>
+        
+          <li><a href="../FFI/ConstGenerator/Constant.html">FFI::ConstGenerator::Constant</a></li>
+        
+          <li><a href="../FFI/Enum.html">FFI::Enum</a></li>
+        
+          <li><a href="../FFI/Enums.html">FFI::Enums</a></li>
+        
+          <li><a href="../FFI/Function.html">FFI::Function</a></li>
+        
+          <li><a href="../FFI/FunctionType.html">FFI::FunctionType</a></li>
+        
+          <li><a href="../FFI/Generator.html">FFI::Generator</a></li>
+        
+          <li><a href="../FFI/Generator/Task.html">FFI::Generator::Task</a></li>
+        
+          <li><a href="../FFI/IO.html">FFI::IO</a></li>
+        
+          <li><a href="../FFI/LastError.html">FFI::LastError</a></li>
+        
+          <li><a href="../FFI/Library.html">FFI::Library</a></li>
+        
+          <li><a href="../FFI/ManagedStruct.html">FFI::ManagedStruct</a></li>
+        
+          <li><a href="../FFI/MemoryPointer.html">FFI::MemoryPointer</a></li>
+        
+          <li><a href="../FFI/NativeType.html">FFI::NativeType</a></li>
+        
+          <li><a href="../FFI/NotFoundError.html">FFI::NotFoundError</a></li>
+        
+          <li><a href="../FFI/Platform.html">FFI::Platform</a></li>
+        
+          <li><a href="../FFI/PlatformError.html">FFI::PlatformError</a></li>
+        
+          <li><a href="../FFI/Pointer.html">FFI::Pointer</a></li>
+        
+          <li><a href="../FFI/StrPtrConverter.html">FFI::StrPtrConverter</a></li>
+        
+          <li><a href="../FFI/Struct.html">FFI::Struct</a></li>
+        
+          <li><a href="../FFI/Struct/InlineArray.html">FFI::Struct::InlineArray</a></li>
+        
+          <li><a href="../FFI/Struct/ManagedStructConverter.html">FFI::Struct::ManagedStructConverter</a></li>
+        
+          <li><a href="../FFI/StructByReference.html">FFI::StructByReference</a></li>
+        
+          <li><a href="../FFI/StructByValue.html">FFI::StructByValue</a></li>
+        
+          <li><a href="../FFI/StructGenerator.html">FFI::StructGenerator</a></li>
+        
+          <li><a href="../FFI/StructGenerator/Field.html">FFI::StructGenerator::Field</a></li>
+        
+          <li><a href="../FFI/StructLayout.html">FFI::StructLayout</a></li>
+        
+          <li><a href="../FFI/StructLayout/Array.html">FFI::StructLayout::Array</a></li>
+        
+          <li><a href="../FFI/StructLayout/Enum.html">FFI::StructLayout::Enum</a></li>
+        
+          <li><a href="../FFI/StructLayout/Field.html">FFI::StructLayout::Field</a></li>
+        
+          <li><a href="../FFI/StructLayout/Function.html">FFI::StructLayout::Function</a></li>
+        
+          <li><a href="../FFI/StructLayout/InnerStruct.html">FFI::StructLayout::InnerStruct</a></li>
+        
+          <li><a href="../FFI/StructLayout/Mapped.html">FFI::StructLayout::Mapped</a></li>
+        
+          <li><a href="../FFI/StructLayout/Number.html">FFI::StructLayout::Number</a></li>
+        
+          <li><a href="../FFI/StructLayout/Pointer.html">FFI::StructLayout::Pointer</a></li>
+        
+          <li><a href="../FFI/StructLayout/String.html">FFI::StructLayout::String</a></li>
+        
+          <li><a href="../FFI/StructLayoutBuilder.html">FFI::StructLayoutBuilder</a></li>
+        
+          <li><a href="../FFI/Type.html">FFI::Type</a></li>
+        
+          <li><a href="../FFI/Type/Builtin.html">FFI::Type::Builtin</a></li>
+        
+          <li><a href="../FFI/TypesGenerator.html">FFI::TypesGenerator</a></li>
+        
+          <li><a href="../FFI/Union.html">FFI::Union</a></li>
+        
+          <li><a href="../FFI/VariadicInvoker.html">FFI::VariadicInvoker</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">FFI::AutoPointer</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="from_native-method" class="method-detail ">
+          <a name="method-c-from_native"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">from_native</span><span
+              class="method-args">(val, ctx)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Create a new <a href="AutoPointer.html">AutoPointer</a>.</p>
+
+<p>Override {DataConverter#from_native}. @overload self.from_native(ptr, ctx)
+@param [Pointer] ptr  @param ctx not used. Please set <tt>nil</tt>. @return
+[AutoPointer]</p>
+            
+
+            
+            <div class="method-source-code" id="from_native-source">
+<pre>
+<span class="ruby-comment"># File lib/ffi/autopointer.rb, line 189</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">from_native</span>(<span class="ruby-identifier">val</span>, <span class="ruby-identifier">ctx</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">val</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- from_native-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- from_native-method -->
+
+      
+        <div id="native_type-method" class="method-detail ">
+          <a name="method-c-native_type"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">native_type</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return native type of <a href="AutoPointer.html">AutoPointer</a>.</p>
+
+<p>Override {DataConverter#native_type}. @return [Type::POINTER] @raise
+{RuntimeError} if class does not implement a <tt>#release</tt> method</p>
+            
+
+            
+            <div class="method-source-code" id="native_type-source">
+<pre>
+<span class="ruby-comment"># File lib/ffi/autopointer.rb, line 177</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">native_type</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">RuntimeError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;no release method defined for #{self.inspect}&quot;</span>) <span class="ruby-keyword">unless</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:release</span>)
+  <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">POINTER</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- native_type-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- native_type-method -->
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(ptr, proc=nil, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@overload initialize(pointer, method)</p>
+
+<pre>@param [Pointer] pointer
+@param [Method] method
+@return [self]
+The passed Method will be invoked at GC time.</pre>
+
+<p>@overload initialize(pointer, proc)</p>
+
+<pre>@param [Pointer] pointer
+@return [self]
+The passed Proc will be invoked at GC time (SEE WARNING BELOW!)
+@note WARNING: passing a proc _may_ cause your pointer to never be GC'd, unless you're 
+ careful to avoid trapping a reference to the pointer in the proc. See the test 
+ specs for examples.</pre>
+
+<p>@overload initialize(pointer) { |p| ... }</p>
+
+<pre>@param [Pointer] pointer
+@yieldparam [Pointer] p +pointer+ passed to the block
+@return [self]
+The passed block will be invoked at GC time.
+@note WARNING: passing a block will cause your pointer to never be GC'd. This is bad.</pre>
+
+<p>@overload initialize(pointer)</p>
+
+<pre>@param [Pointer] pointer
+@return [self]
+The pointer's release() class method will be invoked at GC time.</pre>
+
+<p>@note The safest, and therefore preferred, calling</p>
+
+<pre>idiom is to pass a Method as the second parameter. Example usage:
+
+ class PointerHelper
+   def self.release(pointer)
+     ...
+   end
+ end
+
+ p = AutoPointer.new(other_pointer, PointerHelper.method(:release))
+
+The above code will cause PointerHelper#release to be invoked at GC time.</pre>
+
+<p>@note</p>
+
+<pre>The last calling idiom (only one parameter) is generally only
+going to be useful if you subclass {AutoPointer}, and override
+#release, which by default does nothing.</pre>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/ffi/autopointer.rb, line 76</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">ptr</span>, <span class="ruby-identifier">proc</span>=<span class="ruby-keyword">nil</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">super</span>(<span class="ruby-identifier">ptr</span>.<span class="ruby-identifier">type_size</span>, <span class="ruby-identifier">ptr</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>, <span class="ruby-string">&quot;Invalid pointer&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">ptr</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">ptr</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Pointer</span>)          <span class="ruby-operator">||</span> <span class="ruby-identifier">ptr</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">MemoryPointer</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">ptr</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">AutoPointer</span>)
+
+  <span class="ruby-ivar">@releaser</span> = <span class="ruby-keyword">if</span> <span class="ruby-identifier">proc</span>
+                <span class="ruby-identifier">raise</span> <span class="ruby-constant">RuntimeError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;proc must be callable&quot;</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">proc</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:call</span>)
+                <span class="ruby-constant">CallableReleaser</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ptr</span>, <span class="ruby-identifier">proc</span>)
+
+              <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">raise</span> <span class="ruby-constant">RuntimeError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;no release method defined&quot;</span>) <span class="ruby-keyword">unless</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:release</span>)
+                <span class="ruby-constant">DefaultReleaser</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ptr</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>)
+              <span class="ruby-keyword">end</span>
+
+  <span class="ruby-constant">ObjectSpace</span>.<span class="ruby-identifier">define_finalizer</span>(<span class="ruby-keyword">self</span>, <span class="ruby-ivar">@releaser</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="autorelease-3D-method" class="method-detail ">
+          <a name="method-i-autorelease-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">autorelease=</span><span
+              class="method-args">(autorelease)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@param [Boolean] autorelease @return [Boolean] <tt>autorelease</tt> Set
+<tt>autorelease</tt> property. See {<a href="Pointer.html">Pointer</a>
+Autorelease section at Pointer}.</p>
+            
+
+            
+            <div class="method-source-code" id="autorelease-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/ffi/autopointer.rb, line 103</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">autorelease=</span>(<span class="ruby-identifier">autorelease</span>)
+  <span class="ruby-ivar">@releaser</span>.<span class="ruby-identifier">autorelease</span>=(<span class="ruby-identifier">autorelease</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- autorelease-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- autorelease-3D-method -->
+
+      
+        <div id="autorelease-3F-method" class="method-detail ">
+          <a name="method-i-autorelease-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">autorelease?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@return [Boolean] <tt>autorelease</tt> Get <tt>autorelease</tt> property.
+See {<a href="Pointer.html">Pointer</a> Autorelease section at Pointer}.</p>
+            
+
+            
+            <div class="method-source-code" id="autorelease-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/ffi/autopointer.rb, line 109</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">autorelease?</span>
+  <span class="ruby-ivar">@releaser</span>.<span class="ruby-identifier">autorelease</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- autorelease-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- autorelease-3F-method -->
+
+      
+        <div id="free-method" class="method-detail ">
+          <a name="method-i-free"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">free</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@return [nil] Free the pointer.</p>
+            
+
+            
+            <div class="method-source-code" id="free-source">
+<pre>
+<span class="ruby-comment"># File lib/ffi/autopointer.rb, line 96</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">free</span>
+  <span class="ruby-ivar">@releaser</span>.<span class="ruby-identifier">free</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- free-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- free-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

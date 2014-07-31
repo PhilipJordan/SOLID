@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"	rcov:EFI"Cucumber::Rake::Task#rcov;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"BRun cucumber with RCov? Defaults to false. If you set this to:encoding"IBM437I"true, +fork+ is implicit.;@:
+@file0FI"lib/cucumber/rake/task.rb;@

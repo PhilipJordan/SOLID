@@ -1,0 +1,1274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Module: RSpec::Mocks::Syntax</title>
+
+  <link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../lib/rspec/mocks/syntax_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/rspec/mocks/syntax.rb">lib/rspec/mocks/syntax.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-default_should_syntax_host">::default_should_syntax_host</a></li>
+          
+          <li><a href="#method-c-disable_expect">::disable_expect</a></li>
+          
+          <li><a href="#method-c-disable_should">::disable_should</a></li>
+          
+          <li><a href="#method-c-enable_expect">::enable_expect</a></li>
+          
+          <li><a href="#method-c-enable_should">::enable_should</a></li>
+          
+          <li><a href="#method-c-expect_enabled-3F">::expect_enabled?</a></li>
+          
+          <li><a href="#method-c-should_enabled-3F">::should_enabled?</a></li>
+          
+          <li><a href="#method-c-stub_object">::stub_object</a></li>
+          
+          <li><a href="#method-i-allow">#allow</a></li>
+          
+          <li><a href="#method-i-allow_any_instance_of">#allow_any_instance_of</a></li>
+          
+          <li><a href="#method-i-any_instance">#any_instance</a></li>
+          
+          <li><a href="#method-i-as_null_object">#as_null_object</a></li>
+          
+          <li><a href="#method-i-expect">#expect</a></li>
+          
+          <li><a href="#method-i-expect_any_instance_of">#expect_any_instance_of</a></li>
+          
+          <li><a href="#method-i-null_object-3F">#null_object?</a></li>
+          
+          <li><a href="#method-i-receive">#receive</a></li>
+          
+          <li><a href="#method-i-received_message-3F">#received_message?</a></li>
+          
+          <li><a href="#method-i-should_not_receive">#should_not_receive</a></li>
+          
+          <li><a href="#method-i-should_receive">#should_receive</a></li>
+          
+          <li><a href="#method-i-stub">#stub</a></li>
+          
+          <li><a href="#method-i-stub-21">#stub!</a></li>
+          
+          <li><a href="#method-i-stub_chain">#stub_chain</a></li>
+          
+          <li><a href="#method-i-unstub">#unstub</a></li>
+          
+          <li><a href="#method-i-unstub-21">#unstub!</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../RSpec.html">RSpec</a></li>
+        
+          <li><a href="../../RSpec/CallerFilter.html">RSpec::CallerFilter</a></li>
+        
+          <li><a href="../../RSpec/Mocks.html">RSpec::Mocks</a></li>
+        
+          <li><a href="../../RSpec/Mocks/AllowanceTarget.html">RSpec::Mocks::AllowanceTarget</a></li>
+        
+          <li><a href="../../RSpec/Mocks/AmbiguousReturnError.html">RSpec::Mocks::AmbiguousReturnError</a></li>
+        
+          <li><a href="../../RSpec/Mocks/AndCallOriginalImplementation.html">RSpec::Mocks::AndCallOriginalImplementation</a></li>
+        
+          <li><a href="../../RSpec/Mocks/AndReturnImplementation.html">RSpec::Mocks::AndReturnImplementation</a></li>
+        
+          <li><a href="../../RSpec/Mocks/AndYieldImplementation.html">RSpec::Mocks::AndYieldImplementation</a></li>
+        
+          <li><a href="../../RSpec/Mocks/AnyInstance.html">RSpec::Mocks::AnyInstance</a></li>
+        
+          <li><a href="../../RSpec/Mocks/AnyInstance/Chain.html">RSpec::Mocks::AnyInstance::Chain</a></li>
+        
+          <li><a href="../../RSpec/Mocks/AnyInstance/Chain/Customizations.html">RSpec::Mocks::AnyInstance::Chain::Customizations</a></li>
+        
+          <li><a href="../../RSpec/Mocks/AnyInstance/ExpectationChain.html">RSpec::Mocks::AnyInstance::ExpectationChain</a></li>
+        
+          <li><a href="../../RSpec/Mocks/AnyInstance/MessageChains.html">RSpec::Mocks::AnyInstance::MessageChains</a></li>
+        
+          <li><a href="../../RSpec/Mocks/AnyInstance/Recorder.html">RSpec::Mocks::AnyInstance::Recorder</a></li>
+        
+          <li><a href="../../RSpec/Mocks/AnyInstance/StubChain.html">RSpec::Mocks::AnyInstance::StubChain</a></li>
+        
+          <li><a href="../../RSpec/Mocks/AnyInstance/StubChainChain.html">RSpec::Mocks::AnyInstance::StubChainChain</a></li>
+        
+          <li><a href="../../RSpec/Mocks/AnyInstanceAllowanceTarget.html">RSpec::Mocks::AnyInstanceAllowanceTarget</a></li>
+        
+          <li><a href="../../RSpec/Mocks/AnyInstanceExpectationTarget.html">RSpec::Mocks::AnyInstanceExpectationTarget</a></li>
+        
+          <li><a href="../../RSpec/Mocks/ArgumentListMatcher.html">RSpec::Mocks::ArgumentListMatcher</a></li>
+        
+          <li><a href="../../RSpec/Mocks/ArgumentMatchers.html">RSpec::Mocks::ArgumentMatchers</a></li>
+        
+          <li><a href="../../RSpec/Mocks/ArgumentMatchers/AnyArgMatcher.html">RSpec::Mocks::ArgumentMatchers::AnyArgMatcher</a></li>
+        
+          <li><a href="../../RSpec/Mocks/ArgumentMatchers/AnyArgsMatcher.html">RSpec::Mocks::ArgumentMatchers::AnyArgsMatcher</a></li>
+        
+          <li><a href="../../RSpec/Mocks/ArgumentMatchers/BooleanMatcher.html">RSpec::Mocks::ArgumentMatchers::BooleanMatcher</a></li>
+        
+          <li><a href="../../RSpec/Mocks/ArgumentMatchers/DuckTypeMatcher.html">RSpec::Mocks::ArgumentMatchers::DuckTypeMatcher</a></li>
+        
+          <li><a href="../../RSpec/Mocks/ArgumentMatchers/EqualityProxy.html">RSpec::Mocks::ArgumentMatchers::EqualityProxy</a></li>
+        
+          <li><a href="../../RSpec/Mocks/ArgumentMatchers/HashExcludingMatcher.html">RSpec::Mocks::ArgumentMatchers::HashExcludingMatcher</a></li>
+        
+          <li><a href="../../RSpec/Mocks/ArgumentMatchers/HashIncludingMatcher.html">RSpec::Mocks::ArgumentMatchers::HashIncludingMatcher</a></li>
+        
+          <li><a href="../../RSpec/Mocks/ArgumentMatchers/InstanceOf.html">RSpec::Mocks::ArgumentMatchers::InstanceOf</a></li>
+        
+          <li><a href="../../RSpec/Mocks/ArgumentMatchers/KindOf.html">RSpec::Mocks::ArgumentMatchers::KindOf</a></li>
+        
+          <li><a href="../../RSpec/Mocks/ArgumentMatchers/MatcherMatcher.html">RSpec::Mocks::ArgumentMatchers::MatcherMatcher</a></li>
+        
+          <li><a href="../../RSpec/Mocks/ArgumentMatchers/NoArgsMatcher.html">RSpec::Mocks::ArgumentMatchers::NoArgsMatcher</a></li>
+        
+          <li><a href="../../RSpec/Mocks/ArgumentMatchers/RegexpMatcher.html">RSpec::Mocks::ArgumentMatchers::RegexpMatcher</a></li>
+        
+          <li><a href="../../RSpec/Mocks/Configuration.html">RSpec::Mocks::Configuration</a></li>
+        
+          <li><a href="../../RSpec/Mocks/Constant.html">RSpec::Mocks::Constant</a></li>
+        
+          <li><a href="../../RSpec/Mocks/ConstantMutator.html">RSpec::Mocks::ConstantMutator</a></li>
+        
+          <li><a href="../../RSpec/Mocks/ConstantMutator/BaseMutator.html">RSpec::Mocks::ConstantMutator::BaseMutator</a></li>
+        
+          <li><a href="../../RSpec/Mocks/ConstantMutator/ConstantHider.html">RSpec::Mocks::ConstantMutator::ConstantHider</a></li>
+        
+          <li><a href="../../RSpec/Mocks/ConstantMutator/DefinedConstantReplacer.html">RSpec::Mocks::ConstantMutator::DefinedConstantReplacer</a></li>
+        
+          <li><a href="../../RSpec/Mocks/ConstantMutator/UndefinedConstantSetter.html">RSpec::Mocks::ConstantMutator::UndefinedConstantSetter</a></li>
+        
+          <li><a href="../../RSpec/Mocks/Deprecation.html">RSpec::Mocks::Deprecation</a></li>
+        
+          <li><a href="../../RSpec/Mocks/Double.html">RSpec::Mocks::Double</a></li>
+        
+          <li><a href="../../RSpec/Mocks/ErrorGenerator.html">RSpec::Mocks::ErrorGenerator</a></li>
+        
+          <li><a href="../../RSpec/Mocks/ExampleMethods.html">RSpec::Mocks::ExampleMethods</a></li>
+        
+          <li><a href="../../RSpec/Mocks/ExampleMethods/ExpectHost.html">RSpec::Mocks::ExampleMethods::ExpectHost</a></li>
+        
+          <li><a href="../../RSpec/Mocks/ExpectationTarget.html">RSpec::Mocks::ExpectationTarget</a></li>
+        
+          <li><a href="../../RSpec/Mocks/Implementation.html">RSpec::Mocks::Implementation</a></li>
+        
+          <li><a href="../../RSpec/Mocks/InstanceExec.html">RSpec::Mocks::InstanceExec</a></li>
+        
+          <li><a href="../../RSpec/Mocks/InstanceMethodStasher.html">RSpec::Mocks::InstanceMethodStasher</a></li>
+        
+          <li><a href="../../RSpec/Mocks/Matchers.html">RSpec::Mocks::Matchers</a></li>
+        
+          <li><a href="../../RSpec/Mocks/Matchers/HaveReceived.html">RSpec::Mocks::Matchers::HaveReceived</a></li>
+        
+          <li><a href="../../RSpec/Mocks/Matchers/Receive.html">RSpec::Mocks::Matchers::Receive</a></li>
+        
+          <li><a href="../../RSpec/Mocks/Matchers/Receive/Customization.html">RSpec::Mocks::Matchers::Receive::Customization</a></li>
+        
+          <li><a href="../../RSpec/Mocks/MessageExpectation.html">RSpec::Mocks::MessageExpectation</a></li>
+        
+          <li><a href="../../RSpec/Mocks/MethodDouble.html">RSpec::Mocks::MethodDouble</a></li>
+        
+          <li><a href="../../RSpec/Mocks/MethodDouble/ProcWithBlock.html">RSpec::Mocks::MethodDouble::ProcWithBlock</a></li>
+        
+          <li><a href="../../RSpec/Mocks/MockExpectationError.html">RSpec::Mocks::MockExpectationError</a></li>
+        
+          <li><a href="../../RSpec/Mocks/OrderGroup.html">RSpec::Mocks::OrderGroup</a></li>
+        
+          <li><a href="../../RSpec/Mocks/Proxy.html">RSpec::Mocks::Proxy</a></li>
+        
+          <li><a href="../../RSpec/Mocks/ProxyForNil.html">RSpec::Mocks::ProxyForNil</a></li>
+        
+          <li><a href="../../RSpec/Mocks/RecursiveConstMethods.html">RSpec::Mocks::RecursiveConstMethods</a></li>
+        
+          <li><a href="../../RSpec/Mocks/Space.html">RSpec::Mocks::Space</a></li>
+        
+          <li><a href="../../RSpec/Mocks/StubChain.html">RSpec::Mocks::StubChain</a></li>
+        
+          <li><a href="../../RSpec/Mocks/Syntax.html">RSpec::Mocks::Syntax</a></li>
+        
+          <li><a href="../../RSpec/Mocks/TargetBase.html">RSpec::Mocks::TargetBase</a></li>
+        
+          <li><a href="../../RSpec/Mocks/TestDouble.html">RSpec::Mocks::TestDouble</a></li>
+        
+          <li><a href="../../RSpec/Mocks/TestDoubleProxy.html">RSpec::Mocks::TestDoubleProxy</a></li>
+        
+          <li><a href="../../RSpec/Mocks/Version.html">RSpec::Mocks::Version</a></li>
+        
+          <li><a href="../../Backports.html">Backports</a></li>
+        
+          <li><a href="../../Kernel.html">Kernel</a></li>
+        
+          <li><a href="../../Marshal.html">Marshal</a></li>
+        
+          <li><a href="../../Method.html">Method</a></li>
+        
+          <li><a href="../../Proc.html">Proc</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">RSpec::Mocks::Syntax</h1>
+
+    <div id="description" class="description">
+      
+<p>@api private Provides methods for enabling and disabling the available
+syntaxes provided by rspec-mocks.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="default_should_syntax_host-method" class="method-detail ">
+          <a name="method-c-default_should_syntax_host"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">default_should_syntax_host</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@api private Determines where the methods like `<a
+href="Syntax.html#method-i-should_receive">should_receive</a>`, and `stub`
+are added.</p>
+            
+
+            
+            <div class="method-source-code" id="default_should_syntax_host-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/mocks/syntax.rb, line 168</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">default_should_syntax_host</span>
+  <span class="ruby-comment"># JRuby 1.7.4 introduces a regression whereby `defined?(::BasicObject) =&gt; nil`</span>
+  <span class="ruby-comment"># yet `BasicObject` still exists and patching onto ::Object breaks things</span>
+  <span class="ruby-comment"># e.g. SimpleDelegator expectations won't work</span>
+  <span class="ruby-comment">#</span>
+  <span class="ruby-comment"># See: https://github.com/jruby/jruby/issues/814</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">defined?</span>(<span class="ruby-constant">JRUBY_VERSION</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">JRUBY_VERSION</span> <span class="ruby-operator">==</span> <span class="ruby-string">'1.7.4'</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">RUBY_VERSION</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">1.8</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-operator">::</span><span class="ruby-constant">BasicObject</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># On 1.8.7, Object.ancestors.last == Kernel but</span>
+  <span class="ruby-comment"># things blow up if we include `RSpec::Mocks::Methods`</span>
+  <span class="ruby-comment"># into Kernel...not sure why.</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">Object</span> <span class="ruby-keyword">unless</span> <span class="ruby-keyword">defined?</span>(<span class="ruby-operator">::</span><span class="ruby-constant">BasicObject</span>)
+
+  <span class="ruby-comment"># MacRuby has BasicObject but it's not the root class.</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">Object</span> <span class="ruby-keyword">unless</span> <span class="ruby-constant">Object</span>.<span class="ruby-identifier">ancestors</span>.<span class="ruby-identifier">last</span> <span class="ruby-operator">==</span> <span class="ruby-operator">::</span><span class="ruby-constant">BasicObject</span>
+
+  <span class="ruby-operator">::</span><span class="ruby-constant">BasicObject</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- default_should_syntax_host-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- default_should_syntax_host-method -->
+
+      
+        <div id="disable_expect-method" class="method-detail ">
+          <a name="method-c-disable_expect"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">disable_expect</span><span
+              class="method-args">(syntax_host = ::RSpec::Mocks::ExampleMethods)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@api private Disables the expect syntax (`expect(dbl).to receive`,
+`allow(dbl).to receive`, etc).</p>
+            
+
+            
+            <div class="method-source-code" id="disable_expect-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/mocks/syntax.rb, line 139</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">disable_expect</span>(<span class="ruby-identifier">syntax_host</span> = <span class="ruby-operator">::</span><span class="ruby-constant">RSpec</span><span class="ruby-operator">::</span><span class="ruby-constant">Mocks</span><span class="ruby-operator">::</span><span class="ruby-constant">ExampleMethods</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">expect_enabled?</span>(<span class="ruby-identifier">syntax_host</span>)
+
+  <span class="ruby-identifier">syntax_host</span>.<span class="ruby-identifier">class_eval</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">undef</span> <span class="ruby-identifier">receive</span>
+    <span class="ruby-keyword">undef</span> <span class="ruby-identifier">allow</span>
+    <span class="ruby-keyword">undef</span> <span class="ruby-identifier">expect_any_instance_of</span>
+    <span class="ruby-keyword">undef</span> <span class="ruby-identifier">allow_any_instance_of</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-constant">RSpec</span><span class="ruby-operator">::</span><span class="ruby-constant">Mocks</span><span class="ruby-operator">::</span><span class="ruby-constant">ExampleMethods</span><span class="ruby-operator">::</span><span class="ruby-constant">ExpectHost</span>.<span class="ruby-identifier">class_eval</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">undef</span> <span class="ruby-identifier">expect</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- disable_expect-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- disable_expect-method -->
+
+      
+        <div id="disable_should-method" class="method-detail ">
+          <a name="method-c-disable_should"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">disable_should</span><span
+              class="method-args">(syntax_host = default_should_syntax_host)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@api private Disables the should syntax (`dbl.stub`, `dbl.should_receive`,
+etc).</p>
+            
+
+            
+            <div class="method-source-code" id="disable_should-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/mocks/syntax.rb, line 86</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">disable_should</span>(<span class="ruby-identifier">syntax_host</span> = <span class="ruby-identifier">default_should_syntax_host</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">should_enabled?</span>(<span class="ruby-identifier">syntax_host</span>)
+
+  <span class="ruby-identifier">syntax_host</span>.<span class="ruby-identifier">class_eval</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">undef</span> <span class="ruby-identifier">should_receive</span>
+    <span class="ruby-keyword">undef</span> <span class="ruby-identifier">should_not_receive</span>
+    <span class="ruby-keyword">undef</span> <span class="ruby-identifier">stub</span>
+    <span class="ruby-keyword">undef</span> <span class="ruby-identifier">unstub</span>
+    <span class="ruby-keyword">undef</span> <span class="ruby-identifier">stub!</span>
+    <span class="ruby-keyword">undef</span> <span class="ruby-identifier">unstub!</span>
+    <span class="ruby-keyword">undef</span> <span class="ruby-identifier">stub_chain</span>
+    <span class="ruby-keyword">undef</span> <span class="ruby-identifier">as_null_object</span>
+    <span class="ruby-keyword">undef</span> <span class="ruby-identifier">null_object?</span>
+    <span class="ruby-keyword">undef</span> <span class="ruby-identifier">received_message?</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-constant">Class</span>.<span class="ruby-identifier">class_eval</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">undef</span> <span class="ruby-identifier">any_instance</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- disable_should-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- disable_should-method -->
+
+      
+        <div id="enable_expect-method" class="method-detail ">
+          <a name="method-c-enable_expect"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">enable_expect</span><span
+              class="method-args">(syntax_host = ::RSpec::Mocks::ExampleMethods)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@api private Enables the expect syntax (`expect(dbl).to receive`,
+`allow(dbl).to receive`, etc).</p>
+            
+
+            
+            <div class="method-source-code" id="enable_expect-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/mocks/syntax.rb, line 109</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">enable_expect</span>(<span class="ruby-identifier">syntax_host</span> = <span class="ruby-operator">::</span><span class="ruby-constant">RSpec</span><span class="ruby-operator">::</span><span class="ruby-constant">Mocks</span><span class="ruby-operator">::</span><span class="ruby-constant">ExampleMethods</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">expect_enabled?</span>(<span class="ruby-identifier">syntax_host</span>)
+
+  <span class="ruby-identifier">syntax_host</span>.<span class="ruby-identifier">class_eval</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">receive</span>(<span class="ruby-identifier">method_name</span>, &amp;<span class="ruby-identifier">block</span>)
+      <span class="ruby-constant">Matchers</span><span class="ruby-operator">::</span><span class="ruby-constant">Receive</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">method_name</span>, <span class="ruby-identifier">block</span>)
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">allow</span>(<span class="ruby-identifier">target</span>)
+      <span class="ruby-constant">AllowanceTarget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">target</span>)
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">expect_any_instance_of</span>(<span class="ruby-identifier">klass</span>)
+      <span class="ruby-constant">AnyInstanceExpectationTarget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">klass</span>)
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">allow_any_instance_of</span>(<span class="ruby-identifier">klass</span>)
+      <span class="ruby-constant">AnyInstanceAllowanceTarget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">klass</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-constant">RSpec</span><span class="ruby-operator">::</span><span class="ruby-constant">Mocks</span><span class="ruby-operator">::</span><span class="ruby-constant">ExampleMethods</span><span class="ruby-operator">::</span><span class="ruby-constant">ExpectHost</span>.<span class="ruby-identifier">class_eval</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">expect</span>(<span class="ruby-identifier">target</span>)
+      <span class="ruby-constant">ExpectationTarget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">target</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- enable_expect-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- enable_expect-method -->
+
+      
+        <div id="enable_should-method" class="method-detail ">
+          <a name="method-c-enable_should"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">enable_should</span><span
+              class="method-args">(syntax_host = default_should_syntax_host)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@api private Enables the should syntax (`dbl.stub`, `dbl.should_receive`,
+etc).</p>
+            
+
+            
+            <div class="method-source-code" id="enable_should-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/mocks/syntax.rb, line 25</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">enable_should</span>(<span class="ruby-identifier">syntax_host</span> = <span class="ruby-identifier">default_should_syntax_host</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">should_enabled?</span>(<span class="ruby-identifier">syntax_host</span>)
+
+  <span class="ruby-identifier">syntax_host</span>.<span class="ruby-identifier">class_eval</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">should_receive</span>(<span class="ruby-identifier">message</span>, <span class="ruby-identifier">opts</span>={}, &amp;<span class="ruby-identifier">block</span>)
+      <span class="ruby-identifier">opts</span>[<span class="ruby-value">:expected_from</span>] <span class="ruby-operator">||=</span> <span class="ruby-constant">CallerFilter</span>.<span class="ruby-identifier">first_non_rspec_line</span>
+      <span class="ruby-operator">::</span><span class="ruby-constant">RSpec</span><span class="ruby-operator">::</span><span class="ruby-constant">Mocks</span>.<span class="ruby-identifier">expect_message</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">message</span>.<span class="ruby-identifier">to_sym</span>, <span class="ruby-identifier">opts</span>, &amp;<span class="ruby-identifier">block</span>)
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">should_not_receive</span>(<span class="ruby-identifier">message</span>, &amp;<span class="ruby-identifier">block</span>)
+      <span class="ruby-identifier">opts</span> = { <span class="ruby-value">:expected_from</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">CallerFilter</span>.<span class="ruby-identifier">first_non_rspec_line</span> }
+      <span class="ruby-operator">::</span><span class="ruby-constant">RSpec</span><span class="ruby-operator">::</span><span class="ruby-constant">Mocks</span>.<span class="ruby-identifier">expect_message</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">message</span>.<span class="ruby-identifier">to_sym</span>, <span class="ruby-identifier">opts</span>, &amp;<span class="ruby-identifier">block</span>).<span class="ruby-identifier">never</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">stub</span>(<span class="ruby-identifier">message_or_hash</span>, <span class="ruby-identifier">opts</span>={}, &amp;<span class="ruby-identifier">block</span>)
+      <span class="ruby-operator">::</span><span class="ruby-constant">RSpec</span><span class="ruby-operator">::</span><span class="ruby-constant">Mocks</span><span class="ruby-operator">::</span><span class="ruby-constant">Syntax</span>.<span class="ruby-identifier">stub_object</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">message_or_hash</span>, <span class="ruby-identifier">opts</span>, &amp;<span class="ruby-identifier">block</span>)
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">unstub</span>(<span class="ruby-identifier">message</span>)
+      <span class="ruby-operator">::</span><span class="ruby-constant">RSpec</span><span class="ruby-operator">::</span><span class="ruby-constant">Mocks</span>.<span class="ruby-identifier">space</span>.<span class="ruby-identifier">proxy_for</span>(<span class="ruby-keyword">self</span>).<span class="ruby-identifier">remove_stub</span>(<span class="ruby-identifier">message</span>)
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">stub!</span>(<span class="ruby-identifier">message_or_hash</span>, <span class="ruby-identifier">opts</span>={}, &amp;<span class="ruby-identifier">block</span>)
+      <span class="ruby-operator">::</span><span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">deprecate</span> <span class="ruby-string">&quot;stub!&quot;</span>, <span class="ruby-value">:replacement</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;stub&quot;</span>
+      <span class="ruby-operator">::</span><span class="ruby-constant">RSpec</span><span class="ruby-operator">::</span><span class="ruby-constant">Mocks</span><span class="ruby-operator">::</span><span class="ruby-constant">Syntax</span>.<span class="ruby-identifier">stub_object</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">message_or_hash</span>, <span class="ruby-identifier">opts</span>, &amp;<span class="ruby-identifier">block</span>)
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">unstub!</span>(<span class="ruby-identifier">message</span>)
+      <span class="ruby-operator">::</span><span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">deprecate</span> <span class="ruby-string">&quot;unstub!&quot;</span>, <span class="ruby-value">:replacement</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;unstub&quot;</span>
+      <span class="ruby-identifier">unstub</span>(<span class="ruby-identifier">message</span>)
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">stub_chain</span>(*<span class="ruby-identifier">chain</span>, &amp;<span class="ruby-identifier">blk</span>)
+      <span class="ruby-operator">::</span><span class="ruby-constant">RSpec</span><span class="ruby-operator">::</span><span class="ruby-constant">Mocks</span><span class="ruby-operator">::</span><span class="ruby-constant">StubChain</span>.<span class="ruby-identifier">stub_chain_on</span>(<span class="ruby-keyword">self</span>, *<span class="ruby-identifier">chain</span>, &amp;<span class="ruby-identifier">blk</span>)
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">as_null_object</span>
+      <span class="ruby-ivar">@_null_object</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-operator">::</span><span class="ruby-constant">RSpec</span><span class="ruby-operator">::</span><span class="ruby-constant">Mocks</span>.<span class="ruby-identifier">proxy_for</span>(<span class="ruby-keyword">self</span>).<span class="ruby-identifier">as_null_object</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">null_object?</span>
+      <span class="ruby-keyword">defined?</span>(<span class="ruby-ivar">@_null_object</span>)
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">received_message?</span>(<span class="ruby-identifier">message</span>, *<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">block</span>)
+      <span class="ruby-operator">::</span><span class="ruby-constant">RSpec</span><span class="ruby-operator">::</span><span class="ruby-constant">Mocks</span>.<span class="ruby-identifier">proxy_for</span>(<span class="ruby-keyword">self</span>).<span class="ruby-identifier">received_message?</span>(<span class="ruby-identifier">message</span>, *<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">block</span>)
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">unless</span> <span class="ruby-constant">Class</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:any_instance</span>
+      <span class="ruby-constant">Class</span>.<span class="ruby-identifier">class_eval</span> <span class="ruby-keyword">do</span>
+        <span class="ruby-keyword">def</span> <span class="ruby-identifier">any_instance</span>
+          <span class="ruby-operator">::</span><span class="ruby-constant">RSpec</span><span class="ruby-operator">::</span><span class="ruby-constant">Mocks</span>.<span class="ruby-identifier">any_instance_recorder_for</span>(<span class="ruby-keyword">self</span>)
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- enable_should-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- enable_should-method -->
+
+      
+        <div id="expect_enabled-3F-method" class="method-detail ">
+          <a name="method-c-expect_enabled-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">expect_enabled?</span><span
+              class="method-args">(syntax_host = ::RSpec::Mocks::ExampleMethods)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@api private Indicates whether or not the expect syntax is enabled.</p>
+            
+
+            
+            <div class="method-source-code" id="expect_enabled-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/mocks/syntax.rb, line 162</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">expect_enabled?</span>(<span class="ruby-identifier">syntax_host</span> = <span class="ruby-operator">::</span><span class="ruby-constant">RSpec</span><span class="ruby-operator">::</span><span class="ruby-constant">Mocks</span><span class="ruby-operator">::</span><span class="ruby-constant">ExampleMethods</span>)
+  <span class="ruby-identifier">syntax_host</span>.<span class="ruby-identifier">method_defined?</span>(<span class="ruby-value">:allow</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- expect_enabled-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- expect_enabled-3F-method -->
+
+      
+        <div id="should_enabled-3F-method" class="method-detail ">
+          <a name="method-c-should_enabled-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">should_enabled?</span><span
+              class="method-args">(syntax_host = default_should_syntax_host)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@api private Indicates whether or not the should syntax is enabled.</p>
+            
+
+            
+            <div class="method-source-code" id="should_enabled-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/mocks/syntax.rb, line 156</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">should_enabled?</span>(<span class="ruby-identifier">syntax_host</span> = <span class="ruby-identifier">default_should_syntax_host</span>)
+  <span class="ruby-identifier">syntax_host</span>.<span class="ruby-identifier">method_defined?</span>(<span class="ruby-value">:should_receive</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- should_enabled-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- should_enabled-3F-method -->
+
+      
+        <div id="stub_object-method" class="method-detail ">
+          <a name="method-c-stub_object"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">stub_object</span><span
+              class="method-args">(object, message_or_hash, opts = {}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@api private</p>
+
+<p>Common stubbing logic for both `stub` and `stub!`. This used to live in
+`stub`, and `stub!` delegated to `stub`, but we discovered that `stub!` was
+delegating to `<a
+href="ExampleMethods.html#method-i-stub">RSpec::Mocks::ExampleMethods#stub</a>`
+(which declares a test double) when called with an implicit receiver, which
+was a regression in 2.14.0.</p>
+            
+
+            
+            <div class="method-source-code" id="stub_object-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/mocks/syntax.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stub_object</span>(<span class="ruby-identifier">object</span>, <span class="ruby-identifier">message_or_hash</span>, <span class="ruby-identifier">opts</span> = {}, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">::</span><span class="ruby-constant">Hash</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">message_or_hash</span>
+    <span class="ruby-identifier">message_or_hash</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">message</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">stub_object</span>(<span class="ruby-identifier">object</span>, <span class="ruby-identifier">message</span>).<span class="ruby-identifier">and_return</span> <span class="ruby-identifier">value</span> }
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">opts</span>[<span class="ruby-value">:expected_from</span>] = <span class="ruby-constant">CallerFilter</span>.<span class="ruby-identifier">first_non_rspec_line</span>
+    <span class="ruby-operator">::</span><span class="ruby-constant">RSpec</span><span class="ruby-operator">::</span><span class="ruby-constant">Mocks</span>.<span class="ruby-identifier">allow_message</span>(<span class="ruby-identifier">object</span>, <span class="ruby-identifier">message_or_hash</span>, <span class="ruby-identifier">opts</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- stub_object-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- stub_object-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="allow-method" class="method-detail ">
+          <a name="method-i-allow"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">allow</span><span
+              class="method-args">(target)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="allow-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/mocks/syntax.rb, line 117</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">allow</span>(<span class="ruby-identifier">target</span>)
+  <span class="ruby-constant">AllowanceTarget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">target</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- allow-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- allow-method -->
+
+      
+        <div id="allow_any_instance_of-method" class="method-detail ">
+          <a name="method-i-allow_any_instance_of"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">allow_any_instance_of</span><span
+              class="method-args">(klass)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="allow_any_instance_of-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/mocks/syntax.rb, line 125</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">allow_any_instance_of</span>(<span class="ruby-identifier">klass</span>)
+  <span class="ruby-constant">AnyInstanceAllowanceTarget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">klass</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- allow_any_instance_of-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- allow_any_instance_of-method -->
+
+      
+        <div id="any_instance-method" class="method-detail ">
+          <a name="method-i-any_instance"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">any_instance</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="any_instance-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/mocks/syntax.rb, line 76</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">any_instance</span>
+  <span class="ruby-operator">::</span><span class="ruby-constant">RSpec</span><span class="ruby-operator">::</span><span class="ruby-constant">Mocks</span>.<span class="ruby-identifier">any_instance_recorder_for</span>(<span class="ruby-keyword">self</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- any_instance-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- any_instance-method -->
+
+      
+        <div id="as_null_object-method" class="method-detail ">
+          <a name="method-i-as_null_object"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">as_null_object</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="as_null_object-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/mocks/syntax.rb, line 61</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">as_null_object</span>
+  <span class="ruby-ivar">@_null_object</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-operator">::</span><span class="ruby-constant">RSpec</span><span class="ruby-operator">::</span><span class="ruby-constant">Mocks</span>.<span class="ruby-identifier">proxy_for</span>(<span class="ruby-keyword">self</span>).<span class="ruby-identifier">as_null_object</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- as_null_object-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- as_null_object-method -->
+
+      
+        <div id="expect-method" class="method-detail ">
+          <a name="method-i-expect"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">expect</span><span
+              class="method-args">(target)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="expect-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/mocks/syntax.rb, line 131</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">expect</span>(<span class="ruby-identifier">target</span>)
+  <span class="ruby-constant">ExpectationTarget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">target</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- expect-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- expect-method -->
+
+      
+        <div id="expect_any_instance_of-method" class="method-detail ">
+          <a name="method-i-expect_any_instance_of"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">expect_any_instance_of</span><span
+              class="method-args">(klass)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="expect_any_instance_of-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/mocks/syntax.rb, line 121</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">expect_any_instance_of</span>(<span class="ruby-identifier">klass</span>)
+  <span class="ruby-constant">AnyInstanceExpectationTarget</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">klass</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- expect_any_instance_of-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- expect_any_instance_of-method -->
+
+      
+        <div id="null_object-3F-method" class="method-detail ">
+          <a name="method-i-null_object-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">null_object?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="null_object-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/mocks/syntax.rb, line 66</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">null_object?</span>
+  <span class="ruby-keyword">defined?</span>(<span class="ruby-ivar">@_null_object</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- null_object-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- null_object-3F-method -->
+
+      
+        <div id="receive-method" class="method-detail ">
+          <a name="method-i-receive"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">receive</span><span
+              class="method-args">(method_name, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="receive-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/mocks/syntax.rb, line 113</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">receive</span>(<span class="ruby-identifier">method_name</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-constant">Matchers</span><span class="ruby-operator">::</span><span class="ruby-constant">Receive</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">method_name</span>, <span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- receive-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- receive-method -->
+
+      
+        <div id="received_message-3F-method" class="method-detail ">
+          <a name="method-i-received_message-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">received_message?</span><span
+              class="method-args">(message, *args, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="received_message-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/mocks/syntax.rb, line 70</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">received_message?</span>(<span class="ruby-identifier">message</span>, *<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-operator">::</span><span class="ruby-constant">RSpec</span><span class="ruby-operator">::</span><span class="ruby-constant">Mocks</span>.<span class="ruby-identifier">proxy_for</span>(<span class="ruby-keyword">self</span>).<span class="ruby-identifier">received_message?</span>(<span class="ruby-identifier">message</span>, *<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- received_message-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- received_message-3F-method -->
+
+      
+        <div id="should_not_receive-method" class="method-detail ">
+          <a name="method-i-should_not_receive"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">should_not_receive</span><span
+              class="method-args">(message, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="should_not_receive-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/mocks/syntax.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">should_not_receive</span>(<span class="ruby-identifier">message</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">opts</span> = { <span class="ruby-value">:expected_from</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">CallerFilter</span>.<span class="ruby-identifier">first_non_rspec_line</span> }
+  <span class="ruby-operator">::</span><span class="ruby-constant">RSpec</span><span class="ruby-operator">::</span><span class="ruby-constant">Mocks</span>.<span class="ruby-identifier">expect_message</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">message</span>.<span class="ruby-identifier">to_sym</span>, <span class="ruby-identifier">opts</span>, &amp;<span class="ruby-identifier">block</span>).<span class="ruby-identifier">never</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- should_not_receive-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- should_not_receive-method -->
+
+      
+        <div id="should_receive-method" class="method-detail ">
+          <a name="method-i-should_receive"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">should_receive</span><span
+              class="method-args">(message, opts={}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="should_receive-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/mocks/syntax.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">should_receive</span>(<span class="ruby-identifier">message</span>, <span class="ruby-identifier">opts</span>={}, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">opts</span>[<span class="ruby-value">:expected_from</span>] <span class="ruby-operator">||=</span> <span class="ruby-constant">CallerFilter</span>.<span class="ruby-identifier">first_non_rspec_line</span>
+  <span class="ruby-operator">::</span><span class="ruby-constant">RSpec</span><span class="ruby-operator">::</span><span class="ruby-constant">Mocks</span>.<span class="ruby-identifier">expect_message</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">message</span>.<span class="ruby-identifier">to_sym</span>, <span class="ruby-identifier">opts</span>, &amp;<span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- should_receive-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- should_receive-method -->
+
+      
+        <div id="stub-method" class="method-detail ">
+          <a name="method-i-stub"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">stub</span><span
+              class="method-args">(message_or_hash, opts={}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="stub-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/mocks/syntax.rb, line 39</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">stub</span>(<span class="ruby-identifier">message_or_hash</span>, <span class="ruby-identifier">opts</span>={}, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-operator">::</span><span class="ruby-constant">RSpec</span><span class="ruby-operator">::</span><span class="ruby-constant">Mocks</span><span class="ruby-operator">::</span><span class="ruby-constant">Syntax</span>.<span class="ruby-identifier">stub_object</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">message_or_hash</span>, <span class="ruby-identifier">opts</span>, &amp;<span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- stub-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- stub-method -->
+
+      
+        <div id="stub-21-method" class="method-detail ">
+          <a name="method-i-stub-21"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">stub!</span><span
+              class="method-args">(message_or_hash, opts={}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="stub-21-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/mocks/syntax.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">stub!</span>(<span class="ruby-identifier">message_or_hash</span>, <span class="ruby-identifier">opts</span>={}, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-operator">::</span><span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">deprecate</span> <span class="ruby-string">&quot;stub!&quot;</span>, <span class="ruby-value">:replacement</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;stub&quot;</span>
+  <span class="ruby-operator">::</span><span class="ruby-constant">RSpec</span><span class="ruby-operator">::</span><span class="ruby-constant">Mocks</span><span class="ruby-operator">::</span><span class="ruby-constant">Syntax</span>.<span class="ruby-identifier">stub_object</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">message_or_hash</span>, <span class="ruby-identifier">opts</span>, &amp;<span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- stub-21-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- stub-21-method -->
+
+      
+        <div id="stub_chain-method" class="method-detail ">
+          <a name="method-i-stub_chain"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">stub_chain</span><span
+              class="method-args">(*chain, &blk)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="stub_chain-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/mocks/syntax.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">stub_chain</span>(*<span class="ruby-identifier">chain</span>, &amp;<span class="ruby-identifier">blk</span>)
+  <span class="ruby-operator">::</span><span class="ruby-constant">RSpec</span><span class="ruby-operator">::</span><span class="ruby-constant">Mocks</span><span class="ruby-operator">::</span><span class="ruby-constant">StubChain</span>.<span class="ruby-identifier">stub_chain_on</span>(<span class="ruby-keyword">self</span>, *<span class="ruby-identifier">chain</span>, &amp;<span class="ruby-identifier">blk</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- stub_chain-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- stub_chain-method -->
+
+      
+        <div id="unstub-method" class="method-detail ">
+          <a name="method-i-unstub"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">unstub</span><span
+              class="method-args">(message)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="unstub-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/mocks/syntax.rb, line 43</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unstub</span>(<span class="ruby-identifier">message</span>)
+  <span class="ruby-operator">::</span><span class="ruby-constant">RSpec</span><span class="ruby-operator">::</span><span class="ruby-constant">Mocks</span>.<span class="ruby-identifier">space</span>.<span class="ruby-identifier">proxy_for</span>(<span class="ruby-keyword">self</span>).<span class="ruby-identifier">remove_stub</span>(<span class="ruby-identifier">message</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- unstub-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- unstub-method -->
+
+      
+        <div id="unstub-21-method" class="method-detail ">
+          <a name="method-i-unstub-21"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">unstub!</span><span
+              class="method-args">(message)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="unstub-21-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/mocks/syntax.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unstub!</span>(<span class="ruby-identifier">message</span>)
+  <span class="ruby-operator">::</span><span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">deprecate</span> <span class="ruby-string">&quot;unstub!&quot;</span>, <span class="ruby-value">:replacement</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;unstub&quot;</span>
+  <span class="ruby-identifier">unstub</span>(<span class="ruby-identifier">message</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- unstub-21-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- unstub-21-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

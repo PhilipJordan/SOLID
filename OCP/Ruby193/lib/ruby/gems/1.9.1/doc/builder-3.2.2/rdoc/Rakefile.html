@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=IBM437" http-equiv="Content-Type" />
+
+  <title>File: Rakefile [builder-3.2.2 Documentation]</title>
+
+  <link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet" />
+
+  <script src="./js/jquery.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript"
+    charset="utf-8"></script>
+</head>
+
+<body class="file">
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./CHANGES.html">CHANGES</a></li>
+        
+          <li class="file"><a href="./MIT-LICENSE.html">MIT-LICENSE</a></li>
+        
+          <li class="file"><a href="./Rakefile.html">Rakefile</a></li>
+        
+          <li class="file"><a href="./doc/releases/builder-1_2_4_rdoc.html">builder-1.2.4.rdoc</a></li>
+        
+          <li class="file"><a href="./doc/releases/builder-2_0_0_rdoc.html">builder-2.0.0.rdoc</a></li>
+        
+          <li class="file"><a href="./doc/releases/builder-2_1_1_rdoc.html">builder-2.1.1.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./Builder.html">Builder</a></li>
+        
+          <li><a href="./BlankSlate.html">Builder::BlankSlate</a></li>
+        
+          <li><a href="./Builder/IllegalBlockError.html">Builder::IllegalBlockError</a></li>
+        
+          <li><a href="./Builder/XmlBase.html">Builder::XmlBase</a></li>
+        
+          <li><a href="./Builder/XmlEvents.html">Builder::XmlEvents</a></li>
+        
+          <li><a href="./Builder/XmlMarkup.html">Builder::XmlMarkup</a></li>
+        
+          <li><a href="./BlankSlate.html">BlankSlate</a></li>
+        
+          <li><a href="./Fixnum.html">Fixnum</a></li>
+        
+          <li><a href="./Kernel.html">Kernel</a></li>
+        
+          <li><a href="./Module.html">Module</a></li>
+        
+          <li><a href="./Object.html">Object</a></li>
+        
+          <li><a href="./String.html">String</a></li>
+        
+          <li><a href="./Symbol.html">Symbol</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    
+<p># <a href="Rakefile.html">Rakefile</a> for rake        -*- ruby -*-</p>
+
+<p># Copyright 2004, 2005, 2006 by Jim Weirich (jim@weirichhouse.org). # All
+rights reserved.</p>
+
+<p># Permission is granted for use, copying, modification, distribution, # and
+distribution of modified versions of this work as long as the # above
+copyright notice is included.</p>
+
+<p>require 'rake/clean' require 'rake/testtask' begin</p>
+
+<pre>require 'rubygems'
+require 'rubygems/package_task'
+require 'rdoc/task'</pre>
+
+<p>rescue Exception</p>
+
+<pre>nil</pre>
+
+<p>end</p>
+
+<p>require './lib/builder/version'</p>
+
+<p># Determine the current version of the software</p>
+
+<p>CLOBBER.include('pkg', 'html')
+CLEAN.include('pkg/builder-*').include('pkg/blankslate-*').exclude('pkg/*.gem')</p>
+
+<p>PKG_VERSION = Builder::VERSION</p>
+
+<p>SRC_RB = <a href="http://'lib/*/.rb'">FileList</a></p>
+
+<p># The default task is run if rake is given no explicit arguments.</p>
+
+<p>desc "Default Task" task :default =&gt; :test_all</p>
+
+<p># Test Tasks ---------------------------------------------------------</p>
+
+<p>desc "Run all tests" task :test_all =&gt; [:test_units] task :ta =&gt;
+[:test_all]</p>
+
+<p>task :tu =&gt; [:test_units]</p>
+
+<p>Rake::TestTask.new("test_units") do |t|</p>
+
+<pre>t.test_files = FileList['test/test*.rb']
+t.libs &lt;&lt; &quot;.&quot;
+t.verbose = false</pre>
+
+<p>end</p>
+
+<p># Create a task to build the RDOC documentation tree.</p>
+
+<p>if defined?(RDoc)</p>
+
+<pre>rd = RDoc::Task.new(&quot;rdoc&quot;) { |rdoc|
+  rdoc.rdoc_dir = 'html'
+  rdoc.title    = &quot;Builder for Markup&quot;
+  rdoc.options &lt;&lt; '--line-numbers' &lt;&lt; '--inline-source' &lt;&lt; '--main' &lt;&lt; 'README.rdoc'
+  rdoc.rdoc_files.include('lib/**/*.rb', '[A-Z]*', 'doc/**/*.rdoc').exclude(&quot;TAGS&quot;)
+  rdoc.template = 'doc/jamis.rb'
+}</pre>
+
+<p>else</p>
+
+<pre>rd = Struct.new(:rdoc_files).new([])</pre>
+
+<p>end</p>
+
+<p># ==================================================================== #
+Create a task that will package the Rake software into distributable # gem
+files.</p>
+
+<p>PKG_FILES = FileList[</p>
+
+<pre>'[A-Z]*',
+'doc/**/*',
+'lib/**/*.rb',
+'test/**/*.rb',
+'rakelib/**/*'</pre>
+
+<p>] PKG_FILES.exclude('test/test_cssbuilder.rb')
+PKG_FILES.exclude('lib/builder/css.rb') PKG_FILES.exclude('TAGS')</p>
+
+<p>BLANKSLATE_FILES = FileList[</p>
+
+<pre>'lib/blankslate.rb',
+'test/test_blankslate.rb'</pre>
+
+<p>]</p>
+
+<p>if ! defined?(Gem)</p>
+
+<pre>puts &quot;Package Target requires RubyGEMs&quot;</pre>
+
+<p>else</p>
+
+<pre>spec = Gem::Specification.new do |s|
+
+  #### Basic information.
+
+  s.name = 'builder'
+  s.version = PKG_VERSION
+  s.summary = &quot;Builders for MarkUp.&quot;
+  s.description = %{\</pre>
+
+<p><a href="Builder.html">Builder</a> provides a number of builder objects
+that make creating structured data simple to do.  Currently the following
+builder objects are supported:</p>
+<ul><li>
+<p>XML Markup</p>
+</li><li>
+<p>XML Events</p>
+</li></ul>
+
+<p>}</p>
+
+<pre>  s.files = PKG_FILES.to_a
+  s.require_path = 'lib'
+
+  s.test_files = PKG_FILES.select { |fn| fn =~ /^test\/test/ }
+
+  s.has_rdoc = true
+  s.extra_rdoc_files = rd.rdoc_files.reject { |fn| fn =~ /\.rb$/ }.to_a
+  s.rdoc_options &lt;&lt;
+    '--title' &lt;&lt;  'Builder -- Easy XML Building' &lt;&lt;
+    '--main' &lt;&lt; 'README.rdoc' &lt;&lt;
+    '--line-numbers'
+
+  s.author = &quot;Jim Weirich&quot;
+  s.email = &quot;jim.weirich@gmail.com&quot;
+  s.homepage = &quot;http://onestepback.org&quot;
+  s.license = 'MIT'
+end
+
+blankslate_spec = Gem::Specification.new do |s|
+
+  #### Basic information.
+
+  s.name = 'blankslate'
+  s.version = PKG_VERSION
+  s.summary = &quot;Blank Slate base class.&quot;
+  s.description = %{\</pre>
+
+<p><a href="BlankSlate.html">BlankSlate</a> provides a base class where almost
+all of the methods from <a href="Object.html">Object</a> and <a
+href="Kernel.html">Kernel</a> have been removed.  This is useful when
+providing proxy object and other classes that make heavy use of
+method_missing. }</p>
+
+<pre>  s.files = BLANKSLATE_FILES.to_a
+  s.require_path = 'lib'
+
+  s.test_files = PKG_FILES.select { |fn| fn =~ /^test\/test/ }
+
+  s.has_rdoc = true
+  s.extra_rdoc_files = rd.rdoc_files.reject { |fn| fn =~ /\.rb$/ }.to_a
+  s.rdoc_options &lt;&lt;
+    '--title' &lt;&lt;  'BlankSlate -- Base Class for building proxies.' &lt;&lt;
+    '--main' &lt;&lt; 'README.rdoc' &lt;&lt;
+    '--line-numbers'
+
+  s.author = &quot;Jim Weirich&quot;
+  s.email = &quot;jim.weirich@gmail.com&quot;
+  s.homepage = &quot;http://onestepback.org&quot;
+  s.license = 'MIT'
+end
+
+namespace 'builder' do
+  Gem::PackageTask.new(spec) do |t|
+    t.need_tar = false
+  end
+end
+
+namespace 'blankslate' do
+  Gem::PackageTask.new(blankslate_spec) do |t|
+    t.need_tar = false
+  end
+end
+
+task :package =&gt; [:remove_tags, 'builder:package', 'blankslate:package']</pre>
+
+<p>end</p>
+
+<p>task :remove_tags do</p>
+
+<pre>rm &quot;TAGS&quot; rescue nil</pre>
+
+<p>end</p>
+
+<p># RCov ---------------------------------------------------------------
+begin</p>
+
+<pre>require 'rcov/rcovtask'
+
+Rcov::RcovTask.new do |t|
+  t.libs &lt;&lt; &quot;test&quot;
+  t.rcov_opts = [
+    '-xRakefile', '--text-report'
+  ]
+  t.test_files = FileList[
+    'test/test*.rb'
+  ]
+  t.output_dir = 'coverage'
+  t.verbose = true
+end</pre>
+
+<p>rescue LoadError</p>
+
+<pre># No rcov available</pre>
+
+<p>end</p>
+
+<p>desc "Install the jamis RDoc template" task :install_jamis_template do</p>
+
+<pre>require 'rbconfig'
+dest_dir = File.join(Config::CONFIG['rubylibdir'], &quot;rdoc/generators/template/html&quot;)
+fail &quot;Unabled to write to #{dest_dir}&quot; unless File.writable?(dest_dir)
+install &quot;doc/jamis.rb&quot;, dest_dir, :verbose =&gt; true</pre>
+
+<p>end</p>
+
+  </div>
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+</body>
+</html>
+

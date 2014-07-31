@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"rcov_opts:EFI"#Cucumber::Rake::Task#rcov_opts;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"#Extra options to pass to rcov.:encoding"IBM437I"VIt's recommended to pass an Array, but if it's a String it will be #split by ' '.;@:
+@file0FI"lib/cucumber/rake/task.rb;@

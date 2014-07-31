@@ -1,0 +1,10 @@
+=== Version 0.3 / 2014-6-1
+* Enhancements
+  * Updated so yml file can now include erb (thanks Justin Rolston)
+
+=== Version 0.2 / 2012-6-9
+* Fixes
+  * Fixed issue with getting default directory
+
+=== Version 0.1 / 2012-5-3
+Initial Release

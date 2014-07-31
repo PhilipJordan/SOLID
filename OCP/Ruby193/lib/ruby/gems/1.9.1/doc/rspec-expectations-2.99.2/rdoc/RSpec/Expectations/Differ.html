@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: RSpec::Expectations::Differ</title>
+
+  <link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../lib/rspec/expectations/differ_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/rspec/expectations/differ.rb">lib/rspec/expectations/differ.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="../../Object.html">Object</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-blue">#blue</a></li>
+          
+          <li><a href="#method-i-color">#color</a></li>
+          
+          <li><a href="#method-i-color_diff">#color_diff</a></li>
+          
+          <li><a href="#method-i-context_lines">#context_lines</a></li>
+          
+          <li><a href="#method-i-diff_as_object">#diff_as_object</a></li>
+          
+          <li><a href="#method-i-diff_as_string">#diff_as_string</a></li>
+          
+          <li><a href="#method-i-format">#format</a></li>
+          
+          <li><a href="#method-i-green">#green</a></li>
+          
+          <li><a href="#method-i-object_to_string">#object_to_string</a></li>
+          
+          <li><a href="#method-i-red">#red</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../RSpec.html">RSpec</a></li>
+        
+          <li><a href="../../RSpec/CallerFilter.html">RSpec::CallerFilter</a></li>
+        
+          <li><a href="../../RSpec/Expectations.html">RSpec::Expectations</a></li>
+        
+          <li><a href="../../RSpec/Expectations/BlockExpectationTarget.html">RSpec::Expectations::BlockExpectationTarget</a></li>
+        
+          <li><a href="../../RSpec/Expectations/Configuration.html">RSpec::Expectations::Configuration</a></li>
+        
+          <li><a href="../../RSpec/Expectations/DeprecatedConstants.html">RSpec::Expectations::DeprecatedConstants</a></li>
+        
+          <li><a href="../../RSpec/Expectations/Deprecation.html">RSpec::Expectations::Deprecation</a></li>
+        
+          <li><a href="../../RSpec/Expectations/Differ.html">RSpec::Expectations::Differ</a></li>
+        
+          <li><a href="../../RSpec/Expectations/ExpectationHandler.html">RSpec::Expectations::ExpectationHandler</a></li>
+        
+          <li><a href="../../RSpec/Expectations/ExpectationNotMetError.html">RSpec::Expectations::ExpectationNotMetError</a></li>
+        
+          <li><a href="../../RSpec/Expectations/ExpectationTarget.html">RSpec::Expectations::ExpectationTarget</a></li>
+        
+          <li><a href="../../RSpec/Expectations/NegativeExpectationHandler.html">RSpec::Expectations::NegativeExpectationHandler</a></li>
+        
+          <li><a href="../../RSpec/Expectations/PositiveExpectationHandler.html">RSpec::Expectations::PositiveExpectationHandler</a></li>
+        
+          <li><a href="../../RSpec/Expectations/Syntax.html">RSpec::Expectations::Syntax</a></li>
+        
+          <li><a href="../../RSpec/Expectations/Syntax/ExpectExpressionGenerator.html">RSpec::Expectations::Syntax::ExpectExpressionGenerator</a></li>
+        
+          <li><a href="../../RSpec/Expectations/Syntax/ShouldExpressionGenerator.html">RSpec::Expectations::Syntax::ShouldExpressionGenerator</a></li>
+        
+          <li><a href="../../RSpec/Expectations/Version.html">RSpec::Expectations::Version</a></li>
+        
+          <li><a href="../../RSpec/Matchers.html">RSpec::Matchers</a></li>
+        
+          <li><a href="../../RSpec/Matchers/BuiltIn.html">RSpec::Matchers::BuiltIn</a></li>
+        
+          <li><a href="../../RSpec/Matchers/BuiltIn/BaseMatcher.html">RSpec::Matchers::BuiltIn::BaseMatcher</a></li>
+        
+          <li><a href="../../RSpec/Matchers/BuiltIn/Be.html">RSpec::Matchers::BuiltIn::Be</a></li>
+        
+          <li><a href="../../RSpec/Matchers/BuiltIn/BeAKindOf.html">RSpec::Matchers::BuiltIn::BeAKindOf</a></li>
+        
+          <li><a href="../../RSpec/Matchers/BuiltIn/BeAnInstanceOf.html">RSpec::Matchers::BuiltIn::BeAnInstanceOf</a></li>
+        
+          <li><a href="../../RSpec/Matchers/BuiltIn/BeComparedTo.html">RSpec::Matchers::BuiltIn::BeComparedTo</a></li>
+        
+          <li><a href="../../RSpec/Matchers/BuiltIn/BeFalsey.html">RSpec::Matchers::BuiltIn::BeFalsey</a></li>
+        
+          <li><a href="../../RSpec/Matchers/BuiltIn/BeHelpers.html">RSpec::Matchers::BuiltIn::BeHelpers</a></li>
+        
+          <li><a href="../../RSpec/Matchers/BuiltIn/BeNil.html">RSpec::Matchers::BuiltIn::BeNil</a></li>
+        
+          <li><a href="../../RSpec/Matchers/BuiltIn/BePredicate.html">RSpec::Matchers::BuiltIn::BePredicate</a></li>
+        
+          <li><a href="../../RSpec/Matchers/BuiltIn/BeTruthy.html">RSpec::Matchers::BuiltIn::BeTruthy</a></li>
+        
+          <li><a href="../../RSpec/Matchers/BuiltIn/BeWithin.html">RSpec::Matchers::BuiltIn::BeWithin</a></li>
+        
+          <li><a href="../../RSpec/Matchers/BuiltIn/Change.html">RSpec::Matchers::BuiltIn::Change</a></li>
+        
+          <li><a href="../../RSpec/Matchers/BuiltIn/Cover.html">RSpec::Matchers::BuiltIn::Cover</a></li>
+        
+          <li><a href="../../RSpec/Matchers/BuiltIn/EndWith.html">RSpec::Matchers::BuiltIn::EndWith</a></li>
+        
+          <li><a href="../../RSpec/Matchers/BuiltIn/Eq.html">RSpec::Matchers::BuiltIn::Eq</a></li>
+        
+          <li><a href="../../RSpec/Matchers/BuiltIn/Eql.html">RSpec::Matchers::BuiltIn::Eql</a></li>
+        
+          <li><a href="../../RSpec/Matchers/BuiltIn/Equal.html">RSpec::Matchers::BuiltIn::Equal</a></li>
+        
+          <li><a href="../../RSpec/Matchers/BuiltIn/Exist.html">RSpec::Matchers::BuiltIn::Exist</a></li>
+        
+          <li><a href="../../RSpec/Matchers/BuiltIn/Has.html">RSpec::Matchers::BuiltIn::Has</a></li>
+        
+          <li><a href="../../RSpec/Matchers/BuiltIn/Have.html">RSpec::Matchers::BuiltIn::Have</a></li>
+        
+          <li><a href="../../RSpec/Matchers/BuiltIn/Include.html">RSpec::Matchers::BuiltIn::Include</a></li>
+        
+          <li><a href="../../RSpec/Matchers/BuiltIn/Match.html">RSpec::Matchers::BuiltIn::Match</a></li>
+        
+          <li><a href="../../RSpec/Matchers/BuiltIn/MatchArray.html">RSpec::Matchers::BuiltIn::MatchArray</a></li>
+        
+          <li><a href="../../RSpec/Matchers/BuiltIn/NegativeOperatorMatcher.html">RSpec::Matchers::BuiltIn::NegativeOperatorMatcher</a></li>
+        
+          <li><a href="../../RSpec/Matchers/BuiltIn/OperatorMatcher.html">RSpec::Matchers::BuiltIn::OperatorMatcher</a></li>
+        
+          <li><a href="../../RSpec/Matchers/BuiltIn/PositiveOperatorMatcher.html">RSpec::Matchers::BuiltIn::PositiveOperatorMatcher</a></li>
+        
+          <li><a href="../../RSpec/Matchers/BuiltIn/RaiseError.html">RSpec::Matchers::BuiltIn::RaiseError</a></li>
+        
+          <li><a href="../../RSpec/Matchers/BuiltIn/RespondTo.html">RSpec::Matchers::BuiltIn::RespondTo</a></li>
+        
+          <li><a href="../../RSpec/Matchers/BuiltIn/Satisfy.html">RSpec::Matchers::BuiltIn::Satisfy</a></li>
+        
+          <li><a href="../../RSpec/Matchers/BuiltIn/StartAndEndWith.html">RSpec::Matchers::BuiltIn::StartAndEndWith</a></li>
+        
+          <li><a href="../../RSpec/Matchers/BuiltIn/StartWith.html">RSpec::Matchers::BuiltIn::StartWith</a></li>
+        
+          <li><a href="../../RSpec/Matchers/BuiltIn/ThrowSymbol.html">RSpec::Matchers::BuiltIn::ThrowSymbol</a></li>
+        
+          <li><a href="../../RSpec/Matchers/BuiltIn/YieldControl.html">RSpec::Matchers::BuiltIn::YieldControl</a></li>
+        
+          <li><a href="../../RSpec/Matchers/BuiltIn/YieldProbe.html">RSpec::Matchers::BuiltIn::YieldProbe</a></li>
+        
+          <li><a href="../../RSpec/Matchers/BuiltIn/YieldSuccessiveArgs.html">RSpec::Matchers::BuiltIn::YieldSuccessiveArgs</a></li>
+        
+          <li><a href="../../RSpec/Matchers/BuiltIn/YieldWithArgs.html">RSpec::Matchers::BuiltIn::YieldWithArgs</a></li>
+        
+          <li><a href="../../RSpec/Matchers/BuiltIn/YieldWithNoArgs.html">RSpec::Matchers::BuiltIn::YieldWithNoArgs</a></li>
+        
+          <li><a href="../../RSpec/Matchers/DSL.html">RSpec::Matchers::DSL</a></li>
+        
+          <li><a href="../../RSpec/Matchers/DSL/Matcher.html">RSpec::Matchers::DSL::Matcher</a></li>
+        
+          <li><a href="../../RSpec/Matchers/DifferentiateBlockMethodTypes.html">RSpec::Matchers::DifferentiateBlockMethodTypes</a></li>
+        
+          <li><a href="../../RSpec/Matchers/Extensions.html">RSpec::Matchers::Extensions</a></li>
+        
+          <li><a href="../../RSpec/Matchers/Extensions/InstanceEvalWithArgs.html">RSpec::Matchers::Extensions::InstanceEvalWithArgs</a></li>
+        
+          <li><a href="../../RSpec/Matchers/MatchAliases.html">RSpec::Matchers::MatchAliases</a></li>
+        
+          <li><a href="../../RSpec/Matchers/Pretty.html">RSpec::Matchers::Pretty</a></li>
+        
+          <li><a href="../../Array.html">Array</a></li>
+        
+          <li><a href="../../Object.html">Object</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">RSpec::Expectations::Differ</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="diff_as_object-method" class="method-detail ">
+          <a name="method-i-diff_as_object"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">diff_as_object</span><span
+              class="method-args">(actual, expected)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="diff_as_object-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/expectations/differ.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">diff_as_object</span>(<span class="ruby-identifier">actual</span>, <span class="ruby-identifier">expected</span>)
+  <span class="ruby-identifier">actual_as_string</span> = <span class="ruby-identifier">object_to_string</span>(<span class="ruby-identifier">actual</span>)
+  <span class="ruby-identifier">expected_as_string</span> = <span class="ruby-identifier">object_to_string</span>(<span class="ruby-identifier">expected</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">diff</span> = <span class="ruby-identifier">diff_as_string</span>(<span class="ruby-identifier">actual_as_string</span>, <span class="ruby-identifier">expected_as_string</span>)
+    <span class="ruby-identifier">color_diff</span> <span class="ruby-identifier">diff</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- diff_as_object-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- diff_as_object-method -->
+
+      
+        <div id="diff_as_string-method" class="method-detail ">
+          <a name="method-i-diff_as_string"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">diff_as_string</span><span
+              class="method-args">(input_data_new, input_data_old)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>This is snagged from diff/lcs/ldiff.rb (which is a commandline tool)</p>
+            
+
+            
+            <div class="method-source-code" id="diff_as_string-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/expectations/differ.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">diff_as_string</span>(<span class="ruby-identifier">input_data_new</span>, <span class="ruby-identifier">input_data_old</span>)
+  <span class="ruby-identifier">encoding</span> = <span class="ruby-identifier">pick_encoding</span> <span class="ruby-identifier">input_data_new</span>, <span class="ruby-identifier">input_data_old</span>
+  <span class="ruby-identifier">output</span> = <span class="ruby-identifier">matching_encoding</span>(<span class="ruby-string">&quot;&quot;</span>, <span class="ruby-identifier">encoding</span>)
+  <span class="ruby-identifier">data_old</span> = <span class="ruby-identifier">input_data_old</span>.<span class="ruby-identifier">split</span>(<span class="ruby-identifier">matching_encoding</span>(<span class="ruby-string">&quot;\n&quot;</span>, <span class="ruby-identifier">encoding</span>)).<span class="ruby-identifier">map!</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">chomp</span> }
+  <span class="ruby-identifier">data_new</span> = <span class="ruby-identifier">input_data_new</span>.<span class="ruby-identifier">split</span>(<span class="ruby-identifier">matching_encoding</span>(<span class="ruby-string">&quot;\n&quot;</span>, <span class="ruby-identifier">encoding</span>)).<span class="ruby-identifier">map!</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">chomp</span> }
+  <span class="ruby-identifier">diffs</span> = <span class="ruby-constant">Diff</span><span class="ruby-operator">::</span><span class="ruby-constant">LCS</span>.<span class="ruby-identifier">diff</span>(<span class="ruby-identifier">data_old</span>, <span class="ruby-identifier">data_new</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">output</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">diffs</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-identifier">oldhunk</span> = <span class="ruby-identifier">hunk</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">file_length_difference</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">diffs</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">piece</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">hunk</span> = <span class="ruby-constant">Diff</span><span class="ruby-operator">::</span><span class="ruby-constant">LCS</span><span class="ruby-operator">::</span><span class="ruby-constant">Hunk</span>.<span class="ruby-identifier">new</span>(
+        <span class="ruby-identifier">data_old</span>, <span class="ruby-identifier">data_new</span>, <span class="ruby-identifier">piece</span>, <span class="ruby-identifier">context_lines</span>, <span class="ruby-identifier">file_length_difference</span>
+      )
+      <span class="ruby-identifier">file_length_difference</span> = <span class="ruby-identifier">hunk</span>.<span class="ruby-identifier">file_length_difference</span>
+      <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">oldhunk</span>
+      <span class="ruby-comment"># Hunks may overlap, which is why we need to be careful when our</span>
+      <span class="ruby-comment"># diff includes lines of context. Otherwise, we might print</span>
+      <span class="ruby-comment"># redundant lines.</span>
+      <span class="ruby-keyword">if</span> (<span class="ruby-identifier">context_lines</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>) <span class="ruby-keyword">and</span> <span class="ruby-identifier">hunk</span>.<span class="ruby-identifier">overlaps?</span>(<span class="ruby-identifier">oldhunk</span>)
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">hunk</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:merge</span>)
+          <span class="ruby-comment"># diff-lcs 1.2.x</span>
+          <span class="ruby-identifier">hunk</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-identifier">oldhunk</span>)
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-comment"># diff-lcs 1.1.3</span>
+          <span class="ruby-identifier">hunk</span>.<span class="ruby-identifier">unshift</span>(<span class="ruby-identifier">oldhunk</span>)
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">output</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">matching_encoding</span>(<span class="ruby-identifier">oldhunk</span>.<span class="ruby-identifier">diff</span>(<span class="ruby-identifier">format</span>).<span class="ruby-identifier">to_s</span>, <span class="ruby-identifier">encoding</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">ensure</span>
+      <span class="ruby-identifier">oldhunk</span> = <span class="ruby-identifier">hunk</span>
+      <span class="ruby-identifier">output</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">matching_encoding</span>(<span class="ruby-string">&quot;\n&quot;</span>, <span class="ruby-identifier">encoding</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment">#Handle the last remaining hunk</span>
+  <span class="ruby-identifier">output</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">matching_encoding</span>(<span class="ruby-identifier">oldhunk</span>.<span class="ruby-identifier">diff</span>(<span class="ruby-identifier">format</span>).<span class="ruby-identifier">to_s</span>, <span class="ruby-identifier">encoding</span>)
+  <span class="ruby-identifier">output</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">matching_encoding</span>(<span class="ruby-string">&quot;\n&quot;</span>, <span class="ruby-identifier">encoding</span>)
+  <span class="ruby-identifier">color_diff</span> <span class="ruby-identifier">output</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Encoding</span><span class="ruby-operator">::</span><span class="ruby-constant">CompatibilityError</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">input_data_new</span>.<span class="ruby-identifier">encoding</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">input_data_old</span>.<span class="ruby-identifier">encoding</span>
+    <span class="ruby-node">&quot;Could not produce a diff because the encoding of the actual string (#{input_data_old.encoding}) &quot;</span><span class="ruby-operator">+</span>
+    <span class="ruby-node">&quot;differs from the encoding of the expected string (#{input_data_new.encoding})&quot;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-node">&quot;Could not produce a diff because of the encoding of the string (#{input_data_old.encoding})&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- diff_as_string-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- diff_as_string-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+      <div id="protected-instance-method-details" class="method-section section">
+        <h3 class="section-header">Protected Instance Methods</h3>
+
+      
+        <div id="blue-method" class="method-detail ">
+          <a name="method-i-blue"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">blue</span><span
+              class="method-args">(text)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="blue-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/expectations/differ.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">blue</span>(<span class="ruby-identifier">text</span>)
+  <span class="ruby-identifier">color</span>(<span class="ruby-identifier">text</span>, <span class="ruby-value">34</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- blue-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- blue-method -->
+
+      
+        <div id="color-method" class="method-detail ">
+          <a name="method-i-color"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">color</span><span
+              class="method-args">(text, color_code)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="color-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/expectations/differ.rb, line 76</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">color</span>(<span class="ruby-identifier">text</span>, <span class="ruby-identifier">color_code</span>)
+  <span class="ruby-node">&quot;\e[#{color_code}m#{text}\e[0m&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- color-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- color-method -->
+
+      
+        <div id="color_diff-method" class="method-detail ">
+          <a name="method-i-color_diff"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">color_diff</span><span
+              class="method-args">(diff)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="color_diff-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/expectations/differ.rb, line 92</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">color_diff</span>(<span class="ruby-identifier">diff</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">diff</span> <span class="ruby-keyword">unless</span> <span class="ruby-constant">RSpec</span><span class="ruby-operator">::</span><span class="ruby-constant">Matchers</span>.<span class="ruby-identifier">configuration</span>.<span class="ruby-identifier">color?</span>
+
+  <span class="ruby-identifier">diff</span>.<span class="ruby-identifier">lines</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">line</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">chr</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;+&quot;</span>
+      <span class="ruby-identifier">green</span> <span class="ruby-identifier">line</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;-&quot;</span>
+      <span class="ruby-identifier">red</span> <span class="ruby-identifier">line</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;@&quot;</span>
+      <span class="ruby-identifier">line</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">chr</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;@&quot;</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">blue</span>(<span class="ruby-identifier">line</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">line</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">line</span>
+    <span class="ruby-keyword">end</span>
+  }.<span class="ruby-identifier">join</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- color_diff-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- color_diff-method -->
+
+      
+        <div id="context_lines-method" class="method-detail ">
+          <a name="method-i-context_lines"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">context_lines</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="context_lines-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/expectations/differ.rb, line 72</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">context_lines</span>
+  <span class="ruby-value">3</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- context_lines-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- context_lines-method -->
+
+      
+        <div id="format-method" class="method-detail ">
+          <a name="method-i-format"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">format</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="format-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/expectations/differ.rb, line 68</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">format</span>
+  <span class="ruby-value">:unified</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- format-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- format-method -->
+
+      
+        <div id="green-method" class="method-detail ">
+          <a name="method-i-green"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">green</span><span
+              class="method-args">(text)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="green-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/expectations/differ.rb, line 84</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">green</span>(<span class="ruby-identifier">text</span>)
+  <span class="ruby-identifier">color</span>(<span class="ruby-identifier">text</span>, <span class="ruby-value">32</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- green-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- green-method -->
+
+      
+        <div id="object_to_string-method" class="method-detail ">
+          <a name="method-i-object_to_string"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">object_to_string</span><span
+              class="method-args">(object)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="object_to_string-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/expectations/differ.rb, line 109</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">object_to_string</span>(<span class="ruby-identifier">object</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">object</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Hash</span>
+    <span class="ruby-identifier">object</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">sort_by</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">k</span><span class="ruby-operator">|</span> <span class="ruby-identifier">k</span>.<span class="ruby-identifier">to_s</span> }.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">pp_key</span>   = <span class="ruby-constant">PP</span>.<span class="ruby-identifier">singleline_pp</span>(<span class="ruby-identifier">key</span>, <span class="ruby-string">&quot;&quot;</span>)
+      <span class="ruby-identifier">pp_value</span> = <span class="ruby-constant">PP</span>.<span class="ruby-identifier">singleline_pp</span>(<span class="ruby-identifier">object</span>[<span class="ruby-identifier">key</span>], <span class="ruby-string">&quot;&quot;</span>)
+
+      <span class="ruby-comment"># on 1.9.3 PP seems to minimise to US-ASCII, ensure we're matching source encoding</span>
+      <span class="ruby-comment">#</span>
+      <span class="ruby-comment"># note, PP is used to ensure the ordering of the internal values of key/value e.g.</span>
+      <span class="ruby-comment"># &lt;# a: b: c:&gt; not &lt;# c: a: b:&gt;</span>
+      <span class="ruby-identifier">encoding</span> = <span class="ruby-identifier">pick_encoding</span> <span class="ruby-identifier">pp_key</span>, <span class="ruby-identifier">pp_value</span>
+      <span class="ruby-identifier">matching_encoding</span>(<span class="ruby-node">&quot;#{pp_key} =&gt; #{pp_value}&quot;</span>, <span class="ruby-identifier">encoding</span>)
+    <span class="ruby-keyword">end</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;,\n&quot;</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">String</span>
+    <span class="ruby-identifier">object</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/\n/</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">object</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">object</span>.<span class="ruby-identifier">inspect</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-constant">PP</span>.<span class="ruby-identifier">pp</span>(<span class="ruby-identifier">object</span>,<span class="ruby-string">&quot;&quot;</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- object_to_string-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- object_to_string-method -->
+
+      
+        <div id="red-method" class="method-detail ">
+          <a name="method-i-red"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">red</span><span
+              class="method-args">(text)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="red-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/expectations/differ.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">red</span>(<span class="ruby-identifier">text</span>)
+  <span class="ruby-identifier">color</span>(<span class="ruby-identifier">text</span>, <span class="ruby-value">31</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- red-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- red-method -->
+
+      
+      </div><!-- protected-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

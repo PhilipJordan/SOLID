@@ -1,0 +1,970 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Module: Cucumber::RbSupport::RbDsl</title>
+
+  <link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../lib/cucumber/rb_support/rb_dsl_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/cucumber/rb_support/rb_dsl.rb">lib/cucumber/rb_support/rb_dsl.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-alias_adverb">::alias_adverb</a></li>
+          
+          <li><a href="#method-c-build_rb_world_factory">::build_rb_world_factory</a></li>
+          
+          <li><a href="#method-c-register_rb_hook">::register_rb_hook</a></li>
+          
+          <li><a href="#method-c-register_rb_step_definition">::register_rb_step_definition</a></li>
+          
+          <li><a href="#method-c-register_rb_transform">::register_rb_transform</a></li>
+          
+          <li><a href="#method-i-After">#After</a></li>
+          
+          <li><a href="#method-i-AfterConfiguration">#AfterConfiguration</a></li>
+          
+          <li><a href="#method-i-AfterStep">#AfterStep</a></li>
+          
+          <li><a href="#method-i-Around">#Around</a></li>
+          
+          <li><a href="#method-i-Before">#Before</a></li>
+          
+          <li><a href="#method-i-Transform">#Transform</a></li>
+          
+          <li><a href="#method-i-World">#World</a></li>
+          
+          <li><a href="#method-i-register_rb_step_definition">#register_rb_step_definition</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../../lib/README_rdoc.html">README.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../Cucumber.html">Cucumber</a></li>
+        
+          <li><a href="../../Cucumber/Ambiguous.html">Cucumber::Ambiguous</a></li>
+        
+          <li><a href="../../Cucumber/ArityMismatchError.html">Cucumber::ArityMismatchError</a></li>
+        
+          <li><a href="../../Cucumber/Ast.html">Cucumber::Ast</a></li>
+        
+          <li><a href="../../Cucumber/Ast/EmptyBackground.html">Cucumber::Ast::EmptyBackground</a></li>
+        
+          <li><a href="../../Cucumber/Ast/HasLocation.html">Cucumber::Ast::HasLocation</a></li>
+        
+          <li><a href="../../Cucumber/Ast/Location.html">Cucumber::Ast::Location</a></li>
+        
+          <li><a href="../../Cucumber/Ast/MultilineArgument.html">Cucumber::Ast::MultilineArgument</a></li>
+        
+          <li><a href="../../Cucumber/Ast/Names.html">Cucumber::Ast::Names</a></li>
+        
+          <li><a href="../../Cucumber/Ast/OutlineTable.html">Cucumber::Ast::OutlineTable</a></li>
+        
+          <li><a href="../../Cucumber/Ast/OutlineTable/ExampleRow.html">Cucumber::Ast::OutlineTable::ExampleRow</a></li>
+        
+          <li><a href="../../Cucumber/Ast/OutlineTable/ExampleRow/InvalidForHeaderRowError.html">Cucumber::Ast::OutlineTable::ExampleRow::InvalidForHeaderRowError</a></li>
+        
+          <li><a href="../../Cucumber/Ast/Table.html">Cucumber::Ast::Table</a></li>
+        
+          <li><a href="../../Cucumber/Ast/Table/Builder.html">Cucumber::Ast::Table::Builder</a></li>
+        
+          <li><a href="../../Cucumber/Ast/Table/Different.html">Cucumber::Ast::Table::Different</a></li>
+        
+          <li><a href="../../Cucumber/Ast/TreeWalker.html">Cucumber::Ast::TreeWalker</a></li>
+        
+          <li><a href="../../Cucumber/Ast/Visitor.html">Cucumber::Ast::Visitor</a></li>
+        
+          <li><a href="../../Cucumber/Cli.html">Cucumber::Cli</a></li>
+        
+          <li><a href="../../Cucumber/Cli/Configuration.html">Cucumber::Cli::Configuration</a></li>
+        
+          <li><a href="../../Cucumber/Cli/Configuration/LogFormatter.html">Cucumber::Cli::Configuration::LogFormatter</a></li>
+        
+          <li><a href="../../Cucumber/Cli/DRbClient.html">Cucumber::Cli::DRbClient</a></li>
+        
+          <li><a href="../../Cucumber/Cli/DRbClientError.html">Cucumber::Cli::DRbClientError</a></li>
+        
+          <li><a href="../../Cucumber/Cli/Main.html">Cucumber::Cli::Main</a></li>
+        
+          <li><a href="../../Cucumber/Cli/Options.html">Cucumber::Cli::Options</a></li>
+        
+          <li><a href="../../Cucumber/Cli/ProfileLoader.html">Cucumber::Cli::ProfileLoader</a></li>
+        
+          <li><a href="../../Cucumber/Cli/ProfileNotFound.html">Cucumber::Cli::ProfileNotFound</a></li>
+        
+          <li><a href="../../Cucumber/Cli/ProfilesNotDefinedError.html">Cucumber::Cli::ProfilesNotDefinedError</a></li>
+        
+          <li><a href="../../Cucumber/Cli/YmlLoadError.html">Cucumber::Cli::YmlLoadError</a></li>
+        
+          <li><a href="../../Cucumber/Configuration.html">Cucumber::Configuration</a></li>
+        
+          <li><a href="../../Cucumber/FeatureFile.html">Cucumber::FeatureFile</a></li>
+        
+          <li><a href="../../Cucumber/FeatureFile/FixRuby21Bug9285.html">Cucumber::FeatureFile::FixRuby21Bug9285</a></li>
+        
+          <li><a href="../../Cucumber/Formatter.html">Cucumber::Formatter</a></li>
+        
+          <li><a href="../../Cucumber/Formatter/ANSIColor.html">Cucumber::Formatter::ANSIColor</a></li>
+        
+          <li><a href="../../Cucumber/Formatter/Console.html">Cucumber::Formatter::Console</a></li>
+        
+          <li><a href="../../Cucumber/Formatter/Debug.html">Cucumber::Formatter::Debug</a></li>
+        
+          <li><a href="../../Cucumber/Formatter/Duration.html">Cucumber::Formatter::Duration</a></li>
+        
+          <li><a href="../../Cucumber/Formatter/GherkinFormatterAdapter.html">Cucumber::Formatter::GherkinFormatterAdapter</a></li>
+        
+          <li><a href="../../Cucumber/Formatter/Gpretty.html">Cucumber::Formatter::Gpretty</a></li>
+        
+          <li><a href="../../Cucumber/Formatter/Html.html">Cucumber::Formatter::Html</a></li>
+        
+          <li><a href="../../Cucumber/Formatter/Html/SnippetExtractor.html">Cucumber::Formatter::Html::SnippetExtractor</a></li>
+        
+          <li><a href="../../Cucumber/Formatter/Html/SnippetExtractor/NullConverter.html">Cucumber::Formatter::Html::SnippetExtractor::NullConverter</a></li>
+        
+          <li><a href="../../Cucumber/Formatter/Interceptor.html">Cucumber::Formatter::Interceptor</a></li>
+        
+          <li><a href="../../Cucumber/Formatter/Interceptor/Pipe.html">Cucumber::Formatter::Interceptor::Pipe</a></li>
+        
+          <li><a href="../../Cucumber/Formatter/Io.html">Cucumber::Formatter::Io</a></li>
+        
+          <li><a href="../../Cucumber/Formatter/Json.html">Cucumber::Formatter::Json</a></li>
+        
+          <li><a href="../../Cucumber/Formatter/JsonPretty.html">Cucumber::Formatter::JsonPretty</a></li>
+        
+          <li><a href="../../Cucumber/Formatter/Junit.html">Cucumber::Formatter::Junit</a></li>
+        
+          <li><a href="../../Cucumber/Formatter/Junit/UnNamedFeatureError.html">Cucumber::Formatter::Junit::UnNamedFeatureError</a></li>
+        
+          <li><a href="../../Cucumber/Formatter/Pretty.html">Cucumber::Formatter::Pretty</a></li>
+        
+          <li><a href="../../Cucumber/Formatter/Progress.html">Cucumber::Formatter::Progress</a></li>
+        
+          <li><a href="../../Cucumber/Formatter/Rerun.html">Cucumber::Formatter::Rerun</a></li>
+        
+          <li><a href="../../Cucumber/Formatter/Stepdefs.html">Cucumber::Formatter::Stepdefs</a></li>
+        
+          <li><a href="../../Cucumber/Formatter/Steps.html">Cucumber::Formatter::Steps</a></li>
+        
+          <li><a href="../../Cucumber/Formatter/Summary.html">Cucumber::Formatter::Summary</a></li>
+        
+          <li><a href="../../Cucumber/Formatter/Usage.html">Cucumber::Formatter::Usage</a></li>
+        
+          <li><a href="../../Cucumber/Formatter/Usage/StepDefKey.html">Cucumber::Formatter::Usage::StepDefKey</a></li>
+        
+          <li><a href="../../Cucumber/JsSupport.html">Cucumber::JsSupport</a></li>
+        
+          <li><a href="../../Cucumber/JsSupport/JsArg.html">Cucumber::JsSupport::JsArg</a></li>
+        
+          <li><a href="../../Cucumber/JsSupport/JsHook.html">Cucumber::JsSupport::JsHook</a></li>
+        
+          <li><a href="../../Cucumber/JsSupport/JsLanguage.html">Cucumber::JsSupport::JsLanguage</a></li>
+        
+          <li><a href="../../Cucumber/JsSupport/JsSnippets.html">Cucumber::JsSupport::JsSnippets</a></li>
+        
+          <li><a href="../../Cucumber/JsSupport/JsStepDefinition.html">Cucumber::JsSupport::JsStepDefinition</a></li>
+        
+          <li><a href="../../Cucumber/JsSupport/JsTransform.html">Cucumber::JsSupport::JsTransform</a></li>
+        
+          <li><a href="../../Cucumber/JsSupport/JsWorld.html">Cucumber::JsSupport::JsWorld</a></li>
+        
+          <li><a href="../../Cucumber/LanguageSupport.html">Cucumber::LanguageSupport</a></li>
+        
+          <li><a href="../../Cucumber/LanguageSupport/LanguageMethods.html">Cucumber::LanguageSupport::LanguageMethods</a></li>
+        
+          <li><a href="../../Cucumber/LoadPath.html">Cucumber::LoadPath</a></li>
+        
+          <li><a href="../../Cucumber/Parser.html">Cucumber::Parser</a></li>
+        
+          <li><a href="../../Cucumber/Parser/GherkinBuilder.html">Cucumber::Parser::GherkinBuilder</a></li>
+        
+          <li><a href="../../Cucumber/Parser/GherkinBuilder/BackgroundBuilder.html">Cucumber::Parser::GherkinBuilder::BackgroundBuilder</a></li>
+        
+          <li><a href="../../Cucumber/Parser/GherkinBuilder/Builder.html">Cucumber::Parser::GherkinBuilder::Builder</a></li>
+        
+          <li><a href="../../Cucumber/Parser/GherkinBuilder/FeatureBuilder.html">Cucumber::Parser::GherkinBuilder::FeatureBuilder</a></li>
+        
+          <li><a href="../../Cucumber/Parser/GherkinBuilder/ScenarioBuilder.html">Cucumber::Parser::GherkinBuilder::ScenarioBuilder</a></li>
+        
+          <li><a href="../../Cucumber/Parser/GherkinBuilder/ScenarioOutlineBuilder.html">Cucumber::Parser::GherkinBuilder::ScenarioOutlineBuilder</a></li>
+        
+          <li><a href="../../Cucumber/Parser/GherkinBuilder/StepBuilder.html">Cucumber::Parser::GherkinBuilder::StepBuilder</a></li>
+        
+          <li><a href="../../Cucumber/Pending.html">Cucumber::Pending</a></li>
+        
+          <li><a href="../../Cucumber/PySupport.html">Cucumber::PySupport</a></li>
+        
+          <li><a href="../../Cucumber/PySupport/PyLanguage.html">Cucumber::PySupport::PyLanguage</a></li>
+        
+          <li><a href="../../Cucumber/Rake.html">Cucumber::Rake</a></li>
+        
+          <li><a href="../../Cucumber/Rake/Task.html">Cucumber::Rake::Task</a></li>
+        
+          <li><a href="../../Cucumber/RbSupport.html">Cucumber::RbSupport</a></li>
+        
+          <li><a href="../../Cucumber/RbSupport/MultipleWorld.html">Cucumber::RbSupport::MultipleWorld</a></li>
+        
+          <li><a href="../../Cucumber/RbSupport/NilWorld.html">Cucumber::RbSupport::NilWorld</a></li>
+        
+          <li><a href="../../Cucumber/RbSupport/RbDsl.html">Cucumber::RbSupport::RbDsl</a></li>
+        
+          <li><a href="../../Cucumber/RbSupport/RbHook.html">Cucumber::RbSupport::RbHook</a></li>
+        
+          <li><a href="../../Cucumber/RbSupport/RbLanguage.html">Cucumber::RbSupport::RbLanguage</a></li>
+        
+          <li><a href="../../Cucumber/RbSupport/RbStepDefinition.html">Cucumber::RbSupport::RbStepDefinition</a></li>
+        
+          <li><a href="../../Cucumber/RbSupport/RbStepDefinition/MissingProc.html">Cucumber::RbSupport::RbStepDefinition::MissingProc</a></li>
+        
+          <li><a href="../../Cucumber/RbSupport/RbTransform.html">Cucumber::RbSupport::RbTransform</a></li>
+        
+          <li><a href="../../Cucumber/RbSupport/RbTransform/MissingProc.html">Cucumber::RbSupport::RbTransform::MissingProc</a></li>
+        
+          <li><a href="../../Cucumber/RbSupport/RbWorld.html">Cucumber::RbSupport::RbWorld</a></li>
+        
+          <li><a href="../../Cucumber/RbSupport/RegexpArgumentMatcher.html">Cucumber::RbSupport::RegexpArgumentMatcher</a></li>
+        
+          <li><a href="../../Cucumber/RbSupport/Snippet.html">Cucumber::RbSupport::Snippet</a></li>
+        
+          <li><a href="../../Cucumber/RbSupport/Snippet/BaseSnippet.html">Cucumber::RbSupport::Snippet::BaseSnippet</a></li>
+        
+          <li><a href="../../Cucumber/RbSupport/Snippet/Classic.html">Cucumber::RbSupport::Snippet::Classic</a></li>
+        
+          <li><a href="../../Cucumber/RbSupport/Snippet/Percent.html">Cucumber::RbSupport::Snippet::Percent</a></li>
+        
+          <li><a href="../../Cucumber/RbSupport/Snippet/Regexp.html">Cucumber::RbSupport::Snippet::Regexp</a></li>
+        
+          <li><a href="../../Cucumber/Runtime.html">Cucumber::Runtime</a></li>
+        
+          <li><a href="../../Cucumber/Runtime/FeaturesLoader.html">Cucumber::Runtime::FeaturesLoader</a></li>
+        
+          <li><a href="../../Cucumber/Runtime/ForProgrammingLanguages.html">Cucumber::Runtime::ForProgrammingLanguages</a></li>
+        
+          <li><a href="../../Cucumber/Runtime/Results.html">Cucumber::Runtime::Results</a></li>
+        
+          <li><a href="../../Cucumber/Runtime/SupportCode.html">Cucumber::Runtime::SupportCode</a></li>
+        
+          <li><a href="../../Cucumber/Runtime/SupportCode/StepInvoker.html">Cucumber::Runtime::SupportCode::StepInvoker</a></li>
+        
+          <li><a href="../../Cucumber/Runtime/UserInterface.html">Cucumber::Runtime::UserInterface</a></li>
+        
+          <li><a href="../../Cucumber/StepDefinitionLight.html">Cucumber::StepDefinitionLight</a></li>
+        
+          <li><a href="../../Cucumber/StepDefinitions.html">Cucumber::StepDefinitions</a></li>
+        
+          <li><a href="../../Cucumber/StepMother.html">Cucumber::StepMother</a></li>
+        
+          <li><a href="../../Cucumber/TagExcess.html">Cucumber::TagExcess</a></li>
+        
+          <li><a href="../../Cucumber/Term.html">Cucumber::Term</a></li>
+        
+          <li><a href="../../Cucumber/Term/ANSIColor.html">Cucumber::Term::ANSIColor</a></li>
+        
+          <li><a href="../../Cucumber/Undefined.html">Cucumber::Undefined</a></li>
+        
+          <li><a href="../../Cucumber/Unit.html">Cucumber::Unit</a></li>
+        
+          <li><a href="../../Cucumber/WireSupport.html">Cucumber::WireSupport</a></li>
+        
+          <li><a href="../../Cucumber/WireSupport/Configuration.html">Cucumber::WireSupport::Configuration</a></li>
+        
+          <li><a href="../../Cucumber/WireSupport/Connection.html">Cucumber::WireSupport::Connection</a></li>
+        
+          <li><a href="../../Cucumber/WireSupport/Connection/ConnectionError.html">Cucumber::WireSupport::Connection::ConnectionError</a></li>
+        
+          <li><a href="../../Cucumber/WireSupport/RequestHandler.html">Cucumber::WireSupport::RequestHandler</a></li>
+        
+          <li><a href="../../Cucumber/WireSupport/WireException.html">Cucumber::WireSupport::WireException</a></li>
+        
+          <li><a href="../../Cucumber/WireSupport/WireException/CanSetName.html">Cucumber::WireSupport::WireException::CanSetName</a></li>
+        
+          <li><a href="../../Cucumber/WireSupport/WireLanguage.html">Cucumber::WireSupport::WireLanguage</a></li>
+        
+          <li><a href="../../Cucumber/WireSupport/WirePacket.html">Cucumber::WireSupport::WirePacket</a></li>
+        
+          <li><a href="../../Cucumber/WireSupport/WireProtocol.html">Cucumber::WireSupport::WireProtocol</a></li>
+        
+          <li><a href="../../Cucumber/WireSupport/WireProtocol/Requests.html">Cucumber::WireSupport::WireProtocol::Requests</a></li>
+        
+          <li><a href="../../Cucumber/WireSupport/WireProtocol/Requests/BeginScenario.html">Cucumber::WireSupport::WireProtocol::Requests::BeginScenario</a></li>
+        
+          <li><a href="../../Cucumber/WireSupport/WireProtocol/Requests/DiffFailed.html">Cucumber::WireSupport::WireProtocol::Requests::DiffFailed</a></li>
+        
+          <li><a href="../../Cucumber/WireSupport/WireProtocol/Requests/DiffOk.html">Cucumber::WireSupport::WireProtocol::Requests::DiffOk</a></li>
+        
+          <li><a href="../../Cucumber/WireSupport/WireProtocol/Requests/EndScenario.html">Cucumber::WireSupport::WireProtocol::Requests::EndScenario</a></li>
+        
+          <li><a href="../../Cucumber/WireSupport/WireProtocol/Requests/Invoke.html">Cucumber::WireSupport::WireProtocol::Requests::Invoke</a></li>
+        
+          <li><a href="../../Cucumber/WireSupport/WireProtocol/Requests/SnippetText.html">Cucumber::WireSupport::WireProtocol::Requests::SnippetText</a></li>
+        
+          <li><a href="../../Cucumber/WireSupport/WireProtocol/Requests/StepMatches.html">Cucumber::WireSupport::WireProtocol::Requests::StepMatches</a></li>
+        
+          <li><a href="../../Cucumber/WireSupport/WireProtocol/Requests/Tags.html">Cucumber::WireSupport::WireProtocol::Requests::Tags</a></li>
+        
+          <li><a href="../../Cucumber/WireSupport/WireStepDefinition.html">Cucumber::WireSupport::WireStepDefinition</a></li>
+        
+          <li><a href="../../Autotest.html">Autotest</a></li>
+        
+          <li><a href="../../Autotest/Cucumber.html">Autotest::Cucumber</a></li>
+        
+          <li><a href="../../Autotest/CucumberMixin.html">Autotest::CucumberMixin</a></li>
+        
+          <li><a href="../../Autotest/CucumberRails.html">Autotest::CucumberRails</a></li>
+        
+          <li><a href="../../Autotest/CucumberRailsRspec.html">Autotest::CucumberRailsRspec</a></li>
+        
+          <li><a href="../../Autotest/CucumberRailsRspec2.html">Autotest::CucumberRailsRspec2</a></li>
+        
+          <li><a href="../../Autotest/CucumberRspec.html">Autotest::CucumberRspec</a></li>
+        
+          <li><a href="../../Autotest/CucumberRspec2.html">Autotest::CucumberRspec2</a></li>
+        
+          <li><a href="../../Spec.html">Spec</a></li>
+        
+          <li><a href="../../Spec/Runner.html">Spec::Runner</a></li>
+        
+          <li><a href="../../Spec/Runner/OptionParser.html">Spec::Runner::OptionParser</a></li>
+        
+          <li><a href="../../Spec/Runner/OptionParser/NEUTERED_RSPEC.html">Spec::Runner::OptionParser::NEUTERED_RSPEC</a></li>
+        
+          <li><a href="../../Object.html">Object</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">Cucumber::RbSupport::RbDsl</h1>
+
+    <div id="description" class="description">
+      
+<p>This module defines the methods you can use to define pure Ruby Step
+Definitions and Hooks. This module is mixed into the toplevel object.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="rb_language-attribute-method" class="method-detail">
+          <a name="rb_language"></a>
+          
+          <a name="rb_language="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">rb_language</span><span
+              class="attribute-access-type">[W]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="alias_adverb-method" class="method-detail ">
+          <a name="method-c-alias_adverb"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">alias_adverb</span><span
+              class="method-args">(adverb)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="alias_adverb-source">
+<pre>
+<span class="ruby-comment"># File lib/cucumber/rb_support/rb_dsl.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">alias_adverb</span>(<span class="ruby-identifier">adverb</span>)
+  <span class="ruby-identifier">alias_method</span> <span class="ruby-identifier">adverb</span>, <span class="ruby-value">:register_rb_step_definition</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- alias_adverb-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- alias_adverb-method -->
+
+      
+        <div id="build_rb_world_factory-method" class="method-detail ">
+          <a name="method-c-build_rb_world_factory"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">build_rb_world_factory</span><span
+              class="method-args">(world_modules, proc)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="build_rb_world_factory-source">
+<pre>
+<span class="ruby-comment"># File lib/cucumber/rb_support/rb_dsl.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">build_rb_world_factory</span>(<span class="ruby-identifier">world_modules</span>, <span class="ruby-identifier">proc</span>)
+  <span class="ruby-ivar">@rb_language</span>.<span class="ruby-identifier">build_rb_world_factory</span>(<span class="ruby-identifier">world_modules</span>, <span class="ruby-identifier">proc</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- build_rb_world_factory-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- build_rb_world_factory-method -->
+
+      
+        <div id="register_rb_hook-method" class="method-detail ">
+          <a name="method-c-register_rb_hook"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">register_rb_hook</span><span
+              class="method-args">(phase, tag_names, proc)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="register_rb_hook-source">
+<pre>
+<span class="ruby-comment"># File lib/cucumber/rb_support/rb_dsl.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">register_rb_hook</span>(<span class="ruby-identifier">phase</span>, <span class="ruby-identifier">tag_names</span>, <span class="ruby-identifier">proc</span>)
+  <span class="ruby-ivar">@rb_language</span>.<span class="ruby-identifier">register_rb_hook</span>(<span class="ruby-identifier">phase</span>, <span class="ruby-identifier">tag_names</span>, <span class="ruby-identifier">proc</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- register_rb_hook-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- register_rb_hook-method -->
+
+      
+        <div id="register_rb_step_definition-method" class="method-detail ">
+          <a name="method-c-register_rb_step_definition"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">register_rb_step_definition</span><span
+              class="method-args">(regexp, proc_or_sym, options = {})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="register_rb_step_definition-source">
+<pre>
+<span class="ruby-comment"># File lib/cucumber/rb_support/rb_dsl.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">register_rb_step_definition</span>(<span class="ruby-identifier">regexp</span>, <span class="ruby-identifier">proc_or_sym</span>, <span class="ruby-identifier">options</span> = {})
+  <span class="ruby-ivar">@rb_language</span>.<span class="ruby-identifier">register_rb_step_definition</span>(<span class="ruby-identifier">regexp</span>, <span class="ruby-identifier">proc_or_sym</span>, <span class="ruby-identifier">options</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- register_rb_step_definition-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- register_rb_step_definition-method -->
+
+      
+        <div id="register_rb_transform-method" class="method-detail ">
+          <a name="method-c-register_rb_transform"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">register_rb_transform</span><span
+              class="method-args">(regexp, proc)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="register_rb_transform-source">
+<pre>
+<span class="ruby-comment"># File lib/cucumber/rb_support/rb_dsl.rb, line 22</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">register_rb_transform</span>(<span class="ruby-identifier">regexp</span>, <span class="ruby-identifier">proc</span>)
+  <span class="ruby-ivar">@rb_language</span>.<span class="ruby-identifier">register_rb_transform</span>(<span class="ruby-identifier">regexp</span>, <span class="ruby-identifier">proc</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- register_rb_transform-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- register_rb_transform-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="After-method" class="method-detail ">
+          <a name="method-i-After"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">After</span><span
+              class="method-args">(*tag_expressions, &proc)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Registers a proc that will run after each Scenario. You can register as
+many as you want (typically from ruby scripts under
+<tt>support/hooks.rb</tt>).</p>
+            
+
+            
+            <div class="method-source-code" id="After-source">
+<pre>
+<span class="ruby-comment"># File lib/cucumber/rb_support/rb_dsl.rb, line 61</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">After</span>(*<span class="ruby-identifier">tag_expressions</span>, &amp;<span class="ruby-identifier">proc</span>)
+  <span class="ruby-constant">RbDsl</span>.<span class="ruby-identifier">register_rb_hook</span>(<span class="ruby-string">'after'</span>, <span class="ruby-identifier">tag_expressions</span>, <span class="ruby-identifier">proc</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- After-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- After-method -->
+
+      
+        <div id="AfterConfiguration-method" class="method-detail ">
+          <a name="method-i-AfterConfiguration"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">AfterConfiguration</span><span
+              class="method-args">(&proc)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Registers a proc that will run after <a
+href="../../Cucumber.html">Cucumber</a> is configured. You can register as
+as you want (typically from ruby scripts under <tt>support/hooks.rb</tt>).
+TODO: Deprecate this</p>
+            
+
+            
+            <div class="method-source-code" id="AfterConfiguration-source">
+<pre>
+<span class="ruby-comment"># File lib/cucumber/rb_support/rb_dsl.rb, line 92</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">AfterConfiguration</span>(&amp;<span class="ruby-identifier">proc</span>)
+  <span class="ruby-constant">RbDsl</span>.<span class="ruby-identifier">register_rb_hook</span>(<span class="ruby-string">'after_configuration'</span>, [], <span class="ruby-identifier">proc</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- AfterConfiguration-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- AfterConfiguration-method -->
+
+      
+        <div id="AfterStep-method" class="method-detail ">
+          <a name="method-i-AfterStep"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">AfterStep</span><span
+              class="method-args">(*tag_expressions, &proc)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Registers a proc that will run after each Step. You can register as as you
+want (typically from ruby scripts under <tt>support/hooks.rb</tt>).</p>
+            
+
+            
+            <div class="method-source-code" id="AfterStep-source">
+<pre>
+<span class="ruby-comment"># File lib/cucumber/rb_support/rb_dsl.rb, line 76</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">AfterStep</span>(*<span class="ruby-identifier">tag_expressions</span>, &amp;<span class="ruby-identifier">proc</span>)
+  <span class="ruby-constant">RbDsl</span>.<span class="ruby-identifier">register_rb_hook</span>(<span class="ruby-string">'after_step'</span>, <span class="ruby-identifier">tag_expressions</span>, <span class="ruby-identifier">proc</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- AfterStep-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- AfterStep-method -->
+
+      
+        <div id="Around-method" class="method-detail ">
+          <a name="method-i-Around"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">Around</span><span
+              class="method-args">(*tag_expressions, &proc)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Registers a proc that will be wrapped around each scenario. The proc should
+accept two arguments: two arguments: the scenario and a "block" argument
+(but passed as a regular argument, since blocks cannot accept blocks in
+1.8), on which it should call the .call method. You can register as many 
+as you want (typically from ruby scripts under <tt>support/hooks.rb</tt>).</p>
+            
+
+            
+            <div class="method-source-code" id="Around-source">
+<pre>
+<span class="ruby-comment"># File lib/cucumber/rb_support/rb_dsl.rb, line 70</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">Around</span>(*<span class="ruby-identifier">tag_expressions</span>, &amp;<span class="ruby-identifier">proc</span>)
+  <span class="ruby-constant">RbDsl</span>.<span class="ruby-identifier">register_rb_hook</span>(<span class="ruby-string">'around'</span>, <span class="ruby-identifier">tag_expressions</span>, <span class="ruby-identifier">proc</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- Around-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- Around-method -->
+
+      
+        <div id="Before-method" class="method-detail ">
+          <a name="method-i-Before"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">Before</span><span
+              class="method-args">(*tag_expressions, &proc)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Registers a proc that will run before each Scenario. You can register as
+many as you want (typically from ruby scripts under
+<tt>support/hooks.rb</tt>).</p>
+            
+
+            
+            <div class="method-source-code" id="Before-source">
+<pre>
+<span class="ruby-comment"># File lib/cucumber/rb_support/rb_dsl.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">Before</span>(*<span class="ruby-identifier">tag_expressions</span>, &amp;<span class="ruby-identifier">proc</span>)
+  <span class="ruby-constant">RbDsl</span>.<span class="ruby-identifier">register_rb_hook</span>(<span class="ruby-string">'before'</span>, <span class="ruby-identifier">tag_expressions</span>, <span class="ruby-identifier">proc</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- Before-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- Before-method -->
+
+      
+        <div id="Transform-method" class="method-detail ">
+          <a name="method-i-Transform"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">Transform</span><span
+              class="method-args">(regexp, &proc)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Registers a proc that will be called with a step definition argument if it
+matches the pattern passed as the first argument to <a
+href="RbDsl.html#method-i-Transform">Transform</a>. Alternatively, if the
+pattern contains captures then they will be yielded as arguments to the
+provided proc. The return value of the proc is consequently yielded to the
+step definition.</p>
+            
+
+            
+            <div class="method-source-code" id="Transform-source">
+<pre>
+<span class="ruby-comment"># File lib/cucumber/rb_support/rb_dsl.rb, line 85</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">Transform</span>(<span class="ruby-identifier">regexp</span>, &amp;<span class="ruby-identifier">proc</span>)
+  <span class="ruby-constant">RbDsl</span>.<span class="ruby-identifier">register_rb_transform</span>(<span class="ruby-identifier">regexp</span>, <span class="ruby-identifier">proc</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- Transform-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- Transform-method -->
+
+      
+        <div id="World-method" class="method-detail ">
+          <a name="method-i-World"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">World</span><span
+              class="method-args">(*world_modules, &proc)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Registers any number of <tt>world_modules</tt> (Ruby Modules) and/or a
+Proc. The <tt>proc</tt> will be executed once before each scenario to
+create an <a href="../../Object.html">Object</a> that the scenario's steps
+will run within. Any <tt>world_modules</tt> will be mixed into this <a
+href="../../Object.html">Object</a> (via Object#extend).</p>
+
+<p>This method is typically called from one or more Ruby scripts under
+<tt>features/support</tt>. You can call this method as many times as you
+like (to register more modules), but if you try to register more than one
+Proc you will get an error.</p>
+
+<p><a href="../../Cucumber.html">Cucumber</a> will not yield anything to the
+<tt>proc</tt>. Examples:</p>
+
+<pre>World do
+  MyClass.new
+end
+
+World(MyModule)</pre>
+            
+
+            
+            <div class="method-source-code" id="World-source">
+<pre>
+<span class="ruby-comment"># File lib/cucumber/rb_support/rb_dsl.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">World</span>(*<span class="ruby-identifier">world_modules</span>, &amp;<span class="ruby-identifier">proc</span>)
+  <span class="ruby-constant">RbDsl</span>.<span class="ruby-identifier">build_rb_world_factory</span>(<span class="ruby-identifier">world_modules</span>, <span class="ruby-identifier">proc</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- World-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- World-method -->
+
+      
+        <div id="register_rb_step_definition-method" class="method-detail ">
+          <a name="method-i-register_rb_step_definition"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">register_rb_step_definition</span><span
+              class="method-args">(regexp, symbol = nil, options = {}, &proc)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Registers a new Ruby StepDefinition. This method is aliased to
+<tt>Given</tt>, <tt>When</tt> and <tt>Then</tt>, and also to the i18n
+translations whenever a feature of a new language is loaded.</p>
+
+<p>If provided, the <tt>symbol</tt> is sent to the <tt>World</tt> object as
+defined by #<a href="RbDsl.html#method-i-World">World</a>. A new
+<tt>World</tt> object is created for each scenario and is shared across
+step definitions within that scenario. If the <tt>options</tt> hash
+contains an <tt>:on</tt> key, the value for this is assumed to be a proc.
+This proc will be executed in the context of the <tt>World</tt> object and
+then sent the <tt>symbol</tt>.</p>
+
+<p>If no <tt>symbol</tt> if provided then the +&amp;proc+ gets executed in the
+context of the <tt>World</tt> object.</p>
+            
+
+            
+            <div class="method-source-code" id="register_rb_step_definition-source">
+<pre>
+<span class="ruby-comment"># File lib/cucumber/rb_support/rb_dsl.rb, line 111</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">register_rb_step_definition</span>(<span class="ruby-identifier">regexp</span>, <span class="ruby-identifier">symbol</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">options</span> = {}, &amp;<span class="ruby-identifier">proc</span>)
+  <span class="ruby-identifier">proc_or_sym</span> = <span class="ruby-identifier">symbol</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">proc</span>
+  <span class="ruby-constant">RbDsl</span>.<span class="ruby-identifier">register_rb_step_definition</span>(<span class="ruby-identifier">regexp</span>, <span class="ruby-identifier">proc_or_sym</span>, <span class="ruby-identifier">options</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- register_rb_step_definition-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- register_rb_step_definition-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

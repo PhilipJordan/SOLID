@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=IBM437" http-equiv="Content-Type" />
+
+  <title>File: missing [ffi-1.9.3-x86-mingw32 Documentation]</title>
+
+  <link type="text/css" media="screen" href="../../../rdoc.css" rel="stylesheet" />
+
+  <script src="../../../js/jquery.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../../js/thickbox-compressed.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../../js/quicksearch.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../../js/darkfish.js" type="text/javascript"
+    charset="utf-8"></script>
+</head>
+
+<body class="file">
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../../index.html">Home</a>
+          <a href="../../../index.html#classes">Classes</a>
+          <a href="../../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../../../ext/ffi_c/libffi/ChangeLog.html">ChangeLog</a></li>
+        
+          <li class="file"><a href="../../../ext/ffi_c/libffi/LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../../../ext/ffi_c/libffi/README.html">README</a></li>
+        
+          <li class="file"><a href="../../../ext/ffi_c/libffi/compile.html">compile</a></li>
+        
+          <li class="file"><a href="../../../ext/ffi_c/libffi/configure.html">configure</a></li>
+        
+          <li class="file"><a href="../../../ext/ffi_c/libffi/depcomp.html">depcomp</a></li>
+        
+          <li class="file"><a href="../../../ext/ffi_c/libffi/doc/stamp-vti.html">stamp-vti</a></li>
+        
+          <li class="file"><a href="../../../ext/ffi_c/libffi/install-sh.html">install-sh</a></li>
+        
+          <li class="file"><a href="../../../ext/ffi_c/libffi/libtool-version.html">libtool-version</a></li>
+        
+          <li class="file"><a href="../../../ext/ffi_c/libffi/mdate-sh.html">mdate-sh</a></li>
+        
+          <li class="file"><a href="../../../ext/ffi_c/libffi/missing.html">missing</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class Index
+          <span class="search-toggle"><img src="../../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../../FFI.html">FFI</a></li>
+        
+          <li><a href="../../../FFI/AutoPointer.html">FFI::AutoPointer</a></li>
+        
+          <li><a href="../../../FFI/AutoPointer/CallableReleaser.html">FFI::AutoPointer::CallableReleaser</a></li>
+        
+          <li><a href="../../../FFI/AutoPointer/DefaultReleaser.html">FFI::AutoPointer::DefaultReleaser</a></li>
+        
+          <li><a href="../../../FFI/AutoPointer/Releaser.html">FFI::AutoPointer::Releaser</a></li>
+        
+          <li><a href="../../../FFI/ConstGenerator.html">FFI::ConstGenerator</a></li>
+        
+          <li><a href="../../../FFI/ConstGenerator/Constant.html">FFI::ConstGenerator::Constant</a></li>
+        
+          <li><a href="../../../FFI/Enum.html">FFI::Enum</a></li>
+        
+          <li><a href="../../../FFI/Enums.html">FFI::Enums</a></li>
+        
+          <li><a href="../../../FFI/Function.html">FFI::Function</a></li>
+        
+          <li><a href="../../../FFI/FunctionType.html">FFI::FunctionType</a></li>
+        
+          <li><a href="../../../FFI/Generator.html">FFI::Generator</a></li>
+        
+          <li><a href="../../../FFI/Generator/Task.html">FFI::Generator::Task</a></li>
+        
+          <li><a href="../../../FFI/IO.html">FFI::IO</a></li>
+        
+          <li><a href="../../../FFI/LastError.html">FFI::LastError</a></li>
+        
+          <li><a href="../../../FFI/Library.html">FFI::Library</a></li>
+        
+          <li><a href="../../../FFI/ManagedStruct.html">FFI::ManagedStruct</a></li>
+        
+          <li><a href="../../../FFI/MemoryPointer.html">FFI::MemoryPointer</a></li>
+        
+          <li><a href="../../../FFI/NativeType.html">FFI::NativeType</a></li>
+        
+          <li><a href="../../../FFI/NotFoundError.html">FFI::NotFoundError</a></li>
+        
+          <li><a href="../../../FFI/Platform.html">FFI::Platform</a></li>
+        
+          <li><a href="../../../FFI/PlatformError.html">FFI::PlatformError</a></li>
+        
+          <li><a href="../../../FFI/Pointer.html">FFI::Pointer</a></li>
+        
+          <li><a href="../../../FFI/StrPtrConverter.html">FFI::StrPtrConverter</a></li>
+        
+          <li><a href="../../../FFI/Struct.html">FFI::Struct</a></li>
+        
+          <li><a href="../../../FFI/Struct/InlineArray.html">FFI::Struct::InlineArray</a></li>
+        
+          <li><a href="../../../FFI/Struct/ManagedStructConverter.html">FFI::Struct::ManagedStructConverter</a></li>
+        
+          <li><a href="../../../FFI/StructByReference.html">FFI::StructByReference</a></li>
+        
+          <li><a href="../../../FFI/StructByValue.html">FFI::StructByValue</a></li>
+        
+          <li><a href="../../../FFI/StructGenerator.html">FFI::StructGenerator</a></li>
+        
+          <li><a href="../../../FFI/StructGenerator/Field.html">FFI::StructGenerator::Field</a></li>
+        
+          <li><a href="../../../FFI/StructLayout.html">FFI::StructLayout</a></li>
+        
+          <li><a href="../../../FFI/StructLayout/Array.html">FFI::StructLayout::Array</a></li>
+        
+          <li><a href="../../../FFI/StructLayout/Enum.html">FFI::StructLayout::Enum</a></li>
+        
+          <li><a href="../../../FFI/StructLayout/Field.html">FFI::StructLayout::Field</a></li>
+        
+          <li><a href="../../../FFI/StructLayout/Function.html">FFI::StructLayout::Function</a></li>
+        
+          <li><a href="../../../FFI/StructLayout/InnerStruct.html">FFI::StructLayout::InnerStruct</a></li>
+        
+          <li><a href="../../../FFI/StructLayout/Mapped.html">FFI::StructLayout::Mapped</a></li>
+        
+          <li><a href="../../../FFI/StructLayout/Number.html">FFI::StructLayout::Number</a></li>
+        
+          <li><a href="../../../FFI/StructLayout/Pointer.html">FFI::StructLayout::Pointer</a></li>
+        
+          <li><a href="../../../FFI/StructLayout/String.html">FFI::StructLayout::String</a></li>
+        
+          <li><a href="../../../FFI/StructLayoutBuilder.html">FFI::StructLayoutBuilder</a></li>
+        
+          <li><a href="../../../FFI/Type.html">FFI::Type</a></li>
+        
+          <li><a href="../../../FFI/Type/Builtin.html">FFI::Type::Builtin</a></li>
+        
+          <li><a href="../../../FFI/TypesGenerator.html">FFI::TypesGenerator</a></li>
+        
+          <li><a href="../../../FFI/Union.html">FFI::Union</a></li>
+        
+          <li><a href="../../../FFI/VariadicInvoker.html">FFI::VariadicInvoker</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    
+<p>#! /bin/sh # Common stub for a few missing GNU programs while installing.</p>
+
+<p>scriptversion=2009-04-28.21; # UTC</p>
+
+<p># Copyright (C) 1996, 1997, 1999, 2000, 2002, 2003, 2004, 2005, 2006, #
+2008, 2009 Free Software Foundation, Inc. # Originally by Fran,cois Pinard
+&lt;pinard@iro.umontreal.ca&gt;, 1996.</p>
+
+<p># This program is free software; you can redistribute it and/or modify # it
+under the terms of the GNU General Public License as published by # the
+Free Software Foundation; either version 2, or (at your option) # any later
+version.</p>
+
+<p># This program is distributed in the hope that it will be useful, # but
+WITHOUT ANY WARRANTY; without even the implied warranty of #
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the # GNU General
+Public License for more details.</p>
+
+<p># You should have received a copy of the GNU General Public License # along
+with this program.  If not, see &lt;<a
+href="http://www.gnu.org/licenses/">www.gnu.org/licenses/</a>&gt;.</p>
+
+<p># As a special exception to the GNU General Public License, if you #
+distribute this file as part of a program that contains a # configuration
+script generated by Autoconf, you may include it under # the same
+distribution terms that you use for the rest of that program.</p>
+
+<p>if test $# -eq 0; then</p>
+
+<pre>echo 1&gt;&amp;2 &quot;Try \`$0 --help' for more information&quot;
+exit 1</pre>
+
+<p>fi</p>
+
+<p>run=: sed_output='s/.* --output[ =]([^ ]*).*/1/p' sed_minuso='s/.* -o ([^
+]*).*/1/p'</p>
+
+<p># In the cases where this matters, `missing' is being run in the # srcdir
+already. if test -f configure.ac; then</p>
+
+<pre>configure_ac=configure.ac</pre>
+
+<p>else</p>
+
+<pre>configure_ac=configure.in</pre>
+
+<p>fi</p>
+
+<p>msg="missing on your system"</p>
+
+<p>case $1 in --run)</p>
+
+<pre># Try to run requested program, and just exit if it succeeds.
+run=
+shift
+&quot;$@&quot; &amp;&amp; exit 0
+# Exit code 63 means version mismatch.  This often happens
+# when the user try to use an ancient version of a tool on
+# a file that requires a minimum version.  In this case we
+# we should proceed has if the program had been absent, or
+# if --run hadn't been passed.
+if test $? = 63; then
+  run=:
+  msg=&quot;probably too old&quot;
+fi
+;;
+
+-h|--h|--he|--hel|--help)
+  echo &quot;\</pre>
+
+<p>$0 [OPTION]... PROGRAM [ARGUMENT]...</p>
+
+<p>Handle `PROGRAM [ARGUMENT]...' for when PROGRAM is missing, or return an
+error status if there is no known handling for PROGRAM.</p>
+
+<p>Options:</p>
+
+<pre>-h, --help      display this help and exit
+-v, --version   output version information and exit
+--run           try to run the given command, and emulate it if it fails</pre>
+
+<p>Supported PROGRAM values:</p>
+
+<pre>aclocal      touch file \`aclocal.m4'
+autoconf     touch file \`configure'
+autoheader   touch file \`config.h.in'
+autom4te     touch the output file, or create a stub one
+automake     touch all \`Makefile.in' files
+bison        create \`y.tab.[ch]', if possible, from existing .[ch]
+flex         create \`lex.yy.c', if possible, from existing .c
+help2man     touch the output file
+lex          create \`lex.yy.c', if possible, from existing .c
+makeinfo     touch the output file
+tar          try tar, gnutar, gtar, then tar without non-portable flags
+yacc         create \`y.tab.[ch]', if possible, from existing .[ch]</pre>
+
+<p>Version suffixes to PROGRAM as well as the prefixes `gnu-', `gnu', and `g'
+are ignored when checking the name.</p>
+
+<p>Send bug reports to &lt;bug-automake@gnu.org&gt;."</p>
+
+<pre>  exit $?
+  ;;
+
+-v|--v|--ve|--ver|--vers|--versi|--versio|--version)
+  echo &quot;missing $scriptversion (GNU Automake)&quot;
+  exit $?
+  ;;
+
+-*)
+  echo 1&gt;&amp;2 &quot;$0: Unknown \`$1' option&quot;
+  echo 1&gt;&amp;2 &quot;Try \`$0 --help' for more information&quot;
+  exit 1
+  ;;</pre>
+
+<p>esac</p>
+
+<p># normalize program name to check for. program=`echo "$1" | sed '</p>
+
+<pre>s/^gnu-//; t
+s/^gnu//; t
+s/^g//; t'`</pre>
+
+<p># Now exit if we have it, but it failed.  Also exit now if we # don't have
+it and --version was passed (most likely to detect # the program).  This is
+about non-GNU programs, so use $1 not # $program. case $1 in</p>
+
+<pre>lex*|yacc*)
+  # Not GNU programs, they don't have --version.
+  ;;
+
+tar*)
+  if test -n &quot;$run&quot;; then
+     echo 1&gt;&amp;2 &quot;ERROR: \`tar' requires --run&quot;
+     exit 1
+  elif test &quot;x$2&quot; = &quot;x--version&quot; || test &quot;x$2&quot; = &quot;x--help&quot;; then
+     exit 1
+  fi
+  ;;
+
+*)
+  if test -z &quot;$run&quot; &amp;&amp; ($1 --version) &gt; /dev/null 2&gt;&amp;1; then
+     # We have it, but it failed.
+     exit 1
+  elif test &quot;x$2&quot; = &quot;x--version&quot; || test &quot;x$2&quot; = &quot;x--help&quot;; then
+     # Could not run --version or --help.  This is probably someone
+     # running `$TOOL --version' or `$TOOL --help' to check whether
+     # $TOOL exists and not knowing $TOOL uses missing.
+     exit 1
+  fi
+  ;;</pre>
+
+<p>esac</p>
+
+<p># If it does not exist, or fails to run (possibly an outdated version), #
+try to emulate it. case $program in</p>
+
+<pre>aclocal*)
+  echo 1&gt;&amp;2 &quot;\</pre>
+
+<p>WARNING: `$1' is $msg.  You should only need it if</p>
+
+<pre>       you modified \`acinclude.m4' or \`${configure_ac}'.  You might want
+       to install the \`Automake' and \`Perl' packages.  Grab them from
+       any GNU archive site.&quot;
+  touch aclocal.m4
+  ;;
+
+autoconf*)
+  echo 1&gt;&amp;2 &quot;\</pre>
+
+<p>WARNING: `$1' is $msg.  You should only need it if</p>
+
+<pre>       you modified \`${configure_ac}'.  You might want to install the
+       \`Autoconf' and \`GNU m4' packages.  Grab them from any GNU
+       archive site.&quot;
+  touch configure
+  ;;
+
+autoheader*)
+  echo 1&gt;&amp;2 &quot;\</pre>
+
+<p>WARNING: `$1' is $msg.  You should only need it if</p>
+
+<pre>       you modified \`acconfig.h' or \`${configure_ac}'.  You might want
+       to install the \`Autoconf' and \`GNU m4' packages.  Grab them
+       from any GNU archive site.&quot;
+  files=`sed -n 's/^[ ]*A[CM]_CONFIG_HEADER(\([^)]*\)).*/\1/p' ${configure_ac}`
+  test -z &quot;$files&quot; &amp;&amp; files=&quot;config.h&quot;
+  touch_files=
+  for f in $files; do
+    case $f in
+    *:*) touch_files=&quot;$touch_files &quot;`echo &quot;$f&quot; |
+                                     sed -e 's/^[^:]*://' -e 's/:.*//'`;;
+    *) touch_files=&quot;$touch_files $f.in&quot;;;
+    esac
+  done
+  touch $touch_files
+  ;;
+
+automake*)
+  echo 1&gt;&amp;2 &quot;\</pre>
+
+<p>WARNING: `$1' is $msg.  You should only need it if</p>
+
+<pre>       you modified \`Makefile.am', \`acinclude.m4' or \`${configure_ac}'.
+       You might want to install the \`Automake' and \`Perl' packages.
+       Grab them from any GNU archive site.&quot;
+  find . -type f -name Makefile.am -print |
+         sed 's/\.am$/.in/' |
+         while read f; do touch &quot;$f&quot;; done
+  ;;
+
+autom4te*)
+  echo 1&gt;&amp;2 &quot;\</pre>
+
+<p>WARNING: `$1' is needed, but is $msg.</p>
+
+<pre>       You might have modified some files without having the
+       proper tools for further handling them.
+       You can get \`$1' as part of \`Autoconf' from any GNU
+       archive site.&quot;
+
+  file=`echo &quot;$*&quot; | sed -n &quot;$sed_output&quot;`
+  test -z &quot;$file&quot; &amp;&amp; file=`echo &quot;$*&quot; | sed -n &quot;$sed_minuso&quot;`
+  if test -f &quot;$file&quot;; then
+      touch $file
+  else
+      test -z &quot;$file&quot; || exec &gt;$file
+      echo &quot;#! /bin/sh&quot;
+      echo &quot;# Created by GNU Automake missing as a replacement of&quot;
+      echo &quot;#  $ $@&quot;
+      echo &quot;exit 0&quot;
+      chmod +x $file
+      exit 1
+  fi
+  ;;
+
+bison*|yacc*)
+  echo 1&gt;&amp;2 &quot;\</pre>
+
+<p>WARNING: `$1' $msg.  You should only need it if</p>
+
+<pre>       you modified a \`.y' file.  You may need the \`Bison' package
+       in order for those modifications to take effect.  You can get
+       \`Bison' from any GNU archive site.&quot;
+  rm -f y.tab.c y.tab.h
+  if test $# -ne 1; then
+      eval LASTARG=&quot;\${$#}&quot;
+      case $LASTARG in
+      *.y)
+          SRCFILE=`echo &quot;$LASTARG&quot; | sed 's/y$/c/'`
+          if test -f &quot;$SRCFILE&quot;; then
+               cp &quot;$SRCFILE&quot; y.tab.c
+          fi
+          SRCFILE=`echo &quot;$LASTARG&quot; | sed 's/y$/h/'`
+          if test -f &quot;$SRCFILE&quot;; then
+               cp &quot;$SRCFILE&quot; y.tab.h
+          fi
+        ;;
+      esac
+  fi
+  if test ! -f y.tab.h; then
+      echo &gt;y.tab.h
+  fi
+  if test ! -f y.tab.c; then
+      echo 'main() { return 0; }' &gt;y.tab.c
+  fi
+  ;;
+
+lex*|flex*)
+  echo 1&gt;&amp;2 &quot;\</pre>
+
+<p>WARNING: `$1' is $msg.  You should only need it if</p>
+
+<pre>       you modified a \`.l' file.  You may need the \`Flex' package
+       in order for those modifications to take effect.  You can get
+       \`Flex' from any GNU archive site.&quot;
+  rm -f lex.yy.c
+  if test $# -ne 1; then
+      eval LASTARG=&quot;\${$#}&quot;
+      case $LASTARG in
+      *.l)
+          SRCFILE=`echo &quot;$LASTARG&quot; | sed 's/l$/c/'`
+          if test -f &quot;$SRCFILE&quot;; then
+               cp &quot;$SRCFILE&quot; lex.yy.c
+          fi
+        ;;
+      esac
+  fi
+  if test ! -f lex.yy.c; then
+      echo 'main() { return 0; }' &gt;lex.yy.c
+  fi
+  ;;
+
+help2man*)
+  echo 1&gt;&amp;2 &quot;\</pre>
+
+<p>WARNING: `$1' is $msg.  You should only need it if</p>
+
+<pre>       you modified a dependency of a manual page.  You may need the
+       \`Help2man' package in order for those modifications to take
+       effect.  You can get \`Help2man' from any GNU archive site.&quot;
+
+  file=`echo &quot;$*&quot; | sed -n &quot;$sed_output&quot;`
+  test -z &quot;$file&quot; &amp;&amp; file=`echo &quot;$*&quot; | sed -n &quot;$sed_minuso&quot;`
+  if test -f &quot;$file&quot;; then
+      touch $file
+  else
+      test -z &quot;$file&quot; || exec &gt;$file
+      echo &quot;.ab help2man is required to generate this page&quot;
+      exit $?
+  fi
+  ;;
+
+makeinfo*)
+  echo 1&gt;&amp;2 &quot;\</pre>
+
+<p>WARNING: `$1' is $msg.  You should only need it if</p>
+
+<pre>       you modified a \`.texi' or \`.texinfo' file, or any other file
+       indirectly affecting the aspect of the manual.  The spurious
+       call might also be the consequence of using a buggy \`make' (AIX,
+       DU, IRIX).  You might want to install the \`Texinfo' package or
+       the \`GNU make' package.  Grab either from any GNU archive site.&quot;
+  # The file to touch is that specified with -o ...
+  file=`echo &quot;$*&quot; | sed -n &quot;$sed_output&quot;`
+  test -z &quot;$file&quot; &amp;&amp; file=`echo &quot;$*&quot; | sed -n &quot;$sed_minuso&quot;`
+  if test -z &quot;$file&quot;; then
+    # ... or it is the one specified with @setfilename ...
+    infile=`echo &quot;$*&quot; | sed 's/.* \([^ ]*\) *$/\1/'`
+    file=`sed -n '
+      /^@setfilename/{
+        s/.* \([^ ]*\) *$/\1/
+        p
+        q
+      }' $infile`
+    # ... or it is derived from the source name (dir/f.texi becomes f.info)
+    test -z &quot;$file&quot; &amp;&amp; file=`echo &quot;$infile&quot; | sed 's,.*/,,;s,.[^.]*$,,'`.info
+  fi
+  # If the file does not exist, the user really needs makeinfo;
+  # let's fail without touching anything.
+  test -f $file || exit 1
+  touch $file
+  ;;
+
+tar*)
+  shift
+
+  # We have already tried tar in the generic part.
+  # Look for gnutar/gtar before invocation to avoid ugly error
+  # messages.
+  if (gnutar --version &gt; /dev/null 2&gt;&amp;1); then
+     gnutar &quot;$@&quot; &amp;&amp; exit 0
+  fi
+  if (gtar --version &gt; /dev/null 2&gt;&amp;1); then
+     gtar &quot;$@&quot; &amp;&amp; exit 0
+  fi
+  firstarg=&quot;$1&quot;
+  if shift; then
+      case $firstarg in
+      *o*)
+          firstarg=`echo &quot;$firstarg&quot; | sed s/o//`
+          tar &quot;$firstarg&quot; &quot;$@&quot; &amp;&amp; exit 0
+          ;;
+      esac
+      case $firstarg in
+      *h*)
+          firstarg=`echo &quot;$firstarg&quot; | sed s/h//`
+          tar &quot;$firstarg&quot; &quot;$@&quot; &amp;&amp; exit 0
+          ;;
+      esac
+  fi
+
+  echo 1&gt;&amp;2 &quot;\</pre>
+
+<p>WARNING: I can't seem to be able to run `tar' with the given arguments.</p>
+
+<pre>       You may want to install GNU tar or Free paxutils, or check the
+       command line arguments.&quot;
+  exit 1
+  ;;
+
+*)
+  echo 1&gt;&amp;2 &quot;\</pre>
+
+<p>WARNING: `$1' is needed, and is $msg.</p>
+
+<pre>     You might have modified some files without having the
+     proper tools for further handling them.  Check the \`README' file,
+     it often tells you about the needed prerequisites for installing
+     this package.  You may also peek at any GNU archive site, in case
+     some other package would contain this missing \`$1' program.&quot;
+exit 1
+;;</pre>
+
+<p>esac</p>
+
+<p>exit 0</p>
+
+<p># Local variables: # eval: (add-hook 'write-file-hooks 'time-stamp) #
+time-stamp-start: "scriptversion=" # time-stamp-format:
+"%:y-%02m-%02d.%02H" # time-stamp-time-zone: "UTC" # time-stamp-end: "; #
+UTC" # End:</p>
+
+  </div>
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=IBM437" http-equiv="Content-Type" />
+
+  <title>File: cascade.rb [i18n-0.6.11 Documentation]</title>
+
+  <link type="text/css" media="screen" href="../../../rdoc.css" rel="stylesheet" />
+
+  <script src="../../../js/jquery.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../../js/thickbox-compressed.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../../js/quicksearch.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../../js/darkfish.js" type="text/javascript"
+    charset="utf-8"></script>
+</head>
+
+<body class="file file-popup">
+  <div id="metadata">
+    <dl>
+      <dt class="modified-date">Last Modified</dt>
+      <dd class="modified-date">2014-07-28 10:05:10 -0400</dd>
+
+      
+      <dt class="requires">Requires</dt>
+      <dd class="requires">
+        <ul>
+        
+        </ul>
+      </dd>
+      
+
+      
+    </dl>
+  </div>
+
+  <div id="documentation">
+    
+    <div class="description">
+      <h2>Description</h2>
+      
+<p>The Cascade module adds the ability to do cascading lookups to backends
+that are compatible to the Simple backend.</p>
+
+<p>By cascading lookups we mean that for any key that can not be found the
+Cascade module strips one segment off the scope part of the key and then
+tries to look up the key in that scope.</p>
+
+<p>E.g. when a lookup for the key :"foo.bar.baz" does not yield a result then
+the segment :bar will be stripped off the scope part :"foo.bar" and the new
+scope :foo will be used to look up the key :baz. If that does not succeed
+then the remaining scope segment :foo will be omitted, too, and again the
+key :baz will be looked up (now with no scope).</p>
+
+<p>To enable a cascading lookup one passes the :cascade option:</p>
+
+<pre>I18n.t(:'foo.bar.baz', :cascade =&gt; true)</pre>
+
+<p>This will return the first translation found for :"foo.bar.baz", :"foo.baz"
+or :baz in this order.</p>
+
+<p>The cascading lookup takes precedence over resolving any given defaults.
+I.e. defaults will kick in after the cascading lookups haven't succeeded.</p>
+
+<p>This behavior is useful for libraries like ActiveRecord validations where
+the library wants to give users a bunch of more or less fine-grained
+options of scopes for a particular key.</p>
+
+<p>Thanks to Clemens Kofler for the initial idea and implementation! See <a
+href="http://github.com/clemens/i18n-cascading-backend">github.com/clemens/i18n-cascading-backend</a></p>
+
+    </div>
+    
+  </div>
+</body>
+</html>
+

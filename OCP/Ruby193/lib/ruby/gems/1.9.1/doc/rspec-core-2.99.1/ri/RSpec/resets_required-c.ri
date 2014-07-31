@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"resets_required:EFI"RSpec::resets_required;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"@private:encoding"IBM437I"ICounts the number of times RSpec.reset needs to be called to prevent;@I"@a warning about reset's no longer being implicitly invoked.;@:
+@file0TI"lib/rspec/core.rb;@

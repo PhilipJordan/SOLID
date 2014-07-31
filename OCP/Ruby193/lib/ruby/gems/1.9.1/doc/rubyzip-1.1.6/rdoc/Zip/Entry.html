@@ -1,0 +1,1878 @@
+<?xml version="1.0" encoding="IBM437"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=IBM437" http-equiv="Content-Type" />
+
+  <title>Class: Zip::Entry</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/zip/entry_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/zip/entry.rb">lib/zip/entry.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-c-read_local_entry">::read_local_entry</a></li>
+          
+          <li><a href="#method-i-3C-3D-3E">#<=></a></li>
+          
+          <li><a href="#method-i-3D-3D">#==</a></li>
+          
+          <li><a href="#method-i-check_c_dir_entry_comment_size">#check_c_dir_entry_comment_size</a></li>
+          
+          <li><a href="#method-i-check_c_dir_entry_signature">#check_c_dir_entry_signature</a></li>
+          
+          <li><a href="#method-i-check_c_dir_entry_static_header_length">#check_c_dir_entry_static_header_length</a></li>
+          
+          <li><a href="#method-i-check_name">#check_name</a></li>
+          
+          <li><a href="#method-i-clean_up">#clean_up</a></li>
+          
+          <li><a href="#method-i-comment_size">#comment_size</a></li>
+          
+          <li><a href="#method-i-extra_size">#extra_size</a></li>
+          
+          <li><a href="#method-i-extract">#extract</a></li>
+          
+          <li><a href="#method-i-file_type_is-3F">#file_type_is?</a></li>
+          
+          <li><a href="#method-i-get_input_stream">#get_input_stream</a></li>
+          
+          <li><a href="#method-i-get_raw_input_stream">#get_raw_input_stream</a></li>
+          
+          <li><a href="#method-i-mtime">#mtime</a></li>
+          
+          <li><a href="#method-i-name_size">#name_size</a></li>
+          
+          <li><a href="#method-i-pack_c_dir_entry">#pack_c_dir_entry</a></li>
+          
+          <li><a href="#method-i-pack_local_entry">#pack_local_entry</a></li>
+          
+          <li><a href="#method-i-parent_as_string">#parent_as_string</a></li>
+          
+          <li><a href="#method-i-read_c_dir_extra_field">#read_c_dir_extra_field</a></li>
+          
+          <li><a href="#method-i-set_default_vars_values">#set_default_vars_values</a></li>
+          
+          <li><a href="#method-i-set_ftype_from_c_dir_entry">#set_ftype_from_c_dir_entry</a></li>
+          
+          <li><a href="#method-i-set_unix_permissions_on_path">#set_unix_permissions_on_path</a></li>
+          
+          <li><a href="#method-i-time">#time</a></li>
+          
+          <li><a href="#method-i-time-3D">#time=</a></li>
+          
+          <li><a href="#method-i-to_s">#to_s</a></li>
+          
+          <li><a href="#method-i-unpack_c_dir_entry">#unpack_c_dir_entry</a></li>
+          
+          <li><a href="#method-i-unpack_local_entry">#unpack_local_entry</a></li>
+          
+          <li><a href="#method-i-verify_local_header_size-21">#verify_local_header_size!</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Zip.html">Zip</a></li>
+        
+          <li><a href="../Zip/CentralDirectory.html">Zip::CentralDirectory</a></li>
+        
+          <li><a href="../Zip/CompressionMethodError.html">Zip::CompressionMethodError</a></li>
+        
+          <li><a href="../Zip/DestinationFileExistsError.html">Zip::DestinationFileExistsError</a></li>
+        
+          <li><a href="../Zip/Entry.html">Zip::Entry</a></li>
+        
+          <li><a href="../Zip/EntryExistsError.html">Zip::EntryExistsError</a></li>
+        
+          <li><a href="../Zip/EntryNameError.html">Zip::EntryNameError</a></li>
+        
+          <li><a href="../Zip/Error.html">Zip::Error</a></li>
+        
+          <li><a href="../Zip/ExtraField.html">Zip::ExtraField</a></li>
+        
+          <li><a href="../Zip/ExtraField/Generic.html">Zip::ExtraField::Generic</a></li>
+        
+          <li><a href="../Zip/ExtraField/IUnix.html">Zip::ExtraField::IUnix</a></li>
+        
+          <li><a href="../Zip/ExtraField/OldUnix.html">Zip::ExtraField::OldUnix</a></li>
+        
+          <li><a href="../Zip/ExtraField/UniversalTime.html">Zip::ExtraField::UniversalTime</a></li>
+        
+          <li><a href="../Zip/ExtraField/Zip64.html">Zip::ExtraField::Zip64</a></li>
+        
+          <li><a href="../Zip/ExtraField/Zip64Placeholder.html">Zip::ExtraField::Zip64Placeholder</a></li>
+        
+          <li><a href="../Zip/File.html">Zip::File</a></li>
+        
+          <li><a href="../Zip/FileSystem.html">Zip::FileSystem</a></li>
+        
+          <li><a href="../Zip/FileSystem/ZipFsDir.html">Zip::FileSystem::ZipFsDir</a></li>
+        
+          <li><a href="../Zip/FileSystem/ZipFsFile.html">Zip::FileSystem::ZipFsFile</a></li>
+        
+          <li><a href="../Zip/FileSystem/ZipFsFile/ZipFsStat.html">Zip::FileSystem::ZipFsFile::ZipFsStat</a></li>
+        
+          <li><a href="../Zip/IOExtras.html">Zip::IOExtras</a></li>
+        
+          <li><a href="../Zip/IOExtras/AbstractInputStream.html">Zip::IOExtras::AbstractInputStream</a></li>
+        
+          <li><a href="../Zip/IOExtras/AbstractOutputStream.html">Zip::IOExtras::AbstractOutputStream</a></li>
+        
+          <li><a href="../Zip/IOExtras/FakeIO.html">Zip::IOExtras::FakeIO</a></li>
+        
+          <li><a href="../Zip/InputStream.html">Zip::InputStream</a></li>
+        
+          <li><a href="../Zip/InternalError.html">Zip::InternalError</a></li>
+        
+          <li><a href="../Zip/OutputStream.html">Zip::OutputStream</a></li>
+        
+          <li><a href="../Zip/StreamableDirectory.html">Zip::StreamableDirectory</a></li>
+        
+          <li><a href="../Zip/StreamableStream.html">Zip::StreamableStream</a></li>
+        
+          <li><a href="../Zip/CompressionMethodError.html">Zip::ZipCompressionMethodError</a></li>
+        
+          <li><a href="../Zip/DestinationFileExistsError.html">Zip::ZipDestinationFileExistsError</a></li>
+        
+          <li><a href="../Zip/EntryExistsError.html">Zip::ZipEntryExistsError</a></li>
+        
+          <li><a href="../Zip/EntryNameError.html">Zip::ZipEntryNameError</a></li>
+        
+          <li><a href="../Zip/Error.html">Zip::ZipError</a></li>
+        
+          <li><a href="../Zip/InternalError.html">Zip::ZipInternalError</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Zip::Entry</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="DEFLATED">DEFLATED</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="EFS">EFS</a></dt>
+          
+          <dd class="description"><p>Language encoding flag (<a href="Entry.html#EFS">EFS</a>) bit</p></dd>
+          
+        
+          <dt><a name="STORED">STORED</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="comment-attribute-method" class="method-detail">
+          <a name="comment"></a>
+          
+          <a name="comment="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">comment</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="compressed_size-attribute-method" class="method-detail">
+          <a name="compressed_size"></a>
+          
+          <a name="compressed_size="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">compressed_size</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="compression_method-attribute-method" class="method-detail">
+          <a name="compression_method"></a>
+          
+          <a name="compression_method="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">compression_method</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="crc-attribute-method" class="method-detail">
+          <a name="crc"></a>
+          
+          <a name="crc="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">crc</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="dirty-attribute-method" class="method-detail">
+          <a name="dirty"></a>
+          
+          <a name="dirty="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">dirty</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="external_file_attributes-attribute-method" class="method-detail">
+          <a name="external_file_attributes"></a>
+          
+          <a name="external_file_attributes="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">external_file_attributes</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="extra-attribute-method" class="method-detail">
+          <a name="extra"></a>
+          
+          <a name="extra="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">extra</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="follow_symlinks-attribute-method" class="method-detail">
+          <a name="follow_symlinks"></a>
+          
+          <a name="follow_symlinks="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">follow_symlinks</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="fstype-attribute-method" class="method-detail">
+          <a name="fstype"></a>
+          
+          <a name="fstype="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">fstype</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="gp_flags-attribute-method" class="method-detail">
+          <a name="gp_flags"></a>
+          
+          <a name="gp_flags="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">gp_flags</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="header_signature-attribute-method" class="method-detail">
+          <a name="header_signature"></a>
+          
+          <a name="header_signature="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">header_signature</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="local_header_offset-attribute-method" class="method-detail">
+          <a name="local_header_offset"></a>
+          
+          <a name="local_header_offset="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">local_header_offset</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="name-attribute-method" class="method-detail">
+          <a name="name"></a>
+          
+          <a name="name="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">name</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="restore_ownership-attribute-method" class="method-detail">
+          <a name="restore_ownership"></a>
+          
+          <a name="restore_ownership="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">restore_ownership</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="restore_permissions-attribute-method" class="method-detail">
+          <a name="restore_permissions"></a>
+          
+          <a name="restore_permissions="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">restore_permissions</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="restore_times-attribute-method" class="method-detail">
+          <a name="restore_times"></a>
+          
+          <a name="restore_times="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">restore_times</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="size-attribute-method" class="method-detail">
+          <a name="size"></a>
+          
+          <a name="size="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">size</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="unix_gid-attribute-method" class="method-detail">
+          <a name="unix_gid"></a>
+          
+          <a name="unix_gid="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">unix_gid</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="unix_perms-attribute-method" class="method-detail">
+          <a name="unix_perms"></a>
+          
+          <a name="unix_perms="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">unix_perms</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="unix_uid-attribute-method" class="method-detail">
+          <a name="unix_uid"></a>
+          
+          <a name="unix_uid="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">unix_uid</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="zipfile-attribute-method" class="method-detail">
+          <a name="zipfile"></a>
+          
+          <a name="zipfile="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">zipfile</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(*args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/zip/entry.rb, line 53</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(*<span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">name</span> = <span class="ruby-identifier">args</span>[<span class="ruby-value">1</span>] <span class="ruby-operator">||</span> <span class="ruby-string">''</span>
+  <span class="ruby-identifier">check_name</span>(<span class="ruby-identifier">name</span>)
+
+  <span class="ruby-identifier">set_default_vars_values</span>
+  <span class="ruby-ivar">@fstype</span> = <span class="ruby-operator">::</span><span class="ruby-constant">Zip</span><span class="ruby-operator">::</span><span class="ruby-constant">RUNNING_ON_WINDOWS</span> <span class="ruby-operator">?</span> <span class="ruby-operator">::</span><span class="ruby-constant">Zip</span><span class="ruby-operator">::</span><span class="ruby-constant">FSTYPE_FAT</span> <span class="ruby-operator">:</span> <span class="ruby-operator">::</span><span class="ruby-constant">Zip</span><span class="ruby-operator">::</span><span class="ruby-constant">FSTYPE_UNIX</span>
+
+  <span class="ruby-ivar">@zipfile</span>            = <span class="ruby-identifier">args</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">||</span> <span class="ruby-string">''</span>
+  <span class="ruby-ivar">@name</span>               = <span class="ruby-identifier">name</span>
+  <span class="ruby-ivar">@comment</span>            = <span class="ruby-identifier">args</span>[<span class="ruby-value">2</span>] <span class="ruby-operator">||</span> <span class="ruby-string">''</span>
+  <span class="ruby-ivar">@extra</span>              = <span class="ruby-identifier">args</span>[<span class="ruby-value">3</span>] <span class="ruby-operator">||</span> <span class="ruby-string">''</span>
+  <span class="ruby-ivar">@compressed_size</span>    = <span class="ruby-identifier">args</span>[<span class="ruby-value">4</span>] <span class="ruby-operator">||</span> <span class="ruby-value">0</span>
+  <span class="ruby-ivar">@crc</span>                = <span class="ruby-identifier">args</span>[<span class="ruby-value">5</span>] <span class="ruby-operator">||</span> <span class="ruby-value">0</span>
+  <span class="ruby-ivar">@compression_method</span> = <span class="ruby-identifier">args</span>[<span class="ruby-value">6</span>] <span class="ruby-operator">||</span> <span class="ruby-operator">::</span><span class="ruby-constant">Zip</span><span class="ruby-operator">::</span><span class="ruby-constant">Entry</span><span class="ruby-operator">::</span><span class="ruby-constant">DEFLATED</span>
+  <span class="ruby-ivar">@size</span>               = <span class="ruby-identifier">args</span>[<span class="ruby-value">7</span>] <span class="ruby-operator">||</span> <span class="ruby-value">0</span>
+  <span class="ruby-ivar">@time</span>               = <span class="ruby-identifier">args</span>[<span class="ruby-value">8</span>] <span class="ruby-operator">||</span> <span class="ruby-operator">::</span><span class="ruby-constant">Zip</span><span class="ruby-operator">::</span><span class="ruby-constant">DOSTime</span>.<span class="ruby-identifier">now</span>
+
+  <span class="ruby-ivar">@ftype</span> = <span class="ruby-identifier">name_is_directory?</span> <span class="ruby-operator">?</span> <span class="ruby-value">:directory</span> <span class="ruby-operator">:</span> <span class="ruby-value">:file</span>
+  <span class="ruby-ivar">@extra</span> = <span class="ruby-operator">::</span><span class="ruby-constant">Zip</span><span class="ruby-operator">::</span><span class="ruby-constant">ExtraField</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@extra</span>.<span class="ruby-identifier">to_s</span>) <span class="ruby-keyword">unless</span> <span class="ruby-operator">::</span><span class="ruby-constant">Zip</span><span class="ruby-operator">::</span><span class="ruby-constant">ExtraField</span> <span class="ruby-operator">===</span> <span class="ruby-ivar">@extra</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="protected-class-method-details" class="method-section section">
+        <h3 class="section-header">Protected Class Methods</h3>
+
+      
+        <div id="read_local_entry-method" class="method-detail ">
+          <a name="method-c-read_local_entry"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">read_local_entry</span><span
+              class="method-args">(io)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="read_local_entry-source">
+<pre>
+<span class="ruby-comment"># File lib/zip/entry.rb, line 192</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">read_local_entry</span>(<span class="ruby-identifier">io</span>)
+  <span class="ruby-identifier">entry</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">io</span>)
+  <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">read_local_entry</span>(<span class="ruby-identifier">io</span>)
+  <span class="ruby-identifier">entry</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Error</span>
+  <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- read_local_entry-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- read_local_entry-method -->
+
+      
+      </div><!-- protected-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="3C-3D-3E-method" class="method-detail ">
+          <a name="method-i-3C-3D-3E"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">&lt;=&gt;</span><span
+              class="method-args">(other)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="3C-3D-3E-source">
+<pre>
+<span class="ruby-comment"># File lib/zip/entry.rb, line 473</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">&lt;=&gt;</span> (<span class="ruby-identifier">other</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">to_s</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- 3C-3D-3E-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 3C-3D-3E-method -->
+
+      
+        <div id="3D-3D-method" class="method-detail ">
+          <a name="method-i-3D-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">==</span><span
+              class="method-args">(other)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="3D-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/zip/entry.rb, line 464</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">==</span>(<span class="ruby-identifier">other</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>
+  <span class="ruby-comment"># Compares contents of local entry and exposed fields</span>
+  <span class="ruby-identifier">keys_equal</span> = <span class="ruby-node">%(compression_method crc compressed_size size name extra filepath)</span>.<span class="ruby-identifier">all?</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">k</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">other</span>.<span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">k</span>.<span class="ruby-identifier">to_sym</span>) <span class="ruby-operator">==</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">k</span>.<span class="ruby-identifier">to_sym</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">keys_equal</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">time</span>.<span class="ruby-identifier">dos_equals</span>(<span class="ruby-identifier">other</span>.<span class="ruby-identifier">time</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- 3D-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 3D-3D-method -->
+
+      
+        <div id="check_c_dir_entry_comment_size-method" class="method-detail ">
+          <a name="method-i-check_c_dir_entry_comment_size"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">check_c_dir_entry_comment_size</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="check_c_dir_entry_comment_size-source">
+<pre>
+<span class="ruby-comment"># File lib/zip/entry.rb, line 345</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">check_c_dir_entry_comment_size</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@comment</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@comment</span>.<span class="ruby-identifier">bytesize</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@comment_length</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-operator">::</span><span class="ruby-constant">Zip</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span>, <span class="ruby-string">&quot;Truncated cdir zip entry header&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- check_c_dir_entry_comment_size-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- check_c_dir_entry_comment_size-method -->
+
+      
+        <div id="check_c_dir_entry_signature-method" class="method-detail ">
+          <a name="method-i-check_c_dir_entry_signature"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">check_c_dir_entry_signature</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="check_c_dir_entry_signature-source">
+<pre>
+<span class="ruby-comment"># File lib/zip/entry.rb, line 339</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">check_c_dir_entry_signature</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">header_signature</span> <span class="ruby-operator">==</span> <span class="ruby-operator">::</span><span class="ruby-constant">Zip</span><span class="ruby-operator">::</span><span class="ruby-constant">CENTRAL_DIRECTORY_ENTRY_SIGNATURE</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>, <span class="ruby-node">&quot;Zip local header magic not found at location '#{local_header_offset}'&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- check_c_dir_entry_signature-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- check_c_dir_entry_signature-method -->
+
+      
+        <div id="check_c_dir_entry_static_header_length-method" class="method-detail ">
+          <a name="method-i-check_c_dir_entry_static_header_length"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">check_c_dir_entry_static_header_length</span><span
+              class="method-args">(buf)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="check_c_dir_entry_static_header_length-source">
+<pre>
+<span class="ruby-comment"># File lib/zip/entry.rb, line 333</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">check_c_dir_entry_static_header_length</span>(<span class="ruby-identifier">buf</span>)
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">buf</span>.<span class="ruby-identifier">bytesize</span> <span class="ruby-operator">==</span> <span class="ruby-operator">::</span><span class="ruby-constant">Zip</span><span class="ruby-operator">::</span><span class="ruby-constant">CDIR_ENTRY_STATIC_HEADER_LENGTH</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>, <span class="ruby-string">'Premature end of file. Not enough data for zip cdir entry header'</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- check_c_dir_entry_static_header_length-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- check_c_dir_entry_static_header_length-method -->
+
+      
+        <div id="check_name-method" class="method-detail ">
+          <a name="method-i-check_name"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">check_name</span><span
+              class="method-args">(name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="check_name-source">
+<pre>
+<span class="ruby-comment"># File lib/zip/entry.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">check_name</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">start_with?</span>(<span class="ruby-string">'/'</span>)
+    <span class="ruby-identifier">raise</span> <span class="ruby-operator">::</span><span class="ruby-constant">Zip</span><span class="ruby-operator">::</span><span class="ruby-constant">EntryNameError</span>, <span class="ruby-node">&quot;Illegal ZipEntry name '#{name}', name must not start with /&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- check_name-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- check_name-method -->
+
+      
+        <div id="clean_up-method" class="method-detail ">
+          <a name="method-i-clean_up"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">clean_up</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="clean_up-source">
+<pre>
+<span class="ruby-comment"># File lib/zip/entry.rb, line 563</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">clean_up</span>
+  <span class="ruby-comment"># By default, do nothing</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- clean_up-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- clean_up-method -->
+
+      
+        <div id="comment_size-method" class="method-detail ">
+          <a name="method-i-comment_size"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">comment_size</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="comment_size-source">
+<pre>
+<span class="ruby-comment"># File lib/zip/entry.rb, line 122</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">comment_size</span>
+  <span class="ruby-ivar">@comment</span> <span class="ruby-operator">?</span> <span class="ruby-ivar">@comment</span>.<span class="ruby-identifier">bytesize</span> <span class="ruby-operator">:</span> <span class="ruby-value">0</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- comment_size-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- comment_size-method -->
+
+      
+        <div id="extra_size-method" class="method-detail ">
+          <a name="method-i-extra_size"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">extra_size</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="extra_size-source">
+<pre>
+<span class="ruby-comment"># File lib/zip/entry.rb, line 118</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">extra_size</span>
+  <span class="ruby-ivar">@extra</span> <span class="ruby-operator">?</span> <span class="ruby-ivar">@extra</span>.<span class="ruby-identifier">local_size</span> <span class="ruby-operator">:</span> <span class="ruby-value">0</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- extra_size-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- extra_size-method -->
+
+      
+        <div id="extract-method" class="method-detail ">
+          <a name="method-i-extract"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">extract</span><span
+              class="method-args">(dest_path = @name, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Extracts entry to file dest_path (defaults to @name).</p>
+            
+
+            
+            <div class="method-source-code" id="extract-source">
+<pre>
+<span class="ruby-comment"># File lib/zip/entry.rb, line 148</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">extract</span>(<span class="ruby-identifier">dest_path</span> = <span class="ruby-ivar">@name</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">block</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">proc</span> { <span class="ruby-operator">::</span><span class="ruby-constant">Zip</span>.<span class="ruby-identifier">on_exists_proc</span> }
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">directory?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">file?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">symlink?</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">__send__</span>(<span class="ruby-node">&quot;create_#{@ftype}&quot;</span>, <span class="ruby-identifier">dest_path</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">RuntimeError</span>, <span class="ruby-node">&quot;unknown file type #{self.inspect}&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- extract-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- extract-method -->
+
+      
+        <div id="file_type_is-3F-method" class="method-detail ">
+          <a name="method-i-file_type_is-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">file_type_is?</span><span
+              class="method-args">(type)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="file_type_is-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/zip/entry.rb, line 94</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">file_type_is?</span>(<span class="ruby-identifier">type</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">InternalError</span>, <span class="ruby-node">&quot;current filetype is unknown: #{self.inspect}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@ftype</span>
+  <span class="ruby-ivar">@ftype</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">type</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- file_type_is-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- file_type_is-3F-method -->
+
+      
+        <div id="get_input_stream-method" class="method-detail ">
+          <a name="method-i-get_input_stream"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_input_stream</span><span
+              class="method-args">(&block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns an IO like object for the given ZipEntry. Warning: may behave weird
+with symlinks.</p>
+            
+
+            
+            <div class="method-source-code" id="get_input_stream-source">
+<pre>
+<span class="ruby-comment"># File lib/zip/entry.rb, line 479</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_input_stream</span>(&amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@ftype</span> <span class="ruby-operator">==</span> <span class="ruby-value">:directory</span>
+    <span class="ruby-keyword">yield</span> <span class="ruby-operator">::</span><span class="ruby-constant">Zip</span><span class="ruby-operator">::</span><span class="ruby-constant">NullInputStream</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-operator">::</span><span class="ruby-constant">Zip</span><span class="ruby-operator">::</span><span class="ruby-constant">NullInputStream</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@filepath</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-ivar">@ftype</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-value">:file</span>
+      <span class="ruby-operator">::</span><span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-ivar">@filepath</span>, <span class="ruby-string">'rb'</span>, &amp;<span class="ruby-identifier">block</span>)
+    <span class="ruby-keyword">when</span> <span class="ruby-value">:symlink</span>
+      <span class="ruby-identifier">linkpath</span> = <span class="ruby-operator">::</span><span class="ruby-constant">File</span>.<span class="ruby-identifier">readlink</span>(<span class="ruby-ivar">@filepath</span>)
+      <span class="ruby-identifier">stringio</span> = <span class="ruby-operator">::</span><span class="ruby-constant">StringIO</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">linkpath</span>)
+      <span class="ruby-keyword">yield</span>(<span class="ruby-identifier">stringio</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+      <span class="ruby-identifier">stringio</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;unknown @file_type #{@ftype}&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">zis</span> = <span class="ruby-operator">::</span><span class="ruby-constant">Zip</span><span class="ruby-operator">::</span><span class="ruby-constant">InputStream</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@zipfile</span>, <span class="ruby-identifier">local_header_offset</span>)
+    <span class="ruby-identifier">zis</span>.<span class="ruby-identifier">get_next_entry</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+      <span class="ruby-keyword">begin</span>
+        <span class="ruby-keyword">yield</span>(<span class="ruby-identifier">zis</span>)
+      <span class="ruby-keyword">ensure</span>
+        <span class="ruby-identifier">zis</span>.<span class="ruby-identifier">close</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">zis</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_input_stream-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_input_stream-method -->
+
+      
+        <div id="get_raw_input_stream-method" class="method-detail ">
+          <a name="method-i-get_raw_input_stream"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_raw_input_stream</span><span
+              class="method-args">(&block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="get_raw_input_stream-source">
+<pre>
+<span class="ruby-comment"># File lib/zip/entry.rb, line 555</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_raw_input_stream</span>(&amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@zipfile</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-operator">::</span><span class="ruby-constant">IO</span>) <span class="ruby-operator">||</span> <span class="ruby-ivar">@zipfile</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-operator">::</span><span class="ruby-constant">StringIO</span>)
+    <span class="ruby-keyword">yield</span> <span class="ruby-ivar">@zipfile</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-operator">::</span><span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-ivar">@zipfile</span>, <span class="ruby-string">&quot;rb&quot;</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_raw_input_stream-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_raw_input_stream-method -->
+
+      
+        <div id="mtime-method" class="method-detail method-alias">
+          <a name="method-i-mtime"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">mtime</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Entry.html#method-i-time">time</a>
+          </div>
+          
+        </div><!-- mtime-method -->
+
+      
+        <div id="name_size-method" class="method-detail ">
+          <a name="method-i-name_size"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">name_size</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="name_size-source">
+<pre>
+<span class="ruby-comment"># File lib/zip/entry.rb, line 114</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">name_size</span>
+  <span class="ruby-ivar">@name</span> <span class="ruby-operator">?</span> <span class="ruby-ivar">@name</span>.<span class="ruby-identifier">bytesize</span> <span class="ruby-operator">:</span> <span class="ruby-value">0</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- name_size-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- name_size-method -->
+
+      
+        <div id="pack_c_dir_entry-method" class="method-detail ">
+          <a name="method-i-pack_c_dir_entry"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">pack_c_dir_entry</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="pack_c_dir_entry-source">
+<pre>
+<span class="ruby-comment"># File lib/zip/entry.rb, line 409</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">pack_c_dir_entry</span>
+  <span class="ruby-identifier">zip64</span> = <span class="ruby-ivar">@extra</span>[<span class="ruby-string">'Zip64'</span>]
+  [
+    <span class="ruby-ivar">@header_signature</span>,
+    <span class="ruby-ivar">@version</span>, <span class="ruby-comment"># version of encoding software</span>
+    <span class="ruby-ivar">@fstype</span>, <span class="ruby-comment"># filesystem type</span>
+    <span class="ruby-ivar">@version_needed_to_extract</span>, <span class="ruby-comment"># @versionNeededToExtract           ,</span>
+    <span class="ruby-ivar">@gp_flags</span>, <span class="ruby-comment"># @gp_flags                          ,</span>
+    <span class="ruby-ivar">@compression_method</span>,
+    <span class="ruby-ivar">@time</span>.<span class="ruby-identifier">to_binary_dos_time</span>, <span class="ruby-comment"># @last_mod_time                      ,</span>
+    <span class="ruby-ivar">@time</span>.<span class="ruby-identifier">to_binary_dos_date</span>, <span class="ruby-comment"># @last_mod_date                      ,</span>
+    <span class="ruby-ivar">@crc</span>,
+    (<span class="ruby-identifier">zip64</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">zip64</span>.<span class="ruby-identifier">compressed_size</span>) <span class="ruby-operator">?</span> <span class="ruby-value">0xFFFFFFFF</span> <span class="ruby-operator">:</span> <span class="ruby-ivar">@compressed_size</span>,
+    (<span class="ruby-identifier">zip64</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">zip64</span>.<span class="ruby-identifier">original_size</span>) <span class="ruby-operator">?</span> <span class="ruby-value">0xFFFFFFFF</span> <span class="ruby-operator">:</span> <span class="ruby-ivar">@size</span>,
+    <span class="ruby-identifier">name_size</span>,
+    <span class="ruby-ivar">@extra</span> <span class="ruby-operator">?</span> <span class="ruby-ivar">@extra</span>.<span class="ruby-identifier">c_dir_size</span> <span class="ruby-operator">:</span> <span class="ruby-value">0</span>,
+    <span class="ruby-identifier">comment_size</span>,
+    (<span class="ruby-identifier">zip64</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">zip64</span>.<span class="ruby-identifier">disk_start_number</span>) <span class="ruby-operator">?</span> <span class="ruby-value">0xFFFF</span> <span class="ruby-operator">:</span> <span class="ruby-value">0</span>, <span class="ruby-comment"># disk number start</span>
+    <span class="ruby-ivar">@internal_file_attributes</span>, <span class="ruby-comment"># file type (binary=0, text=1)</span>
+    <span class="ruby-ivar">@external_file_attributes</span>, <span class="ruby-comment"># native filesystem attributes</span>
+    (<span class="ruby-identifier">zip64</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">zip64</span>.<span class="ruby-identifier">relative_header_offset</span>) <span class="ruby-operator">?</span> <span class="ruby-value">0xFFFFFFFF</span> <span class="ruby-operator">:</span> <span class="ruby-ivar">@local_header_offset</span>,
+    <span class="ruby-ivar">@name</span>,
+    <span class="ruby-ivar">@extra</span>,
+    <span class="ruby-ivar">@comment</span>
+  ].<span class="ruby-identifier">pack</span>(<span class="ruby-string">'VCCvvvvvVVVvvvvvVV'</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- pack_c_dir_entry-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- pack_c_dir_entry-method -->
+
+      
+        <div id="pack_local_entry-method" class="method-detail ">
+          <a name="method-i-pack_local_entry"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">pack_local_entry</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="pack_local_entry-source">
+<pre>
+<span class="ruby-comment"># File lib/zip/entry.rb, line 253</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">pack_local_entry</span>
+  <span class="ruby-identifier">zip64</span> = <span class="ruby-ivar">@extra</span>[<span class="ruby-string">'Zip64'</span>]
+  [<span class="ruby-operator">::</span><span class="ruby-constant">Zip</span><span class="ruby-operator">::</span><span class="ruby-constant">LOCAL_ENTRY_SIGNATURE</span>,
+   <span class="ruby-ivar">@version_needed_to_extract</span>, <span class="ruby-comment"># version needed to extract</span>
+   <span class="ruby-ivar">@gp_flags</span>, <span class="ruby-comment"># @gp_flags                  ,</span>
+   <span class="ruby-ivar">@compression_method</span>,
+   <span class="ruby-ivar">@time</span>.<span class="ruby-identifier">to_binary_dos_time</span>, <span class="ruby-comment"># @last_mod_time              ,</span>
+   <span class="ruby-ivar">@time</span>.<span class="ruby-identifier">to_binary_dos_date</span>, <span class="ruby-comment"># @last_mod_date              ,</span>
+   <span class="ruby-ivar">@crc</span>,
+   (<span class="ruby-identifier">zip64</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">zip64</span>.<span class="ruby-identifier">compressed_size</span>) <span class="ruby-operator">?</span> <span class="ruby-value">0xFFFFFFFF</span> <span class="ruby-operator">:</span> <span class="ruby-ivar">@compressed_size</span>,
+   (<span class="ruby-identifier">zip64</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">zip64</span>.<span class="ruby-identifier">original_size</span>) <span class="ruby-operator">?</span> <span class="ruby-value">0xFFFFFFFF</span> <span class="ruby-operator">:</span> <span class="ruby-ivar">@size</span>,
+   <span class="ruby-identifier">name_size</span>,
+   <span class="ruby-ivar">@extra</span> <span class="ruby-operator">?</span> <span class="ruby-ivar">@extra</span>.<span class="ruby-identifier">local_size</span> <span class="ruby-operator">:</span> <span class="ruby-value">0</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-string">'VvvvvvVVVvv'</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- pack_local_entry-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- pack_local_entry-method -->
+
+      
+        <div id="parent_as_string-method" class="method-detail ">
+          <a name="method-i-parent_as_string"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">parent_as_string</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="parent_as_string-source">
+<pre>
+<span class="ruby-comment"># File lib/zip/entry.rb, line 549</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">parent_as_string</span>
+  <span class="ruby-identifier">entry_name</span>  = <span class="ruby-identifier">name</span>.<span class="ruby-identifier">chomp</span>(<span class="ruby-string">'/'</span>)
+  <span class="ruby-identifier">slash_index</span> = <span class="ruby-identifier">entry_name</span>.<span class="ruby-identifier">rindex</span>(<span class="ruby-string">'/'</span>)
+  <span class="ruby-identifier">slash_index</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">entry_name</span>.<span class="ruby-identifier">slice</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">slash_index</span><span class="ruby-operator">+</span><span class="ruby-value">1</span>) <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- parent_as_string-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- parent_as_string-method -->
+
+      
+        <div id="read_c_dir_extra_field-method" class="method-detail ">
+          <a name="method-i-read_c_dir_extra_field"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">read_c_dir_extra_field</span><span
+              class="method-args">(io)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="read_c_dir_extra_field-source">
+<pre>
+<span class="ruby-comment"># File lib/zip/entry.rb, line 351</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">read_c_dir_extra_field</span>(<span class="ruby-identifier">io</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@extra</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-operator">::</span><span class="ruby-constant">Zip</span><span class="ruby-operator">::</span><span class="ruby-constant">ExtraField</span>)
+    <span class="ruby-ivar">@extra</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-identifier">io</span>.<span class="ruby-identifier">read</span>(<span class="ruby-ivar">@extra_length</span>))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@extra</span> = <span class="ruby-operator">::</span><span class="ruby-constant">Zip</span><span class="ruby-operator">::</span><span class="ruby-constant">ExtraField</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">io</span>.<span class="ruby-identifier">read</span>(<span class="ruby-ivar">@extra_length</span>))
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- read_c_dir_extra_field-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- read_c_dir_extra_field-method -->
+
+      
+        <div id="set_default_vars_values-method" class="method-detail ">
+          <a name="method-i-set_default_vars_values"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">set_default_vars_values</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="set_default_vars_values-source">
+<pre>
+<span class="ruby-comment"># File lib/zip/entry.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set_default_vars_values</span>
+  <span class="ruby-ivar">@local_header_offset</span>      = <span class="ruby-value">0</span>
+  <span class="ruby-ivar">@local_header_size</span>        = <span class="ruby-keyword">nil</span> <span class="ruby-comment"># not known until local entry is created or read</span>
+  <span class="ruby-ivar">@internal_file_attributes</span> = <span class="ruby-value">1</span>
+  <span class="ruby-ivar">@external_file_attributes</span> = <span class="ruby-value">0</span>
+  <span class="ruby-ivar">@header_signature</span>         = <span class="ruby-operator">::</span><span class="ruby-constant">Zip</span><span class="ruby-operator">::</span><span class="ruby-constant">CENTRAL_DIRECTORY_ENTRY_SIGNATURE</span>
+
+  <span class="ruby-ivar">@version_needed_to_extract</span> = <span class="ruby-constant">VERSION_NEEDED_TO_EXTRACT</span>
+  <span class="ruby-ivar">@version</span>                   = <span class="ruby-constant">VERSION_MADE_BY</span>
+
+  <span class="ruby-ivar">@ftype</span>           = <span class="ruby-keyword">nil</span>          <span class="ruby-comment"># unspecified or unknown</span>
+  <span class="ruby-ivar">@filepath</span>        = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@gp_flags</span>        = <span class="ruby-value">0</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">::</span><span class="ruby-constant">Zip</span>.<span class="ruby-identifier">unicode_names</span>
+    <span class="ruby-ivar">@gp_flags</span> <span class="ruby-operator">|=</span> <span class="ruby-constant">EFS</span>
+    <span class="ruby-ivar">@version</span> = <span class="ruby-value">63</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@follow_symlinks</span> = <span class="ruby-keyword">false</span>
+
+  <span class="ruby-ivar">@restore_times</span>       = <span class="ruby-keyword">true</span>
+  <span class="ruby-ivar">@restore_permissions</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@restore_ownership</span>   = <span class="ruby-keyword">false</span>
+  <span class="ruby-comment"># BUG: need an extra field to support uid/gid's</span>
+  <span class="ruby-ivar">@unix_uid</span>            = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@unix_gid</span>            = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@unix_perms</span>          = <span class="ruby-keyword">nil</span>
+  <span class="ruby-comment">#@posix_acl = nil</span>
+  <span class="ruby-comment">#@ntfs_acl = nil</span>
+  <span class="ruby-ivar">@dirty</span>               = <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- set_default_vars_values-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- set_default_vars_values-method -->
+
+      
+        <div id="set_ftype_from_c_dir_entry-method" class="method-detail ">
+          <a name="method-i-set_ftype_from_c_dir_entry"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">set_ftype_from_c_dir_entry</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="set_ftype_from_c_dir_entry-source">
+<pre>
+<span class="ruby-comment"># File lib/zip/entry.rb, line 304</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set_ftype_from_c_dir_entry</span>
+  <span class="ruby-ivar">@ftype</span> = <span class="ruby-keyword">case</span> <span class="ruby-ivar">@fstype</span>
+           <span class="ruby-keyword">when</span> <span class="ruby-operator">::</span><span class="ruby-constant">Zip</span><span class="ruby-operator">::</span><span class="ruby-constant">FSTYPE_UNIX</span>
+             <span class="ruby-ivar">@unix_perms</span> = (<span class="ruby-ivar">@external_file_attributes</span> <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">16</span>) &amp; <span class="ruby-value">07777</span>
+             <span class="ruby-keyword">case</span> (<span class="ruby-ivar">@external_file_attributes</span> <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">28</span>)
+             <span class="ruby-keyword">when</span> <span class="ruby-operator">::</span><span class="ruby-constant">Zip</span><span class="ruby-operator">::</span><span class="ruby-constant">FILE_TYPE_DIR</span>
+               <span class="ruby-value">:directory</span>
+             <span class="ruby-keyword">when</span> <span class="ruby-operator">::</span><span class="ruby-constant">Zip</span><span class="ruby-operator">::</span><span class="ruby-constant">FILE_TYPE_FILE</span>
+               <span class="ruby-value">:file</span>
+             <span class="ruby-keyword">when</span> <span class="ruby-operator">::</span><span class="ruby-constant">Zip</span><span class="ruby-operator">::</span><span class="ruby-constant">FILE_TYPE_SYMLINK</span>
+               <span class="ruby-value">:symlink</span>
+             <span class="ruby-keyword">else</span>
+               <span class="ruby-comment">#best case guess for whether it is a file or not</span>
+               <span class="ruby-comment">#Otherwise this would be set to unknown and that entry would never be able to extracted</span>
+               <span class="ruby-keyword">if</span> <span class="ruby-identifier">name_is_directory?</span>
+                 <span class="ruby-value">:directory</span>
+               <span class="ruby-keyword">else</span>
+                 <span class="ruby-value">:file</span>
+               <span class="ruby-keyword">end</span>
+             <span class="ruby-keyword">end</span>
+           <span class="ruby-keyword">else</span>
+             <span class="ruby-keyword">if</span> <span class="ruby-identifier">name_is_directory?</span>
+               <span class="ruby-value">:directory</span>
+             <span class="ruby-keyword">else</span>
+               <span class="ruby-value">:file</span>
+             <span class="ruby-keyword">end</span>
+           <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- set_ftype_from_c_dir_entry-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- set_ftype_from_c_dir_entry-method -->
+
+      
+        <div id="set_unix_permissions_on_path-method" class="method-detail ">
+          <a name="method-i-set_unix_permissions_on_path"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">set_unix_permissions_on_path</span><span
+              class="method-args">(dest_path)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="set_unix_permissions_on_path-source">
+<pre>
+<span class="ruby-comment"># File lib/zip/entry.rb, line 390</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set_unix_permissions_on_path</span>(<span class="ruby-identifier">dest_path</span>)
+  <span class="ruby-comment"># BUG: does not update timestamps into account</span>
+  <span class="ruby-comment"># ignore setuid/setgid bits by default.  honor if @restore_ownership</span>
+  <span class="ruby-identifier">unix_perms_mask</span> = <span class="ruby-value">01777</span>
+  <span class="ruby-identifier">unix_perms_mask</span> = <span class="ruby-value">07777</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@restore_ownership</span>
+  <span class="ruby-operator">::</span><span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">chmod</span>(<span class="ruby-ivar">@unix_perms</span> &amp; <span class="ruby-identifier">unix_perms_mask</span>, <span class="ruby-identifier">dest_path</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@restore_permissions</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@unix_perms</span>
+  <span class="ruby-operator">::</span><span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">chown</span>(<span class="ruby-ivar">@unix_uid</span>, <span class="ruby-ivar">@unix_gid</span>, <span class="ruby-identifier">dest_path</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@restore_ownership</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@unix_uid</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@unix_gid</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">::</span><span class="ruby-constant">Process</span>.<span class="ruby-identifier">egid</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+  <span class="ruby-comment"># File::utimes()</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- set_unix_permissions_on_path-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- set_unix_permissions_on_path-method -->
+
+      
+        <div id="time-method" class="method-detail ">
+          <a name="method-i-time"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">time</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="time-source">
+<pre>
+<span class="ruby-comment"># File lib/zip/entry.rb, line 74</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">time</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@extra</span>[<span class="ruby-string">'UniversalTime'</span>]
+    <span class="ruby-ivar">@extra</span>[<span class="ruby-string">'UniversalTime'</span>].<span class="ruby-identifier">mtime</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-comment"># Standard time field in central directory has local time</span>
+    <span class="ruby-comment"># under archive creator. Then, we can't get timezone.</span>
+    <span class="ruby-ivar">@time</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- time-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Entry.html#method-i-mtime">mtime</a>
+          </div>
+          
+
+          
+        </div><!-- time-method -->
+
+      
+        <div id="time-3D-method" class="method-detail ">
+          <a name="method-i-time-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">time=</span><span
+              class="method-args">(value)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="time-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/zip/entry.rb, line 86</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">time=</span>(<span class="ruby-identifier">value</span>)
+  <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@extra</span>.<span class="ruby-identifier">member?</span>(<span class="ruby-string">'UniversalTime'</span>)
+    <span class="ruby-ivar">@extra</span>.<span class="ruby-identifier">create</span>(<span class="ruby-string">'UniversalTime'</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@extra</span>[<span class="ruby-string">'UniversalTime'</span>].<span class="ruby-identifier">mtime</span> = <span class="ruby-identifier">value</span>
+  <span class="ruby-ivar">@time</span>                         = <span class="ruby-identifier">value</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- time-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- time-3D-method -->
+
+      
+        <div id="to_s-method" class="method-detail ">
+          <a name="method-i-to_s"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">to_s</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="to_s-source">
+<pre>
+<span class="ruby-comment"># File lib/zip/entry.rb, line 160</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_s</span>
+  <span class="ruby-ivar">@name</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- to_s-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- to_s-method -->
+
+      
+        <div id="unpack_c_dir_entry-method" class="method-detail ">
+          <a name="method-i-unpack_c_dir_entry"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">unpack_c_dir_entry</span><span
+              class="method-args">(buf)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="unpack_c_dir_entry-source">
+<pre>
+<span class="ruby-comment"># File lib/zip/entry.rb, line 280</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unpack_c_dir_entry</span>(<span class="ruby-identifier">buf</span>)
+  <span class="ruby-ivar">@header_signature</span>,
+    <span class="ruby-ivar">@version</span>, <span class="ruby-comment"># version of encoding software</span>
+    <span class="ruby-ivar">@fstype</span>, <span class="ruby-comment"># filesystem type</span>
+    <span class="ruby-ivar">@version_needed_to_extract</span>,
+    <span class="ruby-ivar">@gp_flags</span>,
+    <span class="ruby-ivar">@compression_method</span>,
+    <span class="ruby-ivar">@last_mod_time</span>,
+    <span class="ruby-ivar">@last_mod_date</span>,
+    <span class="ruby-ivar">@crc</span>,
+    <span class="ruby-ivar">@compressed_size</span>,
+    <span class="ruby-ivar">@size</span>,
+    <span class="ruby-ivar">@name_length</span>,
+    <span class="ruby-ivar">@extra_length</span>,
+    <span class="ruby-ivar">@comment_length</span>,
+    <span class="ruby-identifier">_</span>, <span class="ruby-comment"># diskNumberStart</span>
+    <span class="ruby-ivar">@internal_file_attributes</span>,
+    <span class="ruby-ivar">@external_file_attributes</span>,
+    <span class="ruby-ivar">@local_header_offset</span>,
+    <span class="ruby-ivar">@name</span>,
+    <span class="ruby-ivar">@extra</span>,
+    <span class="ruby-ivar">@comment</span> = <span class="ruby-identifier">buf</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-string">'VCCvvvvvVVVvvvvvVV'</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- unpack_c_dir_entry-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- unpack_c_dir_entry-method -->
+
+      
+        <div id="unpack_local_entry-method" class="method-detail ">
+          <a name="method-i-unpack_local_entry"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">unpack_local_entry</span><span
+              class="method-args">(buf)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="unpack_local_entry-source">
+<pre>
+<span class="ruby-comment"># File lib/zip/entry.rb, line 204</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unpack_local_entry</span>(<span class="ruby-identifier">buf</span>)
+  <span class="ruby-ivar">@header_signature</span>,
+    <span class="ruby-ivar">@version</span>,
+    <span class="ruby-ivar">@fstype</span>,
+    <span class="ruby-ivar">@gp_flags</span>,
+    <span class="ruby-ivar">@compression_method</span>,
+    <span class="ruby-ivar">@last_mod_time</span>,
+    <span class="ruby-ivar">@last_mod_date</span>,
+    <span class="ruby-ivar">@crc</span>,
+    <span class="ruby-ivar">@compressed_size</span>,
+    <span class="ruby-ivar">@size</span>,
+    <span class="ruby-ivar">@name_length</span>,
+    <span class="ruby-ivar">@extra_length</span> = <span class="ruby-identifier">buf</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-string">'VCCvvvvVVVvv'</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- unpack_local_entry-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- unpack_local_entry-method -->
+
+      
+        <div id="verify_local_header_size-21-method" class="method-detail ">
+          <a name="method-i-verify_local_header_size-21"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">verify_local_header_size!</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>check before rewriting an entry (after file sizes are known) that we didn't
+change the header size (and thus clobber file data or something)</p>
+            
+
+            
+            <div class="method-source-code" id="verify_local_header_size-21-source">
+<pre>
+<span class="ruby-comment"># File lib/zip/entry.rb, line 132</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">verify_local_header_size!</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@local_header_size</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-identifier">new_size</span> = <span class="ruby-identifier">calculate_local_header_size</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>, <span class="ruby-node">&quot;local header size changed (#{@local_header_size} -&gt; #{new_size})&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@local_header_size</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">new_size</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- verify_local_header_size-21-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- verify_local_header_size-21-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+
