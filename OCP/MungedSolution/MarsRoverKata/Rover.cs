@@ -31,12 +31,12 @@ namespace MarsRoverKata
             Mars = mars;
             Projectiles = new List<Projectile>
             {
-                new Missile(Mars),
-                new Missile(Mars),
-                new Missile(Mars),
-                new Mortar(Mars),
-                new Mortar(Mars),
-                new Mortar(Mars)
+                new Projectile(Mars, false),
+                new Projectile(Mars, false),
+                new Projectile(Mars, false),
+                new Projectile(Mars, true),
+                new Projectile(Mars, true),
+                new Projectile(Mars, true)
             };
             LandOnMars(landingPoint);
         }
@@ -105,9 +105,9 @@ namespace MarsRoverKata
             return true;
         }
 
-        public bool FireProjectiles(Type t)
+        public bool FireProjectiles(bool isMortar)
         {
-            var projectileToFire = Projectiles.FirstOrDefault(p => p.GetType() == t);
+            var projectileToFire = Projectiles.FirstOrDefault(p => p.IsMortar == isMortar);
             if (projectileToFire == null)
             {
                 return false;

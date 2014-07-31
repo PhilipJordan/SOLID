@@ -534,25 +534,25 @@ namespace UnitTest
 
     public class GivenMissile : GivenObstacle
     {
-        protected Missile missile;
+        protected Projectile missile;
 
         protected override void arrangement()
         {
             base.arrangement();
 
-            missile = new Missile(mars);
+            missile = new Projectile(mars, false);
         }
     }
 
     public class GivenMortar : GivenObstacle
     {
-        protected Mortar mortar;
+        protected Projectile mortar;
 
         protected override void arrangement()
         {
             base.arrangement();
 
-            mortar = new Mortar(mars);
+            mortar = new Projectile(mars, true);
         }
     }
 

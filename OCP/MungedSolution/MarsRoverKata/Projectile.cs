@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace MarsRoverKata
 {
-    public abstract class Projectile
+    public class Projectile
     {
-        public Projectile(Mars mars)
+        public Projectile(Mars mars, bool isMortar)
         {
             Mars = mars;
+            IsMortar = isMortar;
         }
 
         private Mars Mars { get; set; }
@@ -22,7 +23,8 @@ namespace MarsRoverKata
             { Direction.West, new Point(-1, 0) }
         };
 
-        protected abstract int MaxRange { get; }
+        public bool IsMortar { get; set; }
+        private int MaxRange { get { return IsMortar ? 20 : 10; } }
 
         public void Launch(Direction facing, Point location)
         {
@@ -55,9 +57,26 @@ namespace MarsRoverKata
             return newDestination;
         }
 
-        protected abstract bool IsCollisionDetected(Point desired);
+        private bool IsCollisionDetected(Point desired)
+        {
+            if (!IsMortar)
+            {
+                Point newDestination = desired;
+                newDestination = CalculatePositionY(desired, newDestination);
+                newDestination = CalculatePositionX(desired, newDestination);
+                var obstacle = FindObstacle(newDestination);
 
-        protected Point CalculatePositionX(Point desired, Point newDestination)
+                if (obstacle != null && obstacle.IsDestructable)
+                {
+                    return true;
+                }
+
+                return false;
+            }
+            return false;
+        }
+
+        private Point CalculatePositionX(Point desired, Point newDestination)
         {
             if (desired.X > Mars.Bounds.Width)
             {
@@ -70,7 +89,7 @@ namespace MarsRoverKata
             return newDestination;
         }
 
-        protected Point CalculatePositionY(Point desired, Point newDestination)
+        private Point CalculatePositionY(Point desired, Point newDestination)
         {
             if (desired.Y > Mars.Bounds.Height)
             {
@@ -83,12 +102,12 @@ namespace MarsRoverKata
             return newDestination;
         }
 
-        protected Obstacle FindObstacle(Point point)
+        private Obstacle FindObstacle(Point point)
         {
             return Mars.Obstacles.SingleOrDefault(x => x.Location.Equals(point));
         }
 
-        protected virtual void DestroyObstacle(Obstacle obstacle)
+        private void DestroyObstacle(Obstacle obstacle)
         {
             Mars.RemoveObstacle(obstacle);
         }
