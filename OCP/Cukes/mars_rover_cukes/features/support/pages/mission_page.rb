@@ -1,7 +1,8 @@
+
 class MissionPage
   include PageObject
   
-  page_url("http://localhost:53332/mission/staging")
+  page_url $environment 
   h3(:title, :id => "MissionControl")
   button(:addObstacles, :value => 'Add')
   button(:sendCommands, :id => 'sendCommands')
@@ -42,12 +43,6 @@ class MissionPage
   
   def alert_message
 	@message
-	
-	#message = self.alert do
-	#	self.addObstacles
-	#nd
-  
-	#p message
   end
   
 end

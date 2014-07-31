@@ -1,6 +1,6 @@
                                                                         
 Given(/^the Mission page$/) do                                          
-	visit(MissionPage)    
+	visit(MissionPage) 
 end                                                                     
                                                                         
 When(/^I get the image at the (center of the map)$/) do |center_of_map|                  

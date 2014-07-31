@@ -6,6 +6,7 @@ Feature: Beginning the Mission
    I want a view with controls
    So I can give the rover commands
    
+	@foo
 	Scenario: The initial view
 		Given the Mission page
 		When I get the image at the center of the map
