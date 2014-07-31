@@ -16,6 +16,6 @@ namespace MarsRoverKata
             Location = location;
         }
 
-        public virtual bool IsDestructable { get { return true; } }
+        public bool IsDestructable { get { return true; } }
     }
 }

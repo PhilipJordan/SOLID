@@ -126,7 +126,7 @@ namespace CentralCommand.Controllers
                 new MapPositionViewModel
                 {
                     Location = x.Location.X + "_" + x.Location.Y,
-                    Image = x.GetType() == typeof(Crater) ? "crater.jpg" : "rock.png"
+                    Image = !x.IsDestructable ? "crater.jpg" : "rock.png"
                 }).ToList();
         }
 

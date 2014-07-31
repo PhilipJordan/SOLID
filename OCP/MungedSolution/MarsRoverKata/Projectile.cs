@@ -122,7 +122,7 @@ namespace MarsRoverKata
             }
             else if (obstacle == null)
             {
-                obstacle = new Crater(point);
+                obstacle = new Obstacle(point);
                 Mars.AddObstacle(obstacle);
             }
         }

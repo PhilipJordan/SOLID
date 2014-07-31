@@ -50,7 +50,6 @@
     <Compile Include="Commands\TurnLeftCommand.cs" />
     <Compile Include="Commands\TurnRightCommand.cs" />
     <Compile Include="CrashException.cs" />
-    <Compile Include="Crater.cs" />
     <Compile Include="Enumerations.cs" />
     <Compile Include="Mars.cs" />
     <Compile Include="MissionManager.cs" />

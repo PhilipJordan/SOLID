@@ -137,7 +137,7 @@ namespace UnitTest
 
             mars.Obstacles.Count.Should().Be(expectedCount);
             actualObstacle.Location.Should().Be(expectedObstaclePosition);
-            actualObstacle.GetType().Should().Be(typeof(Crater));
+            actualObstacle.IsDestructable.Should().Be(false);
         }
 
         [Test]
@@ -154,8 +154,6 @@ namespace UnitTest
         [Test]
         public void WhenMissileIsLaunched_AndObstacleInTheWay_AndObstacleIsNotDestructable_ThenTheObstacleIsSkipped_AndANewObstacleCreated()
         {
-            mars.RemoveObstacle(obstacle);
-            obstacle = new Crater(obstacle.Location);
             mars.AddObstacle(obstacle);
             var position = new Point(obstacle.Location.X, obstacle.Location.Y + 5);
             var expectedCount = mars.Obstacles.Count + 1;
@@ -177,7 +175,7 @@ namespace UnitTest
 
             mars.Obstacles.Count.Should().Be(expectedCount);
             actualObstacle.Location.Should().Be(expectedObstaclePosition);
-            actualObstacle.GetType().Should().Be(typeof(Crater));
+            actualObstacle.IsDestructable.Should().Be(false);
         }
     }
 
@@ -195,7 +193,7 @@ namespace UnitTest
 
             mars.Obstacles.Count.Should().Be(expectedCount);
             actualObstacle.Location.Should().Be(expectedObstaclePosition);
-            actualObstacle.GetType().Should().Be(typeof(Crater));
+            actualObstacle.IsDestructable.Should().Be(false);
         }
 
         [Test]
@@ -210,7 +208,7 @@ namespace UnitTest
 
             mars.Obstacles.Count.Should().Be(expectedCount);
             actualObstacle.Location.Should().Be(expectedObstaclePosition);
-            actualObstacle.GetType().Should().Be(typeof(Crater));
+            actualObstacle.IsDestructable.Should().Be(false);
         }
 
         [Test]
@@ -238,7 +236,7 @@ namespace UnitTest
 
             mars.Obstacles.Count.Should().Be(expectedCount);
             actualObstacle.Location.Should().Be(expectedObstaclePosition);
-            actualObstacle.GetType().Should().Be(typeof(Crater));
+            actualObstacle.IsDestructable.Should().Be(false);
         }
     }
 
