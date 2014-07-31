@@ -1,0 +1,912 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: RSpec::Core::Formatters::HtmlPrinter</title>
+
+  <link rel="stylesheet" href="../../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../../index.html">Home</a>
+          <a href="../../../index.html#classes">Classes</a>
+          <a href="../../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../../lib/rspec/core/formatters/html_printer_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/rspec/core/formatters/html_printer.rb">lib/rspec/core/formatters/html_printer.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="../../../Object.html">Object</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-flush">#flush</a></li>
+          
+          <li><a href="#method-i-make_example_group_header_red">#make_example_group_header_red</a></li>
+          
+          <li><a href="#method-i-make_example_group_header_yellow">#make_example_group_header_yellow</a></li>
+          
+          <li><a href="#method-i-make_header_red">#make_header_red</a></li>
+          
+          <li><a href="#method-i-make_header_yellow">#make_header_yellow</a></li>
+          
+          <li><a href="#method-i-move_progress">#move_progress</a></li>
+          
+          <li><a href="#method-i-print_example_failed">#print_example_failed</a></li>
+          
+          <li><a href="#method-i-print_example_group_end">#print_example_group_end</a></li>
+          
+          <li><a href="#method-i-print_example_group_start">#print_example_group_start</a></li>
+          
+          <li><a href="#method-i-print_example_passed">#print_example_passed</a></li>
+          
+          <li><a href="#method-i-print_example_pending">#print_example_pending</a></li>
+          
+          <li><a href="#method-i-print_html_start">#print_html_start</a></li>
+          
+          <li><a href="#method-i-print_summary">#print_summary</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Included Modules -->
+      <div id="includes-section" class="section">
+        <h3 class="section-header">Included Modules</h3>
+        <ul class="link-list">
+        
+        
+          <li><span class="include">ERB::Util</span></li>
+        
+        
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../../RSpec.html">RSpec</a></li>
+        
+          <li><a href="../../../RSpec/CallerFilter.html">RSpec::CallerFilter</a></li>
+        
+          <li><a href="../../../RSpec/Core.html">RSpec::Core</a></li>
+        
+          <li><a href="../../../RSpec/Core/BacktraceCleaner.html">RSpec::Core::BacktraceCleaner</a></li>
+        
+          <li><a href="../../../RSpec/Core/BacktraceFormatter.html">RSpec::Core::BacktraceFormatter</a></li>
+        
+          <li><a href="../../../RSpec/Core/CommandLine.html">RSpec::Core::CommandLine</a></li>
+        
+          <li><a href="../../../RSpec/Core/Configuration.html">RSpec::Core::Configuration</a></li>
+        
+          <li><a href="../../../RSpec/Core/Configuration/ExposeCurrentExample.html">RSpec::Core::Configuration::ExposeCurrentExample</a></li>
+        
+          <li><a href="../../../RSpec/Core/Configuration/MustBeConfiguredBeforeExampleGroupsError.html">RSpec::Core::Configuration::MustBeConfiguredBeforeExampleGroupsError</a></li>
+        
+          <li><a href="../../../RSpec/Core/ConfigurationOptions.html">RSpec::Core::ConfigurationOptions</a></li>
+        
+          <li><a href="../../../RSpec/Core/ConstMissing.html">RSpec::Core::ConstMissing</a></li>
+        
+          <li><a href="../../../RSpec/Core/DRbCommandLine.html">RSpec::Core::DRbCommandLine</a></li>
+        
+          <li><a href="../../../RSpec/Core/DSL.html">RSpec::Core::DSL</a></li>
+        
+          <li><a href="../../../RSpec/Core/DeprecatedMutableArrayProxy.html">RSpec::Core::DeprecatedMutableArrayProxy</a></li>
+        
+          <li><a href="../../../RSpec/Core/Deprecation.html">RSpec::Core::Deprecation</a></li>
+        
+          <li><a href="../../../RSpec/Core/DrbOptions.html">RSpec::Core::DrbOptions</a></li>
+        
+          <li><a href="../../../RSpec/Core/Example.html">RSpec::Core::Example</a></li>
+        
+          <li><a href="../../../RSpec/Core/Example/Procsy.html">RSpec::Core::Example::Procsy</a></li>
+        
+          <li><a href="../../../RSpec/Core/ExampleGroup.html">RSpec::Core::ExampleGroup</a></li>
+        
+          <li><a href="../../../RSpec/Core/Extensions.html">RSpec::Core::Extensions</a></li>
+        
+          <li><a href="../../../RSpec/Core/Extensions/InstanceEvalWithArgs.html">RSpec::Core::Extensions::InstanceEvalWithArgs</a></li>
+        
+          <li><a href="../../../RSpec/Core/Extensions/ModuleEvalWithArgs.html">RSpec::Core::Extensions::ModuleEvalWithArgs</a></li>
+        
+          <li><a href="../../../RSpec/Core/Extensions/Ordered.html">RSpec::Core::Extensions::Ordered</a></li>
+        
+          <li><a href="../../../RSpec/Core/Extensions/Ordered/ExampleGroups.html">RSpec::Core::Extensions::Ordered::ExampleGroups</a></li>
+        
+          <li><a href="../../../RSpec/Core/Extensions/Ordered/Examples.html">RSpec::Core::Extensions::Ordered::Examples</a></li>
+        
+          <li><a href="../../../RSpec/Core/FilterManager.html">RSpec::Core::FilterManager</a></li>
+        
+          <li><a href="../../../RSpec/Core/FilterManager/BackwardCompatibility.html">RSpec::Core::FilterManager::BackwardCompatibility</a></li>
+        
+          <li><a href="../../../RSpec/Core/FilterManager/Describable.html">RSpec::Core::FilterManager::Describable</a></li>
+        
+          <li><a href="../../../RSpec/Core/Formatters.html">RSpec::Core::Formatters</a></li>
+        
+          <li><a href="../../../RSpec/Core/Formatters/BaseFormatter.html">RSpec::Core::Formatters::BaseFormatter</a></li>
+        
+          <li><a href="../../../RSpec/Core/Formatters/BaseTextFormatter.html">RSpec::Core::Formatters::BaseTextFormatter</a></li>
+        
+          <li><a href="../../../RSpec/Core/Formatters/ConsoleCodes.html">RSpec::Core::Formatters::ConsoleCodes</a></li>
+        
+          <li><a href="../../../RSpec/Core/Formatters/DeprecationFormatter.html">RSpec::Core::Formatters::DeprecationFormatter</a></li>
+        
+          <li><a href="../../../RSpec/Core/Formatters/DeprecationFormatter/DelayedPrinter.html">RSpec::Core::Formatters::DeprecationFormatter::DelayedPrinter</a></li>
+        
+          <li><a href="../../../RSpec/Core/Formatters/DeprecationFormatter/FileStream.html">RSpec::Core::Formatters::DeprecationFormatter::FileStream</a></li>
+        
+          <li><a href="../../../RSpec/Core/Formatters/DeprecationFormatter/ImmediatePrinter.html">RSpec::Core::Formatters::DeprecationFormatter::ImmediatePrinter</a></li>
+        
+          <li><a href="../../../RSpec/Core/Formatters/DeprecationFormatter/RaiseErrorStream.html">RSpec::Core::Formatters::DeprecationFormatter::RaiseErrorStream</a></li>
+        
+          <li><a href="../../../RSpec/Core/Formatters/DocumentationFormatter.html">RSpec::Core::Formatters::DocumentationFormatter</a></li>
+        
+          <li><a href="../../../RSpec/Core/Formatters/Helpers.html">RSpec::Core::Formatters::Helpers</a></li>
+        
+          <li><a href="../../../RSpec/Core/Formatters/HtmlFormatter.html">RSpec::Core::Formatters::HtmlFormatter</a></li>
+        
+          <li><a href="../../../RSpec/Core/Formatters/HtmlPrinter.html">RSpec::Core::Formatters::HtmlPrinter</a></li>
+        
+          <li><a href="../../../RSpec/Core/Formatters/JsonFormatter.html">RSpec::Core::Formatters::JsonFormatter</a></li>
+        
+          <li><a href="../../../RSpec/Core/Formatters/Loader.html">RSpec::Core::Formatters::Loader</a></li>
+        
+          <li><a href="../../../RSpec/Core/Formatters/ProgressFormatter.html">RSpec::Core::Formatters::ProgressFormatter</a></li>
+        
+          <li><a href="../../../RSpec/Core/Formatters/SnippetExtractor.html">RSpec::Core::Formatters::SnippetExtractor</a></li>
+        
+          <li><a href="../../../RSpec/Core/Formatters/SnippetExtractor/NullConverter.html">RSpec::Core::Formatters::SnippetExtractor::NullConverter</a></li>
+        
+          <li><a href="../../../RSpec/Core/Formatters/TextMateFormatter.html">RSpec::Core::Formatters::TextMateFormatter</a></li>
+        
+          <li><a href="../../../RSpec/Core/Hooks.html">RSpec::Core::Hooks</a></li>
+        
+          <li><a href="../../../RSpec/Core/Hooks/AfterAllHook.html">RSpec::Core::Hooks::AfterAllHook</a></li>
+        
+          <li><a href="../../../RSpec/Core/Hooks/AfterHook.html">RSpec::Core::Hooks::AfterHook</a></li>
+        
+          <li><a href="../../../RSpec/Core/Hooks/AroundHook.html">RSpec::Core::Hooks::AroundHook</a></li>
+        
+          <li><a href="../../../RSpec/Core/Hooks/AroundHookCollection.html">RSpec::Core::Hooks::AroundHookCollection</a></li>
+        
+          <li><a href="../../../RSpec/Core/Hooks/BeforeHook.html">RSpec::Core::Hooks::BeforeHook</a></li>
+        
+          <li><a href="../../../RSpec/Core/Hooks/GroupHookCollection.html">RSpec::Core::Hooks::GroupHookCollection</a></li>
+        
+          <li><a href="../../../RSpec/Core/Hooks/Hook.html">RSpec::Core::Hooks::Hook</a></li>
+        
+          <li><a href="../../../RSpec/Core/Hooks/HookCollection.html">RSpec::Core::Hooks::HookCollection</a></li>
+        
+          <li><a href="../../../RSpec/Core/Hooks/HookCollectionAliases.html">RSpec::Core::Hooks::HookCollectionAliases</a></li>
+        
+          <li><a href="../../../RSpec/Core/Hooks/RegistersGlobals.html">RSpec::Core::Hooks::RegistersGlobals</a></li>
+        
+          <li><a href="../../../RSpec/Core/MemoizedHelpers.html">RSpec::Core::MemoizedHelpers</a></li>
+        
+          <li><a href="../../../RSpec/Core/MemoizedHelpers/AllHookMemoizedHash.html">RSpec::Core::MemoizedHelpers::AllHookMemoizedHash</a></li>
+        
+          <li><a href="../../../RSpec/Core/MemoizedHelpers/AllHookMemoizedHash/After.html">RSpec::Core::MemoizedHelpers::AllHookMemoizedHash::After</a></li>
+        
+          <li><a href="../../../RSpec/Core/MemoizedHelpers/AllHookMemoizedHash/Before.html">RSpec::Core::MemoizedHelpers::AllHookMemoizedHash::Before</a></li>
+        
+          <li><a href="../../../RSpec/Core/MemoizedHelpers/ClassMethods.html">RSpec::Core::MemoizedHelpers::ClassMethods</a></li>
+        
+          <li><a href="../../../RSpec/Core/Metadata.html">RSpec::Core::Metadata</a></li>
+        
+          <li><a href="../../../RSpec/Core/Metadata/ExampleMetadataHash.html">RSpec::Core::Metadata::ExampleMetadataHash</a></li>
+        
+          <li><a href="../../../RSpec/Core/Metadata/GroupMetadataHash.html">RSpec::Core::Metadata::GroupMetadataHash</a></li>
+        
+          <li><a href="../../../RSpec/Core/Metadata/MetadataHash.html">RSpec::Core::Metadata::MetadataHash</a></li>
+        
+          <li><a href="../../../RSpec/Core/MetadataHashBuilder.html">RSpec::Core::MetadataHashBuilder</a></li>
+        
+          <li><a href="../../../RSpec/Core/MetadataHashBuilder/Common.html">RSpec::Core::MetadataHashBuilder::Common</a></li>
+        
+          <li><a href="../../../RSpec/Core/MetadataHashBuilder/WithConfigWarning.html">RSpec::Core::MetadataHashBuilder::WithConfigWarning</a></li>
+        
+          <li><a href="../../../RSpec/Core/MetadataHashBuilder/WithDeprecationWarning.html">RSpec::Core::MetadataHashBuilder::WithDeprecationWarning</a></li>
+        
+          <li><a href="../../../RSpec/Core/MinitestAssertionsAdapter.html">RSpec::Core::MinitestAssertionsAdapter</a></li>
+        
+          <li><a href="../../../RSpec/Core/MockFrameworkAdapter.html">RSpec::Core::MockFrameworkAdapter</a></li>
+        
+          <li><a href="../../../RSpec/Core/Parser.html">RSpec::Core::Parser</a></li>
+        
+          <li><a href="../../../RSpec/Core/Pending.html">RSpec::Core::Pending</a></li>
+        
+          <li><a href="../../../RSpec/Core/Pending/PendingExampleFixedError.html">RSpec::Core::Pending::PendingExampleFixedError</a></li>
+        
+          <li><a href="../../../RSpec/Core/Pending/SkipDeclaredInExample.html">RSpec::Core::Pending::SkipDeclaredInExample</a></li>
+        
+          <li><a href="../../../RSpec/Core/ProjectInitializer.html">RSpec::Core::ProjectInitializer</a></li>
+        
+          <li><a href="../../../RSpec/Core/RakeTask.html">RSpec::Core::RakeTask</a></li>
+        
+          <li><a href="../../../RSpec/Core/Reporter.html">RSpec::Core::Reporter</a></li>
+        
+          <li><a href="../../../RSpec/Core/RubyProject.html">RSpec::Core::RubyProject</a></li>
+        
+          <li><a href="../../../RSpec/Core/Runner.html">RSpec::Core::Runner</a></li>
+        
+          <li><a href="../../../RSpec/Core/SharedContext.html">RSpec::Core::SharedContext</a></li>
+        
+          <li><a href="../../../RSpec/Core/SharedExampleGroup.html">RSpec::Core::SharedExampleGroup</a></li>
+        
+          <li><a href="../../../RSpec/Core/SharedExampleGroup/Collection.html">RSpec::Core::SharedExampleGroup::Collection</a></li>
+        
+          <li><a href="../../../RSpec/Core/SharedExampleGroup/Registry.html">RSpec::Core::SharedExampleGroup::Registry</a></li>
+        
+          <li><a href="../../../RSpec/Core/SharedExampleGroup/TopLevelDSL.html">RSpec::Core::SharedExampleGroup::TopLevelDSL</a></li>
+        
+          <li><a href="../../../RSpec/Core/TestUnitAssertionsAdapter.html">RSpec::Core::TestUnitAssertionsAdapter</a></li>
+        
+          <li><a href="../../../RSpec/Core/Time.html">RSpec::Core::Time</a></li>
+        
+          <li><a href="../../../RSpec/Core/Version.html">RSpec::Core::Version</a></li>
+        
+          <li><a href="../../../RSpec/Core/World.html">RSpec::Core::World</a></li>
+        
+          <li><a href="../../../RSpec/Rake.html">RSpec::Rake</a></li>
+        
+          <li><a href="../../../RSpec/Runner.html">RSpec::Runner</a></li>
+        
+          <li><a href="../../../Autotest.html">Autotest</a></li>
+        
+          <li><a href="../../../Autotest/Rspec2.html">Autotest::Rspec2</a></li>
+        
+          <li><a href="../../../Kernel.html">Kernel</a></li>
+        
+          <li><a href="../../../Object.html">Object</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">RSpec::Core::Formatters::HtmlPrinter</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="GLOBAL_SCRIPTS">GLOBAL_SCRIPTS</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="GLOBAL_STYLES">GLOBAL_STYLES</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="HTML_HEADER">HTML_HEADER</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="REPORT_HEADER">REPORT_HEADER</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(output)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/html_printer.rb, line 8</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">output</span>)
+  <span class="ruby-ivar">@output</span> = <span class="ruby-identifier">output</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="flush-method" class="method-detail ">
+          <a name="method-i-flush"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">flush</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="flush-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/html_printer.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">flush</span>
+  <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">flush</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- flush-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- flush-method -->
+
+      
+        <div id="make_example_group_header_red-method" class="method-detail ">
+          <a name="method-i-make_example_group_header_red"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">make_example_group_header_red</span><span
+              class="method-args">(group_id)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="make_example_group_header_red-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/html_printer.rb, line 94</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">make_example_group_header_red</span>(<span class="ruby-identifier">group_id</span>)
+  <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;    &lt;script type=\&quot;text/javascript\&quot;&gt;makeRed('div_group_#{group_id}');&lt;/script&gt;&quot;</span>
+  <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;    &lt;script type=\&quot;text/javascript\&quot;&gt;makeRed('example_group_#{group_id}');&lt;/script&gt;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- make_example_group_header_red-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- make_example_group_header_red-method -->
+
+      
+        <div id="make_example_group_header_yellow-method" class="method-detail ">
+          <a name="method-i-make_example_group_header_yellow"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">make_example_group_header_yellow</span><span
+              class="method-args">(group_id)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="make_example_group_header_yellow-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/html_printer.rb, line 99</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">make_example_group_header_yellow</span>(<span class="ruby-identifier">group_id</span>)
+  <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;    &lt;script type=\&quot;text/javascript\&quot;&gt;makeYellow('div_group_#{group_id}');&lt;/script&gt;&quot;</span>
+  <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;    &lt;script type=\&quot;text/javascript\&quot;&gt;makeYellow('example_group_#{group_id}');&lt;/script&gt;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- make_example_group_header_yellow-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- make_example_group_header_yellow-method -->
+
+      
+        <div id="make_header_red-method" class="method-detail ">
+          <a name="method-i-make_header_red"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">make_header_red</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="make_header_red-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/html_printer.rb, line 86</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">make_header_red</span>
+  <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;    &lt;script type=\&quot;text/javascript\&quot;&gt;makeRed('rspec-header');&lt;/script&gt;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- make_header_red-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- make_header_red-method -->
+
+      
+        <div id="make_header_yellow-method" class="method-detail ">
+          <a name="method-i-make_header_yellow"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">make_header_yellow</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="make_header_yellow-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/html_printer.rb, line 90</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">make_header_yellow</span>
+  <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;    &lt;script type=\&quot;text/javascript\&quot;&gt;makeYellow('rspec-header');&lt;/script&gt;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- make_header_yellow-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- make_header_yellow-method -->
+
+      
+        <div id="move_progress-method" class="method-detail ">
+          <a name="method-i-move_progress"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">move_progress</span><span
+              class="method-args">( percent_done )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="move_progress-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/html_printer.rb, line 81</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">move_progress</span>( <span class="ruby-identifier">percent_done</span> )
+  <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;    &lt;script type=\&quot;text/javascript\&quot;&gt;moveProgressBar('#{percent_done}');&lt;/script&gt;&quot;</span>
+  <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">flush</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- move_progress-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- move_progress-method -->
+
+      
+        <div id="print_example_failed-method" class="method-detail ">
+          <a name="method-i-print_example_failed"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">print_example_failed</span><span
+              class="method-args">( pending_fixed, description, run_time, failure_id, exception, extra_content, escape_backtrace = false )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="print_example_failed-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/html_printer.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">print_example_failed</span>( <span class="ruby-identifier">pending_fixed</span>, <span class="ruby-identifier">description</span>, <span class="ruby-identifier">run_time</span>, <span class="ruby-identifier">failure_id</span>, <span class="ruby-identifier">exception</span>, <span class="ruby-identifier">extra_content</span>, <span class="ruby-identifier">escape_backtrace</span> = <span class="ruby-keyword">false</span> )
+  <span class="ruby-identifier">formatted_run_time</span> = <span class="ruby-identifier">sprintf</span>(<span class="ruby-string">&quot;%.5f&quot;</span>, <span class="ruby-identifier">run_time</span>)
+
+  <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;    &lt;dd class=\&quot;example #{pending_fixed ? 'pending_fixed' : 'failed'}\&quot;&gt;&quot;</span>
+  <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;      &lt;span class=\&quot;failed_spec_name\&quot;&gt;#{h(description)}&lt;/span&gt;&quot;</span>
+  <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;      &lt;span class=\&quot;duration\&quot;&gt;#{formatted_run_time}s&lt;/span&gt;&quot;</span>
+  <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;      &lt;div class=\&quot;failure\&quot; id=\&quot;failure_#{failure_id}\&quot;&gt;&quot;</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">exception</span>
+    <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;        &lt;div class=\&quot;message\&quot;&gt;&lt;pre&gt;#{h(exception[:message])}&lt;/pre&gt;&lt;/div&gt;&quot;</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">escape_backtrace</span>
+      <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;        &lt;div class=\&quot;backtrace\&quot;&gt;&lt;pre&gt;#{h exception[:backtrace]}&lt;/pre&gt;&lt;/div&gt;&quot;</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;        &lt;div class=\&quot;backtrace\&quot;&gt;&lt;pre&gt;#{exception[:backtrace]}&lt;/pre&gt;&lt;/div&gt;&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">extra_content</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">extra_content</span>
+  <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;      &lt;/div&gt;&quot;</span>
+  <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;    &lt;/dd&gt;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- print_example_failed-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- print_example_failed-method -->
+
+      
+        <div id="print_example_group_end-method" class="method-detail ">
+          <a name="method-i-print_example_group_end"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">print_example_group_end</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="print_example_group_end-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/html_printer.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">print_example_group_end</span>
+  <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;  &lt;/dl&gt;&quot;</span>
+  <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;&lt;/div&gt;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- print_example_group_end-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- print_example_group_end-method -->
+
+      
+        <div id="print_example_group_start-method" class="method-detail ">
+          <a name="method-i-print_example_group_start"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">print_example_group_start</span><span
+              class="method-args">( group_id, description, number_of_parents )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="print_example_group_start-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/html_printer.rb, line 22</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">print_example_group_start</span>( <span class="ruby-identifier">group_id</span>, <span class="ruby-identifier">description</span>, <span class="ruby-identifier">number_of_parents</span>  )
+  <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;&lt;div id=\&quot;div_group_#{group_id}\&quot; class=\&quot;example_group passed\&quot;&gt;&quot;</span>
+  <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;  &lt;dl #{indentation_style(number_of_parents)}&gt;&quot;</span>
+  <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;  &lt;dt id=\&quot;example_group_#{group_id}\&quot; class=\&quot;passed\&quot;&gt;#{h(description)}&lt;/dt&gt;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- print_example_group_start-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- print_example_group_start-method -->
+
+      
+        <div id="print_example_passed-method" class="method-detail ">
+          <a name="method-i-print_example_passed"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">print_example_passed</span><span
+              class="method-args">( description, run_time )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="print_example_passed-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/html_printer.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">print_example_passed</span>( <span class="ruby-identifier">description</span>, <span class="ruby-identifier">run_time</span> )
+  <span class="ruby-identifier">formatted_run_time</span> = <span class="ruby-identifier">sprintf</span>(<span class="ruby-string">&quot;%.5f&quot;</span>, <span class="ruby-identifier">run_time</span>)
+  <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;    &lt;dd class=\&quot;example passed\&quot;&gt;&lt;span class=\&quot;passed_spec_name\&quot;&gt;#{h(description)}&lt;/span&gt;&lt;span class='duration'&gt;#{formatted_run_time}s&lt;/span&gt;&lt;/dd&gt;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- print_example_passed-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- print_example_passed-method -->
+
+      
+        <div id="print_example_pending-method" class="method-detail ">
+          <a name="method-i-print_example_pending"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">print_example_pending</span><span
+              class="method-args">( description, pending_message )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="print_example_pending-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/html_printer.rb, line 53</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">print_example_pending</span>( <span class="ruby-identifier">description</span>, <span class="ruby-identifier">pending_message</span> )
+  <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;    &lt;dd class=\&quot;example not_implemented\&quot;&gt;&lt;span class=\&quot;not_implemented_spec_name\&quot;&gt;#{h(description)} (PENDING: #{h(pending_message)})&lt;/span&gt;&lt;/dd&gt;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- print_example_pending-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- print_example_pending-method -->
+
+      
+        <div id="print_html_start-method" class="method-detail ">
+          <a name="method-i-print_html_start"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">print_html_start</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="print_html_start-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/html_printer.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">print_html_start</span>
+  <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-constant">HTML_HEADER</span>
+  <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-constant">REPORT_HEADER</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- print_html_start-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- print_html_start-method -->
+
+      
+        <div id="print_summary-method" class="method-detail ">
+          <a name="method-i-print_summary"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">print_summary</span><span
+              class="method-args">( was_dry_run, duration, example_count, failure_count, pending_count )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="print_summary-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/html_printer.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">print_summary</span>( <span class="ruby-identifier">was_dry_run</span>, <span class="ruby-identifier">duration</span>, <span class="ruby-identifier">example_count</span>, <span class="ruby-identifier">failure_count</span>, <span class="ruby-identifier">pending_count</span> )
+  <span class="ruby-comment"># TODO - kill dry_run?</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">was_dry_run</span>
+    <span class="ruby-identifier">totals</span> = <span class="ruby-string">&quot;This was a dry-run&quot;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">totals</span> =  <span class="ruby-node">&quot;#{example_count} example#{'s' unless example_count == 1}, &quot;</span>
+    <span class="ruby-identifier">totals</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{failure_count} failure#{'s' unless failure_count == 1}&quot;</span>
+    <span class="ruby-identifier">totals</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;, #{pending_count} pending&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">pending_count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">formatted_duration</span> = <span class="ruby-identifier">sprintf</span>(<span class="ruby-string">&quot;%.5f&quot;</span>, <span class="ruby-identifier">duration</span>)
+
+  <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;&lt;script type=\&quot;text/javascript\&quot;&gt;document.getElementById('duration').innerHTML = \&quot;Finished in &lt;strong&gt;#{formatted_duration} seconds&lt;/strong&gt;\&quot;;&lt;/script&gt;&quot;</span>
+  <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;&lt;script type=\&quot;text/javascript\&quot;&gt;document.getElementById('totals').innerHTML = \&quot;#{totals}\&quot;;&lt;/script&gt;&quot;</span>
+  <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;&lt;/div&gt;&quot;</span>
+  <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;&lt;/div&gt;&quot;</span>
+  <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;&lt;/body&gt;&quot;</span>
+  <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;&lt;/html&gt;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- print_summary-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- print_summary-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

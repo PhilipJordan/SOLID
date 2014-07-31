@@ -1,0 +1,19 @@
+Mon, 28 Jul 2014 10:04:24 -0400
+lib/diff/lcs/array.rb	Mon, 28 Jul 2014 10:04:11 -0400
+lib/diff/lcs/block.rb	Mon, 28 Jul 2014 10:04:11 -0400
+lib/diff/lcs/callbacks.rb	Mon, 28 Jul 2014 10:04:11 -0400
+lib/diff/lcs/change.rb	Mon, 28 Jul 2014 10:04:11 -0400
+lib/diff/lcs/htmldiff.rb	Mon, 28 Jul 2014 10:04:11 -0400
+lib/diff/lcs/hunk.rb	Mon, 28 Jul 2014 10:04:11 -0400
+lib/diff/lcs/internals.rb	Mon, 28 Jul 2014 10:04:11 -0400
+lib/diff/lcs/ldiff.rb	Mon, 28 Jul 2014 10:04:11 -0400
+lib/diff/lcs/string.rb	Mon, 28 Jul 2014 10:04:11 -0400
+lib/diff/lcs.rb	Mon, 28 Jul 2014 10:04:11 -0400
+lib/diff-lcs.rb	Mon, 28 Jul 2014 10:04:11 -0400
+Contributing.rdoc	Mon, 28 Jul 2014 10:04:11 -0400
+History.rdoc	Mon, 28 Jul 2014 10:04:11 -0400
+License.rdoc	Mon, 28 Jul 2014 10:04:11 -0400
+Manifest.txt	Mon, 28 Jul 2014 10:04:11 -0400
+README.rdoc	Mon, 28 Jul 2014 10:04:11 -0400
+docs/COPYING.txt	Mon, 28 Jul 2014 10:04:11 -0400
+docs/artistic.txt	Mon, 28 Jul 2014 10:04:11 -0400

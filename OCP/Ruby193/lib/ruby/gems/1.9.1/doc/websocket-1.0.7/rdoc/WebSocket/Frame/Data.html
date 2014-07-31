@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="IBM437"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=IBM437" http-equiv="Content-Type" />
+
+  <title>Class: WebSocket::Frame::Data</title>
+
+  <link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../lib/websocket/frame/data_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/websocket/frame/data.rb">lib/websocket/frame/data.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">String</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-3C-3C">#<<</a></li>
+          
+          <li><a href="#method-i-getbyte">#getbyte</a></li>
+          
+          <li><a href="#method-i-getbytes">#getbytes</a></li>
+          
+          <li><a href="#method-i-mask">#mask</a></li>
+          
+          <li><a href="#method-i-set_mask">#set_mask</a></li>
+          
+          <li><a href="#method-i-unset_mask">#unset_mask</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../WebSocket.html">WebSocket</a></li>
+        
+          <li><a href="../../WebSocket/Error.html">WebSocket::Error</a></li>
+        
+          <li><a href="../../WebSocket/Frame.html">WebSocket::Frame</a></li>
+        
+          <li><a href="../../WebSocket/Frame/Base.html">WebSocket::Frame::Base</a></li>
+        
+          <li><a href="../../WebSocket/Frame/Data.html">WebSocket::Frame::Data</a></li>
+        
+          <li><a href="../../WebSocket/Frame/Handler.html">WebSocket::Frame::Handler</a></li>
+        
+          <li><a href="../../WebSocket/Frame/Handler/Base.html">WebSocket::Frame::Handler::Base</a></li>
+        
+          <li><a href="../../WebSocket/Frame/Handler/Handler03.html">WebSocket::Frame::Handler::Handler03</a></li>
+        
+          <li><a href="../../WebSocket/Frame/Handler/Handler04.html">WebSocket::Frame::Handler::Handler04</a></li>
+        
+          <li><a href="../../WebSocket/Frame/Handler/Handler05.html">WebSocket::Frame::Handler::Handler05</a></li>
+        
+          <li><a href="../../WebSocket/Frame/Handler/Handler07.html">WebSocket::Frame::Handler::Handler07</a></li>
+        
+          <li><a href="../../WebSocket/Frame/Handler/Handler75.html">WebSocket::Frame::Handler::Handler75</a></li>
+        
+          <li><a href="../../WebSocket/Frame/Incoming.html">WebSocket::Frame::Incoming</a></li>
+        
+          <li><a href="../../WebSocket/Frame/Incoming/Client.html">WebSocket::Frame::Incoming::Client</a></li>
+        
+          <li><a href="../../WebSocket/Frame/Incoming/Server.html">WebSocket::Frame::Incoming::Server</a></li>
+        
+          <li><a href="../../WebSocket/Frame/Outgoing.html">WebSocket::Frame::Outgoing</a></li>
+        
+          <li><a href="../../WebSocket/Frame/Outgoing/Client.html">WebSocket::Frame::Outgoing::Client</a></li>
+        
+          <li><a href="../../WebSocket/Frame/Outgoing/Server.html">WebSocket::Frame::Outgoing::Server</a></li>
+        
+          <li><a href="../../WebSocket/Handshake.html">WebSocket::Handshake</a></li>
+        
+          <li><a href="../../WebSocket/Handshake/Base.html">WebSocket::Handshake::Base</a></li>
+        
+          <li><a href="../../WebSocket/Handshake/Client.html">WebSocket::Handshake::Client</a></li>
+        
+          <li><a href="../../WebSocket/Handshake/Handler.html">WebSocket::Handshake::Handler</a></li>
+        
+          <li><a href="../../WebSocket/Handshake/Handler/Base.html">WebSocket::Handshake::Handler::Base</a></li>
+        
+          <li><a href="../../WebSocket/Handshake/Handler/Client.html">WebSocket::Handshake::Handler::Client</a></li>
+        
+          <li><a href="../../WebSocket/Handshake/Handler/Client01.html">WebSocket::Handshake::Handler::Client01</a></li>
+        
+          <li><a href="../../WebSocket/Handshake/Handler/Client04.html">WebSocket::Handshake::Handler::Client04</a></li>
+        
+          <li><a href="../../WebSocket/Handshake/Handler/Client75.html">WebSocket::Handshake::Handler::Client75</a></li>
+        
+          <li><a href="../../WebSocket/Handshake/Handler/Client76.html">WebSocket::Handshake::Handler::Client76</a></li>
+        
+          <li><a href="../../WebSocket/Handshake/Handler/Server.html">WebSocket::Handshake::Handler::Server</a></li>
+        
+          <li><a href="../../WebSocket/Handshake/Handler/Server04.html">WebSocket::Handshake::Handler::Server04</a></li>
+        
+          <li><a href="../../WebSocket/Handshake/Handler/Server75.html">WebSocket::Handshake::Handler::Server75</a></li>
+        
+          <li><a href="../../WebSocket/Handshake/Handler/Server76.html">WebSocket::Handshake::Handler::Server76</a></li>
+        
+          <li><a href="../../WebSocket/Handshake/Server.html">WebSocket::Handshake::Server</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">WebSocket::Frame::Data</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(*args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/websocket/frame/data.rb, line 5</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(*<span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">super</span> *<span class="ruby-identifier">args</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">arg</span><span class="ruby-operator">|</span> <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">force_encoding</span>(<span class="ruby-string">'ASCII-8BIT'</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:force_encoding</span>) }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="3C-3C-method" class="method-detail ">
+          <a name="method-i-3C-3C"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">&lt;&lt;</span><span
+              class="method-args">(*args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="3C-3C-source">
+<pre>
+<span class="ruby-comment"># File lib/websocket/frame/data.rb, line 9</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">&lt;&lt;</span>(*<span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">super</span> *<span class="ruby-identifier">args</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">arg</span><span class="ruby-operator">|</span> <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">force_encoding</span>(<span class="ruby-string">'ASCII-8BIT'</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:force_encoding</span>) }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- 3C-3C-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 3C-3C-method -->
+
+      
+        <div id="getbyte-method" class="method-detail ">
+          <a name="method-i-getbyte"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getbyte</span><span
+              class="method-args">(index)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getbyte-source">
+<pre>
+<span class="ruby-comment"># File lib/websocket/frame/data.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getbyte</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-keyword">self</span>[<span class="ruby-identifier">index</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getbyte-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getbyte-method -->
+
+      
+        <div id="getbytes-method" class="method-detail ">
+          <a name="method-i-getbytes"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getbytes</span><span
+              class="method-args">(start_index, count)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getbytes-source">
+<pre>
+<span class="ruby-comment"># File lib/websocket/frame/data.rb, line 22</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getbytes</span>(<span class="ruby-identifier">start_index</span>, <span class="ruby-identifier">count</span>)
+  <span class="ruby-identifier">data</span> = <span class="ruby-keyword">self</span>[<span class="ruby-identifier">start_index</span>, <span class="ruby-identifier">count</span>]
+  <span class="ruby-identifier">data</span> = <span class="ruby-identifier">mask</span>(<span class="ruby-identifier">data</span>.<span class="ruby-identifier">bytes</span>.<span class="ruby-identifier">to_a</span>, <span class="ruby-ivar">@masking_key</span>).<span class="ruby-identifier">pack</span>(<span class="ruby-string">'C*'</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@masking_key</span>
+  <span class="ruby-identifier">data</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getbytes-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getbytes-method -->
+
+      
+        <div id="mask-method" class="method-detail ">
+          <a name="method-i-mask"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">mask</span><span
+              class="method-args">(payload, mask)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="mask-source">
+<pre>
+<span class="ruby-comment"># File lib/websocket/frame/data.rb, line 35</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">mask</span>(<span class="ruby-identifier">payload</span>, <span class="ruby-identifier">mask</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">mask_native</span>(<span class="ruby-identifier">payload</span>, <span class="ruby-identifier">mask</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:mask_native</span>)
+  <span class="ruby-identifier">result</span> = []
+  <span class="ruby-identifier">payload</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">byte</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">result</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-identifier">byte</span> <span class="ruby-operator">^</span> <span class="ruby-identifier">mask</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">%</span> <span class="ruby-value">4</span>]
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- mask-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- mask-method -->
+
+      
+        <div id="set_mask-method" class="method-detail ">
+          <a name="method-i-set_mask"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">set_mask</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="set_mask-source">
+<pre>
+<span class="ruby-comment"># File lib/websocket/frame/data.rb, line 13</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set_mask</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;Too short&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">bytesize</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">4</span> <span class="ruby-comment"># TODO - change</span>
+  <span class="ruby-ivar">@masking_key</span> = <span class="ruby-keyword">self</span>[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">3</span>].<span class="ruby-identifier">bytes</span>.<span class="ruby-identifier">to_a</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- set_mask-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- set_mask-method -->
+
+      
+        <div id="unset_mask-method" class="method-detail ">
+          <a name="method-i-unset_mask"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">unset_mask</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="unset_mask-source">
+<pre>
+<span class="ruby-comment"># File lib/websocket/frame/data.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unset_mask</span>
+  <span class="ruby-ivar">@masking_key</span> = <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- unset_mask-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- unset_mask-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

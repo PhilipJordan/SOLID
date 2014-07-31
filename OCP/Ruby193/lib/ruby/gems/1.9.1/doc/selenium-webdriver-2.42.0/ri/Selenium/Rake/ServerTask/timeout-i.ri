@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"timeout:EFI"'Selenium::Rake::ServerTask#timeout;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"5Timeout in seconds for the server to start/stop.:encoding"IBM437I"Default: 30;@:
+@file0FI"%lib/selenium/rake/server_task.rb;@

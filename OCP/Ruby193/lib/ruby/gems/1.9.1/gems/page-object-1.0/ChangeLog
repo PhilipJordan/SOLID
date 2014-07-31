@@ -1,0 +1,772 @@
+=== Version 1.0 / 2014-6-1
+* Enhancements
+  * Better support for using Regexp
+  * Added new page_url_value method that is created when you define page_url to return the value
+  * Added better error message when nil is passed to the constructor of a PageObject
+  * Updated to use the latest watir-webdriver 0.6.9
+  * Updated to use the latest selenium-webdriver 2.42.0
+* Fixes
+  * Improved handling of index locator
+
+=== Version 0.9.8 / 2014-3-16
+* Enhancements
+  * populate_page_with not supports radio groups
+
+=== Version 0.9.7 / 2014-2-26
+* Enhancements
+  * Table now supports exists?
+  * super called when factory method invoked with non PageObject class
+  * Updated to use the latest watir-webdriver 0.6.8
+  * Updated to use the latest selenium-webdriver 2.40.0
+
+=== Version 0.9.6 / 2014-2-4
+* Enhancements
+  * Updated to use the latest watir-webdriver 0.6.7
+* Fixes
+  * Added in_iframe methods to match the updates to the watir-webdriver gem.
+
+=== Version 0.9.5 / 2014-1-22
+* Enhancements
+  * Updated to use the latest selenium-webdriver 2.39.0
+  * Added href method to Link
+  * Added generation of plural version of basic types on class
+  * Added new accessors for radio button group (Thanks Travis Fillmore)
+
+=== Version 0.9.4 / 2013-11-29
+* Enhancements
+  * Added ability for execute_scripts to accept arguments (Thanks Justin Ko)
+  * Added ability to identify frame using a regular expression when using Watir
+
+=== Version 0.9.3 / 2013-10-24
+* Enhancements
+  * Added class_name method to Element
+  * Added select_text method to Element
+  * Added wait_for_expected_title and expected_element_visible methods (Thanks smartkiwi)
+  * Updated to use the latest selenium-webdriver 2.37.0
+* Fixes
+  * Fixed issue with custom widgets on Ruby 1.8.7 (Thanks X Zhang)
+
+=== Version 0.9.2 / 2013-8-23
+* Enhancements
+  * Added elements method to accessor so one can gen methods for generic collections of elements
+  * Updated to use the latest selenium-webdriver 2.35.0
+
+=== Version 0.9.1 / 2013-7-16
+* Enhancements
+  * Added css locator support for Image (Thanks Elben Shira)
+* Fixes
+  * Corrected isse with generated method in widgets module
+
+=== Version 0.9.0 / 2013-6-11
+* Enhancements
+  * Added plural _elements methods for the following types:
+    * area
+    * canvas
+    * audio
+    * video
+    * svg
+  * Added basic element support for the following types:
+    * as
+    * blockquote
+    * body
+    * br
+    * caption
+    * col
+    * colgroup
+    * command
+    * data
+    * datalist
+    * del
+    * details
+    * dialog
+    * dl
+    * embed
+    * fieldset
+    * head
+    * hr
+    * ins
+    * keygen
+    * legend
+    * map
+    * menu
+    * meta
+    * meter
+    * object
+    * optgroup
+    * output
+    * param
+    * pre
+    * progress
+    * small
+    * strong
+    * style
+    * time
+    * title
+    * track
+  * Updated to use the latest selenium-webdriver 2.33.0
+* Fixes
+  * Fixed issue when using the page and element accessors for html 5 elements.
+
+=== Version 0.8.10 / 2013-5-3
+* Enhancements
+  * Updated populate_page_with to also check if the element is visible prior to setting value
+  * Updated to use the latest watir-webdriver 0.6.4
+
+=== Version 0.8.9 / 2013-4-13
+* Enhancements
+  * Updated to use the latest watir-webdriver 0.6.3
+  * Updated to use the latest selenium-webdriver 2.32.1
+* Fixes
+  * Fixed an issue when you try to find an element using no identifier (Thanks Alex Rodionov)
+
+=== Version 0.8.8 / 2013-4-5
+* Enhancements
+  * Added callback to widget classes to allow them to define their own accessors
+  * Added more support for using css when locating elements using Watir-webdriver (Neal Lindsay)
+
+=== Version 0.8.7 / 2013-3-31
+* Enhancements
+  * Added ability to find elements using any valid attribute
+
+=== Version 0.8.6.1 / 2013-3-4
+* Enhancements
+  * Added lable locators for checkbox, text area, select list, radio button and file field (Thanks Alex Rodionov)
+  * Updated to use the latest selenium-webdriver 2.31.0
+  * Updated to use the latest page_navigation 0.7
+
+=== Version 0.8.6 / 2013-2-27
+* Enhancements
+  * Added support for the svg element
+* Fixes
+  * Fixed issue with nested generic element calls
+
+=== Version 0.8.5 / 2013-2-21
+* Enhancements
+  * Updated to use the latest selenium-webdriver 2.30 - support for Firefox 19
+
+=== Version 0.8.4 / 2013-1-26
+* Enhancements
+  * Extracted navigational methods into new gem named page_navigation
+
+=== Version 0.8.3 / 2013-1-22
+* Enhancements
+  * Updated to use the latest selenium-webdriver 2.29
+  * Added :using_params parameter to both on_page and if_page methods
+* Fixes
+  * Fixed issue where has_expected_title? displays misleading error message (X Zhang)
+  * Fixed issue when getting basic Element element when using Selenium
+  * Fixed issue when using plural class methods multiple times on same object
+
+=== Version 0.8.2 / 2013-1-13
+* Enhancements
+  * Updated expected_element to ue the global default element wait by default
+  * Updated routes to accept more than two entries in the array which are passed as arguments
+  * Added new generated method for select_list to return options -> <name>_options (X Zhang)
+  * Added scroll_into_view method to Element
+  * Added *_element and *_elements methods to PageObject and Element for the following types
+    * addr
+    * address
+    * article
+    * aside
+    * bdi
+    * bdo
+    * cite
+    * code
+    * dd
+    * dfn
+    * dt
+    * em
+    * figcaption
+    * figure
+    * footer
+    * header
+    * hgroup
+    * kbd
+    * mark
+    * nav
+    * noscript
+    * rp
+    * rt
+    * ruby
+    * samp
+    * section
+    * sub
+    * summary
+    * sup
+    * var
+    * wbr
+
+=== Version 0.8.1 / 2012-12-28
+* Fixes
+  * Fixed issue when calling new multi-element class methods using a block
+
+=== Version 0.8 / 2012-12-22
+* Enhancements
+  * Added the following class level methods to return all elements matching the locator
+    * divs
+    * buttons
+    * text_fields
+    * hidden_fields
+    * text_areas
+    * select_lists
+    * links
+    * checkboxes
+    * radio_buttons
+    * spans
+    * tables
+    * cells
+    * images
+    * forms
+    * list_items
+    * unordered_lists
+    * ordered_lists
+    * h1s
+    * h2s
+    * h3s
+    * h4s
+    * h5s
+    * h6s
+    * paragraphs
+    * labels
+    * file_fields
+  * Added ability to register and use custom elements based on standard elements (William Powell)
+  * Added generated method to return text for a table
+  * Added generated method to return text for an unordered list
+  * Added generated method to return text for an ordered list
+  * Added html method to Element
+  * Updated to use the latest selenium-webdriver 2.27.2
+  * Updated to use the latest watir-webdriver 0.6.2
+
+=== Version 0.7.6 / 2012-11-28
+* Fixes
+  * Fixed attach_to_window workes with partial url on Selenium (George Shakhnazaryan)
+  * Fixed double click works on Selenium (William Powell)
+* Enhancements
+  * Added css selector support for all elements when using Selenium (Brendan Mulholland)
+  * Added callback to initialize_accessors method during initialization (Theodore Robert Campbell Jr)
+
+=== Version 0.7.5.1 / 2012-10-16
+* Fixes
+  * Fixed issue when passing symbol to page_url and calling multiple times
+
+=== Version 0.7.5 / 2012-10-14
+* Enhancements
+  * Enhanced TabeleCell to return nil when there is no corresponding  cell for a referenced column
+  * Added css selector support for SelectList and Div
+  * Added ability to pass clasname as string to visit_page, on_page, and if_page methods
+  * Added params class instance variable to hold hash values that can be used in the page
+  * Added ability to insert ERB into page_url string and have it access params
+
+=== Version 0.7.4 / 2012-9-8
+* Enhancements
+  * Added ability to find text_fields with :css when using Selenium
+  * Added selected_values method to SelectList to get values of all selected elements
+* Fixes
+  * Fixed problem getting value from SelectList when it is in a Frame with Selenium
+
+=== Version 0.7.3 / 2012-8-18
+* Enhancements
+  * Improved handling of alert and confirm Javascript popups (George Shakhnazaryan)
+  * Added hover method to Element.  Browser support is limited.
+  * Added method to get the id of an Element
+  * Added support for the following new elements
+	Video
+
+=== Version 0.7.2 / 2012-8-1
+* Enhancements
+  * Added ability to find list_item by :text
+  * Added support for the following new elements
+	Canvas
+	Audio
+  * Updated to use selenium-webdriver 2.25.0
+  * Updated to provide better support for table_row.find_index_by_title when tables have theads... (George Shakhnazaryan)
+
+=== Version 0.7.1 / 2012-7-15
+* Enhancements
+  * Added support for the following new elements
+	Area
+  * Added the following aliased methods to their corresponding Accessors method
+	a => link
+	hidden => hidden_field
+	img => image
+	li => list_item
+	ol => ordered_list
+	p => paragraph
+	radio => radio_button
+	select => select_list
+	td => cell
+	textarea => text_area
+	ul => unordered_list
+  * Added the following methods to return generic Element objects
+	abbr
+	address
+	article
+	aside
+	bdi
+	bdo
+	cite
+	code
+	dd
+	dfn
+	dt
+	em
+	figcaption
+	figure
+	footer
+	header
+	hgroup
+	kbd
+	mark
+	nav
+	noscript
+	rp
+	rt
+	ruby
+	samp
+	section
+	sub
+	summary
+	sup
+	var
+	wbr
+
+=== Version 0.7.0 / 2012-6-30
+* Enhancements
+  * Updated Table [] method to return a row that has matching partial text in any column (Thanks George Shakhnazaryan)
+  * Updated TableRow [] method to return column that matching partial text in any column (Thanks George Shakhnazaryan)
+  * Added if_page to PageFactory (Thanks Gregory Shayko)
+  * Added index_property for accessing sets of related fields (Thanks robkid)
+  * Updated to use selenium-webdriver 2.24.0
+
+
+=== Version 0.6.9 / 2012-6-12
+* Enhancements
+  * Added select_value method to SelectList
+  * Updated link to be able to identify by title
+  * Updated div to be able to identify by title
+  * Updated text_field to be able to identify by text and label
+  * Updated to use selenium-webdriver 2.22.2
+* Fixes
+  * Fixed populate_page_with to work with text areas (Thanks ramyav85)
+
+=== Version 0.6.8 / 2012-6-3
+* Enhancements
+  * Updated [] method on Table to return nil when bad row header is provided
+  * Updated [] method on TableRow to return nil when bad column header is provided
+  * Updated to use watir-webdriver 0.6.1
+  * Updated to use selenium-webdriver 2.22.1
+* Fixes
+  Modified text area methods so it clears before setting new text
+  Fixed clear method on SelectList when using Selenium to clear multi selects
+
+=== Version 0.6.7 / 2012-5-16
+* Enhancements
+  * Added flash method to Element to temporarily change the background color
+  * Added when_not_present method to Element
+  * Added default override for page level waits - PageObject.default_page_wait
+  * Added default override for element level waits - PageObject.default_element_wait
+  * Added the ability to find a TableRow by providing a String to the [] method from Table
+  * Added the ability to find a TableCell by providing a String to the [] method from TableRow
+  * Updated to use watir-webdriver 0.5.8
+* Fixes
+  * Improved logic around selecting options from select lists
+  * TableCell now handles enabled? call gracefully
+
+=== Version 0.6.6 / 2012-4-26
+* Enhancements
+  * Added ability to find span's by title
+  * Changed order of initialization so initialize_page is called after goto
+  * Updated to use watir-webdriver 0.5.5
+  * Updated to use selenium-webdriver 2.21.2
+* Fixes
+  * Fixed the problem with determining the existance of an Selenium element
+
+=== Version 0.6.5 / 2012-4-12
+* Enhancements
+  * Added a page level element method to return a generic Element object
+  * Added a method to retrieve all file fields on a page
+  * Updated all accessor methods to take a default identifier of {:index => 0}
+  * Updated all page level element locators to take a default identifier of {:index => 0}
+  * Updated all page level multi-element locators to take a default identifier of {}
+  * Updated deprecation warning to print to stderr (Thanks Josh Adell)
+  * Updated to use selenium-webdriver 2.21.0
+
+=== Version 0.6.4 / 2012-3-27
+* Enhancements
+  * Added support for finding the following elements by :css
+	Button
+	Link
+  * Added support for the label element (Thanks Paul Clewell)
+  * Added method to fetch generic element (Thanks Jim Holmes)
+  * Added direct_url alias for page_url
+  * Added visit alias for visit_page
+  * Added on alias for on_page
+  * Added element_with_focus method to return the element that has focus
+  * Changed Elements.element_class_for so parameters can be strings or symbols
+  * Changed page_url to accept a symbol that will cause it to call a corresponding method
+  * Updated to use watir-webdriver 0.5.4
+
+=== Version 0.6.3 / 2012-3-1
+* Enhancements
+  * Added #expected_title method to PageObject
+  * Added #expected_element method to PageObject
+  * Added #execute_script method to PageObject
+  * Updated to use selenium-webdriver 2.20.0
+* Fixes
+  * Updates to the README - Thanks to p0deje and ivaravko
+  WARNING:  This change breaks existing code
+  * Changed the generated getter for select_list to return the text instead of the value
+
+=== Version 0.6.2 / 2012-2-12
+* Enhancements
+  * Added #wait_for_ajax support for the jQuery framework
+  * Added #wait_for_ajax support for the Prototype framework
+  * Added the ability to add new Javascript Frameworks to PageObject via the #add_framework method
+  * Updated to use selenium-webdriver 2.19.0
+  * Updated to use watir-webdriver 0.5.3
+* Fixes
+  * Fixed [] methods on OrderedList and UnorderedList so it only gets direct children
+  * Fixed items methods on OrderedList and UnorderedList so it returns count of direct children
+
+=== Version 0.6.1 / 2012-1-18
+* Enhancements
+  * Added #disabled? method to Element
+  * Added #selected_options method to SelectList
+  * Added #include? and #selected? to SelectList
+  * Added #append to TextField
+  * generates a method to determine if an element exists (Thanks Nicholas Munson)
+  * better message when calling platform method via method_missing (Thanks Alex Rodionov)
+  * Updated to use selenium-webdriver 2.17.0
+
+=== Version 0.6 / 2012-1-10
+* Enhancements
+  * Added ?_elements methods to ElementLocator so you can find all elements that match an identifier
+  * Added ?_elements methods to NestedElements so you can find all elements nested within others
+  * Added #navigate_to to PageFactory to navigate to a page through previous pages
+  * Added #continue_navigation_to to PageFactory which begins at @current_page
+  * Added routes to PageFactory to collect routes through the site
+  * Updated to use selenium-webdriver 2.16.0
+
+=== Version 0.5.5 / 2011-12-27
+* Enhancements
+  * Added ability to find Checkbox by :value
+  * Added ability to find HiddenField by :value
+  * Added ability to find a parent of an Element
+  * Added #fire_event method to Element
+  * Added #focus method to Element
+* Fixes
+  * Updated #populate_page_with to no longer attempt to set a value in a field that is disabled
+
+=== Version 0.5.4 / 2011-12-18
+* Enhancements
+  * Added deprecation warning to the method_missing method on Element.  This ability will be removed in 0.6
+  * Added full support for file_field element
+  * Added ability to find TextField by :title
+  * Added ability to find Form by :action
+  * Added ability to find Image by :alt
+  * Added ability to find Image by :src
+
+=== Version 0.5.3 / 2011-12-11
+* Enhancements
+  * Added new module PagePopulator with single method populate_page_with
+  * Updated to use selenium-webdriver 2.15.0
+  * Updated to use watir-webdriver 0.4.1
+* Fixes
+  * Updated prompt method to make it compatible with latest dependencies
+
+=== Version 0.5.2 / 2011-11-30
+* Enhancements
+  * Added ability to find image buttons by src
+  * Added ability to find image button by alt
+  * Added first_row and last_row methods to Table
+  * Updated to use selenium-webdriver 2.14.0
+  * Updated to use watir-webdriver 0.3.9
+
+=== Version 0.5.1 / 2011-11-18
+* Enhancements
+  * Added instance level in_frame method
+  * Support for nesting all *_element instance methods inside in_frame call
+  * Support for nesting alerts inside an in_frame call
+  * Support for nesting confirms inside an in_frame call
+  * Support for nesting prompts inside an in_frame call
+
+=== Version 0.5 / 2011-11-06
+* Enhancements
+  * Validated support for JRuby
+  * Removed dependency on Mixology
+  * Updated to use selenium-webdriver 2.10.0
+  * Updated to use watir-webdriver 0.3.8
+
+=== Version 0.4.4 / 2011-10-26
+* Enhancements
+  * Can now find Radio buttons by value
+  * Updated to use selenium-webdriver 2.9.1
+* Fixes
+  * Properly change context back to top level after interaction inside a frame with Watir
+
+=== Version 0.4.3 / 2011-10-07
+* Enhancements
+  * The new watir and selenium fix a fairly serious problem when working with modals and attaching to windows
+  * Updated to use selenium-webdriver 2.8.0
+  * Updated to use watir-webdriver 0.3.5
+
+=== Version 0.4.2 / 2011-10-01
+* Enhancements
+  * Proper handling of <button> elements
+  * Changed PageFactory so it also sets and instance variable @current_page to the newly created page
+
+=== Version 0.4.1 / 2011-09-30
+* Fixes
+  * Fixed error when loading plugins using Selenium
+
+=== Version 0.4 / 2011-09-24
+* Enhancements
+  * Added all of the h4 locators
+  * Added all of the h5 locators
+  * Added all of the h6 locators
+  * Added all of the paragraph locators
+  * Added the Paragraph class
+  * Added #click to Element
+  * Added #style to Element
+  * Added #inspect to Element
+  * Added #current_url to PageObject
+  * Added #clear_cookies to PageObject
+  * Added #save_screenshot to PageObject
+  * Updated to use selenium-webdriver 2.7.0
+  * Updated to use watir-webdriver 0.3.4
+
+=== Version 0.3.2 / 2011-09-22
+* Enhancements
+  * Element#when_present now returns the element object
+  * Element#when_visible now returns the element object
+  * Element#when_not_visible now returns the element object
+  * Added #clear method for TextArea
+  * Added support for Heading element
+  * Added all of the h1 locators
+  * Added all of the h2 locators
+  * Added all of the h3 locators
+  * Updated to use selenium-webdriver 2.6.0
+
+=== Version 0.3.1 / 2011-09-08
+* Enhancements
+  * Updated to use watir-webdriver 0.3.3
+
+=== Version 0.3.0 / 2011-09-04
+* Enhancements
+  * Changed namespace for selenium and watir to include webdriver
+  * Support for locating the following elements when nested
+    * Link
+    * Button
+    * TextField
+    * HiddenField
+    * TextArea
+    * SelectList
+    * Checkbox
+    * RadioButton
+    * Div
+    * Span
+    * Table
+    * TableCell
+    * Image
+    * Form
+    * OrderedList
+    * UnorderedList
+    * ListItem
+  * Added #modal_dialog to PageObject to override the default modal dialog behavior
+  * Changed element keys to include _webdriver
+  * Updated to use selenium-webdriver 2.5.0
+
+=== Version 0.2.5 / 2011-08-19
+* Enhancements
+  * #attach_to_window takes an optional block - will return to calling window after block executes
+  * Added the following instance methods to PageObject via ElementLocators
+    * #button_element
+    * #text_field_element
+    * #hidden_field_element
+    * #text_area_element
+    * #select_list_element
+    * #link_element
+    * #checkbox_element
+    * #radio_button_element
+    * #div_element
+    * #span_element
+    * #table_element
+    * #cell_element
+    * #image_element
+    * #form_element
+    * #list_item_element
+    * #unordered_list_element
+    * #ordered_list_element
+  * Updated to use selenium-webdriver 2.4.0
+  * Updated to use watir-webdriver 0.3.2
+
+=== Version 0.2.4 / 2011-08-08
+* Enhancements
+  * Can now find span by :text
+  * Can now find button by :value
+  * Added #forward and #back methods to PageObject
+  * Added #right_click and #double_click methods to Element
+  * Added #value= to TextField and TextArea
+  * Added #select to SelectList
+  * Added #check, #uncheck, and #checked? to CheckBox
+  * Added #select, #clear, and #selected? to RadioButton
+  * Can properly pass blocks to all accessor methods
+  * Updated to use watir-webdriver 0.3.0
+
+=== Version 0.2.3 / 2011-08-01
+* Enhancements
+  * Can now find a TableCell by its' text
+  * If we receive an error calling #attach_to_window, wait one second and try again
+  * Will call callback method #initialize_page method if it exists on a page object
+  * Renamed all *_<element_type> methods to *_element.  Created alias for backward compatibility
+  * Delegating unknown method calls on Element to the driver element object
+  * Improved block handling when passed to element creation method
+  * Updated to use selenium-webdriver 2.3.2
+
+=== Version 0.2.2 / 2011-07-31
+* Enhancements
+  * Can find frame by name
+  * Added #clear method to Element
+  * Removed #switch_to_from from PageObject
+  * Added #in_frame to Accessors to handle frame and iframe access
+* Fixes
+  * Clearing value from text_field before setting value on Selenium
+
+=== Version 0.2.1 / 2011-07-29
+* Enhancements
+  * Added ability to locate div by the contained text
+  * Added #attach_to_window so a page object and operate on another window
+  * Added #switch_to_frame to allow one to switch to a frame
+  * Added #send_keys to PageObject::Elements::Element
+  * Added #refresh to page object
+  * Work toward making drivers pluggable
+  * Updated to use selenium-webdriver 2.2.0
+  * Updated to use watir-webdriver 0.2.8
+
+=== Version 0.2 / 2011-07-24
+* Enhancements
+  * Async handling
+    * Added #wait_until to page object to support async events at page level
+    * Added the following methods to PageObject::Elements::Element
+      * #when_present
+      * #when_visible
+      * #when_not_visible
+      * #wait_until
+  * Handling popups
+    * Added #alert to page object to override default alert popup behavior
+    * Added #confirm to page object to override default confirm popup behavior
+    * Added #prompt to page object to override default prompt popup behavior
+  * Updated to use selenium-webdriver 2.1.0
+
+=== Version 0.1.1 / 2011-07-16
+* Enhancements
+  * Support for identifying hidden fields by text when using Selenium
+  * Support for identifying links by href when using Selenium
+  * Updated to use selenium-webdriver 2.0.1
+  * Updated to use watir-webdriver 0.2.6
+
+=== Version 0.1 / 2011-07-01
+* Enhancements
+  * Support for using multiple identifiers when locating the following element:
+    * Link
+    * TextField
+    * HiddenField
+    * TextArea
+    * SelectList
+    * CheckBox
+    * RadioButton
+    * Button
+    * Div
+    * Span
+    * Table
+    * TableCell
+    * Image
+    * Form
+    * ListItem
+    * UnorderedList
+    * OrderedList
+  * Selenium support for using index for the following elements:
+    * Link
+    * TextField
+    * HiddenField
+    * TextArea
+    * SelectList
+    * CheckBox
+    * RadioButton
+    * Button
+    * Div
+    * Span
+    * Table
+    * Image
+    * Form
+    * ListItem
+    * UnorderedList
+    * OrderedList
+  * Support name for identification across all elements in Watir
+  * Added [] method to SelectList to index Options
+  * Added options method to Select List
+  * Added support for the following elements
+    * Option
+  * Updated to use selenium-webdriver 0.2.2
+  * Updated to use watir-webdriver 0.2.5
+
+=== Version 0.0.5 / 2011-06-15
+* Enhancements
+  * Added rows method to Table to return number or rows
+  * Added columns method to TableRow to return the number of columns
+  * Table now supports Enumerable to iterate over the TableRows
+  * TableRow now supports Enumerable to iterate over TableCells
+  * Added items method to UnorderedList to return number of ListItems
+  * Added items method to OrderedList to return number of ListItems
+  * UnorderedList now supports Enumerable to iterate over the ListItems
+  * OrderedList now supports Enumerable to iterate over the ListItems
+  * All element methods now take an optional block that can be executed passing a browser
+  * Created PageFactory module to add factory methods to your step definitions
+    * Thanks Alister Scott for the idea
+  
+
+=== Version 0.0.4 / 2011-06-13
+* Enhancements
+  * Added support for the following elements
+    * hidden field
+    * form
+    * list item
+    * unordered list
+    * ordered list
+
+=== Version 0.0.3 / 2011-06-02
+* Enhancements
+  * Added support for the following elements
+    * span
+    * image
+  * Added the following methods to Element
+    * value
+    * ==
+    * tag_name
+    * attribute
+    * click
+  * Updated to use selenium-webdriver 0.2.1
+  * Updated to use watir-webdriver 0.2.4
+
+=== Version 0.0.2 / 2011-05-30
+* Enhancements
+  * Added support for the following elements
+    * div
+    * button
+    * table
+    * table row
+    * table cell
+  * Added text method to element
+
+=== Version 0.0.1 / 2011-05-22
+* Enhancements
+  * Support for the following elements
+    * check box
+    * link
+    * radio button
+    * select list
+    * text field
+  * Support for the following page level functions
+    * text
+    * html
+    * title

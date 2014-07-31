@@ -1,0 +1,18 @@
+Mon, 28 Jul 2014 10:01:39 -0400
+lib/multi_json/adapter.rb	Mon, 28 Jul 2014 10:01:34 -0400
+lib/multi_json/adapters/gson.rb	Mon, 28 Jul 2014 10:01:34 -0400
+lib/multi_json/adapters/jr_jackson.rb	Mon, 28 Jul 2014 10:01:34 -0400
+lib/multi_json/adapters/json_common.rb	Mon, 28 Jul 2014 10:01:34 -0400
+lib/multi_json/adapters/json_gem.rb	Mon, 28 Jul 2014 10:01:34 -0400
+lib/multi_json/adapters/json_pure.rb	Mon, 28 Jul 2014 10:01:34 -0400
+lib/multi_json/adapters/nsjsonserialization.rb	Mon, 28 Jul 2014 10:01:34 -0400
+lib/multi_json/adapters/oj.rb	Mon, 28 Jul 2014 10:01:34 -0400
+lib/multi_json/adapters/ok_json.rb	Mon, 28 Jul 2014 10:01:34 -0400
+lib/multi_json/adapters/yajl.rb	Mon, 28 Jul 2014 10:01:34 -0400
+lib/multi_json/adapter_error.rb	Mon, 28 Jul 2014 10:01:34 -0400
+lib/multi_json/convertible_hash_keys.rb	Mon, 28 Jul 2014 10:01:34 -0400
+lib/multi_json/options.rb	Mon, 28 Jul 2014 10:01:34 -0400
+lib/multi_json/parse_error.rb	Mon, 28 Jul 2014 10:01:34 -0400
+lib/multi_json/vendor/okjson.rb	Mon, 28 Jul 2014 10:01:34 -0400
+lib/multi_json/version.rb	Mon, 28 Jul 2014 10:01:34 -0400
+lib/multi_json.rb	Mon, 28 Jul 2014 10:01:34 -0400

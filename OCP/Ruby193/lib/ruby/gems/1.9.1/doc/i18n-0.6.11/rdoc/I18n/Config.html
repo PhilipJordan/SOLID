@@ -1,0 +1,938 @@
+<?xml version="1.0" encoding="IBM437"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=IBM437" http-equiv="Content-Type" />
+
+  <title>Class: I18n::Config</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/i18n/config_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/i18n/config.rb">lib/i18n/config.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-available_locales">#available_locales</a></li>
+          
+          <li><a href="#method-i-available_locales-3D">#available_locales=</a></li>
+          
+          <li><a href="#method-i-backend">#backend</a></li>
+          
+          <li><a href="#method-i-backend-3D">#backend=</a></li>
+          
+          <li><a href="#method-i-default_locale">#default_locale</a></li>
+          
+          <li><a href="#method-i-default_locale-3D">#default_locale=</a></li>
+          
+          <li><a href="#method-i-default_separator">#default_separator</a></li>
+          
+          <li><a href="#method-i-default_separator-3D">#default_separator=</a></li>
+          
+          <li><a href="#method-i-enforce_available_locales">#enforce_available_locales</a></li>
+          
+          <li><a href="#method-i-enforce_available_locales-3D">#enforce_available_locales=</a></li>
+          
+          <li><a href="#method-i-exception_handler">#exception_handler</a></li>
+          
+          <li><a href="#method-i-exception_handler-3D">#exception_handler=</a></li>
+          
+          <li><a href="#method-i-load_path">#load_path</a></li>
+          
+          <li><a href="#method-i-load_path-3D">#load_path=</a></li>
+          
+          <li><a href="#method-i-locale">#locale</a></li>
+          
+          <li><a href="#method-i-locale-3D">#locale=</a></li>
+          
+          <li><a href="#method-i-missing_interpolation_argument_handler">#missing_interpolation_argument_handler</a></li>
+          
+          <li><a href="#method-i-missing_interpolation_argument_handler-3D">#missing_interpolation_argument_handler=</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../I18n.html">I18n</a></li>
+        
+          <li><a href="../I18n/ArgumentError.html">I18n::ArgumentError</a></li>
+        
+          <li><a href="../I18n/Backend.html">I18n::Backend</a></li>
+        
+          <li><a href="../I18n/Backend/Base.html">I18n::Backend::Base</a></li>
+        
+          <li><a href="../I18n/Backend/Cache.html">I18n::Backend::Cache</a></li>
+        
+          <li><a href="../I18n/Backend/Cascade.html">I18n::Backend::Cascade</a></li>
+        
+          <li><a href="../I18n/Backend/Chain.html">I18n::Backend::Chain</a></li>
+        
+          <li><a href="../I18n/Backend/Chain/Implementation.html">I18n::Backend::Chain::Implementation</a></li>
+        
+          <li><a href="../I18n/Backend/Fallbacks.html">I18n::Backend::Fallbacks</a></li>
+        
+          <li><a href="../I18n/Backend/Flatten.html">I18n::Backend::Flatten</a></li>
+        
+          <li><a href="../I18n/Backend/Gettext.html">I18n::Backend::Gettext</a></li>
+        
+          <li><a href="../I18n/Backend/Gettext/PoData.html">I18n::Backend::Gettext::PoData</a></li>
+        
+          <li><a href="../I18n/Backend/InterpolationCompiler.html">I18n::Backend::InterpolationCompiler</a></li>
+        
+          <li><a href="../I18n/Backend/InterpolationCompiler/Compiler.html">I18n::Backend::InterpolationCompiler::Compiler</a></li>
+        
+          <li><a href="../I18n/Backend/KeyValue.html">I18n::Backend::KeyValue</a></li>
+        
+          <li><a href="../I18n/Backend/KeyValue/Implementation.html">I18n::Backend::KeyValue::Implementation</a></li>
+        
+          <li><a href="../I18n/Backend/Memoize.html">I18n::Backend::Memoize</a></li>
+        
+          <li><a href="../I18n/Backend/Metadata.html">I18n::Backend::Metadata</a></li>
+        
+          <li><a href="../I18n/Backend/Pluralization.html">I18n::Backend::Pluralization</a></li>
+        
+          <li><a href="../I18n/Backend/Simple.html">I18n::Backend::Simple</a></li>
+        
+          <li><a href="../I18n/Backend/Simple/Implementation.html">I18n::Backend::Simple::Implementation</a></li>
+        
+          <li><a href="../I18n/Backend/Transliterator.html">I18n::Backend::Transliterator</a></li>
+        
+          <li><a href="../I18n/Backend/Transliterator/HashTransliterator.html">I18n::Backend::Transliterator::HashTransliterator</a></li>
+        
+          <li><a href="../I18n/Backend/Transliterator/ProcTransliterator.html">I18n::Backend::Transliterator::ProcTransliterator</a></li>
+        
+          <li><a href="../I18n/Config.html">I18n::Config</a></li>
+        
+          <li><a href="../I18n/ExceptionHandler.html">I18n::ExceptionHandler</a></li>
+        
+          <li><a href="../I18n/Gettext.html">I18n::Gettext</a></li>
+        
+          <li><a href="../I18n/Gettext/Helpers.html">I18n::Gettext::Helpers</a></li>
+        
+          <li><a href="../I18n/InvalidLocale.html">I18n::InvalidLocale</a></li>
+        
+          <li><a href="../I18n/InvalidLocaleData.html">I18n::InvalidLocaleData</a></li>
+        
+          <li><a href="../I18n/InvalidPluralizationData.html">I18n::InvalidPluralizationData</a></li>
+        
+          <li><a href="../I18n/Locale.html">I18n::Locale</a></li>
+        
+          <li><a href="../I18n/Locale/Fallbacks.html">I18n::Locale::Fallbacks</a></li>
+        
+          <li><a href="../I18n/Locale/Tag.html">I18n::Locale::Tag</a></li>
+        
+          <li><a href="../I18n/Locale/Tag/Parents.html">I18n::Locale::Tag::Parents</a></li>
+        
+          <li><a href="../I18n/Locale/Tag/Rfc4646.html">I18n::Locale::Tag::Rfc4646</a></li>
+        
+          <li><a href="../I18n/Locale/Tag/Rfc4646/Parser.html">I18n::Locale::Tag::Rfc4646::Parser</a></li>
+        
+          <li><a href="../I18n/Locale/Tag/Simple.html">I18n::Locale::Tag::Simple</a></li>
+        
+          <li><a href="../I18n/MissingInterpolationArgument.html">I18n::MissingInterpolationArgument</a></li>
+        
+          <li><a href="../I18n/MissingTranslation.html">I18n::MissingTranslation</a></li>
+        
+          <li><a href="../I18n/MissingTranslation/Base.html">I18n::MissingTranslation::Base</a></li>
+        
+          <li><a href="../I18n/MissingTranslationData.html">I18n::MissingTranslationData</a></li>
+        
+          <li><a href="../I18n/ReservedInterpolationKey.html">I18n::ReservedInterpolationKey</a></li>
+        
+          <li><a href="../I18n/Tests.html">I18n::Tests</a></li>
+        
+          <li><a href="../I18n/Tests/Basics.html">I18n::Tests::Basics</a></li>
+        
+          <li><a href="../I18n/Tests/Defaults.html">I18n::Tests::Defaults</a></li>
+        
+          <li><a href="../I18n/Tests/Interpolation.html">I18n::Tests::Interpolation</a></li>
+        
+          <li><a href="../I18n/Tests/Link.html">I18n::Tests::Link</a></li>
+        
+          <li><a href="../I18n/Tests/Localization.html">I18n::Tests::Localization</a></li>
+        
+          <li><a href="../I18n/Tests/Localization/Date.html">I18n::Tests::Localization::Date</a></li>
+        
+          <li><a href="../I18n/Tests/Localization/DateTime.html">I18n::Tests::Localization::DateTime</a></li>
+        
+          <li><a href="../I18n/Tests/Localization/Procs.html">I18n::Tests::Localization::Procs</a></li>
+        
+          <li><a href="../I18n/Tests/Localization/Time.html">I18n::Tests::Localization::Time</a></li>
+        
+          <li><a href="../I18n/Tests/Lookup.html">I18n::Tests::Lookup</a></li>
+        
+          <li><a href="../I18n/Tests/Pluralization.html">I18n::Tests::Pluralization</a></li>
+        
+          <li><a href="../I18n/Tests/Procs.html">I18n::Tests::Procs</a></li>
+        
+          <li><a href="../I18n/UnknownFileType.html">I18n::UnknownFileType</a></li>
+        
+          <li><a href="../GetText.html">GetText</a></li>
+        
+          <li><a href="../GetText/PoParser.html">GetText::PoParser</a></li>
+        
+          <li><a href="../Hash.html">Hash</a></li>
+        
+          <li><a href="../Kernel.html">Kernel</a></li>
+        
+          <li><a href="../KeyError.html">KeyError</a></li>
+        
+          <li><a href="../String.html">String</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">I18n::Config</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="available_locales-method" class="method-detail ">
+          <a name="method-i-available_locales"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">available_locales</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns an array of locales for which translations are available. Unless
+you explicitely set these through I18n.available_locales= the call will be
+delegated to the backend.</p>
+            
+
+            
+            <div class="method-source-code" id="available_locales-source">
+<pre>
+<span class="ruby-comment"># File lib/i18n/config.rb, line 39</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">available_locales</span>
+  <span class="ruby-identifier">@@available_locales</span> <span class="ruby-operator">||=</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">@@available_locales</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">backend</span>.<span class="ruby-identifier">available_locales</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- available_locales-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- available_locales-method -->
+
+      
+        <div id="available_locales-3D-method" class="method-detail ">
+          <a name="method-i-available_locales-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">available_locales=</span><span
+              class="method-args">(locales)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Sets the available locales.</p>
+            
+
+            
+            <div class="method-source-code" id="available_locales-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/i18n/config.rb, line 53</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">available_locales=</span>(<span class="ruby-identifier">locales</span>)
+  <span class="ruby-identifier">@@available_locales</span> = <span class="ruby-constant">Array</span>(<span class="ruby-identifier">locales</span>).<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">locale</span><span class="ruby-operator">|</span> <span class="ruby-identifier">locale</span>.<span class="ruby-identifier">to_sym</span> }
+  <span class="ruby-identifier">@@available_locales</span> = <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">@@available_locales</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-identifier">@@available_locales_set</span> = <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- available_locales-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- available_locales-3D-method -->
+
+      
+        <div id="backend-method" class="method-detail ">
+          <a name="method-i-backend"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">backend</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns the current backend. Defaults to +Backend::Simple+.</p>
+            
+
+            
+            <div class="method-source-code" id="backend-source">
+<pre>
+<span class="ruby-comment"># File lib/i18n/config.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">backend</span>
+  <span class="ruby-identifier">@@backend</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Backend</span><span class="ruby-operator">::</span><span class="ruby-constant">Simple</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- backend-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- backend-method -->
+
+      
+        <div id="backend-3D-method" class="method-detail ">
+          <a name="method-i-backend-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">backend=</span><span
+              class="method-args">(backend)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Sets the current backend. Used to set a custom backend.</p>
+            
+
+            
+            <div class="method-source-code" id="backend-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/i18n/config.rb, line 21</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">backend=</span>(<span class="ruby-identifier">backend</span>)
+  <span class="ruby-identifier">@@backend</span> = <span class="ruby-identifier">backend</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- backend-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- backend-3D-method -->
+
+      
+        <div id="default_locale-method" class="method-detail ">
+          <a name="method-i-default_locale"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">default_locale</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns the current default locale. Defaults to :'en'</p>
+            
+
+            
+            <div class="method-source-code" id="default_locale-source">
+<pre>
+<span class="ruby-comment"># File lib/i18n/config.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">default_locale</span>
+  <span class="ruby-identifier">@@default_locale</span> <span class="ruby-operator">||=</span> <span class="ruby-value">:en</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- default_locale-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- default_locale-method -->
+
+      
+        <div id="default_locale-3D-method" class="method-detail ">
+          <a name="method-i-default_locale-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">default_locale=</span><span
+              class="method-args">(locale)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Sets the current default locale. Used to set a custom default locale.</p>
+            
+
+            
+            <div class="method-source-code" id="default_locale-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/i18n/config.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">default_locale=</span>(<span class="ruby-identifier">locale</span>)
+  <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">enforce_available_locales!</span>(<span class="ruby-identifier">locale</span>)
+  <span class="ruby-identifier">@@default_locale</span> = <span class="ruby-identifier">locale</span>.<span class="ruby-identifier">to_sym</span> <span class="ruby-keyword">rescue</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- default_locale-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- default_locale-3D-method -->
+
+      
+        <div id="default_separator-method" class="method-detail ">
+          <a name="method-i-default_separator"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">default_separator</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns the current default scope separator. Defaults to '.'</p>
+            
+
+            
+            <div class="method-source-code" id="default_separator-source">
+<pre>
+<span class="ruby-comment"># File lib/i18n/config.rb, line 60</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">default_separator</span>
+  <span class="ruby-identifier">@@default_separator</span> <span class="ruby-operator">||=</span> <span class="ruby-string">'.'</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- default_separator-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- default_separator-method -->
+
+      
+        <div id="default_separator-3D-method" class="method-detail ">
+          <a name="method-i-default_separator-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">default_separator=</span><span
+              class="method-args">(separator)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Sets the current default scope separator.</p>
+            
+
+            
+            <div class="method-source-code" id="default_separator-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/i18n/config.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">default_separator=</span>(<span class="ruby-identifier">separator</span>)
+  <span class="ruby-identifier">@@default_separator</span> = <span class="ruby-identifier">separator</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- default_separator-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- default_separator-3D-method -->
+
+      
+        <div id="enforce_available_locales-method" class="method-detail ">
+          <a name="method-i-enforce_available_locales"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">enforce_available_locales</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <dl class="rdoc-list"><dt>Deprecated</dt>
+<dd>
+<p>this will default to true in the future</p>
+</dd></dl>
+
+<p>Defaults to nil so that it triggers the deprecation warning</p>
+            
+
+            
+            <div class="method-source-code" id="enforce_available_locales-source">
+<pre>
+<span class="ruby-comment"># File lib/i18n/config.rb, line 122</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">enforce_available_locales</span>
+  <span class="ruby-keyword">defined?</span>(<span class="ruby-identifier">@@enforce_available_locales</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">@@enforce_available_locales</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- enforce_available_locales-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- enforce_available_locales-method -->
+
+      
+        <div id="enforce_available_locales-3D-method" class="method-detail ">
+          <a name="method-i-enforce_available_locales-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">enforce_available_locales=</span><span
+              class="method-args">(enforce_available_locales)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="enforce_available_locales-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/i18n/config.rb, line 126</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">enforce_available_locales=</span>(<span class="ruby-identifier">enforce_available_locales</span>)
+  <span class="ruby-identifier">@@enforce_available_locales</span> = <span class="ruby-identifier">enforce_available_locales</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- enforce_available_locales-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- enforce_available_locales-3D-method -->
+
+      
+        <div id="exception_handler-method" class="method-detail ">
+          <a name="method-i-exception_handler"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">exception_handler</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return the current exception handler. Defaults to
+:default_exception_handler.</p>
+            
+
+            
+            <div class="method-source-code" id="exception_handler-source">
+<pre>
+<span class="ruby-comment"># File lib/i18n/config.rb, line 70</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">exception_handler</span>
+  <span class="ruby-identifier">@@exception_handler</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">ExceptionHandler</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- exception_handler-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- exception_handler-method -->
+
+      
+        <div id="exception_handler-3D-method" class="method-detail ">
+          <a name="method-i-exception_handler-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">exception_handler=</span><span
+              class="method-args">(exception_handler)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Sets the exception handler.</p>
+            
+
+            
+            <div class="method-source-code" id="exception_handler-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/i18n/config.rb, line 75</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">exception_handler=</span>(<span class="ruby-identifier">exception_handler</span>)
+  <span class="ruby-identifier">@@exception_handler</span> = <span class="ruby-identifier">exception_handler</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- exception_handler-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- exception_handler-3D-method -->
+
+      
+        <div id="load_path-method" class="method-detail ">
+          <a name="method-i-load_path"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">load_path</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Allow clients to register paths providing translation data sources. The
+backend defines acceptable sources.</p>
+
+<p>E.g. the provided SimpleBackend accepts a list of paths to translation
+files which are either named *.rb and contain plain Ruby Hashes or are
+named *.yml and contain YAML data. So for the SimpleBackend clients may
+register translation files like this:</p>
+
+<pre>I18n.load_path &lt;&lt; 'path/to/locale/en.yml'</pre>
+            
+
+            
+            <div class="method-source-code" id="load_path-source">
+<pre>
+<span class="ruby-comment"># File lib/i18n/config.rb, line 110</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">load_path</span>
+  <span class="ruby-identifier">@@load_path</span> <span class="ruby-operator">||=</span> []
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- load_path-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- load_path-method -->
+
+      
+        <div id="load_path-3D-method" class="method-detail ">
+          <a name="method-i-load_path-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">load_path=</span><span
+              class="method-args">(load_path)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Sets the load path instance. Custom implementations are expected to behave
+like a Ruby Array.</p>
+            
+
+            
+            <div class="method-source-code" id="load_path-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/i18n/config.rb, line 116</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">load_path=</span>(<span class="ruby-identifier">load_path</span>)
+  <span class="ruby-identifier">@@load_path</span> = <span class="ruby-identifier">load_path</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- load_path-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- load_path-3D-method -->
+
+      
+        <div id="locale-method" class="method-detail ">
+          <a name="method-i-locale"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">locale</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>The only configuration value that is not global and scoped to thread is
+:locale. It defaults to the default_locale.</p>
+            
+
+            
+            <div class="method-source-code" id="locale-source">
+<pre>
+<span class="ruby-comment"># File lib/i18n/config.rb, line 5</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">locale</span>
+  <span class="ruby-ivar">@locale</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">default_locale</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- locale-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- locale-method -->
+
+      
+        <div id="locale-3D-method" class="method-detail ">
+          <a name="method-i-locale-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">locale=</span><span
+              class="method-args">(locale)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Sets the current locale pseudo-globally, i.e. in the Thread.current hash.</p>
+            
+
+            
+            <div class="method-source-code" id="locale-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/i18n/config.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">locale=</span>(<span class="ruby-identifier">locale</span>)
+  <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">enforce_available_locales!</span>(<span class="ruby-identifier">locale</span>)
+  <span class="ruby-ivar">@locale</span> = <span class="ruby-identifier">locale</span>.<span class="ruby-identifier">to_sym</span> <span class="ruby-keyword">rescue</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- locale-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- locale-3D-method -->
+
+      
+        <div id="missing_interpolation_argument_handler-method" class="method-detail ">
+          <a name="method-i-missing_interpolation_argument_handler"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">missing_interpolation_argument_handler</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns the current handler for situations when interpolation argument is
+missing. <a
+href="MissingInterpolationArgument.html">MissingInterpolationArgument</a>
+will be raised by default.</p>
+            
+
+            
+            <div class="method-source-code" id="missing_interpolation_argument_handler-source">
+<pre>
+<span class="ruby-comment"># File lib/i18n/config.rb, line 81</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">missing_interpolation_argument_handler</span>
+  <span class="ruby-identifier">@@missing_interpolation_argument_handler</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">lambda</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">missing_key</span>, <span class="ruby-identifier">provided_hash</span>, <span class="ruby-identifier">string</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">MissingInterpolationArgument</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">missing_key</span>, <span class="ruby-identifier">provided_hash</span>, <span class="ruby-identifier">string</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- missing_interpolation_argument_handler-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- missing_interpolation_argument_handler-method -->
+
+      
+        <div id="missing_interpolation_argument_handler-3D-method" class="method-detail ">
+          <a name="method-i-missing_interpolation_argument_handler-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">missing_interpolation_argument_handler=</span><span
+              class="method-args">(exception_handler)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Sets the missing interpolation argument handler. It can be any object that
+responds to call. The arguments that will be passed to call are the same as
+for <a
+href="MissingInterpolationArgument.html">MissingInterpolationArgument</a>
+initializer. Use <tt>Proc.new</tt> if you don't care about arity.</p>
+
+<h2>Example:</h2>
+
+<p>You can supress raising an exception and return string instead:</p>
+
+<pre>I18n.config.missing_interpolation_argument_handler = Proc.new do |key|
+  &quot;#{key} is missing&quot;
+end</pre>
+            
+
+            
+            <div class="method-source-code" id="missing_interpolation_argument_handler-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/i18n/config.rb, line 98</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">missing_interpolation_argument_handler=</span>(<span class="ruby-identifier">exception_handler</span>)
+  <span class="ruby-identifier">@@missing_interpolation_argument_handler</span> = <span class="ruby-identifier">exception_handler</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- missing_interpolation_argument_handler-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- missing_interpolation_argument_handler-3D-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

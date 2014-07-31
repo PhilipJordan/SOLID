@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"binary:EFI" Cucumber::Rake::Task#binary;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"ZName of the cucumber binary to use for running features. Defaults to Cucumber::BINARY:encoding"IBM437:
+@file0FI"lib/cucumber/rake/task.rb;@

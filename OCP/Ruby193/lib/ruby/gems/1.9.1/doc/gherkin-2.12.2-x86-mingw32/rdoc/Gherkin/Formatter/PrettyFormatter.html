@@ -1,0 +1,1058 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Gherkin::Formatter::PrettyFormatter</title>
+
+  <link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../lib/gherkin/formatter/pretty_formatter_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/gherkin/formatter/pretty_formatter.rb">lib/gherkin/formatter/pretty_formatter.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+      <!-- Namespace Contents -->
+      <div id="namespace-list-section" class="section">
+        <h3 class="section-header">Namespace</h3>
+        <ul class="link-list">
+          
+          <li><span class="type">CLASS</span> <a href="PrettyFormatter/ColorFormat.html">Gherkin::Formatter::PrettyFormatter::ColorFormat</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="PrettyFormatter/MonochromeFormat.html">Gherkin::Formatter::PrettyFormatter::MonochromeFormat</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-arg_format">#arg_format</a></li>
+          
+          <li><a href="#method-i-background">#background</a></li>
+          
+          <li><a href="#method-i-done">#done</a></li>
+          
+          <li><a href="#method-i-eof">#eof</a></li>
+          
+          <li><a href="#method-i-examples">#examples</a></li>
+          
+          <li><a href="#method-i-feature">#feature</a></li>
+          
+          <li><a href="#method-i-format">#format</a></li>
+          
+          <li><a href="#method-i-match">#match</a></li>
+          
+          <li><a href="#method-i-print_statement">#print_statement</a></li>
+          
+          <li><a href="#method-i-print_step">#print_step</a></li>
+          
+          <li><a href="#method-i-print_steps">#print_steps</a></li>
+          
+          <li><a href="#method-i-replay">#replay</a></li>
+          
+          <li><a href="#method-i-result">#result</a></li>
+          
+          <li><a href="#method-i-scenario">#scenario</a></li>
+          
+          <li><a href="#method-i-scenario_outline">#scenario_outline</a></li>
+          
+          <li><a href="#method-i-step">#step</a></li>
+          
+          <li><a href="#method-i-table">#table</a></li>
+          
+          <li><a href="#method-i-uri">#uri</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Included Modules -->
+      <div id="includes-section" class="section">
+        <h3 class="section-header">Included Modules</h3>
+        <ul class="link-list">
+        
+        
+          <li><a class="include" href="AnsiEscapes.html">Gherkin::Formatter::AnsiEscapes</a></li>
+        
+        
+        
+          <li><a class="include" href="Escaping.html">Gherkin::Formatter::Escaping</a></li>
+        
+        
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../../lib/gherkin/parser/meta_txt.html">meta.txt</a></li>
+        
+          <li class="file"><a href="../../lib/gherkin/parser/root_txt.html">root.txt</a></li>
+        
+          <li class="file"><a href="../../lib/gherkin/parser/steps_txt.html">steps.txt</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../Gherkin.html">Gherkin</a></li>
+        
+          <li><a href="../../Gherkin/CLexer.html">Gherkin::CLexer</a></li>
+        
+          <li><a href="../../Gherkin/Formatter.html">Gherkin::Formatter</a></li>
+        
+          <li><a href="../../Gherkin/Formatter/AnsiEscapes.html">Gherkin::Formatter::AnsiEscapes</a></li>
+        
+          <li><a href="../../Gherkin/Formatter/Argument.html">Gherkin::Formatter::Argument</a></li>
+        
+          <li><a href="../../Gherkin/Formatter/Escaping.html">Gherkin::Formatter::Escaping</a></li>
+        
+          <li><a href="../../Gherkin/Formatter/FilterFormatter.html">Gherkin::Formatter::FilterFormatter</a></li>
+        
+          <li><a href="../../Gherkin/Formatter/Hashable.html">Gherkin::Formatter::Hashable</a></li>
+        
+          <li><a href="../../Gherkin/Formatter/JSONFormatter.html">Gherkin::Formatter::JSONFormatter</a></li>
+        
+          <li><a href="../../Gherkin/Formatter/LineFilter.html">Gherkin::Formatter::LineFilter</a></li>
+        
+          <li><a href="../../Gherkin/Formatter/Model.html">Gherkin::Formatter::Model</a></li>
+        
+          <li><a href="../../Gherkin/Formatter/Model/Background.html">Gherkin::Formatter::Model::Background</a></li>
+        
+          <li><a href="../../Gherkin/Formatter/Model/BasicStatement.html">Gherkin::Formatter::Model::BasicStatement</a></li>
+        
+          <li><a href="../../Gherkin/Formatter/Model/Comment.html">Gherkin::Formatter::Model::Comment</a></li>
+        
+          <li><a href="../../Gherkin/Formatter/Model/DataTableRow.html">Gherkin::Formatter::Model::DataTableRow</a></li>
+        
+          <li><a href="../../Gherkin/Formatter/Model/DescribedStatement.html">Gherkin::Formatter::Model::DescribedStatement</a></li>
+        
+          <li><a href="../../Gherkin/Formatter/Model/DocString.html">Gherkin::Formatter::Model::DocString</a></li>
+        
+          <li><a href="../../Gherkin/Formatter/Model/Examples.html">Gherkin::Formatter::Model::Examples</a></li>
+        
+          <li><a href="../../Gherkin/Formatter/Model/Examples/Builder.html">Gherkin::Formatter::Model::Examples::Builder</a></li>
+        
+          <li><a href="../../Gherkin/Formatter/Model/ExamplesTableRow.html">Gherkin::Formatter::Model::ExamplesTableRow</a></li>
+        
+          <li><a href="../../Gherkin/Formatter/Model/Feature.html">Gherkin::Formatter::Model::Feature</a></li>
+        
+          <li><a href="../../Gherkin/Formatter/Model/Match.html">Gherkin::Formatter::Model::Match</a></li>
+        
+          <li><a href="../../Gherkin/Formatter/Model/Result.html">Gherkin::Formatter::Model::Result</a></li>
+        
+          <li><a href="../../Gherkin/Formatter/Model/Row.html">Gherkin::Formatter::Model::Row</a></li>
+        
+          <li><a href="../../Gherkin/Formatter/Model/Scenario.html">Gherkin::Formatter::Model::Scenario</a></li>
+        
+          <li><a href="../../Gherkin/Formatter/Model/ScenarioOutline.html">Gherkin::Formatter::Model::ScenarioOutline</a></li>
+        
+          <li><a href="../../Gherkin/Formatter/Model/Step.html">Gherkin::Formatter::Model::Step</a></li>
+        
+          <li><a href="../../Gherkin/Formatter/Model/Step/Builder.html">Gherkin::Formatter::Model::Step::Builder</a></li>
+        
+          <li><a href="../../Gherkin/Formatter/Model/Tag.html">Gherkin::Formatter::Model::Tag</a></li>
+        
+          <li><a href="../../Gherkin/Formatter/Model/TagStatement.html">Gherkin::Formatter::Model::TagStatement</a></li>
+        
+          <li><a href="../../Gherkin/Formatter/PrettyFormatter.html">Gherkin::Formatter::PrettyFormatter</a></li>
+        
+          <li><a href="../../Gherkin/Formatter/PrettyFormatter/ColorFormat.html">Gherkin::Formatter::PrettyFormatter::ColorFormat</a></li>
+        
+          <li><a href="../../Gherkin/Formatter/PrettyFormatter/MonochromeFormat.html">Gherkin::Formatter::PrettyFormatter::MonochromeFormat</a></li>
+        
+          <li><a href="../../Gherkin/Formatter/RegexpFilter.html">Gherkin::Formatter::RegexpFilter</a></li>
+        
+          <li><a href="../../Gherkin/Formatter/StepPrinter.html">Gherkin::Formatter::StepPrinter</a></li>
+        
+          <li><a href="../../Gherkin/Formatter/TagCountFormatter.html">Gherkin::Formatter::TagCountFormatter</a></li>
+        
+          <li><a href="../../Gherkin/Formatter/TagFilter.html">Gherkin::Formatter::TagFilter</a></li>
+        
+          <li><a href="../../Gherkin/I18n.html">Gherkin::I18n</a></li>
+        
+          <li><a href="../../Gherkin/JSONParser.html">Gherkin::JSONParser</a></li>
+        
+          <li><a href="../../Gherkin/Lexer.html">Gherkin::Lexer</a></li>
+        
+          <li><a href="../../Gherkin/Lexer/Encoding.html">Gherkin::Lexer::Encoding</a></li>
+        
+          <li><a href="../../Gherkin/Lexer/I18nLexer.html">Gherkin::Lexer::I18nLexer</a></li>
+        
+          <li><a href="../../Gherkin/Listener.html">Gherkin::Listener</a></li>
+        
+          <li><a href="../../Gherkin/Listener/Event.html">Gherkin::Listener::Event</a></li>
+        
+          <li><a href="../../Gherkin/Listener/FormatterListener.html">Gherkin::Listener::FormatterListener</a></li>
+        
+          <li><a href="../../Gherkin/Listener/FormatterListener/Stash.html">Gherkin::Listener::FormatterListener::Stash</a></li>
+        
+          <li><a href="../../Gherkin/Parser.html">Gherkin::Parser</a></li>
+        
+          <li><a href="../../Gherkin/Parser/ParseError.html">Gherkin::Parser::ParseError</a></li>
+        
+          <li><a href="../../Gherkin/Parser/Parser.html">Gherkin::Parser::Parser</a></li>
+        
+          <li><a href="../../Gherkin/Parser/Parser/Machine.html">Gherkin::Parser::Parser::Machine</a></li>
+        
+          <li><a href="../../Gherkin/Parser/Parser/Machine/StateMachineReader.html">Gherkin::Parser::Parser::Machine::StateMachineReader</a></li>
+        
+          <li><a href="../../Gherkin/Rubify.html">Gherkin::Rubify</a></li>
+        
+          <li><a href="../../Gherkin/TagExpression.html">Gherkin::TagExpression</a></li>
+        
+          <li><a href="../../Class.html">Class</a></li>
+        
+          <li><a href="../../Class/IOWriter.html">Class::IOWriter</a></li>
+        
+          <li><a href="../../Class/Proxy.html">Class::Proxy</a></li>
+        
+          <li><a href="../../Class/Proxy/STDOUT.html">Class::Proxy::STDOUT</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Gherkin::Formatter::PrettyFormatter</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="START">START</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="TRIPLE_QUOTES">TRIPLE_QUOTES</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(io, monochrome, executing)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/gherkin/formatter/pretty_formatter.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">io</span>, <span class="ruby-identifier">monochrome</span>, <span class="ruby-identifier">executing</span>)
+  <span class="ruby-ivar">@io</span> = <span class="ruby-identifier">io</span>
+  <span class="ruby-ivar">@step_printer</span> = <span class="ruby-constant">StepPrinter</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@monochrome</span> = <span class="ruby-identifier">monochrome</span>
+  <span class="ruby-ivar">@executing</span> = <span class="ruby-identifier">executing</span>
+  <span class="ruby-ivar">@steps</span> = []
+
+  <span class="ruby-comment"># Prevent warnings, initialize fields</span>
+  <span class="ruby-ivar">@background</span> = <span class="ruby-ivar">@tag_statement</span> = <span class="ruby-ivar">@formats</span> = <span class="ruby-ivar">@statement</span> = <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="arg_format-method" class="method-detail ">
+          <a name="method-i-arg_format"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">arg_format</span><span
+              class="method-args">(key)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="arg_format-source">
+<pre>
+<span class="ruby-comment"># File lib/gherkin/formatter/pretty_formatter.rb, line 136</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">arg_format</span>(<span class="ruby-identifier">key</span>)
+  <span class="ruby-identifier">format</span>(<span class="ruby-node">&quot;#{key}_arg&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- arg_format-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- arg_format-method -->
+
+      
+        <div id="background-method" class="method-detail ">
+          <a name="method-i-background"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">background</span><span
+              class="method-args">(background)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="background-source">
+<pre>
+<span class="ruby-comment"># File lib/gherkin/formatter/pretty_formatter.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">background</span>(<span class="ruby-identifier">background</span>)
+  <span class="ruby-identifier">replay</span>
+  <span class="ruby-ivar">@statement</span> = <span class="ruby-identifier">background</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- background-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- background-method -->
+
+      
+        <div id="done-method" class="method-detail ">
+          <a name="method-i-done"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">done</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="done-source">
+<pre>
+<span class="ruby-comment"># File lib/gherkin/formatter/pretty_formatter.rb, line 158</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">done</span>
+  <span class="ruby-comment"># NO-OP</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- done-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- done-method -->
+
+      
+        <div id="eof-method" class="method-detail ">
+          <a name="method-i-eof"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">eof</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="eof-source">
+<pre>
+<span class="ruby-comment"># File lib/gherkin/formatter/pretty_formatter.rb, line 153</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">eof</span>
+  <span class="ruby-identifier">replay</span>
+  <span class="ruby-comment"># NO-OP</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- eof-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- eof-method -->
+
+      
+        <div id="examples-method" class="method-detail ">
+          <a name="method-i-examples"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">examples</span><span
+              class="method-args">(examples)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="examples-source">
+<pre>
+<span class="ruby-comment"># File lib/gherkin/formatter/pretty_formatter.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">examples</span>(<span class="ruby-identifier">examples</span>)
+  <span class="ruby-identifier">replay</span>
+  <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">puts</span>
+  <span class="ruby-identifier">print_comments</span>(<span class="ruby-identifier">examples</span>.<span class="ruby-identifier">comments</span>, <span class="ruby-string">'    '</span>)
+  <span class="ruby-identifier">print_tags</span>(<span class="ruby-identifier">examples</span>.<span class="ruby-identifier">tags</span>, <span class="ruby-string">'    '</span>)
+  <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;    #{examples.keyword}: #{examples.name}&quot;</span>
+  <span class="ruby-identifier">print_description</span>(<span class="ruby-identifier">examples</span>.<span class="ruby-identifier">description</span>, <span class="ruby-string">'      '</span>)
+  <span class="ruby-identifier">table</span>(<span class="ruby-identifier">examples</span>.<span class="ruby-identifier">rows</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- examples-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- examples-method -->
+
+      
+        <div id="feature-method" class="method-detail ">
+          <a name="method-i-feature"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">feature</span><span
+              class="method-args">(feature)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="feature-source">
+<pre>
+<span class="ruby-comment"># File lib/gherkin/formatter/pretty_formatter.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">feature</span>(<span class="ruby-identifier">feature</span>)
+  <span class="ruby-identifier">print_comments</span>(<span class="ruby-identifier">feature</span>.<span class="ruby-identifier">comments</span>, <span class="ruby-string">''</span>)
+  <span class="ruby-identifier">print_tags</span>(<span class="ruby-identifier">feature</span>.<span class="ruby-identifier">tags</span>, <span class="ruby-string">''</span>)
+  <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#{feature.keyword}: #{feature.name}&quot;</span>
+  <span class="ruby-identifier">print_description</span>(<span class="ruby-identifier">feature</span>.<span class="ruby-identifier">description</span>, <span class="ruby-string">'  '</span>, <span class="ruby-keyword">false</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- feature-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- feature-method -->
+
+      
+        <div id="format-method" class="method-detail ">
+          <a name="method-i-format"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">format</span><span
+              class="method-args">(key)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="format-source">
+<pre>
+<span class="ruby-comment"># File lib/gherkin/formatter/pretty_formatter.rb, line 140</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">format</span>(<span class="ruby-identifier">key</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@formats</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@monochrome</span>
+      <span class="ruby-ivar">@formats</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">MonochromeFormat</span>.<span class="ruby-identifier">new</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-ivar">@formats</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">formats</span>, <span class="ruby-identifier">status</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">formats</span>[<span class="ruby-identifier">status</span>] = <span class="ruby-constant">ColorFormat</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">status</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@formats</span>[<span class="ruby-identifier">key</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- format-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- format-method -->
+
+      
+        <div id="match-method" class="method-detail ">
+          <a name="method-i-match"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">match</span><span
+              class="method-args">(match)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="match-source">
+<pre>
+<span class="ruby-comment"># File lib/gherkin/formatter/pretty_formatter.rb, line 91</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">match</span>(<span class="ruby-identifier">match</span>)
+  <span class="ruby-ivar">@match</span> = <span class="ruby-identifier">match</span>
+  <span class="ruby-identifier">print_statement</span>
+  <span class="ruby-identifier">print_step</span>(<span class="ruby-string">'executing'</span>, <span class="ruby-ivar">@match</span>.<span class="ruby-identifier">arguments</span>, <span class="ruby-ivar">@match</span>.<span class="ruby-identifier">location</span>, <span class="ruby-keyword">false</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- match-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- match-method -->
+
+      
+        <div id="print_statement-method" class="method-detail ">
+          <a name="method-i-print_statement"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">print_statement</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="print_statement-source">
+<pre>
+<span class="ruby-comment"># File lib/gherkin/formatter/pretty_formatter.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">print_statement</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@statement</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-identifier">calculate_location_indentations</span>
+  <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">puts</span>
+  <span class="ruby-identifier">print_comments</span>(<span class="ruby-ivar">@statement</span>.<span class="ruby-identifier">comments</span>, <span class="ruby-string">'  '</span>)
+  <span class="ruby-identifier">print_tags</span>(<span class="ruby-ivar">@statement</span>.<span class="ruby-identifier">tags</span>, <span class="ruby-string">'  '</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@statement</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:tags</span>) <span class="ruby-comment"># Background doesn't</span>
+  <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">write</span> <span class="ruby-node">&quot;  #{@statement.keyword}: #{@statement.name}&quot;</span>
+  <span class="ruby-identifier">location</span> = <span class="ruby-ivar">@executing</span> <span class="ruby-operator">?</span> <span class="ruby-node">&quot;#{@uri}:#{@statement.line}&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">indented_location</span>(<span class="ruby-identifier">location</span>, <span class="ruby-keyword">true</span>)
+  <span class="ruby-identifier">print_description</span>(<span class="ruby-ivar">@statement</span>.<span class="ruby-identifier">description</span>, <span class="ruby-string">'    '</span>)
+  <span class="ruby-ivar">@statement</span> = <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- print_statement-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- print_statement-method -->
+
+      
+        <div id="print_step-method" class="method-detail ">
+          <a name="method-i-print_step"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">print_step</span><span
+              class="method-args">(status, arguments, location, proceed)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="print_step-source">
+<pre>
+<span class="ruby-comment"># File lib/gherkin/formatter/pretty_formatter.rb, line 102</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">print_step</span>(<span class="ruby-identifier">status</span>, <span class="ruby-identifier">arguments</span>, <span class="ruby-identifier">location</span>, <span class="ruby-identifier">proceed</span>)
+  <span class="ruby-identifier">step</span> = <span class="ruby-identifier">proceed</span> <span class="ruby-operator">?</span> <span class="ruby-ivar">@steps</span>.<span class="ruby-identifier">shift</span> <span class="ruby-operator">:</span> <span class="ruby-ivar">@steps</span>[<span class="ruby-value">0</span>]
+  
+  <span class="ruby-identifier">text_format</span> = <span class="ruby-identifier">format</span>(<span class="ruby-identifier">status</span>)
+  <span class="ruby-identifier">arg_format</span> = <span class="ruby-identifier">arg_format</span>(<span class="ruby-identifier">status</span>)
+  
+  <span class="ruby-identifier">print_comments</span>(<span class="ruby-identifier">step</span>.<span class="ruby-identifier">comments</span>, <span class="ruby-string">'    '</span>)
+  <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">write</span>(<span class="ruby-string">'    '</span>)
+  <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">text_format</span>.<span class="ruby-identifier">text</span>(<span class="ruby-identifier">step</span>.<span class="ruby-identifier">keyword</span>))
+  <span class="ruby-ivar">@step_printer</span>.<span class="ruby-identifier">write_step</span>(<span class="ruby-ivar">@io</span>, <span class="ruby-identifier">text_format</span>, <span class="ruby-identifier">arg_format</span>, <span class="ruby-identifier">step</span>.<span class="ruby-identifier">name</span>, <span class="ruby-identifier">arguments</span>)
+  <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-identifier">indented_location</span>(<span class="ruby-identifier">location</span>, <span class="ruby-identifier">proceed</span>))
+  
+  <span class="ruby-identifier">doc_string</span>(<span class="ruby-identifier">step</span>.<span class="ruby-identifier">doc_string</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">step</span>.<span class="ruby-identifier">doc_string</span>
+  <span class="ruby-identifier">table</span>(<span class="ruby-identifier">step</span>.<span class="ruby-identifier">rows</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">step</span>.<span class="ruby-identifier">rows</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- print_step-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- print_step-method -->
+
+      
+        <div id="print_steps-method" class="method-detail ">
+          <a name="method-i-print_steps"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">print_steps</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="print_steps-source">
+<pre>
+<span class="ruby-comment"># File lib/gherkin/formatter/pretty_formatter.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">print_steps</span>
+  <span class="ruby-keyword">while</span>(<span class="ruby-ivar">@steps</span>.<span class="ruby-identifier">any?</span>)
+    <span class="ruby-identifier">print_step</span>(<span class="ruby-string">'skipped'</span>, [], <span class="ruby-keyword">nil</span>, <span class="ruby-keyword">true</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- print_steps-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- print_steps-method -->
+
+      
+        <div id="replay-method" class="method-detail ">
+          <a name="method-i-replay"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">replay</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="replay-source">
+<pre>
+<span class="ruby-comment"># File lib/gherkin/formatter/pretty_formatter.rb, line 53</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">replay</span>
+  <span class="ruby-identifier">print_statement</span>
+  <span class="ruby-identifier">print_steps</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- replay-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- replay-method -->
+
+      
+        <div id="result-method" class="method-detail ">
+          <a name="method-i-result"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">result</span><span
+              class="method-args">(result)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="result-source">
+<pre>
+<span class="ruby-comment"># File lib/gherkin/formatter/pretty_formatter.rb, line 97</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">result</span>(<span class="ruby-identifier">result</span>)
+  <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">up</span>(<span class="ruby-value">1</span>))
+  <span class="ruby-identifier">print_step</span>(<span class="ruby-identifier">result</span>.<span class="ruby-identifier">status</span>, <span class="ruby-ivar">@match</span>.<span class="ruby-identifier">arguments</span>, <span class="ruby-ivar">@match</span>.<span class="ruby-identifier">location</span>, <span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- result-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- result-method -->
+
+      
+        <div id="scenario-method" class="method-detail ">
+          <a name="method-i-scenario"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">scenario</span><span
+              class="method-args">(scenario)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="scenario-source">
+<pre>
+<span class="ruby-comment"># File lib/gherkin/formatter/pretty_formatter.rb, line 43</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">scenario</span>(<span class="ruby-identifier">scenario</span>)
+  <span class="ruby-identifier">replay</span>
+  <span class="ruby-ivar">@statement</span> = <span class="ruby-identifier">scenario</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- scenario-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- scenario-method -->
+
+      
+        <div id="scenario_outline-method" class="method-detail ">
+          <a name="method-i-scenario_outline"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">scenario_outline</span><span
+              class="method-args">(scenario_outline)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="scenario_outline-source">
+<pre>
+<span class="ruby-comment"># File lib/gherkin/formatter/pretty_formatter.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">scenario_outline</span>(<span class="ruby-identifier">scenario_outline</span>)
+  <span class="ruby-identifier">replay</span>
+  <span class="ruby-ivar">@statement</span> = <span class="ruby-identifier">scenario_outline</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- scenario_outline-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- scenario_outline-method -->
+
+      
+        <div id="step-method" class="method-detail ">
+          <a name="method-i-step"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">step</span><span
+              class="method-args">(step)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="step-source">
+<pre>
+<span class="ruby-comment"># File lib/gherkin/formatter/pretty_formatter.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">step</span>(<span class="ruby-identifier">step</span>)
+  <span class="ruby-ivar">@steps</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">step</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- step-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- step-method -->
+
+      
+        <div id="table-method" class="method-detail ">
+          <a name="method-i-table"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">table</span><span
+              class="method-args">(rows)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="table-source">
+<pre>
+<span class="ruby-comment"># File lib/gherkin/formatter/pretty_formatter.rb, line 162</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">table</span>(<span class="ruby-identifier">rows</span>)
+  <span class="ruby-identifier">cell_lengths</span> = <span class="ruby-identifier">rows</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span> 
+    <span class="ruby-identifier">row</span>.<span class="ruby-identifier">cells</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">cell</span><span class="ruby-operator">|</span> 
+      <span class="ruby-identifier">escape_cell</span>(<span class="ruby-identifier">cell</span>).<span class="ruby-identifier">unpack</span>(<span class="ruby-string">&quot;U*&quot;</span>).<span class="ruby-identifier">length</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">max_lengths</span> = <span class="ruby-identifier">cell_lengths</span>.<span class="ruby-identifier">transpose</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">col_lengths</span><span class="ruby-operator">|</span> <span class="ruby-identifier">col_lengths</span>.<span class="ruby-identifier">max</span> }.<span class="ruby-identifier">flatten</span>
+
+  <span class="ruby-identifier">rows</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">row</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">row</span>.<span class="ruby-identifier">comments</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">comment</span><span class="ruby-operator">|</span>
+      <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;      #{comment.value}&quot;</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">j</span> = <span class="ruby-value">-1</span>
+    <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">'      | '</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">row</span>.<span class="ruby-identifier">cells</span>.<span class="ruby-identifier">zip</span>(<span class="ruby-identifier">max_lengths</span>).<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">cell</span>, <span class="ruby-identifier">max_length</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">j</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+      <span class="ruby-identifier">color</span>(<span class="ruby-identifier">cell</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">j</span>) <span class="ruby-operator">+</span> <span class="ruby-string">' '</span> * (<span class="ruby-identifier">max_length</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">cell_lengths</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>])
+    }.<span class="ruby-identifier">join</span>(<span class="ruby-string">' | '</span>) <span class="ruby-operator">+</span> <span class="ruby-string">' |'</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- table-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- table-method -->
+
+      
+        <div id="uri-method" class="method-detail ">
+          <a name="method-i-uri"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">uri</span><span
+              class="method-args">(uri)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="uri-source">
+<pre>
+<span class="ruby-comment"># File lib/gherkin/formatter/pretty_formatter.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">uri</span>(<span class="ruby-identifier">uri</span>)
+  <span class="ruby-ivar">@uri</span> = <span class="ruby-identifier">uri</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- uri-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- uri-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

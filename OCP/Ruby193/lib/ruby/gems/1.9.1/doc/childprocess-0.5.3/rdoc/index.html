@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta content="text/html; charset=IBM437" http-equiv="Content-Type" />
+
+  <title>childprocess-0.5.3 Documentation</title>
+
+  <link type="text/css" media="screen" href="rdoc.css" rel="stylesheet" />
+
+  <script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body class="indexpage">
+
+  
+  <h1>childprocess-0.5.3 Documentation</h1>
+
+  
+  <p>This is the API documentation for 'childprocess-0.5.3 Documentation'.</p>
+  
+
+  
+  
+
+  <h2 id="classes">Classes/Modules</h2>
+  <ul>
+    
+    <li class="module"><a href="ChildProcess.html">ChildProcess</a></li>
+    
+    <li class="class"><a href="ChildProcess/AbstractIO.html">ChildProcess::AbstractIO</a></li>
+    
+    <li class="class"><a href="ChildProcess/AbstractProcess.html">ChildProcess::AbstractProcess</a></li>
+    
+    <li class="class"><a href="ChildProcess/Error.html">ChildProcess::Error</a></li>
+    
+    <li class="class"><a href="ChildProcess/InvalidEnvironmentVariable.html">ChildProcess::InvalidEnvironmentVariable</a></li>
+    
+    <li class="module"><a href="ChildProcess/JRuby.html">ChildProcess::JRuby</a></li>
+    
+    <li class="class"><a href="ChildProcess/JRuby/IO.html">ChildProcess::JRuby::IO</a></li>
+    
+    <li class="class"><a href="ChildProcess/JRuby/Process.html">ChildProcess::JRuby::Process</a></li>
+    
+    <li class="class"><a href="ChildProcess/JRuby/Pump.html">ChildProcess::JRuby::Pump</a></li>
+    
+    <li class="class"><a href="ChildProcess/LaunchError.html">ChildProcess::LaunchError</a></li>
+    
+    <li class="class"><a href="ChildProcess/MissingPlatformError.html">ChildProcess::MissingPlatformError</a></li>
+    
+    <li class="class"><a href="ChildProcess/SubclassResponsibility.html">ChildProcess::SubclassResponsibility</a></li>
+    
+    <li class="class"><a href="ChildProcess/TimeoutError.html">ChildProcess::TimeoutError</a></li>
+    
+    <li class="module"><a href="ChildProcess/Tools.html">ChildProcess::Tools</a></li>
+    
+    <li class="class"><a href="ChildProcess/Tools/Generator.html">ChildProcess::Tools::Generator</a></li>
+    
+    <li class="module"><a href="ChildProcess/Unix.html">ChildProcess::Unix</a></li>
+    
+    <li class="class"><a href="ChildProcess/Unix/ForkExecProcess.html">ChildProcess::Unix::ForkExecProcess</a></li>
+    
+    <li class="class"><a href="ChildProcess/Unix/IO.html">ChildProcess::Unix::IO</a></li>
+    
+    <li class="module"><a href="ChildProcess/Unix/Lib.html">ChildProcess::Unix::Lib</a></li>
+    
+    <li class="class"><a href="ChildProcess/Unix/Lib/Attrs.html">ChildProcess::Unix::Lib::Attrs</a></li>
+    
+    <li class="class"><a href="ChildProcess/Unix/Lib/FileActions.html">ChildProcess::Unix::Lib::FileActions</a></li>
+    
+    <li class="module"><a href="ChildProcess/Unix/Platform.html">ChildProcess::Unix::Platform</a></li>
+    
+    <li class="class"><a href="ChildProcess/Unix/PosixSpawnProcess.html">ChildProcess::Unix::PosixSpawnProcess</a></li>
+    
+    <li class="class"><a href="ChildProcess/Unix/PosixSpawnProcess/Argv.html">ChildProcess::Unix::PosixSpawnProcess::Argv</a></li>
+    
+    <li class="class"><a href="ChildProcess/Unix/PosixSpawnProcess/Envp.html">ChildProcess::Unix::PosixSpawnProcess::Envp</a></li>
+    
+    <li class="class"><a href="ChildProcess/Unix/Process.html">ChildProcess::Unix::Process</a></li>
+    
+    <li class="module"><a href="ChildProcess/Windows.html">ChildProcess::Windows</a></li>
+    
+    <li class="class"><a href="ChildProcess/Windows/Handle.html">ChildProcess::Windows::Handle</a></li>
+    
+    <li class="class"><a href="ChildProcess/Windows/IO.html">ChildProcess::Windows::IO</a></li>
+    
+    <li class="class"><a href="ChildProcess/Windows/IoCounters.html">ChildProcess::Windows::IoCounters</a></li>
+    
+    <li class="class"><a href="ChildProcess/Windows/JobObjectBasicLimitInformation.html">ChildProcess::Windows::JobObjectBasicLimitInformation</a></li>
+    
+    <li class="class"><a href="ChildProcess/Windows/JobObjectExtendedLimitInformation.html">ChildProcess::Windows::JobObjectExtendedLimitInformation</a></li>
+    
+    <li class="module"><a href="ChildProcess/Windows/Lib.html">ChildProcess::Windows::Lib</a></li>
+    
+    <li class="class"><a href="ChildProcess/Windows/Process.html">ChildProcess::Windows::Process</a></li>
+    
+    <li class="class"><a href="ChildProcess/Windows/Process/Job.html">ChildProcess::Windows::Process::Job</a></li>
+    
+    <li class="class"><a href="ChildProcess/Windows/ProcessBuilder.html">ChildProcess::Windows::ProcessBuilder</a></li>
+    
+    <li class="class"><a href="ChildProcess/Windows/ProcessInfo.html">ChildProcess::Windows::ProcessInfo</a></li>
+    
+    <li class="class"><a href="ChildProcess/Windows/SecurityAttributes.html">ChildProcess::Windows::SecurityAttributes</a></li>
+    
+    <li class="class"><a href="ChildProcess/Windows/StartupInfo.html">ChildProcess::Windows::StartupInfo</a></li>
+    
+    <li class="module"><a href="Java.html">Java</a></li>
+    
+    <li class="module"><a href="Java/JavaIo.html">Java::JavaIo</a></li>
+    
+    <li class="class"><a href="Java/JavaIo/FileDescriptor.html">Java::JavaIo::FileDescriptor</a></li>
+    
+    <li class="module"><a href="Java/SunNioCh.html">Java::SunNioCh</a></li>
+    
+    <li class="class"><a href="Java/SunNioCh/FileChannelImpl.html">Java::SunNioCh::FileChannelImpl</a></li>
+    
+    <li class="module"><a href="FFI.html">FFI</a></li>
+    
+    <li class="class"><a href="FFI/MemoryPointer.html">FFI::MemoryPointer</a></li>
+    
+  </ul>
+
+  <h2 id="methods">Methods</h2>
+  <ul>
+    
+      <li><a href="ChildProcess/Windows/Lib.html#method-c-alive-3F">::alive? &mdash; ChildProcess::Windows::Lib</a></li>
+    
+      <li><a href="ChildProcess.html#method-c-arch">::arch &mdash; ChildProcess</a></li>
+    
+      <li><a href="ChildProcess.html#method-c-build">::build &mdash; ChildProcess</a></li>
+    
+      <li><a href="ChildProcess/Unix/Lib.html#method-c-check">::check &mdash; ChildProcess::Unix::Lib</a></li>
+    
+      <li><a href="ChildProcess/Windows/Lib.html#method-c-check_error">::check_error &mdash; ChildProcess::Windows::Lib</a></li>
+    
+      <li><a href="ChildProcess.html#method-c-close_on_exec">::close_on_exec &mdash; ChildProcess</a></li>
+    
+      <li><a href="ChildProcess/Windows/Lib.html#method-c-dont_inherit">::dont_inherit &mdash; ChildProcess::Windows::Lib</a></li>
+    
+      <li><a href="ChildProcess/Windows/Lib.html#method-c-duplicate_handle">::duplicate_handle &mdash; ChildProcess::Windows::Lib</a></li>
+    
+      <li><a href="ChildProcess/Windows/Lib.html#method-c-each_child_of">::each_child_of &mdash; ChildProcess::Windows::Lib</a></li>
+    
+      <li><a href="ChildProcess/Unix/Lib.html#method-c-environ">::environ &mdash; ChildProcess::Unix::Lib</a></li>
+    
+      <li><a href="FFI/MemoryPointer.html#method-c-from_string">::from_string &mdash; FFI::MemoryPointer</a></li>
+    
+      <li><a href="ChildProcess/Tools/Generator.html#method-c-generate">::generate &mdash; ChildProcess::Tools::Generator</a></li>
+    
+      <li><a href="ChildProcess/Windows/Lib.html#method-c-get_handle_inheritance">::get_handle_inheritance &mdash; ChildProcess::Windows::Lib</a></li>
+    
+      <li><a href="ChildProcess/Windows/Lib.html#method-c-handle_for">::handle_for &mdash; ChildProcess::Windows::Lib</a></li>
+    
+      <li><a href="ChildProcess/Windows/Lib.html#method-c-io_for">::io_for &mdash; ChildProcess::Windows::Lib</a></li>
+    
+      <li><a href="ChildProcess.html#method-c-jruby-3F">::jruby? &mdash; ChildProcess</a></li>
+    
+      <li><a href="ChildProcess/Windows/Lib.html#method-c-kill">::kill &mdash; ChildProcess::Windows::Lib</a></li>
+    
+      <li><a href="ChildProcess/Windows/Lib.html#method-c-last_error_message">::last_error_message &mdash; ChildProcess::Windows::Lib</a></li>
+    
+      <li><a href="ChildProcess.html#method-c-linux-3F">::linux? &mdash; ChildProcess</a></li>
+    
+      <li><a href="ChildProcess/Windows/Lib.html#method-c-msvcrt_name">::msvcrt_name &mdash; ChildProcess::Windows::Lib</a></li>
+    
+      <li><a href="ChildProcess/AbstractProcess.html#method-c-new">::new &mdash; ChildProcess::AbstractProcess</a></li>
+    
+      <li><a href="ChildProcess/JRuby/Pump.html#method-c-new">::new &mdash; ChildProcess::JRuby::Pump</a></li>
+    
+      <li><a href="ChildProcess/Unix/PosixSpawnProcess/Argv.html#method-c-new">::new &mdash; ChildProcess::Unix::PosixSpawnProcess::Argv</a></li>
+    
+      <li><a href="ChildProcess/Windows/Handle.html#method-c-new">::new &mdash; ChildProcess::Windows::Handle</a></li>
+    
+      <li><a href="ChildProcess/JRuby/Process.html#method-c-new">::new &mdash; ChildProcess::JRuby::Process</a></li>
+    
+      <li><a href="ChildProcess/Tools/Generator.html#method-c-new">::new &mdash; ChildProcess::Tools::Generator</a></li>
+    
+      <li><a href="ChildProcess/MissingPlatformError.html#method-c-new">::new &mdash; ChildProcess::MissingPlatformError</a></li>
+    
+      <li><a href="ChildProcess/Unix/Lib/Attrs.html#method-c-new">::new &mdash; ChildProcess::Unix::Lib::Attrs</a></li>
+    
+      <li><a href="ChildProcess/Windows/ProcessBuilder.html#method-c-new">::new &mdash; ChildProcess::Windows::ProcessBuilder</a></li>
+    
+      <li><a href="ChildProcess/Windows/SecurityAttributes.html#method-c-new">::new &mdash; ChildProcess::Windows::SecurityAttributes</a></li>
+    
+      <li><a href="ChildProcess/Unix/PosixSpawnProcess/Envp.html#method-c-new">::new &mdash; ChildProcess::Unix::PosixSpawnProcess::Envp</a></li>
+    
+      <li><a href="ChildProcess.html#method-c-new">::new &mdash; ChildProcess</a></li>
+    
+      <li><a href="ChildProcess/Unix/Lib/FileActions.html#method-c-new">::new &mdash; ChildProcess::Unix::Lib::FileActions</a></li>
+    
+      <li><a href="ChildProcess/Windows/Process/Job.html#method-c-new">::new &mdash; ChildProcess::Windows::Process::Job</a></li>
+    
+      <li><a href="ChildProcess/Windows/Lib.html#method-c-no_hang-3F">::no_hang? &mdash; ChildProcess::Windows::Lib</a></li>
+    
+      <li><a href="ChildProcess/Windows/Handle.html#method-c-open">::open &mdash; ChildProcess::Windows::Handle</a></li>
+    
+      <li><a href="ChildProcess.html#method-c-os">::os &mdash; ChildProcess</a></li>
+    
+      <li><a href="ChildProcess.html#method-c-platform">::platform &mdash; ChildProcess</a></li>
+    
+      <li><a href="ChildProcess.html#method-c-platform_name">::platform_name &mdash; ChildProcess</a></li>
+    
+      <li><a href="ChildProcess/JRuby.html#method-c-posix_fileno_for">::posix_fileno_for &mdash; ChildProcess::JRuby</a></li>
+    
+      <li><a href="ChildProcess.html#method-c-posix_spawn-3D">::posix_spawn= &mdash; ChildProcess</a></li>
+    
+      <li><a href="ChildProcess.html#method-c-posix_spawn-3F">::posix_spawn? &mdash; ChildProcess</a></li>
+    
+      <li><a href="ChildProcess/Windows/Lib.html#method-c-set_handle_inheritance">::set_handle_inheritance &mdash; ChildProcess::Windows::Lib</a></li>
+    
+      <li><a href="ChildProcess.html#method-c-unix-3F">::unix? &mdash; ChildProcess</a></li>
+    
+      <li><a href="ChildProcess/Windows/Lib.html#method-c-wait_for_pid">::wait_for_pid &mdash; ChildProcess::Windows::Lib</a></li>
+    
+      <li><a href="ChildProcess/Windows/Lib.html#method-c-waitpid">::waitpid &mdash; ChildProcess::Windows::Lib</a></li>
+    
+      <li><a href="ChildProcess/Windows/Lib.html#method-c-waitpid2">::waitpid2 &mdash; ChildProcess::Windows::Lib</a></li>
+    
+      <li><a href="ChildProcess.html#method-c-windows-3F">::windows? &mdash; ChildProcess</a></li>
+    
+      <li><a href="ChildProcess/JRuby.html#method-c-windows_handle_for">::windows_handle_for &mdash; ChildProcess::JRuby</a></li>
+    
+      <li><a href="ChildProcess/Windows/Process/Job.html#method-i-3C-3C">#<< &mdash; ChildProcess::Windows::Process::Job</a></li>
+    
+      <li><a href="ChildProcess/AbstractIO.html#method-i-_stdin-3D">#_stdin= &mdash; ChildProcess::AbstractIO</a></li>
+    
+      <li><a href="ChildProcess/Unix/Lib/FileActions.html#method-i-add_close">#add_close &mdash; ChildProcess::Unix::Lib::FileActions</a></li>
+    
+      <li><a href="ChildProcess/Unix/Lib/FileActions.html#method-i-add_dup">#add_dup &mdash; ChildProcess::Unix::Lib::FileActions</a></li>
+    
+      <li><a href="ChildProcess/Unix/Lib/FileActions.html#method-i-add_open">#add_open &mdash; ChildProcess::Unix::Lib::FileActions</a></li>
+    
+      <li><a href="ChildProcess/AbstractProcess.html#method-i-alive-3F">#alive? &mdash; ChildProcess::AbstractProcess</a></li>
+    
+      <li><a href="ChildProcess/Windows/Handle.html#method-i-close">#close &mdash; ChildProcess::Windows::Handle</a></li>
+    
+      <li><a href="ChildProcess/Windows/Process/Job.html#method-i-close">#close &mdash; ChildProcess::Windows::Process::Job</a></li>
+    
+      <li><a href="ChildProcess/AbstractProcess.html#method-i-crashed-3F">#crashed? &mdash; ChildProcess::AbstractProcess</a></li>
+    
+      <li><a href="ChildProcess/Tools/Generator.html#method-i-execute">#execute &mdash; ChildProcess::Tools::Generator</a></li>
+    
+      <li><a href="ChildProcess/Windows/Handle.html#method-i-exit_code">#exit_code &mdash; ChildProcess::Windows::Handle</a></li>
+    
+      <li><a href="ChildProcess/JRuby/Process.html#method-i-exited-3F">#exited? &mdash; ChildProcess::JRuby::Process</a></li>
+    
+      <li><a href="ChildProcess/AbstractProcess.html#method-i-exited-3F">#exited? &mdash; ChildProcess::AbstractProcess</a></li>
+    
+      <li><a href="ChildProcess/Unix/Process.html#method-i-exited-3F">#exited? &mdash; ChildProcess::Unix::Process</a></li>
+    
+      <li><a href="ChildProcess/Windows/Process.html#method-i-exited-3F">#exited? &mdash; ChildProcess::Windows::Process</a></li>
+    
+      <li><a href="ChildProcess/Tools/Generator.html#method-i-fetch_constant">#fetch_constant &mdash; ChildProcess::Tools::Generator</a></li>
+    
+      <li><a href="ChildProcess/Tools/Generator.html#method-i-fetch_size">#fetch_size &mdash; ChildProcess::Tools::Generator</a></li>
+    
+      <li><a href="ChildProcess/Unix/Lib/Attrs.html#method-i-flags">#flags &mdash; ChildProcess::Unix::Lib::Attrs</a></li>
+    
+      <li><a href="ChildProcess/Unix/Lib/Attrs.html#method-i-flags-3D">#flags= &mdash; ChildProcess::Unix::Lib::Attrs</a></li>
+    
+      <li><a href="ChildProcess/Unix/Lib/FileActions.html#method-i-free">#free &mdash; ChildProcess::Unix::Lib::FileActions</a></li>
+    
+      <li><a href="ChildProcess/Unix/Lib/Attrs.html#method-i-free">#free &mdash; ChildProcess::Unix::Lib::Attrs</a></li>
+    
+      <li><a href="ChildProcess/Tools/Generator.html#method-i-generate">#generate &mdash; ChildProcess::Tools::Generator</a></li>
+    
+      <li><a href="ChildProcess/AbstractIO.html#method-i-inherit-21">#inherit! &mdash; ChildProcess::AbstractIO</a></li>
+    
+      <li><a href="ChildProcess/AbstractProcess.html#method-i-io">#io &mdash; ChildProcess::AbstractProcess</a></li>
+    
+      <li><a href="ChildProcess/JRuby/Process.html#method-i-io">#io &mdash; ChildProcess::JRuby::Process</a></li>
+    
+      <li><a href="ChildProcess/Windows/Process.html#method-i-io">#io &mdash; ChildProcess::Windows::Process</a></li>
+    
+      <li><a href="ChildProcess/Unix/Process.html#method-i-io">#io &mdash; ChildProcess::Unix::Process</a></li>
+    
+      <li><a href="ChildProcess/Unix/Lib/Attrs.html#method-i-pgroup-3D">#pgroup= &mdash; ChildProcess::Unix::Lib::Attrs</a></li>
+    
+      <li><a href="ChildProcess/JRuby/Process.html#method-i-pid">#pid &mdash; ChildProcess::JRuby::Process</a></li>
+    
+      <li><a href="ChildProcess/AbstractProcess.html#method-i-pid">#pid &mdash; ChildProcess::AbstractProcess</a></li>
+    
+      <li><a href="ChildProcess/AbstractProcess.html#method-i-poll_for_exit">#poll_for_exit &mdash; ChildProcess::AbstractProcess</a></li>
+    
+      <li><a href="ChildProcess/Tools/Generator.html#method-i-result">#result &mdash; ChildProcess::Tools::Generator</a></li>
+    
+      <li><a href="ChildProcess/JRuby/Pump.html#method-i-run">#run &mdash; ChildProcess::JRuby::Pump</a></li>
+    
+      <li><a href="ChildProcess/Windows/Handle.html#method-i-send">#send &mdash; ChildProcess::Windows::Handle</a></li>
+    
+      <li><a href="ChildProcess/Windows/ProcessBuilder.html#method-i-start">#start &mdash; ChildProcess::Windows::ProcessBuilder</a></li>
+    
+      <li><a href="ChildProcess/AbstractProcess.html#method-i-start">#start &mdash; ChildProcess::AbstractProcess</a></li>
+    
+      <li><a href="ChildProcess/AbstractIO.html#method-i-stderr-3D">#stderr= &mdash; ChildProcess::AbstractIO</a></li>
+    
+      <li><a href="ChildProcess/AbstractIO.html#method-i-stdout-3D">#stdout= &mdash; ChildProcess::AbstractIO</a></li>
+    
+      <li><a href="ChildProcess/AbstractProcess.html#method-i-stop">#stop &mdash; ChildProcess::AbstractProcess</a></li>
+    
+      <li><a href="ChildProcess/JRuby/Process.html#method-i-stop">#stop &mdash; ChildProcess::JRuby::Process</a></li>
+    
+      <li><a href="ChildProcess/JRuby/Pump.html#method-i-stop">#stop &mdash; ChildProcess::JRuby::Pump</a></li>
+    
+      <li><a href="ChildProcess/Unix/Process.html#method-i-stop">#stop &mdash; ChildProcess::Unix::Process</a></li>
+    
+      <li><a href="ChildProcess/Windows/Process.html#method-i-stop">#stop &mdash; ChildProcess::Windows::Process</a></li>
+    
+      <li><a href="ChildProcess/Unix/Lib/FileActions.html#method-i-to_ptr">#to_ptr &mdash; ChildProcess::Unix::Lib::FileActions</a></li>
+    
+      <li><a href="ChildProcess/Unix/PosixSpawnProcess/Argv.html#method-i-to_ptr">#to_ptr &mdash; ChildProcess::Unix::PosixSpawnProcess::Argv</a></li>
+    
+      <li><a href="ChildProcess/Unix/PosixSpawnProcess/Envp.html#method-i-to_ptr">#to_ptr &mdash; ChildProcess::Unix::PosixSpawnProcess::Envp</a></li>
+    
+      <li><a href="ChildProcess/Unix/Lib/Attrs.html#method-i-to_ptr">#to_ptr &mdash; ChildProcess::Unix::Lib::Attrs</a></li>
+    
+      <li><a href="ChildProcess/AbstractProcess.html#method-i-wait">#wait &mdash; ChildProcess::AbstractProcess</a></li>
+    
+      <li><a href="ChildProcess/Unix/Process.html#method-i-wait">#wait &mdash; ChildProcess::Unix::Process</a></li>
+    
+      <li><a href="ChildProcess/Windows/Handle.html#method-i-wait">#wait &mdash; ChildProcess::Windows::Handle</a></li>
+    
+      <li><a href="ChildProcess/JRuby/Process.html#method-i-wait">#wait &mdash; ChildProcess::JRuby::Process</a></li>
+    
+      <li><a href="ChildProcess/Windows/Process.html#method-i-wait">#wait &mdash; ChildProcess::Windows::Process</a></li>
+    
+      <li><a href="ChildProcess/Tools/Generator.html#method-i-write">#write &mdash; ChildProcess::Tools::Generator</a></li>
+    
+  </ul>
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,2426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: RSpec::Core::ExampleGroup</title>
+
+  <link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../lib/rspec/core/example_group_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/rspec/core/example_group.rb">lib/rspec/core/example_group.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="../../Object.html">Object</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-alias_example_to">::alias_example_to</a></li>
+          
+          <li><a href="#method-c-alias_it_behaves_like_to">::alias_it_behaves_like_to</a></li>
+          
+          <li><a href="#method-c-all_apply-3F">::all_apply?</a></li>
+          
+          <li><a href="#method-c-any_apply-3F">::any_apply?</a></li>
+          
+          <li><a href="#method-c-assign_before_all_ivars">::assign_before_all_ivars</a></li>
+          
+          <li><a href="#method-c-before_all_ivars">::before_all_ivars</a></li>
+          
+          <li><a href="#method-c-children">::children</a></li>
+          
+          <li><a href="#method-c-context">::context</a></li>
+          
+          <li><a href="#method-c-declaration_line_numbers">::declaration_line_numbers</a></li>
+          
+          <li><a href="#method-c-define_example_method">::define_example_method</a></li>
+          
+          <li><a href="#method-c-define_nested_shared_group_method">::define_nested_shared_group_method</a></li>
+          
+          <li><a href="#method-c-delegate_to_metadata">::delegate_to_metadata</a></li>
+          
+          <li><a href="#method-c-descendant_filtered_examples">::descendant_filtered_examples</a></li>
+          
+          <li><a href="#method-c-descendants">::descendants</a></li>
+          
+          <li><a href="#method-c-describe">::describe</a></li>
+          
+          <li><a href="#method-c-describes">::describes</a></li>
+          
+          <li><a href="#method-c-description">::description</a></li>
+          
+          <li><a href="#method-c-display_name">::display_name</a></li>
+          
+          <li><a href="#method-c-ensure_example_groups_are_configured">::ensure_example_groups_are_configured</a></li>
+          
+          <li><a href="#method-c-examples">::examples</a></li>
+          
+          <li><a href="#method-c-fail_fast-3F">::fail_fast?</a></li>
+          
+          <li><a href="#method-c-fail_filtered_examples">::fail_filtered_examples</a></li>
+          
+          <li><a href="#method-c-filtered_examples">::filtered_examples</a></li>
+          
+          <li><a href="#method-c-find_and_eval_shared">::find_and_eval_shared</a></li>
+          
+          <li><a href="#method-c-focused">::focused</a></li>
+          
+          <li><a href="#method-c-include_context">::include_context</a></li>
+          
+          <li><a href="#method-c-include_examples">::include_examples</a></li>
+          
+          <li><a href="#method-c-metadata">::metadata</a></li>
+          
+          <li><a href="#method-c-parent_groups">::parent_groups</a></li>
+          
+          <li><a href="#method-c-register">::register</a></li>
+          
+          <li><a href="#method-c-run">::run</a></li>
+          
+          <li><a href="#method-c-run_after_all_hooks">::run_after_all_hooks</a></li>
+          
+          <li><a href="#method-c-run_after_each_hooks">::run_after_each_hooks</a></li>
+          
+          <li><a href="#method-c-run_around_each_hooks">::run_around_each_hooks</a></li>
+          
+          <li><a href="#method-c-run_before_all_hooks">::run_before_all_hooks</a></li>
+          
+          <li><a href="#method-c-run_before_each_hooks">::run_before_each_hooks</a></li>
+          
+          <li><a href="#method-c-run_examples">::run_examples</a></li>
+          
+          <li><a href="#method-c-set_it_up">::set_it_up</a></li>
+          
+          <li><a href="#method-c-set_ivars">::set_ivars</a></li>
+          
+          <li><a href="#method-c-store_before_all_ivars">::store_before_all_ivars</a></li>
+          
+          <li><a href="#method-c-subclass">::subclass</a></li>
+          
+          <li><a href="#method-c-superclass_metadata">::superclass_metadata</a></li>
+          
+          <li><a href="#method-c-top_level-3F">::top_level?</a></li>
+          
+          <li><a href="#method-c-top_level_description">::top_level_description</a></li>
+          
+          <li><a href="#method-c-warn_unexpected_args">::warn_unexpected_args</a></li>
+          
+          <li><a href="#method-c-world">::world</a></li>
+          
+          <li><a href="#method-i-described_class">#described_class</a></li>
+          
+          <li><a href="#method-i-example">#example</a></li>
+          
+          <li><a href="#method-i-example-3D">#example=</a></li>
+          
+          <li><a href="#method-i-instance_eval_with_rescue">#instance_eval_with_rescue</a></li>
+          
+          <li><a href="#method-i-running_example">#running_example</a></li>
+          
+          <li><a href="#method-i-warn_deprecation_of_example_accessor">#warn_deprecation_of_example_accessor</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Included Modules -->
+      <div id="includes-section" class="section">
+        <h3 class="section-header">Included Modules</h3>
+        <ul class="link-list">
+        
+        
+          <li><a class="include" href="MemoizedHelpers.html">RSpec::Core::MemoizedHelpers</a></li>
+        
+        
+        
+          <li><a class="include" href="Extensions/InstanceEvalWithArgs.html">RSpec::Core::Extensions::InstanceEvalWithArgs</a></li>
+        
+        
+        
+          <li><a class="include" href="Pending.html">RSpec::Core::Pending</a></li>
+        
+        
+        
+          <li><a class="include" href="SharedExampleGroup.html">RSpec::Core::SharedExampleGroup</a></li>
+        
+        
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../RSpec.html">RSpec</a></li>
+        
+          <li><a href="../../RSpec/CallerFilter.html">RSpec::CallerFilter</a></li>
+        
+          <li><a href="../../RSpec/Core.html">RSpec::Core</a></li>
+        
+          <li><a href="../../RSpec/Core/BacktraceCleaner.html">RSpec::Core::BacktraceCleaner</a></li>
+        
+          <li><a href="../../RSpec/Core/BacktraceFormatter.html">RSpec::Core::BacktraceFormatter</a></li>
+        
+          <li><a href="../../RSpec/Core/CommandLine.html">RSpec::Core::CommandLine</a></li>
+        
+          <li><a href="../../RSpec/Core/Configuration.html">RSpec::Core::Configuration</a></li>
+        
+          <li><a href="../../RSpec/Core/Configuration/ExposeCurrentExample.html">RSpec::Core::Configuration::ExposeCurrentExample</a></li>
+        
+          <li><a href="../../RSpec/Core/Configuration/MustBeConfiguredBeforeExampleGroupsError.html">RSpec::Core::Configuration::MustBeConfiguredBeforeExampleGroupsError</a></li>
+        
+          <li><a href="../../RSpec/Core/ConfigurationOptions.html">RSpec::Core::ConfigurationOptions</a></li>
+        
+          <li><a href="../../RSpec/Core/ConstMissing.html">RSpec::Core::ConstMissing</a></li>
+        
+          <li><a href="../../RSpec/Core/DRbCommandLine.html">RSpec::Core::DRbCommandLine</a></li>
+        
+          <li><a href="../../RSpec/Core/DSL.html">RSpec::Core::DSL</a></li>
+        
+          <li><a href="../../RSpec/Core/DeprecatedMutableArrayProxy.html">RSpec::Core::DeprecatedMutableArrayProxy</a></li>
+        
+          <li><a href="../../RSpec/Core/Deprecation.html">RSpec::Core::Deprecation</a></li>
+        
+          <li><a href="../../RSpec/Core/DrbOptions.html">RSpec::Core::DrbOptions</a></li>
+        
+          <li><a href="../../RSpec/Core/Example.html">RSpec::Core::Example</a></li>
+        
+          <li><a href="../../RSpec/Core/Example/Procsy.html">RSpec::Core::Example::Procsy</a></li>
+        
+          <li><a href="../../RSpec/Core/ExampleGroup.html">RSpec::Core::ExampleGroup</a></li>
+        
+          <li><a href="../../RSpec/Core/Extensions.html">RSpec::Core::Extensions</a></li>
+        
+          <li><a href="../../RSpec/Core/Extensions/InstanceEvalWithArgs.html">RSpec::Core::Extensions::InstanceEvalWithArgs</a></li>
+        
+          <li><a href="../../RSpec/Core/Extensions/ModuleEvalWithArgs.html">RSpec::Core::Extensions::ModuleEvalWithArgs</a></li>
+        
+          <li><a href="../../RSpec/Core/Extensions/Ordered.html">RSpec::Core::Extensions::Ordered</a></li>
+        
+          <li><a href="../../RSpec/Core/Extensions/Ordered/ExampleGroups.html">RSpec::Core::Extensions::Ordered::ExampleGroups</a></li>
+        
+          <li><a href="../../RSpec/Core/Extensions/Ordered/Examples.html">RSpec::Core::Extensions::Ordered::Examples</a></li>
+        
+          <li><a href="../../RSpec/Core/FilterManager.html">RSpec::Core::FilterManager</a></li>
+        
+          <li><a href="../../RSpec/Core/FilterManager/BackwardCompatibility.html">RSpec::Core::FilterManager::BackwardCompatibility</a></li>
+        
+          <li><a href="../../RSpec/Core/FilterManager/Describable.html">RSpec::Core::FilterManager::Describable</a></li>
+        
+          <li><a href="../../RSpec/Core/Formatters.html">RSpec::Core::Formatters</a></li>
+        
+          <li><a href="../../RSpec/Core/Formatters/BaseFormatter.html">RSpec::Core::Formatters::BaseFormatter</a></li>
+        
+          <li><a href="../../RSpec/Core/Formatters/BaseTextFormatter.html">RSpec::Core::Formatters::BaseTextFormatter</a></li>
+        
+          <li><a href="../../RSpec/Core/Formatters/ConsoleCodes.html">RSpec::Core::Formatters::ConsoleCodes</a></li>
+        
+          <li><a href="../../RSpec/Core/Formatters/DeprecationFormatter.html">RSpec::Core::Formatters::DeprecationFormatter</a></li>
+        
+          <li><a href="../../RSpec/Core/Formatters/DeprecationFormatter/DelayedPrinter.html">RSpec::Core::Formatters::DeprecationFormatter::DelayedPrinter</a></li>
+        
+          <li><a href="../../RSpec/Core/Formatters/DeprecationFormatter/FileStream.html">RSpec::Core::Formatters::DeprecationFormatter::FileStream</a></li>
+        
+          <li><a href="../../RSpec/Core/Formatters/DeprecationFormatter/ImmediatePrinter.html">RSpec::Core::Formatters::DeprecationFormatter::ImmediatePrinter</a></li>
+        
+          <li><a href="../../RSpec/Core/Formatters/DeprecationFormatter/RaiseErrorStream.html">RSpec::Core::Formatters::DeprecationFormatter::RaiseErrorStream</a></li>
+        
+          <li><a href="../../RSpec/Core/Formatters/DocumentationFormatter.html">RSpec::Core::Formatters::DocumentationFormatter</a></li>
+        
+          <li><a href="../../RSpec/Core/Formatters/Helpers.html">RSpec::Core::Formatters::Helpers</a></li>
+        
+          <li><a href="../../RSpec/Core/Formatters/HtmlFormatter.html">RSpec::Core::Formatters::HtmlFormatter</a></li>
+        
+          <li><a href="../../RSpec/Core/Formatters/HtmlPrinter.html">RSpec::Core::Formatters::HtmlPrinter</a></li>
+        
+          <li><a href="../../RSpec/Core/Formatters/JsonFormatter.html">RSpec::Core::Formatters::JsonFormatter</a></li>
+        
+          <li><a href="../../RSpec/Core/Formatters/Loader.html">RSpec::Core::Formatters::Loader</a></li>
+        
+          <li><a href="../../RSpec/Core/Formatters/ProgressFormatter.html">RSpec::Core::Formatters::ProgressFormatter</a></li>
+        
+          <li><a href="../../RSpec/Core/Formatters/SnippetExtractor.html">RSpec::Core::Formatters::SnippetExtractor</a></li>
+        
+          <li><a href="../../RSpec/Core/Formatters/SnippetExtractor/NullConverter.html">RSpec::Core::Formatters::SnippetExtractor::NullConverter</a></li>
+        
+          <li><a href="../../RSpec/Core/Formatters/TextMateFormatter.html">RSpec::Core::Formatters::TextMateFormatter</a></li>
+        
+          <li><a href="../../RSpec/Core/Hooks.html">RSpec::Core::Hooks</a></li>
+        
+          <li><a href="../../RSpec/Core/Hooks/AfterAllHook.html">RSpec::Core::Hooks::AfterAllHook</a></li>
+        
+          <li><a href="../../RSpec/Core/Hooks/AfterHook.html">RSpec::Core::Hooks::AfterHook</a></li>
+        
+          <li><a href="../../RSpec/Core/Hooks/AroundHook.html">RSpec::Core::Hooks::AroundHook</a></li>
+        
+          <li><a href="../../RSpec/Core/Hooks/AroundHookCollection.html">RSpec::Core::Hooks::AroundHookCollection</a></li>
+        
+          <li><a href="../../RSpec/Core/Hooks/BeforeHook.html">RSpec::Core::Hooks::BeforeHook</a></li>
+        
+          <li><a href="../../RSpec/Core/Hooks/GroupHookCollection.html">RSpec::Core::Hooks::GroupHookCollection</a></li>
+        
+          <li><a href="../../RSpec/Core/Hooks/Hook.html">RSpec::Core::Hooks::Hook</a></li>
+        
+          <li><a href="../../RSpec/Core/Hooks/HookCollection.html">RSpec::Core::Hooks::HookCollection</a></li>
+        
+          <li><a href="../../RSpec/Core/Hooks/HookCollectionAliases.html">RSpec::Core::Hooks::HookCollectionAliases</a></li>
+        
+          <li><a href="../../RSpec/Core/Hooks/RegistersGlobals.html">RSpec::Core::Hooks::RegistersGlobals</a></li>
+        
+          <li><a href="../../RSpec/Core/MemoizedHelpers.html">RSpec::Core::MemoizedHelpers</a></li>
+        
+          <li><a href="../../RSpec/Core/MemoizedHelpers/AllHookMemoizedHash.html">RSpec::Core::MemoizedHelpers::AllHookMemoizedHash</a></li>
+        
+          <li><a href="../../RSpec/Core/MemoizedHelpers/AllHookMemoizedHash/After.html">RSpec::Core::MemoizedHelpers::AllHookMemoizedHash::After</a></li>
+        
+          <li><a href="../../RSpec/Core/MemoizedHelpers/AllHookMemoizedHash/Before.html">RSpec::Core::MemoizedHelpers::AllHookMemoizedHash::Before</a></li>
+        
+          <li><a href="../../RSpec/Core/MemoizedHelpers/ClassMethods.html">RSpec::Core::MemoizedHelpers::ClassMethods</a></li>
+        
+          <li><a href="../../RSpec/Core/Metadata.html">RSpec::Core::Metadata</a></li>
+        
+          <li><a href="../../RSpec/Core/Metadata/ExampleMetadataHash.html">RSpec::Core::Metadata::ExampleMetadataHash</a></li>
+        
+          <li><a href="../../RSpec/Core/Metadata/GroupMetadataHash.html">RSpec::Core::Metadata::GroupMetadataHash</a></li>
+        
+          <li><a href="../../RSpec/Core/Metadata/MetadataHash.html">RSpec::Core::Metadata::MetadataHash</a></li>
+        
+          <li><a href="../../RSpec/Core/MetadataHashBuilder.html">RSpec::Core::MetadataHashBuilder</a></li>
+        
+          <li><a href="../../RSpec/Core/MetadataHashBuilder/Common.html">RSpec::Core::MetadataHashBuilder::Common</a></li>
+        
+          <li><a href="../../RSpec/Core/MetadataHashBuilder/WithConfigWarning.html">RSpec::Core::MetadataHashBuilder::WithConfigWarning</a></li>
+        
+          <li><a href="../../RSpec/Core/MetadataHashBuilder/WithDeprecationWarning.html">RSpec::Core::MetadataHashBuilder::WithDeprecationWarning</a></li>
+        
+          <li><a href="../../RSpec/Core/MinitestAssertionsAdapter.html">RSpec::Core::MinitestAssertionsAdapter</a></li>
+        
+          <li><a href="../../RSpec/Core/MockFrameworkAdapter.html">RSpec::Core::MockFrameworkAdapter</a></li>
+        
+          <li><a href="../../RSpec/Core/Parser.html">RSpec::Core::Parser</a></li>
+        
+          <li><a href="../../RSpec/Core/Pending.html">RSpec::Core::Pending</a></li>
+        
+          <li><a href="../../RSpec/Core/Pending/PendingExampleFixedError.html">RSpec::Core::Pending::PendingExampleFixedError</a></li>
+        
+          <li><a href="../../RSpec/Core/Pending/SkipDeclaredInExample.html">RSpec::Core::Pending::SkipDeclaredInExample</a></li>
+        
+          <li><a href="../../RSpec/Core/ProjectInitializer.html">RSpec::Core::ProjectInitializer</a></li>
+        
+          <li><a href="../../RSpec/Core/RakeTask.html">RSpec::Core::RakeTask</a></li>
+        
+          <li><a href="../../RSpec/Core/Reporter.html">RSpec::Core::Reporter</a></li>
+        
+          <li><a href="../../RSpec/Core/RubyProject.html">RSpec::Core::RubyProject</a></li>
+        
+          <li><a href="../../RSpec/Core/Runner.html">RSpec::Core::Runner</a></li>
+        
+          <li><a href="../../RSpec/Core/SharedContext.html">RSpec::Core::SharedContext</a></li>
+        
+          <li><a href="../../RSpec/Core/SharedExampleGroup.html">RSpec::Core::SharedExampleGroup</a></li>
+        
+          <li><a href="../../RSpec/Core/SharedExampleGroup/Collection.html">RSpec::Core::SharedExampleGroup::Collection</a></li>
+        
+          <li><a href="../../RSpec/Core/SharedExampleGroup/Registry.html">RSpec::Core::SharedExampleGroup::Registry</a></li>
+        
+          <li><a href="../../RSpec/Core/SharedExampleGroup/TopLevelDSL.html">RSpec::Core::SharedExampleGroup::TopLevelDSL</a></li>
+        
+          <li><a href="../../RSpec/Core/TestUnitAssertionsAdapter.html">RSpec::Core::TestUnitAssertionsAdapter</a></li>
+        
+          <li><a href="../../RSpec/Core/Time.html">RSpec::Core::Time</a></li>
+        
+          <li><a href="../../RSpec/Core/Version.html">RSpec::Core::Version</a></li>
+        
+          <li><a href="../../RSpec/Core/World.html">RSpec::Core::World</a></li>
+        
+          <li><a href="../../RSpec/Rake.html">RSpec::Rake</a></li>
+        
+          <li><a href="../../RSpec/Runner.html">RSpec::Runner</a></li>
+        
+          <li><a href="../../Autotest.html">Autotest</a></li>
+        
+          <li><a href="../../Autotest/Rspec2.html">Autotest::Rspec2</a></li>
+        
+          <li><a href="../../Kernel.html">Kernel</a></li>
+        
+          <li><a href="../../Object.html">Object</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">RSpec::Core::ExampleGroup</h1>
+
+    <div id="description" class="description">
+      
+<p><a href="ExampleGroup.html">ExampleGroup</a> and {Example} are the main
+structural elements of rspec-core.  Consider this example:</p>
+
+<pre>describe Thing do
+  it &quot;does something&quot; do
+  end
+end</pre>
+
+<p>The object returned by `describe Thing` is a subclass of <a
+href="ExampleGroup.html">ExampleGroup</a>. The object returned by `it "does
+something"` is an instance of <a href="Example.html">Example</a>, which
+serves as a wrapper for an instance of the <a
+href="ExampleGroup.html">ExampleGroup</a> in which it is declared.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="DescriptionBehaviorChange">DescriptionBehaviorChange</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="alias_example_to-method" class="method-detail ">
+          <a name="method-c-alias_example_to"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">alias_example_to</span><span
+              class="method-args">(name, extra={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Works like `alias_method :name, :example` with the added benefit of
+assigning default metadata to the generated example.</p>
+
+<p>@note Use with caution. This extends the language used in your</p>
+
+<pre>specs, but does not add any additional documentation.  We use this
+in rspec to define methods like `focus` and `xit`, but we also add
+docs for those methods.</pre>
+            
+
+            
+            <div class="method-source-code" id="alias_example_to-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 172</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">alias_example_to</span> <span class="ruby-identifier">name</span>, <span class="ruby-identifier">extra</span>={}
+  <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">deprecate</span>(<span class="ruby-string">&quot;`RSpec::Core::ExampleGroup.alias_example_to`&quot;</span>,
+                  <span class="ruby-value">:replacement</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;`RSpec::Core::Configuration#alias_example_to`&quot;</span>)
+  <span class="ruby-identifier">define_example_method</span> <span class="ruby-identifier">name</span>, <span class="ruby-identifier">extra</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- alias_example_to-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- alias_example_to-method -->
+
+      
+        <div id="alias_it_behaves_like_to-method" class="method-detail ">
+          <a name="method-c-alias_it_behaves_like_to"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">alias_it_behaves_like_to</span><span
+              class="method-args">(name, *args, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Works like `alias_method :name, :it_behaves_like` with the added benefit of
+assigning default metadata to the generated example.</p>
+
+<p>@note Use with caution. This extends the language used in your</p>
+
+<pre>specs, but does not add any additional documentation.  We use this
+in rspec to define `it_should_behave_like` (for backward
+compatibility), but we also add docs for that method.</pre>
+            
+
+            
+            <div class="method-source-code" id="alias_it_behaves_like_to-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 208</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">alias_it_behaves_like_to</span> <span class="ruby-identifier">name</span>, *<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">block</span>
+  <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">deprecate</span>(<span class="ruby-string">&quot;`RSpec::Core::ExampleGroup.alias_it_behaves_like_to`&quot;</span>,
+                  <span class="ruby-value">:replacement</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;`RSpec::Core::Configuration#alias_it_behaves_like_to`&quot;</span>)
+  <span class="ruby-identifier">define_nested_shared_group_method</span> <span class="ruby-identifier">name</span>, *<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">block</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- alias_it_behaves_like_to-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- alias_it_behaves_like_to-method -->
+
+      
+        <div id="all_apply-3F-method" class="method-detail ">
+          <a name="method-c-all_apply-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">all_apply?</span><span
+              class="method-args">(filters)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="all_apply-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 543</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">all_apply?</span>(<span class="ruby-identifier">filters</span>)
+  <span class="ruby-identifier">metadata</span>.<span class="ruby-identifier">all_apply?</span>(<span class="ruby-identifier">filters</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- all_apply-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- all_apply-3F-method -->
+
+      
+        <div id="any_apply-3F-method" class="method-detail ">
+          <a name="method-c-any_apply-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">any_apply?</span><span
+              class="method-args">(filters)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="any_apply-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 538</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">any_apply?</span>(<span class="ruby-identifier">filters</span>)
+  <span class="ruby-identifier">metadata</span>.<span class="ruby-identifier">any_apply?</span>(<span class="ruby-identifier">filters</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- any_apply-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- any_apply-3F-method -->
+
+      
+        <div id="assign_before_all_ivars-method" class="method-detail ">
+          <a name="method-c-assign_before_all_ivars"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">assign_before_all_ivars</span><span
+              class="method-args">(ivars, example_group_instance)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="assign_before_all_ivars-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 442</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">assign_before_all_ivars</span>(<span class="ruby-identifier">ivars</span>, <span class="ruby-identifier">example_group_instance</span>)
+  <span class="ruby-identifier">ivars</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">ivar</span>, <span class="ruby-identifier">val</span><span class="ruby-operator">|</span> <span class="ruby-identifier">example_group_instance</span>.<span class="ruby-identifier">instance_variable_set</span>(<span class="ruby-identifier">ivar</span>, <span class="ruby-identifier">val</span>) }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- assign_before_all_ivars-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- assign_before_all_ivars-method -->
+
+      
+        <div id="before_all_ivars-method" class="method-detail ">
+          <a name="method-c-before_all_ivars"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">before_all_ivars</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="before_all_ivars-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 428</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">before_all_ivars</span>
+  <span class="ruby-ivar">@before_all_ivars</span> <span class="ruby-operator">||=</span> {}
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- before_all_ivars-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- before_all_ivars-method -->
+
+      
+        <div id="children-method" class="method-detail ">
+          <a name="method-c-children"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">children</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="children-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 380</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">children</span>
+  <span class="ruby-ivar">@children</span> <span class="ruby-operator">||=</span> [].<span class="ruby-identifier">extend</span>(<span class="ruby-constant">Extensions</span><span class="ruby-operator">::</span><span class="ruby-constant">Ordered</span><span class="ruby-operator">::</span><span class="ruby-constant">ExampleGroups</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- children-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- children-method -->
+
+      
+        <div id="context-method" class="method-detail method-alias">
+          <a name="method-c-context"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">context</span><span
+              class="method-args">(*args, &example_group_block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="ExampleGroup.html#method-c-describe">describe</a>
+          </div>
+          
+        </div><!-- context-method -->
+
+      
+        <div id="declaration_line_numbers-method" class="method-detail ">
+          <a name="method-c-declaration_line_numbers"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">declaration_line_numbers</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="declaration_line_numbers-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 548</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">declaration_line_numbers</span>
+  <span class="ruby-ivar">@declaration_line_numbers</span> <span class="ruby-operator">||=</span> [<span class="ruby-identifier">metadata</span>[<span class="ruby-value">:example_group</span>][<span class="ruby-value">:line_number</span>]] <span class="ruby-operator">+</span>
+    <span class="ruby-identifier">examples</span>.<span class="ruby-identifier">collect</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">metadata</span>[<span class="ruby-value">:line_number</span>]} <span class="ruby-operator">+</span>
+    <span class="ruby-identifier">children</span>.<span class="ruby-identifier">inject</span>([]) {<span class="ruby-operator">|</span><span class="ruby-identifier">l</span>,<span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-identifier">l</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">declaration_line_numbers</span>}
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- declaration_line_numbers-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- declaration_line_numbers-method -->
+
+      
+        <div id="define_example_method-method" class="method-detail ">
+          <a name="method-c-define_example_method"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">define_example_method</span><span
+              class="method-args">(name, extra_options={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private @macro [attach] <a
+href="ExampleGroup.html#method-c-define_example_method">define_example_method</a></p>
+
+<pre>@param [String] name
+@param [Hash] extra_options
+@param [Block] implementation
+@yield [Example] the example object</pre>
+            
+
+            
+            <div class="method-source-code" id="define_example_method-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 74</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">define_example_method</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">extra_options</span>={})
+  <span class="ruby-identifier">module_eval</span>(<span class="ruby-string">          def self.#{name}(desc=nil, *args, &amp;block)            if #{name.inspect} == :pending              RSpec.warn_deprecation(&lt;&lt;-EOS.gsub(/^\s+\\|/, ''))                |The semantics of `RSpec::Core::ExampleGroup.pending` are changing in RSpec 3.                |In RSpec 2.x, it caused the example to be skipped. In RSpec 3, the example will                |still be run but is expected to fail, and will be marked as a failure (rather                |than as pending) if the example passes, just like how `pending` with a block                |from within an example already works.                |                |To keep the same skip semantics, change `pending` to `skip`.  Otherwise, if you                |want the new RSpec 3 behavior, you can safely ignore this warning and continue                |to upgrade to RSpec 3 without addressing it.                |                |Called from \#{CallerFilter.first_non_rspec_line}.                |              EOS            end            options = build_metadata_hash_from(args)            options.update(:pending =&gt; RSpec::Core::Pending::NOT_YET_IMPLEMENTED) unless block            # Backport from RSpec 3 to assist with upgrading            options.update(:pending =&gt; options[:skip]) if options[:skip]            options.update(#{extra_options.inspect})            examples &lt;&lt; RSpec::Core::Example.new(self, desc, options, block)            examples.last          end</span>, <span class="ruby-keyword">__FILE__</span>, <span class="ruby-keyword">__LINE__</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- define_example_method-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- define_example_method-method -->
+
+      
+        <div id="define_nested_shared_group_method-method" class="method-detail ">
+          <a name="method-c-define_nested_shared_group_method"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">define_nested_shared_group_method</span><span
+              class="method-args">(new_name, report_label=nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private @macro [attach] <a
+href="ExampleGroup.html#method-c-define_nested_shared_group_method">define_nested_shared_group_method</a></p>
+
+<pre>@see SharedExampleGroup</pre>
+            
+
+            
+            <div class="method-source-code" id="define_nested_shared_group_method-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 182</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">define_nested_shared_group_method</span>(<span class="ruby-identifier">new_name</span>, <span class="ruby-identifier">report_label</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">module_eval</span>(<span class="ruby-string">          def self.#{new_name}(name, *args, &amp;customization_block)            group = describe(&quot;#{report_label || &quot;it should behave like&quot;} \#{name}&quot;) do              find_and_eval_shared(&quot;examples&quot;, name, *args, &amp;customization_block)            end            group.metadata[:shared_group_name] = name            group          end</span>, <span class="ruby-keyword">__FILE__</span>, <span class="ruby-keyword">__LINE__</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- define_nested_shared_group_method-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- define_nested_shared_group_method-method -->
+
+      
+        <div id="delegate_to_metadata-method" class="method-detail ">
+          <a name="method-c-delegate_to_metadata"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">delegate_to_metadata</span><span
+              class="method-args">(*names)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="delegate_to_metadata-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">delegate_to_metadata</span>(*<span class="ruby-identifier">names</span>)
+  <span class="ruby-identifier">names</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">define_method</span> <span class="ruby-identifier">name</span> <span class="ruby-keyword">do</span>
+      <span class="ruby-identifier">metadata</span>[<span class="ruby-value">:example_group</span>][<span class="ruby-identifier">name</span>]
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- delegate_to_metadata-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- delegate_to_metadata-method -->
+
+      
+        <div id="descendant_filtered_examples-method" class="method-detail ">
+          <a name="method-c-descendant_filtered_examples"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">descendant_filtered_examples</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="descendant_filtered_examples-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 286</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">descendant_filtered_examples</span>
+  <span class="ruby-ivar">@descendant_filtered_examples</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">filtered_examples</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">children</span>.<span class="ruby-identifier">inject</span>([]){<span class="ruby-operator">|</span><span class="ruby-identifier">l</span>,<span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-identifier">l</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">descendant_filtered_examples</span>}
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- descendant_filtered_examples-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- descendant_filtered_examples-method -->
+
+      
+        <div id="descendants-method" class="method-detail ">
+          <a name="method-c-descendants"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">descendants</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="descendants-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 385</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">descendants</span>
+  <span class="ruby-ivar">@_descendants</span> <span class="ruby-operator">||=</span> [<span class="ruby-keyword">self</span>] <span class="ruby-operator">+</span> <span class="ruby-identifier">children</span>.<span class="ruby-identifier">inject</span>([]) {<span class="ruby-operator">|</span><span class="ruby-identifier">list</span>, <span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-identifier">list</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">descendants</span>}
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- descendants-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- descendants-method -->
+
+      
+        <div id="describe-method" class="method-detail ">
+          <a name="method-c-describe"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">describe</span><span
+              class="method-args">(*args, &example_group_block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Generates a subclass of this example group which inherits everything except
+the examples themselves.</p>
+
+<p>## Examples</p>
+
+<pre>describe &quot;something&quot; do # &lt;&lt; This describe method is defined in
+                        # &lt;&lt; RSpec::Core::DSL, included in the
+                        # &lt;&lt; global namespace
+  before do
+    do_something_before
+  end
+
+  let(:thing) { Thing.new }
+
+  describe &quot;attribute (of something)&quot; do
+    # examples in the group get the before hook
+    # declared above, and can access `thing`
+  end
+end</pre>
+
+<p>@see <a href="DSL.html#method-i-describe">DSL#describe</a></p>
+            
+
+            
+            <div class="method-source-code" id="describe-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 323</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">describe</span>(*<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">example_group_block</span>)
+  <span class="ruby-ivar">@_subclass_count</span> <span class="ruby-operator">||=</span> <span class="ruby-value">0</span>
+  <span class="ruby-ivar">@_subclass_count</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Symbol</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">first</span> <span class="ruby-operator">||</span> <span class="ruby-constant">Hash</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">first</span>
+    <span class="ruby-identifier">description_arg_behavior_changing_in_rspec_3</span> = <span class="ruby-constant">DescriptionBehaviorChange</span>.<span class="ruby-identifier">new</span>(
+      <span class="ruby-identifier">args</span>.<span class="ruby-identifier">first</span>, <span class="ruby-constant">CallerFilter</span>.<span class="ruby-identifier">first_non_rspec_line</span>
+    )
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">args</span> <span class="ruby-operator">&lt;&lt;</span> {} <span class="ruby-keyword">unless</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>)
+  <span class="ruby-identifier">args</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">update</span>(
+    <span class="ruby-value">:example_group_block</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">example_group_block</span>,
+    <span class="ruby-value">:description_arg_behavior_changing_in_rspec_3</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">description_arg_behavior_changing_in_rspec_3</span>
+  )
+
+  <span class="ruby-comment"># TODO 2010-05-05: Because we don't know if const_set is thread-safe</span>
+  <span class="ruby-identifier">child</span> = <span class="ruby-identifier">const_set</span>(
+    <span class="ruby-node">&quot;Nested_#{@_subclass_count}&quot;</span>,
+    <span class="ruby-identifier">subclass</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">example_group_block</span>)
+  )
+  <span class="ruby-identifier">children</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">child</span>
+  <span class="ruby-identifier">child</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- describe-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="ExampleGroup.html#method-c-context">context</a>
+          </div>
+          
+
+          
+        </div><!-- describe-method -->
+
+      
+        <div id="describes-method" class="method-detail ">
+          <a name="method-c-describes"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">describes</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="describes-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 61</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">describes</span>
+  <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">deprecate</span>(<span class="ruby-string">'`RSpec::Core::ExampleGroup.describes`'</span>,
+                  <span class="ruby-value">:replacement</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;`RSpec::Core::ExampleGroup.described_class`&quot;</span>)
+  <span class="ruby-identifier">described_class</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- describes-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- describes-method -->
+
+      
+        <div id="description-method" class="method-detail ">
+          <a name="method-c-description"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">description</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="description-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">description</span>
+  <span class="ruby-identifier">description</span> = <span class="ruby-identifier">metadata</span>[<span class="ruby-value">:example_group</span>][<span class="ruby-value">:description</span>]
+  <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">configuration</span>.<span class="ruby-identifier">format_docstrings_block</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">description</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- description-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- description-method -->
+
+      
+        <div id="display_name-method" class="method-detail ">
+          <a name="method-c-display_name"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">display_name</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="display_name-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">display_name</span>
+  <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">deprecate</span>(<span class="ruby-string">'`RSpec::Core::ExampleGroup.display_name`'</span>,
+                  <span class="ruby-value">:replacement</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;`RSpec::Core::ExampleGroup.description`&quot;</span>)
+  <span class="ruby-identifier">description</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- display_name-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- display_name-method -->
+
+      
+        <div id="ensure_example_groups_are_configured-method" class="method-detail ">
+          <a name="method-c-ensure_example_groups_are_configured"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ensure_example_groups_are_configured</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="ensure_example_groups_are_configured-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 400</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">ensure_example_groups_are_configured</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-keyword">defined?</span>(<span class="ruby-identifier">@@example_groups_configured</span>)
+    <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">configuration</span>.<span class="ruby-identifier">configure_mock_framework</span>
+    <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">configuration</span>.<span class="ruby-identifier">configure_expectation_framework</span>
+    <span class="ruby-identifier">@@example_groups_configured</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- ensure_example_groups_are_configured-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- ensure_example_groups_are_configured-method -->
+
+      
+        <div id="examples-method" class="method-detail ">
+          <a name="method-c-examples"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">examples</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="examples-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 276</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">examples</span>
+  <span class="ruby-ivar">@examples</span> <span class="ruby-operator">||=</span> []
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- examples-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- examples-method -->
+
+      
+        <div id="fail_fast-3F-method" class="method-detail ">
+          <a name="method-c-fail_fast-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">fail_fast?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="fail_fast-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 533</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">fail_fast?</span>
+  <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">configuration</span>.<span class="ruby-identifier">fail_fast?</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- fail_fast-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- fail_fast-3F-method -->
+
+      
+        <div id="fail_filtered_examples-method" class="method-detail ">
+          <a name="method-c-fail_filtered_examples"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">fail_filtered_examples</span><span
+              class="method-args">(exception, reporter)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="fail_filtered_examples-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 521</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">fail_filtered_examples</span>(<span class="ruby-identifier">exception</span>, <span class="ruby-identifier">reporter</span>)
+  <span class="ruby-identifier">filtered_examples</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">example</span><span class="ruby-operator">|</span> <span class="ruby-identifier">example</span>.<span class="ruby-identifier">fail_with_exception</span>(<span class="ruby-identifier">reporter</span>, <span class="ruby-identifier">exception</span>) }
+
+  <span class="ruby-identifier">children</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">child</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">reporter</span>.<span class="ruby-identifier">example_group_started</span>(<span class="ruby-identifier">child</span>)
+    <span class="ruby-identifier">child</span>.<span class="ruby-identifier">fail_filtered_examples</span>(<span class="ruby-identifier">exception</span>, <span class="ruby-identifier">reporter</span>)
+    <span class="ruby-identifier">reporter</span>.<span class="ruby-identifier">example_group_finished</span>(<span class="ruby-identifier">child</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- fail_filtered_examples-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- fail_filtered_examples-method -->
+
+      
+        <div id="filtered_examples-method" class="method-detail ">
+          <a name="method-c-filtered_examples"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">filtered_examples</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="filtered_examples-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 281</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">filtered_examples</span>
+  <span class="ruby-identifier">world</span>.<span class="ruby-identifier">filtered_examples</span>[<span class="ruby-keyword">self</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- filtered_examples-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- filtered_examples-method -->
+
+      
+        <div id="find_and_eval_shared-method" class="method-detail ">
+          <a name="method-c-find_and_eval_shared"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">find_and_eval_shared</span><span
+              class="method-args">(label, name, *args, &customization_block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="find_and_eval_shared-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 265</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">find_and_eval_shared</span>(<span class="ruby-identifier">label</span>, <span class="ruby-identifier">name</span>, *<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">customization_block</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;Could not find shared #{label} #{name.inspect}&quot;</span> <span class="ruby-keyword">unless</span>
+    <span class="ruby-identifier">shared_block</span> = <span class="ruby-identifier">shared_example_groups</span>[<span class="ruby-identifier">name</span>]
+
+  <span class="ruby-identifier">warn_unexpected_args</span>(<span class="ruby-identifier">label</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">args</span>, <span class="ruby-identifier">shared_block</span>)
+
+  <span class="ruby-identifier">module_eval_with_args</span>(*<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">shared_block</span>)
+  <span class="ruby-identifier">module_eval</span>(&amp;<span class="ruby-identifier">customization_block</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">customization_block</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- find_and_eval_shared-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- find_and_eval_shared-method -->
+
+      
+        <div id="focused-method" class="method-detail ">
+          <a name="method-c-focused"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">focused</span><span
+              class="method-args">(desc=nil, *args, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Shortcut to define an example with `:focus` =&gt; true @see example</p>
+            
+
+            
+            <div class="method-source-code" id="focused-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 154</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">focused</span>(<span class="ruby-identifier">desc</span>=<span class="ruby-keyword">nil</span>, *<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">deprecate</span>(<span class="ruby-string">&quot;`RSpec::Core::ExampleGroup.focused`&quot;</span>,
+                  <span class="ruby-value">:replacement</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;`RSpec::Core::ExampleGroup.focus`&quot;</span>)
+
+  <span class="ruby-identifier">metadata</span> = <span class="ruby-constant">Hash</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">last</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">pop</span> <span class="ruby-operator">:</span> {}
+  <span class="ruby-identifier">metadata</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-value">:focus</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">:focused</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>)
+  <span class="ruby-identifier">args</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">metadata</span>
+
+  <span class="ruby-identifier">example</span>(<span class="ruby-identifier">desc</span>, *<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- focused-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- focused-method -->
+
+      
+        <div id="include_context-method" class="method-detail ">
+          <a name="method-c-include_context"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">include_context</span><span
+              class="method-args">(name, *args, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Includes shared content mapped to `name` directly in the group in which it
+is declared, as opposed to `it_behaves_like`, which creates a nested group.
+If given a block, that block is also eval'd in the current context.</p>
+
+<p>@see <a href="SharedExampleGroup.html">SharedExampleGroup</a></p>
+            
+
+            
+            <div class="method-source-code" id="include_context-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 219</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">include_context</span>(<span class="ruby-identifier">name</span>, *<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">find_and_eval_shared</span>(<span class="ruby-string">&quot;context&quot;</span>, <span class="ruby-identifier">name</span>, *<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- include_context-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- include_context-method -->
+
+      
+        <div id="include_examples-method" class="method-detail ">
+          <a name="method-c-include_examples"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">include_examples</span><span
+              class="method-args">(name, *args, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Includes shared content mapped to `name` directly in the group in which it
+is declared, as opposed to `it_behaves_like`, which creates a nested group.
+If given a block, that block is also eval'd in the current context.</p>
+
+<p>@see <a href="SharedExampleGroup.html">SharedExampleGroup</a></p>
+            
+
+            
+            <div class="method-source-code" id="include_examples-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 228</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">include_examples</span>(<span class="ruby-identifier">name</span>, *<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">find_and_eval_shared</span>(<span class="ruby-string">&quot;examples&quot;</span>, <span class="ruby-identifier">name</span>, *<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- include_examples-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- include_examples-method -->
+
+      
+        <div id="metadata-method" class="method-detail ">
+          <a name="method-c-metadata"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">metadata</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>The [Metadata](<a href="Metadata.html">Metadata</a>) object associated with
+this group. @see <a href="Metadata.html">Metadata</a></p>
+            
+
+            
+            <div class="method-source-code" id="metadata-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 292</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">metadata</span>
+  <span class="ruby-ivar">@metadata</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">defined?</span>(<span class="ruby-ivar">@metadata</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- metadata-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- metadata-method -->
+
+      
+        <div id="parent_groups-method" class="method-detail ">
+          <a name="method-c-parent_groups"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">parent_groups</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="parent_groups-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 390</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">parent_groups</span>
+  <span class="ruby-ivar">@parent_groups</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">ancestors</span>.<span class="ruby-identifier">select</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span> <span class="ruby-identifier">a</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">RSpec</span><span class="ruby-operator">::</span><span class="ruby-constant">Core</span><span class="ruby-operator">::</span><span class="ruby-constant">ExampleGroup</span>}
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- parent_groups-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- parent_groups-method -->
+
+      
+        <div id="register-method" class="method-detail ">
+          <a name="method-c-register"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">register</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="register-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">register</span>
+  <span class="ruby-identifier">world</span>.<span class="ruby-identifier">register</span>(<span class="ruby-keyword">self</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- register-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- register-method -->
+
+      
+        <div id="run-method" class="method-detail ">
+          <a name="method-c-run"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">run</span><span
+              class="method-args">(reporter)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Runs all the examples in this group</p>
+            
+
+            
+            <div class="method-source-code" id="run-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 486</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">run</span>(<span class="ruby-identifier">reporter</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">wants_to_quit</span>
+    <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">clear_remaining_example_groups</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">top_level?</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">reporter</span>.<span class="ruby-identifier">example_group_started</span>(<span class="ruby-keyword">self</span>)
+
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">run_before_all_hooks</span>(<span class="ruby-identifier">new</span>)
+    <span class="ruby-identifier">result_for_this_group</span> = <span class="ruby-identifier">run_examples</span>(<span class="ruby-identifier">reporter</span>)
+    <span class="ruby-identifier">results_for_descendants</span> = <span class="ruby-identifier">children</span>.<span class="ruby-identifier">ordered</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">child</span><span class="ruby-operator">|</span> <span class="ruby-identifier">child</span>.<span class="ruby-identifier">run</span>(<span class="ruby-identifier">reporter</span>)}.<span class="ruby-identifier">all?</span>
+    <span class="ruby-identifier">result_for_this_group</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">results_for_descendants</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ex</span>
+    <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">wants_to_quit</span> = <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">fail_fast?</span>
+    <span class="ruby-identifier">fail_filtered_examples</span>(<span class="ruby-identifier">ex</span>, <span class="ruby-identifier">reporter</span>)
+  <span class="ruby-keyword">ensure</span>
+    <span class="ruby-identifier">run_after_all_hooks</span>(<span class="ruby-identifier">new</span>)
+    <span class="ruby-identifier">before_all_ivars</span>.<span class="ruby-identifier">clear</span>
+    <span class="ruby-identifier">reporter</span>.<span class="ruby-identifier">example_group_finished</span>(<span class="ruby-keyword">self</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- run-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- run-method -->
+
+      
+        <div id="run_after_all_hooks-method" class="method-detail ">
+          <a name="method-c-run_after_all_hooks"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">run_after_all_hooks</span><span
+              class="method-args">(example_group_instance)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="run_after_all_hooks-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 476</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">run_after_all_hooks</span>(<span class="ruby-identifier">example_group_instance</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">descendant_filtered_examples</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-identifier">assign_before_all_ivars</span>(<span class="ruby-identifier">before_all_ivars</span>, <span class="ruby-identifier">example_group_instance</span>)
+
+  <span class="ruby-constant">AllHookMemoizedHash</span><span class="ruby-operator">::</span><span class="ruby-constant">After</span>.<span class="ruby-identifier">isolate_for_all_hook</span>(<span class="ruby-identifier">example_group_instance</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">run_hook</span>(<span class="ruby-value">:after</span>, <span class="ruby-value">:all</span>, <span class="ruby-identifier">example_group_instance</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- run_after_all_hooks-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- run_after_all_hooks-method -->
+
+      
+        <div id="run_after_each_hooks-method" class="method-detail ">
+          <a name="method-c-run_after_each_hooks"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">run_after_each_hooks</span><span
+              class="method-args">(example)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="run_after_each_hooks-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 471</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">run_after_each_hooks</span>(<span class="ruby-identifier">example</span>)
+  <span class="ruby-identifier">run_hook</span>(<span class="ruby-value">:after</span>, <span class="ruby-value">:each</span>, <span class="ruby-identifier">example</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- run_after_each_hooks-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- run_after_each_hooks-method -->
+
+      
+        <div id="run_around_each_hooks-method" class="method-detail ">
+          <a name="method-c-run_around_each_hooks"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">run_around_each_hooks</span><span
+              class="method-args">(example, initial_procsy)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="run_around_each_hooks-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 461</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">run_around_each_hooks</span>(<span class="ruby-identifier">example</span>, <span class="ruby-identifier">initial_procsy</span>)
+  <span class="ruby-identifier">run_hook</span>(<span class="ruby-value">:around</span>, <span class="ruby-value">:each</span>, <span class="ruby-identifier">example</span>, <span class="ruby-identifier">initial_procsy</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- run_around_each_hooks-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- run_around_each_hooks-method -->
+
+      
+        <div id="run_before_all_hooks-method" class="method-detail ">
+          <a name="method-c-run_before_all_hooks"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">run_before_all_hooks</span><span
+              class="method-args">(example_group_instance)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="run_before_all_hooks-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 447</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">run_before_all_hooks</span>(<span class="ruby-identifier">example_group_instance</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">descendant_filtered_examples</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">assign_before_all_ivars</span>(<span class="ruby-identifier">superclass</span>.<span class="ruby-identifier">before_all_ivars</span>, <span class="ruby-identifier">example_group_instance</span>)
+
+    <span class="ruby-constant">AllHookMemoizedHash</span><span class="ruby-operator">::</span><span class="ruby-constant">Before</span>.<span class="ruby-identifier">isolate_for_all_hook</span>(<span class="ruby-identifier">example_group_instance</span>) <span class="ruby-keyword">do</span>
+      <span class="ruby-identifier">run_hook</span>(<span class="ruby-value">:before</span>, <span class="ruby-value">:all</span>, <span class="ruby-identifier">example_group_instance</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">ensure</span>
+    <span class="ruby-identifier">store_before_all_ivars</span>(<span class="ruby-identifier">example_group_instance</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- run_before_all_hooks-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- run_before_all_hooks-method -->
+
+      
+        <div id="run_before_each_hooks-method" class="method-detail ">
+          <a name="method-c-run_before_each_hooks"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">run_before_each_hooks</span><span
+              class="method-args">(example)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="run_before_each_hooks-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 466</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">run_before_each_hooks</span>(<span class="ruby-identifier">example</span>)
+  <span class="ruby-identifier">run_hook</span>(<span class="ruby-value">:before</span>, <span class="ruby-value">:each</span>, <span class="ruby-identifier">example</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- run_before_each_hooks-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- run_before_each_hooks-method -->
+
+      
+        <div id="run_examples-method" class="method-detail ">
+          <a name="method-c-run_examples"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">run_examples</span><span
+              class="method-args">(reporter)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="run_examples-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 509</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">run_examples</span>(<span class="ruby-identifier">reporter</span>)
+  <span class="ruby-identifier">filtered_examples</span>.<span class="ruby-identifier">ordered</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">example</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">wants_to_quit</span>
+    <span class="ruby-identifier">instance</span> = <span class="ruby-identifier">new</span>
+    <span class="ruby-identifier">set_ivars</span>(<span class="ruby-identifier">instance</span>, <span class="ruby-identifier">before_all_ivars</span>)
+    <span class="ruby-identifier">succeeded</span> = <span class="ruby-identifier">example</span>.<span class="ruby-identifier">run</span>(<span class="ruby-identifier">instance</span>, <span class="ruby-identifier">reporter</span>)
+    <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">wants_to_quit</span> = <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">fail_fast?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">succeeded</span>
+    <span class="ruby-identifier">succeeded</span>
+  <span class="ruby-keyword">end</span>.<span class="ruby-identifier">all?</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- run_examples-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- run_examples-method -->
+
+      
+        <div id="set_it_up-method" class="method-detail ">
+          <a name="method-c-set_it_up"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">set_it_up</span><span
+              class="method-args">(*args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="set_it_up-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 409</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">set_it_up</span>(*<span class="ruby-identifier">args</span>)
+  <span class="ruby-comment"># Ruby 1.9 has a bug that can lead to infinite recursion and a</span>
+  <span class="ruby-comment"># SystemStackError if you include a module in a superclass after</span>
+  <span class="ruby-comment"># including it in a subclass: https://gist.github.com/845896</span>
+  <span class="ruby-comment"># To prevent this, we must include any modules in RSpec::Core::ExampleGroup</span>
+  <span class="ruby-comment"># before users create example groups and have a chance to include</span>
+  <span class="ruby-comment"># the same module in a subclass of RSpec::Core::ExampleGroup.</span>
+  <span class="ruby-comment"># So we need to configure example groups here.</span>
+  <span class="ruby-identifier">ensure_example_groups_are_configured</span>
+
+  <span class="ruby-identifier">symbol_description</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Symbol</span>)
+  <span class="ruby-identifier">args</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">build_metadata_hash_from</span>(<span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">args</span>.<span class="ruby-identifier">unshift</span>(<span class="ruby-identifier">symbol_description</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">symbol_description</span>
+  <span class="ruby-ivar">@metadata</span> = <span class="ruby-constant">RSpec</span><span class="ruby-operator">::</span><span class="ruby-constant">Core</span><span class="ruby-operator">::</span><span class="ruby-constant">Metadata</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">superclass_metadata</span>).<span class="ruby-identifier">process</span>(*<span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">hooks</span>.<span class="ruby-identifier">register_globals</span>(<span class="ruby-keyword">self</span>, <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">configuration</span>.<span class="ruby-identifier">hooks</span>)
+  <span class="ruby-identifier">world</span>.<span class="ruby-identifier">configure_group</span>(<span class="ruby-keyword">self</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- set_it_up-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- set_it_up-method -->
+
+      
+        <div id="set_ivars-method" class="method-detail ">
+          <a name="method-c-set_ivars"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">set_ivars</span><span
+              class="method-args">(instance, ivars)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="set_ivars-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 560</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">set_ivars</span>(<span class="ruby-identifier">instance</span>, <span class="ruby-identifier">ivars</span>)
+  <span class="ruby-identifier">ivars</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">name</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">instance</span>.<span class="ruby-identifier">instance_variable_set</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">value</span>)}
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- set_ivars-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- set_ivars-method -->
+
+      
+        <div id="store_before_all_ivars-method" class="method-detail ">
+          <a name="method-c-store_before_all_ivars"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">store_before_all_ivars</span><span
+              class="method-args">(example_group_instance)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="store_before_all_ivars-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 433</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">store_before_all_ivars</span>(<span class="ruby-identifier">example_group_instance</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">example_group_instance</span>.<span class="ruby-identifier">instance_variables</span>.<span class="ruby-identifier">empty?</span>
+
+  <span class="ruby-identifier">example_group_instance</span>.<span class="ruby-identifier">instance_variables</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">ivar</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">before_all_ivars</span>[<span class="ruby-identifier">ivar</span>] = <span class="ruby-identifier">example_group_instance</span>.<span class="ruby-identifier">instance_variable_get</span>(<span class="ruby-identifier">ivar</span>)
+  }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- store_before_all_ivars-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- store_before_all_ivars-method -->
+
+      
+        <div id="subclass-method" class="method-detail ">
+          <a name="method-c-subclass"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">subclass</span><span
+              class="method-args">(parent, args, &example_group_block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="subclass-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 365</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">subclass</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">example_group_block</span>)
+  <span class="ruby-identifier">subclass</span> = <span class="ruby-constant">Class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">parent</span>)
+  <span class="ruby-identifier">subclass</span>.<span class="ruby-identifier">set_it_up</span>(*<span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">subclass</span>.<span class="ruby-identifier">module_eval</span>(&amp;<span class="ruby-identifier">example_group_block</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">example_group_block</span>
+
+  <span class="ruby-comment"># The LetDefinitions module must be included _after_ other modules</span>
+  <span class="ruby-comment"># to ensure that it takes precendence when there are name collisions.</span>
+  <span class="ruby-comment"># Thus, we delay including it until after the example group block</span>
+  <span class="ruby-comment"># has been eval'd.</span>
+  <span class="ruby-constant">MemoizedHelpers</span>.<span class="ruby-identifier">define_helpers_on</span>(<span class="ruby-identifier">subclass</span>)
+
+  <span class="ruby-identifier">subclass</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- subclass-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- subclass-method -->
+
+      
+        <div id="superclass_metadata-method" class="method-detail ">
+          <a name="method-c-superclass_metadata"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">superclass_metadata</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private @return [Metadata] belonging to the parent of a nested
+{ExampleGroup}</p>
+            
+
+            
+            <div class="method-source-code" id="superclass_metadata-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 298</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">superclass_metadata</span>
+  <span class="ruby-ivar">@superclass_metadata</span> <span class="ruby-operator">||=</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">superclass</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:metadata</span>) <span class="ruby-operator">?</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">superclass</span>.<span class="ruby-identifier">metadata</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- superclass_metadata-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- superclass_metadata-method -->
+
+      
+        <div id="top_level-3F-method" class="method-detail ">
+          <a name="method-c-top_level-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">top_level?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="top_level-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 395</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">top_level?</span>
+  <span class="ruby-ivar">@top_level</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">superclass</span> <span class="ruby-operator">==</span> <span class="ruby-constant">ExampleGroup</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- top_level-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- top_level-3F-method -->
+
+      
+        <div id="top_level_description-method" class="method-detail ">
+          <a name="method-c-top_level_description"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">top_level_description</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="top_level_description-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 555</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">top_level_description</span>
+  <span class="ruby-identifier">parent_groups</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">description</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- top_level_description-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- top_level_description-method -->
+
+      
+        <div id="warn_unexpected_args-method" class="method-detail ">
+          <a name="method-c-warn_unexpected_args"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">warn_unexpected_args</span><span
+              class="method-args">(label, name, args, shared_block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Warn when submitting the name of more than one example group to <a
+href="ExampleGroup.html#method-c-include_examples">include_examples</a>,
+it_behaves_like, etc.</p>
+
+<p>Helpful when upgrading from rspec-1 (which supported multiple shared groups
+in one call) to rspec-2 (which does not).</p>
+
+<p>See <a
+href="https://github.com/rspec/rspec-core/issues/1066">github.com/rspec/rspec-core/issues/1066</a>
+for background.</p>
+            
+
+            
+            <div class="method-source-code" id="warn_unexpected_args-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 240</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">warn_unexpected_args</span>(<span class="ruby-identifier">label</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">args</span>, <span class="ruby-identifier">shared_block</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">args</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">shared_block</span>.<span class="ruby-identifier">parameters</span>.<span class="ruby-identifier">count</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">shared_example_groups</span>[<span class="ruby-identifier">args</span>.<span class="ruby-identifier">first</span>]
+      <span class="ruby-identifier">warn</span> <span class="ruby-string">shared #{label} support#{'s' if /context/ =~ label.to_s} the name of only one example group, received #{[name, *args].inspect}called from #{CallerFilter.first_non_rspec_line}&quot;</span>
+    <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">warn</span> <span class="ruby-string">shared #{label} #{name.inspect} expected #{shared_block.arity} args, got #{args.inspect}called from #{CallerFilter.first_non_rspec_line}&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- warn_unexpected_args-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- warn_unexpected_args-method -->
+
+      
+        <div id="world-method" class="method-detail ">
+          <a name="method-c-world"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">world</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="world-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">world</span>
+  <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">world</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- world-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- world-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="described_class-method" class="method-detail ">
+          <a name="method-i-described_class"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">described_class</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns the class or module passed to the `describe` method (or alias).
+Returns nil if the subject is not a class or module. @example</p>
+
+<pre>describe Thing do
+  it &quot;does something&quot; do
+    described_class == Thing
+  end
+end</pre>
+            
+
+            
+            <div class="method-source-code" id="described_class-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 612</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">described_class</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">described_class</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- described_class-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- described_class-method -->
+
+      
+        <div id="example-method" class="method-detail ">
+          <a name="method-i-example"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">example</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@deprecated use a block argument</p>
+            
+
+            
+            <div class="method-source-code" id="example-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 569</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">example</span>
+  <span class="ruby-identifier">warn_deprecation_of_example_accessor</span> <span class="ruby-value">:example</span>
+  <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">current_example</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- example-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- example-method -->
+
+      
+        <div id="example-3D-method" class="method-detail ">
+          <a name="method-i-example-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">example=</span><span
+              class="method-args">(current_example)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="example-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 564</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">example=</span>(<span class="ruby-identifier">current_example</span>)
+  <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">current_example</span> = <span class="ruby-identifier">current_example</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- example-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- example-3D-method -->
+
+      
+        <div id="instance_eval_with_rescue-method" class="method-detail ">
+          <a name="method-i-instance_eval_with_rescue"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">instance_eval_with_rescue</span><span
+              class="method-args">(example, context = nil, &hook)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private instance_evals the block, capturing and reporting an exception if
+raised</p>
+            
+
+            
+            <div class="method-source-code" id="instance_eval_with_rescue-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 619</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">instance_eval_with_rescue</span>(<span class="ruby-identifier">example</span>, <span class="ruby-identifier">context</span> = <span class="ruby-keyword">nil</span>, &amp;<span class="ruby-identifier">hook</span>)
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">instance_eval_with_args</span>(<span class="ruby-identifier">example</span>, &amp;<span class="ruby-identifier">hook</span>)
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">current_example</span>
+      <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">current_example</span>.<span class="ruby-identifier">set_exception</span>(<span class="ruby-identifier">e</span>, <span class="ruby-identifier">context</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">raise</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- instance_eval_with_rescue-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- instance_eval_with_rescue-method -->
+
+      
+        <div id="running_example-method" class="method-detail ">
+          <a name="method-i-running_example"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">running_example</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@deprecated use a block argument</p>
+            
+
+            
+            <div class="method-source-code" id="running_example-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 575</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">running_example</span>
+  <span class="ruby-identifier">warn_deprecation_of_example_accessor</span> <span class="ruby-value">:running_example</span>
+  <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">current_example</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- running_example-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- running_example-method -->
+
+      
+        <div id="warn_deprecation_of_example_accessor-method" class="method-detail ">
+          <a name="method-i-warn_deprecation_of_example_accessor"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">warn_deprecation_of_example_accessor</span><span
+              class="method-args">(name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="warn_deprecation_of_example_accessor-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/example_group.rb, line 580</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">warn_deprecation_of_example_accessor</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">warn_deprecation</span>(<span class="ruby-string">          |RSpec::Core::ExampleGroup##{name} is deprecated and will be removed          |in RSpec 3. There are a few options for what you can use instead:          |          |  - rspec-core's DSL methods (`it`, `before`, `after`, `let`, `subject`, etc)          |    now yield the example as a block argument, and that is the recommended          |    way to access the current example from those contexts.          |  - The current example is now exposed via `RSpec.current_example`,          |    which is accessible from any context.          |  - If you can't update the code at this call site (e.g. because it is in          |    an extension gem), you can use this snippet to continue making this          |    method available in RSpec 2.99 and RSpec 3:          |          |      RSpec.configure do |c|          |        c.expose_current_running_example_as :#{name}          |      end          |          |(Called from #{CallerFilter.first_non_rspec_line})</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/^\s*\|/</span>, <span class="ruby-string">''</span>))
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- warn_deprecation_of_example_accessor-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- warn_deprecation_of_example_accessor-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

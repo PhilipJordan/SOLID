@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"	port:EFI"$Selenium::Rake::ServerTask#port;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I" Port to use for the server.:encoding"IBM437I"Default: 4444;@:
+@file0FI"%lib/selenium/rake/server_task.rb;@

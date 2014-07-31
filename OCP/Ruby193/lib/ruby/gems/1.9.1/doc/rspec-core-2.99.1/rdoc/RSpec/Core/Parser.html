@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: RSpec::Core::Parser</title>
+
+  <link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../lib/rspec/core/option_parser_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/rspec/core/option_parser.rb">lib/rspec/core/option_parser.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="../../Object.html">Object</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-parse">::parse</a></li>
+          
+          <li><a href="#method-c-parse-21">::parse!</a></li>
+          
+          <li><a href="#method-i-convert_deprecated_args">#convert_deprecated_args</a></li>
+          
+          <li><a href="#method-i-parse">#parse</a></li>
+          
+          <li><a href="#method-i-parse-21">#parse!</a></li>
+          
+          <li><a href="#method-i-parser">#parser</a></li>
+          
+          <li><a href="#method-i-pre_parse">#pre_parse</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../RSpec.html">RSpec</a></li>
+        
+          <li><a href="../../RSpec/CallerFilter.html">RSpec::CallerFilter</a></li>
+        
+          <li><a href="../../RSpec/Core.html">RSpec::Core</a></li>
+        
+          <li><a href="../../RSpec/Core/BacktraceCleaner.html">RSpec::Core::BacktraceCleaner</a></li>
+        
+          <li><a href="../../RSpec/Core/BacktraceFormatter.html">RSpec::Core::BacktraceFormatter</a></li>
+        
+          <li><a href="../../RSpec/Core/CommandLine.html">RSpec::Core::CommandLine</a></li>
+        
+          <li><a href="../../RSpec/Core/Configuration.html">RSpec::Core::Configuration</a></li>
+        
+          <li><a href="../../RSpec/Core/Configuration/ExposeCurrentExample.html">RSpec::Core::Configuration::ExposeCurrentExample</a></li>
+        
+          <li><a href="../../RSpec/Core/Configuration/MustBeConfiguredBeforeExampleGroupsError.html">RSpec::Core::Configuration::MustBeConfiguredBeforeExampleGroupsError</a></li>
+        
+          <li><a href="../../RSpec/Core/ConfigurationOptions.html">RSpec::Core::ConfigurationOptions</a></li>
+        
+          <li><a href="../../RSpec/Core/ConstMissing.html">RSpec::Core::ConstMissing</a></li>
+        
+          <li><a href="../../RSpec/Core/DRbCommandLine.html">RSpec::Core::DRbCommandLine</a></li>
+        
+          <li><a href="../../RSpec/Core/DSL.html">RSpec::Core::DSL</a></li>
+        
+          <li><a href="../../RSpec/Core/DeprecatedMutableArrayProxy.html">RSpec::Core::DeprecatedMutableArrayProxy</a></li>
+        
+          <li><a href="../../RSpec/Core/Deprecation.html">RSpec::Core::Deprecation</a></li>
+        
+          <li><a href="../../RSpec/Core/DrbOptions.html">RSpec::Core::DrbOptions</a></li>
+        
+          <li><a href="../../RSpec/Core/Example.html">RSpec::Core::Example</a></li>
+        
+          <li><a href="../../RSpec/Core/Example/Procsy.html">RSpec::Core::Example::Procsy</a></li>
+        
+          <li><a href="../../RSpec/Core/ExampleGroup.html">RSpec::Core::ExampleGroup</a></li>
+        
+          <li><a href="../../RSpec/Core/Extensions.html">RSpec::Core::Extensions</a></li>
+        
+          <li><a href="../../RSpec/Core/Extensions/InstanceEvalWithArgs.html">RSpec::Core::Extensions::InstanceEvalWithArgs</a></li>
+        
+          <li><a href="../../RSpec/Core/Extensions/ModuleEvalWithArgs.html">RSpec::Core::Extensions::ModuleEvalWithArgs</a></li>
+        
+          <li><a href="../../RSpec/Core/Extensions/Ordered.html">RSpec::Core::Extensions::Ordered</a></li>
+        
+          <li><a href="../../RSpec/Core/Extensions/Ordered/ExampleGroups.html">RSpec::Core::Extensions::Ordered::ExampleGroups</a></li>
+        
+          <li><a href="../../RSpec/Core/Extensions/Ordered/Examples.html">RSpec::Core::Extensions::Ordered::Examples</a></li>
+        
+          <li><a href="../../RSpec/Core/FilterManager.html">RSpec::Core::FilterManager</a></li>
+        
+          <li><a href="../../RSpec/Core/FilterManager/BackwardCompatibility.html">RSpec::Core::FilterManager::BackwardCompatibility</a></li>
+        
+          <li><a href="../../RSpec/Core/FilterManager/Describable.html">RSpec::Core::FilterManager::Describable</a></li>
+        
+          <li><a href="../../RSpec/Core/Formatters.html">RSpec::Core::Formatters</a></li>
+        
+          <li><a href="../../RSpec/Core/Formatters/BaseFormatter.html">RSpec::Core::Formatters::BaseFormatter</a></li>
+        
+          <li><a href="../../RSpec/Core/Formatters/BaseTextFormatter.html">RSpec::Core::Formatters::BaseTextFormatter</a></li>
+        
+          <li><a href="../../RSpec/Core/Formatters/ConsoleCodes.html">RSpec::Core::Formatters::ConsoleCodes</a></li>
+        
+          <li><a href="../../RSpec/Core/Formatters/DeprecationFormatter.html">RSpec::Core::Formatters::DeprecationFormatter</a></li>
+        
+          <li><a href="../../RSpec/Core/Formatters/DeprecationFormatter/DelayedPrinter.html">RSpec::Core::Formatters::DeprecationFormatter::DelayedPrinter</a></li>
+        
+          <li><a href="../../RSpec/Core/Formatters/DeprecationFormatter/FileStream.html">RSpec::Core::Formatters::DeprecationFormatter::FileStream</a></li>
+        
+          <li><a href="../../RSpec/Core/Formatters/DeprecationFormatter/ImmediatePrinter.html">RSpec::Core::Formatters::DeprecationFormatter::ImmediatePrinter</a></li>
+        
+          <li><a href="../../RSpec/Core/Formatters/DeprecationFormatter/RaiseErrorStream.html">RSpec::Core::Formatters::DeprecationFormatter::RaiseErrorStream</a></li>
+        
+          <li><a href="../../RSpec/Core/Formatters/DocumentationFormatter.html">RSpec::Core::Formatters::DocumentationFormatter</a></li>
+        
+          <li><a href="../../RSpec/Core/Formatters/Helpers.html">RSpec::Core::Formatters::Helpers</a></li>
+        
+          <li><a href="../../RSpec/Core/Formatters/HtmlFormatter.html">RSpec::Core::Formatters::HtmlFormatter</a></li>
+        
+          <li><a href="../../RSpec/Core/Formatters/HtmlPrinter.html">RSpec::Core::Formatters::HtmlPrinter</a></li>
+        
+          <li><a href="../../RSpec/Core/Formatters/JsonFormatter.html">RSpec::Core::Formatters::JsonFormatter</a></li>
+        
+          <li><a href="../../RSpec/Core/Formatters/Loader.html">RSpec::Core::Formatters::Loader</a></li>
+        
+          <li><a href="../../RSpec/Core/Formatters/ProgressFormatter.html">RSpec::Core::Formatters::ProgressFormatter</a></li>
+        
+          <li><a href="../../RSpec/Core/Formatters/SnippetExtractor.html">RSpec::Core::Formatters::SnippetExtractor</a></li>
+        
+          <li><a href="../../RSpec/Core/Formatters/SnippetExtractor/NullConverter.html">RSpec::Core::Formatters::SnippetExtractor::NullConverter</a></li>
+        
+          <li><a href="../../RSpec/Core/Formatters/TextMateFormatter.html">RSpec::Core::Formatters::TextMateFormatter</a></li>
+        
+          <li><a href="../../RSpec/Core/Hooks.html">RSpec::Core::Hooks</a></li>
+        
+          <li><a href="../../RSpec/Core/Hooks/AfterAllHook.html">RSpec::Core::Hooks::AfterAllHook</a></li>
+        
+          <li><a href="../../RSpec/Core/Hooks/AfterHook.html">RSpec::Core::Hooks::AfterHook</a></li>
+        
+          <li><a href="../../RSpec/Core/Hooks/AroundHook.html">RSpec::Core::Hooks::AroundHook</a></li>
+        
+          <li><a href="../../RSpec/Core/Hooks/AroundHookCollection.html">RSpec::Core::Hooks::AroundHookCollection</a></li>
+        
+          <li><a href="../../RSpec/Core/Hooks/BeforeHook.html">RSpec::Core::Hooks::BeforeHook</a></li>
+        
+          <li><a href="../../RSpec/Core/Hooks/GroupHookCollection.html">RSpec::Core::Hooks::GroupHookCollection</a></li>
+        
+          <li><a href="../../RSpec/Core/Hooks/Hook.html">RSpec::Core::Hooks::Hook</a></li>
+        
+          <li><a href="../../RSpec/Core/Hooks/HookCollection.html">RSpec::Core::Hooks::HookCollection</a></li>
+        
+          <li><a href="../../RSpec/Core/Hooks/HookCollectionAliases.html">RSpec::Core::Hooks::HookCollectionAliases</a></li>
+        
+          <li><a href="../../RSpec/Core/Hooks/RegistersGlobals.html">RSpec::Core::Hooks::RegistersGlobals</a></li>
+        
+          <li><a href="../../RSpec/Core/MemoizedHelpers.html">RSpec::Core::MemoizedHelpers</a></li>
+        
+          <li><a href="../../RSpec/Core/MemoizedHelpers/AllHookMemoizedHash.html">RSpec::Core::MemoizedHelpers::AllHookMemoizedHash</a></li>
+        
+          <li><a href="../../RSpec/Core/MemoizedHelpers/AllHookMemoizedHash/After.html">RSpec::Core::MemoizedHelpers::AllHookMemoizedHash::After</a></li>
+        
+          <li><a href="../../RSpec/Core/MemoizedHelpers/AllHookMemoizedHash/Before.html">RSpec::Core::MemoizedHelpers::AllHookMemoizedHash::Before</a></li>
+        
+          <li><a href="../../RSpec/Core/MemoizedHelpers/ClassMethods.html">RSpec::Core::MemoizedHelpers::ClassMethods</a></li>
+        
+          <li><a href="../../RSpec/Core/Metadata.html">RSpec::Core::Metadata</a></li>
+        
+          <li><a href="../../RSpec/Core/Metadata/ExampleMetadataHash.html">RSpec::Core::Metadata::ExampleMetadataHash</a></li>
+        
+          <li><a href="../../RSpec/Core/Metadata/GroupMetadataHash.html">RSpec::Core::Metadata::GroupMetadataHash</a></li>
+        
+          <li><a href="../../RSpec/Core/Metadata/MetadataHash.html">RSpec::Core::Metadata::MetadataHash</a></li>
+        
+          <li><a href="../../RSpec/Core/MetadataHashBuilder.html">RSpec::Core::MetadataHashBuilder</a></li>
+        
+          <li><a href="../../RSpec/Core/MetadataHashBuilder/Common.html">RSpec::Core::MetadataHashBuilder::Common</a></li>
+        
+          <li><a href="../../RSpec/Core/MetadataHashBuilder/WithConfigWarning.html">RSpec::Core::MetadataHashBuilder::WithConfigWarning</a></li>
+        
+          <li><a href="../../RSpec/Core/MetadataHashBuilder/WithDeprecationWarning.html">RSpec::Core::MetadataHashBuilder::WithDeprecationWarning</a></li>
+        
+          <li><a href="../../RSpec/Core/MinitestAssertionsAdapter.html">RSpec::Core::MinitestAssertionsAdapter</a></li>
+        
+          <li><a href="../../RSpec/Core/MockFrameworkAdapter.html">RSpec::Core::MockFrameworkAdapter</a></li>
+        
+          <li><a href="../../RSpec/Core/Parser.html">RSpec::Core::Parser</a></li>
+        
+          <li><a href="../../RSpec/Core/Pending.html">RSpec::Core::Pending</a></li>
+        
+          <li><a href="../../RSpec/Core/Pending/PendingExampleFixedError.html">RSpec::Core::Pending::PendingExampleFixedError</a></li>
+        
+          <li><a href="../../RSpec/Core/Pending/SkipDeclaredInExample.html">RSpec::Core::Pending::SkipDeclaredInExample</a></li>
+        
+          <li><a href="../../RSpec/Core/ProjectInitializer.html">RSpec::Core::ProjectInitializer</a></li>
+        
+          <li><a href="../../RSpec/Core/RakeTask.html">RSpec::Core::RakeTask</a></li>
+        
+          <li><a href="../../RSpec/Core/Reporter.html">RSpec::Core::Reporter</a></li>
+        
+          <li><a href="../../RSpec/Core/RubyProject.html">RSpec::Core::RubyProject</a></li>
+        
+          <li><a href="../../RSpec/Core/Runner.html">RSpec::Core::Runner</a></li>
+        
+          <li><a href="../../RSpec/Core/SharedContext.html">RSpec::Core::SharedContext</a></li>
+        
+          <li><a href="../../RSpec/Core/SharedExampleGroup.html">RSpec::Core::SharedExampleGroup</a></li>
+        
+          <li><a href="../../RSpec/Core/SharedExampleGroup/Collection.html">RSpec::Core::SharedExampleGroup::Collection</a></li>
+        
+          <li><a href="../../RSpec/Core/SharedExampleGroup/Registry.html">RSpec::Core::SharedExampleGroup::Registry</a></li>
+        
+          <li><a href="../../RSpec/Core/SharedExampleGroup/TopLevelDSL.html">RSpec::Core::SharedExampleGroup::TopLevelDSL</a></li>
+        
+          <li><a href="../../RSpec/Core/TestUnitAssertionsAdapter.html">RSpec::Core::TestUnitAssertionsAdapter</a></li>
+        
+          <li><a href="../../RSpec/Core/Time.html">RSpec::Core::Time</a></li>
+        
+          <li><a href="../../RSpec/Core/Version.html">RSpec::Core::Version</a></li>
+        
+          <li><a href="../../RSpec/Core/World.html">RSpec::Core::World</a></li>
+        
+          <li><a href="../../RSpec/Rake.html">RSpec::Rake</a></li>
+        
+          <li><a href="../../RSpec/Runner.html">RSpec::Runner</a></li>
+        
+          <li><a href="../../Autotest.html">Autotest</a></li>
+        
+          <li><a href="../../Autotest/Rspec2.html">Autotest::Rspec2</a></li>
+        
+          <li><a href="../../Kernel.html">Kernel</a></li>
+        
+          <li><a href="../../Object.html">Object</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">RSpec::Core::Parser</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="parse-method" class="method-detail method-alias">
+          <a name="method-c-parse"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">parse</span><span
+              class="method-args">(args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Parser.html#method-c-parse-21">parse!</a>
+          </div>
+          
+        </div><!-- parse-method -->
+
+      
+        <div id="parse-21-method" class="method-detail ">
+          <a name="method-c-parse-21"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">parse!</span><span
+              class="method-args">(args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="parse-21-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/option_parser.rb, line 6</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">parse!</span>(<span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">new</span>.<span class="ruby-identifier">parse!</span>(<span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- parse-21-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Parser.html#method-c-parse">parse</a>
+          </div>
+          
+
+          
+        </div><!-- parse-21-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="convert_deprecated_args-method" class="method-detail ">
+          <a name="method-i-convert_deprecated_args"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">convert_deprecated_args</span><span
+              class="method-args">(args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="convert_deprecated_args-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/option_parser.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_deprecated_args</span>(<span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">args</span>.<span class="ruby-identifier">map!</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">arg</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">arg</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;--formatter&quot;</span>
+      <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">deprecate</span>(<span class="ruby-string">&quot;The `--formatter` option&quot;</span>, <span class="ruby-value">:replacement</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;-f or --format&quot;</span>, <span class="ruby-value">:call_site</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>)
+      <span class="ruby-string">&quot;--format&quot;</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;--default_path&quot;</span>
+      <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">deprecate</span>(<span class="ruby-string">&quot;The `--default_path` option&quot;</span>, <span class="ruby-value">:replacement</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;--default-path&quot;</span>, <span class="ruby-value">:call_site</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>)
+      <span class="ruby-string">&quot;--default-path&quot;</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;--line_number&quot;</span>
+      <span class="ruby-string">&quot;--line-number&quot;</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">arg</span>
+    <span class="ruby-keyword">end</span>
+  }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- convert_deprecated_args-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- convert_deprecated_args-method -->
+
+      
+        <div id="parse-method" class="method-detail method-alias">
+          <a name="method-i-parse"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">parse</span><span
+              class="method-args">(args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Parser.html#method-i-parse-21">parse!</a>
+          </div>
+          
+        </div><!-- parse-method -->
+
+      
+        <div id="parse-21-method" class="method-detail ">
+          <a name="method-i-parse-21"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">parse!</span><span
+              class="method-args">(args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="parse-21-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/option_parser.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">parse!</span>(<span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">return</span> {} <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">empty?</span>
+
+  <span class="ruby-identifier">pre_parse</span>(<span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">convert_deprecated_args</span>(<span class="ruby-identifier">args</span>)
+
+  <span class="ruby-identifier">options</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">'--tty'</span>) <span class="ruby-operator">?</span> {<span class="ruby-value">:tty</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>} <span class="ruby-operator">:</span> {}
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">parser</span>(<span class="ruby-identifier">options</span>).<span class="ruby-identifier">parse!</span>(<span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">OptionParser</span><span class="ruby-operator">::</span><span class="ruby-constant">InvalidOption</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+    <span class="ruby-identifier">abort</span> <span class="ruby-node">&quot;#{e.message}\n\nPlease use --help for a listing of valid options&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">options</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- parse-21-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Parser.html#method-i-parse">parse</a>
+          </div>
+          
+
+          
+        </div><!-- parse-21-method -->
+
+      
+        <div id="parser-method" class="method-detail ">
+          <a name="method-i-parser"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">parser</span><span
+              class="method-args">(options)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="parser-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/option_parser.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">parser</span>(<span class="ruby-identifier">options</span>)
+  <span class="ruby-constant">OptionParser</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">parser</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">banner</span> = <span class="ruby-string">&quot;Usage: rspec [options] [files or directories]\n\n&quot;</span>
+
+    <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">'-I PATH'</span>, <span class="ruby-string">'Specify PATH to add to $LOAD_PATH (may be used more than once).'</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">dir</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">options</span>[<span class="ruby-value">:libs</span>] <span class="ruby-operator">||=</span> []
+      <span class="ruby-identifier">options</span>[<span class="ruby-value">:libs</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">dir</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">'-r'</span>, <span class="ruby-string">'--require PATH'</span>, <span class="ruby-string">'Require a file.'</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">options</span>[<span class="ruby-value">:requires</span>] <span class="ruby-operator">||=</span> []
+      <span class="ruby-identifier">options</span>[<span class="ruby-value">:requires</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">path</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">'-O'</span>, <span class="ruby-string">'--options PATH'</span>, <span class="ruby-string">'Specify the path to a custom options file.'</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">options</span>[<span class="ruby-value">:custom_options_file</span>] = <span class="ruby-identifier">path</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">'--order TYPE[:SEED]'</span>, <span class="ruby-string">'Run examples by the specified order type.'</span>,
+              <span class="ruby-string">'  [defined] groups and examples are run in the order they are defined'</span>,
+              <span class="ruby-string">'  [default] deprecated alias for defined'</span>,
+              <span class="ruby-string">'  [rand]    randomize the order of files, groups and examples'</span>,
+              <span class="ruby-string">'  [random]  alias for rand'</span>,
+              <span class="ruby-string">'  [random:SEED] e.g. --order random:123'</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">o</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">options</span>[<span class="ruby-value">:order</span>] = <span class="ruby-keyword">if</span> <span class="ruby-identifier">o</span> <span class="ruby-operator">==</span> <span class="ruby-string">'default'</span>
+                          <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">deprecate</span>(<span class="ruby-string">&quot;RSpec's `--order default` CLI option&quot;</span>, <span class="ruby-value">:replacement</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;`--order defined`&quot;</span>, <span class="ruby-value">:call_site</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>)
+                          <span class="ruby-string">'defined'</span>
+                        <span class="ruby-keyword">else</span>
+                          <span class="ruby-identifier">o</span>
+                        <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">'--seed SEED'</span>, <span class="ruby-constant">Integer</span>, <span class="ruby-string">'Equivalent of --order rand:SEED.'</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">seed</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">options</span>[<span class="ruby-value">:order</span>] = <span class="ruby-node">&quot;rand:#{seed}&quot;</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">'-d'</span>, <span class="ruby-string">'--debugger'</span>, <span class="ruby-string">'Enable debugging.'</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">o</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">options</span>[<span class="ruby-value">:debug</span>] = <span class="ruby-value">:cli</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">'--fail-fast'</span>, <span class="ruby-string">'Abort the run on first failure.'</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">o</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">options</span>[<span class="ruby-value">:fail_fast</span>] = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">'--failure-exit-code CODE'</span>, <span class="ruby-constant">Integer</span>, <span class="ruby-string">'Override the exit code used when there are failing specs.'</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">code</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">options</span>[<span class="ruby-value">:failure_exit_code</span>] = <span class="ruby-identifier">code</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">'-X'</span>, <span class="ruby-string">'--[no-]drb'</span>, <span class="ruby-string">'Run examples via DRb.'</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">o</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">options</span>[<span class="ruby-value">:drb</span>] = <span class="ruby-identifier">o</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">'--drb-port PORT'</span>, <span class="ruby-string">'Port to connect to the DRb server.'</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">o</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">options</span>[<span class="ruby-value">:drb_port</span>] = <span class="ruby-identifier">o</span>.<span class="ruby-identifier">to_i</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">'--init'</span>, <span class="ruby-string">'Initialize your project with RSpec.'</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">cmd</span><span class="ruby-operator">|</span>
+      <span class="ruby-constant">ProjectInitializer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">cmd</span>).<span class="ruby-identifier">run</span>
+      <span class="ruby-identifier">exit</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">'--configure'</span>, <span class="ruby-string">'Deprecated. Use --init instead.'</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">cmd</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">warn</span> <span class="ruby-string">&quot;--configure is deprecated with no effect. Use --init instead.&quot;</span>
+      <span class="ruby-identifier">exit</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">separator</span>(<span class="ruby-string">&quot;\n  **** Output ****\n\n&quot;</span>)
+
+    <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">'-f'</span>, <span class="ruby-string">'--format FORMATTER'</span>, <span class="ruby-string">'Choose a formatter.'</span>,
+            <span class="ruby-string">'  [p]rogress (default - dots)'</span>,
+            <span class="ruby-string">'  [d]ocumentation (group and example names)'</span>,
+            <span class="ruby-string">'  [h]tml'</span>,
+            <span class="ruby-string">'  [t]extmate'</span>,
+            <span class="ruby-string">'  [j]son'</span>,
+            <span class="ruby-string">'  custom formatter class name'</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">o</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">options</span>[<span class="ruby-value">:formatters</span>] <span class="ruby-operator">||=</span> []
+      <span class="ruby-identifier">options</span>[<span class="ruby-value">:formatters</span>] <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-identifier">o</span>]
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">'-o'</span>, <span class="ruby-string">'--out FILE'</span>,
+              <span class="ruby-string">'Write output to a file instead of $stdout. This option applies'</span>,
+              <span class="ruby-string">'  to the previously specified --format, or the default format'</span>,
+              <span class="ruby-string">'  if no format is specified.'</span>
+             ) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">o</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">options</span>[<span class="ruby-value">:formatters</span>] <span class="ruby-operator">||=</span> [[<span class="ruby-string">'progress'</span>]]
+      <span class="ruby-identifier">options</span>[<span class="ruby-value">:formatters</span>].<span class="ruby-identifier">last</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">o</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">'--deprecation-out FILE'</span>, <span class="ruby-string">'Write deprecation warnings to a file instead of $stdout.'</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+      <span class="ruby-comment"># Handled in `pre_parse` so we can set the deprecation stream as early as</span>
+      <span class="ruby-comment"># possible in case any other options cause deprecations to be issued.</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">'-b'</span>, <span class="ruby-string">'--backtrace'</span>, <span class="ruby-string">'Enable full backtrace.'</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">o</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">options</span>[<span class="ruby-value">:full_backtrace</span>] = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">'-c'</span>, <span class="ruby-string">'--[no-]color'</span>, <span class="ruby-string">'--[no-]colour'</span>, <span class="ruby-string">'Enable color in the output.'</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">o</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">options</span>[<span class="ruby-value">:color</span>] = <span class="ruby-identifier">o</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">'-p'</span>, <span class="ruby-string">'--[no-]profile [COUNT]'</span>, <span class="ruby-string">'Enable profiling of examples and list the slowest examples (default: 10).'</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">argument</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">options</span>[<span class="ruby-value">:profile_examples</span>] = <span class="ruby-keyword">if</span> <span class="ruby-identifier">argument</span>.<span class="ruby-identifier">nil?</span>
+                                     <span class="ruby-keyword">true</span>
+                                   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">argument</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">false</span>
+                                     <span class="ruby-keyword">false</span>
+                                   <span class="ruby-keyword">else</span>
+                                     <span class="ruby-keyword">begin</span>
+                                       <span class="ruby-constant">Integer</span>(<span class="ruby-identifier">argument</span>)
+                                     <span class="ruby-keyword">rescue</span> <span class="ruby-constant">ArgumentError</span>
+                                       <span class="ruby-constant">Kernel</span>.<span class="ruby-identifier">warn</span> <span class="ruby-string">&quot;Non integer specified as profile count, seperate &quot;</span> <span class="ruby-operator">+</span>
+                                                   <span class="ruby-string">&quot;your path from options with -- e.g. &quot;</span> <span class="ruby-operator">+</span>
+                                                   <span class="ruby-node">&quot;`rspec --profile -- #{argument}`&quot;</span>
+                                       <span class="ruby-keyword">true</span>
+                                     <span class="ruby-keyword">end</span>
+                                   <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">'-w'</span>, <span class="ruby-string">'--warnings'</span>, <span class="ruby-string">'Enable ruby warnings'</span>) <span class="ruby-keyword">do</span>
+      <span class="ruby-identifier">options</span>[<span class="ruby-value">:warnings</span>] = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">separator</span> <span class="ruby-string">  **** Filtering/tags ****    In addition to the following options for selecting specific files, groups,    or examples, you can select a single example by appending the line number to    the filename:      rspec path/to/a_spec.rb:37</span>
+
+    <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">'-P'</span>, <span class="ruby-string">'--pattern PATTERN'</span>, <span class="ruby-string">'Load files matching pattern (default: &quot;spec/**/*_spec.rb&quot;).'</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">o</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">options</span>[<span class="ruby-value">:pattern</span>] = <span class="ruby-identifier">o</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">'-e'</span>, <span class="ruby-string">'--example STRING'</span>, <span class="ruby-string">&quot;Run examples whose full nested names include STRING (may be&quot;</span>,
+                                        <span class="ruby-string">&quot;  used more than once)&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">o</span><span class="ruby-operator">|</span>
+      (<span class="ruby-identifier">options</span>[<span class="ruby-value">:full_description</span>] <span class="ruby-operator">||=</span> []) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">compile</span>(<span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">escape</span>(<span class="ruby-identifier">o</span>))
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">'-l'</span>, <span class="ruby-string">'--line-number LINE'</span>, <span class="ruby-string">'Specify line number of an example or group (may be'</span>,
+                                          <span class="ruby-string">'  used more than once).'</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">o</span><span class="ruby-operator">|</span>
+      <span class="ruby-constant">Metadata</span>.<span class="ruby-identifier">line_number_filter_deprecation_issued</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">deprecate</span>(<span class="ruby-string">&quot;The `--line-number`/`-l` CLI option&quot;</span>,
+                      <span class="ruby-value">:replacement</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;the `path/to/file.rb:num` form&quot;</span>,
+                      <span class="ruby-value">:call_site</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>)
+      (<span class="ruby-identifier">options</span>[<span class="ruby-value">:line_numbers</span>] <span class="ruby-operator">||=</span> []) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">o</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">'-t'</span>, <span class="ruby-string">'--tag TAG[:VALUE]'</span>,
+              <span class="ruby-string">'Run examples with the specified tag, or exclude examples'</span>,
+              <span class="ruby-string">'by adding ~ before the tag.'</span>,
+              <span class="ruby-string">'  - e.g. ~slow'</span>,
+              <span class="ruby-string">'  - TAG is always converted to a symbol'</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">tag</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">filter_type</span> = <span class="ruby-identifier">tag</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^~/</span> <span class="ruby-operator">?</span> <span class="ruby-value">:exclusion_filter</span> <span class="ruby-operator">:</span> <span class="ruby-value">:inclusion_filter</span>
+
+      <span class="ruby-identifier">name</span>,<span class="ruby-identifier">value</span> = <span class="ruby-identifier">tag</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/^(~@|~|@)/</span>, <span class="ruby-string">''</span>).<span class="ruby-identifier">split</span>(<span class="ruby-string">':'</span>)
+      <span class="ruby-identifier">name</span> = <span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_sym</span>
+
+      <span class="ruby-identifier">options</span>[<span class="ruby-identifier">filter_type</span>] <span class="ruby-operator">||=</span> {}
+      <span class="ruby-identifier">options</span>[<span class="ruby-identifier">filter_type</span>][<span class="ruby-identifier">name</span>] = <span class="ruby-identifier">value</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-keyword">true</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">eval</span>(<span class="ruby-identifier">value</span>) <span class="ruby-keyword">rescue</span> <span class="ruby-identifier">value</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">'--default-path PATH'</span>, <span class="ruby-string">'Set the default path where RSpec looks for examples (can'</span>,
+                                     <span class="ruby-string">'  be a path to a file or a directory).'</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">options</span>[<span class="ruby-value">:default_path</span>] = <span class="ruby-identifier">path</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">separator</span>(<span class="ruby-string">&quot;\n  **** Utility ****\n\n&quot;</span>)
+
+    <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">'-v'</span>, <span class="ruby-string">'--version'</span>, <span class="ruby-string">'Display the version.'</span>) <span class="ruby-keyword">do</span>
+      <span class="ruby-identifier">puts</span> <span class="ruby-constant">RSpec</span><span class="ruby-operator">::</span><span class="ruby-constant">Core</span><span class="ruby-operator">::</span><span class="ruby-constant">Version</span><span class="ruby-operator">::</span><span class="ruby-constant">STRING</span>
+      <span class="ruby-identifier">exit</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">on_tail</span>(<span class="ruby-string">'-h'</span>, <span class="ruby-string">'--help'</span>, <span class="ruby-string">&quot;You're looking at it.&quot;</span>) <span class="ruby-keyword">do</span>
+      <span class="ruby-identifier">puts</span> <span class="ruby-identifier">parser</span>
+      <span class="ruby-identifier">exit</span>
+    <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- parser-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- parser-method -->
+
+      
+        <div id="pre_parse-method" class="method-detail ">
+          <a name="method-i-pre_parse"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">pre_parse</span><span
+              class="method-args">(args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="pre_parse-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/option_parser.rb, line 235</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">pre_parse</span>(<span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">args</span>.<span class="ruby-identifier">each_cons</span>(<span class="ruby-value">2</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">arg</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">arg</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;--deprecation-out&quot;</span>
+      <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">configuration</span>.<span class="ruby-identifier">deprecation_stream</span> = <span class="ruby-identifier">value</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- pre_parse-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- pre_parse-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

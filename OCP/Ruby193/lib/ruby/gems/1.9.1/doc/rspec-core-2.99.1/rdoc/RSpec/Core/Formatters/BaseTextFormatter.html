@@ -1,0 +1,1596 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: RSpec::Core::Formatters::BaseTextFormatter</title>
+
+  <link rel="stylesheet" href="../../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../../index.html">Home</a>
+          <a href="../../../index.html#classes">Classes</a>
+          <a href="../../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../../lib/rspec/core/formatters/base_text_formatter_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/rspec/core/formatters/base_text_formatter.rb">lib/rspec/core/formatters/base_text_formatter.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="BaseFormatter.html">RSpec::Core::Formatters::BaseFormatter</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-const_missing">::const_missing</a></li>
+          
+          <li><a href="#method-i-blue">#blue</a></li>
+          
+          <li><a href="#method-i-bold">#bold</a></li>
+          
+          <li><a href="#method-i-close">#close</a></li>
+          
+          <li><a href="#method-i-color">#color</a></li>
+          
+          <li><a href="#method-i-color_code_for">#color_code_for</a></li>
+          
+          <li><a href="#method-i-colorise_summary">#colorise_summary</a></li>
+          
+          <li><a href="#method-i-colorize">#colorize</a></li>
+          
+          <li><a href="#method-i-cyan">#cyan</a></li>
+          
+          <li><a href="#method-i-default_color">#default_color</a></li>
+          
+          <li><a href="#method-i-detail_color">#detail_color</a></li>
+          
+          <li><a href="#method-i-dump_commands_to_rerun_failed_examples">#dump_commands_to_rerun_failed_examples</a></li>
+          
+          <li><a href="#method-i-dump_failures">#dump_failures</a></li>
+          
+          <li><a href="#method-i-dump_pending">#dump_pending</a></li>
+          
+          <li><a href="#method-i-dump_profile">#dump_profile</a></li>
+          
+          <li><a href="#method-i-dump_profile_slowest_example_groups">#dump_profile_slowest_example_groups</a></li>
+          
+          <li><a href="#method-i-dump_profile_slowest_examples">#dump_profile_slowest_examples</a></li>
+          
+          <li><a href="#method-i-dump_summary">#dump_summary</a></li>
+          
+          <li><a href="#method-i-failure_color">#failure_color</a></li>
+          
+          <li><a href="#method-i-fixed_color">#fixed_color</a></li>
+          
+          <li><a href="#method-i-green">#green</a></li>
+          
+          <li><a href="#method-i-long_padding">#long_padding</a></li>
+          
+          <li><a href="#method-i-magenta">#magenta</a></li>
+          
+          <li><a href="#method-i-message">#message</a></li>
+          
+          <li><a href="#method-i-pending_color">#pending_color</a></li>
+          
+          <li><a href="#method-i-red">#red</a></li>
+          
+          <li><a href="#method-i-seed">#seed</a></li>
+          
+          <li><a href="#method-i-short_padding">#short_padding</a></li>
+          
+          <li><a href="#method-i-success_color">#success_color</a></li>
+          
+          <li><a href="#method-i-summary_line">#summary_line</a></li>
+          
+          <li><a href="#method-i-white">#white</a></li>
+          
+          <li><a href="#method-i-yellow">#yellow</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../../RSpec.html">RSpec</a></li>
+        
+          <li><a href="../../../RSpec/CallerFilter.html">RSpec::CallerFilter</a></li>
+        
+          <li><a href="../../../RSpec/Core.html">RSpec::Core</a></li>
+        
+          <li><a href="../../../RSpec/Core/BacktraceCleaner.html">RSpec::Core::BacktraceCleaner</a></li>
+        
+          <li><a href="../../../RSpec/Core/BacktraceFormatter.html">RSpec::Core::BacktraceFormatter</a></li>
+        
+          <li><a href="../../../RSpec/Core/CommandLine.html">RSpec::Core::CommandLine</a></li>
+        
+          <li><a href="../../../RSpec/Core/Configuration.html">RSpec::Core::Configuration</a></li>
+        
+          <li><a href="../../../RSpec/Core/Configuration/ExposeCurrentExample.html">RSpec::Core::Configuration::ExposeCurrentExample</a></li>
+        
+          <li><a href="../../../RSpec/Core/Configuration/MustBeConfiguredBeforeExampleGroupsError.html">RSpec::Core::Configuration::MustBeConfiguredBeforeExampleGroupsError</a></li>
+        
+          <li><a href="../../../RSpec/Core/ConfigurationOptions.html">RSpec::Core::ConfigurationOptions</a></li>
+        
+          <li><a href="../../../RSpec/Core/ConstMissing.html">RSpec::Core::ConstMissing</a></li>
+        
+          <li><a href="../../../RSpec/Core/DRbCommandLine.html">RSpec::Core::DRbCommandLine</a></li>
+        
+          <li><a href="../../../RSpec/Core/DSL.html">RSpec::Core::DSL</a></li>
+        
+          <li><a href="../../../RSpec/Core/DeprecatedMutableArrayProxy.html">RSpec::Core::DeprecatedMutableArrayProxy</a></li>
+        
+          <li><a href="../../../RSpec/Core/Deprecation.html">RSpec::Core::Deprecation</a></li>
+        
+          <li><a href="../../../RSpec/Core/DrbOptions.html">RSpec::Core::DrbOptions</a></li>
+        
+          <li><a href="../../../RSpec/Core/Example.html">RSpec::Core::Example</a></li>
+        
+          <li><a href="../../../RSpec/Core/Example/Procsy.html">RSpec::Core::Example::Procsy</a></li>
+        
+          <li><a href="../../../RSpec/Core/ExampleGroup.html">RSpec::Core::ExampleGroup</a></li>
+        
+          <li><a href="../../../RSpec/Core/Extensions.html">RSpec::Core::Extensions</a></li>
+        
+          <li><a href="../../../RSpec/Core/Extensions/InstanceEvalWithArgs.html">RSpec::Core::Extensions::InstanceEvalWithArgs</a></li>
+        
+          <li><a href="../../../RSpec/Core/Extensions/ModuleEvalWithArgs.html">RSpec::Core::Extensions::ModuleEvalWithArgs</a></li>
+        
+          <li><a href="../../../RSpec/Core/Extensions/Ordered.html">RSpec::Core::Extensions::Ordered</a></li>
+        
+          <li><a href="../../../RSpec/Core/Extensions/Ordered/ExampleGroups.html">RSpec::Core::Extensions::Ordered::ExampleGroups</a></li>
+        
+          <li><a href="../../../RSpec/Core/Extensions/Ordered/Examples.html">RSpec::Core::Extensions::Ordered::Examples</a></li>
+        
+          <li><a href="../../../RSpec/Core/FilterManager.html">RSpec::Core::FilterManager</a></li>
+        
+          <li><a href="../../../RSpec/Core/FilterManager/BackwardCompatibility.html">RSpec::Core::FilterManager::BackwardCompatibility</a></li>
+        
+          <li><a href="../../../RSpec/Core/FilterManager/Describable.html">RSpec::Core::FilterManager::Describable</a></li>
+        
+          <li><a href="../../../RSpec/Core/Formatters.html">RSpec::Core::Formatters</a></li>
+        
+          <li><a href="../../../RSpec/Core/Formatters/BaseFormatter.html">RSpec::Core::Formatters::BaseFormatter</a></li>
+        
+          <li><a href="../../../RSpec/Core/Formatters/BaseTextFormatter.html">RSpec::Core::Formatters::BaseTextFormatter</a></li>
+        
+          <li><a href="../../../RSpec/Core/Formatters/ConsoleCodes.html">RSpec::Core::Formatters::ConsoleCodes</a></li>
+        
+          <li><a href="../../../RSpec/Core/Formatters/DeprecationFormatter.html">RSpec::Core::Formatters::DeprecationFormatter</a></li>
+        
+          <li><a href="../../../RSpec/Core/Formatters/DeprecationFormatter/DelayedPrinter.html">RSpec::Core::Formatters::DeprecationFormatter::DelayedPrinter</a></li>
+        
+          <li><a href="../../../RSpec/Core/Formatters/DeprecationFormatter/FileStream.html">RSpec::Core::Formatters::DeprecationFormatter::FileStream</a></li>
+        
+          <li><a href="../../../RSpec/Core/Formatters/DeprecationFormatter/ImmediatePrinter.html">RSpec::Core::Formatters::DeprecationFormatter::ImmediatePrinter</a></li>
+        
+          <li><a href="../../../RSpec/Core/Formatters/DeprecationFormatter/RaiseErrorStream.html">RSpec::Core::Formatters::DeprecationFormatter::RaiseErrorStream</a></li>
+        
+          <li><a href="../../../RSpec/Core/Formatters/DocumentationFormatter.html">RSpec::Core::Formatters::DocumentationFormatter</a></li>
+        
+          <li><a href="../../../RSpec/Core/Formatters/Helpers.html">RSpec::Core::Formatters::Helpers</a></li>
+        
+          <li><a href="../../../RSpec/Core/Formatters/HtmlFormatter.html">RSpec::Core::Formatters::HtmlFormatter</a></li>
+        
+          <li><a href="../../../RSpec/Core/Formatters/HtmlPrinter.html">RSpec::Core::Formatters::HtmlPrinter</a></li>
+        
+          <li><a href="../../../RSpec/Core/Formatters/JsonFormatter.html">RSpec::Core::Formatters::JsonFormatter</a></li>
+        
+          <li><a href="../../../RSpec/Core/Formatters/Loader.html">RSpec::Core::Formatters::Loader</a></li>
+        
+          <li><a href="../../../RSpec/Core/Formatters/ProgressFormatter.html">RSpec::Core::Formatters::ProgressFormatter</a></li>
+        
+          <li><a href="../../../RSpec/Core/Formatters/SnippetExtractor.html">RSpec::Core::Formatters::SnippetExtractor</a></li>
+        
+          <li><a href="../../../RSpec/Core/Formatters/SnippetExtractor/NullConverter.html">RSpec::Core::Formatters::SnippetExtractor::NullConverter</a></li>
+        
+          <li><a href="../../../RSpec/Core/Formatters/TextMateFormatter.html">RSpec::Core::Formatters::TextMateFormatter</a></li>
+        
+          <li><a href="../../../RSpec/Core/Hooks.html">RSpec::Core::Hooks</a></li>
+        
+          <li><a href="../../../RSpec/Core/Hooks/AfterAllHook.html">RSpec::Core::Hooks::AfterAllHook</a></li>
+        
+          <li><a href="../../../RSpec/Core/Hooks/AfterHook.html">RSpec::Core::Hooks::AfterHook</a></li>
+        
+          <li><a href="../../../RSpec/Core/Hooks/AroundHook.html">RSpec::Core::Hooks::AroundHook</a></li>
+        
+          <li><a href="../../../RSpec/Core/Hooks/AroundHookCollection.html">RSpec::Core::Hooks::AroundHookCollection</a></li>
+        
+          <li><a href="../../../RSpec/Core/Hooks/BeforeHook.html">RSpec::Core::Hooks::BeforeHook</a></li>
+        
+          <li><a href="../../../RSpec/Core/Hooks/GroupHookCollection.html">RSpec::Core::Hooks::GroupHookCollection</a></li>
+        
+          <li><a href="../../../RSpec/Core/Hooks/Hook.html">RSpec::Core::Hooks::Hook</a></li>
+        
+          <li><a href="../../../RSpec/Core/Hooks/HookCollection.html">RSpec::Core::Hooks::HookCollection</a></li>
+        
+          <li><a href="../../../RSpec/Core/Hooks/HookCollectionAliases.html">RSpec::Core::Hooks::HookCollectionAliases</a></li>
+        
+          <li><a href="../../../RSpec/Core/Hooks/RegistersGlobals.html">RSpec::Core::Hooks::RegistersGlobals</a></li>
+        
+          <li><a href="../../../RSpec/Core/MemoizedHelpers.html">RSpec::Core::MemoizedHelpers</a></li>
+        
+          <li><a href="../../../RSpec/Core/MemoizedHelpers/AllHookMemoizedHash.html">RSpec::Core::MemoizedHelpers::AllHookMemoizedHash</a></li>
+        
+          <li><a href="../../../RSpec/Core/MemoizedHelpers/AllHookMemoizedHash/After.html">RSpec::Core::MemoizedHelpers::AllHookMemoizedHash::After</a></li>
+        
+          <li><a href="../../../RSpec/Core/MemoizedHelpers/AllHookMemoizedHash/Before.html">RSpec::Core::MemoizedHelpers::AllHookMemoizedHash::Before</a></li>
+        
+          <li><a href="../../../RSpec/Core/MemoizedHelpers/ClassMethods.html">RSpec::Core::MemoizedHelpers::ClassMethods</a></li>
+        
+          <li><a href="../../../RSpec/Core/Metadata.html">RSpec::Core::Metadata</a></li>
+        
+          <li><a href="../../../RSpec/Core/Metadata/ExampleMetadataHash.html">RSpec::Core::Metadata::ExampleMetadataHash</a></li>
+        
+          <li><a href="../../../RSpec/Core/Metadata/GroupMetadataHash.html">RSpec::Core::Metadata::GroupMetadataHash</a></li>
+        
+          <li><a href="../../../RSpec/Core/Metadata/MetadataHash.html">RSpec::Core::Metadata::MetadataHash</a></li>
+        
+          <li><a href="../../../RSpec/Core/MetadataHashBuilder.html">RSpec::Core::MetadataHashBuilder</a></li>
+        
+          <li><a href="../../../RSpec/Core/MetadataHashBuilder/Common.html">RSpec::Core::MetadataHashBuilder::Common</a></li>
+        
+          <li><a href="../../../RSpec/Core/MetadataHashBuilder/WithConfigWarning.html">RSpec::Core::MetadataHashBuilder::WithConfigWarning</a></li>
+        
+          <li><a href="../../../RSpec/Core/MetadataHashBuilder/WithDeprecationWarning.html">RSpec::Core::MetadataHashBuilder::WithDeprecationWarning</a></li>
+        
+          <li><a href="../../../RSpec/Core/MinitestAssertionsAdapter.html">RSpec::Core::MinitestAssertionsAdapter</a></li>
+        
+          <li><a href="../../../RSpec/Core/MockFrameworkAdapter.html">RSpec::Core::MockFrameworkAdapter</a></li>
+        
+          <li><a href="../../../RSpec/Core/Parser.html">RSpec::Core::Parser</a></li>
+        
+          <li><a href="../../../RSpec/Core/Pending.html">RSpec::Core::Pending</a></li>
+        
+          <li><a href="../../../RSpec/Core/Pending/PendingExampleFixedError.html">RSpec::Core::Pending::PendingExampleFixedError</a></li>
+        
+          <li><a href="../../../RSpec/Core/Pending/SkipDeclaredInExample.html">RSpec::Core::Pending::SkipDeclaredInExample</a></li>
+        
+          <li><a href="../../../RSpec/Core/ProjectInitializer.html">RSpec::Core::ProjectInitializer</a></li>
+        
+          <li><a href="../../../RSpec/Core/RakeTask.html">RSpec::Core::RakeTask</a></li>
+        
+          <li><a href="../../../RSpec/Core/Reporter.html">RSpec::Core::Reporter</a></li>
+        
+          <li><a href="../../../RSpec/Core/RubyProject.html">RSpec::Core::RubyProject</a></li>
+        
+          <li><a href="../../../RSpec/Core/Runner.html">RSpec::Core::Runner</a></li>
+        
+          <li><a href="../../../RSpec/Core/SharedContext.html">RSpec::Core::SharedContext</a></li>
+        
+          <li><a href="../../../RSpec/Core/SharedExampleGroup.html">RSpec::Core::SharedExampleGroup</a></li>
+        
+          <li><a href="../../../RSpec/Core/SharedExampleGroup/Collection.html">RSpec::Core::SharedExampleGroup::Collection</a></li>
+        
+          <li><a href="../../../RSpec/Core/SharedExampleGroup/Registry.html">RSpec::Core::SharedExampleGroup::Registry</a></li>
+        
+          <li><a href="../../../RSpec/Core/SharedExampleGroup/TopLevelDSL.html">RSpec::Core::SharedExampleGroup::TopLevelDSL</a></li>
+        
+          <li><a href="../../../RSpec/Core/TestUnitAssertionsAdapter.html">RSpec::Core::TestUnitAssertionsAdapter</a></li>
+        
+          <li><a href="../../../RSpec/Core/Time.html">RSpec::Core::Time</a></li>
+        
+          <li><a href="../../../RSpec/Core/Version.html">RSpec::Core::Version</a></li>
+        
+          <li><a href="../../../RSpec/Core/World.html">RSpec::Core::World</a></li>
+        
+          <li><a href="../../../RSpec/Rake.html">RSpec::Rake</a></li>
+        
+          <li><a href="../../../RSpec/Runner.html">RSpec::Runner</a></li>
+        
+          <li><a href="../../../Autotest.html">Autotest</a></li>
+        
+          <li><a href="../../../Autotest/Rspec2.html">Autotest::Rspec2</a></li>
+        
+          <li><a href="../../../Kernel.html">Kernel</a></li>
+        
+          <li><a href="../../../Object.html">Object</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">RSpec::Core::Formatters::BaseTextFormatter</h1>
+
+    <div id="description" class="description">
+      
+<p>Base for all of RSpec's built-in formatters. See <a
+href="BaseFormatter.html">RSpec::Core::Formatters::BaseFormatter</a> to
+learn more about all of the methods called by the reporter.</p>
+
+<p>@see <a
+href="BaseFormatter.html">RSpec::Core::Formatters::BaseFormatter</a> @see
+<a href="../Reporter.html">RSpec::Core::Reporter</a></p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="const_missing-method" class="method-detail ">
+          <a name="method-c-const_missing"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">const_missing</span><span
+              class="method-args">(name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="const_missing-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/base_text_formatter.rb, line 171</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">const_missing</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-identifier">base</span> = <span class="ruby-string">&quot;RSpec::Core::Formatters::&quot;</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">name</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-value">:VT100_COLORS</span> <span class="ruby-keyword">then</span>
+      <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">deprecate</span>(<span class="ruby-node">&quot;#{base}#{name}&quot;</span>, <span class="ruby-value">:replacement</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;#{base}ConsoleCodes::VT100_CODES&quot;</span>)
+      <span class="ruby-constant">RSpec</span><span class="ruby-operator">::</span><span class="ruby-constant">Core</span><span class="ruby-operator">::</span><span class="ruby-constant">Formatters</span><span class="ruby-operator">::</span><span class="ruby-constant">ConsoleCodes</span><span class="ruby-operator">::</span><span class="ruby-constant">VT100_CODES</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-value">:VT100_COLOR_CODES</span> <span class="ruby-keyword">then</span>
+      <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">deprecate</span>(<span class="ruby-node">&quot;#{base}#{name}&quot;</span>, <span class="ruby-value">:replacement</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;#{base}ConsoleCodes::VT100_CODE_VALUES&quot;</span>)
+      <span class="ruby-identifier">require</span> <span class="ruby-string">'set'</span>
+      <span class="ruby-constant">RSpec</span><span class="ruby-operator">::</span><span class="ruby-constant">Core</span><span class="ruby-operator">::</span><span class="ruby-constant">Formatters</span><span class="ruby-operator">::</span><span class="ruby-constant">ConsoleCodes</span><span class="ruby-operator">::</span><span class="ruby-constant">VT100_CODES</span>.<span class="ruby-identifier">to_set</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">super</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- const_missing-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- const_missing-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="close-method" class="method-detail ">
+          <a name="method-i-close"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">close</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="close-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/base_text_formatter.rb, line 164</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">close</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-constant">IO</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">output</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">output</span>.<span class="ruby-identifier">closed?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">output</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">$stdout</span>
+
+  <span class="ruby-identifier">output</span>.<span class="ruby-identifier">close</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- close-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- close-method -->
+
+      
+        <div id="color_code_for-method" class="method-detail ">
+          <a name="method-i-color_code_for"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">color_code_for</span><span
+              class="method-args">(code_or_symbol)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="color_code_for-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/base_text_formatter.rb, line 186</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">color_code_for</span>(<span class="ruby-identifier">code_or_symbol</span>)
+  <span class="ruby-constant">ConsoleCodes</span>.<span class="ruby-identifier">console_code_for</span>(<span class="ruby-identifier">code_or_symbol</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- color_code_for-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- color_code_for-method -->
+
+      
+        <div id="colorise_summary-method" class="method-detail ">
+          <a name="method-i-colorise_summary"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">colorise_summary</span><span
+              class="method-args">(summary)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@api public</p>
+
+<p>Colorizes the output red for failure, yellow for pending, and green
+otherwise.</p>
+
+<p>@param [String] string</p>
+            
+
+            
+            <div class="method-source-code" id="colorise_summary-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/base_text_formatter.rb, line 35</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">colorise_summary</span>(<span class="ruby-identifier">summary</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">failure_count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">color</span>(<span class="ruby-identifier">summary</span>, <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">configuration</span>.<span class="ruby-identifier">failure_color</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">pending_count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">color</span>(<span class="ruby-identifier">summary</span>, <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">configuration</span>.<span class="ruby-identifier">pending_color</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">color</span>(<span class="ruby-identifier">summary</span>, <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">configuration</span>.<span class="ruby-identifier">success_color</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- colorise_summary-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- colorise_summary-method -->
+
+      
+        <div id="colorize-method" class="method-detail ">
+          <a name="method-i-colorize"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">colorize</span><span
+              class="method-args">(text, code_or_symbol)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="colorize-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/base_text_formatter.rb, line 190</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">colorize</span>(<span class="ruby-identifier">text</span>, <span class="ruby-identifier">code_or_symbol</span>)
+  <span class="ruby-constant">ConsoleCodes</span>.<span class="ruby-identifier">wrap</span>(<span class="ruby-identifier">text</span>, <span class="ruby-identifier">code_or_symbol</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- colorize-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- colorize-method -->
+
+      
+        <div id="dump_commands_to_rerun_failed_examples-method" class="method-detail ">
+          <a name="method-i-dump_commands_to_rerun_failed_examples"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">dump_commands_to_rerun_failed_examples</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@api public</p>
+
+<p>Outputs commands which can be used to re-run failed examples.</p>
+            
+
+            
+            <div class="method-source-code" id="dump_commands_to_rerun_failed_examples-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/base_text_formatter.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">dump_commands_to_rerun_failed_examples</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">failed_examples</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span>
+  <span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-string">&quot;Failed examples:&quot;</span>)
+  <span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span>
+
+  <span class="ruby-identifier">failed_examples</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">example</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-identifier">failure_color</span>(<span class="ruby-node">&quot;rspec #{RSpec::Core::Metadata::relative_path(example.location)}&quot;</span>) <span class="ruby-operator">+</span> <span class="ruby-string">&quot; &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">detail_color</span>(<span class="ruby-node">&quot;# #{example.full_description}&quot;</span>))
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- dump_commands_to_rerun_failed_examples-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- dump_commands_to_rerun_failed_examples-method -->
+
+      
+        <div id="dump_failures-method" class="method-detail ">
+          <a name="method-i-dump_failures"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">dump_failures</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="dump_failures-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/base_text_formatter.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">dump_failures</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">failed_examples</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span>
+  <span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Failures:&quot;</span>
+  <span class="ruby-identifier">failed_examples</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">example</span>, <span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span>
+    <span class="ruby-identifier">pending_fixed?</span>(<span class="ruby-identifier">example</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">dump_pending_fixed</span>(<span class="ruby-identifier">example</span>, <span class="ruby-identifier">index</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">dump_failure</span>(<span class="ruby-identifier">example</span>, <span class="ruby-identifier">index</span>)
+    <span class="ruby-identifier">dump_backtrace</span>(<span class="ruby-identifier">example</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- dump_failures-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- dump_failures-method -->
+
+      
+        <div id="dump_pending-method" class="method-detail ">
+          <a name="method-i-dump_pending"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">dump_pending</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="dump_pending-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/base_text_formatter.rb, line 139</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">dump_pending</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">pending_examples</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span>
+    <span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Pending:&quot;</span>
+    <span class="ruby-identifier">pending_examples</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">pending_example</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">pending_color</span>(<span class="ruby-node">&quot;  #{pending_example.full_description}&quot;</span>)
+      <span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">detail_color</span>(<span class="ruby-node">&quot;    # #{pending_example.execution_result[:pending_message]}&quot;</span>)
+      <span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">detail_color</span>(<span class="ruby-node">&quot;    # #{format_caller(pending_example.location)}&quot;</span>)
+      <span class="ruby-comment"># instance_variable_get is a hack to avoid a deprecation warning,</span>
+      <span class="ruby-comment"># it's only for 2.99.</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">pending_example</span>.<span class="ruby-identifier">execution_result</span>[<span class="ruby-value">:exception</span>]                  <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">configuration</span>.<span class="ruby-identifier">instance_variable_get</span>(<span class="ruby-value">:@show_failures_in_pending_blocks</span>)
+        <span class="ruby-identifier">dump_failure_info</span>(<span class="ruby-identifier">pending_example</span>)
+        <span class="ruby-identifier">dump_backtrace</span>(<span class="ruby-identifier">pending_example</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- dump_pending-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- dump_pending-method -->
+
+      
+        <div id="dump_profile-method" class="method-detail ">
+          <a name="method-i-dump_profile"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">dump_profile</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@api public</p>
+
+<p>Outputs the slowest examples and example groups in a report when using
+`--profile COUNT` (default 10).</p>
+            
+
+            
+            <div class="method-source-code" id="dump_profile-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/base_text_formatter.rb, line 72</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">dump_profile</span>
+  <span class="ruby-identifier">dump_profile_slowest_examples</span>
+  <span class="ruby-identifier">dump_profile_slowest_example_groups</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- dump_profile-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- dump_profile-method -->
+
+      
+        <div id="dump_profile_slowest_example_groups-method" class="method-detail ">
+          <a name="method-i-dump_profile_slowest_example_groups"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">dump_profile_slowest_example_groups</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="dump_profile_slowest_example_groups-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/base_text_formatter.rb, line 96</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">dump_profile_slowest_example_groups</span>
+  <span class="ruby-identifier">number_of_examples</span> = <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">configuration</span>.<span class="ruby-identifier">profile_examples</span>
+  <span class="ruby-identifier">example_groups</span> = {}
+
+  <span class="ruby-identifier">examples</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">example</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">location</span> = <span class="ruby-identifier">example</span>.<span class="ruby-identifier">example_group</span>.<span class="ruby-identifier">parent_groups</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">metadata</span>[<span class="ruby-value">:example_group</span>][<span class="ruby-value">:location</span>]
+
+    <span class="ruby-identifier">example_groups</span>[<span class="ruby-identifier">location</span>] <span class="ruby-operator">||=</span> <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>)
+    <span class="ruby-identifier">example_groups</span>[<span class="ruby-identifier">location</span>][<span class="ruby-value">:total_time</span>]  <span class="ruby-operator">+=</span> <span class="ruby-identifier">example</span>.<span class="ruby-identifier">execution_result</span>[<span class="ruby-value">:run_time</span>]
+    <span class="ruby-identifier">example_groups</span>[<span class="ruby-identifier">location</span>][<span class="ruby-value">:count</span>]       <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">example_groups</span>[<span class="ruby-identifier">location</span>][<span class="ruby-value">:description</span>] = <span class="ruby-identifier">example</span>.<span class="ruby-identifier">example_group</span>.<span class="ruby-identifier">top_level_description</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">example_groups</span>[<span class="ruby-identifier">location</span>].<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:description</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># stop if we've only one example group</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">example_groups</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">1</span>
+
+  <span class="ruby-identifier">example_groups</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">loc</span>, <span class="ruby-identifier">hash</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">hash</span>[<span class="ruby-value">:average</span>] = <span class="ruby-identifier">hash</span>[<span class="ruby-value">:total_time</span>].<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">hash</span>[<span class="ruby-value">:count</span>]
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">sorted_groups</span> = <span class="ruby-identifier">example_groups</span>.<span class="ruby-identifier">sort_by</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">_</span>, <span class="ruby-identifier">hash</span><span class="ruby-operator">|</span> <span class="ruby-operator">-</span><span class="ruby-identifier">hash</span>[<span class="ruby-value">:average</span>]}.<span class="ruby-identifier">first</span>(<span class="ruby-identifier">number_of_examples</span>)
+
+  <span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;\nTop #{sorted_groups.size} slowest example groups:&quot;</span>
+  <span class="ruby-identifier">sorted_groups</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">loc</span>, <span class="ruby-identifier">hash</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">average</span> = <span class="ruby-node">&quot;#{failure_color(format_seconds(hash[:average]))} #{failure_color(&quot;seconds&quot;)} average&quot;</span>
+    <span class="ruby-identifier">total</span>   = <span class="ruby-node">&quot;#{format_seconds(hash[:total_time])} seconds&quot;</span>
+    <span class="ruby-identifier">count</span>   = <span class="ruby-identifier">pluralize</span>(<span class="ruby-identifier">hash</span>[<span class="ruby-value">:count</span>], <span class="ruby-string">&quot;example&quot;</span>)
+    <span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;  #{hash[:description]}&quot;</span>
+    <span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">detail_color</span>(<span class="ruby-node">&quot;    #{average} (#{total} / #{count}) #{loc}&quot;</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- dump_profile_slowest_example_groups-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- dump_profile_slowest_example_groups-method -->
+
+      
+        <div id="dump_profile_slowest_examples-method" class="method-detail ">
+          <a name="method-i-dump_profile_slowest_examples"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">dump_profile_slowest_examples</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="dump_profile_slowest_examples-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/base_text_formatter.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">dump_profile_slowest_examples</span>
+  <span class="ruby-identifier">number_of_examples</span> = <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">configuration</span>.<span class="ruby-identifier">profile_examples</span>
+  <span class="ruby-identifier">sorted_examples</span> = <span class="ruby-identifier">examples</span>.<span class="ruby-identifier">sort_by</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">example</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">example</span>.<span class="ruby-identifier">execution_result</span>[<span class="ruby-value">:run_time</span>] }.<span class="ruby-identifier">reverse</span>.<span class="ruby-identifier">first</span>(<span class="ruby-identifier">number_of_examples</span>)
+
+  <span class="ruby-identifier">total</span>, <span class="ruby-identifier">slows</span> = [<span class="ruby-identifier">examples</span>, <span class="ruby-identifier">sorted_examples</span>].<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">exs</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">exs</span>.<span class="ruby-identifier">inject</span>(<span class="ruby-value">0.0</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span>, <span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">execution_result</span>[<span class="ruby-value">:run_time</span>] }}
+
+  <span class="ruby-identifier">time_taken</span> = <span class="ruby-identifier">slows</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">total</span>
+  <span class="ruby-identifier">percentage</span> = <span class="ruby-string">'%.1f'</span> <span class="ruby-operator">%</span> ((<span class="ruby-identifier">time_taken</span>.<span class="ruby-identifier">nan?</span> <span class="ruby-operator">?</span> <span class="ruby-value">0.0</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">time_taken</span>) * <span class="ruby-value">100</span>)
+
+  <span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;\nTop #{sorted_examples.size} slowest examples (#{format_seconds(slows)} seconds, #{percentage}% of total time):\n&quot;</span>
+
+  <span class="ruby-identifier">sorted_examples</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">example</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;  #{example.full_description}&quot;</span>
+    <span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">detail_color</span>(<span class="ruby-node">&quot;    #{failure_color(format_seconds(example.execution_result[:run_time]))} #{failure_color(&quot;seconds&quot;)} #{format_caller(example.location)}&quot;</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- dump_profile_slowest_examples-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- dump_profile_slowest_examples-method -->
+
+      
+        <div id="dump_summary-method" class="method-detail ">
+          <a name="method-i-dump_summary"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">dump_summary</span><span
+              class="method-args">(duration, example_count, failure_count, pending_count)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="dump_summary-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/base_text_formatter.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">dump_summary</span>(<span class="ruby-identifier">duration</span>, <span class="ruby-identifier">example_count</span>, <span class="ruby-identifier">failure_count</span>, <span class="ruby-identifier">pending_count</span>)
+  <span class="ruby-keyword">super</span>(<span class="ruby-identifier">duration</span>, <span class="ruby-identifier">example_count</span>, <span class="ruby-identifier">failure_count</span>, <span class="ruby-identifier">pending_count</span>)
+  <span class="ruby-identifier">dump_profile</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">mute_profile_output?</span>(<span class="ruby-identifier">failure_count</span>)
+  <span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;\nFinished in #{format_duration(duration)}\n&quot;</span>
+  <span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">colorise_summary</span>(<span class="ruby-identifier">summary_line</span>(<span class="ruby-identifier">example_count</span>, <span class="ruby-identifier">failure_count</span>, <span class="ruby-identifier">pending_count</span>))
+  <span class="ruby-identifier">dump_commands_to_rerun_failed_examples</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- dump_summary-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- dump_summary-method -->
+
+      
+        <div id="message-method" class="method-detail ">
+          <a name="method-i-message"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">message</span><span
+              class="method-args">(message)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="message-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/base_text_formatter.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">message</span>(<span class="ruby-identifier">message</span>)
+  <span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">message</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- message-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- message-method -->
+
+      
+        <div id="seed-method" class="method-detail ">
+          <a name="method-i-seed"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">seed</span><span
+              class="method-args">(number)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="seed-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/base_text_formatter.rb, line 158</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">seed</span>(<span class="ruby-identifier">number</span>)
+  <span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span>
+  <span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Randomized with seed #{number}&quot;</span>
+  <span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- seed-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- seed-method -->
+
+      
+        <div id="summary_line-method" class="method-detail ">
+          <a name="method-i-summary_line"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">summary_line</span><span
+              class="method-args">(example_count, failure_count, pending_count)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@api public</p>
+
+<p>Outputs summary with number of examples, failures and pending.</p>
+            
+
+            
+            <div class="method-source-code" id="summary_line-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/base_text_formatter.rb, line 132</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">summary_line</span>(<span class="ruby-identifier">example_count</span>, <span class="ruby-identifier">failure_count</span>, <span class="ruby-identifier">pending_count</span>)
+  <span class="ruby-identifier">summary</span> = <span class="ruby-identifier">pluralize</span>(<span class="ruby-identifier">example_count</span>, <span class="ruby-string">&quot;example&quot;</span>)
+  <span class="ruby-identifier">summary</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;, &quot;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">pluralize</span>(<span class="ruby-identifier">failure_count</span>, <span class="ruby-string">&quot;failure&quot;</span>)
+  <span class="ruby-identifier">summary</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;, #{pending_count} pending&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">pending_count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+  <span class="ruby-identifier">summary</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- summary_line-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- summary_line-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+      <div id="protected-instance-method-details" class="method-section section">
+        <h3 class="section-header">Protected Instance Methods</h3>
+
+      
+        <div id="blue-method" class="method-detail ">
+          <a name="method-i-blue"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">blue</span><span
+              class="method-args">(text)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="blue-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/base_text_formatter.rb, line 243</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">blue</span>(<span class="ruby-identifier">text</span>)
+  <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">deprecate</span>(<span class="ruby-node">&quot;RSpec::Core::Formatters::BaseTextFormatter#blue&quot;</span>, <span class="ruby-value">:replacement</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;#fixed_color&quot;</span>)
+  <span class="ruby-identifier">color</span>(<span class="ruby-identifier">text</span>, <span class="ruby-value">:blue</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- blue-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- blue-method -->
+
+      
+        <div id="bold-method" class="method-detail ">
+          <a name="method-i-bold"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">bold</span><span
+              class="method-args">(text)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="bold-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/base_text_formatter.rb, line 196</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">bold</span>(<span class="ruby-identifier">text</span>)
+  <span class="ruby-constant">ConsoleCodes</span>.<span class="ruby-identifier">wrap</span>(<span class="ruby-identifier">text</span>, <span class="ruby-value">:bold</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- bold-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- bold-method -->
+
+      
+        <div id="color-method" class="method-detail ">
+          <a name="method-i-color"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">color</span><span
+              class="method-args">(text, color_code)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="color-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/base_text_formatter.rb, line 200</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">color</span>(<span class="ruby-identifier">text</span>, <span class="ruby-identifier">color_code</span>)
+  <span class="ruby-constant">ConsoleCodes</span>.<span class="ruby-identifier">wrap</span>(<span class="ruby-identifier">text</span>, <span class="ruby-identifier">color_code</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- color-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- color-method -->
+
+      
+        <div id="cyan-method" class="method-detail ">
+          <a name="method-i-cyan"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">cyan</span><span
+              class="method-args">(text)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="cyan-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/base_text_formatter.rb, line 253</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">cyan</span>(<span class="ruby-identifier">text</span>)
+  <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">deprecate</span>(<span class="ruby-node">&quot;RSpec::Core::Formatters::BaseTextFormatter#cyan&quot;</span>, <span class="ruby-value">:replacement</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;#detail_color&quot;</span>)
+  <span class="ruby-identifier">color</span>(<span class="ruby-identifier">text</span>, <span class="ruby-value">:cyan</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- cyan-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- cyan-method -->
+
+      
+        <div id="default_color-method" class="method-detail ">
+          <a name="method-i-default_color"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">default_color</span><span
+              class="method-args">(text)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="default_color-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/base_text_formatter.rb, line 224</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">default_color</span>(<span class="ruby-identifier">text</span>)
+  <span class="ruby-identifier">color</span>(<span class="ruby-identifier">text</span>, <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">configuration</span>.<span class="ruby-identifier">default_color</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- default_color-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- default_color-method -->
+
+      
+        <div id="detail_color-method" class="method-detail ">
+          <a name="method-i-detail_color"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">detail_color</span><span
+              class="method-args">(text)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="detail_color-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/base_text_formatter.rb, line 220</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">detail_color</span>(<span class="ruby-identifier">text</span>)
+  <span class="ruby-identifier">color</span>(<span class="ruby-identifier">text</span>, <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">configuration</span>.<span class="ruby-identifier">detail_color</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- detail_color-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- detail_color-method -->
+
+      
+        <div id="failure_color-method" class="method-detail ">
+          <a name="method-i-failure_color"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">failure_color</span><span
+              class="method-args">(text)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="failure_color-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/base_text_formatter.rb, line 204</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">failure_color</span>(<span class="ruby-identifier">text</span>)
+  <span class="ruby-identifier">color</span>(<span class="ruby-identifier">text</span>, <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">configuration</span>.<span class="ruby-identifier">failure_color</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- failure_color-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- failure_color-method -->
+
+      
+        <div id="fixed_color-method" class="method-detail ">
+          <a name="method-i-fixed_color"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">fixed_color</span><span
+              class="method-args">(text)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="fixed_color-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/base_text_formatter.rb, line 216</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">fixed_color</span>(<span class="ruby-identifier">text</span>)
+  <span class="ruby-identifier">color</span>(<span class="ruby-identifier">text</span>, <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">configuration</span>.<span class="ruby-identifier">fixed_color</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- fixed_color-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- fixed_color-method -->
+
+      
+        <div id="green-method" class="method-detail ">
+          <a name="method-i-green"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">green</span><span
+              class="method-args">(text)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="green-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/base_text_formatter.rb, line 233</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">green</span>(<span class="ruby-identifier">text</span>)
+  <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">deprecate</span>(<span class="ruby-node">&quot;RSpec::Core::Formatters::BaseTextFormatter#green&quot;</span>, <span class="ruby-value">:replacement</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;#success_color&quot;</span>)
+  <span class="ruby-identifier">color</span>(<span class="ruby-identifier">text</span>, <span class="ruby-value">:green</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- green-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- green-method -->
+
+      
+        <div id="long_padding-method" class="method-detail ">
+          <a name="method-i-long_padding"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">long_padding</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="long_padding-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/base_text_formatter.rb, line 267</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">long_padding</span>
+  <span class="ruby-string">'     '</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- long_padding-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- long_padding-method -->
+
+      
+        <div id="magenta-method" class="method-detail ">
+          <a name="method-i-magenta"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">magenta</span><span
+              class="method-args">(text)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="magenta-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/base_text_formatter.rb, line 248</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">magenta</span>(<span class="ruby-identifier">text</span>)
+  <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">deprecate</span>(<span class="ruby-node">&quot;RSpec::Core::Formatters::BaseTextFormatter#magenta&quot;</span>)
+  <span class="ruby-identifier">color</span>(<span class="ruby-identifier">text</span>, <span class="ruby-value">:magenta</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- magenta-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- magenta-method -->
+
+      
+        <div id="pending_color-method" class="method-detail ">
+          <a name="method-i-pending_color"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">pending_color</span><span
+              class="method-args">(text)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="pending_color-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/base_text_formatter.rb, line 212</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">pending_color</span>(<span class="ruby-identifier">text</span>)
+  <span class="ruby-identifier">color</span>(<span class="ruby-identifier">text</span>, <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">configuration</span>.<span class="ruby-identifier">pending_color</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- pending_color-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- pending_color-method -->
+
+      
+        <div id="red-method" class="method-detail ">
+          <a name="method-i-red"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">red</span><span
+              class="method-args">(text)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="red-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/base_text_formatter.rb, line 228</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">red</span>(<span class="ruby-identifier">text</span>)
+  <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">deprecate</span>(<span class="ruby-node">&quot;RSpec::Core::Formatters::BaseTextFormatter#red&quot;</span>, <span class="ruby-value">:replacement</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;#failure_color&quot;</span>)
+  <span class="ruby-identifier">color</span>(<span class="ruby-identifier">text</span>, <span class="ruby-value">:red</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- red-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- red-method -->
+
+      
+        <div id="short_padding-method" class="method-detail ">
+          <a name="method-i-short_padding"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">short_padding</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="short_padding-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/base_text_formatter.rb, line 263</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">short_padding</span>
+  <span class="ruby-string">'  '</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- short_padding-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- short_padding-method -->
+
+      
+        <div id="success_color-method" class="method-detail ">
+          <a name="method-i-success_color"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">success_color</span><span
+              class="method-args">(text)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="success_color-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/base_text_formatter.rb, line 208</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">success_color</span>(<span class="ruby-identifier">text</span>)
+  <span class="ruby-identifier">color</span>(<span class="ruby-identifier">text</span>, <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">configuration</span>.<span class="ruby-identifier">success_color</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- success_color-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- success_color-method -->
+
+      
+        <div id="white-method" class="method-detail ">
+          <a name="method-i-white"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">white</span><span
+              class="method-args">(text)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="white-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/base_text_formatter.rb, line 258</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">white</span>(<span class="ruby-identifier">text</span>)
+  <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">deprecate</span>(<span class="ruby-node">&quot;RSpec::Core::Formatters::BaseTextFormatter#white&quot;</span>, <span class="ruby-value">:replacement</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;#default_color&quot;</span>)
+  <span class="ruby-identifier">color</span>(<span class="ruby-identifier">text</span>, <span class="ruby-value">:white</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- white-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- white-method -->
+
+      
+        <div id="yellow-method" class="method-detail ">
+          <a name="method-i-yellow"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">yellow</span><span
+              class="method-args">(text)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="yellow-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/core/formatters/base_text_formatter.rb, line 238</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">yellow</span>(<span class="ruby-identifier">text</span>)
+  <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">deprecate</span>(<span class="ruby-node">&quot;RSpec::Core::Formatters::BaseTextFormatter#yellow&quot;</span>, <span class="ruby-value">:replacement</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;#pending_color&quot;</span>)
+  <span class="ruby-identifier">color</span>(<span class="ruby-identifier">text</span>, <span class="ruby-value">:yellow</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- yellow-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- yellow-method -->
+
+      
+      </div><!-- protected-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

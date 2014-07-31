@@ -1,0 +1,1921 @@
+<?xml version="1.0" encoding="IBM437"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=IBM437" http-equiv="Content-Type" />
+
+  <title>Module: PageObject</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./lib/page-object/accessors_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/accessors.rb">lib/page-object/accessors.rb</a></li>
+          
+            <li><a href="./lib/page-object/elements/area_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/elements/area.rb">lib/page-object/elements/area.rb</a></li>
+          
+            <li><a href="./lib/page-object/elements/audio_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/elements/audio.rb">lib/page-object/elements/audio.rb</a></li>
+          
+            <li><a href="./lib/page-object/elements/button_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/elements/button.rb">lib/page-object/elements/button.rb</a></li>
+          
+            <li><a href="./lib/page-object/elements/canvas_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/elements/canvas.rb">lib/page-object/elements/canvas.rb</a></li>
+          
+            <li><a href="./lib/page-object/elements/check_box_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/elements/check_box.rb">lib/page-object/elements/check_box.rb</a></li>
+          
+            <li><a href="./lib/page-object/elements/div_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/elements/div.rb">lib/page-object/elements/div.rb</a></li>
+          
+            <li><a href="./lib/page-object/elements/element_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/elements/element.rb">lib/page-object/elements/element.rb</a></li>
+          
+            <li><a href="./lib/page-object/elements/file_field_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/elements/file_field.rb">lib/page-object/elements/file_field.rb</a></li>
+          
+            <li><a href="./lib/page-object/elements/form_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/elements/form.rb">lib/page-object/elements/form.rb</a></li>
+          
+            <li><a href="./lib/page-object/elements/heading_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/elements/heading.rb">lib/page-object/elements/heading.rb</a></li>
+          
+            <li><a href="./lib/page-object/elements/hidden_field_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/elements/hidden_field.rb">lib/page-object/elements/hidden_field.rb</a></li>
+          
+            <li><a href="./lib/page-object/elements/image_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/elements/image.rb">lib/page-object/elements/image.rb</a></li>
+          
+            <li><a href="./lib/page-object/elements/label_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/elements/label.rb">lib/page-object/elements/label.rb</a></li>
+          
+            <li><a href="./lib/page-object/elements/link_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/elements/link.rb">lib/page-object/elements/link.rb</a></li>
+          
+            <li><a href="./lib/page-object/elements/list_item_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/elements/list_item.rb">lib/page-object/elements/list_item.rb</a></li>
+          
+            <li><a href="./lib/page-object/elements/media_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/elements/media.rb">lib/page-object/elements/media.rb</a></li>
+          
+            <li><a href="./lib/page-object/elements/option_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/elements/option.rb">lib/page-object/elements/option.rb</a></li>
+          
+            <li><a href="./lib/page-object/elements/ordered_list_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/elements/ordered_list.rb">lib/page-object/elements/ordered_list.rb</a></li>
+          
+            <li><a href="./lib/page-object/elements/paragraph_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/elements/paragraph.rb">lib/page-object/elements/paragraph.rb</a></li>
+          
+            <li><a href="./lib/page-object/elements/radio_button_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/elements/radio_button.rb">lib/page-object/elements/radio_button.rb</a></li>
+          
+            <li><a href="./lib/page-object/elements/select_list_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/elements/select_list.rb">lib/page-object/elements/select_list.rb</a></li>
+          
+            <li><a href="./lib/page-object/elements/span_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/elements/span.rb">lib/page-object/elements/span.rb</a></li>
+          
+            <li><a href="./lib/page-object/elements/table_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/elements/table.rb">lib/page-object/elements/table.rb</a></li>
+          
+            <li><a href="./lib/page-object/elements/table_cell_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/elements/table_cell.rb">lib/page-object/elements/table_cell.rb</a></li>
+          
+            <li><a href="./lib/page-object/elements/table_row_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/elements/table_row.rb">lib/page-object/elements/table_row.rb</a></li>
+          
+            <li><a href="./lib/page-object/elements/text_area_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/elements/text_area.rb">lib/page-object/elements/text_area.rb</a></li>
+          
+            <li><a href="./lib/page-object/elements/text_field_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/elements/text_field.rb">lib/page-object/elements/text_field.rb</a></li>
+          
+            <li><a href="./lib/page-object/elements/unordered_list_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/elements/unordered_list.rb">lib/page-object/elements/unordered_list.rb</a></li>
+          
+            <li><a href="./lib/page-object/elements/video_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/elements/video.rb">lib/page-object/elements/video.rb</a></li>
+          
+            <li><a href="./lib/page-object/elements_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/elements.rb">lib/page-object/elements.rb</a></li>
+          
+            <li><a href="./lib/page-object/element_locators_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/element_locators.rb">lib/page-object/element_locators.rb</a></li>
+          
+            <li><a href="./lib/page-object/indexed_properties_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/indexed_properties.rb">lib/page-object/indexed_properties.rb</a></li>
+          
+            <li><a href="./lib/page-object/javascript/jquery_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/javascript/jquery.rb">lib/page-object/javascript/jquery.rb</a></li>
+          
+            <li><a href="./lib/page-object/javascript/prototype_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/javascript/prototype.rb">lib/page-object/javascript/prototype.rb</a></li>
+          
+            <li><a href="./lib/page-object/javascript/yui_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/javascript/yui.rb">lib/page-object/javascript/yui.rb</a></li>
+          
+            <li><a href="./lib/page-object/javascript_framework_facade_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/javascript_framework_facade.rb">lib/page-object/javascript_framework_facade.rb</a></li>
+          
+            <li><a href="./lib/page-object/loads_platform_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/loads_platform.rb">lib/page-object/loads_platform.rb</a></li>
+          
+            <li><a href="./lib/page-object/locator_generator_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/locator_generator.rb">lib/page-object/locator_generator.rb</a></li>
+          
+            <li><a href="./lib/page-object/nested_elements_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/nested_elements.rb">lib/page-object/nested_elements.rb</a></li>
+          
+            <li><a href="./lib/page-object/page_factory_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/page_factory.rb">lib/page-object/page_factory.rb</a></li>
+          
+            <li><a href="./lib/page-object/page_populator_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/page_populator.rb">lib/page-object/page_populator.rb</a></li>
+          
+            <li><a href="./lib/page-object/platforms/selenium_webdriver/button_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/platforms/selenium_webdriver/button.rb">lib/page-object/platforms/selenium_webdriver/button.rb</a></li>
+          
+            <li><a href="./lib/page-object/platforms/selenium_webdriver/check_box_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/platforms/selenium_webdriver/check_box.rb">lib/page-object/platforms/selenium_webdriver/check_box.rb</a></li>
+          
+            <li><a href="./lib/page-object/platforms/selenium_webdriver/element_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/platforms/selenium_webdriver/element.rb">lib/page-object/platforms/selenium_webdriver/element.rb</a></li>
+          
+            <li><a href="./lib/page-object/platforms/selenium_webdriver/file_field_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/platforms/selenium_webdriver/file_field.rb">lib/page-object/platforms/selenium_webdriver/file_field.rb</a></li>
+          
+            <li><a href="./lib/page-object/platforms/selenium_webdriver/form_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/platforms/selenium_webdriver/form.rb">lib/page-object/platforms/selenium_webdriver/form.rb</a></li>
+          
+            <li><a href="./lib/page-object/platforms/selenium_webdriver/image_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/platforms/selenium_webdriver/image.rb">lib/page-object/platforms/selenium_webdriver/image.rb</a></li>
+          
+            <li><a href="./lib/page-object/platforms/selenium_webdriver/link_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/platforms/selenium_webdriver/link.rb">lib/page-object/platforms/selenium_webdriver/link.rb</a></li>
+          
+            <li><a href="./lib/page-object/platforms/selenium_webdriver/ordered_list_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/platforms/selenium_webdriver/ordered_list.rb">lib/page-object/platforms/selenium_webdriver/ordered_list.rb</a></li>
+          
+            <li><a href="./lib/page-object/platforms/selenium_webdriver/page_object_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/platforms/selenium_webdriver/page_object.rb">lib/page-object/platforms/selenium_webdriver/page_object.rb</a></li>
+          
+            <li><a href="./lib/page-object/platforms/selenium_webdriver/radio_button_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/platforms/selenium_webdriver/radio_button.rb">lib/page-object/platforms/selenium_webdriver/radio_button.rb</a></li>
+          
+            <li><a href="./lib/page-object/platforms/selenium_webdriver/select_list_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/platforms/selenium_webdriver/select_list.rb">lib/page-object/platforms/selenium_webdriver/select_list.rb</a></li>
+          
+            <li><a href="./lib/page-object/platforms/selenium_webdriver/surrogate_selenium_element_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/platforms/selenium_webdriver/surrogate_selenium_element.rb">lib/page-object/platforms/selenium_webdriver/surrogate_selenium_element.rb</a></li>
+          
+            <li><a href="./lib/page-object/platforms/selenium_webdriver/table_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/platforms/selenium_webdriver/table.rb">lib/page-object/platforms/selenium_webdriver/table.rb</a></li>
+          
+            <li><a href="./lib/page-object/platforms/selenium_webdriver/table_row_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/platforms/selenium_webdriver/table_row.rb">lib/page-object/platforms/selenium_webdriver/table_row.rb</a></li>
+          
+            <li><a href="./lib/page-object/platforms/selenium_webdriver/text_area_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/platforms/selenium_webdriver/text_area.rb">lib/page-object/platforms/selenium_webdriver/text_area.rb</a></li>
+          
+            <li><a href="./lib/page-object/platforms/selenium_webdriver/text_field_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/platforms/selenium_webdriver/text_field.rb">lib/page-object/platforms/selenium_webdriver/text_field.rb</a></li>
+          
+            <li><a href="./lib/page-object/platforms/selenium_webdriver/unordered_list_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/platforms/selenium_webdriver/unordered_list.rb">lib/page-object/platforms/selenium_webdriver/unordered_list.rb</a></li>
+          
+            <li><a href="./lib/page-object/platforms/selenium_webdriver_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/platforms/selenium_webdriver.rb">lib/page-object/platforms/selenium_webdriver.rb</a></li>
+          
+            <li><a href="./lib/page-object/platforms/watir_webdriver/check_box_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/platforms/watir_webdriver/check_box.rb">lib/page-object/platforms/watir_webdriver/check_box.rb</a></li>
+          
+            <li><a href="./lib/page-object/platforms/watir_webdriver/element_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/platforms/watir_webdriver/element.rb">lib/page-object/platforms/watir_webdriver/element.rb</a></li>
+          
+            <li><a href="./lib/page-object/platforms/watir_webdriver/file_field_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/platforms/watir_webdriver/file_field.rb">lib/page-object/platforms/watir_webdriver/file_field.rb</a></li>
+          
+            <li><a href="./lib/page-object/platforms/watir_webdriver/form_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/platforms/watir_webdriver/form.rb">lib/page-object/platforms/watir_webdriver/form.rb</a></li>
+          
+            <li><a href="./lib/page-object/platforms/watir_webdriver/image_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/platforms/watir_webdriver/image.rb">lib/page-object/platforms/watir_webdriver/image.rb</a></li>
+          
+            <li><a href="./lib/page-object/platforms/watir_webdriver/link_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/platforms/watir_webdriver/link.rb">lib/page-object/platforms/watir_webdriver/link.rb</a></li>
+          
+            <li><a href="./lib/page-object/platforms/watir_webdriver/ordered_list_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/platforms/watir_webdriver/ordered_list.rb">lib/page-object/platforms/watir_webdriver/ordered_list.rb</a></li>
+          
+            <li><a href="./lib/page-object/platforms/watir_webdriver/page_object_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/platforms/watir_webdriver/page_object.rb">lib/page-object/platforms/watir_webdriver/page_object.rb</a></li>
+          
+            <li><a href="./lib/page-object/platforms/watir_webdriver/radio_button_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/platforms/watir_webdriver/radio_button.rb">lib/page-object/platforms/watir_webdriver/radio_button.rb</a></li>
+          
+            <li><a href="./lib/page-object/platforms/watir_webdriver/select_list_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/platforms/watir_webdriver/select_list.rb">lib/page-object/platforms/watir_webdriver/select_list.rb</a></li>
+          
+            <li><a href="./lib/page-object/platforms/watir_webdriver/table_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/platforms/watir_webdriver/table.rb">lib/page-object/platforms/watir_webdriver/table.rb</a></li>
+          
+            <li><a href="./lib/page-object/platforms/watir_webdriver/table_row_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/platforms/watir_webdriver/table_row.rb">lib/page-object/platforms/watir_webdriver/table_row.rb</a></li>
+          
+            <li><a href="./lib/page-object/platforms/watir_webdriver/text_area_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/platforms/watir_webdriver/text_area.rb">lib/page-object/platforms/watir_webdriver/text_area.rb</a></li>
+          
+            <li><a href="./lib/page-object/platforms/watir_webdriver/text_field_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/platforms/watir_webdriver/text_field.rb">lib/page-object/platforms/watir_webdriver/text_field.rb</a></li>
+          
+            <li><a href="./lib/page-object/platforms/watir_webdriver/unordered_list_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/platforms/watir_webdriver/unordered_list.rb">lib/page-object/platforms/watir_webdriver/unordered_list.rb</a></li>
+          
+            <li><a href="./lib/page-object/platforms/watir_webdriver_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/platforms/watir_webdriver.rb">lib/page-object/platforms/watir_webdriver.rb</a></li>
+          
+            <li><a href="./lib/page-object/platforms_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/platforms.rb">lib/page-object/platforms.rb</a></li>
+          
+            <li><a href="./lib/page-object/version_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/version.rb">lib/page-object/version.rb</a></li>
+          
+            <li><a href="./lib/page-object/widgets_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object/widgets.rb">lib/page-object/widgets.rb</a></li>
+          
+            <li><a href="./lib/page-object_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/page-object.rb">lib/page-object.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+      <!-- Namespace Contents -->
+      <div id="namespace-list-section" class="section">
+        <h3 class="section-header">Namespace</h3>
+        <ul class="link-list">
+          
+          <li><span class="type">MODULE</span> <a href="PageObject/Accessors.html">PageObject::Accessors</a></li>
+          
+          <li><span class="type">MODULE</span> <a href="PageObject/ElementLocators.html">PageObject::ElementLocators</a></li>
+          
+          <li><span class="type">MODULE</span> <a href="PageObject/Elements.html">PageObject::Elements</a></li>
+          
+          <li><span class="type">MODULE</span> <a href="PageObject/IndexedProperties.html">PageObject::IndexedProperties</a></li>
+          
+          <li><span class="type">MODULE</span> <a href="PageObject/Javascript.html">PageObject::Javascript</a></li>
+          
+          <li><span class="type">MODULE</span> <a href="PageObject/JavascriptFrameworkFacade.html">PageObject::JavascriptFrameworkFacade</a></li>
+          
+          <li><span class="type">MODULE</span> <a href="PageObject/LoadsPlatform.html">PageObject::LoadsPlatform</a></li>
+          
+          <li><span class="type">MODULE</span> <a href="PageObject/LocatorGenerator.html">PageObject::LocatorGenerator</a></li>
+          
+          <li><span class="type">MODULE</span> <a href="PageObject/NestedElements.html">PageObject::NestedElements</a></li>
+          
+          <li><span class="type">MODULE</span> <a href="PageObject/PageFactory.html">PageObject::PageFactory</a></li>
+          
+          <li><span class="type">MODULE</span> <a href="PageObject/PagePopulator.html">PageObject::PagePopulator</a></li>
+          
+          <li><span class="type">MODULE</span> <a href="PageObject/Platforms.html">PageObject::Platforms</a></li>
+          
+          <li><span class="type">MODULE</span> <a href="PageObject/Widgets.html">PageObject::Widgets</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-add_framework">::add_framework</a></li>
+          
+          <li><a href="#method-c-default_element_wait">::default_element_wait</a></li>
+          
+          <li><a href="#method-c-default_element_wait-3D">::default_element_wait=</a></li>
+          
+          <li><a href="#method-c-default_page_wait">::default_page_wait</a></li>
+          
+          <li><a href="#method-c-default_page_wait-3D">::default_page_wait=</a></li>
+          
+          <li><a href="#method-c-included">::included</a></li>
+          
+          <li><a href="#method-c-javascript_framework-3D">::javascript_framework=</a></li>
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-c-register_widget">::register_widget</a></li>
+          
+          <li><a href="#method-i-alert">#alert</a></li>
+          
+          <li><a href="#method-i-attach_to_window">#attach_to_window</a></li>
+          
+          <li><a href="#method-i-back">#back</a></li>
+          
+          <li><a href="#method-i-clear_cookies">#clear_cookies</a></li>
+          
+          <li><a href="#method-i-confirm">#confirm</a></li>
+          
+          <li><a href="#method-i-current_url">#current_url</a></li>
+          
+          <li><a href="#method-i-element_with_focus">#element_with_focus</a></li>
+          
+          <li><a href="#method-i-execute_script">#execute_script</a></li>
+          
+          <li><a href="#method-i-forward">#forward</a></li>
+          
+          <li><a href="#method-i-html">#html</a></li>
+          
+          <li><a href="#method-i-in_frame">#in_frame</a></li>
+          
+          <li><a href="#method-i-in_iframe">#in_iframe</a></li>
+          
+          <li><a href="#method-i-initialize_browser">#initialize_browser</a></li>
+          
+          <li><a href="#method-i-modal_dialog">#modal_dialog</a></li>
+          
+          <li><a href="#method-i-navigate_to">#navigate_to</a></li>
+          
+          <li><a href="#method-i-prompt">#prompt</a></li>
+          
+          <li><a href="#method-i-refresh">#refresh</a></li>
+          
+          <li><a href="#method-i-save_screenshot">#save_screenshot</a></li>
+          
+          <li><a href="#method-i-text">#text</a></li>
+          
+          <li><a href="#method-i-title">#title</a></li>
+          
+          <li><a href="#method-i-wait_for_ajax">#wait_for_ajax</a></li>
+          
+          <li><a href="#method-i-wait_until">#wait_until</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Included Modules -->
+      <div id="includes-section" class="section">
+        <h3 class="section-header">Included Modules</h3>
+        <ul class="link-list">
+        
+        
+          <li><a class="include" href="PageObject/LoadsPlatform.html">PageObject::LoadsPlatform</a></li>
+        
+        
+        
+          <li><a class="include" href="PageObject/ElementLocators.html">PageObject::ElementLocators</a></li>
+        
+        
+        
+          <li><a class="include" href="PageObject/PagePopulator.html">PageObject::PagePopulator</a></li>
+        
+        
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./PageObject.html">PageObject</a></li>
+        
+          <li><a href="./PageObject/Accessors.html">PageObject::Accessors</a></li>
+        
+          <li><a href="./PageObject/ElementLocators.html">PageObject::ElementLocators</a></li>
+        
+          <li><a href="./PageObject/Elements.html">PageObject::Elements</a></li>
+        
+          <li><a href="./PageObject/Elements/Area.html">PageObject::Elements::Area</a></li>
+        
+          <li><a href="./PageObject/Elements/Audio.html">PageObject::Elements::Audio</a></li>
+        
+          <li><a href="./PageObject/Elements/Button.html">PageObject::Elements::Button</a></li>
+        
+          <li><a href="./PageObject/Elements/Canvas.html">PageObject::Elements::Canvas</a></li>
+        
+          <li><a href="./PageObject/Elements/CheckBox.html">PageObject::Elements::CheckBox</a></li>
+        
+          <li><a href="./PageObject/Elements/Div.html">PageObject::Elements::Div</a></li>
+        
+          <li><a href="./PageObject/Elements/Element.html">PageObject::Elements::Element</a></li>
+        
+          <li><a href="./PageObject/Elements/FileField.html">PageObject::Elements::FileField</a></li>
+        
+          <li><a href="./PageObject/Elements/Form.html">PageObject::Elements::Form</a></li>
+        
+          <li><a href="./PageObject/Elements/Heading.html">PageObject::Elements::Heading</a></li>
+        
+          <li><a href="./PageObject/Elements/HiddenField.html">PageObject::Elements::HiddenField</a></li>
+        
+          <li><a href="./PageObject/Elements/Image.html">PageObject::Elements::Image</a></li>
+        
+          <li><a href="./PageObject/Elements/Label.html">PageObject::Elements::Label</a></li>
+        
+          <li><a href="./PageObject/Elements/Link.html">PageObject::Elements::Link</a></li>
+        
+          <li><a href="./PageObject/Elements/ListItem.html">PageObject::Elements::ListItem</a></li>
+        
+          <li><a href="./PageObject/Elements/Media.html">PageObject::Elements::Media</a></li>
+        
+          <li><a href="./PageObject/Elements/Option.html">PageObject::Elements::Option</a></li>
+        
+          <li><a href="./PageObject/Elements/OrderedList.html">PageObject::Elements::OrderedList</a></li>
+        
+          <li><a href="./PageObject/Elements/Paragraph.html">PageObject::Elements::Paragraph</a></li>
+        
+          <li><a href="./PageObject/Elements/RadioButton.html">PageObject::Elements::RadioButton</a></li>
+        
+          <li><a href="./PageObject/Elements/SelectList.html">PageObject::Elements::SelectList</a></li>
+        
+          <li><a href="./PageObject/Elements/Span.html">PageObject::Elements::Span</a></li>
+        
+          <li><a href="./PageObject/Elements/Table.html">PageObject::Elements::Table</a></li>
+        
+          <li><a href="./PageObject/Elements/TableCell.html">PageObject::Elements::TableCell</a></li>
+        
+          <li><a href="./PageObject/Elements/TableRow.html">PageObject::Elements::TableRow</a></li>
+        
+          <li><a href="./PageObject/Elements/TextArea.html">PageObject::Elements::TextArea</a></li>
+        
+          <li><a href="./PageObject/Elements/TextField.html">PageObject::Elements::TextField</a></li>
+        
+          <li><a href="./PageObject/Elements/UnorderedList.html">PageObject::Elements::UnorderedList</a></li>
+        
+          <li><a href="./PageObject/Elements/Video.html">PageObject::Elements::Video</a></li>
+        
+          <li><a href="./PageObject/IndexedProperties.html">PageObject::IndexedProperties</a></li>
+        
+          <li><a href="./PageObject/IndexedProperties/RowOfElements.html">PageObject::IndexedProperties::RowOfElements</a></li>
+        
+          <li><a href="./PageObject/IndexedProperties/TableOfElements.html">PageObject::IndexedProperties::TableOfElements</a></li>
+        
+          <li><a href="./PageObject/Javascript.html">PageObject::Javascript</a></li>
+        
+          <li><a href="./PageObject/Javascript/JQuery.html">PageObject::Javascript::JQuery</a></li>
+        
+          <li><a href="./PageObject/Javascript/Prototype.html">PageObject::Javascript::Prototype</a></li>
+        
+          <li><a href="./PageObject/Javascript/YUI.html">PageObject::Javascript::YUI</a></li>
+        
+          <li><a href="./PageObject/JavascriptFrameworkFacade.html">PageObject::JavascriptFrameworkFacade</a></li>
+        
+          <li><a href="./PageObject/LoadsPlatform.html">PageObject::LoadsPlatform</a></li>
+        
+          <li><a href="./PageObject/LocatorGenerator.html">PageObject::LocatorGenerator</a></li>
+        
+          <li><a href="./PageObject/NestedElements.html">PageObject::NestedElements</a></li>
+        
+          <li><a href="./PageObject/PageFactory.html">PageObject::PageFactory</a></li>
+        
+          <li><a href="./PageObject/PagePopulator.html">PageObject::PagePopulator</a></li>
+        
+          <li><a href="./PageObject/Platforms.html">PageObject::Platforms</a></li>
+        
+          <li><a href="./PageObject/Platforms/SeleniumWebDriver.html">PageObject::Platforms::SeleniumWebDriver</a></li>
+        
+          <li><a href="./PageObject/Platforms/SeleniumWebDriver/Button.html">PageObject::Platforms::SeleniumWebDriver::Button</a></li>
+        
+          <li><a href="./PageObject/Platforms/SeleniumWebDriver/CheckBox.html">PageObject::Platforms::SeleniumWebDriver::CheckBox</a></li>
+        
+          <li><a href="./PageObject/Platforms/SeleniumWebDriver/Element.html">PageObject::Platforms::SeleniumWebDriver::Element</a></li>
+        
+          <li><a href="./PageObject/Platforms/SeleniumWebDriver/FileField.html">PageObject::Platforms::SeleniumWebDriver::FileField</a></li>
+        
+          <li><a href="./PageObject/Platforms/SeleniumWebDriver/Form.html">PageObject::Platforms::SeleniumWebDriver::Form</a></li>
+        
+          <li><a href="./PageObject/Platforms/SeleniumWebDriver/Image.html">PageObject::Platforms::SeleniumWebDriver::Image</a></li>
+        
+          <li><a href="./PageObject/Platforms/SeleniumWebDriver/Link.html">PageObject::Platforms::SeleniumWebDriver::Link</a></li>
+        
+          <li><a href="./PageObject/Platforms/SeleniumWebDriver/OrderedList.html">PageObject::Platforms::SeleniumWebDriver::OrderedList</a></li>
+        
+          <li><a href="./PageObject/Platforms/SeleniumWebDriver/PageObject.html">PageObject::Platforms::SeleniumWebDriver::PageObject</a></li>
+        
+          <li><a href="./PageObject/Platforms/SeleniumWebDriver/RadioButton.html">PageObject::Platforms::SeleniumWebDriver::RadioButton</a></li>
+        
+          <li><a href="./PageObject/Platforms/SeleniumWebDriver/SelectList.html">PageObject::Platforms::SeleniumWebDriver::SelectList</a></li>
+        
+          <li><a href="./PageObject/Platforms/SeleniumWebDriver/SurrogateSeleniumElement.html">PageObject::Platforms::SeleniumWebDriver::SurrogateSeleniumElement</a></li>
+        
+          <li><a href="./PageObject/Platforms/SeleniumWebDriver/Table.html">PageObject::Platforms::SeleniumWebDriver::Table</a></li>
+        
+          <li><a href="./PageObject/Platforms/SeleniumWebDriver/TableRow.html">PageObject::Platforms::SeleniumWebDriver::TableRow</a></li>
+        
+          <li><a href="./PageObject/Platforms/SeleniumWebDriver/TextArea.html">PageObject::Platforms::SeleniumWebDriver::TextArea</a></li>
+        
+          <li><a href="./PageObject/Platforms/SeleniumWebDriver/TextField.html">PageObject::Platforms::SeleniumWebDriver::TextField</a></li>
+        
+          <li><a href="./PageObject/Platforms/SeleniumWebDriver/UnorderedList.html">PageObject::Platforms::SeleniumWebDriver::UnorderedList</a></li>
+        
+          <li><a href="./PageObject/Platforms/WatirWebDriver.html">PageObject::Platforms::WatirWebDriver</a></li>
+        
+          <li><a href="./PageObject/Platforms/WatirWebDriver/CheckBox.html">PageObject::Platforms::WatirWebDriver::CheckBox</a></li>
+        
+          <li><a href="./PageObject/Platforms/WatirWebDriver/Element.html">PageObject::Platforms::WatirWebDriver::Element</a></li>
+        
+          <li><a href="./PageObject/Platforms/WatirWebDriver/FileField.html">PageObject::Platforms::WatirWebDriver::FileField</a></li>
+        
+          <li><a href="./PageObject/Platforms/WatirWebDriver/Form.html">PageObject::Platforms::WatirWebDriver::Form</a></li>
+        
+          <li><a href="./PageObject/Platforms/WatirWebDriver/Image.html">PageObject::Platforms::WatirWebDriver::Image</a></li>
+        
+          <li><a href="./PageObject/Platforms/WatirWebDriver/Link.html">PageObject::Platforms::WatirWebDriver::Link</a></li>
+        
+          <li><a href="./PageObject/Platforms/WatirWebDriver/OrderedList.html">PageObject::Platforms::WatirWebDriver::OrderedList</a></li>
+        
+          <li><a href="./PageObject/Platforms/WatirWebDriver/PageObject.html">PageObject::Platforms::WatirWebDriver::PageObject</a></li>
+        
+          <li><a href="./PageObject/Platforms/WatirWebDriver/RadioButton.html">PageObject::Platforms::WatirWebDriver::RadioButton</a></li>
+        
+          <li><a href="./PageObject/Platforms/WatirWebDriver/SelectList.html">PageObject::Platforms::WatirWebDriver::SelectList</a></li>
+        
+          <li><a href="./PageObject/Platforms/WatirWebDriver/Table.html">PageObject::Platforms::WatirWebDriver::Table</a></li>
+        
+          <li><a href="./PageObject/Platforms/WatirWebDriver/TableRow.html">PageObject::Platforms::WatirWebDriver::TableRow</a></li>
+        
+          <li><a href="./PageObject/Platforms/WatirWebDriver/TextArea.html">PageObject::Platforms::WatirWebDriver::TextArea</a></li>
+        
+          <li><a href="./PageObject/Platforms/WatirWebDriver/TextField.html">PageObject::Platforms::WatirWebDriver::TextField</a></li>
+        
+          <li><a href="./PageObject/Platforms/WatirWebDriver/UnorderedList.html">PageObject::Platforms::WatirWebDriver::UnorderedList</a></li>
+        
+          <li><a href="./PageObject/Widgets.html">PageObject::Widgets</a></li>
+        
+          <li><a href="./String.html">String</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">PageObject</h1>
+
+    <div id="description" class="description">
+      
+<p>Module that when included adds functionality to a page object.  This module
+will add numerous class and instance methods that you use to define and
+interact with web pages.</p>
+
+<p>If we have a login page with a username and password textfield and a login
+button we might define our page like the one below.  We can then interact
+with the object using the generated methods.</p>
+
+<p>@example Login page example</p>
+
+<pre>class LoginPage
+  include PageObject
+
+  text_field(:username, :id =&gt; 'user')
+  text_field(:password, :id =&gt; 'pass')
+  button(:login, :value =&gt; 'Login')
+end
+
+...
+
+browser = Watir::Browser.new :firefox
+login_page = LoginPage.new(browser)
+login_page.username = 'cheezy'
+login_page.password = 'secret'
+login_page.login</pre>
+
+<p>@see <a href="PageObject/Accessors.html">PageObject::Accessors</a> to see
+what class level methods are added to this module at runtime.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="VERSION">VERSION</a></dt>
+          
+          <dd class="description"><p>@private</p></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="browser-attribute-method" class="method-detail">
+          <a name="browser"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">browser</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>@return [Watir::Browser or Selenium::WebDriver::Driver] the platform
+browser passed to the constructor</p>
+          
+          </div>
+        </div>
+        
+        <div id="platform-attribute-method" class="method-detail">
+          <a name="platform"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">platform</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>@return [PageObject::WatirPageObject or PageObject::SeleniumPageObject] the
+platform page object</p>
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="add_framework-method" class="method-detail ">
+          <a name="method-c-add_framework"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">add_framework</span><span
+              class="method-args">(key, framework)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Add a new javascript framework to page-object.  The module passed in must
+adhere to the same prototype as the JQuery and Prototype modules.</p>
+
+<p>@param [Symbol] the name used to reference the framework in subsequent
+calls @param [Module] a module that has the necessary methods to perform
+the required actions.</p>
+            
+
+            
+            <div class="method-source-code" id="add_framework-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object.rb, line 122</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">add_framework</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">framework</span>)
+  <span class="ruby-constant">PageObject</span><span class="ruby-operator">::</span><span class="ruby-constant">JavascriptFrameworkFacade</span>.<span class="ruby-identifier">add_framework</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">framework</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- add_framework-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- add_framework-method -->
+
+      
+        <div id="default_element_wait-method" class="method-detail ">
+          <a name="method-c-default_element_wait"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">default_element_wait</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns the default timeout for element level waits</p>
+            
+
+            
+            <div class="method-source-code" id="default_element_wait-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object.rb, line 100</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">default_element_wait</span>
+  <span class="ruby-ivar">@element_wait</span> <span class="ruby-operator">||=</span> <span class="ruby-value">5</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- default_element_wait-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- default_element_wait-method -->
+
+      
+        <div id="default_element_wait-3D-method" class="method-detail ">
+          <a name="method-c-default_element_wait-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">default_element_wait=</span><span
+              class="method-args">(timeout)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Sets the default timeout for element level waits</p>
+            
+
+            
+            <div class="method-source-code" id="default_element_wait-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object.rb, line 93</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">default_element_wait=</span>(<span class="ruby-identifier">timeout</span>)
+  <span class="ruby-ivar">@element_wait</span> = <span class="ruby-identifier">timeout</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- default_element_wait-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- default_element_wait-3D-method -->
+
+      
+        <div id="default_page_wait-method" class="method-detail ">
+          <a name="method-c-default_page_wait"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">default_page_wait</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns the default timeout for page lavel waits</p>
+            
+
+            
+            <div class="method-source-code" id="default_page_wait-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object.rb, line 86</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">default_page_wait</span>
+  <span class="ruby-ivar">@page_wait</span> <span class="ruby-operator">||=</span> <span class="ruby-value">30</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- default_page_wait-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- default_page_wait-method -->
+
+      
+        <div id="default_page_wait-3D-method" class="method-detail ">
+          <a name="method-c-default_page_wait-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">default_page_wait=</span><span
+              class="method-args">(timeout)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Set the default timeout for page level waits</p>
+            
+
+            
+            <div class="method-source-code" id="default_page_wait-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object.rb, line 79</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">default_page_wait=</span>(<span class="ruby-identifier">timeout</span>)
+  <span class="ruby-ivar">@page_wait</span> = <span class="ruby-identifier">timeout</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- default_page_wait-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- default_page_wait-3D-method -->
+
+      
+        <div id="included-method" class="method-detail ">
+          <a name="method-c-included"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">included</span><span
+              class="method-args">(cls)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="included-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object.rb, line 72</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">included</span>(<span class="ruby-identifier">cls</span>)
+  <span class="ruby-identifier">cls</span>.<span class="ruby-identifier">extend</span> <span class="ruby-constant">PageObject</span><span class="ruby-operator">::</span><span class="ruby-constant">Accessors</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- included-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- included-method -->
+
+      
+        <div id="javascript_framework-3D-method" class="method-detail ">
+          <a name="method-c-javascript_framework-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">javascript_framework=</span><span
+              class="method-args">(framework)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Set the javascript framework to use when determining number of ajax
+requests.  Valid frameworks are :jquery and :prototype</p>
+            
+
+            
+            <div class="method-source-code" id="javascript_framework-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">javascript_framework=</span>(<span class="ruby-identifier">framework</span>)
+  <span class="ruby-constant">PageObject</span><span class="ruby-operator">::</span><span class="ruby-constant">JavascriptFrameworkFacade</span>.<span class="ruby-identifier">framework</span> = <span class="ruby-identifier">framework</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- javascript_framework-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- javascript_framework-3D-method -->
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(browser, visit=false)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Construct a new page object.  Prior to browser initialization it will call
+a method named initialize_accessors if it exists. Upon initialization of 
+the page it will call a method named initialize_page if it exists.</p>
+
+<p>@param [Watir::Browser or Selenium::WebDriver::Driver] the platform browser
+to use @param [bool] open the page if page_url is set</p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object.rb, line 59</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">browser</span>, <span class="ruby-identifier">visit</span>=<span class="ruby-keyword">false</span>)
+  <span class="ruby-identifier">initialize_accessors</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:initialize_accessors</span>)
+  <span class="ruby-identifier">initialize_browser</span>(<span class="ruby-identifier">browser</span>)
+  <span class="ruby-identifier">goto</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">visit</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:goto</span>)
+  <span class="ruby-identifier">initialize_page</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:initialize_page</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+        <div id="register_widget-method" class="method-detail ">
+          <a name="method-c-register_widget"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">register_widget</span><span
+              class="method-args">(widget_tag, widget_class, base_element_tag)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="register_widget-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object.rb, line 395</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">register_widget</span>(<span class="ruby-identifier">widget_tag</span>, <span class="ruby-identifier">widget_class</span>, <span class="ruby-identifier">base_element_tag</span>)
+  <span class="ruby-constant">Widgets</span>.<span class="ruby-identifier">register_widget</span>(<span class="ruby-identifier">widget_tag</span>, <span class="ruby-identifier">widget_class</span>, <span class="ruby-identifier">base_element_tag</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- register_widget-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- register_widget-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="alert-method" class="method-detail ">
+          <a name="method-i-alert"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">alert</span><span
+              class="method-args">(frame=nil, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Override the normal alert popup so it does not occurr.</p>
+
+<p>@example</p>
+
+<pre>message = @page.alert do
+  @page.button_that_causes_alert
+end</pre>
+
+<p>@param frame optional parameter used when alert is nested within a frame
+@param block a block that has the call that will cause the alert to display
+@return [String] the message that was contained in the alert</p>
+            
+
+            
+            <div class="method-source-code" id="alert-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object.rb, line 210</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">alert</span>(<span class="ruby-identifier">frame</span>=<span class="ruby-keyword">nil</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">alert</span>(<span class="ruby-identifier">frame</span>, &amp;<span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- alert-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- alert-method -->
+
+      
+        <div id="attach_to_window-method" class="method-detail ">
+          <a name="method-i-attach_to_window"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">attach_to_window</span><span
+              class="method-args">(identifier, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Attach to a running window.  You can locate the window using either the
+window's title or url.  If it failes to connect to a window it will pause
+for 1 second and try again.</p>
+
+<p>@example</p>
+
+<pre>page.attach_to_window(:title =&gt; &quot;other window's title&quot;)</pre>
+
+<p>@param [Hash] either :title or :url of the other window.  The url does not
+need to be the entire url - it can just be the page name like index.html
+@param block if present the block is executed and then execution is
+returned to the calling window</p>
+            
+
+            
+            <div class="method-source-code" id="attach_to_window-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object.rb, line 343</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">attach_to_window</span>(<span class="ruby-identifier">identifier</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">attach_to_window</span>(<span class="ruby-identifier">identifier</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">rescue</span>
+    <span class="ruby-identifier">sleep</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">attach_to_window</span>(<span class="ruby-identifier">identifier</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- attach_to_window-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- attach_to_window-method -->
+
+      
+        <div id="back-method" class="method-detail ">
+          <a name="method-i-back"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">back</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Go back to the previous page</p>
+            
+
+            
+            <div class="method-source-code" id="back-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object.rb, line 369</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">back</span>
+  <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">back</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- back-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- back-method -->
+
+      
+        <div id="clear_cookies-method" class="method-detail ">
+          <a name="method-i-clear_cookies"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">clear_cookies</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Clear the cookies from the browser</p>
+            
+
+            
+            <div class="method-source-code" id="clear_cookies-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object.rb, line 383</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">clear_cookies</span>
+  <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">clear_cookies</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- clear_cookies-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- clear_cookies-method -->
+
+      
+        <div id="confirm-method" class="method-detail ">
+          <a name="method-i-confirm"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">confirm</span><span
+              class="method-args">(response, frame=nil, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Override the normal confirm popup so it does not occurr.</p>
+
+<p>@example</p>
+
+<pre>message = @popup.confirm(true) do
+  @page.button_that_causes_confirm
+end</pre>
+
+<p>@param [bool] what response you want to return back from the confirm popup
+@param frame optional parameter used when the confirm is nested within a
+frame @param block a block that has the call that will cause the confirm to
+display @return [String] the message that was prompted in the confirm</p>
+            
+
+            
+            <div class="method-source-code" id="confirm-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object.rb, line 227</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">confirm</span>(<span class="ruby-identifier">response</span>, <span class="ruby-identifier">frame</span>=<span class="ruby-keyword">nil</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">confirm</span>(<span class="ruby-identifier">response</span>, <span class="ruby-identifier">frame</span>, &amp;<span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- confirm-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- confirm-method -->
+
+      
+        <div id="current_url-method" class="method-detail ">
+          <a name="method-i-current_url"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">current_url</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>get the current page url</p>
+            
+
+            
+            <div class="method-source-code" id="current_url-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object.rb, line 129</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">current_url</span>
+  <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">current_url</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- current_url-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- current_url-method -->
+
+      
+        <div id="element_with_focus-method" class="method-detail ">
+          <a name="method-i-element_with_focus"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">element_with_focus</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Find the element that has focus on the page</p>
+            
+
+            
+            <div class="method-source-code" id="element_with_focus-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object.rb, line 355</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">element_with_focus</span>
+  <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">element_with_focus</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- element_with_focus-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- element_with_focus-method -->
+
+      
+        <div id="execute_script-method" class="method-detail ">
+          <a name="method-i-execute_script"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">execute_script</span><span
+              class="method-args">(script, *args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Execute javascript on the browser</p>
+
+<p>@example Get inner HTML of element</p>
+
+<pre>span = @page.span_element
+@page.execute_script &quot;return arguments[0].innerHTML&quot;, span
+#=&gt; &quot;Span innerHTML&quot;</pre>
+            
+
+            
+            <div class="method-source-code" id="execute_script-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object.rb, line 257</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">execute_script</span>(<span class="ruby-identifier">script</span>, *<span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">args</span>.<span class="ruby-identifier">map!</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">PageObject</span><span class="ruby-operator">::</span><span class="ruby-constant">Elements</span><span class="ruby-operator">::</span><span class="ruby-constant">Element</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">element</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">e</span> }
+  <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">execute_script</span>(<span class="ruby-identifier">script</span>, *<span class="ruby-identifier">args</span>)    
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- execute_script-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- execute_script-method -->
+
+      
+        <div id="forward-method" class="method-detail ">
+          <a name="method-i-forward"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">forward</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Go forward to the next page</p>
+            
+
+            
+            <div class="method-source-code" id="forward-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object.rb, line 376</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">forward</span>
+  <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">forward</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- forward-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- forward-method -->
+
+      
+        <div id="html-method" class="method-detail ">
+          <a name="method-i-html"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">html</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns the html of the current page</p>
+            
+
+            
+            <div class="method-source-code" id="html-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object.rb, line 152</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">html</span>
+  <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">html</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- html-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- html-method -->
+
+      
+        <div id="in_frame-method" class="method-detail ">
+          <a name="method-i-in_frame"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">in_frame</span><span
+              class="method-args">(identifier, frame=nil, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Identify an element as existing within a frame.  A frame parameter is
+passed to the block and must be passed to the other calls to <a
+href="PageObject.html">PageObject</a>. You can nest calls to <a
+href="PageObject.html#method-i-in_frame">in_frame</a> by passing the frame
+to the next level.</p>
+
+<p>@example</p>
+
+<pre>in_frame(:id =&gt; 'frame_id') do |frame|
+  text_field_element(:id =&gt; 'fname', :frame =&gt; frame)
+end</pre>
+
+<p>@param [Hash] identifier how we find the frame.  The valid keys are:</p>
+
+<pre>* :id =&gt; Watir and Selenium
+* :index =&gt; Watir and Selenium
+* :name =&gt; Watir and Selenium
+* :class =&gt; Watir only</pre>
+
+<p>@param frame passed from a previous call to in_frame.  Used to nest calls
+@param block that contains the calls to elements that exist inside the
+frame.</p>
+            
+
+            
+            <div class="method-source-code" id="in_frame-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object.rb, line 280</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">in_frame</span>(<span class="ruby-identifier">identifier</span>, <span class="ruby-identifier">frame</span>=<span class="ruby-keyword">nil</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">in_frame</span>(<span class="ruby-identifier">identifier</span>, <span class="ruby-identifier">frame</span>, &amp;<span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- in_frame-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- in_frame-method -->
+
+      
+        <div id="in_iframe-method" class="method-detail ">
+          <a name="method-i-in_iframe"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">in_iframe</span><span
+              class="method-args">(identifier, frame=nil, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Identify an element as existing within an iframe.  A frame parameter is
+passed to the block and must be passed to the other calls to <a
+href="PageObject.html">PageObject</a>. You can nest calls to <a
+href="PageObject.html#method-i-in_iframe">in_iframe</a> by passing the
+frame to the next level.</p>
+
+<p>@example</p>
+
+<pre>in_iframe(:id =&gt; 'iframe_id') do |iframe|
+  text_field_element(:id =&gt; 'ifname', :frame =&gt; iframe)
+end</pre>
+
+<p>@param [Hash] identifier how we find the iframe.  The valid keys are:</p>
+
+<pre>* :id =&gt; Watir and Selenium
+* :index =&gt; Watir and Selenium
+* :name =&gt; Watir and Selenium
+* :class =&gt; Watir only</pre>
+
+<p>@param frame passed from a previous call to in_iframe.  Used to nest calls
+@param block that contains the calls to elements that exist inside the
+iframe.</p>
+            
+
+            
+            <div class="method-source-code" id="in_iframe-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object.rb, line 301</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">in_iframe</span>(<span class="ruby-identifier">identifier</span>, <span class="ruby-identifier">frame</span>=<span class="ruby-keyword">nil</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">in_iframe</span>(<span class="ruby-identifier">identifier</span>, <span class="ruby-identifier">frame</span>, &amp;<span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- in_iframe-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- in_iframe-method -->
+
+      
+        <div id="initialize_browser-method" class="method-detail ">
+          <a name="method-i-initialize_browser"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">initialize_browser</span><span
+              class="method-args">(browser)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="initialize_browser-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object.rb, line 66</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize_browser</span>(<span class="ruby-identifier">browser</span>)
+  <span class="ruby-ivar">@browser</span> = <span class="ruby-identifier">browser</span>
+  <span class="ruby-identifier">include_platform_driver</span>(<span class="ruby-identifier">browser</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- initialize_browser-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- initialize_browser-method -->
+
+      
+        <div id="modal_dialog-method" class="method-detail ">
+          <a name="method-i-modal_dialog"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">modal_dialog</span><span
+              class="method-args">(&block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Override the normal showModalDialog call is it opens a window instead of a
+dialog.  You will need to attach to the new window in order to continue.</p>
+
+<p>@example</p>
+
+<pre>@page.modal_dialog do
+  @page.action_that_spawns_the_modal
+end</pre>
+
+<p>@param block a block that contains the call that will cause the modal
+dialog.</p>
+            
+
+            
+            <div class="method-source-code" id="modal_dialog-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object.rb, line 317</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">modal_dialog</span>(&amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">script</span> =
+      <span class="ruby-string">%{
+    window.showModalDialog = function(sURL, vArguments, sFeatures) {
+      window.dialogArguments = vArguments;
+      modalWin = window.open(sURL, 'modal', sFeatures);
+      return modalWin;
+    }
+  }</span>
+  <span class="ruby-identifier">browser</span>.<span class="ruby-identifier">execute_script</span> <span class="ruby-identifier">script</span>
+  <span class="ruby-keyword">yield</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- modal_dialog-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- modal_dialog-method -->
+
+      
+        <div id="navigate_to-method" class="method-detail ">
+          <a name="method-i-navigate_to"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">navigate_to</span><span
+              class="method-args">(url)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>navigate to the provided url</p>
+
+<p>@param [String] the full url to navigate to</p>
+            
+
+            
+            <div class="method-source-code" id="navigate_to-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object.rb, line 138</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">navigate_to</span>(<span class="ruby-identifier">url</span>)
+  <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">navigate_to</span>(<span class="ruby-identifier">url</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- navigate_to-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- navigate_to-method -->
+
+      
+        <div id="prompt-method" class="method-detail ">
+          <a name="method-i-prompt"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">prompt</span><span
+              class="method-args">(answer, frame=nil, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Override the normal promp popup so it does not occurr.</p>
+
+<p>@example</p>
+
+<pre>message = @popup.prompt(&quot;Some Value&quot;) do
+  @page.button_that_causes_prompt
+end</pre>
+
+<p>@param [string] the value returned to the caller of the prompt @param frame
+optional parameter used with the prompt is nested within a frame @param
+block a block that has the call that will cause the prompt to display
+@return [Hash] A has containing two keys - :message contains the prompt
+message and :default_value contains the default value for the prompt if
+provided</p>
+            
+
+            
+            <div class="method-source-code" id="prompt-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object.rb, line 245</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">prompt</span>(<span class="ruby-identifier">answer</span>, <span class="ruby-identifier">frame</span>=<span class="ruby-keyword">nil</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">prompt</span>(<span class="ruby-identifier">answer</span>, <span class="ruby-identifier">frame</span>, &amp;<span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- prompt-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- prompt-method -->
+
+      
+        <div id="refresh-method" class="method-detail ">
+          <a name="method-i-refresh"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">refresh</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Refresh to current page</p>
+            
+
+            
+            <div class="method-source-code" id="refresh-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object.rb, line 362</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">refresh</span>
+  <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">refresh</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- refresh-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- refresh-method -->
+
+      
+        <div id="save_screenshot-method" class="method-detail ">
+          <a name="method-i-save_screenshot"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">save_screenshot</span><span
+              class="method-args">(file_name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Save the current screenshot to the provided url.  File is saved as a png
+file.</p>
+            
+
+            
+            <div class="method-source-code" id="save_screenshot-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object.rb, line 391</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">save_screenshot</span>(<span class="ruby-identifier">file_name</span>)
+  <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">save_screenshot</span> <span class="ruby-identifier">file_name</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- save_screenshot-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- save_screenshot-method -->
+
+      
+        <div id="text-method" class="method-detail ">
+          <a name="method-i-text"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">text</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns the text of the current page</p>
+            
+
+            
+            <div class="method-source-code" id="text-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object.rb, line 145</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">text</span>
+  <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">text</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- text-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- text-method -->
+
+      
+        <div id="title-method" class="method-detail ">
+          <a name="method-i-title"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">title</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns the title of the current page</p>
+            
+
+            
+            <div class="method-source-code" id="title-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object.rb, line 159</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">title</span>
+  <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">title</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- title-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- title-method -->
+
+      
+        <div id="wait_for_ajax-method" class="method-detail ">
+          <a name="method-i-wait_for_ajax"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">wait_for_ajax</span><span
+              class="method-args">(timeout = 30, message = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Wait until there are no pending ajax requests.  This requires you to set
+the javascript framework in advance.</p>
+
+<p>@param [Numeric] the amount of time to wait for the block to return true.
+@param [String] the message to include with the error if we exceed the
+timeout duration.</p>
+            
+
+            
+            <div class="method-source-code" id="wait_for_ajax-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object.rb, line 188</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">wait_for_ajax</span>(<span class="ruby-identifier">timeout</span> = <span class="ruby-value">30</span>, <span class="ruby-identifier">message</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">end_time</span> = <span class="ruby-operator">::</span><span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">timeout</span>
+  <span class="ruby-keyword">until</span> <span class="ruby-operator">::</span><span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">end_time</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">browser</span>.<span class="ruby-identifier">execute_script</span>(<span class="ruby-operator">::</span><span class="ruby-constant">PageObject</span><span class="ruby-operator">::</span><span class="ruby-constant">JavascriptFrameworkFacade</span>.<span class="ruby-identifier">pending_requests</span>) <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">sleep</span> <span class="ruby-value">0.5</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">message</span> = <span class="ruby-string">&quot;Timed out waiting for ajax requests to complete&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">message</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-identifier">message</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- wait_for_ajax-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- wait_for_ajax-method -->
+
+      
+        <div id="wait_until-method" class="method-detail ">
+          <a name="method-i-wait_until"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">wait_until</span><span
+              class="method-args">(timeout = PageObject.default_page_wait, message = nil, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Wait until the block returns true or times out</p>
+
+<p>@example</p>
+
+<pre>@page.wait_until(5, 'Success not found on page') do
+  @page.text.include? 'Success'
+end</pre>
+
+<p>@param [Numeric] the amount of time to wait for the block to return true.
+@param [String] the message to include with the error if we exceed the
+timeout duration. @param block the block to execute.  It should return true
+when successful.</p>
+            
+
+            
+            <div class="method-source-code" id="wait_until-source">
+<pre>
+<span class="ruby-comment"># File lib/page-object.rb, line 175</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">wait_until</span>(<span class="ruby-identifier">timeout</span> = <span class="ruby-constant">PageObject</span>.<span class="ruby-identifier">default_page_wait</span>, <span class="ruby-identifier">message</span> = <span class="ruby-keyword">nil</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">platform</span>.<span class="ruby-identifier">wait_until</span>(<span class="ruby-identifier">timeout</span>, <span class="ruby-identifier">message</span>, &amp;<span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- wait_until-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- wait_until-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

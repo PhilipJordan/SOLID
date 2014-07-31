@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"old_position:EFI"*Diff::LCS::ContextChange#old_position;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I",Returns the old position being changed.:encoding"IBM437:
+@file0FI"lib/diff/lcs/change.rb;@

@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="IBM437"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=IBM437" http-equiv="Content-Type" />
+
+  <title>Class: FFI::StructGenerator</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/ffi/tools/struct_generator_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/ffi/tools/struct_generator.rb">lib/ffi/tools/struct_generator.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+      <!-- Namespace Contents -->
+      <div id="namespace-list-section" class="section">
+        <h3 class="section-header">Namespace</h3>
+        <ul class="link-list">
+          
+          <li><span class="type">CLASS</span> <a href="StructGenerator/Field.html">FFI::StructGenerator::Field</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-c-options">::options</a></li>
+          
+          <li><a href="#method-c-options-3D">::options=</a></li>
+          
+          <li><a href="#method-i-calculate">#calculate</a></li>
+          
+          <li><a href="#method-i-dump_config">#dump_config</a></li>
+          
+          <li><a href="#method-i-field">#field</a></li>
+          
+          <li><a href="#method-i-found-3F">#found?</a></li>
+          
+          <li><a href="#method-i-generate_layout">#generate_layout</a></li>
+          
+          <li><a href="#method-i-get_field">#get_field</a></li>
+          
+          <li><a href="#method-i-include">#include</a></li>
+          
+          <li><a href="#method-i-name">#name</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/ChangeLog.html">ChangeLog</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/README.html">README</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/compile.html">compile</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/configure.html">configure</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/depcomp.html">depcomp</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/doc/stamp-vti.html">stamp-vti</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/install-sh.html">install-sh</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/libtool-version.html">libtool-version</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/mdate-sh.html">mdate-sh</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/missing.html">missing</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../FFI.html">FFI</a></li>
+        
+          <li><a href="../FFI/AutoPointer.html">FFI::AutoPointer</a></li>
+        
+          <li><a href="../FFI/AutoPointer/CallableReleaser.html">FFI::AutoPointer::CallableReleaser</a></li>
+        
+          <li><a href="../FFI/AutoPointer/DefaultReleaser.html">FFI::AutoPointer::DefaultReleaser</a></li>
+        
+          <li><a href="../FFI/AutoPointer/Releaser.html">FFI::AutoPointer::Releaser</a></li>
+        
+          <li><a href="../FFI/ConstGenerator.html">FFI::ConstGenerator</a></li>
+        
+          <li><a href="../FFI/ConstGenerator/Constant.html">FFI::ConstGenerator::Constant</a></li>
+        
+          <li><a href="../FFI/Enum.html">FFI::Enum</a></li>
+        
+          <li><a href="../FFI/Enums.html">FFI::Enums</a></li>
+        
+          <li><a href="../FFI/Function.html">FFI::Function</a></li>
+        
+          <li><a href="../FFI/FunctionType.html">FFI::FunctionType</a></li>
+        
+          <li><a href="../FFI/Generator.html">FFI::Generator</a></li>
+        
+          <li><a href="../FFI/Generator/Task.html">FFI::Generator::Task</a></li>
+        
+          <li><a href="../FFI/IO.html">FFI::IO</a></li>
+        
+          <li><a href="../FFI/LastError.html">FFI::LastError</a></li>
+        
+          <li><a href="../FFI/Library.html">FFI::Library</a></li>
+        
+          <li><a href="../FFI/ManagedStruct.html">FFI::ManagedStruct</a></li>
+        
+          <li><a href="../FFI/MemoryPointer.html">FFI::MemoryPointer</a></li>
+        
+          <li><a href="../FFI/NativeType.html">FFI::NativeType</a></li>
+        
+          <li><a href="../FFI/NotFoundError.html">FFI::NotFoundError</a></li>
+        
+          <li><a href="../FFI/Platform.html">FFI::Platform</a></li>
+        
+          <li><a href="../FFI/PlatformError.html">FFI::PlatformError</a></li>
+        
+          <li><a href="../FFI/Pointer.html">FFI::Pointer</a></li>
+        
+          <li><a href="../FFI/StrPtrConverter.html">FFI::StrPtrConverter</a></li>
+        
+          <li><a href="../FFI/Struct.html">FFI::Struct</a></li>
+        
+          <li><a href="../FFI/Struct/InlineArray.html">FFI::Struct::InlineArray</a></li>
+        
+          <li><a href="../FFI/Struct/ManagedStructConverter.html">FFI::Struct::ManagedStructConverter</a></li>
+        
+          <li><a href="../FFI/StructByReference.html">FFI::StructByReference</a></li>
+        
+          <li><a href="../FFI/StructByValue.html">FFI::StructByValue</a></li>
+        
+          <li><a href="../FFI/StructGenerator.html">FFI::StructGenerator</a></li>
+        
+          <li><a href="../FFI/StructGenerator/Field.html">FFI::StructGenerator::Field</a></li>
+        
+          <li><a href="../FFI/StructLayout.html">FFI::StructLayout</a></li>
+        
+          <li><a href="../FFI/StructLayout/Array.html">FFI::StructLayout::Array</a></li>
+        
+          <li><a href="../FFI/StructLayout/Enum.html">FFI::StructLayout::Enum</a></li>
+        
+          <li><a href="../FFI/StructLayout/Field.html">FFI::StructLayout::Field</a></li>
+        
+          <li><a href="../FFI/StructLayout/Function.html">FFI::StructLayout::Function</a></li>
+        
+          <li><a href="../FFI/StructLayout/InnerStruct.html">FFI::StructLayout::InnerStruct</a></li>
+        
+          <li><a href="../FFI/StructLayout/Mapped.html">FFI::StructLayout::Mapped</a></li>
+        
+          <li><a href="../FFI/StructLayout/Number.html">FFI::StructLayout::Number</a></li>
+        
+          <li><a href="../FFI/StructLayout/Pointer.html">FFI::StructLayout::Pointer</a></li>
+        
+          <li><a href="../FFI/StructLayout/String.html">FFI::StructLayout::String</a></li>
+        
+          <li><a href="../FFI/StructLayoutBuilder.html">FFI::StructLayoutBuilder</a></li>
+        
+          <li><a href="../FFI/Type.html">FFI::Type</a></li>
+        
+          <li><a href="../FFI/Type/Builtin.html">FFI::Type::Builtin</a></li>
+        
+          <li><a href="../FFI/TypesGenerator.html">FFI::TypesGenerator</a></li>
+        
+          <li><a href="../FFI/Union.html">FFI::Union</a></li>
+        
+          <li><a href="../FFI/VariadicInvoker.html">FFI::VariadicInvoker</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">FFI::StructGenerator</h1>
+
+    <div id="description" class="description">
+      
+<p>Generates an <a href="../FFI.html">FFI</a> <a href="Struct.html">Struct</a>
+layout.</p>
+
+<p>Given the @@@ portion in:</p>
+
+<pre>module Zlib::ZStream &lt; FFI::Struct
+  @@@
+  name &quot;struct z_stream_s&quot;
+  include &quot;zlib.h&quot;
+
+  field :next_in,   :pointer
+  field :avail_in,  :uint
+  field :total_in,  :ulong
+
+  # ...
+  @@@
+end</pre>
+
+<p><a href="StructGenerator.html">StructGenerator</a> will create the layout:</p>
+
+<pre>layout :next_in, :pointer, 0,
+       :avail_in, :uint, 4,
+       :total_in, :ulong, 8,
+       # ...</pre>
+
+<p><a href="StructGenerator.html">StructGenerator</a> does its best to pad the
+layout it produces to preserve line numbers.  Place the struct definition
+as close to the top of the file for best results.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="fields-attribute-method" class="method-detail">
+          <a name="fields"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">fields</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="size-attribute-method" class="method-detail">
+          <a name="size"></a>
+          
+          <a name="size="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">size</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(name, options = {})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/ffi/tools/struct_generator.rb, line 39</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">options</span> = {})
+  <span class="ruby-ivar">@name</span> = <span class="ruby-identifier">name</span>
+  <span class="ruby-ivar">@struct_name</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@includes</span> = []
+  <span class="ruby-ivar">@fields</span> = []
+  <span class="ruby-ivar">@found</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@size</span> = <span class="ruby-keyword">nil</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-keyword">yield</span> <span class="ruby-keyword">self</span>
+    <span class="ruby-identifier">calculate</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">options</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-identifier">options</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+        <div id="options-method" class="method-detail ">
+          <a name="method-c-options"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">options</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="options-source">
+<pre>
+<span class="ruby-comment"># File lib/ffi/tools/struct_generator.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">options</span>
+  <span class="ruby-ivar">@options</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- options-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- options-method -->
+
+      
+        <div id="options-3D-method" class="method-detail ">
+          <a name="method-c-options-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">options=</span><span
+              class="method-args">(options)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="options-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/ffi/tools/struct_generator.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">options=</span>(<span class="ruby-identifier">options</span>)
+  <span class="ruby-ivar">@options</span> = <span class="ruby-identifier">options</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- options-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- options-3D-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="calculate-method" class="method-detail ">
+          <a name="method-i-calculate"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">calculate</span><span
+              class="method-args">(options = {})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="calculate-source">
+<pre>
+<span class="ruby-comment"># File lib/ffi/tools/struct_generator.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">calculate</span>(<span class="ruby-identifier">options</span> = {})
+  <span class="ruby-identifier">binary</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span> <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">tmpdir</span>, <span class="ruby-node">&quot;rb_struct_gen_bin_#{Process.pid}&quot;</span>
+
+  <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;struct name not set&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@struct_name</span>.<span class="ruby-identifier">nil?</span>
+
+  <span class="ruby-constant">Tempfile</span>.<span class="ruby-identifier">open</span>(<span class="ruby-node">&quot;#{@name}.struct_generator&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#include &lt;stdio.h&gt;&quot;</span>
+
+    <span class="ruby-ivar">@includes</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">inc</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#include &lt;#{inc}&gt;&quot;</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#include &lt;stddef.h&gt;\n\n&quot;</span>
+    <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;int main(int argc, char **argv)\n{&quot;</span>
+    <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;  #{@struct_name} s;&quot;</span>
+    <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">%[  printf(&quot;sizeof(#{@struct_name}) %u\\n&quot;, (unsigned int) sizeof(#{@struct_name}));]</span>
+
+    <span class="ruby-ivar">@fields</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">field</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">    printf(&quot;#{field.name} %u %u\\n&quot;, (unsigned int) offsetof(#{@struct_name}, #{field.name}),           (unsigned int) sizeof(s.#{field.name}));</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;\n  return 0;\n}&quot;</span>
+    <span class="ruby-identifier">f</span>.<span class="ruby-identifier">flush</span>
+
+    <span class="ruby-identifier">output</span> = <span class="ruby-node">`gcc #{options[:cppflags]} #{options[:cflags]} -D_DARWIN_USE_64_BIT_INODE -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -x c -Wall -Werror #{f.path} -o #{binary} 2&gt;&amp;1`</span>
+
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">$?</span>.<span class="ruby-identifier">success?</span> <span class="ruby-keyword">then</span>
+      <span class="ruby-ivar">@found</span> = <span class="ruby-keyword">false</span>
+      <span class="ruby-identifier">output</span> = <span class="ruby-identifier">output</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;\n&quot;</span>).<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">l</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;\t#{l}&quot;</span> }.<span class="ruby-identifier">join</span> <span class="ruby-string">&quot;\n&quot;</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Compilation error generating struct #{@name} (#{@struct_name}):\n#{output}&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-identifier">output</span> = <span class="ruby-node">`#{binary}`</span>.<span class="ruby-identifier">split</span> <span class="ruby-string">&quot;\n&quot;</span>
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">unlink</span>(<span class="ruby-identifier">binary</span> <span class="ruby-operator">+</span> (<span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">Platform</span>.<span class="ruby-identifier">windows?</span> <span class="ruby-operator">?</span> <span class="ruby-string">&quot;.exe&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-string">&quot;&quot;</span>))
+  <span class="ruby-identifier">sizeof</span> = <span class="ruby-identifier">output</span>.<span class="ruby-identifier">shift</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@size</span>
+    <span class="ruby-identifier">m</span> = <span class="ruby-regexp">/\s*sizeof\([^)]+\) (\d+)/</span>.<span class="ruby-identifier">match</span> <span class="ruby-identifier">sizeof</span>
+    <span class="ruby-ivar">@size</span> = <span class="ruby-identifier">m</span>[<span class="ruby-value">1</span>]
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">line_no</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">output</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">md</span> = <span class="ruby-identifier">line</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp">/.+ (\d+) (\d+)/</span>)
+    <span class="ruby-ivar">@fields</span>[<span class="ruby-identifier">line_no</span>].<span class="ruby-identifier">offset</span> = <span class="ruby-identifier">md</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">to_i</span>
+    <span class="ruby-ivar">@fields</span>[<span class="ruby-identifier">line_no</span>].<span class="ruby-identifier">size</span>   = <span class="ruby-identifier">md</span>[<span class="ruby-value">2</span>].<span class="ruby-identifier">to_i</span>
+
+    <span class="ruby-identifier">line_no</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@found</span> = <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- calculate-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- calculate-method -->
+
+      
+        <div id="dump_config-method" class="method-detail ">
+          <a name="method-i-dump_config"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">dump_config</span><span
+              class="method-args">(io)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="dump_config-source">
+<pre>
+<span class="ruby-comment"># File lib/ffi/tools/struct_generator.rb, line 124</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">dump_config</span>(<span class="ruby-identifier">io</span>)
+  <span class="ruby-identifier">io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;rbx.platform.#{@name}.sizeof = #{@size}&quot;</span>
+
+  <span class="ruby-ivar">@fields</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">field</span><span class="ruby-operator">|</span> <span class="ruby-identifier">io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">field</span>.<span class="ruby-identifier">to_config</span>(<span class="ruby-ivar">@name</span>) }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- dump_config-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- dump_config-method -->
+
+      
+        <div id="field-method" class="method-detail ">
+          <a name="method-i-field"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">field</span><span
+              class="method-args">(name, type=nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="field-source">
+<pre>
+<span class="ruby-comment"># File lib/ffi/tools/struct_generator.rb, line 114</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">field</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">type</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">field</span> = <span class="ruby-constant">Field</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">type</span>)
+  <span class="ruby-ivar">@fields</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">field</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">field</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- field-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- field-method -->
+
+      
+        <div id="found-3F-method" class="method-detail ">
+          <a name="method-i-found-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">found?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="found-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/ffi/tools/struct_generator.rb, line 120</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">found?</span>
+  <span class="ruby-ivar">@found</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- found-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- found-3F-method -->
+
+      
+        <div id="generate_layout-method" class="method-detail ">
+          <a name="method-i-generate_layout"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">generate_layout</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="generate_layout-source">
+<pre>
+<span class="ruby-comment"># File lib/ffi/tools/struct_generator.rb, line 130</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">generate_layout</span>
+  <span class="ruby-identifier">buf</span> = <span class="ruby-string">&quot;&quot;</span>
+
+  <span class="ruby-ivar">@fields</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">field</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">buf</span>.<span class="ruby-identifier">empty?</span>
+      <span class="ruby-identifier">buf</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;layout :#{field.name}, :#{field.type}, #{field.offset}&quot;</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">buf</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;       :#{field.name}, :#{field.type}, #{field.offset}&quot;</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@fields</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>
+      <span class="ruby-identifier">buf</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;,\n&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">buf</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- generate_layout-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- generate_layout-method -->
+
+      
+        <div id="get_field-method" class="method-detail ">
+          <a name="method-i-get_field"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_field</span><span
+              class="method-args">(name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="get_field-source">
+<pre>
+<span class="ruby-comment"># File lib/ffi/tools/struct_generator.rb, line 148</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_field</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-ivar">@fields</span>.<span class="ruby-identifier">find</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">name</span> }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_field-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_field-method -->
+
+      
+        <div id="include-method" class="method-detail ">
+          <a name="method-i-include"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">include</span><span
+              class="method-args">(i)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="include-source">
+<pre>
+<span class="ruby-comment"># File lib/ffi/tools/struct_generator.rb, line 152</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">include</span>(<span class="ruby-identifier">i</span>)
+  <span class="ruby-ivar">@includes</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">i</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- include-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- include-method -->
+
+      
+        <div id="name-method" class="method-detail ">
+          <a name="method-i-name"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">name</span><span
+              class="method-args">(n)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="name-source">
+<pre>
+<span class="ruby-comment"># File lib/ffi/tools/struct_generator.rb, line 156</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">name</span>(<span class="ruby-identifier">n</span>)
+  <span class="ruby-ivar">@struct_name</span> = <span class="ruby-identifier">n</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- name-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- name-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

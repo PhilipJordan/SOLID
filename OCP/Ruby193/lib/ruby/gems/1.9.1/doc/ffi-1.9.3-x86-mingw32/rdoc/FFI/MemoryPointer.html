@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="IBM437"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=IBM437" http-equiv="Content-Type" />
+
+  <title>Class: FFI::MemoryPointer</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../ext/ffi_c/ffi_c.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="ext/ffi_c/ffi.c">ext/ffi_c/ffi.c</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="Pointer.html">FFI::Pointer</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-from_string">::from_string</a></li>
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/ChangeLog.html">ChangeLog</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/README.html">README</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/compile.html">compile</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/configure.html">configure</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/depcomp.html">depcomp</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/doc/stamp-vti.html">stamp-vti</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/install-sh.html">install-sh</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/libtool-version.html">libtool-version</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/mdate-sh.html">mdate-sh</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/missing.html">missing</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../FFI.html">FFI</a></li>
+        
+          <li><a href="../FFI/AutoPointer.html">FFI::AutoPointer</a></li>
+        
+          <li><a href="../FFI/AutoPointer/CallableReleaser.html">FFI::AutoPointer::CallableReleaser</a></li>
+        
+          <li><a href="../FFI/AutoPointer/DefaultReleaser.html">FFI::AutoPointer::DefaultReleaser</a></li>
+        
+          <li><a href="../FFI/AutoPointer/Releaser.html">FFI::AutoPointer::Releaser</a></li>
+        
+          <li><a href="../FFI/ConstGenerator.html">FFI::ConstGenerator</a></li>
+        
+          <li><a href="../FFI/ConstGenerator/Constant.html">FFI::ConstGenerator::Constant</a></li>
+        
+          <li><a href="../FFI/Enum.html">FFI::Enum</a></li>
+        
+          <li><a href="../FFI/Enums.html">FFI::Enums</a></li>
+        
+          <li><a href="../FFI/Function.html">FFI::Function</a></li>
+        
+          <li><a href="../FFI/FunctionType.html">FFI::FunctionType</a></li>
+        
+          <li><a href="../FFI/Generator.html">FFI::Generator</a></li>
+        
+          <li><a href="../FFI/Generator/Task.html">FFI::Generator::Task</a></li>
+        
+          <li><a href="../FFI/IO.html">FFI::IO</a></li>
+        
+          <li><a href="../FFI/LastError.html">FFI::LastError</a></li>
+        
+          <li><a href="../FFI/Library.html">FFI::Library</a></li>
+        
+          <li><a href="../FFI/ManagedStruct.html">FFI::ManagedStruct</a></li>
+        
+          <li><a href="../FFI/MemoryPointer.html">FFI::MemoryPointer</a></li>
+        
+          <li><a href="../FFI/NativeType.html">FFI::NativeType</a></li>
+        
+          <li><a href="../FFI/NotFoundError.html">FFI::NotFoundError</a></li>
+        
+          <li><a href="../FFI/Platform.html">FFI::Platform</a></li>
+        
+          <li><a href="../FFI/PlatformError.html">FFI::PlatformError</a></li>
+        
+          <li><a href="../FFI/Pointer.html">FFI::Pointer</a></li>
+        
+          <li><a href="../FFI/StrPtrConverter.html">FFI::StrPtrConverter</a></li>
+        
+          <li><a href="../FFI/Struct.html">FFI::Struct</a></li>
+        
+          <li><a href="../FFI/Struct/InlineArray.html">FFI::Struct::InlineArray</a></li>
+        
+          <li><a href="../FFI/Struct/ManagedStructConverter.html">FFI::Struct::ManagedStructConverter</a></li>
+        
+          <li><a href="../FFI/StructByReference.html">FFI::StructByReference</a></li>
+        
+          <li><a href="../FFI/StructByValue.html">FFI::StructByValue</a></li>
+        
+          <li><a href="../FFI/StructGenerator.html">FFI::StructGenerator</a></li>
+        
+          <li><a href="../FFI/StructGenerator/Field.html">FFI::StructGenerator::Field</a></li>
+        
+          <li><a href="../FFI/StructLayout.html">FFI::StructLayout</a></li>
+        
+          <li><a href="../FFI/StructLayout/Array.html">FFI::StructLayout::Array</a></li>
+        
+          <li><a href="../FFI/StructLayout/Enum.html">FFI::StructLayout::Enum</a></li>
+        
+          <li><a href="../FFI/StructLayout/Field.html">FFI::StructLayout::Field</a></li>
+        
+          <li><a href="../FFI/StructLayout/Function.html">FFI::StructLayout::Function</a></li>
+        
+          <li><a href="../FFI/StructLayout/InnerStruct.html">FFI::StructLayout::InnerStruct</a></li>
+        
+          <li><a href="../FFI/StructLayout/Mapped.html">FFI::StructLayout::Mapped</a></li>
+        
+          <li><a href="../FFI/StructLayout/Number.html">FFI::StructLayout::Number</a></li>
+        
+          <li><a href="../FFI/StructLayout/Pointer.html">FFI::StructLayout::Pointer</a></li>
+        
+          <li><a href="../FFI/StructLayout/String.html">FFI::StructLayout::String</a></li>
+        
+          <li><a href="../FFI/StructLayoutBuilder.html">FFI::StructLayoutBuilder</a></li>
+        
+          <li><a href="../FFI/Type.html">FFI::Type</a></li>
+        
+          <li><a href="../FFI/Type/Builtin.html">FFI::Type::Builtin</a></li>
+        
+          <li><a href="../FFI/TypesGenerator.html">FFI::TypesGenerator</a></li>
+        
+          <li><a href="../FFI/Union.html">FFI::Union</a></li>
+        
+          <li><a href="../FFI/VariadicInvoker.html">FFI::VariadicInvoker</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">FFI::MemoryPointer</h1>
+
+    <div id="description" class="description">
+      
+<p>A <a href="MemoryPointer.html">MemoryPointer</a> is a specific {Pointer}.
+It points to a memory composed of cells. All cells have the same size.</p>
+
+<p>@example Create a new <a href="MemoryPointer.html">MemoryPointer</a></p>
+
+<pre>mp = FFI::MemoryPointer.new(:long, 16)   # Create a pointer on a memory of 16 long ints.</pre>
+
+<p>@example Create a new <a href="MemoryPointer.html">MemoryPointer</a> from a
+String</p>
+
+<pre>mp1 = FFI::MemoryPointer.from_string(&quot;this is a string&quot;)
+# same as:
+mp2 = FFI::MemoryPointer.new(:char,16)
+mp2.put_string(&quot;this is a string&quot;)</pre>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="from_string-method" class="method-detail ">
+          <a name="method-c-from_string"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">from_string(s)</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">@param [String] s string</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">@return [MemoryPointer]</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">Create a {MemoryPointer} with +s+ inside.</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="from_string-source">
+<pre>
+static VALUE
+memptr_s_from_string(VALUE klass, VALUE to_str)
+{
+    VALUE s = StringValue(to_str);
+    VALUE args[] = { INT2FIX(1), LONG2NUM(RSTRING_LEN(s) + 1), Qfalse };
+    VALUE obj = rb_class_new_instance(3, args, klass);
+    rb_funcall(obj, rb_intern(&quot;put_string&quot;), 2, INT2FIX(0), s);
+
+    return obj;
+}</pre>
+            </div><!-- from_string-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- from_string-method -->
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">initialize(size, count=1, clear=true)</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">@param [Fixnum, Bignum, Symbol, FFI::Type] size size of a memory cell (in bytes, or type whom size will be used)</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">@param [Numeric] count number of cells in memory</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">@param [Boolean] clear set memory to all-zero if +true+</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">@return [self]</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">A new instance of FFI::MeoryPointer.</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+static VALUE
+memptr_initialize(int argc, VALUE* argv, VALUE self)
+{
+    VALUE size = Qnil, count = Qnil, clear = Qnil;
+    int nargs = rb_scan_args(argc, argv, &quot;12&quot;, &amp;size, &amp;count, &amp;clear);
+
+    memptr_malloc(self, rbffi_type_size(size), nargs &gt; 1 ? NUM2LONG(count) : 1,
+        RTEST(clear) || clear == Qnil);
+
+    if (rb_block_given_p()) {
+        return rb_ensure(rb_yield, self, memptr_free, self);
+    }
+
+    return self;
+}</pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+
