@@ -1,5 +1,4 @@
 ﻿
-
 function pagePrep() {
 
     $(".terrainMap img").click(function () {
@@ -41,9 +40,7 @@ function pagePrep() {
             var oldRoverLocation = result.PreviousRoverLocation;
             var roverFacing = result.RoverFacing;
 
-
             setOldRoverLocationToGround(oldRoverLocation);
-            //$(locationsToUpdate).each(updateMapLocationForRover);
 
             obstacleUpdateSuccess(result);
 
@@ -73,10 +70,6 @@ function pagePrep() {
     {
         $("img[id='" + oldLocation + "']").attr('src', '/Images/Ground.png');
     }
-
-    //function updateMapLocationForRover(index, element) {
-    //    $("img[id='" + element + "']").attr('src', '/Images/Rover.png');
-    //}
 
     function updateMapLocation(index, element)
     {
