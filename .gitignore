@@ -91,3 +91,8 @@ OCP/Solution/CentralCommand/obj/
 OCP/Solution/MarsRoverKata/obj/
 OCP/Solution/UnitTest/obj/
 OCP/Solution/MarsRoverKata/bin/
+OCP/MungedSolution/CentralCommand/bin/ATDD_and_MVC.dll
+OCP/MungedSolution/UnitTest/obj/
+OCP/MungedSolution/CentralCommand/obj/
+OCP/MungedSolution/CentralCommand/bin/
+OCP/MungedSolution/UnitTest/bin/
