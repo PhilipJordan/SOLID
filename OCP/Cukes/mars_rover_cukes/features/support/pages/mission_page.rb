@@ -1,6 +1,7 @@
 
 class MissionPage
   include PageObject
+  include RSpec::Matchers
   
   page_url $environment 
   h3(:title, :id => "MissionControl")
@@ -13,14 +14,33 @@ class MissionPage
   button(:fireMissile, :id => 'fireMissile')
   button(:fireMortar, :id => 'fireMortar')
   
-  def click_button_with name
-    @message = self.alert do
-		if(name == "Add")
-		   self.addObstacles
-		end
+  def get_alert_message_on_button_click 
+	
+    message = self.alert do
+		self.addObstacles
 	end
-	@message
+	message
   end
+  
+  def get_alert_message_on &block 
+    message = self.alert do 
+		yield
+	end
+	message
+	#puts "#{element}"
+  end
+  
+  def get_alert_message
+	@browser.alert.text
+  end
+  
+#  def verifyAlertMessageIsCreatedWith message
+#	messageReturned = self.alert do
+#		self.addObstacles
+#	end
+#	
+#	messageReturned.should include message
+# end
   
   def get_image_at image_id
      @browser.img(:id => image_id).src	 
@@ -30,15 +50,8 @@ class MissionPage
 	@browser.img(:id => image_id).click
   end
   
-  def add_default_obstacles  
-    defaultObstacles = {:northObstacle => "25_26", :eastObstacle => "26_25", :southObstacle => "25_24", :westObstacle => "24_25"}
-    
-	@browser.img(:id => defaultObstacles[:northObstacle]).click
-	@browser.img(:id => defaultObstacles[:eastObstacle]).click
-	@browser.img(:id => defaultObstacles[:southObstacle]).click
-	@browser.img(:id => defaultObstacles[:westObstacle]).click
-	
-	self.addObstacles
+  def map_does_not_include image_name
+	@browser.imgs().each {|element| "#{element.src.should_not include image_name}"} 
   end
   
   def alert_message

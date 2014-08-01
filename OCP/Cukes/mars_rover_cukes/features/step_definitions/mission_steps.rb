@@ -7,34 +7,27 @@ When(/^I get the image at the (center of the map)$/) do |center_of_map|
 	@map_image = on(MissionPage).get_image_at center_of_map     
 end                                                                     
                                                                         
-Then(/^it will be the "(.*?)" image$/) do |name|                                
+Then(/^it will be (the rover)$/) do |name|                                
 	@map_image.should include name   
-end                                                                     
-                                                                        																		                                                                      
-When(/^I click on the map at (location "(.*?)")$/) do |id, coordinate|             
-	on(MissionPage).click_control_at id 
-end                                                                   
-     
-When(/^I click the "(.*?)" button$/) do |button_name|
-	@alert_message = on(MissionPage).click_button_with button_name
-end
+end         
+   
+When(/^I click on the map at ((\d+)x(\d+))$/) do |image_location, x, y|             
+	on(MissionPage).click_control_at image_location 
+end  
+
+When(/^I click the add button$/) do
+	on(MissionPage).addObstacles
+end  
                                                                  
 Then(/^the image at (location "(.*?)") will (display an obstacle)$/) do |location, coordinate, image|                      
 	(on(MissionPage).get_image_at location).should include image   
 end  
 
 Then(/^an alert message with "(.*?)" should be shown$/) do |message|
-  @alert_message.should include message
+  message = on(MissionPage).get_alert_message
+  message.should include message
 end
-                                                        
-                                                                            
-#Below this are prime candidates for re-factoring. Getting this done for the OCP presentation. Refactor for Code && Beer talk                                                                           
-
-Given(/^(default obstacles) on the map$/) do |blar|
-	on(MissionPage).add_default_obstacles
-	
-end
-
+ 
 When(/^I send the forward command$/) do
 	on(MissionPage) do |page|
 		page.moveForward
@@ -49,27 +42,6 @@ When(/^I send the backward command$/) do
 	end
 end
 
-Then(/^the rover will move (\d+) step to the south$/) do |number_of_steps|
-	on(MissionPage) do |page|
-		roverImage = page.get_image_at '25_24'
-		roverImage.should include 'Rover'
-	end
-end
-
-Then(/^the rover will move (\d+) step to the north$/) do |number_of_steps| #, north_location|
-	on(MissionPage) do |page|
-		roverImage = page.get_image_at '25_26'
-		roverImage.should include 'Rover'
-	end
-end           
-
-Then(/^the old position will display ground$/) do 
-	on(MissionPage) do |page|
-		oldRoverImage = page.get_image_at '25_25'
-		oldRoverImage.should include 'Ground'
-	end
-end   
-
 When(/^I send the turn right command$/) do
 	on(MissionPage) do |page|
 		page.turnRight
@@ -77,10 +49,11 @@ When(/^I send the turn right command$/) do
 	end
 end
 
-Then(/^the rover will be facing East$/) do
+Then(/^(the rover) will be (facing East)$/) do |rover_name, direction|
 	on(MissionPage) do |page|
 		roverImage = page.get_image_at '25_25'
-		roverImage.should include 'Rover-E'
+		roverImage.should include rover_name   
+		roverImage.should include direction
 	end
 end
                                                     
@@ -91,16 +64,17 @@ When(/^I send the turn left command$/) do
 	end
 end
 
-Then(/^the rover will be facing West$/) do
+Then(/^(the rover) will be (facing West)$/) do |rover_name, direction|
 	on(MissionPage) do |page|
 		roverImage = page.get_image_at '25_25'
-		roverImage.should include 'Rover-W'
+		roverImage.should include rover_name  
+		roverImage.should include direction
 	end
 end
 
-Then(/^the rover will still be at the (center of the map)$/) do |center_of_map|                  
+Then(/^(the rover) will still be at the (center of the map)$/) do |rover_name, center_of_map|                  
 	map_image = on(MissionPage).get_image_at center_of_map 
-	map_image.should include 'Rover'
+	map_image.should include rover_name 
 end  
 
 When(/^I fire a missile$/) do
@@ -117,58 +91,57 @@ When(/^I fire a mortar$/) do
 	end
 end
 
-Then(/^a crater will be formed$/) do
-	on(MissionPage) do |page|
-		theImage = page.get_image_at '25_35'
-		theImage.should include 'crater'
-	end
+Then(/^((\d+)x(\d+)) will not (display a crater)$/) do |image_location, x, y, crater_name|
+	image = on(MissionPage).get_image_at image_location  
+	image.should_not include crater_name
 end
 
-Then(/^obstacle is destroyed$/) do
-	on(MissionPage) do |page|
-		theImage = page.get_image_at '25_26'
-		theImage.should include 'Ground'
-	end
-end
-
-Then(/^a crater will not be formed$/) do
-	on(MissionPage) do |page|
-		theImage = page.get_image_at '25_35'
-		theImage.should_not include 'crater'
-	end
-end
-
-Given(/^crater exists (\d+) steps to the north$/) do |number_of_steps|
+Given(/^I create a crater at maximum distance$/) do 
 	on(MissionPage) do |page|
 		page.fireMissile
 		page.sendCommands
 	end
 end
 
-Then(/^obstacle is not destroyed$/) do
+Given(/^I add an obstacle at ((\d+)x(\d+))$/) do |map_location, x, y|
 	on(MissionPage) do |page|
-		theImage = page.get_image_at '25_35'
-		theImage.should include 'crater'
+		page.click_control_at map_location
+		page.addObstacles
 	end
-end                                              
-                                                                   
-Then(/^obstacle is destroyed at (\d+)x(\d+)$/) do |x, y|
-	on(MissionPage) do |page|
-		theImage = page.get_image_at "#{x}_#{y}"
-		theImage.should include 'Ground'
-	end
-end                                                                
+end                                            
 
-Given(/^the rover moves forward (\d+) steps$/) do |steps|
-	steps.to_i.times {
+Given(/^the rover moves backward ((\d+) steps)$/) do |number_of_steps, number_as_string|
+	number_of_steps.times {
+		on(MissionPage).moveBackward
+	}
+	on(MissionPage).sendCommands
+end
+
+Given(/^the rover moves forward ((\d+) steps)$/) do |number_of_steps, number_as_string|
+	number_of_steps.times {
 		on(MissionPage).moveForward
 	}
 	on(MissionPage).sendCommands
 end
 
-Then(/^((\d+)x(\d+)) will (display a crater)$/) do |image_location, x_location, y_location, crater_name|
+Then(/^((\d+)x(\d+)) will (display a crater)$/) do |image_location, x, y, crater_name|
 	image = on(MissionPage).get_image_at image_location  
 	image.should include crater_name
+end
+
+Then(/^((\d+)x(\d+)) will (display the ground)$/) do |image_location, x, y, ground_name|
+	image = on(MissionPage).get_image_at image_location  
+	image.should include ground_name
+end
+
+Then(/^((\d+)x(\d+)) will (display an obstacle)$/) do |image_location, x, y, obstacle_name|
+	image = on(MissionPage).get_image_at image_location  
+	image.should include obstacle_name
+end
+
+Then(/^((\d+)x(\d+)) will display (the rover)$/) do |image_location, x, y, rover_name|
+	image = on(MissionPage).get_image_at image_location  
+	image.should include rover_name
 end
 
 
