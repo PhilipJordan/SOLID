@@ -105,7 +105,7 @@ namespace MarsRoverKata
             return true;
         }
 
-        public bool FireProjectiles(bool isMortar)
+        public bool FireProjectile(bool isMortar)
         {
             var projectileToFire = Projectiles.FirstOrDefault(p => p.IsMortar == isMortar);
             if (projectileToFire == null)

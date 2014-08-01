@@ -88,11 +88,6 @@ namespace MarsRoverKata
             return Mars.Obstacles.SingleOrDefault(x => x.Location.Equals(point));
         }
 
-        protected virtual void DestroyObstacle(Obstacle obstacle)
-        {
-            Mars.RemoveObstacle(obstacle);
-        }
-
         private void HitTarget(Point point)
         {
             var obstacle = FindObstacle(point);
@@ -103,9 +98,19 @@ namespace MarsRoverKata
             }
             else if (obstacle == null)
             {
-                obstacle = new Crater(point);
-                Mars.AddObstacle(obstacle);
+                CreateObstacle(point);
             }
+        }
+
+        protected virtual void DestroyObstacle(Obstacle obstacle)
+        {
+            Mars.RemoveObstacle(obstacle);
+        }
+
+        protected virtual void CreateObstacle(Point point)
+        {
+            Obstacle obstacle = new Crater(point);
+            Mars.AddObstacle(obstacle);
         }
     }
 }

@@ -17,7 +17,7 @@ namespace MarsRoverKata.Commands
 
         public bool Execute()
         {
-            return Rover.FireProjectiles(false);
+            return Rover.FireProjectile(false);
         }
     }
 }
