@@ -128,7 +128,7 @@ namespace UnitTest
         public void WhenMissileIsLaunched_AndNoObstaclesInTheWay_ThenANewObstacleCreated()
         {
             var position = new Point(25, 25);
-            var expectedObstaclePosition = new Point(25, 15);
+            var expectedObstaclePosition = new Point(25, 20);
             var expectedCount = mars.Obstacles.Count + 1;
 
             missile.Launch(Direction.South, position);
@@ -153,10 +153,11 @@ namespace UnitTest
         [Test]
         public void WhenMissileIsLaunched_AndObstacleInTheWay_AndObstacleIsNotDestructable_ThenTheObstacleIsSkipped_AndANewObstacleCreated()
         {
+            int anyNumberNotEqualToProjectileRange = 83438;
             mars.RemoveObstacle(obstacle);
             obstacle = new Crater(obstacle.Location);
             mars.AddObstacle(obstacle);
-            var position = new Point(obstacle.Location.X, obstacle.Location.Y + 5);
+            var position = new Point(obstacle.Location.X, obstacle.Location.Y + anyNumberNotEqualToProjectileRange);
             var expectedCount = mars.Obstacles.Count + 1;
 
             missile.Launch(Direction.South, position);
@@ -168,7 +169,7 @@ namespace UnitTest
         public void WhenMissileIsLaunchedNearTheEdge_AndNoObstaclesInTheWay_ThenANewObstacleCreated_AndItsLocationWrappedAroundTheEdge()
         {
             var position = new Point(25, 0);
-            var expectedObstaclePosition = new Point(25, 41);
+            var expectedObstaclePosition = new Point(25, 46);
             var expectedCount = mars.Obstacles.Count + 1;
 
             missile.Launch(Direction.South, position);
@@ -186,7 +187,7 @@ namespace UnitTest
         public void WhenMortarIsLaunched_AndNoObstaclesInTheLandingPostion_ThenANewObstacleCreated()
         {
             var position = new Point(25, 25);
-            var expectedObstaclePosition = new Point(25, 5);
+            var expectedObstaclePosition = new Point(25, 15);
             var expectedCount = mars.Obstacles.Count + 1;
 
             mortar.Launch(Direction.South, position);
@@ -200,8 +201,8 @@ namespace UnitTest
         [Test]
         public void WhenMortarIsLaunched_AndObstacleInTravelPath_AndNoObstaclesInTheLandingPostion_ThenANewObstacleCreated_AndPreviousObstacleIsNotDestroyed()
         {
-            var position = new Point(obstacle.Location.X, obstacle.Location.Y + 10);
-            var expectedObstaclePosition = new Point(obstacle.Location.X, obstacle.Location.Y - 10);
+            var position = new Point(obstacle.Location.X, obstacle.Location.Y + (Mortar.Range / 2));
+            var expectedObstaclePosition = new Point(obstacle.Location.X, obstacle.Location.Y - (Mortar.Range / 2));
             var expectedCount = mars.Obstacles.Count + 1;
 
             mortar.Launch(Direction.South, position);
@@ -215,7 +216,7 @@ namespace UnitTest
         [Test]
         public void WhenMortarIsLaunched_AndObstacleInThePosition_ThenTheObstacleIsDestroyed()
         {
-            var position = new Point(obstacle.Location.X, obstacle.Location.Y + 20);
+            var position = new Point(obstacle.Location.X, obstacle.Location.Y + Mortar.Range);
             var expectedObstaclePosition = obstacle.Location;
             var expectedCount = mars.Obstacles.Count - 1;
 
@@ -229,7 +230,7 @@ namespace UnitTest
         public void WhenMortarIsLaunchedNearAnEdge_ThenAnObstacleIsCreated_AndItsLocationWrappedAroundTheEdge()
         {
             var position = new Point(25, 0);
-            var expectedObstaclePosition = new Point(25, 31);
+            var expectedObstaclePosition = new Point(25, 41);
             var expectedCount = mars.Obstacles.Count + 1;
 
             mortar.Launch(Direction.South, position);

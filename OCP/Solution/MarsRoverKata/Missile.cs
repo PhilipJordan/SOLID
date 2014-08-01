@@ -8,6 +8,8 @@ namespace MarsRoverKata
 {
     public class Missile : Projectile
     {
+        public const int Range = 5;
+
         public Missile(Mars mars)
             : base(mars)
         {
@@ -15,7 +17,7 @@ namespace MarsRoverKata
 
         protected override int MaxRange
         {
-            get { return 10; }
+            get { return Missile.Range; }
         }
 
         protected override bool IsCollisionDetected(Point desired)

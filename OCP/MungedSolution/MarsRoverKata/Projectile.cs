@@ -24,7 +24,7 @@ namespace MarsRoverKata
         };
 
         public bool IsMortar { get; set; }
-        private int MaxRange { get { return IsMortar ? 20 : 10; } }
+        private int MaxRange { get { return IsMortar ? 10 : 5; } }
 
         public void Launch(Direction facing, Point location)
         {
