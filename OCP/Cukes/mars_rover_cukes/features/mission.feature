@@ -31,7 +31,7 @@ Feature: Beginning the Mission
 		Then 5x5 will display an obstacle
 		And 10x10 will display an obstacle 
 		And 15x15 will display an obstacle
-	 
+	
 	Scenario: Giving forward command
 		Given the Mission page 
 		When I send the forward command
@@ -100,7 +100,6 @@ Feature: Beginning the Mission
 		When I fire a missile 
 		Then 25x4 will display a crater
 	
-	@foo
 	Scenario: Firing a Mortar beyond the map border
 		Given the Mission page
 		And the rover moves forward 20 steps
@@ -111,7 +110,9 @@ Feature: Beginning the Mission
 		#Given the Mission page
 		
 		
+	#Scenario: Clicking the send commands button without commands selected
 		
+	
 		
 		
 		

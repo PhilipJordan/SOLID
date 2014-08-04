@@ -41,6 +41,7 @@ namespace CentralCommand.Controllers
 
         public ActionResult Index()
         {
+            MissionManager = new MissionManager(new Rover(new Mars()));
             return View();
         }
 

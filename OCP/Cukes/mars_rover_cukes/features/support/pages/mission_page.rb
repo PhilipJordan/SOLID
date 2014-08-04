@@ -3,7 +3,7 @@ class MissionPage
   include PageObject
   include RSpec::Matchers
   
-  page_url $environment 
+  page_url "#{$environment}/Mission/Staging" 
   h3(:title, :id => "MissionControl")
   button(:addObstacles, :value => 'Add')
   button(:sendCommands, :id => 'sendCommands')
@@ -31,7 +31,9 @@ class MissionPage
   end
   
   def get_alert_message
-	@browser.alert.text
+	message = @browser.alert.text
+	@browser.alert.close
+	message
   end
   
 #  def verifyAlertMessageIsCreatedWith message
