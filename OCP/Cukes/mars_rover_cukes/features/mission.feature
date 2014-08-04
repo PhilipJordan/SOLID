@@ -11,7 +11,6 @@ Feature: Beginning the Mission
 		When I get the image at the center of the map
 		Then it will be the rover
    
-    @foo
 	Scenario: Adding no Obstacles
 		Given the Mission page
 		When I click the add button
@@ -72,38 +71,39 @@ Feature: Beginning the Mission
 	Scenario: Firing Rockets without obstacles
 		Given the Mission page 
 		When I fire a missile
-		Then 25x35 will display a crater
+		Then 25x30 will display a crater
 	
 	Scenario: Firing Rockets with obstacles
 		Given the Mission page
 		And I add an obstacle at 25x26 	
 		When I fire a missile
 		Then 25x26 will display the ground
-		And 25x35 will not display a crater
+		And 25x30 will not display a crater
 		
 	Scenario: Firing Rockets at craters
 		Given the Mission page
 		And I create a crater at maximum distance
 		When I fire a missile
-		Then 25x35 will display a crater
+		Then 25x30 will display a crater
 	
 	Scenario: Firing Rockets over craters at obstacles
 		Given the Mission page
-		And I add an obstacle at 25x36
+		And I add an obstacle at 25x31
 		And I create a crater at maximum distance
 		And the rover moves forward 1 steps
 		When I fire a missile
-		Then 25x36 will display the ground
+		Then 25x31 will display the ground
 		
 	Scenario: Firing a Rocket beyond the map border
 		Given the Mission page
-		And the rover moves forward 20 steps
+		And the rover moves forward 25 steps
 		When I fire a missile 
 		Then 25x4 will display a crater
 	
+	@foo
 	Scenario: Firing a Mortar beyond the map border
 		Given the Mission page
-		And the rover moves forward 10 steps
+		And the rover moves forward 20 steps
 		When I fire a mortar 
 		Then 25x4 will display a crater
 		
