@@ -1,5 +1,6 @@
-cd C:\github\SOLID\OCP\Cukes\mars_rover_cukes\
 
-set PATH=%PATH%;C:\github\SOLID\OCP\Ruby193\bin\
+set PATH=%PATH%;%cd%\Ruby193\bin\
+
+cd cukes\mars_rover_cukes
  
 bundle exec cucumber --tags @missionControl
