@@ -1,6 +1,6 @@
 require 'watir-webdriver'
 
-browser = Watir::Browser.new :firefox #:chrome, :switches => %w[--test-type]
+browser = Watir::Browser.new :firefox #:chrome, :switches => %w[--test-type]# 
 
 Before do
 	@browser = browser #Watir::Browser.new :firefox# 
@@ -8,7 +8,6 @@ end
 
 After do
 	browser.goto "#{$environment}/Mission/Index" 
-	#@browser.close
 end
 
 at_exit do
