@@ -91,10 +91,10 @@ OCP/Spoilers/CentralCommand/obj/
 OCP/Spoilers/MarsRoverKata/obj/
 OCP/Spoilers/UnitTest/obj/
 OCP/Spoilers/MarsRoverKata/bin/
-OCP/MungedSolution/CentralCommand/bin/ATDD_and_MVC.dll
-OCP/MungedSolution/UnitTest/obj/
-OCP/MungedSolution/CentralCommand/obj/
-OCP/MungedSolution/CentralCommand/bin/
-OCP/MungedSolution/UnitTest/bin/
-OCP/MungedSolution/MarsRoverKata/obj/
-OCP/MungedSolution/MarsRoverKata/bin/
+OCP/Solution/CentralCommand/bin/ATDD_and_MVC.dll
+OCP/Solution/UnitTest/obj/
+OCP/Solution/CentralCommand/obj/
+OCP/Solution/CentralCommand/bin/
+OCP/Solution/UnitTest/bin/
+OCP/Solution/MarsRoverKata/obj/
+OCP/Solution/MarsRoverKata/bin/
