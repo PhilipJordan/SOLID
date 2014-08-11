@@ -84,13 +84,13 @@ csx/
 
 # Windows Store app package directory
 AppPackages/
-OCP/Solution/UnitTest/bin/
-OCP/Solution/CentralCommand/bin/
-OCP/Solution/CentralCommand/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
-OCP/Solution/CentralCommand/obj/
-OCP/Solution/MarsRoverKata/obj/
-OCP/Solution/UnitTest/obj/
-OCP/Solution/MarsRoverKata/bin/
+OCP/Spoilers/UnitTest/bin/
+OCP/Spoilers/CentralCommand/bin/
+OCP/Spoilers/CentralCommand/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+OCP/Spoilers/CentralCommand/obj/
+OCP/Spoilers/MarsRoverKata/obj/
+OCP/Spoilers/UnitTest/obj/
+OCP/Spoilers/MarsRoverKata/bin/
 OCP/MungedSolution/CentralCommand/bin/ATDD_and_MVC.dll
 OCP/MungedSolution/UnitTest/obj/
 OCP/MungedSolution/CentralCommand/obj/
