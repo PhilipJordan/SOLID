@@ -1,20 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MarsRoverKata
 {
     public abstract class Projectile
     {
-        public Projectile(Mars mars)
+        protected Projectile(Mars mars)
         {
             Mars = mars;
         }
 
         private Mars Mars { get; set; }
-        private static readonly Dictionary<Direction, Point> PositionalAdjustments = new Dictionary<Direction, Point>() 
+        private static readonly Dictionary<Direction, Point> PositionalAdjustments = new Dictionary<Direction, Point>
         { 
             { Direction.North, new Point(0, 1) },
             { Direction.South, new Point(0, -1) },
@@ -29,10 +26,9 @@ namespace MarsRoverKata
             bool collidedWithTarget = false;
             int moveIndex = 0;
             Point target = location;
-            Point desiredPosition;
             while (!collidedWithTarget && moveIndex < MaxRange)
             {
-                desiredPosition = CreateDesiredPosition(1, facing, target);
+                Point desiredPosition = CreateDesiredPosition(1, facing, target);
                 target = CalculateProjectileFinalPosition(target, desiredPosition);
                 collidedWithTarget = IsCollisionDetected(target);
                 moveIndex++;
@@ -40,7 +36,7 @@ namespace MarsRoverKata
             HitTarget(target);
         }
 
-        private Point CreateDesiredPosition(int adjustmentFactor, Direction facing, Point location)
+        private static Point CreateDesiredPosition(int adjustmentFactor, Direction facing, Point location)
         {
             var adjustment = PositionalAdjustments[facing] * adjustmentFactor;
             return location + adjustment;

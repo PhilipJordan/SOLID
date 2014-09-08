@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MarsRoverKata.Commands;
 
 namespace MarsRoverKata
 {
@@ -12,8 +9,8 @@ namespace MarsRoverKata
         public Point Location { get; set; }
         public Direction Facing { get; set; }
 
-        public Mars Mars { get; set; }
-        private static readonly Dictionary<Direction, Point> PositionalAdjustments = new Dictionary<Direction, Point>() 
+        public Mars Mars { get; private set; }
+        private static readonly Dictionary<Direction, Point> PositionalAdjustments = new Dictionary<Direction, Point>
         { 
             { Direction.North, new Point(0, 1) },
             { Direction.South, new Point(0, -1) },
@@ -64,7 +61,7 @@ namespace MarsRoverKata
             var desiredPosition = CreateDesiredPosition(adjustmentFactor);
             var newLocation = Mars.CalculateFinalPosition(Location, desiredPosition);
 
-            var success = Location == newLocation ? false : true;
+            var success = Location != newLocation;
 
             Location = newLocation;
 

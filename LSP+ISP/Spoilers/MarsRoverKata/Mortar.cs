@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MarsRoverKata
+﻿namespace MarsRoverKata
 {
     public class Mortar : Projectile
     {
@@ -17,7 +11,7 @@ namespace MarsRoverKata
 
         protected override int MaxRange
         {
-            get { return Mortar.Range; }
+            get { return Range; }
         }
 
         protected override bool IsCollisionDetected(Point desired)

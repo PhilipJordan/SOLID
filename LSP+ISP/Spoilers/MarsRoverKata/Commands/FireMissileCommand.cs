@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MarsRoverKata.Commands
+﻿namespace MarsRoverKata.Commands
 {
     public class FireMissileCommand : ICommand
     {
-        public Rover Rover { get; set; }
+        private Rover Rover { get; set; }
 
         public FireMissileCommand(Rover rover)
         {
