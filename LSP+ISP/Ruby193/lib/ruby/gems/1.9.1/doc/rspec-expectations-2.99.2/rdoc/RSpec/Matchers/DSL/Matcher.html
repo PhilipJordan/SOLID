@@ -1,0 +1,1242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: RSpec::Matchers::DSL::Matcher</title>
+
+  <link rel="stylesheet" href="../../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../../index.html">Home</a>
+          <a href="../../../index.html#classes">Classes</a>
+          <a href="../../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../../lib/rspec/matchers/matcher_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/rspec/matchers/matcher.rb">lib/rspec/matchers/matcher.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="../../../Object.html">Object</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-chain">#chain</a></li>
+          
+          <li><a href="#method-i-description">#description</a></li>
+          
+          <li><a href="#method-i-diffable">#diffable</a></li>
+          
+          <li><a href="#method-i-diffable-3F">#diffable?</a></li>
+          
+          <li><a href="#method-i-does_not_match-3F">#does_not_match?</a></li>
+          
+          <li><a href="#method-i-expected">#expected</a></li>
+          
+          <li><a href="#method-i-expected_as_array">#expected_as_array</a></li>
+          
+          <li><a href="#method-i-failure_message_for_should">#failure_message_for_should</a></li>
+          
+          <li><a href="#method-i-failure_message_for_should_not">#failure_message_for_should_not</a></li>
+          
+          <li><a href="#method-i-for_expected">#for_expected</a></li>
+          
+          <li><a href="#method-i-match">#match</a></li>
+          
+          <li><a href="#method-i-match_for_should">#match_for_should</a></li>
+          
+          <li><a href="#method-i-match_for_should_not">#match_for_should_not</a></li>
+          
+          <li><a href="#method-i-match_unless_raises">#match_unless_raises</a></li>
+          
+          <li><a href="#method-i-matcher_execution_context">#matcher_execution_context</a></li>
+          
+          <li><a href="#method-i-matcher_execution_context-3D">#matcher_execution_context=</a></li>
+          
+          <li><a href="#method-i-matches-3F">#matches?</a></li>
+          
+          <li><a href="#method-i-respond_to-3F">#respond_to?</a></li>
+          
+          <li><a href="#method-i-supports_block_expectations">#supports_block_expectations</a></li>
+          
+          <li><a href="#method-i-supports_block_expectations-3F">#supports_block_expectations?</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Included Modules -->
+      <div id="includes-section" class="section">
+        <h3 class="section-header">Included Modules</h3>
+        <ul class="link-list">
+        
+        
+          <li><a class="include" href="../Extensions/InstanceEvalWithArgs.html">RSpec::Matchers::Extensions::InstanceEvalWithArgs</a></li>
+        
+        
+        
+          <li><a class="include" href="../Pretty.html">RSpec::Matchers::Pretty</a></li>
+        
+        
+        
+          <li><a class="include" href="../../Matchers.html">RSpec::Matchers</a></li>
+        
+        
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../../RSpec.html">RSpec</a></li>
+        
+          <li><a href="../../../RSpec/CallerFilter.html">RSpec::CallerFilter</a></li>
+        
+          <li><a href="../../../RSpec/Expectations.html">RSpec::Expectations</a></li>
+        
+          <li><a href="../../../RSpec/Expectations/BlockExpectationTarget.html">RSpec::Expectations::BlockExpectationTarget</a></li>
+        
+          <li><a href="../../../RSpec/Expectations/Configuration.html">RSpec::Expectations::Configuration</a></li>
+        
+          <li><a href="../../../RSpec/Expectations/DeprecatedConstants.html">RSpec::Expectations::DeprecatedConstants</a></li>
+        
+          <li><a href="../../../RSpec/Expectations/Deprecation.html">RSpec::Expectations::Deprecation</a></li>
+        
+          <li><a href="../../../RSpec/Expectations/Differ.html">RSpec::Expectations::Differ</a></li>
+        
+          <li><a href="../../../RSpec/Expectations/ExpectationHandler.html">RSpec::Expectations::ExpectationHandler</a></li>
+        
+          <li><a href="../../../RSpec/Expectations/ExpectationNotMetError.html">RSpec::Expectations::ExpectationNotMetError</a></li>
+        
+          <li><a href="../../../RSpec/Expectations/ExpectationTarget.html">RSpec::Expectations::ExpectationTarget</a></li>
+        
+          <li><a href="../../../RSpec/Expectations/NegativeExpectationHandler.html">RSpec::Expectations::NegativeExpectationHandler</a></li>
+        
+          <li><a href="../../../RSpec/Expectations/PositiveExpectationHandler.html">RSpec::Expectations::PositiveExpectationHandler</a></li>
+        
+          <li><a href="../../../RSpec/Expectations/Syntax.html">RSpec::Expectations::Syntax</a></li>
+        
+          <li><a href="../../../RSpec/Expectations/Syntax/ExpectExpressionGenerator.html">RSpec::Expectations::Syntax::ExpectExpressionGenerator</a></li>
+        
+          <li><a href="../../../RSpec/Expectations/Syntax/ShouldExpressionGenerator.html">RSpec::Expectations::Syntax::ShouldExpressionGenerator</a></li>
+        
+          <li><a href="../../../RSpec/Expectations/Version.html">RSpec::Expectations::Version</a></li>
+        
+          <li><a href="../../../RSpec/Matchers.html">RSpec::Matchers</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/BuiltIn.html">RSpec::Matchers::BuiltIn</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/BuiltIn/BaseMatcher.html">RSpec::Matchers::BuiltIn::BaseMatcher</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/BuiltIn/Be.html">RSpec::Matchers::BuiltIn::Be</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/BuiltIn/BeAKindOf.html">RSpec::Matchers::BuiltIn::BeAKindOf</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/BuiltIn/BeAnInstanceOf.html">RSpec::Matchers::BuiltIn::BeAnInstanceOf</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/BuiltIn/BeComparedTo.html">RSpec::Matchers::BuiltIn::BeComparedTo</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/BuiltIn/BeFalsey.html">RSpec::Matchers::BuiltIn::BeFalsey</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/BuiltIn/BeHelpers.html">RSpec::Matchers::BuiltIn::BeHelpers</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/BuiltIn/BeNil.html">RSpec::Matchers::BuiltIn::BeNil</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/BuiltIn/BePredicate.html">RSpec::Matchers::BuiltIn::BePredicate</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/BuiltIn/BeTruthy.html">RSpec::Matchers::BuiltIn::BeTruthy</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/BuiltIn/BeWithin.html">RSpec::Matchers::BuiltIn::BeWithin</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/BuiltIn/Change.html">RSpec::Matchers::BuiltIn::Change</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/BuiltIn/Cover.html">RSpec::Matchers::BuiltIn::Cover</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/BuiltIn/EndWith.html">RSpec::Matchers::BuiltIn::EndWith</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/BuiltIn/Eq.html">RSpec::Matchers::BuiltIn::Eq</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/BuiltIn/Eql.html">RSpec::Matchers::BuiltIn::Eql</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/BuiltIn/Equal.html">RSpec::Matchers::BuiltIn::Equal</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/BuiltIn/Exist.html">RSpec::Matchers::BuiltIn::Exist</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/BuiltIn/Has.html">RSpec::Matchers::BuiltIn::Has</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/BuiltIn/Have.html">RSpec::Matchers::BuiltIn::Have</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/BuiltIn/Include.html">RSpec::Matchers::BuiltIn::Include</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/BuiltIn/Match.html">RSpec::Matchers::BuiltIn::Match</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/BuiltIn/MatchArray.html">RSpec::Matchers::BuiltIn::MatchArray</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/BuiltIn/NegativeOperatorMatcher.html">RSpec::Matchers::BuiltIn::NegativeOperatorMatcher</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/BuiltIn/OperatorMatcher.html">RSpec::Matchers::BuiltIn::OperatorMatcher</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/BuiltIn/PositiveOperatorMatcher.html">RSpec::Matchers::BuiltIn::PositiveOperatorMatcher</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/BuiltIn/RaiseError.html">RSpec::Matchers::BuiltIn::RaiseError</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/BuiltIn/RespondTo.html">RSpec::Matchers::BuiltIn::RespondTo</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/BuiltIn/Satisfy.html">RSpec::Matchers::BuiltIn::Satisfy</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/BuiltIn/StartAndEndWith.html">RSpec::Matchers::BuiltIn::StartAndEndWith</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/BuiltIn/StartWith.html">RSpec::Matchers::BuiltIn::StartWith</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/BuiltIn/ThrowSymbol.html">RSpec::Matchers::BuiltIn::ThrowSymbol</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/BuiltIn/YieldControl.html">RSpec::Matchers::BuiltIn::YieldControl</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/BuiltIn/YieldProbe.html">RSpec::Matchers::BuiltIn::YieldProbe</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/BuiltIn/YieldSuccessiveArgs.html">RSpec::Matchers::BuiltIn::YieldSuccessiveArgs</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/BuiltIn/YieldWithArgs.html">RSpec::Matchers::BuiltIn::YieldWithArgs</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/BuiltIn/YieldWithNoArgs.html">RSpec::Matchers::BuiltIn::YieldWithNoArgs</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/DSL.html">RSpec::Matchers::DSL</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/DSL/Matcher.html">RSpec::Matchers::DSL::Matcher</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/DifferentiateBlockMethodTypes.html">RSpec::Matchers::DifferentiateBlockMethodTypes</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/Extensions.html">RSpec::Matchers::Extensions</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/Extensions/InstanceEvalWithArgs.html">RSpec::Matchers::Extensions::InstanceEvalWithArgs</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/MatchAliases.html">RSpec::Matchers::MatchAliases</a></li>
+        
+          <li><a href="../../../RSpec/Matchers/Pretty.html">RSpec::Matchers::Pretty</a></li>
+        
+          <li><a href="../../../Array.html">Array</a></li>
+        
+          <li><a href="../../../Object.html">Object</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">RSpec::Matchers::DSL::Matcher</h1>
+
+    <div id="description" class="description">
+      
+<p>Provides the context in which the block passed to RSpec::Matchers.define
+will be evaluated.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="PERSISTENT_INSTANCE_VARIABLES">PERSISTENT_INSTANCE_VARIABLES</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="actual-attribute-method" class="method-detail">
+          <a name="actual"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">actual</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="rescued_exception-attribute-method" class="method-detail">
+          <a name="rescued_exception"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">rescued_exception</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(name, &declarations)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@api private</p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/matchers/matcher.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">name</span>, &amp;<span class="ruby-identifier">declarations</span>)
+  <span class="ruby-ivar">@name</span>         = <span class="ruby-identifier">name</span>
+  <span class="ruby-ivar">@declarations</span> = <span class="ruby-identifier">declarations</span>
+  <span class="ruby-ivar">@actual</span>       = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@diffable</span>     = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@supports_block_expectations</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@expected_exception</span>, <span class="ruby-ivar">@rescued_exception</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@match_for_should_not_block</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@messages</span> = {}
+  <span class="ruby-ivar">@define_block_executed</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@block_method_differentiator</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@deprecated_methods</span> = <span class="ruby-constant">Set</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@matcher_execution_context</span> = <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="chain-method" class="method-detail ">
+          <a name="method-i-chain"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">chain</span><span
+              class="method-args">(method, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Convenience for defining methods on this matcher to create a fluent
+interface. The trick about fluent interfaces is that each method must
+return self in order to chain methods together. `chain` handles that for
+you.</p>
+
+<p>@example</p>
+
+<pre>RSpec::Matchers.define :have_errors_on do |key|
+  chain :with do |message|
+    @message = message
+  end
+
+  match do |actual|
+    actual.errors[key] == @message
+  end
+end
+
+minor.should have_errors_on(:age).with(&quot;Not old enough to participate&quot;)</pre>
+            
+
+            
+            <div class="method-source-code" id="chain-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/matchers/matcher.rb, line 246</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">chain</span>(<span class="ruby-identifier">method</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">define_method</span> <span class="ruby-identifier">method</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span>*<span class="ruby-identifier">args</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">block</span>.<span class="ruby-identifier">call</span>(*<span class="ruby-identifier">args</span>)
+    <span class="ruby-keyword">self</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- chain-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- chain-method -->
+
+      
+        <div id="description-method" class="method-detail ">
+          <a name="method-i-description"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">description</span><span
+              class="method-args">(&block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Customize the description to use for one-liners.  Only use this when the
+description generated by default doesn't suit your needs.</p>
+
+<p>@example</p>
+
+<pre>RSpec::Matchers.define :qualify_for do |expected|
+  match { ... }
+
+  description do
+    &quot;qualify for #{expected}&quot;
+  end
+end</pre>
+            
+
+            
+            <div class="method-source-code" id="description-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/matchers/matcher.rb, line 214</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">description</span>(&amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">cache_or_call_cached</span>(<span class="ruby-value">:description</span>, &amp;<span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- description-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- description-method -->
+
+      
+        <div id="diffable-method" class="method-detail ">
+          <a name="method-i-diffable"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">diffable</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Tells the matcher to diff the actual and expected values in the failure
+message.</p>
+            
+
+            
+            <div class="method-source-code" id="diffable-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/matchers/matcher.rb, line 220</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">diffable</span>
+  <span class="ruby-ivar">@diffable</span> = <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- diffable-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- diffable-method -->
+
+      
+        <div id="diffable-3F-method" class="method-detail ">
+          <a name="method-i-diffable-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">diffable?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@api private Used internally by objects returns by <tt>should</tt> and
+<tt>should_not</tt>.</p>
+            
+
+            
+            <div class="method-source-code" id="diffable-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/matchers/matcher.rb, line 255</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">diffable?</span>
+  <span class="ruby-ivar">@diffable</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- diffable-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- diffable-3F-method -->
+
+      
+        <div id="does_not_match-3F-method" class="method-detail ">
+          <a name="method-i-does_not_match-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">does_not_match?</span><span
+              class="method-args">(actual)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@api private Used internally by <tt>should_not</tt></p>
+            
+
+            
+            <div class="method-source-code" id="does_not_match-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/matchers/matcher.rb, line 266</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">does_not_match?</span>(<span class="ruby-identifier">actual</span>)
+  <span class="ruby-ivar">@actual</span> = <span class="ruby-identifier">actual</span>
+  <span class="ruby-ivar">@match_for_should_not_block</span> <span class="ruby-operator">?</span>
+    <span class="ruby-identifier">instance_eval_with_args</span>(<span class="ruby-identifier">actual</span>, &amp;<span class="ruby-ivar">@match_for_should_not_block</span>) <span class="ruby-operator">:</span>
+    <span class="ruby-operator">!</span><span class="ruby-identifier">matches?</span>(<span class="ruby-identifier">actual</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- does_not_match-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- does_not_match-3F-method -->
+
+      
+        <div id="expected-method" class="method-detail ">
+          <a name="method-i-expected"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">expected</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="expected-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/matchers/matcher.rb, line 39</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">expected</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@expected</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+    <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">warn_deprecation</span>(
+      <span class="ruby-string">&quot;Custom matchers in 3.x will set expected to be a single value &quot;</span><span class="ruby-operator">+</span>
+      <span class="ruby-string">&quot;(when provided as such) rather than an array. This may change &quot;</span><span class="ruby-operator">+</span>
+      <span class="ruby-string">&quot;the behaviour of your matcher.\n&quot;</span><span class="ruby-operator">+</span>
+      <span class="ruby-string">&quot;To continue to access this as an array use `expected_as_array`\n&quot;</span><span class="ruby-operator">+</span>
+      <span class="ruby-node">&quot;Called from: #{ RSpec::CallerFilter.first_non_rspec_line }\n\n&quot;</span>
+    )
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@expected</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- expected-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- expected-method -->
+
+      
+        <div id="expected_as_array-method" class="method-detail ">
+          <a name="method-i-expected_as_array"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">expected_as_array</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="expected_as_array-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/matchers/matcher.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">expected_as_array</span>
+  <span class="ruby-ivar">@expected</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- expected_as_array-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- expected_as_array-method -->
+
+      
+        <div id="failure_message_for_should-method" class="method-detail ">
+          <a name="method-i-failure_message_for_should"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">failure_message_for_should</span><span
+              class="method-args">(&block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Customize the failure messsage to use when this matcher is invoked with
+`should`. Only use this when the message generated by default doesn't suit
+your needs.</p>
+
+<p>@example</p>
+
+<pre>RSpec::Matchers.define :have_strength do |expected|
+  match { ... }
+
+  failure_message_for_should do |actual|
+    &quot;Expected strength of #{expected}, but had #{actual.strength}&quot;
+  end
+end</pre>
+
+<p>@yield [Object] actual the actual object</p>
+            
+
+            
+            <div class="method-source-code" id="failure_message_for_should-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/matchers/matcher.rb, line 177</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">failure_message_for_should</span>(&amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">cache_or_call_cached</span>(<span class="ruby-value">:failure_message_for_should</span>, &amp;<span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- failure_message_for_should-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- failure_message_for_should-method -->
+
+      
+        <div id="failure_message_for_should_not-method" class="method-detail ">
+          <a name="method-i-failure_message_for_should_not"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">failure_message_for_should_not</span><span
+              class="method-args">(&block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Customize the failure messsage to use when this matcher is invoked with
+`should_not`. Only use this when the message generated by default doesn't
+suit your needs.</p>
+
+<p>@example</p>
+
+<pre>RSpec::Matchers.define :have_strength do |expected|
+  match { ... }
+
+  failure_message_for_should_not do |actual|
+    &quot;Expected not to have strength of #{expected}, but did&quot;
+  end
+end</pre>
+
+<p>@yield [Object] actual the actual object @yield [Object] actual the actual
+object</p>
+            
+
+            
+            <div class="method-source-code" id="failure_message_for_should_not-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/matchers/matcher.rb, line 197</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">failure_message_for_should_not</span>(&amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">cache_or_call_cached</span>(<span class="ruby-value">:failure_message_for_should_not</span>, &amp;<span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- failure_message_for_should_not-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- failure_message_for_should_not-method -->
+
+      
+        <div id="for_expected-method" class="method-detail ">
+          <a name="method-i-for_expected"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">for_expected</span><span
+              class="method-args">(*expected)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@api private</p>
+            
+
+            
+            <div class="method-source-code" id="for_expected-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/matchers/matcher.rb, line 67</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">for_expected</span>(*<span class="ruby-identifier">expected</span>)
+  <span class="ruby-ivar">@expected</span> = <span class="ruby-identifier">expected</span>
+  <span class="ruby-identifier">dup</span>.<span class="ruby-identifier">instance_eval</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">instance_variables</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">ivar</span><span class="ruby-operator">|</span> <span class="ruby-identifier">ivar</span>.<span class="ruby-identifier">intern</span>}.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ivar</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">instance_variable_set</span>(<span class="ruby-identifier">ivar</span>, <span class="ruby-keyword">nil</span>) <span class="ruby-keyword">unless</span> (<span class="ruby-constant">PERSISTENT_INSTANCE_VARIABLES</span> <span class="ruby-operator">+</span> [<span class="ruby-value">:@expected</span>]).<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">ivar</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-ivar">@messages</span> = {}
+    <span class="ruby-ivar">@deprecated_methods</span> = <span class="ruby-constant">Set</span>.<span class="ruby-identifier">new</span>
+
+    <span class="ruby-ivar">@block_method_differentiator</span> = <span class="ruby-constant">DifferentiateBlockMethodTypes</span>.<span class="ruby-identifier">new</span>(*<span class="ruby-ivar">@expected</span>, &amp;<span class="ruby-ivar">@declarations</span>)
+    <span class="ruby-identifier">making_declared_methods_public</span> <span class="ruby-keyword">do</span>
+      <span class="ruby-identifier">instance_eval_with_args</span>(*<span class="ruby-ivar">@expected</span>, &amp;<span class="ruby-ivar">@declarations</span>)
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-ivar">@define_block_executed</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">self</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- for_expected-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- for_expected-method -->
+
+      
+        <div id="match-method" class="method-detail ">
+          <a name="method-i-match"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">match</span><span
+              class="method-args">(&block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Stores the block that is used to determine whether this matcher passes or
+fails. The block should return a boolean value. When the matcher is passed
+to `should` and the block returns `true`, then the expectation passes.
+Similarly, when the matcher is passed to `should_not` and the block returns
+`false`, then the expectation passes.</p>
+
+<p>Use `<a href="Matcher.html#method-i-match_for_should">match_for_should</a>`
+when used in conjuntion with `<a
+href="Matcher.html#method-i-match_for_should_not">match_for_should_not</a>`.</p>
+
+<p>@example</p>
+
+<pre>RSpec::Matchers.define :be_even do
+  match do |actual|
+    actual.even?
+  end
+end
+
+4.should be_even     # passes
+3.should_not be_even # passes
+3.should be_even     # fails
+4.should_not be_even # fails</pre>
+
+<p>@yield [Object] actual the actual value (or receiver of should)</p>
+            
+
+            
+            <div class="method-source-code" id="match-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/matchers/matcher.rb, line 129</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">match</span>(&amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-ivar">@match_block</span> = <span class="ruby-identifier">block</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- match-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Matcher.html#method-i-match_for_should">match_for_should</a>
+          </div>
+          
+
+          
+        </div><!-- match-method -->
+
+      
+        <div id="match_for_should-method" class="method-detail method-alias">
+          <a name="method-i-match_for_should"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">match_for_should</span><span
+              class="method-args">(&block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Matcher.html#method-i-match">match</a>
+          </div>
+          
+        </div><!-- match_for_should-method -->
+
+      
+        <div id="match_for_should_not-method" class="method-detail ">
+          <a name="method-i-match_for_should_not"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">match_for_should_not</span><span
+              class="method-args">(&block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Use this to define the block for a negative expectation (`should_not`) when
+the positive and negative forms require different handling. This is rarely
+necessary, but can be helpful, for example, when specifying asynchronous
+processes that require different timeouts.</p>
+
+<p>@yield [Object] actual the actual value (or receiver of should)</p>
+            
+
+            
+            <div class="method-source-code" id="match_for_should_not-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/matchers/matcher.rb, line 141</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">match_for_should_not</span>(&amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-ivar">@match_for_should_not_block</span> = <span class="ruby-identifier">block</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- match_for_should_not-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- match_for_should_not-method -->
+
+      
+        <div id="match_unless_raises-method" class="method-detail ">
+          <a name="method-i-match_unless_raises"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">match_unless_raises</span><span
+              class="method-args">(exception=Exception, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Use this instead of `match` when the block will raise an exception rather
+than returning false to indicate a failure.</p>
+
+<p>@example</p>
+
+<pre>RSpec::Matchers.define :accept_as_valid do |candidate_address|
+  match_unless_raises ValidationException do |validator|
+    validator.validate(candidate_address)
+  end
+end
+
+email_validator.should accept_as_valid(&quot;person@company.com&quot;)</pre>
+            
+
+            
+            <div class="method-source-code" id="match_unless_raises-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/matchers/matcher.rb, line 157</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">match_unless_raises</span>(<span class="ruby-identifier">exception</span>=<span class="ruby-constant">Exception</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-ivar">@expected_exception</span> = <span class="ruby-identifier">exception</span>
+  <span class="ruby-identifier">match</span>(&amp;<span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- match_unless_raises-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- match_unless_raises-method -->
+
+      
+        <div id="matcher_execution_context-method" class="method-detail ">
+          <a name="method-i-matcher_execution_context"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">matcher_execution_context</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="matcher_execution_context-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/matchers/matcher.rb, line 61</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">matcher_execution_context</span>
+  <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">deprecate</span>(<span class="ruby-string">&quot;`matcher_execution_context` on custom matchers&quot;</span>)
+  <span class="ruby-ivar">@matcher_execution_context</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- matcher_execution_context-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- matcher_execution_context-method -->
+
+      
+        <div id="matcher_execution_context-3D-method" class="method-detail ">
+          <a name="method-i-matcher_execution_context-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">matcher_execution_context=</span><span
+              class="method-args">(value)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="matcher_execution_context-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/matchers/matcher.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">matcher_execution_context=</span>(<span class="ruby-identifier">value</span>)
+  <span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">deprecate</span>(<span class="ruby-string">&quot;`matcher_execution_context=` on custom matchers&quot;</span>)
+  <span class="ruby-ivar">@matcher_execution_context</span> = <span class="ruby-identifier">value</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- matcher_execution_context-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- matcher_execution_context-3D-method -->
+
+      
+        <div id="matches-3F-method" class="method-detail ">
+          <a name="method-i-matches-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">matches?</span><span
+              class="method-args">(actual)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@api private Used internally by <tt>should</tt> and <tt>should_not</tt>.</p>
+            
+
+            
+            <div class="method-source-code" id="matches-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/matchers/matcher.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">matches?</span>(<span class="ruby-identifier">actual</span>)
+  <span class="ruby-ivar">@actual</span> = <span class="ruby-identifier">actual</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@expected_exception</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">instance_eval_with_args</span>(<span class="ruby-identifier">actual</span>, &amp;<span class="ruby-ivar">@match_block</span>)
+      <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">rescue</span> <span class="ruby-ivar">@expected_exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@rescued_exception</span>
+      <span class="ruby-keyword">false</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">instance_eval_with_args</span>(<span class="ruby-identifier">actual</span>, &amp;<span class="ruby-ivar">@match_block</span>)
+    <span class="ruby-keyword">rescue</span> <span class="ruby-constant">RSpec</span><span class="ruby-operator">::</span><span class="ruby-constant">Expectations</span><span class="ruby-operator">::</span><span class="ruby-constant">ExpectationNotMetError</span>
+      <span class="ruby-keyword">false</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- matches-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- matches-3F-method -->
+
+      
+        <div id="respond_to-3F-method" class="method-detail ">
+          <a name="method-i-respond_to-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">respond_to?</span><span
+              class="method-args">(method, include_private=false)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="respond_to-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/matchers/matcher.rb, line 273</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">respond_to?</span>(<span class="ruby-identifier">method</span>, <span class="ruby-identifier">include_private</span>=<span class="ruby-keyword">false</span>)
+  <span class="ruby-keyword">super</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@matcher_execution_context</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-identifier">method</span>, <span class="ruby-identifier">include_private</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- respond_to-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- respond_to-3F-method -->
+
+      
+        <div id="supports_block_expectations-method" class="method-detail ">
+          <a name="method-i-supports_block_expectations"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">supports_block_expectations</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="supports_block_expectations-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/matchers/matcher.rb, line 224</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">supports_block_expectations</span>
+  <span class="ruby-ivar">@supports_block_expectations</span> = <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- supports_block_expectations-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- supports_block_expectations-method -->
+
+      
+        <div id="supports_block_expectations-3F-method" class="method-detail ">
+          <a name="method-i-supports_block_expectations-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">supports_block_expectations?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@api private</p>
+            
+
+            
+            <div class="method-source-code" id="supports_block_expectations-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec/matchers/matcher.rb, line 260</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">supports_block_expectations?</span>
+  <span class="ruby-ivar">@supports_block_expectations</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- supports_block_expectations-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- supports_block_expectations-3F-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

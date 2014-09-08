@@ -1,0 +1,1591 @@
+<?xml version="1.0" encoding="IBM437"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=IBM437" http-equiv="Content-Type" />
+
+  <title>Class: Bundler::Resolver</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/bundler/resolver_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/bundler/resolver.rb">lib/bundler/resolver.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="../Object.html">Object</a></p>
+        
+      </div>
+      
+
+      
+
+      
+      <!-- Namespace Contents -->
+      <div id="namespace-list-section" class="section">
+        <h3 class="section-header">Namespace</h3>
+        <ul class="link-list">
+          
+          <li><span class="type">CLASS</span> <a href="Resolver/SpecGroup.html">Bundler::Resolver::SpecGroup</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Resolver/State.html">Bundler::Resolver::State</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-c-resolve">::resolve</a></li>
+          
+          <li><a href="#method-i-activate_gem">#activate_gem</a></li>
+          
+          <li><a href="#method-i-clean_req">#clean_req</a></li>
+          
+          <li><a href="#method-i-clear_search_cache">#clear_search_cache</a></li>
+          
+          <li><a href="#method-i-debug">#debug</a></li>
+          
+          <li><a href="#method-i-dependency_tree">#dependency_tree</a></li>
+          
+          <li><a href="#method-i-error_message">#error_message</a></li>
+          
+          <li><a href="#method-i-find_conflict_state">#find_conflict_state</a></li>
+          
+          <li><a href="#method-i-find_state">#find_state</a></li>
+          
+          <li><a href="#method-i-gem_message">#gem_message</a></li>
+          
+          <li><a href="#method-i-gems_size">#gems_size</a></li>
+          
+          <li><a href="#method-i-handle_conflict">#handle_conflict</a></li>
+          
+          <li><a href="#method-i-other_possible-3F">#other_possible?</a></li>
+          
+          <li><a href="#method-i-resolve">#resolve</a></li>
+          
+          <li><a href="#method-i-resolve_conflict">#resolve_conflict</a></li>
+          
+          <li><a href="#method-i-resolve_for_conflict">#resolve_for_conflict</a></li>
+          
+          <li><a href="#method-i-search">#search</a></li>
+          
+          <li><a href="#method-i-start">#start</a></li>
+          
+          <li><a href="#method-i-state_any-3F">#state_any?</a></li>
+          
+          <li><a href="#method-i-successify">#successify</a></li>
+          
+          <li><a href="#method-i-version_conflict">#version_conflict</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../lib/bundler/man/bundle.html">bundle</a></li>
+        
+          <li class="file"><a href="../lib/bundler/man/bundle-config.html">bundle-config</a></li>
+        
+          <li class="file"><a href="../lib/bundler/man/bundle-config_txt.html">bundle-config.txt</a></li>
+        
+          <li class="file"><a href="../lib/bundler/man/bundle-exec.html">bundle-exec</a></li>
+        
+          <li class="file"><a href="../lib/bundler/man/bundle-exec_txt.html">bundle-exec.txt</a></li>
+        
+          <li class="file"><a href="../lib/bundler/man/bundle-install.html">bundle-install</a></li>
+        
+          <li class="file"><a href="../lib/bundler/man/bundle-install_txt.html">bundle-install.txt</a></li>
+        
+          <li class="file"><a href="../lib/bundler/man/bundle-package.html">bundle-package</a></li>
+        
+          <li class="file"><a href="../lib/bundler/man/bundle-package_txt.html">bundle-package.txt</a></li>
+        
+          <li class="file"><a href="../lib/bundler/man/bundle-platform.html">bundle-platform</a></li>
+        
+          <li class="file"><a href="../lib/bundler/man/bundle-platform_txt.html">bundle-platform.txt</a></li>
+        
+          <li class="file"><a href="../lib/bundler/man/bundle-update.html">bundle-update</a></li>
+        
+          <li class="file"><a href="../lib/bundler/man/bundle-update_txt.html">bundle-update.txt</a></li>
+        
+          <li class="file"><a href="../lib/bundler/man/bundle_txt.html">bundle.txt</a></li>
+        
+          <li class="file"><a href="../lib/bundler/man/gemfile_5_txt.html">gemfile.5.txt</a></li>
+        
+          <li class="file"><a href="../lib/bundler/templates/Executable.html">Executable</a></li>
+        
+          <li class="file"><a href="../lib/bundler/templates/Gemfile.html">Gemfile</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Bundler.html">Bundler</a></li>
+        
+          <li><a href="../Bundler/BundlerError.html">Bundler::BundlerError</a></li>
+        
+          <li><a href="../Bundler/CLI.html">Bundler::CLI</a></li>
+        
+          <li><a href="../Bundler/CLI/Binstubs.html">Bundler::CLI::Binstubs</a></li>
+        
+          <li><a href="../Bundler/CLI/Cache.html">Bundler::CLI::Cache</a></li>
+        
+          <li><a href="../Bundler/CLI/Check.html">Bundler::CLI::Check</a></li>
+        
+          <li><a href="../Bundler/CLI/Clean.html">Bundler::CLI::Clean</a></li>
+        
+          <li><a href="../Bundler/CLI/Common.html">Bundler::CLI::Common</a></li>
+        
+          <li><a href="../Bundler/CLI/Config.html">Bundler::CLI::Config</a></li>
+        
+          <li><a href="../Bundler/CLI/Console.html">Bundler::CLI::Console</a></li>
+        
+          <li><a href="../Bundler/CLI/Exec.html">Bundler::CLI::Exec</a></li>
+        
+          <li><a href="../Bundler/CLI/Gem.html">Bundler::CLI::Gem</a></li>
+        
+          <li><a href="../Bundler/CLI/Init.html">Bundler::CLI::Init</a></li>
+        
+          <li><a href="../Bundler/CLI/Inject.html">Bundler::CLI::Inject</a></li>
+        
+          <li><a href="../Bundler/CLI/Install.html">Bundler::CLI::Install</a></li>
+        
+          <li><a href="../Bundler/CLI/Open.html">Bundler::CLI::Open</a></li>
+        
+          <li><a href="../Bundler/CLI/Outdated.html">Bundler::CLI::Outdated</a></li>
+        
+          <li><a href="../Bundler/CLI/Package.html">Bundler::CLI::Package</a></li>
+        
+          <li><a href="../Bundler/CLI/Platform.html">Bundler::CLI::Platform</a></li>
+        
+          <li><a href="../Bundler/CLI/Show.html">Bundler::CLI::Show</a></li>
+        
+          <li><a href="../Bundler/CLI/Update.html">Bundler::CLI::Update</a></li>
+        
+          <li><a href="../Bundler/CLI/Viz.html">Bundler::CLI::Viz</a></li>
+        
+          <li><a href="../Bundler/CurrentRuby.html">Bundler::CurrentRuby</a></li>
+        
+          <li><a href="../Bundler/CyclicDependencyError.html">Bundler::CyclicDependencyError</a></li>
+        
+          <li><a href="../Bundler/Definition.html">Bundler::Definition</a></li>
+        
+          <li><a href="../Bundler/DepProxy.html">Bundler::DepProxy</a></li>
+        
+          <li><a href="../Bundler/Dependency.html">Bundler::Dependency</a></li>
+        
+          <li><a href="../Bundler/Deployment.html">Bundler::Deployment</a></li>
+        
+          <li><a href="../Bundler/Deprecate.html">Bundler::Deprecate</a></li>
+        
+          <li><a href="../Bundler/DeprecatedError.html">Bundler::DeprecatedError</a></li>
+        
+          <li><a href="../Bundler/Dsl.html">Bundler::Dsl</a></li>
+        
+          <li><a href="../Bundler/EndpointSpecification.html">Bundler::EndpointSpecification</a></li>
+        
+          <li><a href="../Bundler/Env.html">Bundler::Env</a></li>
+        
+          <li><a href="../Bundler/Environment.html">Bundler::Environment</a></li>
+        
+          <li><a href="../Bundler/Fetcher.html">Bundler::Fetcher</a></li>
+        
+          <li><a href="../Bundler/Fetcher/AuthenticationRequiredError.html">Bundler::Fetcher::AuthenticationRequiredError</a></li>
+        
+          <li><a href="../Bundler/Fetcher/BadAuthenticationError.html">Bundler::Fetcher::BadAuthenticationError</a></li>
+        
+          <li><a href="../Bundler/Fetcher/CertificateFailureError.html">Bundler::Fetcher::CertificateFailureError</a></li>
+        
+          <li><a href="../Bundler/Fetcher/FallbackError.html">Bundler::Fetcher::FallbackError</a></li>
+        
+          <li><a href="../Bundler/Fetcher/SSLError.html">Bundler::Fetcher::SSLError</a></li>
+        
+          <li><a href="../Bundler/GemHelper.html">Bundler::GemHelper</a></li>
+        
+          <li><a href="../Bundler/GemHelpers.html">Bundler::GemHelpers</a></li>
+        
+          <li><a href="../Bundler/GemInstaller.html">Bundler::GemInstaller</a></li>
+        
+          <li><a href="../Bundler/GemNotFound.html">Bundler::GemNotFound</a></li>
+        
+          <li><a href="../Bundler/GemfileError.html">Bundler::GemfileError</a></li>
+        
+          <li><a href="../Bundler/GemfileLockNotFound.html">Bundler::GemfileLockNotFound</a></li>
+        
+          <li><a href="../Bundler/GemfileNotFound.html">Bundler::GemfileNotFound</a></li>
+        
+          <li><a href="../Bundler/GemspecError.html">Bundler::GemspecError</a></li>
+        
+          <li><a href="../Bundler/GitError.html">Bundler::GitError</a></li>
+        
+          <li><a href="../Bundler/Graph.html">Bundler::Graph</a></li>
+        
+          <li><a href="../Bundler/Graph/GraphVizClient.html">Bundler::Graph::GraphVizClient</a></li>
+        
+          <li><a href="../Bundler/HTTPError.html">Bundler::HTTPError</a></li>
+        
+          <li><a href="../Bundler/Index.html">Bundler::Index</a></li>
+        
+          <li><a href="../Bundler/Injector.html">Bundler::Injector</a></li>
+        
+          <li><a href="../Bundler/InstallError.html">Bundler::InstallError</a></li>
+        
+          <li><a href="../Bundler/InstallHookError.html">Bundler::InstallHookError</a></li>
+        
+          <li><a href="../Bundler/Installer.html">Bundler::Installer</a></li>
+        
+          <li><a href="../Bundler/InvalidOption.html">Bundler::InvalidOption</a></li>
+        
+          <li><a href="../Bundler/LazySpecification.html">Bundler::LazySpecification</a></li>
+        
+          <li><a href="../Bundler/LockfileError.html">Bundler::LockfileError</a></li>
+        
+          <li><a href="../Bundler/LockfileParser.html">Bundler::LockfileParser</a></li>
+        
+          <li><a href="../Bundler/MarshalError.html">Bundler::MarshalError</a></li>
+        
+          <li><a href="../Bundler/MatchPlatform.html">Bundler::MatchPlatform</a></li>
+        
+          <li><a href="../Bundler/ParallelWorkers.html">Bundler::ParallelWorkers</a></li>
+        
+          <li><a href="../Bundler/ParallelWorkers/ThreadWorker.html">Bundler::ParallelWorkers::ThreadWorker</a></li>
+        
+          <li><a href="../Bundler/ParallelWorkers/UnixWorker.html">Bundler::ParallelWorkers::UnixWorker</a></li>
+        
+          <li><a href="../Bundler/ParallelWorkers/UnixWorker/JobHandler.html">Bundler::ParallelWorkers::UnixWorker::JobHandler</a></li>
+        
+          <li><a href="../Bundler/ParallelWorkers/Worker.html">Bundler::ParallelWorkers::Worker</a></li>
+        
+          <li><a href="../Bundler/ParallelWorkers/Worker/WrappedException.html">Bundler::ParallelWorkers::Worker::WrappedException</a></li>
+        
+          <li><a href="../Bundler/PathError.html">Bundler::PathError</a></li>
+        
+          <li><a href="../Bundler/ProductionError.html">Bundler::ProductionError</a></li>
+        
+          <li><a href="../Bundler/RemoteSpecification.html">Bundler::RemoteSpecification</a></li>
+        
+          <li><a href="../Bundler/Resolver.html">Bundler::Resolver</a></li>
+        
+          <li><a href="../Bundler/Resolver/SpecGroup.html">Bundler::Resolver::SpecGroup</a></li>
+        
+          <li><a href="../Bundler/Resolver/State.html">Bundler::Resolver::State</a></li>
+        
+          <li><a href="../Bundler/Retry.html">Bundler::Retry</a></li>
+        
+          <li><a href="../Bundler/RubyDsl.html">Bundler::RubyDsl</a></li>
+        
+          <li><a href="../Bundler/RubyVersion.html">Bundler::RubyVersion</a></li>
+        
+          <li><a href="../Bundler/RubyVersionMismatch.html">Bundler::RubyVersionMismatch</a></li>
+        
+          <li><a href="../Bundler/RubygemsIntegration.html">Bundler::RubygemsIntegration</a></li>
+        
+          <li><a href="../Bundler/RubygemsIntegration/AlmostModern.html">Bundler::RubygemsIntegration::AlmostModern</a></li>
+        
+          <li><a href="../Bundler/RubygemsIntegration/Ancient.html">Bundler::RubygemsIntegration::Ancient</a></li>
+        
+          <li><a href="../Bundler/RubygemsIntegration/Future.html">Bundler::RubygemsIntegration::Future</a></li>
+        
+          <li><a href="../Bundler/RubygemsIntegration/Gem.html">Bundler::RubygemsIntegration::Gem</a></li>
+        
+          <li><a href="../Bundler/RubygemsIntegration/Legacy.html">Bundler::RubygemsIntegration::Legacy</a></li>
+        
+          <li><a href="../Bundler/RubygemsIntegration/Legacy/Gem/SourceIndex.html">Bundler::RubygemsIntegration::Legacy::Gem::SourceIndex</a></li>
+        
+          <li><a href="../Bundler/RubygemsIntegration/Modern.html">Bundler::RubygemsIntegration::Modern</a></li>
+        
+          <li><a href="../Bundler/RubygemsIntegration/MoreModern.html">Bundler::RubygemsIntegration::MoreModern</a></li>
+        
+          <li><a href="../Bundler/RubygemsIntegration/Transitional.html">Bundler::RubygemsIntegration::Transitional</a></li>
+        
+          <li><a href="../Bundler/Runtime.html">Bundler::Runtime</a></li>
+        
+          <li><a href="../Bundler/SecurityError.html">Bundler::SecurityError</a></li>
+        
+          <li><a href="../Bundler/Settings.html">Bundler::Settings</a></li>
+        
+          <li><a href="../Bundler/SharedHelpers.html">Bundler::SharedHelpers</a></li>
+        
+          <li><a href="../Bundler/SimilarityDetector.html">Bundler::SimilarityDetector</a></li>
+        
+          <li><a href="../Bundler/Source.html">Bundler::Source</a></li>
+        
+          <li><a href="../Bundler/Source/Git.html">Bundler::Source::Git</a></li>
+        
+          <li><a href="../Bundler/Source/Git/GitCommandError.html">Bundler::Source::Git::GitCommandError</a></li>
+        
+          <li><a href="../Bundler/Source/Git/GitNotAllowedError.html">Bundler::Source::Git::GitNotAllowedError</a></li>
+        
+          <li><a href="../Bundler/Source/Git/GitNotInstalledError.html">Bundler::Source::Git::GitNotInstalledError</a></li>
+        
+          <li><a href="../Bundler/Source/Git/GitProxy.html">Bundler::Source::Git::GitProxy</a></li>
+        
+          <li><a href="../Bundler/Source/Path.html">Bundler::Source::Path</a></li>
+        
+          <li><a href="../Bundler/Source/Path/Installer.html">Bundler::Source::Path::Installer</a></li>
+        
+          <li><a href="../Bundler/Source/Rubygems.html">Bundler::Source::Rubygems</a></li>
+        
+          <li><a href="../Bundler/SpecSet.html">Bundler::SpecSet</a></li>
+        
+          <li><a href="../Bundler/SystemRubyVersion.html">Bundler::SystemRubyVersion</a></li>
+        
+          <li><a href="../Bundler/UI.html">Bundler::UI</a></li>
+        
+          <li><a href="../Bundler/UI/RGProxy.html">Bundler::UI::RGProxy</a></li>
+        
+          <li><a href="../Bundler/UI/Shell.html">Bundler::UI::Shell</a></li>
+        
+          <li><a href="../Bundler/UI/Silent.html">Bundler::UI::Silent</a></li>
+        
+          <li><a href="../Bundler/VersionConflict.html">Bundler::VersionConflict</a></li>
+        
+          <li><a href="../Gem.html">Gem</a></li>
+        
+          <li><a href="../Gem/Dependency.html">Gem::Dependency</a></li>
+        
+          <li><a href="../Gem/Platform.html">Gem::Platform</a></li>
+        
+          <li><a href="../Gem/Requirement.html">Gem::Requirement</a></li>
+        
+          <li><a href="../Gem/Specification.html">Gem::Specification</a></li>
+        
+          <li><a href="../Object.html">Object</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Bundler::Resolver</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="ALL">ALL</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="errors-attribute-method" class="method-detail">
+          <a name="errors"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">errors</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="iteration_counter-attribute-method" class="method-detail">
+          <a name="iteration_counter"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">iteration_counter</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="iteration_rate-attribute-method" class="method-detail">
+          <a name="iteration_rate"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">iteration_rate</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="started_at-attribute-method" class="method-detail">
+          <a name="started_at"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">started_at</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(index, source_requirements, base)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/bundler/resolver.rb, line 137</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">index</span>, <span class="ruby-identifier">source_requirements</span>, <span class="ruby-identifier">base</span>)
+  <span class="ruby-ivar">@errors</span>               = {}
+  <span class="ruby-ivar">@base</span>                 = <span class="ruby-identifier">base</span>
+  <span class="ruby-ivar">@index</span>                = <span class="ruby-identifier">index</span>
+  <span class="ruby-ivar">@deps_for</span>             = {}
+  <span class="ruby-ivar">@missing_gems</span>         = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>)
+  <span class="ruby-ivar">@source_requirements</span>  = <span class="ruby-identifier">source_requirements</span>
+  <span class="ruby-ivar">@iteration_counter</span>    = <span class="ruby-value">0</span>
+  <span class="ruby-ivar">@started_at</span>           = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+        <div id="resolve-method" class="method-detail ">
+          <a name="method-c-resolve"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">resolve</span><span
+              class="method-args">(requirements, index, source_requirements = {}, base = [])</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Figures out the best possible configuration of gems that satisfies the list
+of passed dependencies and any child dependencies without causing any gem
+activation errors.</p>
+
+<h4>Parameters</h4>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>*dependencies&lt;Gem::Dependency&gt;</p></td>
+<td>
+<p>The list of dependencies to resolve</p>
+</td></tr></table>
+
+<h4>Returns</h4>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>&lt;GemBundle&gt;,nil</p></td>
+<td>
+<p>If the list of dependencies can be resolved, a</p>
+</td></tr></table>
+
+<pre>collection of gemspecs is returned. Otherwise, nil is returned.</pre>
+            
+
+            
+            <div class="method-source-code" id="resolve-source">
+<pre>
+<span class="ruby-comment"># File lib/bundler/resolver.rb, line 125</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">resolve</span>(<span class="ruby-identifier">requirements</span>, <span class="ruby-identifier">index</span>, <span class="ruby-identifier">source_requirements</span> = {}, <span class="ruby-identifier">base</span> = [])
+  <span class="ruby-constant">Bundler</span>.<span class="ruby-identifier">ui</span>.<span class="ruby-identifier">info</span> <span class="ruby-string">&quot;Resolving dependencies...&quot;</span>, <span class="ruby-keyword">false</span>
+  <span class="ruby-identifier">base</span> = <span class="ruby-constant">SpecSet</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">base</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">base</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">SpecSet</span>)
+  <span class="ruby-identifier">resolver</span> = <span class="ruby-identifier">new</span>(<span class="ruby-identifier">index</span>, <span class="ruby-identifier">source_requirements</span>, <span class="ruby-identifier">base</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-identifier">resolver</span>.<span class="ruby-identifier">start</span>(<span class="ruby-identifier">requirements</span>)
+  <span class="ruby-constant">Bundler</span>.<span class="ruby-identifier">ui</span>.<span class="ruby-identifier">info</span> <span class="ruby-string">&quot;&quot;</span> <span class="ruby-comment"># new line now that dots are done</span>
+  <span class="ruby-constant">SpecSet</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">result</span>)
+<span class="ruby-keyword">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-constant">Bundler</span>.<span class="ruby-identifier">ui</span>.<span class="ruby-identifier">info</span> <span class="ruby-string">&quot;&quot;</span> <span class="ruby-comment"># new line before the error</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-identifier">e</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- resolve-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- resolve-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="activate_gem-method" class="method-detail ">
+          <a name="method-i-activate_gem"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">activate_gem</span><span
+              class="method-args">(reqs, activated, requirement, current)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="activate_gem-source">
+<pre>
+<span class="ruby-comment"># File lib/bundler/resolver.rb, line 206</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">activate_gem</span>(<span class="ruby-identifier">reqs</span>, <span class="ruby-identifier">activated</span>, <span class="ruby-identifier">requirement</span>, <span class="ruby-identifier">current</span>)
+  <span class="ruby-identifier">requirement</span>.<span class="ruby-identifier">required_by</span>.<span class="ruby-identifier">replace</span> <span class="ruby-identifier">current</span>.<span class="ruby-identifier">required_by</span>
+  <span class="ruby-identifier">requirement</span>.<span class="ruby-identifier">required_by</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">current</span>
+  <span class="ruby-identifier">activated</span>[<span class="ruby-identifier">requirement</span>.<span class="ruby-identifier">name</span>] = <span class="ruby-identifier">requirement</span>
+
+  <span class="ruby-identifier">debug</span> { <span class="ruby-node">&quot;  Activating: #{requirement.name} (#{requirement.version})&quot;</span> }
+  <span class="ruby-identifier">debug</span> { <span class="ruby-identifier">requirement</span>.<span class="ruby-identifier">required_by</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">d</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;    * #{d.name} (#{d.requirement})&quot;</span> }.<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;\n&quot;</span>) }
+
+  <span class="ruby-identifier">dependencies</span> = <span class="ruby-identifier">requirement</span>.<span class="ruby-identifier">activate_platform</span>(<span class="ruby-identifier">current</span>.<span class="ruby-identifier">__platform</span>)
+
+  <span class="ruby-identifier">debug</span> { <span class="ruby-string">&quot;    Dependencies&quot;</span>}
+  <span class="ruby-identifier">dependencies</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">dep</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">dep</span>.<span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:development</span>
+    <span class="ruby-identifier">dep</span>.<span class="ruby-identifier">required_by</span>.<span class="ruby-identifier">replace</span>(<span class="ruby-identifier">current</span>.<span class="ruby-identifier">required_by</span>)
+    <span class="ruby-identifier">dep</span>.<span class="ruby-identifier">required_by</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">current</span>
+    <span class="ruby-ivar">@gems_size</span>[<span class="ruby-identifier">dep</span>] <span class="ruby-operator">||=</span> <span class="ruby-identifier">gems_size</span>(<span class="ruby-identifier">dep</span>)
+    <span class="ruby-identifier">reqs</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">dep</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- activate_gem-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- activate_gem-method -->
+
+      
+        <div id="clean_req-method" class="method-detail ">
+          <a name="method-i-clean_req"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">clean_req</span><span
+              class="method-args">(req)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="clean_req-source">
+<pre>
+<span class="ruby-comment"># File lib/bundler/resolver.rb, line 413</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">clean_req</span>(<span class="ruby-identifier">req</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">req</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">&quot;&gt;= 0&quot;</span>)
+    <span class="ruby-identifier">req</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/ \(.*?\)$/</span>, <span class="ruby-string">''</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">req</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/\, (runtime|development)\)$/</span>, <span class="ruby-string">')'</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- clean_req-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- clean_req-method -->
+
+      
+        <div id="clear_search_cache-method" class="method-detail ">
+          <a name="method-i-clear_search_cache"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">clear_search_cache</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="clear_search_cache-source">
+<pre>
+<span class="ruby-comment"># File lib/bundler/resolver.rb, line 380</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">clear_search_cache</span>
+  <span class="ruby-ivar">@deps_for</span> = {}
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- clear_search_cache-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- clear_search_cache-method -->
+
+      
+        <div id="debug-method" class="method-detail ">
+          <a name="method-i-debug"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">debug</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="debug-source">
+<pre>
+<span class="ruby-comment"># File lib/bundler/resolver.rb, line 148</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">debug</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">ENV</span>[<span class="ruby-string">'DEBUG_RESOLVER'</span>]
+    <span class="ruby-identifier">debug_info</span> = <span class="ruby-keyword">yield</span>
+    <span class="ruby-identifier">debug_info</span> = <span class="ruby-identifier">debug_info</span>.<span class="ruby-identifier">inspect</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">debug_info</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)
+    <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">debug_info</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- debug-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- debug-method -->
+
+      
+        <div id="dependency_tree-method" class="method-detail ">
+          <a name="method-i-dependency_tree"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">dependency_tree</span><span
+              class="method-args">(m, requirements)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="dependency_tree-source">
+<pre>
+<span class="ruby-comment"># File lib/bundler/resolver.rb, line 440</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">dependency_tree</span>(<span class="ruby-identifier">m</span>, <span class="ruby-identifier">requirements</span>)
+  <span class="ruby-identifier">requirements</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span>, <span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">m</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;    &quot;</span> <span class="ruby-operator">&lt;&lt;</span> (<span class="ruby-string">&quot;  &quot;</span> * <span class="ruby-identifier">j</span>)
+    <span class="ruby-identifier">m</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{clean_req(i)}&quot;</span>
+    <span class="ruby-identifier">m</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot; depends on\n&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">m</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;    &quot;</span> <span class="ruby-operator">&lt;&lt;</span> (<span class="ruby-string">&quot;  &quot;</span> * <span class="ruby-identifier">requirements</span>.<span class="ruby-identifier">size</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- dependency_tree-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- dependency_tree-method -->
+
+      
+        <div id="error_message-method" class="method-detail ">
+          <a name="method-i-error_message"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">error_message</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="error_message-source">
+<pre>
+<span class="ruby-comment"># File lib/bundler/resolver.rb, line 449</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">error_message</span>
+  <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">inject</span>(<span class="ruby-string">&quot;&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">o</span>, (<span class="ruby-identifier">conflict</span>, (<span class="ruby-identifier">origin</span>, <span class="ruby-identifier">requirement</span>))<span class="ruby-operator">|</span>
+
+    <span class="ruby-comment"># origin is the SpecSet of specs from the Gemfile that is conflicted with</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">origin</span>
+
+      <span class="ruby-identifier">o</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">%{Bundler could not find compatible versions for gem &quot;#{origin.name}&quot;:\n}</span>
+      <span class="ruby-identifier">o</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;  In Gemfile:\n&quot;</span>
+
+      <span class="ruby-identifier">required_by</span> = <span class="ruby-identifier">requirement</span>.<span class="ruby-identifier">required_by</span>
+      <span class="ruby-identifier">o</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">gem_message</span>(<span class="ruby-identifier">requirement</span>, <span class="ruby-identifier">required_by</span>)
+
+      <span class="ruby-comment"># If the origin is &quot;bundler&quot;, the conflict is us</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">origin</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;bundler&quot;</span>
+        <span class="ruby-identifier">o</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;  Current Bundler version:\n&quot;</span>
+        <span class="ruby-identifier">other_bundler_required</span> = <span class="ruby-operator">!</span><span class="ruby-identifier">requirement</span>.<span class="ruby-identifier">requirement</span>.<span class="ruby-identifier">satisfied_by?</span>(<span class="ruby-identifier">origin</span>.<span class="ruby-identifier">version</span>)
+      <span class="ruby-comment"># If the origin is a LockfileParser, it does not respond_to :required_by</span>
+      <span class="ruby-keyword">elsif</span> <span class="ruby-operator">!</span><span class="ruby-identifier">origin</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:required_by</span>) <span class="ruby-operator">||</span> <span class="ruby-operator">!</span>(<span class="ruby-identifier">origin</span>.<span class="ruby-identifier">required_by</span>.<span class="ruby-identifier">first</span>)
+        <span class="ruby-identifier">o</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;  In snapshot (Gemfile.lock):\n&quot;</span>
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-identifier">required_by</span> = <span class="ruby-identifier">origin</span>.<span class="ruby-identifier">required_by</span>[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">-2</span>]
+      <span class="ruby-identifier">o</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">gem_message</span>(<span class="ruby-identifier">origin</span>, <span class="ruby-identifier">required_by</span>)
+
+      <span class="ruby-comment"># If the bundle wants a newer bundler than the running bundler, explain</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">origin</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;bundler&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">other_bundler_required</span>
+        <span class="ruby-identifier">o</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;This Gemfile requires a different version of Bundler.\n&quot;</span>
+        <span class="ruby-identifier">o</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;Perhaps you need to update Bundler by running `gem install bundler`?&quot;</span>
+      <span class="ruby-keyword">end</span>
+
+    <span class="ruby-comment"># origin is nil if the required gem and version cannot be found in any of</span>
+    <span class="ruby-comment"># the specified sources</span>
+    <span class="ruby-keyword">else</span>
+
+      <span class="ruby-comment"># if the gem cannot be found because of a version conflict between lockfile and gemfile,</span>
+      <span class="ruby-comment"># print a useful error that suggests running `bundle update`, which may fix things</span>
+      <span class="ruby-comment">#</span>
+      <span class="ruby-comment"># @base is a SpecSet of the gems in the lockfile</span>
+      <span class="ruby-comment"># conflict is the name of the gem that could not be found</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">locked</span> = <span class="ruby-ivar">@base</span>[<span class="ruby-identifier">conflict</span>].<span class="ruby-identifier">first</span>
+        <span class="ruby-identifier">o</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;Bundler could not find compatible versions for gem #{conflict.inspect}:\n&quot;</span>
+        <span class="ruby-identifier">o</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;  In snapshot (Gemfile.lock):\n&quot;</span>
+        <span class="ruby-identifier">o</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;    #{clean_req(locked)}\n\n&quot;</span>
+
+        <span class="ruby-identifier">o</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;  In Gemfile:\n&quot;</span>
+
+        <span class="ruby-identifier">required_by</span> = <span class="ruby-identifier">requirement</span>.<span class="ruby-identifier">required_by</span>
+        <span class="ruby-identifier">o</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">gem_message</span>(<span class="ruby-identifier">requirement</span>, <span class="ruby-identifier">required_by</span>)
+        <span class="ruby-identifier">o</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;Running `bundle update` will rebuild your snapshot from scratch, using only\n&quot;</span>
+        <span class="ruby-identifier">o</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;the gems in your Gemfile, which may resolve the conflict.\n&quot;</span>
+
+      <span class="ruby-comment"># the rest of the time, the gem cannot be found because it does not exist in the known sources</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">requirement</span>.<span class="ruby-identifier">required_by</span>.<span class="ruby-identifier">first</span>
+          <span class="ruby-identifier">o</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;Could not find gem '#{clean_req(requirement)}', which is required by &quot;</span>
+          <span class="ruby-identifier">o</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;gem '#{clean_req(requirement.required_by.first)}', in any of the sources.&quot;</span>
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-identifier">o</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;Could not find gem '#{clean_req(requirement)} in any of the sources\n&quot;</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">o</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- error_message-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- error_message-method -->
+
+      
+        <div id="find_conflict_state-method" class="method-detail ">
+          <a name="method-i-find_conflict_state"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">find_conflict_state</span><span
+              class="method-args">(conflict, states)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="find_conflict_state-source">
+<pre>
+<span class="ruby-comment"># File lib/bundler/resolver.rb, line 198</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">find_conflict_state</span>(<span class="ruby-identifier">conflict</span>, <span class="ruby-identifier">states</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">conflict</span>
+  <span class="ruby-keyword">until</span> <span class="ruby-identifier">states</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">state</span> = <span class="ruby-identifier">states</span>.<span class="ruby-identifier">pop</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">state</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">conflict</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">state</span>.<span class="ruby-identifier">name</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- find_conflict_state-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- find_conflict_state-method -->
+
+      
+        <div id="find_state-method" class="method-detail ">
+          <a name="method-i-find_state"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">find_state</span><span
+              class="method-args">(current, states)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="find_state-source">
+<pre>
+<span class="ruby-comment"># File lib/bundler/resolver.rb, line 188</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">find_state</span>(<span class="ruby-identifier">current</span>, <span class="ruby-identifier">states</span>)
+  <span class="ruby-identifier">states</span>.<span class="ruby-identifier">detect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">current</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">current</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">name</span> }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- find_state-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- find_state-method -->
+
+      
+        <div id="gem_message-method" class="method-detail ">
+          <a name="method-i-gem_message"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">gem_message</span><span
+              class="method-args">(requirement, required_by=[])</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>For a given conflicted requirement, print out what exactly went wrong</p>
+            
+
+            
+            <div class="method-source-code" id="gem_message-source">
+<pre>
+<span class="ruby-comment"># File lib/bundler/resolver.rb, line 426</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">gem_message</span>(<span class="ruby-identifier">requirement</span>, <span class="ruby-identifier">required_by</span>=[])
+  <span class="ruby-identifier">m</span> = <span class="ruby-string">&quot;&quot;</span>
+
+  <span class="ruby-comment"># A requirement that is required by itself is actually in the Gemfile, and does</span>
+  <span class="ruby-comment"># not &quot;depend on&quot; itself</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">requirement</span>.<span class="ruby-identifier">required_by</span>.<span class="ruby-identifier">first</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">requirement</span>.<span class="ruby-identifier">required_by</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">requirement</span>.<span class="ruby-identifier">name</span>
+    <span class="ruby-identifier">dependency_tree</span>(<span class="ruby-identifier">m</span>, <span class="ruby-identifier">required_by</span>)
+    <span class="ruby-identifier">m</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{clean_req(requirement)}\n&quot;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">m</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;    #{clean_req(requirement)}\n&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">m</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;\n&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- gem_message-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- gem_message-method -->
+
+      
+        <div id="gems_size-method" class="method-detail ">
+          <a name="method-i-gems_size"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">gems_size</span><span
+              class="method-args">(dep)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="gems_size-source">
+<pre>
+<span class="ruby-comment"># File lib/bundler/resolver.rb, line 376</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">gems_size</span>(<span class="ruby-identifier">dep</span>)
+  <span class="ruby-identifier">search</span>(<span class="ruby-identifier">dep</span>).<span class="ruby-identifier">size</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- gems_size-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- gems_size-method -->
+
+      
+        <div id="handle_conflict-method" class="method-detail ">
+          <a name="method-i-handle_conflict"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">handle_conflict</span><span
+              class="method-args">(current, states, existing=nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="handle_conflict-source">
+<pre>
+<span class="ruby-comment"># File lib/bundler/resolver.rb, line 173</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">handle_conflict</span>(<span class="ruby-identifier">current</span>, <span class="ruby-identifier">states</span>, <span class="ruby-identifier">existing</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">until</span> <span class="ruby-identifier">current</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">existing</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">current_state</span> = <span class="ruby-identifier">find_state</span>(<span class="ruby-identifier">current</span>, <span class="ruby-identifier">states</span>)
+    <span class="ruby-identifier">existing_state</span> = <span class="ruby-identifier">find_state</span>(<span class="ruby-identifier">existing</span>, <span class="ruby-identifier">states</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">current</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">state_any?</span>(<span class="ruby-identifier">current_state</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">existing</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">state_any?</span>(<span class="ruby-identifier">existing_state</span>)
+    <span class="ruby-identifier">existing</span> = <span class="ruby-identifier">existing</span>.<span class="ruby-identifier">required_by</span>.<span class="ruby-identifier">last</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">existing</span>
+    <span class="ruby-identifier">current</span> = <span class="ruby-identifier">current</span>.<span class="ruby-identifier">required_by</span>.<span class="ruby-identifier">last</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">current</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- handle_conflict-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- handle_conflict-method -->
+
+      
+        <div id="other_possible-3F-method" class="method-detail ">
+          <a name="method-i-other_possible-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">other_possible?</span><span
+              class="method-args">(conflict, states)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="other_possible-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/bundler/resolver.rb, line 192</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">other_possible?</span>(<span class="ruby-identifier">conflict</span>, <span class="ruby-identifier">states</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">conflict</span>
+  <span class="ruby-identifier">state</span> = <span class="ruby-identifier">states</span>.<span class="ruby-identifier">detect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">conflict</span>.<span class="ruby-identifier">name</span> }
+  <span class="ruby-identifier">state</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">state</span>.<span class="ruby-identifier">possibles</span>.<span class="ruby-identifier">any?</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- other_possible-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- other_possible-3F-method -->
+
+      
+        <div id="resolve-method" class="method-detail ">
+          <a name="method-i-resolve"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">resolve</span><span
+              class="method-args">(reqs, activated)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="resolve-source">
+<pre>
+<span class="ruby-comment"># File lib/bundler/resolver.rb, line 254</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">resolve</span>(<span class="ruby-identifier">reqs</span>, <span class="ruby-identifier">activated</span>)
+  <span class="ruby-identifier">states</span> = []
+  <span class="ruby-identifier">depth</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">conflicts</span> = <span class="ruby-constant">Set</span>.<span class="ruby-identifier">new</span>
+
+  <span class="ruby-keyword">until</span> <span class="ruby-identifier">reqs</span>.<span class="ruby-identifier">empty?</span>
+
+    <span class="ruby-identifier">indicate_progress</span>
+
+    <span class="ruby-identifier">debug</span> { <span class="ruby-identifier">print</span> <span class="ruby-string">&quot;\e[2J\e[f&quot;</span> ; <span class="ruby-string">&quot;==== Iterating ====\n\n&quot;</span> }
+
+    <span class="ruby-identifier">reqs</span> = <span class="ruby-identifier">reqs</span>.<span class="ruby-identifier">sort_by</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span>
+      [ <span class="ruby-identifier">activated</span>[<span class="ruby-identifier">a</span>.<span class="ruby-identifier">name</span>] <span class="ruby-operator">?</span> <span class="ruby-value">0</span> <span class="ruby-operator">:</span> <span class="ruby-value">1</span>,
+        <span class="ruby-identifier">a</span>.<span class="ruby-identifier">requirement</span>.<span class="ruby-identifier">prerelease?</span> <span class="ruby-operator">?</span> <span class="ruby-value">0</span> <span class="ruby-operator">:</span> <span class="ruby-value">1</span>,
+        <span class="ruby-ivar">@errors</span>[<span class="ruby-identifier">a</span>.<span class="ruby-identifier">name</span>]   <span class="ruby-operator">?</span> <span class="ruby-value">0</span> <span class="ruby-operator">:</span> <span class="ruby-value">1</span>,
+        <span class="ruby-identifier">activated</span>[<span class="ruby-identifier">a</span>.<span class="ruby-identifier">name</span>] <span class="ruby-operator">?</span> <span class="ruby-value">0</span> <span class="ruby-operator">:</span> <span class="ruby-ivar">@gems_size</span>[<span class="ruby-identifier">a</span>] ]
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">debug</span> { <span class="ruby-string">&quot;Activated:\n&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">activated</span>.<span class="ruby-identifier">values</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;  #{a}&quot;</span> }.<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;\n&quot;</span>) }
+    <span class="ruby-identifier">debug</span> { <span class="ruby-string">&quot;Requirements:\n&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">reqs</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">r</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;  #{r}&quot;</span>}.<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;\n&quot;</span>) }
+
+    <span class="ruby-identifier">current</span> = <span class="ruby-identifier">reqs</span>.<span class="ruby-identifier">shift</span>
+
+    <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#{' ' * depth}#{current}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">ENV</span>[<span class="ruby-string">'DEBUG_RESOLVER_TREE'</span>]
+
+    <span class="ruby-identifier">debug</span> { <span class="ruby-node">&quot;Attempting:\n  #{current}&quot;</span>}
+
+    <span class="ruby-identifier">existing</span> = <span class="ruby-identifier">activated</span>[<span class="ruby-identifier">current</span>.<span class="ruby-identifier">name</span>]
+
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">existing</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">current</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-string">'bundler'</span>
+      <span class="ruby-comment"># Force the current</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">current</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-string">'bundler'</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">existing</span>
+        <span class="ruby-identifier">existing</span> = <span class="ruby-identifier">search</span>(<span class="ruby-constant">DepProxy</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">Dependency</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">'bundler'</span>, <span class="ruby-constant">VERSION</span>), <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">Platform</span><span class="ruby-operator">::</span><span class="ruby-constant">RUBY</span>)).<span class="ruby-identifier">first</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-constant">GemNotFound</span>, <span class="ruby-node">%{Bundler could not find gem &quot;bundler&quot; (#{VERSION})}</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">existing</span>
+        <span class="ruby-identifier">existing</span>.<span class="ruby-identifier">required_by</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">existing</span>
+        <span class="ruby-identifier">activated</span>[<span class="ruby-string">'bundler'</span>] = <span class="ruby-identifier">existing</span>
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">current</span>.<span class="ruby-identifier">requirement</span>.<span class="ruby-identifier">satisfied_by?</span>(<span class="ruby-identifier">existing</span>.<span class="ruby-identifier">version</span>)
+        <span class="ruby-identifier">debug</span> { <span class="ruby-string">&quot;    * [SUCCESS] Already activated&quot;</span> }
+        <span class="ruby-ivar">@errors</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">existing</span>.<span class="ruby-identifier">name</span>)
+        <span class="ruby-identifier">dependencies</span> = <span class="ruby-identifier">existing</span>.<span class="ruby-identifier">activate_platform</span>(<span class="ruby-identifier">current</span>.<span class="ruby-identifier">__platform</span>)
+        <span class="ruby-identifier">reqs</span>.<span class="ruby-identifier">concat</span> <span class="ruby-identifier">dependencies</span>
+
+        <span class="ruby-identifier">dependencies</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">dep</span><span class="ruby-operator">|</span>
+          <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">dep</span>.<span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:development</span>
+          <span class="ruby-ivar">@gems_size</span>[<span class="ruby-identifier">dep</span>] <span class="ruby-operator">||=</span> <span class="ruby-identifier">gems_size</span>(<span class="ruby-identifier">dep</span>)
+        <span class="ruby-keyword">end</span>
+
+        <span class="ruby-identifier">depth</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+        <span class="ruby-keyword">next</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">debug</span> { <span class="ruby-string">&quot;    * [FAIL] Already activated&quot;</span> }
+        <span class="ruby-ivar">@errors</span>[<span class="ruby-identifier">existing</span>.<span class="ruby-identifier">name</span>] = [<span class="ruby-identifier">existing</span>, <span class="ruby-identifier">current</span>]
+
+        <span class="ruby-identifier">conflicts</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">current</span>.<span class="ruby-identifier">name</span>
+
+        <span class="ruby-identifier">parent</span> = <span class="ruby-identifier">current</span>.<span class="ruby-identifier">required_by</span>.<span class="ruby-identifier">last</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">existing</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:required_by</span>)
+          <span class="ruby-identifier">parent</span> = <span class="ruby-identifier">handle_conflict</span>(<span class="ruby-identifier">current</span>, <span class="ruby-identifier">states</span>, <span class="ruby-identifier">existing</span>.<span class="ruby-identifier">required_by</span>[<span class="ruby-value">-2</span>]) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">other_possible?</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-identifier">states</span>)
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-identifier">parent</span> = <span class="ruby-identifier">handle_conflict</span>(<span class="ruby-identifier">current</span>, <span class="ruby-identifier">states</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">other_possible?</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-identifier">states</span>)
+        <span class="ruby-keyword">end</span>
+
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">conflicts</span>.<span class="ruby-identifier">empty?</span>
+          <span class="ruby-identifier">parent</span> = <span class="ruby-identifier">states</span>.<span class="ruby-identifier">reverse</span>.<span class="ruby-identifier">detect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">conflicts</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">i</span>.<span class="ruby-identifier">name</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">state_any?</span>(<span class="ruby-identifier">i</span>)}
+        <span class="ruby-keyword">end</span>
+
+        <span class="ruby-identifier">raise</span> <span class="ruby-identifier">version_conflict</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-string">'bundler'</span>
+
+        <span class="ruby-identifier">reqs</span>, <span class="ruby-identifier">activated</span>, <span class="ruby-identifier">depth</span>, <span class="ruby-identifier">conflicts</span> = <span class="ruby-identifier">resolve_conflict</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-identifier">states</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">matching_versions</span> = <span class="ruby-identifier">search</span>(<span class="ruby-identifier">current</span>)
+
+      <span class="ruby-comment"># If we found no versions that match the current requirement</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">matching_versions</span>.<span class="ruby-identifier">empty?</span>
+        <span class="ruby-comment"># If this is a top-level Gemfile requirement</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">current</span>.<span class="ruby-identifier">required_by</span>.<span class="ruby-identifier">empty?</span>
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">base</span> = <span class="ruby-ivar">@base</span>[<span class="ruby-identifier">current</span>.<span class="ruby-identifier">name</span>] <span class="ruby-keyword">and</span> <span class="ruby-operator">!</span><span class="ruby-identifier">base</span>.<span class="ruby-identifier">empty?</span>
+            <span class="ruby-identifier">version</span> = <span class="ruby-identifier">base</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">version</span>
+            <span class="ruby-identifier">message</span> = <span class="ruby-string">&quot;You have requested:\n&quot;</span>                    <span class="ruby-node">&quot;  #{current.name} #{current.requirement}\n\n&quot;</span>                    <span class="ruby-node">&quot;The bundle currently has #{current.name} locked at #{version}.\n&quot;</span>                    <span class="ruby-node">&quot;Try running `bundle update #{current.name}`&quot;</span>
+          <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">current</span>.<span class="ruby-identifier">source</span>
+            <span class="ruby-identifier">name</span> = <span class="ruby-identifier">current</span>.<span class="ruby-identifier">name</span>
+            <span class="ruby-identifier">versions</span> = <span class="ruby-ivar">@source_requirements</span>[<span class="ruby-identifier">name</span>][<span class="ruby-identifier">name</span>].<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">version</span> }
+            <span class="ruby-identifier">message</span>  = <span class="ruby-node">&quot;Could not find gem '#{current}' in #{current.source}.\n&quot;</span>
+            <span class="ruby-keyword">if</span> <span class="ruby-identifier">versions</span>.<span class="ruby-identifier">any?</span>
+              <span class="ruby-identifier">message</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;Source contains '#{name}' at: #{versions.join(', ')}&quot;</span>
+            <span class="ruby-keyword">else</span>
+              <span class="ruby-identifier">message</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;Source does not contain any versions of '#{current}'&quot;</span>
+            <span class="ruby-keyword">end</span>
+          <span class="ruby-keyword">else</span>
+            <span class="ruby-identifier">message</span> = <span class="ruby-node">&quot;Could not find gem '#{current}' &quot;</span>
+            <span class="ruby-keyword">if</span> <span class="ruby-ivar">@index</span>.<span class="ruby-identifier">source_types</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-constant">Bundler</span><span class="ruby-operator">::</span><span class="ruby-constant">Source</span><span class="ruby-operator">::</span><span class="ruby-constant">Rubygems</span>)
+              <span class="ruby-identifier">message</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;in any of the gem sources listed in your Gemfile.&quot;</span>
+            <span class="ruby-keyword">else</span>
+              <span class="ruby-identifier">message</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;in the gems available on this machine.&quot;</span>
+            <span class="ruby-keyword">end</span>
+          <span class="ruby-keyword">end</span>
+          <span class="ruby-identifier">raise</span> <span class="ruby-constant">GemNotFound</span>, <span class="ruby-identifier">message</span>
+          <span class="ruby-comment"># This is not a top-level Gemfile requirement</span>
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-ivar">@errors</span>[<span class="ruby-identifier">current</span>.<span class="ruby-identifier">name</span>] = [<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">current</span>]
+          <span class="ruby-identifier">parent</span> = <span class="ruby-identifier">handle_conflict</span>(<span class="ruby-identifier">current</span>, <span class="ruby-identifier">states</span>)
+          <span class="ruby-identifier">reqs</span>, <span class="ruby-identifier">activated</span>, <span class="ruby-identifier">depth</span> = <span class="ruby-identifier">resolve_conflict</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-identifier">states</span>)
+          <span class="ruby-keyword">next</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-identifier">state</span> = <span class="ruby-constant">State</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">reqs</span>.<span class="ruby-identifier">dup</span>, <span class="ruby-identifier">activated</span>.<span class="ruby-identifier">dup</span>, <span class="ruby-identifier">current</span>, <span class="ruby-identifier">matching_versions</span>, <span class="ruby-identifier">depth</span>, <span class="ruby-identifier">conflicts</span>)
+      <span class="ruby-identifier">states</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">state</span>
+      <span class="ruby-identifier">requirement</span> = <span class="ruby-identifier">state</span>.<span class="ruby-identifier">possibles</span>.<span class="ruby-identifier">pop</span>
+      <span class="ruby-identifier">activate_gem</span>(<span class="ruby-identifier">reqs</span>, <span class="ruby-identifier">activated</span>, <span class="ruby-identifier">requirement</span>, <span class="ruby-identifier">current</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">successify</span>(<span class="ruby-identifier">activated</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- resolve-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- resolve-method -->
+
+      
+        <div id="resolve_conflict-method" class="method-detail ">
+          <a name="method-i-resolve_conflict"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">resolve_conflict</span><span
+              class="method-args">(current, states)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="resolve_conflict-source">
+<pre>
+<span class="ruby-comment"># File lib/bundler/resolver.rb, line 237</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">resolve_conflict</span>(<span class="ruby-identifier">current</span>, <span class="ruby-identifier">states</span>)
+  <span class="ruby-comment"># Find the state where the conflict has occurred</span>
+  <span class="ruby-identifier">state</span> = <span class="ruby-identifier">find_conflict_state</span>(<span class="ruby-identifier">current</span>, <span class="ruby-identifier">states</span>)
+
+  <span class="ruby-identifier">debug</span> { <span class="ruby-node">&quot;    -&gt; Going to: #{current.name} state&quot;</span> } <span class="ruby-keyword">if</span> <span class="ruby-identifier">current</span>
+
+  <span class="ruby-comment"># Resolve the conflicts by rewinding the state</span>
+  <span class="ruby-comment"># when the conflicted gem was activated</span>
+  <span class="ruby-identifier">reqs</span>, <span class="ruby-identifier">activated</span>, <span class="ruby-identifier">depth</span>, <span class="ruby-identifier">conflicts</span> = <span class="ruby-identifier">resolve_for_conflict</span>(<span class="ruby-identifier">state</span>)
+
+  <span class="ruby-comment"># Keep the state around if it still has other possibilities</span>
+  <span class="ruby-identifier">states</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">state</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">state</span>.<span class="ruby-identifier">possibles</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-identifier">clear_search_cache</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">reqs</span>, <span class="ruby-identifier">activated</span>, <span class="ruby-identifier">depth</span>, <span class="ruby-identifier">conflicts</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- resolve_conflict-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- resolve_conflict-method -->
+
+      
+        <div id="resolve_for_conflict-method" class="method-detail ">
+          <a name="method-i-resolve_for_conflict"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">resolve_for_conflict</span><span
+              class="method-args">(state)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="resolve_for_conflict-source">
+<pre>
+<span class="ruby-comment"># File lib/bundler/resolver.rb, line 226</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">resolve_for_conflict</span>(<span class="ruby-identifier">state</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-identifier">version_conflict</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">state</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">state</span>.<span class="ruby-identifier">possibles</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-identifier">reqs</span>, <span class="ruby-identifier">activated</span>, <span class="ruby-identifier">depth</span>, <span class="ruby-identifier">conflicts</span> = <span class="ruby-identifier">state</span>.<span class="ruby-identifier">reqs</span>.<span class="ruby-identifier">dup</span>, <span class="ruby-identifier">state</span>.<span class="ruby-identifier">activated</span>.<span class="ruby-identifier">dup</span>, <span class="ruby-identifier">state</span>.<span class="ruby-identifier">depth</span>, <span class="ruby-identifier">state</span>.<span class="ruby-identifier">conflicts</span>.<span class="ruby-identifier">dup</span>
+  <span class="ruby-identifier">requirement</span> = <span class="ruby-identifier">state</span>.<span class="ruby-identifier">requirement</span>
+  <span class="ruby-identifier">possible</span> = <span class="ruby-identifier">state</span>.<span class="ruby-identifier">possibles</span>.<span class="ruby-identifier">pop</span>
+
+  <span class="ruby-identifier">activate_gem</span>(<span class="ruby-identifier">reqs</span>, <span class="ruby-identifier">activated</span>, <span class="ruby-identifier">possible</span>, <span class="ruby-identifier">requirement</span>)
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">reqs</span>, <span class="ruby-identifier">activated</span>, <span class="ruby-identifier">depth</span>, <span class="ruby-identifier">conflicts</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- resolve_for_conflict-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- resolve_for_conflict-method -->
+
+      
+        <div id="search-method" class="method-detail ">
+          <a name="method-i-search"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">search</span><span
+              class="method-args">(dep)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="search-source">
+<pre>
+<span class="ruby-comment"># File lib/bundler/resolver.rb, line 384</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">search</span>(<span class="ruby-identifier">dep</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">base</span> = <span class="ruby-ivar">@base</span>[<span class="ruby-identifier">dep</span>.<span class="ruby-identifier">name</span>] <span class="ruby-keyword">and</span> <span class="ruby-identifier">base</span>.<span class="ruby-identifier">any?</span>
+    <span class="ruby-identifier">reqs</span> = [<span class="ruby-identifier">dep</span>.<span class="ruby-identifier">requirement</span>.<span class="ruby-identifier">as_list</span>, <span class="ruby-identifier">base</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">version</span>.<span class="ruby-identifier">to_s</span>].<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">compact</span>
+    <span class="ruby-identifier">d</span> = <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">Dependency</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">base</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">name</span>, *<span class="ruby-identifier">reqs</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">d</span> = <span class="ruby-identifier">dep</span>.<span class="ruby-identifier">dep</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@deps_for</span>[<span class="ruby-identifier">d</span>.<span class="ruby-identifier">hash</span>] <span class="ruby-operator">||=</span> <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">index</span> = <span class="ruby-ivar">@source_requirements</span>[<span class="ruby-identifier">d</span>.<span class="ruby-identifier">name</span>] <span class="ruby-operator">||</span> <span class="ruby-ivar">@index</span>
+    <span class="ruby-identifier">results</span> = <span class="ruby-identifier">index</span>.<span class="ruby-identifier">search</span>(<span class="ruby-identifier">d</span>, <span class="ruby-ivar">@base</span>[<span class="ruby-identifier">d</span>.<span class="ruby-identifier">name</span>])
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">results</span>.<span class="ruby-identifier">any?</span>
+      <span class="ruby-identifier">version</span> = <span class="ruby-identifier">results</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">version</span>
+      <span class="ruby-identifier">nested</span>  = [[]]
+      <span class="ruby-identifier">results</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">spec</span><span class="ruby-operator">|</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">version</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">version</span>
+          <span class="ruby-identifier">nested</span> <span class="ruby-operator">&lt;&lt;</span> []
+          <span class="ruby-identifier">version</span> = <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">version</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">nested</span>.<span class="ruby-identifier">last</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">spec</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">deps</span> = <span class="ruby-identifier">nested</span>.<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span> <span class="ruby-constant">SpecGroup</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">a</span>) }.<span class="ruby-identifier">select</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">sg</span><span class="ruby-operator">|</span> <span class="ruby-identifier">sg</span>.<span class="ruby-identifier">for?</span>(<span class="ruby-identifier">dep</span>.<span class="ruby-identifier">__platform</span>) }
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">deps</span> = []
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- search-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- search-method -->
+
+      
+        <div id="start-method" class="method-detail ">
+          <a name="method-i-start"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">start</span><span
+              class="method-args">(reqs)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="start-source">
+<pre>
+<span class="ruby-comment"># File lib/bundler/resolver.rb, line 160</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">start</span>(<span class="ruby-identifier">reqs</span>)
+  <span class="ruby-identifier">activated</span> = {}
+  <span class="ruby-ivar">@gems_size</span> = <span class="ruby-constant">Hash</span>[<span class="ruby-identifier">reqs</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">r</span><span class="ruby-operator">|</span> [<span class="ruby-identifier">r</span>, <span class="ruby-identifier">gems_size</span>(<span class="ruby-identifier">r</span>)] }]
+
+  <span class="ruby-identifier">resolve</span>(<span class="ruby-identifier">reqs</span>, <span class="ruby-identifier">activated</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- start-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- start-method -->
+
+      
+        <div id="state_any-3F-method" class="method-detail ">
+          <a name="method-i-state_any-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">state_any?</span><span
+              class="method-args">(state)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="state_any-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/bundler/resolver.rb, line 184</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">state_any?</span>(<span class="ruby-identifier">state</span>)
+  <span class="ruby-identifier">state</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">state</span>.<span class="ruby-identifier">possibles</span>.<span class="ruby-identifier">any?</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- state_any-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- state_any-3F-method -->
+
+      
+        <div id="successify-method" class="method-detail ">
+          <a name="method-i-successify"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">successify</span><span
+              class="method-args">(activated)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="successify-source">
+<pre>
+<span class="ruby-comment"># File lib/bundler/resolver.rb, line 156</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">successify</span>(<span class="ruby-identifier">activated</span>)
+  <span class="ruby-identifier">activated</span>.<span class="ruby-identifier">values</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">to_specs</span> }.<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">compact</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- successify-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- successify-method -->
+
+      
+        <div id="version_conflict-method" class="method-detail ">
+          <a name="method-i-version_conflict"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">version_conflict</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="version_conflict-source">
+<pre>
+<span class="ruby-comment"># File lib/bundler/resolver.rb, line 421</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">version_conflict</span>
+  <span class="ruby-constant">VersionConflict</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">errors</span>.<span class="ruby-identifier">keys</span>, <span class="ruby-identifier">error_message</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- version_conflict-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- version_conflict-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

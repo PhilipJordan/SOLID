@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="IBM437"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=IBM437" http-equiv="Content-Type" />
+
+  <title>Class: Zip::ExtraField::Zip64</title>
+
+  <link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../lib/zip/extra_field/zip64_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/zip/extra_field/zip64.rb">lib/zip/extra_field/zip64.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="Generic.html">Zip::ExtraField::Generic</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-3D-3D">#==</a></li>
+          
+          <li><a href="#method-i-merge">#merge</a></li>
+          
+          <li><a href="#method-i-pack_for_c_dir">#pack_for_c_dir</a></li>
+          
+          <li><a href="#method-i-pack_for_local">#pack_for_local</a></li>
+          
+          <li><a href="#method-i-parse">#parse</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../Zip.html">Zip</a></li>
+        
+          <li><a href="../../Zip/CentralDirectory.html">Zip::CentralDirectory</a></li>
+        
+          <li><a href="../../Zip/CompressionMethodError.html">Zip::CompressionMethodError</a></li>
+        
+          <li><a href="../../Zip/DestinationFileExistsError.html">Zip::DestinationFileExistsError</a></li>
+        
+          <li><a href="../../Zip/Entry.html">Zip::Entry</a></li>
+        
+          <li><a href="../../Zip/EntryExistsError.html">Zip::EntryExistsError</a></li>
+        
+          <li><a href="../../Zip/EntryNameError.html">Zip::EntryNameError</a></li>
+        
+          <li><a href="../../Zip/Error.html">Zip::Error</a></li>
+        
+          <li><a href="../../Zip/ExtraField.html">Zip::ExtraField</a></li>
+        
+          <li><a href="../../Zip/ExtraField/Generic.html">Zip::ExtraField::Generic</a></li>
+        
+          <li><a href="../../Zip/ExtraField/IUnix.html">Zip::ExtraField::IUnix</a></li>
+        
+          <li><a href="../../Zip/ExtraField/OldUnix.html">Zip::ExtraField::OldUnix</a></li>
+        
+          <li><a href="../../Zip/ExtraField/UniversalTime.html">Zip::ExtraField::UniversalTime</a></li>
+        
+          <li><a href="../../Zip/ExtraField/Zip64.html">Zip::ExtraField::Zip64</a></li>
+        
+          <li><a href="../../Zip/ExtraField/Zip64Placeholder.html">Zip::ExtraField::Zip64Placeholder</a></li>
+        
+          <li><a href="../../Zip/File.html">Zip::File</a></li>
+        
+          <li><a href="../../Zip/FileSystem.html">Zip::FileSystem</a></li>
+        
+          <li><a href="../../Zip/FileSystem/ZipFsDir.html">Zip::FileSystem::ZipFsDir</a></li>
+        
+          <li><a href="../../Zip/FileSystem/ZipFsFile.html">Zip::FileSystem::ZipFsFile</a></li>
+        
+          <li><a href="../../Zip/FileSystem/ZipFsFile/ZipFsStat.html">Zip::FileSystem::ZipFsFile::ZipFsStat</a></li>
+        
+          <li><a href="../../Zip/IOExtras.html">Zip::IOExtras</a></li>
+        
+          <li><a href="../../Zip/IOExtras/AbstractInputStream.html">Zip::IOExtras::AbstractInputStream</a></li>
+        
+          <li><a href="../../Zip/IOExtras/AbstractOutputStream.html">Zip::IOExtras::AbstractOutputStream</a></li>
+        
+          <li><a href="../../Zip/IOExtras/FakeIO.html">Zip::IOExtras::FakeIO</a></li>
+        
+          <li><a href="../../Zip/InputStream.html">Zip::InputStream</a></li>
+        
+          <li><a href="../../Zip/InternalError.html">Zip::InternalError</a></li>
+        
+          <li><a href="../../Zip/OutputStream.html">Zip::OutputStream</a></li>
+        
+          <li><a href="../../Zip/StreamableDirectory.html">Zip::StreamableDirectory</a></li>
+        
+          <li><a href="../../Zip/StreamableStream.html">Zip::StreamableStream</a></li>
+        
+          <li><a href="../../Zip/CompressionMethodError.html">Zip::ZipCompressionMethodError</a></li>
+        
+          <li><a href="../../Zip/DestinationFileExistsError.html">Zip::ZipDestinationFileExistsError</a></li>
+        
+          <li><a href="../../Zip/EntryExistsError.html">Zip::ZipEntryExistsError</a></li>
+        
+          <li><a href="../../Zip/EntryNameError.html">Zip::ZipEntryNameError</a></li>
+        
+          <li><a href="../../Zip/Error.html">Zip::ZipError</a></li>
+        
+          <li><a href="../../Zip/InternalError.html">Zip::ZipInternalError</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Zip::ExtraField::Zip64</h1>
+
+    <div id="description" class="description">
+      
+<p>Info-ZIP Extra for <a href="Zip64.html">Zip64</a> size</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="HEADER_ID">HEADER_ID</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="compressed_size-attribute-method" class="method-detail">
+          <a name="compressed_size"></a>
+          
+          <a name="compressed_size="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">compressed_size</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="disk_start_number-attribute-method" class="method-detail">
+          <a name="disk_start_number"></a>
+          
+          <a name="disk_start_number="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">disk_start_number</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="original_size-attribute-method" class="method-detail">
+          <a name="original_size"></a>
+          
+          <a name="original_size="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">original_size</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="relative_header_offset-attribute-method" class="method-detail">
+          <a name="relative_header_offset"></a>
+          
+          <a name="relative_header_offset="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">relative_header_offset</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(binstr = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/zip/extra_field/zip64.rb, line 8</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">binstr</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-ivar">@content</span> = <span class="ruby-keyword">nil</span> <span class="ruby-comment"># unparsed binary; we don't actually know what this contains</span>
+                 <span class="ruby-comment"># without looking for FFs in the associated file header</span>
+                 <span class="ruby-comment"># call parse after initializing with a binary string</span>
+  <span class="ruby-ivar">@original_size</span>          = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@compressed_size</span>        = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@relative_header_offset</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@disk_start_number</span>      = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">binstr</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">merge</span>(<span class="ruby-identifier">binstr</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="3D-3D-method" class="method-detail ">
+          <a name="method-i-3D-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">==</span><span
+              class="method-args">(other)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="3D-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/zip/extra_field/zip64.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">==</span>(<span class="ruby-identifier">other</span>)
+  <span class="ruby-identifier">other</span>.<span class="ruby-identifier">original_size</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@original_size</span> <span class="ruby-operator">&amp;&amp;</span>
+    <span class="ruby-identifier">other</span>.<span class="ruby-identifier">compressed_size</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@compressed_size</span> <span class="ruby-operator">&amp;&amp;</span>
+      <span class="ruby-identifier">other</span>.<span class="ruby-identifier">relative_header_offset</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@relative_header_offset</span> <span class="ruby-operator">&amp;&amp;</span>
+        <span class="ruby-identifier">other</span>.<span class="ruby-identifier">disk_start_number</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@disk_start_number</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- 3D-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 3D-3D-method -->
+
+      
+        <div id="merge-method" class="method-detail ">
+          <a name="method-i-merge"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">merge</span><span
+              class="method-args">(binstr)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="merge-source">
+<pre>
+<span class="ruby-comment"># File lib/zip/extra_field/zip64.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">merge</span>(<span class="ruby-identifier">binstr</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">binstr</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-identifier">_</span>, <span class="ruby-ivar">@content</span> = <span class="ruby-identifier">initial_parse</span>(<span class="ruby-identifier">binstr</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- merge-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- merge-method -->
+
+      
+        <div id="pack_for_c_dir-method" class="method-detail ">
+          <a name="method-i-pack_for_c_dir"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">pack_for_c_dir</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="pack_for_c_dir-source">
+<pre>
+<span class="ruby-comment"># File lib/zip/extra_field/zip64.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">pack_for_c_dir</span>
+  <span class="ruby-comment"># central directory entries contain only fields that didn't fit in the main entry part</span>
+  <span class="ruby-identifier">packed</span> = <span class="ruby-string">''</span>.<span class="ruby-identifier">force_encoding</span>(<span class="ruby-string">'BINARY'</span>)
+  <span class="ruby-identifier">packed</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-ivar">@original_size</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-string">&quot;Q&lt;&quot;</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@original_size</span>
+  <span class="ruby-identifier">packed</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-ivar">@compressed_size</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-string">&quot;Q&lt;&quot;</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@compressed_size</span>
+  <span class="ruby-identifier">packed</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-ivar">@relative_header_offset</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-string">&quot;Q&lt;&quot;</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@relative_header_offset</span>
+  <span class="ruby-identifier">packed</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-ivar">@disk_start_number</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-string">&quot;V&quot;</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@disk_start_number</span>
+  <span class="ruby-identifier">packed</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- pack_for_c_dir-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- pack_for_c_dir-method -->
+
+      
+        <div id="pack_for_local-method" class="method-detail ">
+          <a name="method-i-pack_for_local"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">pack_for_local</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="pack_for_local-source">
+<pre>
+<span class="ruby-comment"># File lib/zip/extra_field/zip64.rb, line 51</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">pack_for_local</span>
+  <span class="ruby-comment"># local header entries must contain original size and compressed size; other fields do not apply</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-string">''</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@original_size</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@compressed_size</span>
+  [<span class="ruby-ivar">@original_size</span>, <span class="ruby-ivar">@compressed_size</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-string">&quot;Q&lt;Q&lt;&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- pack_for_local-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- pack_for_local-method -->
+
+      
+        <div id="parse-method" class="method-detail ">
+          <a name="method-i-parse"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">parse</span><span
+              class="method-args">(original_size, compressed_size, relative_header_offset = nil, disk_start_number = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>pass the values from the base entry (if applicable) wider values are only
+present in the extra field for base values set to all FFs returns the final
+values for the four attributes (from the base or zip64 extra record)</p>
+            
+
+            
+            <div class="method-source-code" id="parse-source">
+<pre>
+<span class="ruby-comment"># File lib/zip/extra_field/zip64.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">parse</span>(<span class="ruby-identifier">original_size</span>, <span class="ruby-identifier">compressed_size</span>, <span class="ruby-identifier">relative_header_offset</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">disk_start_number</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-ivar">@original_size</span> = <span class="ruby-identifier">extract</span>(<span class="ruby-value">8</span>, <span class="ruby-string">'Q&lt;'</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">original_size</span> <span class="ruby-operator">==</span> <span class="ruby-value">0xFFFFFFFF</span>
+  <span class="ruby-ivar">@compressed_size</span> = <span class="ruby-identifier">extract</span>(<span class="ruby-value">8</span>, <span class="ruby-string">'Q&lt;'</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">compressed_size</span> <span class="ruby-operator">==</span> <span class="ruby-value">0xFFFFFFFF</span>
+  <span class="ruby-ivar">@relative_header_offset</span> = <span class="ruby-identifier">extract</span>(<span class="ruby-value">8</span>, <span class="ruby-string">'Q&lt;'</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">relative_header_offset</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">relative_header_offset</span> <span class="ruby-operator">==</span> <span class="ruby-value">0xFFFFFFFF</span>
+  <span class="ruby-ivar">@disk_start_number</span> = <span class="ruby-identifier">extract</span>(<span class="ruby-value">4</span>, <span class="ruby-string">'V'</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">disk_start_number</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">disk_start_number</span> <span class="ruby-operator">==</span> <span class="ruby-value">0xFFFF</span>
+  <span class="ruby-ivar">@content</span> = <span class="ruby-keyword">nil</span>
+  [<span class="ruby-ivar">@original_size</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">original_size</span>,
+   <span class="ruby-ivar">@compressed_size</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">compressed_size</span>,
+   <span class="ruby-ivar">@relative_header_offset</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">relative_header_offset</span>,
+   <span class="ruby-ivar">@disk_start_number</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">disk_start_number</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- parse-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- parse-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

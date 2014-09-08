@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta content="text/html; charset=IBM437" http-equiv="Content-Type" />
+
+  <title>rubyzip-1.1.6 Documentation</title>
+
+  <link type="text/css" media="screen" href="rdoc.css" rel="stylesheet" />
+
+  <script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body class="indexpage">
+
+  
+  <h1>rubyzip-1.1.6 Documentation</h1>
+
+  
+  <p>This is the API documentation for 'rubyzip-1.1.6 Documentation'.</p>
+  
+
+  
+  
+
+  <h2 id="classes">Classes/Modules</h2>
+  <ul>
+    
+    <li class="module"><a href="Zip.html">Zip</a></li>
+    
+    <li class="class"><a href="Zip/CentralDirectory.html">Zip::CentralDirectory</a></li>
+    
+    <li class="class"><a href="Zip/CompressionMethodError.html">Zip::CompressionMethodError</a></li>
+    
+    <li class="class"><a href="Zip/DestinationFileExistsError.html">Zip::DestinationFileExistsError</a></li>
+    
+    <li class="class"><a href="Zip/Entry.html">Zip::Entry</a></li>
+    
+    <li class="class"><a href="Zip/EntryExistsError.html">Zip::EntryExistsError</a></li>
+    
+    <li class="class"><a href="Zip/EntryNameError.html">Zip::EntryNameError</a></li>
+    
+    <li class="class"><a href="Zip/Error.html">Zip::Error</a></li>
+    
+    <li class="class"><a href="Zip/ExtraField.html">Zip::ExtraField</a></li>
+    
+    <li class="class"><a href="Zip/ExtraField/Generic.html">Zip::ExtraField::Generic</a></li>
+    
+    <li class="class"><a href="Zip/ExtraField/IUnix.html">Zip::ExtraField::IUnix</a></li>
+    
+    <li class="class"><a href="Zip/ExtraField/OldUnix.html">Zip::ExtraField::OldUnix</a></li>
+    
+    <li class="class"><a href="Zip/ExtraField/UniversalTime.html">Zip::ExtraField::UniversalTime</a></li>
+    
+    <li class="class"><a href="Zip/ExtraField/Zip64.html">Zip::ExtraField::Zip64</a></li>
+    
+    <li class="class"><a href="Zip/ExtraField/Zip64Placeholder.html">Zip::ExtraField::Zip64Placeholder</a></li>
+    
+    <li class="class"><a href="Zip/File.html">Zip::File</a></li>
+    
+    <li class="module"><a href="Zip/FileSystem.html">Zip::FileSystem</a></li>
+    
+    <li class="class"><a href="Zip/FileSystem/ZipFsDir.html">Zip::FileSystem::ZipFsDir</a></li>
+    
+    <li class="class"><a href="Zip/FileSystem/ZipFsFile.html">Zip::FileSystem::ZipFsFile</a></li>
+    
+    <li class="class"><a href="Zip/FileSystem/ZipFsFile/ZipFsStat.html">Zip::FileSystem::ZipFsFile::ZipFsStat</a></li>
+    
+    <li class="module"><a href="Zip/IOExtras.html">Zip::IOExtras</a></li>
+    
+    <li class="module"><a href="Zip/IOExtras/AbstractInputStream.html">Zip::IOExtras::AbstractInputStream</a></li>
+    
+    <li class="module"><a href="Zip/IOExtras/AbstractOutputStream.html">Zip::IOExtras::AbstractOutputStream</a></li>
+    
+    <li class="module"><a href="Zip/IOExtras/FakeIO.html">Zip::IOExtras::FakeIO</a></li>
+    
+    <li class="class"><a href="Zip/InputStream.html">Zip::InputStream</a></li>
+    
+    <li class="class"><a href="Zip/InternalError.html">Zip::InternalError</a></li>
+    
+    <li class="class"><a href="Zip/OutputStream.html">Zip::OutputStream</a></li>
+    
+    <li class="class"><a href="Zip/StreamableDirectory.html">Zip::StreamableDirectory</a></li>
+    
+    <li class="class"><a href="Zip/StreamableStream.html">Zip::StreamableStream</a></li>
+    
+    <li class="class"><a href="Zip/CompressionMethodError.html">Zip::ZipCompressionMethodError</a></li>
+    
+    <li class="class"><a href="Zip/DestinationFileExistsError.html">Zip::ZipDestinationFileExistsError</a></li>
+    
+    <li class="class"><a href="Zip/EntryExistsError.html">Zip::ZipEntryExistsError</a></li>
+    
+    <li class="class"><a href="Zip/EntryNameError.html">Zip::ZipEntryNameError</a></li>
+    
+    <li class="class"><a href="Zip/Error.html">Zip::ZipError</a></li>
+    
+    <li class="class"><a href="Zip/InternalError.html">Zip::ZipInternalError</a></li>
+    
+  </ul>
+
+  <h2 id="methods">Methods</h2>
+  <ul>
+    
+      <li><a href="Zip/File.html#method-c-add_buffer">::add_buffer &mdash; Zip::File</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile/ZipFsStat.html#method-c-delegate_to_fs_file">::delegate_to_fs_file &mdash; Zip::FileSystem::ZipFsFile::ZipFsStat</a></li>
+    
+      <li><a href="Zip/File.html#method-c-foreach">::foreach &mdash; Zip::File</a></li>
+    
+      <li><a href="Zip/File.html#method-c-get_partial_zip_file_name">::get_partial_zip_file_name &mdash; Zip::File</a></li>
+    
+      <li><a href="Zip/File.html#method-c-get_segment_count_for_split">::get_segment_count_for_split &mdash; Zip::File</a></li>
+    
+      <li><a href="Zip/File.html#method-c-get_segment_size_for_split">::get_segment_size_for_split &mdash; Zip::File</a></li>
+    
+      <li><a href="Zip/ExtraField/Generic.html#method-c-name">::name &mdash; Zip::ExtraField::Generic</a></li>
+    
+      <li><a href="Zip/ExtraField/Zip64.html#method-c-new">::new &mdash; Zip::ExtraField::Zip64</a></li>
+    
+      <li><a href="Zip/IOExtras/AbstractInputStream.html#method-c-new">::new &mdash; Zip::IOExtras::AbstractInputStream</a></li>
+    
+      <li><a href="Zip/OutputStream.html#method-c-new">::new &mdash; Zip::OutputStream</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile/ZipFsStat.html#method-c-new">::new &mdash; Zip::FileSystem::ZipFsFile::ZipFsStat</a></li>
+    
+      <li><a href="Zip/Entry.html#method-c-new">::new &mdash; Zip::Entry</a></li>
+    
+      <li><a href="Zip/File.html#method-c-new">::new &mdash; Zip::File</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-c-new">::new &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/ExtraField/OldUnix.html#method-c-new">::new &mdash; Zip::ExtraField::OldUnix</a></li>
+    
+      <li><a href="Zip/ExtraField/Zip64Placeholder.html#method-c-new">::new &mdash; Zip::ExtraField::Zip64Placeholder</a></li>
+    
+      <li><a href="Zip/ExtraField/IUnix.html#method-c-new">::new &mdash; Zip::ExtraField::IUnix</a></li>
+    
+      <li><a href="Zip/InputStream.html#method-c-new">::new &mdash; Zip::InputStream</a></li>
+    
+      <li><a href="Zip/ExtraField.html#method-c-new">::new &mdash; Zip::ExtraField</a></li>
+    
+      <li><a href="Zip/StreamableStream.html#method-c-new">::new &mdash; Zip::StreamableStream</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsDir.html#method-c-new">::new &mdash; Zip::FileSystem::ZipFsDir</a></li>
+    
+      <li><a href="Zip/ExtraField/UniversalTime.html#method-c-new">::new &mdash; Zip::ExtraField::UniversalTime</a></li>
+    
+      <li><a href="Zip/StreamableDirectory.html#method-c-new">::new &mdash; Zip::StreamableDirectory</a></li>
+    
+      <li><a href="Zip/File.html#method-c-open">::open &mdash; Zip::File</a></li>
+    
+      <li><a href="Zip/OutputStream.html#method-c-open">::open &mdash; Zip::OutputStream</a></li>
+    
+      <li><a href="Zip/InputStream.html#method-c-open">::open &mdash; Zip::InputStream</a></li>
+    
+      <li><a href="Zip/InputStream.html#method-c-open_buffer">::open_buffer &mdash; Zip::InputStream</a></li>
+    
+      <li><a href="Zip/File.html#method-c-open_buffer">::open_buffer &mdash; Zip::File</a></li>
+    
+      <li><a href="Zip/File.html#method-c-put_split_signature">::put_split_signature &mdash; Zip::File</a></li>
+    
+      <li><a href="Zip/Entry.html#method-c-read_local_entry">::read_local_entry &mdash; Zip::Entry</a></li>
+    
+      <li><a href="Zip/ExtraField/Generic.html#method-c-register_map">::register_map &mdash; Zip::ExtraField::Generic</a></li>
+    
+      <li><a href="Zip/File.html#method-c-save_splited_part">::save_splited_part &mdash; Zip::File</a></li>
+    
+      <li><a href="Zip/File.html#method-c-split">::split &mdash; Zip::File</a></li>
+    
+      <li><a href="Zip/OutputStream.html#method-c-write_buffer">::write_buffer &mdash; Zip::OutputStream</a></li>
+    
+      <li><a href="Zip/OutputStream.html#method-i-3C-3C">#<< &mdash; Zip::OutputStream</a></li>
+    
+      <li><a href="Zip/Entry.html#method-i-3C-3D-3E">#<=> &mdash; Zip::Entry</a></li>
+    
+      <li><a href="Zip/ExtraField/IUnix.html#method-i-3D-3D">#== &mdash; Zip::ExtraField::IUnix</a></li>
+    
+      <li><a href="Zip/Entry.html#method-i-3D-3D">#== &mdash; Zip::Entry</a></li>
+    
+      <li><a href="Zip/ExtraField/Generic.html#method-i-3D-3D">#== &mdash; Zip::ExtraField::Generic</a></li>
+    
+      <li><a href="Zip/ExtraField/UniversalTime.html#method-i-3D-3D">#== &mdash; Zip::ExtraField::UniversalTime</a></li>
+    
+      <li><a href="Zip/ExtraField/OldUnix.html#method-i-3D-3D">#== &mdash; Zip::ExtraField::OldUnix</a></li>
+    
+      <li><a href="Zip/ExtraField/Zip64.html#method-i-3D-3D">#== &mdash; Zip::ExtraField::Zip64</a></li>
+    
+      <li><a href="Zip/File.html#method-i-add">#add &mdash; Zip::File</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-atime">#atime &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-basename">#basename &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile/ZipFsStat.html#method-i-blksize">#blksize &mdash; Zip::FileSystem::ZipFsFile::ZipFsStat</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-blockdev-3F">#blockdev? &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile/ZipFsStat.html#method-i-blocks">#blocks &mdash; Zip::FileSystem::ZipFsFile::ZipFsStat</a></li>
+    
+      <li><a href="Zip/ExtraField.html#method-i-c_dir_size">#c_dir_size &mdash; Zip::ExtraField</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-chardev-3F">#chardev? &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsDir.html#method-i-chdir">#chdir &mdash; Zip::FileSystem::ZipFsDir</a></li>
+    
+      <li><a href="Zip/Entry.html#method-i-check_c_dir_entry_comment_size">#check_c_dir_entry_comment_size &mdash; Zip::Entry</a></li>
+    
+      <li><a href="Zip/Entry.html#method-i-check_c_dir_entry_signature">#check_c_dir_entry_signature &mdash; Zip::Entry</a></li>
+    
+      <li><a href="Zip/Entry.html#method-i-check_c_dir_entry_static_header_length">#check_c_dir_entry_static_header_length &mdash; Zip::Entry</a></li>
+    
+      <li><a href="Zip/Entry.html#method-i-check_name">#check_name &mdash; Zip::Entry</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-chmod">#chmod &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-chown">#chown &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsDir.html#method-i-chroot">#chroot &mdash; Zip::FileSystem::ZipFsDir</a></li>
+    
+      <li><a href="Zip/Entry.html#method-i-clean_up">#clean_up &mdash; Zip::Entry</a></li>
+    
+      <li><a href="Zip/StreamableStream.html#method-i-clean_up">#clean_up &mdash; Zip::StreamableStream</a></li>
+    
+      <li><a href="Zip/File.html#method-i-close">#close &mdash; Zip::File</a></li>
+    
+      <li><a href="Zip/InputStream.html#method-i-close">#close &mdash; Zip::InputStream</a></li>
+    
+      <li><a href="Zip/OutputStream.html#method-i-close">#close &mdash; Zip::OutputStream</a></li>
+    
+      <li><a href="Zip/OutputStream.html#method-i-close_buffer">#close_buffer &mdash; Zip::OutputStream</a></li>
+    
+      <li><a href="Zip/Entry.html#method-i-comment_size">#comment_size &mdash; Zip::Entry</a></li>
+    
+      <li><a href="Zip/File.html#method-i-commit">#commit &mdash; Zip::File</a></li>
+    
+      <li><a href="Zip/File.html#method-i-commit_required-3F">#commit_required? &mdash; Zip::File</a></li>
+    
+      <li><a href="Zip/OutputStream.html#method-i-copy_raw_entry">#copy_raw_entry &mdash; Zip::OutputStream</a></li>
+    
+      <li><a href="Zip/ExtraField.html#method-i-create">#create &mdash; Zip::ExtraField</a></li>
+    
+      <li><a href="Zip/ExtraField.html#method-i-create_unknown_item">#create_unknown_item &mdash; Zip::ExtraField</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-ctime">#ctime &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsDir.html#method-i-delete">#delete &mdash; Zip::FileSystem::ZipFsDir</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-delete">#delete &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile/ZipFsStat.html#method-i-dev">#dev &mdash; Zip::FileSystem::ZipFsFile::ZipFsStat</a></li>
+    
+      <li><a href="Zip/FileSystem.html#method-i-dir">#dir &mdash; Zip::FileSystem</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-directory-3F">#directory? &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-dirname">#dirname &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/CentralDirectory.html#method-i-each">#each &mdash; Zip::CentralDirectory</a></li>
+    
+      <li><a href="Zip/IOExtras/AbstractInputStream.html#method-i-each">#each &mdash; Zip::IOExtras::AbstractInputStream</a></li>
+    
+      <li><a href="Zip/IOExtras/AbstractInputStream.html#method-i-each_line">#each_line &mdash; Zip::IOExtras::AbstractInputStream</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsDir.html#method-i-entries">#entries &mdash; Zip::FileSystem::ZipFsDir</a></li>
+    
+      <li><a href="Zip/CentralDirectory.html#method-i-entries">#entries &mdash; Zip::CentralDirectory</a></li>
+    
+      <li><a href="Zip/InputStream.html#method-i-eof">#eof &mdash; Zip::InputStream</a></li>
+    
+      <li><a href="Zip/InputStream.html#method-i-eof-3F">#eof? &mdash; Zip::InputStream</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-executable-3F">#executable? &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-executable_real-3F">#executable_real? &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-exist-3F">#exist? &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-exists-3F">#exists? &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-expand_path">#expand_path &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/ExtraField.html#method-i-extra_field_type_exist">#extra_field_type_exist &mdash; Zip::ExtraField</a></li>
+    
+      <li><a href="Zip/ExtraField.html#method-i-extra_field_type_unknown">#extra_field_type_unknown &mdash; Zip::ExtraField</a></li>
+    
+      <li><a href="Zip/Entry.html#method-i-extra_size">#extra_size &mdash; Zip::Entry</a></li>
+    
+      <li><a href="Zip/Entry.html#method-i-extract">#extract &mdash; Zip::Entry</a></li>
+    
+      <li><a href="Zip/File.html#method-i-extract">#extract &mdash; Zip::File</a></li>
+    
+      <li><a href="Zip/FileSystem.html#method-i-file">#file &mdash; Zip::FileSystem</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-file-3F">#file? &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/Entry.html#method-i-file_type_is-3F">#file_type_is? &mdash; Zip::Entry</a></li>
+    
+      <li><a href="Zip/File.html#method-i-find_entry">#find_entry &mdash; Zip::File</a></li>
+    
+      <li><a href="Zip/OutputStream.html#method-i-finish">#finish &mdash; Zip::OutputStream</a></li>
+    
+      <li><a href="Zip/IOExtras/AbstractInputStream.html#method-i-flush">#flush &mdash; Zip::IOExtras::AbstractInputStream</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-foreach">#foreach &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsDir.html#method-i-foreach">#foreach &mdash; Zip::FileSystem::ZipFsDir</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile/ZipFsStat.html#method-i-ftype">#ftype &mdash; Zip::FileSystem::ZipFsFile::ZipFsStat</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-ftype">#ftype &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/InputStream.html#method-i-get_decompressor">#get_decompressor &mdash; Zip::InputStream</a></li>
+    
+      <li><a href="Zip/File.html#method-i-get_entry">#get_entry &mdash; Zip::File</a></li>
+    
+      <li><a href="Zip/Entry.html#method-i-get_input_stream">#get_input_stream &mdash; Zip::Entry</a></li>
+    
+      <li><a href="Zip/StreamableStream.html#method-i-get_input_stream">#get_input_stream &mdash; Zip::StreamableStream</a></li>
+    
+      <li><a href="Zip/File.html#method-i-get_input_stream">#get_input_stream &mdash; Zip::File</a></li>
+    
+      <li><a href="Zip/InputStream.html#method-i-get_io">#get_io &mdash; Zip::InputStream</a></li>
+    
+      <li><a href="Zip/InputStream.html#method-i-get_next_entry">#get_next_entry &mdash; Zip::InputStream</a></li>
+    
+      <li><a href="Zip/StreamableStream.html#method-i-get_output_stream">#get_output_stream &mdash; Zip::StreamableStream</a></li>
+    
+      <li><a href="Zip/File.html#method-i-get_output_stream">#get_output_stream &mdash; Zip::File</a></li>
+    
+      <li><a href="Zip/Entry.html#method-i-get_raw_input_stream">#get_raw_input_stream &mdash; Zip::Entry</a></li>
+    
+      <li><a href="Zip/IOExtras/AbstractInputStream.html#method-i-gets">#gets &mdash; Zip::IOExtras::AbstractInputStream</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsDir.html#method-i-getwd">#getwd &mdash; Zip::FileSystem::ZipFsDir</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile/ZipFsStat.html#method-i-gid">#gid &mdash; Zip::FileSystem::ZipFsFile::ZipFsStat</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsDir.html#method-i-glob">#glob &mdash; Zip::FileSystem::ZipFsDir</a></li>
+    
+      <li><a href="Zip/File.html#method-i-glob">#glob &mdash; Zip::File</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-grpowned-3F">#grpowned? &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/ExtraField/Generic.html#method-i-initial_parse">#initial_parse &mdash; Zip::ExtraField::Generic</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile/ZipFsStat.html#method-i-ino">#ino &mdash; Zip::FileSystem::ZipFsFile::ZipFsStat</a></li>
+    
+      <li><a href="Zip/InputStream.html#method-i-input_finished-3F">#input_finished? &mdash; Zip::InputStream</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-join">#join &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile/ZipFsStat.html#method-i-kind_of-3F">#kind_of? &mdash; Zip::FileSystem::ZipFsFile::ZipFsStat</a></li>
+    
+      <li><a href="Zip/IOExtras/FakeIO.html#method-i-kind_of-3F">#kind_of? &mdash; Zip::IOExtras::FakeIO</a></li>
+    
+      <li><a href="Zip/ExtraField.html#method-i-length">#length &mdash; Zip::ExtraField</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-link">#link &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/ExtraField.html#method-i-local_size">#local_size &mdash; Zip::ExtraField</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-lstat">#lstat &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/ExtraField.html#method-i-merge">#merge &mdash; Zip::ExtraField</a></li>
+    
+      <li><a href="Zip/ExtraField/UniversalTime.html#method-i-merge">#merge &mdash; Zip::ExtraField::UniversalTime</a></li>
+    
+      <li><a href="Zip/ExtraField/IUnix.html#method-i-merge">#merge &mdash; Zip::ExtraField::IUnix</a></li>
+    
+      <li><a href="Zip/ExtraField/Zip64.html#method-i-merge">#merge &mdash; Zip::ExtraField::Zip64</a></li>
+    
+      <li><a href="Zip/ExtraField/OldUnix.html#method-i-merge">#merge &mdash; Zip::ExtraField::OldUnix</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsDir.html#method-i-mkdir">#mkdir &mdash; Zip::FileSystem::ZipFsDir</a></li>
+    
+      <li><a href="Zip/File.html#method-i-mkdir">#mkdir &mdash; Zip::File</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile/ZipFsStat.html#method-i-mode">#mode &mdash; Zip::FileSystem::ZipFsFile::ZipFsStat</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-mtime">#mtime &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/Entry.html#method-i-mtime">#mtime &mdash; Zip::Entry</a></li>
+    
+      <li><a href="Zip/Entry.html#method-i-name_size">#name_size &mdash; Zip::Entry</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsDir.html#method-i-new">#new &mdash; Zip::FileSystem::ZipFsDir</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-new">#new &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile/ZipFsStat.html#method-i-nlink">#nlink &mdash; Zip::FileSystem::ZipFsFile::ZipFsStat</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsDir.html#method-i-open">#open &mdash; Zip::FileSystem::ZipFsDir</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-open">#open &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/InputStream.html#method-i-open_entry">#open_entry &mdash; Zip::InputStream</a></li>
+    
+      <li><a href="Zip/ExtraField.html#method-i-ordered_values">#ordered_values &mdash; Zip::ExtraField</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-owned-3F">#owned? &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/Entry.html#method-i-pack_c_dir_entry">#pack_c_dir_entry &mdash; Zip::Entry</a></li>
+    
+      <li><a href="Zip/ExtraField/OldUnix.html#method-i-pack_for_c_dir">#pack_for_c_dir &mdash; Zip::ExtraField::OldUnix</a></li>
+    
+      <li><a href="Zip/ExtraField/UniversalTime.html#method-i-pack_for_c_dir">#pack_for_c_dir &mdash; Zip::ExtraField::UniversalTime</a></li>
+    
+      <li><a href="Zip/ExtraField/IUnix.html#method-i-pack_for_c_dir">#pack_for_c_dir &mdash; Zip::ExtraField::IUnix</a></li>
+    
+      <li><a href="Zip/ExtraField/Zip64.html#method-i-pack_for_c_dir">#pack_for_c_dir &mdash; Zip::ExtraField::Zip64</a></li>
+    
+      <li><a href="Zip/ExtraField/UniversalTime.html#method-i-pack_for_local">#pack_for_local &mdash; Zip::ExtraField::UniversalTime</a></li>
+    
+      <li><a href="Zip/ExtraField/Zip64.html#method-i-pack_for_local">#pack_for_local &mdash; Zip::ExtraField::Zip64</a></li>
+    
+      <li><a href="Zip/ExtraField/Zip64Placeholder.html#method-i-pack_for_local">#pack_for_local &mdash; Zip::ExtraField::Zip64Placeholder</a></li>
+    
+      <li><a href="Zip/ExtraField/OldUnix.html#method-i-pack_for_local">#pack_for_local &mdash; Zip::ExtraField::OldUnix</a></li>
+    
+      <li><a href="Zip/ExtraField/IUnix.html#method-i-pack_for_local">#pack_for_local &mdash; Zip::ExtraField::IUnix</a></li>
+    
+      <li><a href="Zip/Entry.html#method-i-pack_local_entry">#pack_local_entry &mdash; Zip::Entry</a></li>
+    
+      <li><a href="Zip/Entry.html#method-i-parent_as_string">#parent_as_string &mdash; Zip::Entry</a></li>
+    
+      <li><a href="Zip/ExtraField/Zip64.html#method-i-parse">#parse &mdash; Zip::ExtraField::Zip64</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-pipe">#pipe &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-pipe-3F">#pipe? &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-popen">#popen &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/IOExtras/AbstractOutputStream.html#method-i-print">#print &mdash; Zip::IOExtras::AbstractOutputStream</a></li>
+    
+      <li><a href="Zip/IOExtras/AbstractOutputStream.html#method-i-printf">#printf &mdash; Zip::IOExtras::AbstractOutputStream</a></li>
+    
+      <li><a href="Zip/InputStream.html#method-i-produce_input">#produce_input &mdash; Zip::InputStream</a></li>
+    
+      <li><a href="Zip/OutputStream.html#method-i-put_next_entry">#put_next_entry &mdash; Zip::OutputStream</a></li>
+    
+      <li><a href="Zip/IOExtras/AbstractOutputStream.html#method-i-putc">#putc &mdash; Zip::IOExtras::AbstractOutputStream</a></li>
+    
+      <li><a href="Zip/IOExtras/AbstractOutputStream.html#method-i-puts">#puts &mdash; Zip::IOExtras::AbstractOutputStream</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsDir.html#method-i-pwd">#pwd &mdash; Zip::FileSystem::ZipFsDir</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile/ZipFsStat.html#method-i-rdev">#rdev &mdash; Zip::FileSystem::ZipFsFile::ZipFsStat</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile/ZipFsStat.html#method-i-rdev_major">#rdev_major &mdash; Zip::FileSystem::ZipFsFile::ZipFsStat</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile/ZipFsStat.html#method-i-rdev_minor">#rdev_minor &mdash; Zip::FileSystem::ZipFsFile::ZipFsStat</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-read">#read &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/File.html#method-i-read">#read &mdash; Zip::File</a></li>
+    
+      <li><a href="Zip/IOExtras/AbstractInputStream.html#method-i-read">#read &mdash; Zip::IOExtras::AbstractInputStream</a></li>
+    
+      <li><a href="Zip/Entry.html#method-i-read_c_dir_extra_field">#read_c_dir_extra_field &mdash; Zip::Entry</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-readable-3F">#readable? &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-readable_real-3F">#readable_real? &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/IOExtras/AbstractInputStream.html#method-i-readline">#readline &mdash; Zip::IOExtras::AbstractInputStream</a></li>
+    
+      <li><a href="Zip/IOExtras/AbstractInputStream.html#method-i-readlines">#readlines &mdash; Zip::IOExtras::AbstractInputStream</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-readlines">#readlines &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-readlink">#readlink &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/File.html#method-i-remove">#remove &mdash; Zip::File</a></li>
+    
+      <li><a href="Zip/File.html#method-i-rename">#rename &mdash; Zip::File</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-rename">#rename &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/File.html#method-i-replace">#replace &mdash; Zip::File</a></li>
+    
+      <li><a href="Zip.html#method-i-reset-21">#reset! &mdash; Zip</a></li>
+    
+      <li><a href="Zip/InputStream.html#method-i-rewind">#rewind &mdash; Zip::InputStream</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsDir.html#method-i-rmdir">#rmdir &mdash; Zip::FileSystem::ZipFsDir</a></li>
+    
+      <li><a href="Zip/Entry.html#method-i-set_default_vars_values">#set_default_vars_values &mdash; Zip::Entry</a></li>
+    
+      <li><a href="Zip/Entry.html#method-i-set_ftype_from_c_dir_entry">#set_ftype_from_c_dir_entry &mdash; Zip::Entry</a></li>
+    
+      <li><a href="Zip/Entry.html#method-i-set_unix_permissions_on_path">#set_unix_permissions_on_path &mdash; Zip::Entry</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-setgid-3F">#setgid? &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-setuid-3F">#setuid? &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip.html#method-i-setup">#setup &mdash; Zip</a></li>
+    
+      <li><a href="Zip/ExtraField.html#method-i-size">#size &mdash; Zip::ExtraField</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-size">#size &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/CentralDirectory.html#method-i-size">#size &mdash; Zip::CentralDirectory</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-size-3F">#size? &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-socket-3F">#socket? &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-split">#split &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/CentralDirectory.html#method-i-start_buf">#start_buf &mdash; Zip::CentralDirectory</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-stat">#stat &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-sticky-3F">#sticky? &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-symlink">#symlink &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-symlink-3F">#symlink? &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/InputStream.html#method-i-sysread">#sysread &mdash; Zip::InputStream</a></li>
+    
+      <li><a href="Zip/Entry.html#method-i-time">#time &mdash; Zip::Entry</a></li>
+    
+      <li><a href="Zip/Entry.html#method-i-time-3D">#time= &mdash; Zip::Entry</a></li>
+    
+      <li><a href="Zip/ExtraField/Generic.html#method-i-to_c_dir_bin">#to_c_dir_bin &mdash; Zip::ExtraField::Generic</a></li>
+    
+      <li><a href="Zip/ExtraField.html#method-i-to_c_dir_bin">#to_c_dir_bin &mdash; Zip::ExtraField</a></li>
+    
+      <li><a href="Zip/ExtraField/Generic.html#method-i-to_local_bin">#to_local_bin &mdash; Zip::ExtraField::Generic</a></li>
+    
+      <li><a href="Zip/ExtraField.html#method-i-to_local_bin">#to_local_bin &mdash; Zip::ExtraField</a></li>
+    
+      <li><a href="Zip/ExtraField.html#method-i-to_s">#to_s &mdash; Zip::ExtraField</a></li>
+    
+      <li><a href="Zip/Entry.html#method-i-to_s">#to_s &mdash; Zip::Entry</a></li>
+    
+      <li><a href="Zip/File.html#method-i-to_s">#to_s &mdash; Zip::File</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-truncate">#truncate &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile/ZipFsStat.html#method-i-uid">#uid &mdash; Zip::FileSystem::ZipFsFile::ZipFsStat</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-umask">#umask &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/IOExtras/AbstractInputStream.html#method-i-ungetc">#ungetc &mdash; Zip::IOExtras::AbstractInputStream</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsDir.html#method-i-unlink">#unlink &mdash; Zip::FileSystem::ZipFsDir</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-unlink">#unlink &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/Entry.html#method-i-unpack_c_dir_entry">#unpack_c_dir_entry &mdash; Zip::Entry</a></li>
+    
+      <li><a href="Zip/Entry.html#method-i-unpack_local_entry">#unpack_local_entry &mdash; Zip::Entry</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-utime">#utime &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/Entry.html#method-i-verify_local_header_size-21">#verify_local_header_size! &mdash; Zip::Entry</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-writable-3F">#writable? &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-writable_real-3F">#writable_real? &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/IOExtras/AbstractOutputStream.html#method-i-write">#write &mdash; Zip::IOExtras::AbstractOutputStream</a></li>
+    
+      <li><a href="Zip/File.html#method-i-write_buffer">#write_buffer &mdash; Zip::File</a></li>
+    
+      <li><a href="Zip/StreamableStream.html#method-i-write_to_zip_output_stream">#write_to_zip_output_stream &mdash; Zip::StreamableStream</a></li>
+    
+      <li><a href="Zip/FileSystem/ZipFsFile.html#method-i-zero-3F">#zero? &mdash; Zip::FileSystem::ZipFsFile</a></li>
+    
+      <li><a href="Zip/CentralDirectory.html#method-i-zip64_file-3F">#zip64_file? &mdash; Zip::CentralDirectory</a></li>
+    
+  </ul>
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+</body>
+</html>

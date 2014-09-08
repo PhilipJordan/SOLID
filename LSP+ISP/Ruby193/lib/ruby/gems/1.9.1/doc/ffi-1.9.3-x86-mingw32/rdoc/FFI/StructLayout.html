@@ -1,0 +1,777 @@
+<?xml version="1.0" encoding="IBM437"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=IBM437" http-equiv="Content-Type" />
+
+  <title>Class: FFI::StructLayout</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/ffi/struct_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/ffi/struct.rb">lib/ffi/struct.rb</a></li>
+          
+            <li><a href="../ext/ffi_c/ffi_c.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="ext/ffi_c/ffi.c">ext/ffi_c/ffi.c</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="Type.html">FFI::Type</a></p>
+        
+      </div>
+      
+
+      
+
+      
+      <!-- Namespace Contents -->
+      <div id="namespace-list-section" class="section">
+        <h3 class="section-header">Namespace</h3>
+        <ul class="link-list">
+          
+          <li><span class="type">CLASS</span> <a href="StructLayout/Array.html">FFI::StructLayout::Array</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="StructLayout/Enum.html">FFI::StructLayout::Enum</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="StructLayout/Field.html">FFI::StructLayout::Field</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="StructLayout/Function.html">FFI::StructLayout::Function</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="StructLayout/InnerStruct.html">FFI::StructLayout::InnerStruct</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="StructLayout/Mapped.html">FFI::StructLayout::Mapped</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="StructLayout/Number.html">FFI::StructLayout::Number</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="StructLayout/Pointer.html">FFI::StructLayout::Pointer</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="StructLayout/String.html">FFI::StructLayout::String</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-5B-5D">#[]</a></li>
+          
+          <li><a href="#method-i-__union-21">#__union!</a></li>
+          
+          <li><a href="#method-i-fields">#fields</a></li>
+          
+          <li><a href="#method-i-members">#members</a></li>
+          
+          <li><a href="#method-i-offset_of">#offset_of</a></li>
+          
+          <li><a href="#method-i-offsets">#offsets</a></li>
+          
+          <li><a href="#method-i-to_a">#to_a</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/ChangeLog.html">ChangeLog</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/README.html">README</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/compile.html">compile</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/configure.html">configure</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/depcomp.html">depcomp</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/doc/stamp-vti.html">stamp-vti</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/install-sh.html">install-sh</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/libtool-version.html">libtool-version</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/mdate-sh.html">mdate-sh</a></li>
+        
+          <li class="file"><a href="../ext/ffi_c/libffi/missing.html">missing</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../FFI.html">FFI</a></li>
+        
+          <li><a href="../FFI/AutoPointer.html">FFI::AutoPointer</a></li>
+        
+          <li><a href="../FFI/AutoPointer/CallableReleaser.html">FFI::AutoPointer::CallableReleaser</a></li>
+        
+          <li><a href="../FFI/AutoPointer/DefaultReleaser.html">FFI::AutoPointer::DefaultReleaser</a></li>
+        
+          <li><a href="../FFI/AutoPointer/Releaser.html">FFI::AutoPointer::Releaser</a></li>
+        
+          <li><a href="../FFI/ConstGenerator.html">FFI::ConstGenerator</a></li>
+        
+          <li><a href="../FFI/ConstGenerator/Constant.html">FFI::ConstGenerator::Constant</a></li>
+        
+          <li><a href="../FFI/Enum.html">FFI::Enum</a></li>
+        
+          <li><a href="../FFI/Enums.html">FFI::Enums</a></li>
+        
+          <li><a href="../FFI/Function.html">FFI::Function</a></li>
+        
+          <li><a href="../FFI/FunctionType.html">FFI::FunctionType</a></li>
+        
+          <li><a href="../FFI/Generator.html">FFI::Generator</a></li>
+        
+          <li><a href="../FFI/Generator/Task.html">FFI::Generator::Task</a></li>
+        
+          <li><a href="../FFI/IO.html">FFI::IO</a></li>
+        
+          <li><a href="../FFI/LastError.html">FFI::LastError</a></li>
+        
+          <li><a href="../FFI/Library.html">FFI::Library</a></li>
+        
+          <li><a href="../FFI/ManagedStruct.html">FFI::ManagedStruct</a></li>
+        
+          <li><a href="../FFI/MemoryPointer.html">FFI::MemoryPointer</a></li>
+        
+          <li><a href="../FFI/NativeType.html">FFI::NativeType</a></li>
+        
+          <li><a href="../FFI/NotFoundError.html">FFI::NotFoundError</a></li>
+        
+          <li><a href="../FFI/Platform.html">FFI::Platform</a></li>
+        
+          <li><a href="../FFI/PlatformError.html">FFI::PlatformError</a></li>
+        
+          <li><a href="../FFI/Pointer.html">FFI::Pointer</a></li>
+        
+          <li><a href="../FFI/StrPtrConverter.html">FFI::StrPtrConverter</a></li>
+        
+          <li><a href="../FFI/Struct.html">FFI::Struct</a></li>
+        
+          <li><a href="../FFI/Struct/InlineArray.html">FFI::Struct::InlineArray</a></li>
+        
+          <li><a href="../FFI/Struct/ManagedStructConverter.html">FFI::Struct::ManagedStructConverter</a></li>
+        
+          <li><a href="../FFI/StructByReference.html">FFI::StructByReference</a></li>
+        
+          <li><a href="../FFI/StructByValue.html">FFI::StructByValue</a></li>
+        
+          <li><a href="../FFI/StructGenerator.html">FFI::StructGenerator</a></li>
+        
+          <li><a href="../FFI/StructGenerator/Field.html">FFI::StructGenerator::Field</a></li>
+        
+          <li><a href="../FFI/StructLayout.html">FFI::StructLayout</a></li>
+        
+          <li><a href="../FFI/StructLayout/Array.html">FFI::StructLayout::Array</a></li>
+        
+          <li><a href="../FFI/StructLayout/Enum.html">FFI::StructLayout::Enum</a></li>
+        
+          <li><a href="../FFI/StructLayout/Field.html">FFI::StructLayout::Field</a></li>
+        
+          <li><a href="../FFI/StructLayout/Function.html">FFI::StructLayout::Function</a></li>
+        
+          <li><a href="../FFI/StructLayout/InnerStruct.html">FFI::StructLayout::InnerStruct</a></li>
+        
+          <li><a href="../FFI/StructLayout/Mapped.html">FFI::StructLayout::Mapped</a></li>
+        
+          <li><a href="../FFI/StructLayout/Number.html">FFI::StructLayout::Number</a></li>
+        
+          <li><a href="../FFI/StructLayout/Pointer.html">FFI::StructLayout::Pointer</a></li>
+        
+          <li><a href="../FFI/StructLayout/String.html">FFI::StructLayout::String</a></li>
+        
+          <li><a href="../FFI/StructLayoutBuilder.html">FFI::StructLayoutBuilder</a></li>
+        
+          <li><a href="../FFI/Type.html">FFI::Type</a></li>
+        
+          <li><a href="../FFI/Type/Builtin.html">FFI::Type::Builtin</a></li>
+        
+          <li><a href="../FFI/TypesGenerator.html">FFI::TypesGenerator</a></li>
+        
+          <li><a href="../FFI/Union.html">FFI::Union</a></li>
+        
+          <li><a href="../FFI/VariadicInvoker.html">FFI::VariadicInvoker</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">FFI::StructLayout</h1>
+
+    <div id="description" class="description">
+      
+<p>This class aims at defining a struct layout.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">initialize(fields, size, align)</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">@param [Array<StructLayout::Field>] fields</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">@param [Numeric] size</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">@param [Numeric] align</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">@return [self]</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">A new StructLayout instance.</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+static VALUE
+struct_layout_initialize(VALUE self, VALUE fields, VALUE size, VALUE align)
+{
+    StructLayout* layout;
+    ffi_type* ltype;
+    int i;
+
+    Data_Get_Struct(self, StructLayout, layout);
+    layout-&gt;fieldCount = (int) RARRAY_LEN(fields);
+    layout-&gt;rbFieldMap = rb_hash_new();
+    layout-&gt;rbFieldNames = rb_ary_new2(layout-&gt;fieldCount);
+    layout-&gt;size = (int) FFI_ALIGN(NUM2INT(size),  NUM2INT(align));
+    layout-&gt;align = NUM2INT(align);
+    layout-&gt;fields = xcalloc(layout-&gt;fieldCount, sizeof(StructField *));
+    layout-&gt;ffiTypes = xcalloc(layout-&gt;fieldCount + 1, sizeof(ffi_type *));
+    layout-&gt;rbFields = rb_ary_new2(layout-&gt;fieldCount);
+    layout-&gt;referenceFieldCount = 0;
+    layout-&gt;base.ffiType-&gt;elements = layout-&gt;ffiTypes;
+    layout-&gt;base.ffiType-&gt;size = layout-&gt;size;
+    layout-&gt;base.ffiType-&gt;alignment = layout-&gt;align;
+
+    ltype = layout-&gt;base.ffiType;
+    for (i = 0; i &lt; (int) layout-&gt;fieldCount; ++i) {
+        VALUE rbField = rb_ary_entry(fields, i);
+        VALUE rbName;
+        StructField* field;
+        ffi_type* ftype;
+
+
+        if (!rb_obj_is_kind_of(rbField, rbffi_StructLayoutFieldClass)) {
+            rb_raise(rb_eTypeError, &quot;wrong type for field %d.&quot;, i);
+        }
+        rbName = rb_funcall2(rbField, rb_intern(&quot;name&quot;), 0, NULL);
+
+        Data_Get_Struct(rbField, StructField, field);
+        layout-&gt;fields[i] = field;
+
+        if (field-&gt;type == NULL || field-&gt;type-&gt;ffiType == NULL) {
+            rb_raise(rb_eRuntimeError, &quot;type of field %d not supported&quot;, i);
+        }
+
+        ftype = field-&gt;type-&gt;ffiType;
+        if (ftype-&gt;size == 0 &amp;&amp; i &lt; ((int) layout-&gt;fieldCount - 1)) {
+            rb_raise(rb_eTypeError, &quot;type of field %d has zero size&quot;, i);
+        }
+
+        if (field-&gt;referenceRequired) {
+            field-&gt;referenceIndex = layout-&gt;referenceFieldCount++;
+        }
+
+
+        layout-&gt;ffiTypes[i] = ftype-&gt;size &gt; 0 ? ftype : NULL;
+        st_insert(layout-&gt;fieldSymbolTable, rbName, rbField);
+        rb_hash_aset(layout-&gt;rbFieldMap, rbName, rbField);
+        rb_ary_push(layout-&gt;rbFields, rbField);
+        rb_ary_push(layout-&gt;rbFieldNames, rbName);
+    }
+
+    if (ltype-&gt;size == 0) {
+        rb_raise(rb_eRuntimeError, &quot;Struct size is zero&quot;);
+    }
+
+    return self;
+}</pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="5B-5D-method" class="method-detail ">
+          <a name="method-i-5B-5D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">[]</span><span
+              class="method-args">(p1)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="5B-5D-source">
+<pre>
+static VALUE
+struct_layout_aref(VALUE self, VALUE field)
+{
+    StructLayout* layout;
+
+    Data_Get_Struct(self, StructLayout, layout);
+
+    return rb_hash_aref(layout-&gt;rbFieldMap, field);
+}</pre>
+            </div><!-- 5B-5D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 5B-5D-method -->
+
+      
+        <div id="__union-21-method" class="method-detail ">
+          <a name="method-i-__union-21"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">[](field)</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">@param [Symbol] field</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">@return [StructLayout::Field]</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">Get a field from the layout.</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="__union-21-source">
+<pre>
+static VALUE
+struct_layout_union_bang(VALUE self) 
+{
+    static const ffi_type *alignment_types[] = { &amp;ffi_type_sint8, &amp;ffi_type_sint16, &amp;ffi_type_sint32, &amp;ffi_type_sint64,
+                                                 &amp;ffi_type_float, &amp;ffi_type_double, &amp;ffi_type_longdouble, NULL };
+    StructLayout* layout;
+    ffi_type *t = NULL;
+    int count, i;
+
+    Data_Get_Struct(self, StructLayout, layout);
+
+    for (i = 0; alignment_types[i] != NULL; ++i) {
+        if (alignment_types[i]-&gt;alignment == layout-&gt;align) {
+            t = (ffi_type *) alignment_types[i];
+            break;
+        }
+    }
+    if (t == NULL) {
+        rb_raise(rb_eRuntimeError, &quot;cannot create libffi union representation for alignment %d&quot;, layout-&gt;align);
+        return Qnil;
+    }
+
+    count = (int) layout-&gt;size / (int) t-&gt;size;
+    xfree(layout-&gt;ffiTypes);
+    layout-&gt;ffiTypes = xcalloc(count + 1, sizeof(ffi_type *));
+    layout-&gt;base.ffiType-&gt;elements = layout-&gt;ffiTypes;
+
+    for (i = 0; i &lt; count; ++i) {
+        layout-&gt;ffiTypes[i] = t;
+    }
+
+    return self;
+}</pre>
+            </div><!-- __union-21-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- __union-21-method -->
+
+      
+        <div id="fields-method" class="method-detail ">
+          <a name="method-i-fields"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">fields</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">@return [Array<StructLayout::Field>]</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">Get fields list.</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="fields-source">
+<pre>
+static VALUE
+struct_layout_fields(VALUE self)
+{
+    StructLayout* layout;
+
+    Data_Get_Struct(self, StructLayout, layout);
+
+    return rb_ary_dup(layout-&gt;rbFields);
+}</pre>
+            </div><!-- fields-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- fields-method -->
+
+      
+        <div id="members-method" class="method-detail ">
+          <a name="method-i-members"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">members</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">@return [Array<Symbol>]</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">Get list of field names.</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="members-source">
+<pre>
+static VALUE
+struct_layout_members(VALUE self)
+{
+    StructLayout* layout;
+
+    Data_Get_Struct(self, StructLayout, layout);
+
+    return rb_ary_dup(layout-&gt;rbFieldNames);
+}</pre>
+            </div><!-- members-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- members-method -->
+
+      
+        <div id="offset_of-method" class="method-detail ">
+          <a name="method-i-offset_of"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">offset_of</span><span
+              class="method-args">(field_name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@return [Numeric] Get the offset of a field.</p>
+            
+
+            
+            <div class="method-source-code" id="offset_of-source">
+<pre>
+<span class="ruby-comment"># File lib/ffi/struct.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">offset_of</span>(<span class="ruby-identifier">field_name</span>)
+  <span class="ruby-keyword">self</span>[<span class="ruby-identifier">field_name</span>].<span class="ruby-identifier">offset</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- offset_of-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- offset_of-method -->
+
+      
+        <div id="offsets-method" class="method-detail ">
+          <a name="method-i-offsets"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">offsets</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@return [<a href="StructLayout/Array.html">Array</a>&lt;Array(Symbol,
+Numeric)&gt; Get an array of tuples (field name, offset of the field).</p>
+            
+
+            
+            <div class="method-source-code" id="offsets-source">
+<pre>
+<span class="ruby-comment"># File lib/ffi/struct.rb, line 43</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">offsets</span>
+  <span class="ruby-identifier">members</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span> [ <span class="ruby-identifier">m</span>, <span class="ruby-keyword">self</span>[<span class="ruby-identifier">m</span>].<span class="ruby-identifier">offset</span> ] }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- offsets-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- offsets-method -->
+
+      
+        <div id="to_a-method" class="method-detail ">
+          <a name="method-i-to_a"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">to_a</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">@return [Array<StructLayout::Field>]</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">Get an array of fields.</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="to_a-source">
+<pre>
+static VALUE
+struct_layout_to_a(VALUE self)
+{
+    StructLayout* layout;
+
+    Data_Get_Struct(self, StructLayout, layout);
+
+    return rb_ary_dup(layout-&gt;rbFields);
+}</pre>
+            </div><!-- to_a-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- to_a-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

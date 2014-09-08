@@ -1,0 +1,1401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>rspec-core-2.99.1 Documentation</title>
+
+  <link type="text/css" media="screen" href="rdoc.css" rel="stylesheet" />
+
+  <script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body class="indexpage">
+
+  
+  <h1>rspec-core-2.99.1 Documentation</h1>
+
+  
+  <p>This is the API documentation for 'rspec-core-2.99.1 Documentation'.</p>
+  
+
+  
+  
+
+  <h2 id="classes">Classes/Modules</h2>
+  <ul>
+    
+    <li class="module"><a href="RSpec.html">RSpec</a></li>
+    
+    <li class="class"><a href="RSpec/CallerFilter.html">RSpec::CallerFilter</a></li>
+    
+    <li class="module"><a href="RSpec/Core.html">RSpec::Core</a></li>
+    
+    <li class="class"><a href="RSpec/Core/BacktraceCleaner.html">RSpec::Core::BacktraceCleaner</a></li>
+    
+    <li class="module"><a href="RSpec/Core/BacktraceFormatter.html">RSpec::Core::BacktraceFormatter</a></li>
+    
+    <li class="class"><a href="RSpec/Core/CommandLine.html">RSpec::Core::CommandLine</a></li>
+    
+    <li class="class"><a href="RSpec/Core/Configuration.html">RSpec::Core::Configuration</a></li>
+    
+    <li class="module"><a href="RSpec/Core/Configuration/ExposeCurrentExample.html">RSpec::Core::Configuration::ExposeCurrentExample</a></li>
+    
+    <li class="class"><a href="RSpec/Core/Configuration/MustBeConfiguredBeforeExampleGroupsError.html">RSpec::Core::Configuration::MustBeConfiguredBeforeExampleGroupsError</a></li>
+    
+    <li class="class"><a href="RSpec/Core/ConfigurationOptions.html">RSpec::Core::ConfigurationOptions</a></li>
+    
+    <li class="module"><a href="RSpec/Core/ConstMissing.html">RSpec::Core::ConstMissing</a></li>
+    
+    <li class="class"><a href="RSpec/Core/DRbCommandLine.html">RSpec::Core::DRbCommandLine</a></li>
+    
+    <li class="module"><a href="RSpec/Core/DSL.html">RSpec::Core::DSL</a></li>
+    
+    <li class="class"><a href="RSpec/Core/DeprecatedMutableArrayProxy.html">RSpec::Core::DeprecatedMutableArrayProxy</a></li>
+    
+    <li class="module"><a href="RSpec/Core/Deprecation.html">RSpec::Core::Deprecation</a></li>
+    
+    <li class="class"><a href="RSpec/Core/DrbOptions.html">RSpec::Core::DrbOptions</a></li>
+    
+    <li class="class"><a href="RSpec/Core/Example.html">RSpec::Core::Example</a></li>
+    
+    <li class="module"><a href="RSpec/Core/Example/Procsy.html">RSpec::Core::Example::Procsy</a></li>
+    
+    <li class="class"><a href="RSpec/Core/ExampleGroup.html">RSpec::Core::ExampleGroup</a></li>
+    
+    <li class="module"><a href="RSpec/Core/Extensions.html">RSpec::Core::Extensions</a></li>
+    
+    <li class="module"><a href="RSpec/Core/Extensions/InstanceEvalWithArgs.html">RSpec::Core::Extensions::InstanceEvalWithArgs</a></li>
+    
+    <li class="module"><a href="RSpec/Core/Extensions/ModuleEvalWithArgs.html">RSpec::Core::Extensions::ModuleEvalWithArgs</a></li>
+    
+    <li class="module"><a href="RSpec/Core/Extensions/Ordered.html">RSpec::Core::Extensions::Ordered</a></li>
+    
+    <li class="module"><a href="RSpec/Core/Extensions/Ordered/ExampleGroups.html">RSpec::Core::Extensions::Ordered::ExampleGroups</a></li>
+    
+    <li class="module"><a href="RSpec/Core/Extensions/Ordered/Examples.html">RSpec::Core::Extensions::Ordered::Examples</a></li>
+    
+    <li class="class"><a href="RSpec/Core/FilterManager.html">RSpec::Core::FilterManager</a></li>
+    
+    <li class="module"><a href="RSpec/Core/FilterManager/BackwardCompatibility.html">RSpec::Core::FilterManager::BackwardCompatibility</a></li>
+    
+    <li class="module"><a href="RSpec/Core/FilterManager/Describable.html">RSpec::Core::FilterManager::Describable</a></li>
+    
+    <li class="module"><a href="RSpec/Core/Formatters.html">RSpec::Core::Formatters</a></li>
+    
+    <li class="class"><a href="RSpec/Core/Formatters/BaseFormatter.html">RSpec::Core::Formatters::BaseFormatter</a></li>
+    
+    <li class="class"><a href="RSpec/Core/Formatters/BaseTextFormatter.html">RSpec::Core::Formatters::BaseTextFormatter</a></li>
+    
+    <li class="module"><a href="RSpec/Core/Formatters/ConsoleCodes.html">RSpec::Core::Formatters::ConsoleCodes</a></li>
+    
+    <li class="class"><a href="RSpec/Core/Formatters/DeprecationFormatter.html">RSpec::Core::Formatters::DeprecationFormatter</a></li>
+    
+    <li class="class"><a href="RSpec/Core/Formatters/DeprecationFormatter/DelayedPrinter.html">RSpec::Core::Formatters::DeprecationFormatter::DelayedPrinter</a></li>
+    
+    <li class="class"><a href="RSpec/Core/Formatters/DeprecationFormatter/FileStream.html">RSpec::Core::Formatters::DeprecationFormatter::FileStream</a></li>
+    
+    <li class="class"><a href="RSpec/Core/Formatters/DeprecationFormatter/ImmediatePrinter.html">RSpec::Core::Formatters::DeprecationFormatter::ImmediatePrinter</a></li>
+    
+    <li class="class"><a href="RSpec/Core/Formatters/DeprecationFormatter/RaiseErrorStream.html">RSpec::Core::Formatters::DeprecationFormatter::RaiseErrorStream</a></li>
+    
+    <li class="class"><a href="RSpec/Core/Formatters/DocumentationFormatter.html">RSpec::Core::Formatters::DocumentationFormatter</a></li>
+    
+    <li class="module"><a href="RSpec/Core/Formatters/Helpers.html">RSpec::Core::Formatters::Helpers</a></li>
+    
+    <li class="class"><a href="RSpec/Core/Formatters/HtmlFormatter.html">RSpec::Core::Formatters::HtmlFormatter</a></li>
+    
+    <li class="class"><a href="RSpec/Core/Formatters/HtmlPrinter.html">RSpec::Core::Formatters::HtmlPrinter</a></li>
+    
+    <li class="class"><a href="RSpec/Core/Formatters/JsonFormatter.html">RSpec::Core::Formatters::JsonFormatter</a></li>
+    
+    <li class="class"><a href="RSpec/Core/Formatters/Loader.html">RSpec::Core::Formatters::Loader</a></li>
+    
+    <li class="class"><a href="RSpec/Core/Formatters/ProgressFormatter.html">RSpec::Core::Formatters::ProgressFormatter</a></li>
+    
+    <li class="class"><a href="RSpec/Core/Formatters/SnippetExtractor.html">RSpec::Core::Formatters::SnippetExtractor</a></li>
+    
+    <li class="class"><a href="RSpec/Core/Formatters/SnippetExtractor/NullConverter.html">RSpec::Core::Formatters::SnippetExtractor::NullConverter</a></li>
+    
+    <li class="class"><a href="RSpec/Core/Formatters/TextMateFormatter.html">RSpec::Core::Formatters::TextMateFormatter</a></li>
+    
+    <li class="module"><a href="RSpec/Core/Hooks.html">RSpec::Core::Hooks</a></li>
+    
+    <li class="class"><a href="RSpec/Core/Hooks/AfterAllHook.html">RSpec::Core::Hooks::AfterAllHook</a></li>
+    
+    <li class="class"><a href="RSpec/Core/Hooks/AfterHook.html">RSpec::Core::Hooks::AfterHook</a></li>
+    
+    <li class="class"><a href="RSpec/Core/Hooks/AroundHook.html">RSpec::Core::Hooks::AroundHook</a></li>
+    
+    <li class="class"><a href="RSpec/Core/Hooks/AroundHookCollection.html">RSpec::Core::Hooks::AroundHookCollection</a></li>
+    
+    <li class="class"><a href="RSpec/Core/Hooks/BeforeHook.html">RSpec::Core::Hooks::BeforeHook</a></li>
+    
+    <li class="class"><a href="RSpec/Core/Hooks/GroupHookCollection.html">RSpec::Core::Hooks::GroupHookCollection</a></li>
+    
+    <li class="class"><a href="RSpec/Core/Hooks/Hook.html">RSpec::Core::Hooks::Hook</a></li>
+    
+    <li class="class"><a href="RSpec/Core/Hooks/HookCollection.html">RSpec::Core::Hooks::HookCollection</a></li>
+    
+    <li class="module"><a href="RSpec/Core/Hooks/HookCollectionAliases.html">RSpec::Core::Hooks::HookCollectionAliases</a></li>
+    
+    <li class="module"><a href="RSpec/Core/Hooks/RegistersGlobals.html">RSpec::Core::Hooks::RegistersGlobals</a></li>
+    
+    <li class="module"><a href="RSpec/Core/MemoizedHelpers.html">RSpec::Core::MemoizedHelpers</a></li>
+    
+    <li class="class"><a href="RSpec/Core/MemoizedHelpers/AllHookMemoizedHash.html">RSpec::Core::MemoizedHelpers::AllHookMemoizedHash</a></li>
+    
+    <li class="class"><a href="RSpec/Core/MemoizedHelpers/AllHookMemoizedHash/After.html">RSpec::Core::MemoizedHelpers::AllHookMemoizedHash::After</a></li>
+    
+    <li class="class"><a href="RSpec/Core/MemoizedHelpers/AllHookMemoizedHash/Before.html">RSpec::Core::MemoizedHelpers::AllHookMemoizedHash::Before</a></li>
+    
+    <li class="module"><a href="RSpec/Core/MemoizedHelpers/ClassMethods.html">RSpec::Core::MemoizedHelpers::ClassMethods</a></li>
+    
+    <li class="class"><a href="RSpec/Core/Metadata.html">RSpec::Core::Metadata</a></li>
+    
+    <li class="module"><a href="RSpec/Core/Metadata/ExampleMetadataHash.html">RSpec::Core::Metadata::ExampleMetadataHash</a></li>
+    
+    <li class="module"><a href="RSpec/Core/Metadata/GroupMetadataHash.html">RSpec::Core::Metadata::GroupMetadataHash</a></li>
+    
+    <li class="module"><a href="RSpec/Core/Metadata/MetadataHash.html">RSpec::Core::Metadata::MetadataHash</a></li>
+    
+    <li class="module"><a href="RSpec/Core/MetadataHashBuilder.html">RSpec::Core::MetadataHashBuilder</a></li>
+    
+    <li class="module"><a href="RSpec/Core/MetadataHashBuilder/Common.html">RSpec::Core::MetadataHashBuilder::Common</a></li>
+    
+    <li class="module"><a href="RSpec/Core/MetadataHashBuilder/WithConfigWarning.html">RSpec::Core::MetadataHashBuilder::WithConfigWarning</a></li>
+    
+    <li class="module"><a href="RSpec/Core/MetadataHashBuilder/WithDeprecationWarning.html">RSpec::Core::MetadataHashBuilder::WithDeprecationWarning</a></li>
+    
+    <li class="module"><a href="RSpec/Core/MinitestAssertionsAdapter.html">RSpec::Core::MinitestAssertionsAdapter</a></li>
+    
+    <li class="module"><a href="RSpec/Core/MockFrameworkAdapter.html">RSpec::Core::MockFrameworkAdapter</a></li>
+    
+    <li class="class"><a href="RSpec/Core/Parser.html">RSpec::Core::Parser</a></li>
+    
+    <li class="module"><a href="RSpec/Core/Pending.html">RSpec::Core::Pending</a></li>
+    
+    <li class="class"><a href="RSpec/Core/Pending/PendingExampleFixedError.html">RSpec::Core::Pending::PendingExampleFixedError</a></li>
+    
+    <li class="class"><a href="RSpec/Core/Pending/SkipDeclaredInExample.html">RSpec::Core::Pending::SkipDeclaredInExample</a></li>
+    
+    <li class="class"><a href="RSpec/Core/ProjectInitializer.html">RSpec::Core::ProjectInitializer</a></li>
+    
+    <li class="class"><a href="RSpec/Core/RakeTask.html">RSpec::Core::RakeTask</a></li>
+    
+    <li class="class"><a href="RSpec/Core/Reporter.html">RSpec::Core::Reporter</a></li>
+    
+    <li class="module"><a href="RSpec/Core/RubyProject.html">RSpec::Core::RubyProject</a></li>
+    
+    <li class="class"><a href="RSpec/Core/Runner.html">RSpec::Core::Runner</a></li>
+    
+    <li class="module"><a href="RSpec/Core/SharedContext.html">RSpec::Core::SharedContext</a></li>
+    
+    <li class="module"><a href="RSpec/Core/SharedExampleGroup.html">RSpec::Core::SharedExampleGroup</a></li>
+    
+    <li class="class"><a href="RSpec/Core/SharedExampleGroup/Collection.html">RSpec::Core::SharedExampleGroup::Collection</a></li>
+    
+    <li class="class"><a href="RSpec/Core/SharedExampleGroup/Registry.html">RSpec::Core::SharedExampleGroup::Registry</a></li>
+    
+    <li class="module"><a href="RSpec/Core/SharedExampleGroup/TopLevelDSL.html">RSpec::Core::SharedExampleGroup::TopLevelDSL</a></li>
+    
+    <li class="module"><a href="RSpec/Core/TestUnitAssertionsAdapter.html">RSpec::Core::TestUnitAssertionsAdapter</a></li>
+    
+    <li class="class"><a href="RSpec/Core/Time.html">RSpec::Core::Time</a></li>
+    
+    <li class="module"><a href="RSpec/Core/Version.html">RSpec::Core::Version</a></li>
+    
+    <li class="class"><a href="RSpec/Core/World.html">RSpec::Core::World</a></li>
+    
+    <li class="module"><a href="RSpec/Rake.html">RSpec::Rake</a></li>
+    
+    <li class="module"><a href="RSpec/Runner.html">RSpec::Runner</a></li>
+    
+    <li class="class"><a href="Autotest.html">Autotest</a></li>
+    
+    <li class="class"><a href="Autotest/Rspec2.html">Autotest::Rspec2</a></li>
+    
+    <li class="module"><a href="Kernel.html">Kernel</a></li>
+    
+    <li class="class"><a href="Object.html">Object</a></li>
+    
+  </ul>
+
+  <h2 id="methods">Methods</h2>
+  <ul>
+    
+      <li><a href="RSpec/Core/RubyProject.html#method-c-add_dir_to_load_path">::add_dir_to_load_path &mdash; RSpec::Core::RubyProject</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-c-add_setting">::add_setting &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/RubyProject.html#method-c-add_to_load_path">::add_to_load_path &mdash; RSpec::Core::RubyProject</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-alias_example_to">::alias_example_to &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-alias_it_behaves_like_to">::alias_it_behaves_like_to &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-all_apply-3F">::all_apply? &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-any_apply-3F">::any_apply? &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/RubyProject.html#method-c-ascend_until">::ascend_until &mdash; RSpec::Core::RubyProject</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-assign_before_all_ivars">::assign_before_all_ivars &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/Runner.html#method-c-autorun">::autorun &mdash; RSpec::Core::Runner</a></li>
+    
+      <li><a href="RSpec/Core/Runner.html#method-c-autorun_disabled-3F">::autorun_disabled? &mdash; RSpec::Core::Runner</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-before_all_ivars">::before_all_ivars &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-children">::children &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec.html#method-c-clear_remaining_example_groups">::clear_remaining_example_groups &mdash; RSpec</a></li>
+    
+      <li><a href="RSpec.html#method-c-configuration">::configuration &mdash; RSpec</a></li>
+    
+      <li><a href="RSpec/Core/MockFrameworkAdapter.html#method-c-configuration">::configuration &mdash; RSpec::Core::MockFrameworkAdapter</a></li>
+    
+      <li><a href="RSpec.html#method-c-configuration-3D">::configuration= &mdash; RSpec</a></li>
+    
+      <li><a href="RSpec.html#method-c-configure">::configure &mdash; RSpec</a></li>
+    
+      <li><a href="RSpec/Runner.html#method-c-configure">::configure &mdash; RSpec::Runner</a></li>
+    
+      <li><a href="RSpec/Rake.html#method-c-const_missing">::const_missing &mdash; RSpec::Rake</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseTextFormatter.html#method-c-const_missing">::const_missing &mdash; RSpec::Core::Formatters::BaseTextFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Pending.html#method-c-const_missing">::const_missing &mdash; RSpec::Core::Pending</a></li>
+    
+      <li><a href="RSpec/Core/FilterManager.html#method-c-const_missing">::const_missing &mdash; RSpec::Core::FilterManager</a></li>
+    
+      <li><a href="RSpec/Core.html#method-c-const_missing">::const_missing &mdash; RSpec::Core</a></li>
+    
+      <li><a href="RSpec.html#method-c-const_missing">::const_missing &mdash; RSpec</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-context">::context &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/SharedExampleGroup/Registry.html#method-c-created_from_caller">::created_from_caller &mdash; RSpec::Core::SharedExampleGroup::Registry</a></li>
+    
+      <li><a href="RSpec.html#method-c-current_example">::current_example &mdash; RSpec</a></li>
+    
+      <li><a href="RSpec.html#method-c-current_example-3D">::current_example= &mdash; RSpec</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-declaration_line_numbers">::declaration_line_numbers &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/FilterManager.html#method-c-default_exclusions">::default_exclusions &mdash; RSpec::Core::FilterManager</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-c-define_aliases">::define_aliases &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-define_example_method">::define_example_method &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-define_nested_shared_group_method">::define_nested_shared_group_method &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-c-define_predicate_for">::define_predicate_for &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-c-define_reader">::define_reader &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-delegate_to_metadata">::delegate_to_metadata &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/Example.html#method-c-delegate_to_metadata">::delegate_to_metadata &mdash; RSpec::Core::Example</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-c-deprecate_alias_key">::deprecate_alias_key &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-descendant_filtered_examples">::descendant_filtered_examples &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-descendants">::descendants &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-describe">::describe &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-describes">::describes &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-description">::description &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/RubyProject.html#method-c-determine_root">::determine_root &mdash; RSpec::Core::RubyProject</a></li>
+    
+      <li><a href="RSpec/Core/Runner.html#method-c-disable_autorun-21">::disable_autorun! &mdash; RSpec::Core::Runner</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-display_name">::display_name &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-ensure_example_groups_are_configured">::ensure_example_groups_are_configured &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-examples">::examples &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/Example/Procsy.html#method-c-extended">::extended &mdash; RSpec::Core::Example::Procsy</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-fail_fast-3F">::fail_fast? &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-fail_filtered_examples">::fail_filtered_examples &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-filtered_examples">::filtered_examples &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-find_and_eval_shared">::find_and_eval_shared &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/RubyProject.html#method-c-find_first_parent_containing">::find_first_parent_containing &mdash; RSpec::Core::RubyProject</a></li>
+    
+      <li><a href="RSpec/CallerFilter.html#method-c-first_non_rspec_line">::first_non_rspec_line &mdash; RSpec::CallerFilter</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-focused">::focused &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/MockFrameworkAdapter.html#method-c-framework_name">::framework_name &mdash; RSpec::Core::MockFrameworkAdapter</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-include_context">::include_context &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-include_examples">::include_examples &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/Hooks/HookCollectionAliases.html#method-c-included">::included &mdash; RSpec::Core::Hooks::HookCollectionAliases</a></li>
+    
+      <li><a href="RSpec/Core/SharedExampleGroup/Registry.html#method-c-included">::included &mdash; RSpec::Core::SharedExampleGroup::Registry</a></li>
+    
+      <li><a href="RSpec/Core/Runner.html#method-c-installed_at_exit-3F">::installed_at_exit? &mdash; RSpec::Core::Runner</a></li>
+    
+      <li><a href="RSpec.html#method-c-internal_reset">::internal_reset &mdash; RSpec</a></li>
+    
+      <li><a href="RSpec/Core/MemoizedHelpers/AllHookMemoizedHash.html#method-c-isolate_for_all_hook">::isolate_for_all_hook &mdash; RSpec::Core::MemoizedHelpers::AllHookMemoizedHash</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-metadata">::metadata &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="Autotest/Rspec2.html#method-c-new">::new &mdash; Autotest::Rspec2</a></li>
+    
+      <li><a href="RSpec/Core/ConfigurationOptions.html#method-c-new">::new &mdash; RSpec::Core::ConfigurationOptions</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-c-new">::new &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/HtmlPrinter.html#method-c-new">::new &mdash; RSpec::Core::Formatters::HtmlPrinter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/DocumentationFormatter.html#method-c-new">::new &mdash; RSpec::Core::Formatters::DocumentationFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/DeprecationFormatter/FileStream.html#method-c-new">::new &mdash; RSpec::Core::Formatters::DeprecationFormatter::FileStream</a></li>
+    
+      <li><a href="RSpec/Core/Pending/SkipDeclaredInExample.html#method-c-new">::new &mdash; RSpec::Core::Pending::SkipDeclaredInExample</a></li>
+    
+      <li><a href="RSpec/Core/ProjectInitializer.html#method-c-new">::new &mdash; RSpec::Core::ProjectInitializer</a></li>
+    
+      <li><a href="RSpec/Core/Hooks/Hook.html#method-c-new">::new &mdash; RSpec::Core::Hooks::Hook</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/DeprecationFormatter/DelayedPrinter.html#method-c-new">::new &mdash; RSpec::Core::Formatters::DeprecationFormatter::DelayedPrinter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/DeprecationFormatter/ImmediatePrinter.html#method-c-new">::new &mdash; RSpec::Core::Formatters::DeprecationFormatter::ImmediatePrinter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/JsonFormatter.html#method-c-new">::new &mdash; RSpec::Core::Formatters::JsonFormatter</a></li>
+    
+      <li><a href="RSpec/Core/DeprecatedMutableArrayProxy.html#method-c-new">::new &mdash; RSpec::Core::DeprecatedMutableArrayProxy</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/Loader.html#method-c-new">::new &mdash; RSpec::Core::Formatters::Loader</a></li>
+    
+      <li><a href="RSpec/Core/RakeTask.html#method-c-new">::new &mdash; RSpec::Core::RakeTask</a></li>
+    
+      <li><a href="RSpec/Core/Example.html#method-c-new">::new &mdash; RSpec::Core::Example</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseFormatter.html#method-c-new">::new &mdash; RSpec::Core::Formatters::BaseFormatter</a></li>
+    
+      <li><a href="RSpec/Core/DRbCommandLine.html#method-c-new">::new &mdash; RSpec::Core::DRbCommandLine</a></li>
+    
+      <li><a href="RSpec/Core/CommandLine.html#method-c-new">::new &mdash; RSpec::Core::CommandLine</a></li>
+    
+      <li><a href="RSpec/Core/MemoizedHelpers/AllHookMemoizedHash.html#method-c-new">::new &mdash; RSpec::Core::MemoizedHelpers::AllHookMemoizedHash</a></li>
+    
+      <li><a href="RSpec/Core/SharedExampleGroup/Collection.html#method-c-new">::new &mdash; RSpec::Core::SharedExampleGroup::Collection</a></li>
+    
+      <li><a href="RSpec/Core/Runner.html#method-c-new">::new &mdash; RSpec::Core::Runner</a></li>
+    
+      <li><a href="RSpec/Core/BacktraceCleaner.html#method-c-new">::new &mdash; RSpec::Core::BacktraceCleaner</a></li>
+    
+      <li><a href="RSpec/Core/FilterManager.html#method-c-new">::new &mdash; RSpec::Core::FilterManager</a></li>
+    
+      <li><a href="RSpec/Core/Metadata.html#method-c-new">::new &mdash; RSpec::Core::Metadata</a></li>
+    
+      <li><a href="RSpec/Core/World.html#method-c-new">::new &mdash; RSpec::Core::World</a></li>
+    
+      <li><a href="RSpec/Core/Reporter.html#method-c-new">::new &mdash; RSpec::Core::Reporter</a></li>
+    
+      <li><a href="RSpec/Core/DrbOptions.html#method-c-new">::new &mdash; RSpec::Core::DrbOptions</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/DeprecationFormatter.html#method-c-new">::new &mdash; RSpec::Core::Formatters::DeprecationFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/HtmlFormatter.html#method-c-new">::new &mdash; RSpec::Core::Formatters::HtmlFormatter</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-parent_groups">::parent_groups &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/Parser.html#method-c-parse">::parse &mdash; RSpec::Core::Parser</a></li>
+    
+      <li><a href="RSpec/Core/Parser.html#method-c-parse-21">::parse! &mdash; RSpec::Core::Parser</a></li>
+    
+      <li><a href="RSpec/Core.html#method-c-path_to_executable">::path_to_executable &mdash; RSpec::Core</a></li>
+    
+      <li><a href="RSpec/Core/Example.html#method-c-procsy">::procsy &mdash; RSpec::Core::Example</a></li>
+    
+      <li><a href="RSpec/Core/SharedContext.html#method-c-record">::record &mdash; RSpec::Core::SharedContext</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-register">::register &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/SharedExampleGroup.html#method-c-registry">::registry &mdash; RSpec::Core::SharedExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/Metadata.html#method-c-relative_path">::relative_path &mdash; RSpec::Core::Metadata</a></li>
+    
+      <li><a href="RSpec.html#method-c-reset">::reset &mdash; RSpec</a></li>
+    
+      <li><a href="RSpec/Core/RubyProject.html#method-c-root">::root &mdash; RSpec::Core::RubyProject</a></li>
+    
+      <li><a href="RSpec/Core/Runner.html#method-c-run">::run &mdash; RSpec::Core::Runner</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-run">::run &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-run_after_all_hooks">::run_after_all_hooks &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-run_after_each_hooks">::run_after_each_hooks &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-run_around_each_hooks">::run_around_each_hooks &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-run_before_all_hooks">::run_before_all_hooks &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-run_before_each_hooks">::run_before_each_hooks &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-run_examples">::run_examples &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/Runner.html#method-c-running_in_drb-3F">::running_in_drb? &mdash; RSpec::Core::Runner</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-set_it_up">::set_it_up &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-set_ivars">::set_ivars &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/FilterManager.html#method-c-standalone_filters">::standalone_filters &mdash; RSpec::Core::FilterManager</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-store_before_all_ivars">::store_before_all_ivars &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-subclass">::subclass &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-superclass_metadata">::superclass_metadata &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-top_level-3F">::top_level? &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-top_level_description">::top_level_description &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/Runner.html#method-c-trap_interrupt">::trap_interrupt &mdash; RSpec::Core::Runner</a></li>
+    
+      <li><a href="RSpec.html#method-c-user_has_called_reset-3F">::user_has_called_reset? &mdash; RSpec</a></li>
+    
+      <li><a href="RSpec.html#method-c-wants_to_quit">::wants_to_quit &mdash; RSpec</a></li>
+    
+      <li><a href="RSpec.html#method-c-wants_to_quit-3D">::wants_to_quit= &mdash; RSpec</a></li>
+    
+      <li><a href="RSpec/Core/Runner.html#method-c-warn_about_calling_reset">::warn_about_calling_reset &mdash; RSpec::Core::Runner</a></li>
+    
+      <li><a href="RSpec.html#method-c-warn_about_calling_reset">::warn_about_calling_reset &mdash; RSpec</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-warn_unexpected_args">::warn_unexpected_args &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec.html#method-c-windows_os-3F">::windows_os? &mdash; RSpec</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-c-world">::world &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec.html#method-c-world">::world &mdash; RSpec</a></li>
+    
+      <li><a href="RSpec.html#method-c-world-3D">::world= &mdash; RSpec</a></li>
+    
+      <li><a href="RSpec/Core/SharedExampleGroup/Collection.html#method-i-5B-5D">#[] &mdash; RSpec::Core::SharedExampleGroup::Collection</a></li>
+    
+      <li><a href="RSpec/Core/Metadata/MetadataHash.html#method-i-5B-5D">#[] &mdash; RSpec::Core::Metadata::MetadataHash</a></li>
+    
+      <li><a href="RSpec/Core/MemoizedHelpers/AllHookMemoizedHash.html#method-i-5B-5D-3D">#[]= &mdash; RSpec::Core::MemoizedHelpers::AllHookMemoizedHash</a></li>
+    
+      <li><a href="RSpec/Core/SharedContext.html#method-i-__shared_context_recordings">#__shared_context_recordings &mdash; RSpec::Core::SharedContext</a></li>
+    
+      <li><a href="RSpec/Core/FilterManager/BackwardCompatibility.html#method-i-_warn_deprecated_key">#_warn_deprecated_key &mdash; RSpec::Core::FilterManager::BackwardCompatibility</a></li>
+    
+      <li><a href="RSpec/Core/FilterManager/BackwardCompatibility.html#method-i-_warn_deprecated_keys">#_warn_deprecated_keys &mdash; RSpec::Core::FilterManager::BackwardCompatibility</a></li>
+    
+      <li><a href="RSpec/Core/Reporter.html#method-i-abort">#abort &mdash; RSpec::Core::Reporter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/Loader.html#method-i-add">#add &mdash; RSpec::Core::Formatters::Loader</a></li>
+    
+      <li><a href="RSpec/Core/SharedExampleGroup/Registry.html#method-i-add_const">#add_const &mdash; RSpec::Core::SharedExampleGroup::Registry</a></li>
+    
+      <li><a href="RSpec/Core/DrbOptions.html#method-i-add_failure_exit_code">#add_failure_exit_code &mdash; RSpec::Core::DrbOptions</a></li>
+    
+      <li><a href="RSpec/Core/DrbOptions.html#method-i-add_filter">#add_filter &mdash; RSpec::Core::DrbOptions</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-add_formatter">#add_formatter &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/DrbOptions.html#method-i-add_formatters">#add_formatters &mdash; RSpec::Core::DrbOptions</a></li>
+    
+      <li><a href="RSpec/Core/DrbOptions.html#method-i-add_full_description">#add_full_description &mdash; RSpec::Core::DrbOptions</a></li>
+    
+      <li><a href="RSpec/Core/SharedExampleGroup/Registry.html#method-i-add_group">#add_group &mdash; RSpec::Core::SharedExampleGroup::Registry</a></li>
+    
+      <li><a href="RSpec/Core/DrbOptions.html#method-i-add_libs">#add_libs &mdash; RSpec::Core::DrbOptions</a></li>
+    
+      <li><a href="RSpec/Core/DrbOptions.html#method-i-add_line_numbers">#add_line_numbers &mdash; RSpec::Core::DrbOptions</a></li>
+    
+      <li><a href="RSpec/Core/FilterManager.html#method-i-add_location">#add_location &mdash; RSpec::Core::FilterManager</a></li>
+    
+      <li><a href="RSpec/Core/DrbOptions.html#method-i-add_requires">#add_requires &mdash; RSpec::Core::DrbOptions</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-add_setting">#add_setting &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Hooks.html#method-i-after">#after &mdash; RSpec::Core::Hooks</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-alias_example_to">#alias_example_to &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-alias_it_behaves_like_to">#alias_it_behaves_like_to &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-alias_it_should_behave_like_to">#alias_it_should_behave_like_to &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Metadata.html#method-i-all_apply-3F">#all_apply? &mdash; RSpec::Core::Metadata</a></li>
+    
+      <li><a href="RSpec/Core/Example.html#method-i-all_apply-3F">#all_apply? &mdash; RSpec::Core::Example</a></li>
+    
+      <li><a href="RSpec/Core/World.html#method-i-announce_exclusion_filter">#announce_exclusion_filter &mdash; RSpec::Core::World</a></li>
+    
+      <li><a href="RSpec/Core/World.html#method-i-announce_filters">#announce_filters &mdash; RSpec::Core::World</a></li>
+    
+      <li><a href="RSpec/Core/World.html#method-i-announce_inclusion_filter">#announce_inclusion_filter &mdash; RSpec::Core::World</a></li>
+    
+      <li><a href="RSpec/Core/Metadata.html#method-i-any_apply-3F">#any_apply? &mdash; RSpec::Core::Metadata</a></li>
+    
+      <li><a href="RSpec/Core/Example.html#method-i-any_apply-3F">#any_apply? &mdash; RSpec::Core::Example</a></li>
+    
+      <li><a href="RSpec/Core/Hooks.html#method-i-append_after">#append_after &mdash; RSpec::Core::Hooks</a></li>
+    
+      <li><a href="RSpec/Core/Hooks.html#method-i-append_before">#append_before &mdash; RSpec::Core::Hooks</a></li>
+    
+      <li><a href="RSpec/Core/Hooks.html#method-i-around">#around &mdash; RSpec::Core::Hooks</a></li>
+    
+      <li><a href="RSpec/Core/Example.html#method-i-around_each_hooks">#around_each_hooks &mdash; RSpec::Core::Example</a></li>
+    
+      <li><a href="RSpec/Core/Hooks.html#method-i-around_each_hooks_for">#around_each_hooks_for &mdash; RSpec::Core::Hooks</a></li>
+    
+      <li><a href="RSpec/Core/MemoizedHelpers/AllHookMemoizedHash/After.html#method-i-article">#article &mdash; RSpec::Core::MemoizedHelpers::AllHookMemoizedHash::After</a></li>
+    
+      <li><a href="RSpec/Core/MemoizedHelpers/AllHookMemoizedHash/Before.html#method-i-article">#article &mdash; RSpec::Core::MemoizedHelpers::AllHookMemoizedHash::Before</a></li>
+    
+      <li><a href="RSpec/Core/MinitestAssertionsAdapter.html#method-i-assertions">#assertions &mdash; RSpec::Core::MinitestAssertionsAdapter</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-backtrace_clean_patterns">#backtrace_clean_patterns &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-backtrace_clean_patterns-3D">#backtrace_clean_patterns= &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-backtrace_cleaner">#backtrace_cleaner &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-backtrace_exclusion_patterns">#backtrace_exclusion_patterns &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-backtrace_exclusion_patterns-3D">#backtrace_exclusion_patterns= &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-backtrace_inclusion_patterns">#backtrace_inclusion_patterns &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-backtrace_inclusion_patterns-3D">#backtrace_inclusion_patterns= &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/TextMateFormatter.html#method-i-backtrace_line">#backtrace_line &mdash; RSpec::Core::Formatters::TextMateFormatter</a></li>
+    
+      <li><a href="RSpec/Core/BacktraceFormatter.html#method-i-backtrace_line">#backtrace_line &mdash; RSpec::Core::BacktraceFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Hooks.html#method-i-before">#before &mdash; RSpec::Core::Hooks</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseTextFormatter.html#method-i-blue">#blue &mdash; RSpec::Core::Formatters::BaseTextFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseTextFormatter.html#method-i-bold">#bold &mdash; RSpec::Core::Formatters::BaseTextFormatter</a></li>
+    
+      <li><a href="RSpec/Core/MetadataHashBuilder/Common.html#method-i-build_metadata_hash_from">#build_metadata_hash_from &mdash; RSpec::Core::MetadataHashBuilder::Common</a></li>
+    
+      <li><a href="RSpec/Core/SharedExampleGroup/Registry.html#method-i-clear">#clear &mdash; RSpec::Core::SharedExampleGroup::Registry</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/JsonFormatter.html#method-i-close">#close &mdash; RSpec::Core::Formatters::JsonFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseFormatter.html#method-i-close">#close &mdash; RSpec::Core::Formatters::BaseFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseTextFormatter.html#method-i-close">#close &mdash; RSpec::Core::Formatters::BaseTextFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseTextFormatter.html#method-i-color">#color &mdash; RSpec::Core::Formatters::BaseTextFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-color">#color &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-color-3D">#color= &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-color-3F">#color? &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseTextFormatter.html#method-i-color_code_for">#color_code_for &mdash; RSpec::Core::Formatters::BaseTextFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-color_enabled">#color_enabled &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-color_enabled-3D">#color_enabled= &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-color_enabled-3F">#color_enabled? &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseFormatter.html#method-i-color_enabled-3F">#color_enabled? &mdash; RSpec::Core::Formatters::BaseFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseTextFormatter.html#method-i-colorise_summary">#colorise_summary &mdash; RSpec::Core::Formatters::BaseTextFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseTextFormatter.html#method-i-colorize">#colorize &mdash; RSpec::Core::Formatters::BaseTextFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseFormatter.html#method-i-configuration">#configuration &mdash; RSpec::Core::Formatters::BaseFormatter</a></li>
+    
+      <li><a href="RSpec/Core/ConfigurationOptions.html#method-i-configure">#configure &mdash; RSpec::Core::ConfigurationOptions</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-configure_expectation_framework">#configure_expectation_framework &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Metadata.html#method-i-configure_for_example">#configure_for_example &mdash; RSpec::Core::Metadata</a></li>
+    
+      <li><a href="RSpec/Core/World.html#method-i-configure_group">#configure_group &mdash; RSpec::Core::World</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-configure_group">#configure_group &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-configure_mock_framework">#configure_mock_framework &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/ConsoleCodes.html#method-i-console_code_for">#console_code_for &mdash; RSpec::Core::Formatters::ConsoleCodes</a></li>
+    
+      <li><a href="Autotest/Rspec2.html#method-i-consolidate_failures">#consolidate_failures &mdash; Autotest::Rspec2</a></li>
+    
+      <li><a href="RSpec/Core/ConstMissing.html#method-i-const_missing">#const_missing &mdash; RSpec::Core::ConstMissing</a></li>
+    
+      <li><a href="RSpec/Core/Metadata/GroupMetadataHash.html#method-i-container_stack">#container_stack &mdash; RSpec::Core::Metadata::GroupMetadataHash</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/SnippetExtractor/NullConverter.html#method-i-convert">#convert &mdash; RSpec::Core::Formatters::SnippetExtractor::NullConverter</a></li>
+    
+      <li><a href="RSpec/Core/Parser.html#method-i-convert_deprecated_args">#convert_deprecated_args &mdash; RSpec::Core::Parser</a></li>
+    
+      <li><a href="RSpec/Core/ProjectInitializer.html#method-i-create_dot_rspec_file">#create_dot_rspec_file &mdash; RSpec::Core::ProjectInitializer</a></li>
+    
+      <li><a href="RSpec/Core/ProjectInitializer.html#method-i-create_spec_helper_file">#create_spec_helper_file &mdash; RSpec::Core::ProjectInitializer</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/DocumentationFormatter.html#method-i-current_indentation">#current_indentation &mdash; RSpec::Core::Formatters::DocumentationFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseTextFormatter.html#method-i-cyan">#cyan &mdash; RSpec::Core::Formatters::BaseTextFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-debug-3D">#debug= &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-debug-3F">#debug? &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="Kernel.html#method-i-debugger">#debugger &mdash; Kernel</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseTextFormatter.html#method-i-default_color">#default_color &mdash; RSpec::Core::Formatters::BaseTextFormatter</a></li>
+    
+      <li><a href="RSpec/Core/ProjectInitializer.html#method-i-delete_if_confirmed">#delete_if_confirmed &mdash; RSpec::Core::ProjectInitializer</a></li>
+    
+      <li><a href="RSpec/Core/Deprecation.html#method-i-deprecate">#deprecate &mdash; RSpec::Core::Deprecation</a></li>
+    
+      <li><a href="RSpec/Core/Reporter.html#method-i-deprecation">#deprecation &mdash; RSpec::Core::Reporter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/DeprecationFormatter.html#method-i-deprecation">#deprecation &mdash; RSpec::Core::Formatters::DeprecationFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/DeprecationFormatter.html#method-i-deprecation_message_for">#deprecation_message_for &mdash; RSpec::Core::Formatters::DeprecationFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-deprecation_stream-3D">#deprecation_stream= &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/DeprecationFormatter/ImmediatePrinter.html#method-i-deprecation_summary">#deprecation_summary &mdash; RSpec::Core::Formatters::DeprecationFormatter::ImmediatePrinter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/DeprecationFormatter.html#method-i-deprecation_summary">#deprecation_summary &mdash; RSpec::Core::Formatters::DeprecationFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/DeprecationFormatter/DelayedPrinter.html#method-i-deprecation_summary">#deprecation_summary &mdash; RSpec::Core::Formatters::DeprecationFormatter::DelayedPrinter</a></li>
+    
+      <li><a href="RSpec/Core/DSL.html#method-i-describe">#describe &mdash; RSpec::Core::DSL</a></li>
+    
+      <li><a href="RSpec/Core/Metadata/GroupMetadataHash.html#method-i-described_class">#described_class &mdash; RSpec::Core::Metadata::GroupMetadataHash</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-i-described_class">#described_class &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/Metadata/ExampleMetadataHash.html#method-i-described_class">#described_class &mdash; RSpec::Core::Metadata::ExampleMetadataHash</a></li>
+    
+      <li><a href="RSpec/Core/Metadata/GroupMetadataHash.html#method-i-described_class_for_rspec_2">#described_class_for_rspec_2 &mdash; RSpec::Core::Metadata::GroupMetadataHash</a></li>
+    
+      <li><a href="RSpec/Core/Metadata/GroupMetadataHash.html#method-i-described_class_for_rspec_3">#described_class_for_rspec_3 &mdash; RSpec::Core::Metadata::GroupMetadataHash</a></li>
+    
+      <li><a href="RSpec/Core/Example.html#method-i-description">#description &mdash; RSpec::Core::Example</a></li>
+    
+      <li><a href="RSpec/Core/FilterManager/Describable.html#method-i-description">#description &mdash; RSpec::Core::FilterManager::Describable</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseTextFormatter.html#method-i-detail_color">#detail_color &mdash; RSpec::Core::Formatters::BaseTextFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Hooks/AroundHook.html#method-i-display_name">#display_name &mdash; RSpec::Core::Hooks::AroundHook</a></li>
+    
+      <li><a href="RSpec/Core/Hooks/BeforeHook.html#method-i-display_name">#display_name &mdash; RSpec::Core::Hooks::BeforeHook</a></li>
+    
+      <li><a href="RSpec/Core/Hooks/AfterAllHook.html#method-i-display_name">#display_name &mdash; RSpec::Core::Hooks::AfterAllHook</a></li>
+    
+      <li><a href="RSpec/Core/Hooks/AfterHook.html#method-i-display_name">#display_name &mdash; RSpec::Core::Hooks::AfterHook</a></li>
+    
+      <li><a href="RSpec/Core/ConfigurationOptions.html#method-i-drb_argv">#drb_argv &mdash; RSpec::Core::ConfigurationOptions</a></li>
+    
+      <li><a href="RSpec/Core/DRbCommandLine.html#method-i-drb_port">#drb_port &mdash; RSpec::Core::DRbCommandLine</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseTextFormatter.html#method-i-dump_commands_to_rerun_failed_examples">#dump_commands_to_rerun_failed_examples &mdash; RSpec::Core::Formatters::BaseTextFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/HtmlFormatter.html#method-i-dump_failures">#dump_failures &mdash; RSpec::Core::Formatters::HtmlFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseTextFormatter.html#method-i-dump_failures">#dump_failures &mdash; RSpec::Core::Formatters::BaseTextFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseFormatter.html#method-i-dump_failures">#dump_failures &mdash; RSpec::Core::Formatters::BaseFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/HtmlFormatter.html#method-i-dump_pending">#dump_pending &mdash; RSpec::Core::Formatters::HtmlFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseTextFormatter.html#method-i-dump_pending">#dump_pending &mdash; RSpec::Core::Formatters::BaseTextFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseFormatter.html#method-i-dump_pending">#dump_pending &mdash; RSpec::Core::Formatters::BaseFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseTextFormatter.html#method-i-dump_profile">#dump_profile &mdash; RSpec::Core::Formatters::BaseTextFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseTextFormatter.html#method-i-dump_profile_slowest_example_groups">#dump_profile_slowest_example_groups &mdash; RSpec::Core::Formatters::BaseTextFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseTextFormatter.html#method-i-dump_profile_slowest_examples">#dump_profile_slowest_examples &mdash; RSpec::Core::Formatters::BaseTextFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseTextFormatter.html#method-i-dump_summary">#dump_summary &mdash; RSpec::Core::Formatters::BaseTextFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/HtmlFormatter.html#method-i-dump_summary">#dump_summary &mdash; RSpec::Core::Formatters::HtmlFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseFormatter.html#method-i-dump_summary">#dump_summary &mdash; RSpec::Core::Formatters::BaseFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/JsonFormatter.html#method-i-dump_summary">#dump_summary &mdash; RSpec::Core::Formatters::JsonFormatter</a></li>
+    
+      <li><a href="RSpec/Core/FilterManager.html#method-i-empty-3F">#empty? &mdash; RSpec::Core::FilterManager</a></li>
+    
+      <li><a href="RSpec/Core/FilterManager/Describable.html#method-i-empty_without_conditional_filters-3F">#empty_without_conditional_filters? &mdash; RSpec::Core::FilterManager::Describable</a></li>
+    
+      <li><a href="RSpec/Core/World.html#method-i-everything_filtered_message">#everything_filtered_message &mdash; RSpec::Core::World</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-i-example">#example &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-i-example-3D">#example= &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/World.html#method-i-example_count">#example_count &mdash; RSpec::Core::World</a></li>
+    
+      <li><a href="RSpec/Core/Reporter.html#method-i-example_failed">#example_failed &mdash; RSpec::Core::Reporter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/HtmlFormatter.html#method-i-example_failed">#example_failed &mdash; RSpec::Core::Formatters::HtmlFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseFormatter.html#method-i-example_failed">#example_failed &mdash; RSpec::Core::Formatters::BaseFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/DocumentationFormatter.html#method-i-example_failed">#example_failed &mdash; RSpec::Core::Formatters::DocumentationFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/ProgressFormatter.html#method-i-example_failed">#example_failed &mdash; RSpec::Core::Formatters::ProgressFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Example.html#method-i-example_group">#example_group &mdash; RSpec::Core::Example</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/DocumentationFormatter.html#method-i-example_group_chain">#example_group_chain &mdash; RSpec::Core::Formatters::DocumentationFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseFormatter.html#method-i-example_group_finished">#example_group_finished &mdash; RSpec::Core::Formatters::BaseFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/DocumentationFormatter.html#method-i-example_group_finished">#example_group_finished &mdash; RSpec::Core::Formatters::DocumentationFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Reporter.html#method-i-example_group_finished">#example_group_finished &mdash; RSpec::Core::Reporter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/HtmlFormatter.html#method-i-example_group_number">#example_group_number &mdash; RSpec::Core::Formatters::HtmlFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Reporter.html#method-i-example_group_started">#example_group_started &mdash; RSpec::Core::Reporter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/HtmlFormatter.html#method-i-example_group_started">#example_group_started &mdash; RSpec::Core::Formatters::HtmlFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/DocumentationFormatter.html#method-i-example_group_started">#example_group_started &mdash; RSpec::Core::Formatters::DocumentationFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseFormatter.html#method-i-example_group_started">#example_group_started &mdash; RSpec::Core::Formatters::BaseFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/HtmlFormatter.html#method-i-example_number">#example_number &mdash; RSpec::Core::Formatters::HtmlFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-example_ordering_block">#example_ordering_block &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/DocumentationFormatter.html#method-i-example_passed">#example_passed &mdash; RSpec::Core::Formatters::DocumentationFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/HtmlFormatter.html#method-i-example_passed">#example_passed &mdash; RSpec::Core::Formatters::HtmlFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseFormatter.html#method-i-example_passed">#example_passed &mdash; RSpec::Core::Formatters::BaseFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/ProgressFormatter.html#method-i-example_passed">#example_passed &mdash; RSpec::Core::Formatters::ProgressFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Reporter.html#method-i-example_passed">#example_passed &mdash; RSpec::Core::Reporter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseFormatter.html#method-i-example_pending">#example_pending &mdash; RSpec::Core::Formatters::BaseFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/DocumentationFormatter.html#method-i-example_pending">#example_pending &mdash; RSpec::Core::Formatters::DocumentationFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/ProgressFormatter.html#method-i-example_pending">#example_pending &mdash; RSpec::Core::Formatters::ProgressFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Reporter.html#method-i-example_pending">#example_pending &mdash; RSpec::Core::Reporter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/HtmlFormatter.html#method-i-example_pending">#example_pending &mdash; RSpec::Core::Formatters::HtmlFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Reporter.html#method-i-example_started">#example_started &mdash; RSpec::Core::Reporter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseFormatter.html#method-i-example_started">#example_started &mdash; RSpec::Core::Formatters::BaseFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/HtmlFormatter.html#method-i-example_started">#example_started &mdash; RSpec::Core::Formatters::HtmlFormatter</a></li>
+    
+      <li><a href="RSpec/Core/FilterManager.html#method-i-exclude">#exclude &mdash; RSpec::Core::FilterManager</a></li>
+    
+      <li><a href="RSpec/Core/FilterManager.html#method-i-exclude-21">#exclude! &mdash; RSpec::Core::FilterManager</a></li>
+    
+      <li><a href="RSpec/Core/FilterManager.html#method-i-exclude-3F">#exclude? &mdash; RSpec::Core::FilterManager</a></li>
+    
+      <li><a href="RSpec/Core/BacktraceCleaner.html#method-i-exclude-3F">#exclude? &mdash; RSpec::Core::BacktraceCleaner</a></li>
+    
+      <li><a href="RSpec/Core/FilterManager.html#method-i-exclude_only">#exclude_only &mdash; RSpec::Core::FilterManager</a></li>
+    
+      <li><a href="RSpec/Core/FilterManager.html#method-i-exclude_with_low_priority">#exclude_with_low_priority &mdash; RSpec::Core::FilterManager</a></li>
+    
+      <li><a href="RSpec/Core/World.html#method-i-exclusion_filter">#exclusion_filter &mdash; RSpec::Core::World</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-exclusion_filter">#exclusion_filter &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-exclusion_filter-3D">#exclusion_filter= &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-expect_with">#expect_with &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-expectation_framework-3D">#expectation_framework= &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-expectation_frameworks">#expectation_frameworks &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-expose_current_running_example_as">#expose_current_running_example_as &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-extend">#extend &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/HtmlFormatter.html#method-i-extra_failure_content">#extra_failure_content &mdash; RSpec::Core::Formatters::HtmlFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/TextMateFormatter.html#method-i-extra_failure_content">#extra_failure_content &mdash; RSpec::Core::Formatters::TextMateFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseFormatter.html#method-i-fail_fast-3F">#fail_fast? &mdash; RSpec::Core::Formatters::BaseFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Example.html#method-i-fail_with_exception">#fail_with_exception &mdash; RSpec::Core::Example</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseTextFormatter.html#method-i-failure_color">#failure_color &mdash; RSpec::Core::Formatters::BaseTextFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/DocumentationFormatter.html#method-i-failure_output">#failure_output &mdash; RSpec::Core::Formatters::DocumentationFormatter</a></li>
+    
+      <li><a href="RSpec/Core/MemoizedHelpers/AllHookMemoizedHash.html#method-i-fetch">#fetch &mdash; RSpec::Core::MemoizedHelpers::AllHookMemoizedHash</a></li>
+    
+      <li><a href="RSpec/Core/Metadata/MetadataHash.html#method-i-fetch">#fetch &mdash; RSpec::Core::Metadata::MetadataHash</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-filename_pattern">#filename_pattern &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-filename_pattern-3D">#filename_pattern= &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-files_or_directories_to_run-3D">#files_or_directories_to_run= &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-filter">#filter &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-filter-3D">#filter= &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Metadata.html#method-i-filter_applies-3F">#filter_applies? &mdash; RSpec::Core::Metadata</a></li>
+    
+      <li><a href="RSpec/Core/Metadata.html#method-i-filter_applies_to_any_value-3F">#filter_applies_to_any_value? &mdash; RSpec::Core::Metadata</a></li>
+    
+      <li><a href="RSpec/Core/World.html#method-i-filter_manager">#filter_manager &mdash; RSpec::Core::World</a></li>
+    
+      <li><a href="RSpec/Core/ConfigurationOptions.html#method-i-filter_manager">#filter_manager &mdash; RSpec::Core::ConfigurationOptions</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-filter_run">#filter_run &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-filter_run_excluding">#filter_run_excluding &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-filter_run_including">#filter_run_including &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Metadata.html#method-i-filters_apply-3F">#filters_apply? &mdash; RSpec::Core::Metadata</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseFormatter.html#method-i-find_failed_line">#find_failed_line &mdash; RSpec::Core::Formatters::BaseFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Reporter.html#method-i-finish">#finish &mdash; RSpec::Core::Reporter</a></li>
+    
+      <li><a href="RSpec/Core/Metadata/GroupMetadataHash.html#method-i-first_description_arg">#first_description_arg &mdash; RSpec::Core::Metadata::GroupMetadataHash</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseTextFormatter.html#method-i-fixed_color">#fixed_color &mdash; RSpec::Core::Formatters::BaseTextFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/HtmlPrinter.html#method-i-flush">#flush &mdash; RSpec::Core::Formatters::HtmlPrinter</a></li>
+    
+      <li><a href="RSpec/Core/Hooks/HookCollection.html#method-i-for">#for &mdash; RSpec::Core::Hooks::HookCollection</a></li>
+    
+      <li><a href="RSpec/Core/Hooks/GroupHookCollection.html#method-i-for">#for &mdash; RSpec::Core::Hooks::GroupHookCollection</a></li>
+    
+      <li><a href="RSpec/Core/Hooks/AroundHookCollection.html#method-i-for">#for &mdash; RSpec::Core::Hooks::AroundHookCollection</a></li>
+    
+      <li><a href="RSpec/Core/Metadata.html#method-i-for_example">#for_example &mdash; RSpec::Core::Metadata</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-force">#force &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/BacktraceFormatter.html#method-i-format_backtrace">#format_backtrace &mdash; RSpec::Core::BacktraceFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseFormatter.html#method-i-format_backtrace">#format_backtrace &mdash; RSpec::Core::Formatters::BaseFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/TextMateFormatter.html#method-i-format_backtrace_line_for_textmate">#format_backtrace_line_for_textmate &mdash; RSpec::Core::Formatters::TextMateFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-format_docstrings">#format_docstrings &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-format_docstrings_block">#format_docstrings_block &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/Helpers.html#method-i-format_duration">#format_duration &mdash; RSpec::Core::Formatters::Helpers</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/Helpers.html#method-i-format_seconds">#format_seconds &mdash; RSpec::Core::Formatters::Helpers</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-formatter-3D">#formatter= &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-formatter_loader">#formatter_loader &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-formatters">#formatters &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/BacktraceCleaner.html#method-i-full_backtrace-3D">#full_backtrace= &mdash; RSpec::Core::BacktraceCleaner</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-full_backtrace-3D">#full_backtrace= &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/BacktraceCleaner.html#method-i-full_backtrace-3F">#full_backtrace? &mdash; RSpec::Core::BacktraceCleaner</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-full_backtrace-3F">#full_backtrace? &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Metadata/ExampleMetadataHash.html#method-i-full_description">#full_description &mdash; RSpec::Core::Metadata::ExampleMetadataHash</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-full_description">#full_description &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Metadata/GroupMetadataHash.html#method-i-full_description">#full_description &mdash; RSpec::Core::Metadata::GroupMetadataHash</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-full_description-3D">#full_description= &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/RakeTask.html#method-i-gemfile-3D">#gemfile= &mdash; RSpec::Core::RakeTask</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseTextFormatter.html#method-i-green">#green &mdash; RSpec::Core::Formatters::BaseTextFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-group_ordering_block">#group_ordering_block &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/MemoizedHelpers/AllHookMemoizedHash/After.html#method-i-hook_expression">#hook_expression &mdash; RSpec::Core::MemoizedHelpers::AllHookMemoizedHash::After</a></li>
+    
+      <li><a href="RSpec/Core/MemoizedHelpers/AllHookMemoizedHash/Before.html#method-i-hook_expression">#hook_expression &mdash; RSpec::Core::MemoizedHelpers::AllHookMemoizedHash::Before</a></li>
+    
+      <li><a href="RSpec/Core/MemoizedHelpers/AllHookMemoizedHash/Before.html#method-i-hook_intention">#hook_intention &mdash; RSpec::Core::MemoizedHelpers::AllHookMemoizedHash::Before</a></li>
+    
+      <li><a href="RSpec/Core/MemoizedHelpers/AllHookMemoizedHash/After.html#method-i-hook_intention">#hook_intention &mdash; RSpec::Core::MemoizedHelpers::AllHookMemoizedHash::After</a></li>
+    
+      <li><a href="RSpec/Core/Hooks.html#method-i-hooks">#hooks &mdash; RSpec::Core::Hooks</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-include">#include &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/FilterManager.html#method-i-include">#include &mdash; RSpec::Core::FilterManager</a></li>
+    
+      <li><a href="RSpec/Core/FilterManager.html#method-i-include-21">#include! &mdash; RSpec::Core::FilterManager</a></li>
+    
+      <li><a href="RSpec/Core/FilterManager.html#method-i-include-3F">#include? &mdash; RSpec::Core::FilterManager</a></li>
+    
+      <li><a href="RSpec/Core/FilterManager.html#method-i-include_only">#include_only &mdash; RSpec::Core::FilterManager</a></li>
+    
+      <li><a href="RSpec/Core/FilterManager.html#method-i-include_with_low_priority">#include_with_low_priority &mdash; RSpec::Core::FilterManager</a></li>
+    
+      <li><a href="RSpec/Core/SharedContext.html#method-i-included">#included &mdash; RSpec::Core::SharedContext</a></li>
+    
+      <li><a href="RSpec/Core/World.html#method-i-inclusion_filter">#inclusion_filter &mdash; RSpec::Core::World</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-inclusion_filter">#inclusion_filter &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-inclusion_filter-3D">#inclusion_filter= &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Extensions/InstanceEvalWithArgs.html#method-i-instance_eval_with_args">#instance_eval_with_args &mdash; RSpec::Core::Extensions::InstanceEvalWithArgs</a></li>
+    
+      <li><a href="RSpec/Core/Example.html#method-i-instance_eval_with_args">#instance_eval_with_args &mdash; RSpec::Core::Example</a></li>
+    
+      <li><a href="RSpec/Core/Example.html#method-i-instance_eval_with_rescue">#instance_eval_with_rescue &mdash; RSpec::Core::Example</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-i-instance_eval_with_rescue">#instance_eval_with_rescue &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/MemoizedHelpers.html#method-i-is_expected">#is_expected &mdash; RSpec::Core::MemoizedHelpers</a></li>
+    
+      <li><a href="RSpec/Core/MemoizedHelpers/ClassMethods.html#method-i-its">#its &mdash; RSpec::Core::MemoizedHelpers::ClassMethods</a></li>
+    
+      <li><a href="RSpec/Core/MemoizedHelpers/ClassMethods.html#method-i-let">#let &mdash; RSpec::Core::MemoizedHelpers::ClassMethods</a></li>
+    
+      <li><a href="RSpec/Core/MemoizedHelpers/ClassMethods.html#method-i-let-21">#let! &mdash; RSpec::Core::MemoizedHelpers::ClassMethods</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-libs-3D">#libs= &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Metadata.html#method-i-line_number_filter_applies-3F">#line_number_filter_applies? &mdash; RSpec::Core::Metadata</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-line_numbers">#line_numbers &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-line_numbers-3D">#line_numbers= &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/SnippetExtractor.html#method-i-lines_around">#lines_around &mdash; RSpec::Core::Formatters::SnippetExtractor</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-load_spec_files">#load_spec_files &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Metadata.html#method-i-location_filter_applies-3F">#location_filter_applies? &mdash; RSpec::Core::Metadata</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseTextFormatter.html#method-i-long_padding">#long_padding &mdash; RSpec::Core::Formatters::BaseTextFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseTextFormatter.html#method-i-magenta">#magenta &mdash; RSpec::Core::Formatters::BaseTextFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/HtmlPrinter.html#method-i-make_example_group_header_red">#make_example_group_header_red &mdash; RSpec::Core::Formatters::HtmlPrinter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/HtmlPrinter.html#method-i-make_example_group_header_yellow">#make_example_group_header_yellow &mdash; RSpec::Core::Formatters::HtmlPrinter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/HtmlPrinter.html#method-i-make_header_red">#make_header_red &mdash; RSpec::Core::Formatters::HtmlPrinter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/HtmlPrinter.html#method-i-make_header_yellow">#make_header_yellow &mdash; RSpec::Core::Formatters::HtmlPrinter</a></li>
+    
+      <li><a href="Autotest/Rspec2.html#method-i-make_test_cmd">#make_test_cmd &mdash; Autotest::Rspec2</a></li>
+    
+      <li><a href="RSpec/Core/FilterManager/BackwardCompatibility.html#method-i-merge">#merge &mdash; RSpec::Core::FilterManager::BackwardCompatibility</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/HtmlFormatter.html#method-i-message">#message &mdash; RSpec::Core::Formatters::HtmlFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/JsonFormatter.html#method-i-message">#message &mdash; RSpec::Core::Formatters::JsonFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseTextFormatter.html#method-i-message">#message &mdash; RSpec::Core::Formatters::BaseTextFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseFormatter.html#method-i-message">#message &mdash; RSpec::Core::Formatters::BaseFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Reporter.html#method-i-message">#message &mdash; RSpec::Core::Reporter</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-mock_framework">#mock_framework &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-mock_framework-3D">#mock_framework= &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-mock_with">#mock_with &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Extensions/ModuleEvalWithArgs.html#method-i-module_eval_with_args">#module_eval_with_args &mdash; RSpec::Core::Extensions::ModuleEvalWithArgs</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/HtmlPrinter.html#method-i-move_progress">#move_progress &mdash; RSpec::Core::Formatters::HtmlPrinter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseFormatter.html#method-i-mute_profile_output-3F">#mute_profile_output? &mdash; RSpec::Core::Formatters::BaseFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/DocumentationFormatter.html#method-i-next_failure_index">#next_failure_index &mdash; RSpec::Core::Formatters::DocumentationFormatter</a></li>
+    
+      <li><a href="Autotest/Rspec2.html#method-i-normalize">#normalize &mdash; Autotest::Rspec2</a></li>
+    
+      <li><a href="RSpec/Core/Reporter.html#method-i-notify">#notify &mdash; RSpec::Core::Reporter</a></li>
+    
+      <li><a href="RSpec/Core/Example.html#method-i-options">#options &mdash; RSpec::Core::Example</a></li>
+    
+      <li><a href="RSpec/Core/DrbOptions.html#method-i-options">#options &mdash; RSpec::Core::DrbOptions</a></li>
+    
+      <li><a href="RSpec/Core/Hooks/Hook.html#method-i-options_apply-3F">#options_apply? &mdash; RSpec::Core::Hooks::Hook</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-order">#order &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-order-3D">#order= &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-order_examples">#order_examples &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-order_groups">#order_groups &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-order_groups_and_examples">#order_groups_and_examples &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Extensions/Ordered/Examples.html#method-i-ordered">#ordered &mdash; RSpec::Core::Extensions::Ordered::Examples</a></li>
+    
+      <li><a href="RSpec/Core/Extensions/Ordered/ExampleGroups.html#method-i-ordered">#ordered &mdash; RSpec::Core::Extensions::Ordered::ExampleGroups</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-out">#out &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-out-3D">#out= &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-output">#output &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-output-3D">#output= &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-output_stream-3D">#output_stream= &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseFormatter.html#method-i-output_supports_sync">#output_supports_sync &mdash; RSpec::Core::Formatters::BaseFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Parser.html#method-i-parse">#parse &mdash; RSpec::Core::Parser</a></li>
+    
+      <li><a href="RSpec/Core/Parser.html#method-i-parse-21">#parse! &mdash; RSpec::Core::Parser</a></li>
+    
+      <li><a href="RSpec/Core/ConfigurationOptions.html#method-i-parse_options">#parse_options &mdash; RSpec::Core::ConfigurationOptions</a></li>
+    
+      <li><a href="RSpec/Core/Parser.html#method-i-parser">#parser &mdash; RSpec::Core::Parser</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/DocumentationFormatter.html#method-i-passed_output">#passed_output &mdash; RSpec::Core::Formatters::DocumentationFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-pattern-3D">#pattern= &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Pending.html#method-i-pending">#pending &mdash; RSpec::Core::Pending</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseTextFormatter.html#method-i-pending_color">#pending_color &mdash; RSpec::Core::Formatters::BaseTextFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Pending.html#method-i-pending_no_warning">#pending_no_warning &mdash; RSpec::Core::Pending</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/DocumentationFormatter.html#method-i-pending_output">#pending_output &mdash; RSpec::Core::Formatters::DocumentationFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/HtmlFormatter.html#method-i-percent_done">#percent_done &mdash; RSpec::Core::Formatters::HtmlFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/Helpers.html#method-i-pluralize">#pluralize &mdash; RSpec::Core::Formatters::Helpers</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/SnippetExtractor.html#method-i-post_process">#post_process &mdash; RSpec::Core::Formatters::SnippetExtractor</a></li>
+    
+      <li><a href="RSpec/Core/Parser.html#method-i-pre_parse">#pre_parse &mdash; RSpec::Core::Parser</a></li>
+    
+      <li><a href="RSpec/Core/World.html#method-i-preceding_declaration_line">#preceding_declaration_line &mdash; RSpec::Core::World</a></li>
+    
+      <li><a href="RSpec/Core/Hooks.html#method-i-prepend_after">#prepend_after &mdash; RSpec::Core::Hooks</a></li>
+    
+      <li><a href="RSpec/Core/Hooks.html#method-i-prepend_before">#prepend_before &mdash; RSpec::Core::Hooks</a></li>
+    
+      <li><a href="RSpec/Core/MemoizedHelpers/AllHookMemoizedHash.html#method-i-preserve_accessed_lets">#preserve_accessed_lets &mdash; RSpec::Core::MemoizedHelpers::AllHookMemoizedHash</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/DeprecationFormatter/DelayedPrinter.html#method-i-print_deferred_deprecation_warnings">#print_deferred_deprecation_warnings &mdash; RSpec::Core::Formatters::DeprecationFormatter::DelayedPrinter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/DeprecationFormatter/DelayedPrinter.html#method-i-print_deprecation_message">#print_deprecation_message &mdash; RSpec::Core::Formatters::DeprecationFormatter::DelayedPrinter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/DeprecationFormatter/ImmediatePrinter.html#method-i-print_deprecation_message">#print_deprecation_message &mdash; RSpec::Core::Formatters::DeprecationFormatter::ImmediatePrinter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/HtmlPrinter.html#method-i-print_example_failed">#print_example_failed &mdash; RSpec::Core::Formatters::HtmlPrinter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/HtmlPrinter.html#method-i-print_example_group_end">#print_example_group_end &mdash; RSpec::Core::Formatters::HtmlPrinter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/HtmlPrinter.html#method-i-print_example_group_start">#print_example_group_start &mdash; RSpec::Core::Formatters::HtmlPrinter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/HtmlPrinter.html#method-i-print_example_passed">#print_example_passed &mdash; RSpec::Core::Formatters::HtmlPrinter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/HtmlPrinter.html#method-i-print_example_pending">#print_example_pending &mdash; RSpec::Core::Formatters::HtmlPrinter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/HtmlPrinter.html#method-i-print_html_start">#print_html_start &mdash; RSpec::Core::Formatters::HtmlPrinter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/HtmlPrinter.html#method-i-print_summary">#print_summary &mdash; RSpec::Core::Formatters::HtmlPrinter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/DeprecationFormatter.html#method-i-printer">#printer &mdash; RSpec::Core::Formatters::DeprecationFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Metadata.html#method-i-process">#process &mdash; RSpec::Core::Metadata</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-profile_examples">#profile_examples &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseFormatter.html#method-i-profile_examples-3F">#profile_examples? &mdash; RSpec::Core::Formatters::BaseFormatter</a></li>
+    
+      <li><a href="RSpec/Core/FilterManager.html#method-i-prune">#prune &mdash; RSpec::Core::FilterManager</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/DeprecationFormatter/RaiseErrorStream.html#method-i-puts">#puts &mdash; RSpec::Core::Formatters::DeprecationFormatter::RaiseErrorStream</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/DeprecationFormatter/FileStream.html#method-i-puts">#puts &mdash; RSpec::Core::Formatters::DeprecationFormatter::FileStream</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-raise_errors_for_deprecations-21">#raise_errors_for_deprecations! &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-randomize-3F">#randomize? &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/RakeTask.html#method-i-rcov">#rcov &mdash; RSpec::Core::RakeTask</a></li>
+    
+      <li><a href="RSpec/Core/RakeTask.html#method-i-rcov-3D">#rcov= &mdash; RSpec::Core::RakeTask</a></li>
+    
+      <li><a href="RSpec/Core/RakeTask.html#method-i-rcov_opts">#rcov_opts &mdash; RSpec::Core::RakeTask</a></li>
+    
+      <li><a href="RSpec/Core/RakeTask.html#method-i-rcov_opts-3D">#rcov_opts= &mdash; RSpec::Core::RakeTask</a></li>
+    
+      <li><a href="RSpec/Core/RakeTask.html#method-i-rcov_path">#rcov_path &mdash; RSpec::Core::RakeTask</a></li>
+    
+      <li><a href="RSpec/Core/RakeTask.html#method-i-rcov_path-3D">#rcov_path= &mdash; RSpec::Core::RakeTask</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseFormatter.html#method-i-read_failed_line">#read_failed_line &mdash; RSpec::Core::Formatters::BaseFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseTextFormatter.html#method-i-red">#red &mdash; RSpec::Core::Formatters::BaseTextFormatter</a></li>
+    
+      <li><a href="RSpec/Core/World.html#method-i-register">#register &mdash; RSpec::Core::World</a></li>
+    
+      <li><a href="RSpec/Core/Hooks/RegistersGlobals.html#method-i-register_globals">#register_globals &mdash; RSpec::Core::Hooks::RegistersGlobals</a></li>
+    
+      <li><a href="RSpec/Core/Reporter.html#method-i-register_listener">#register_listener &mdash; RSpec::Core::Reporter</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-register_ordering">#register_ordering &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Reporter.html#method-i-registered_listeners">#registered_listeners &mdash; RSpec::Core::Reporter</a></li>
+    
+      <li><a href="RSpec/Core/Reporter.html#method-i-report">#report &mdash; RSpec::Core::Reporter</a></li>
+    
+      <li><a href="RSpec/Core/ProjectInitializer.html#method-i-report_creating">#report_creating &mdash; RSpec::Core::ProjectInitializer</a></li>
+    
+      <li><a href="RSpec/Core/ProjectInitializer.html#method-i-report_exists">#report_exists &mdash; RSpec::Core::ProjectInitializer</a></li>
+    
+      <li><a href="RSpec/Core/World.html#method-i-reporter">#reporter &mdash; RSpec::Core::World</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-reporter">#reporter &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-requires-3D">#requires= &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-reset">#reset &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/World.html#method-i-reset">#reset &mdash; RSpec::Core::World</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseFormatter.html#method-i-restore_sync_output">#restore_sync_output &mdash; RSpec::Core::Formatters::BaseFormatter</a></li>
+    
+      <li><a href="RSpec/Core/FilterManager/BackwardCompatibility.html#method-i-reverse_merge">#reverse_merge &mdash; RSpec::Core::FilterManager::BackwardCompatibility</a></li>
+    
+      <li><a href="RSpec/Core/FilterManager/Describable.html#method-i-rules_empty-3F">#rules_empty? &mdash; RSpec::Core::FilterManager::Describable</a></li>
+    
+      <li><a href="RSpec/Core/Hooks/HookCollection.html#method-i-run">#run &mdash; RSpec::Core::Hooks::HookCollection</a></li>
+    
+      <li><a href="RSpec/Core/Hooks/AroundHookCollection.html#method-i-run">#run &mdash; RSpec::Core::Hooks::AroundHookCollection</a></li>
+    
+      <li><a href="RSpec/Core/ProjectInitializer.html#method-i-run">#run &mdash; RSpec::Core::ProjectInitializer</a></li>
+    
+      <li><a href="RSpec/Core/Runner.html#method-i-run">#run &mdash; RSpec::Core::Runner</a></li>
+    
+      <li><a href="RSpec/Core/Example.html#method-i-run">#run &mdash; RSpec::Core::Example</a></li>
+    
+      <li><a href="RSpec/Core/DRbCommandLine.html#method-i-run">#run &mdash; RSpec::Core::DRbCommandLine</a></li>
+    
+      <li><a href="RSpec/Core/Hooks/AfterAllHook.html#method-i-run">#run &mdash; RSpec::Core::Hooks::AfterAllHook</a></li>
+    
+      <li><a href="RSpec/Core/Hooks/AfterHook.html#method-i-run">#run &mdash; RSpec::Core::Hooks::AfterHook</a></li>
+    
+      <li><a href="RSpec/Core/Hooks/BeforeHook.html#method-i-run">#run &mdash; RSpec::Core::Hooks::BeforeHook</a></li>
+    
+      <li><a href="RSpec/Core/Hooks/GroupHookCollection.html#method-i-run">#run &mdash; RSpec::Core::Hooks::GroupHookCollection</a></li>
+    
+      <li><a href="RSpec/Core/Hooks.html#method-i-run_hook">#run_hook &mdash; RSpec::Core::Hooks</a></li>
+    
+      <li><a href="RSpec/Core/RakeTask.html#method-i-run_task">#run_task &mdash; RSpec::Core::RakeTask</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-i-running_example">#running_example &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-safe_extend">#safe_extend &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-safe_include">#safe_include &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseFormatter.html#method-i-seed">#seed &mdash; RSpec::Core::Formatters::BaseFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseTextFormatter.html#method-i-seed">#seed &mdash; RSpec::Core::Formatters::BaseTextFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-seed-3D">#seed= &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Example.html#method-i-set_exception">#set_exception &mdash; RSpec::Core::Example</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/Loader.html#method-i-setup_default">#setup_default &mdash; RSpec::Core::Formatters::Loader</a></li>
+    
+      <li><a href="RSpec/Core/RakeTask.html#method-i-setup_ivars">#setup_ivars &mdash; RSpec::Core::RakeTask</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-setup_load_path_and_require">#setup_load_path_and_require &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/MockFrameworkAdapter.html#method-i-setup_mocks_for_rspec">#setup_mocks_for_rspec &mdash; RSpec::Core::MockFrameworkAdapter</a></li>
+    
+      <li><a href="Autotest/Rspec2.html#method-i-setup_rspec_project_mappings">#setup_rspec_project_mappings &mdash; Autotest::Rspec2</a></li>
+    
+      <li><a href="RSpec/Core/SharedExampleGroup.html#method-i-share_as">#share_as &mdash; RSpec::Core::SharedExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/SharedExampleGroup/TopLevelDSL.html#method-i-share_as">#share_as &mdash; RSpec::Core::SharedExampleGroup::TopLevelDSL</a></li>
+    
+      <li><a href="RSpec/Core/SharedExampleGroup.html#method-i-share_examples_for">#share_examples_for &mdash; RSpec::Core::SharedExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/SharedExampleGroup/TopLevelDSL.html#method-i-share_examples_for">#share_examples_for &mdash; RSpec::Core::SharedExampleGroup::TopLevelDSL</a></li>
+    
+      <li><a href="RSpec/Core/SharedExampleGroup.html#method-i-shared_context">#shared_context &mdash; RSpec::Core::SharedExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/SharedExampleGroup/TopLevelDSL.html#method-i-shared_context">#shared_context &mdash; RSpec::Core::SharedExampleGroup::TopLevelDSL</a></li>
+    
+      <li><a href="RSpec/Core/SharedExampleGroup.html#method-i-shared_example_groups">#shared_example_groups &mdash; RSpec::Core::SharedExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/SharedExampleGroup/Registry.html#method-i-shared_example_groups">#shared_example_groups &mdash; RSpec::Core::SharedExampleGroup::Registry</a></li>
+    
+      <li><a href="RSpec/Core/SharedExampleGroup/TopLevelDSL.html#method-i-shared_example_groups">#shared_example_groups &mdash; RSpec::Core::SharedExampleGroup::TopLevelDSL</a></li>
+    
+      <li><a href="RSpec/Core/SharedExampleGroup/Registry.html#method-i-shared_example_groups_for">#shared_example_groups_for &mdash; RSpec::Core::SharedExampleGroup::Registry</a></li>
+    
+      <li><a href="RSpec/Core/SharedExampleGroup/TopLevelDSL.html#method-i-shared_examples">#shared_examples &mdash; RSpec::Core::SharedExampleGroup::TopLevelDSL</a></li>
+    
+      <li><a href="RSpec/Core/SharedExampleGroup.html#method-i-shared_examples">#shared_examples &mdash; RSpec::Core::SharedExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/SharedExampleGroup.html#method-i-shared_examples_for">#shared_examples_for &mdash; RSpec::Core::SharedExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/SharedExampleGroup/TopLevelDSL.html#method-i-shared_examples_for">#shared_examples_for &mdash; RSpec::Core::SharedExampleGroup::TopLevelDSL</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseTextFormatter.html#method-i-short_padding">#short_padding &mdash; RSpec::Core::Formatters::BaseTextFormatter</a></li>
+    
+      <li><a href="RSpec/Core/MemoizedHelpers.html#method-i-should">#should &mdash; RSpec::Core::MemoizedHelpers</a></li>
+    
+      <li><a href="RSpec/Core/MemoizedHelpers/ClassMethods.html#method-i-should">#should &mdash; RSpec::Core::MemoizedHelpers::ClassMethods</a></li>
+    
+      <li><a href="RSpec/Core/MemoizedHelpers/ClassMethods.html#method-i-should_not">#should_not &mdash; RSpec::Core::MemoizedHelpers::ClassMethods</a></li>
+    
+      <li><a href="RSpec/Core/MemoizedHelpers.html#method-i-should_not">#should_not &mdash; RSpec::Core::MemoizedHelpers</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-show_failures_in_pending_blocks">#show_failures_in_pending_blocks &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-show_failures_in_pending_blocks-3D">#show_failures_in_pending_blocks= &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-show_failures_in_pending_blocks-3F">#show_failures_in_pending_blocks? &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Pending.html#method-i-skip">#skip &mdash; RSpec::Core::Pending</a></li>
+    
+      <li><a href="RSpec/Core/RakeTask.html#method-i-skip_bundler-3D">#skip_bundler= &mdash; RSpec::Core::RakeTask</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/SnippetExtractor.html#method-i-snippet">#snippet &mdash; RSpec::Core::Formatters::SnippetExtractor</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/SnippetExtractor.html#method-i-snippet_for">#snippet_for &mdash; RSpec::Core::Formatters::SnippetExtractor</a></li>
+    
+      <li><a href="RSpec/Core/RakeTask.html#method-i-spec_opts-3D">#spec_opts= &mdash; RSpec::Core::RakeTask</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/HtmlFormatter.html#method-i-start">#start &mdash; RSpec::Core::Formatters::HtmlFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseFormatter.html#method-i-start">#start &mdash; RSpec::Core::Formatters::BaseFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/DeprecationFormatter.html#method-i-start">#start &mdash; RSpec::Core::Formatters::DeprecationFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Reporter.html#method-i-start">#start &mdash; RSpec::Core::Reporter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/HtmlFormatter.html#method-i-start_dump">#start_dump &mdash; RSpec::Core::Formatters::HtmlFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/ProgressFormatter.html#method-i-start_dump">#start_dump &mdash; RSpec::Core::Formatters::ProgressFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseFormatter.html#method-i-start_dump">#start_dump &mdash; RSpec::Core::Formatters::BaseFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseFormatter.html#method-i-start_sync_output">#start_sync_output &mdash; RSpec::Core::Formatters::BaseFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/DeprecationFormatter/DelayedPrinter.html#method-i-stash_deprecation_message">#stash_deprecation_message &mdash; RSpec::Core::Formatters::DeprecationFormatter::DelayedPrinter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseFormatter.html#method-i-stop">#stop &mdash; RSpec::Core::Formatters::BaseFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/JsonFormatter.html#method-i-stop">#stop &mdash; RSpec::Core::Formatters::JsonFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Reporter.html#method-i-stop">#stop &mdash; RSpec::Core::Reporter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/Helpers.html#method-i-strip_trailing_zeroes">#strip_trailing_zeroes &mdash; RSpec::Core::Formatters::Helpers</a></li>
+    
+      <li><a href="RSpec/Core/MemoizedHelpers/ClassMethods.html#method-i-subject">#subject &mdash; RSpec::Core::MemoizedHelpers::ClassMethods</a></li>
+    
+      <li><a href="RSpec/Core/MemoizedHelpers.html#method-i-subject">#subject &mdash; RSpec::Core::MemoizedHelpers</a></li>
+    
+      <li><a href="RSpec/Core/MemoizedHelpers/ClassMethods.html#method-i-subject-21">#subject! &mdash; RSpec::Core::MemoizedHelpers::ClassMethods</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseTextFormatter.html#method-i-success_color">#success_color &mdash; RSpec::Core::Formatters::BaseTextFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/DeprecationFormatter/FileStream.html#method-i-summarize">#summarize &mdash; RSpec::Core::Formatters::DeprecationFormatter::FileStream</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/DeprecationFormatter/RaiseErrorStream.html#method-i-summarize">#summarize &mdash; RSpec::Core::Formatters::DeprecationFormatter::RaiseErrorStream</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseTextFormatter.html#method-i-summary_line">#summary_line &mdash; RSpec::Core::Formatters::BaseTextFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/JsonFormatter.html#method-i-summary_line">#summary_line &mdash; RSpec::Core::Formatters::JsonFormatter</a></li>
+    
+      <li><a href="RSpec/Core/MockFrameworkAdapter.html#method-i-teardown_mocks_for_rspec">#teardown_mocks_for_rspec &mdash; RSpec::Core::MockFrameworkAdapter</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-treat_symbols_as_metadata_keys_with_true_values-3D">#treat_symbols_as_metadata_keys_with_true_values= &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/MockFrameworkAdapter.html#method-i-verify_mocks_for_rspec">#verify_mocks_for_rspec &mdash; RSpec::Core::MockFrameworkAdapter</a></li>
+    
+      <li><a href="RSpec/Core/Metadata/GroupMetadataHash.html#method-i-warn_about_first_description_arg_behavioral_change_in_rspec_3">#warn_about_first_description_arg_behavioral_change_in_rspec_3 &mdash; RSpec::Core::Metadata::GroupMetadataHash</a></li>
+    
+      <li><a href="RSpec/Core/Deprecation.html#method-i-warn_deprecation">#warn_deprecation &mdash; RSpec::Core::Deprecation</a></li>
+    
+      <li><a href="RSpec/Core/ExampleGroup.html#method-i-warn_deprecation_of_example_accessor">#warn_deprecation_of_example_accessor &mdash; RSpec::Core::ExampleGroup</a></li>
+    
+      <li><a href="RSpec/Core/RakeTask.html#method-i-warning-3D">#warning= &mdash; RSpec::Core::RakeTask</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-warnings">#warnings &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-warnings-3D">#warnings= &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Configuration.html#method-i-warnings-3F">#warnings? &mdash; RSpec::Core::Configuration</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseTextFormatter.html#method-i-white">#white &mdash; RSpec::Core::Formatters::BaseTextFormatter</a></li>
+    
+      <li><a href="RSpec/Core/Hooks/HookCollection.html#method-i-with">#with &mdash; RSpec::Core::Hooks::HookCollection</a></li>
+    
+      <li><a href="RSpec/Core/Hooks/AroundHookCollection.html#method-i-with">#with &mdash; RSpec::Core::Hooks::AroundHookCollection</a></li>
+    
+      <li><a href="RSpec/Core/Example/Procsy.html#method-i-with">#with &mdash; RSpec::Core::Example::Procsy</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/ConsoleCodes.html#method-i-wrap">#wrap &mdash; RSpec::Core::Formatters::ConsoleCodes</a></li>
+    
+      <li><a href="RSpec/Core/Formatters/BaseTextFormatter.html#method-i-yellow">#yellow &mdash; RSpec::Core::Formatters::BaseTextFormatter</a></li>
+    
+  </ul>
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+</body>
+</html>

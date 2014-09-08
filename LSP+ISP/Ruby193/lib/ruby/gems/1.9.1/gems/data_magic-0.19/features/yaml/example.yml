@@ -1,0 +1,54 @@
+dm:
+  value1: this is value 1
+  value2: this is value 2
+  full_name: ~full_name
+  first_name: ~first_name
+  last_name: ~last_name
+  name_prefix: ~name_prefix
+  name_suffix: ~name_suffix
+  street: ~street_address
+  street_plus:  ~street_address(true)
+  city: ~city
+  state: ~state
+  state_ab: ~state_abbr
+  zip: ~zip_code
+  country: ~country
+  second_address: ~secondary_address
+  company: ~company_name
+  email: ~email_address
+  email_plus: ~email_address('buddy')
+  domain_name: ~domain_name
+  url: ~url
+  user_name: ~user_name
+  phone: ~phone_number
+  cell: ~cell_phone
+  catch_phrase: ~catch_phrase
+  words: ~words
+  sentence: ~sentence
+  sentences: ~sentences
+  paragraphs: ~paragraphs
+  characters: ~characters
+  bool_true: true
+  bool_false: false
+  random: ~randomize ['Tom', 'Dick', 'Harry']
+  ordered: ~sequential ['first', 'second', 'third']
+  range:  ~randomize 1..5
+  mask: ~mask "###-AAA_aaa"
+  title: ~title
+  today: ~today
+  tomorrow: ~tomorrow
+  yesterday: ~yesterday
+  5daysfromtoday: ~5.days_from_today
+  5daysago: ~5.days_ago
+  some_month: ~month
+  month_abbr: ~month_abbr
+  some_day: ~day_of_week
+  day_abbr: ~day_of_week_abbr
+
+dynamic:
+  blah: ~blah
+
+other:
+  name: Cheezy
+  address: 123 Main Street
+  email: cheezy@example.com

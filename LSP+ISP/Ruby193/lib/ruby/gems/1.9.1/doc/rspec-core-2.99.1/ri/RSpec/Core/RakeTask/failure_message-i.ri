@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"failure_message:EFI"*RSpec::Core::RakeTask#failure_message;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I":A message to print to stderr when there are failures.:encoding"IBM437:
+@file0FI" lib/rspec/core/rake_task.rb;@

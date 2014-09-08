@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta content="text/html; charset=IBM437" http-equiv="Content-Type" />
+
+  <title>ffi-1.9.3-x86-mingw32 Documentation</title>
+
+  <link type="text/css" media="screen" href="rdoc.css" rel="stylesheet" />
+
+  <script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body class="indexpage">
+
+  
+  <h1>ffi-1.9.3-x86-mingw32 Documentation</h1>
+
+  
+  <p>This is the API documentation for 'ffi-1.9.3-x86-mingw32 Documentation'.</p>
+  
+
+  
+  
+  <h2>Files</h2>
+  <ul>
+    
+      <li class="file"><a href="ext/ffi_c/libffi/ChangeLog.html">ChangeLog</a></li>
+    
+      <li class="file"><a href="ext/ffi_c/libffi/LICENSE.html">LICENSE</a></li>
+    
+      <li class="file"><a href="ext/ffi_c/libffi/README.html">README</a></li>
+    
+      <li class="file"><a href="ext/ffi_c/libffi/compile.html">compile</a></li>
+    
+      <li class="file"><a href="ext/ffi_c/libffi/configure.html">configure</a></li>
+    
+      <li class="file"><a href="ext/ffi_c/libffi/depcomp.html">depcomp</a></li>
+    
+      <li class="file"><a href="ext/ffi_c/libffi/doc/stamp-vti.html">stamp-vti</a></li>
+    
+      <li class="file"><a href="ext/ffi_c/libffi/install-sh.html">install-sh</a></li>
+    
+      <li class="file"><a href="ext/ffi_c/libffi/libtool-version.html">libtool-version</a></li>
+    
+      <li class="file"><a href="ext/ffi_c/libffi/mdate-sh.html">mdate-sh</a></li>
+    
+      <li class="file"><a href="ext/ffi_c/libffi/missing.html">missing</a></li>
+    
+  </ul>
+  
+
+  <h2 id="classes">Classes/Modules</h2>
+  <ul>
+    
+    <li class="module"><a href="FFI.html">FFI</a></li>
+    
+    <li class="class"><a href="FFI/AutoPointer.html">FFI::AutoPointer</a></li>
+    
+    <li class="class"><a href="FFI/AutoPointer/CallableReleaser.html">FFI::AutoPointer::CallableReleaser</a></li>
+    
+    <li class="class"><a href="FFI/AutoPointer/DefaultReleaser.html">FFI::AutoPointer::DefaultReleaser</a></li>
+    
+    <li class="class"><a href="FFI/AutoPointer/Releaser.html">FFI::AutoPointer::Releaser</a></li>
+    
+    <li class="class"><a href="FFI/ConstGenerator.html">FFI::ConstGenerator</a></li>
+    
+    <li class="class"><a href="FFI/ConstGenerator/Constant.html">FFI::ConstGenerator::Constant</a></li>
+    
+    <li class="class"><a href="FFI/Enum.html">FFI::Enum</a></li>
+    
+    <li class="class"><a href="FFI/Enums.html">FFI::Enums</a></li>
+    
+    <li class="class"><a href="FFI/Function.html">FFI::Function</a></li>
+    
+    <li class="class"><a href="FFI/FunctionType.html">FFI::FunctionType</a></li>
+    
+    <li class="class"><a href="FFI/Generator.html">FFI::Generator</a></li>
+    
+    <li class="class"><a href="FFI/Generator/Task.html">FFI::Generator::Task</a></li>
+    
+    <li class="module"><a href="FFI/IO.html">FFI::IO</a></li>
+    
+    <li class="module"><a href="FFI/LastError.html">FFI::LastError</a></li>
+    
+    <li class="module"><a href="FFI/Library.html">FFI::Library</a></li>
+    
+    <li class="class"><a href="FFI/ManagedStruct.html">FFI::ManagedStruct</a></li>
+    
+    <li class="class"><a href="FFI/MemoryPointer.html">FFI::MemoryPointer</a></li>
+    
+    <li class="module"><a href="FFI/NativeType.html">FFI::NativeType</a></li>
+    
+    <li class="class"><a href="FFI/NotFoundError.html">FFI::NotFoundError</a></li>
+    
+    <li class="module"><a href="FFI/Platform.html">FFI::Platform</a></li>
+    
+    <li class="class"><a href="FFI/PlatformError.html">FFI::PlatformError</a></li>
+    
+    <li class="class"><a href="FFI/Pointer.html">FFI::Pointer</a></li>
+    
+    <li class="class"><a href="FFI/StrPtrConverter.html">FFI::StrPtrConverter</a></li>
+    
+    <li class="class"><a href="FFI/Struct.html">FFI::Struct</a></li>
+    
+    <li class="class"><a href="FFI/Struct/InlineArray.html">FFI::Struct::InlineArray</a></li>
+    
+    <li class="class"><a href="FFI/Struct/ManagedStructConverter.html">FFI::Struct::ManagedStructConverter</a></li>
+    
+    <li class="class"><a href="FFI/StructByReference.html">FFI::StructByReference</a></li>
+    
+    <li class="class"><a href="FFI/StructByValue.html">FFI::StructByValue</a></li>
+    
+    <li class="class"><a href="FFI/StructGenerator.html">FFI::StructGenerator</a></li>
+    
+    <li class="class"><a href="FFI/StructGenerator/Field.html">FFI::StructGenerator::Field</a></li>
+    
+    <li class="class"><a href="FFI/StructLayout.html">FFI::StructLayout</a></li>
+    
+    <li class="class"><a href="FFI/StructLayout/Array.html">FFI::StructLayout::Array</a></li>
+    
+    <li class="class"><a href="FFI/StructLayout/Enum.html">FFI::StructLayout::Enum</a></li>
+    
+    <li class="class"><a href="FFI/StructLayout/Field.html">FFI::StructLayout::Field</a></li>
+    
+    <li class="class"><a href="FFI/StructLayout/Function.html">FFI::StructLayout::Function</a></li>
+    
+    <li class="class"><a href="FFI/StructLayout/InnerStruct.html">FFI::StructLayout::InnerStruct</a></li>
+    
+    <li class="class"><a href="FFI/StructLayout/Mapped.html">FFI::StructLayout::Mapped</a></li>
+    
+    <li class="class"><a href="FFI/StructLayout/Number.html">FFI::StructLayout::Number</a></li>
+    
+    <li class="class"><a href="FFI/StructLayout/Pointer.html">FFI::StructLayout::Pointer</a></li>
+    
+    <li class="class"><a href="FFI/StructLayout/String.html">FFI::StructLayout::String</a></li>
+    
+    <li class="class"><a href="FFI/StructLayoutBuilder.html">FFI::StructLayoutBuilder</a></li>
+    
+    <li class="class"><a href="FFI/Type.html">FFI::Type</a></li>
+    
+    <li class="class"><a href="FFI/Type/Builtin.html">FFI::Type::Builtin</a></li>
+    
+    <li class="class"><a href="FFI/TypesGenerator.html">FFI::TypesGenerator</a></li>
+    
+    <li class="class"><a href="FFI/Union.html">FFI::Union</a></li>
+    
+    <li class="class"><a href="FFI/VariadicInvoker.html">FFI::VariadicInvoker</a></li>
+    
+  </ul>
+
+  <h2 id="methods">Methods</h2>
+  <ul>
+    
+      <li><a href="FFI.html#method-c-add_typedef">::add_typedef &mdash; FFI</a></li>
+    
+      <li><a href="FFI/Struct.html#method-c-align">::align &mdash; FFI::Struct</a></li>
+    
+      <li><a href="FFI/Struct.html#method-c-aligned">::aligned &mdash; FFI::Struct</a></li>
+    
+      <li><a href="FFI/Struct.html#method-c-alignment">::alignment &mdash; FFI::Struct</a></li>
+    
+      <li><a href="FFI/Struct.html#method-c-auto_ptr">::auto_ptr &mdash; FFI::Struct</a></li>
+    
+      <li><a href="FFI/Platform.html#method-c-bsd-3F">::bsd? &mdash; FFI::Platform</a></li>
+    
+      <li><a href="FFI/Union.html#method-c-builder">::builder &mdash; FFI::Union</a></li>
+    
+      <li><a href="FFI/Struct.html#method-c-by_ref">::by_ref &mdash; FFI::Struct</a></li>
+    
+      <li><a href="FFI/Struct.html#method-c-by_value">::by_value &mdash; FFI::Struct</a></li>
+    
+      <li><a href="FFI/Struct.html#method-c-callback">::callback &mdash; FFI::Struct</a></li>
+    
+      <li><a href="FFI/Struct.html#method-c-enclosing_module">::enclosing_module &mdash; FFI::Struct</a></li>
+    
+      <li><a href="FFI.html#method-c-errno">::errno &mdash; FFI</a></li>
+    
+      <li><a href="FFI.html#method-c-errno-3D">::errno= &mdash; FFI</a></li>
+    
+      <li><a href="FFI/LastError.html#method-c-error">::error &mdash; FFI::LastError</a></li>
+    
+      <li><a href="FFI/LastError.html#method-c-error-3D">::error= &mdash; FFI::LastError</a></li>
+    
+      <li><a href="FFI/Library.html#method-c-extended">::extended &mdash; FFI::Library</a></li>
+    
+      <li><a href="FFI/Struct.html#method-c-find_field_type">::find_field_type &mdash; FFI::Struct</a></li>
+    
+      <li><a href="FFI/Struct.html#method-c-find_type">::find_type &mdash; FFI::Struct</a></li>
+    
+      <li><a href="FFI.html#method-c-find_type">::find_type &mdash; FFI</a></li>
+    
+      <li><a href="FFI/IO.html#method-c-for_fd">::for_fd &mdash; FFI::IO</a></li>
+    
+      <li><a href="FFI/AutoPointer.html#method-c-from_native">::from_native &mdash; FFI::AutoPointer</a></li>
+    
+      <li><a href="FFI/StrPtrConverter.html#method-c-from_native">::from_native &mdash; FFI::StrPtrConverter</a></li>
+    
+      <li><a href="FFI/MemoryPointer.html#method-c-from_string">::from_string &mdash; FFI::MemoryPointer</a></li>
+    
+      <li><a href="FFI/TypesGenerator.html#method-c-generate">::generate &mdash; FFI::TypesGenerator</a></li>
+    
+      <li><a href="FFI/Struct.html#method-c-in">::in &mdash; FFI::Struct</a></li>
+    
+      <li><a href="FFI/Struct.html#method-c-layout">::layout &mdash; FFI::Struct</a></li>
+    
+      <li><a href="FFI/Platform.html#method-c-mac-3F">::mac? &mdash; FFI::Platform</a></li>
+    
+      <li><a href="FFI.html#method-c-map_library_name">::map_library_name &mdash; FFI</a></li>
+    
+      <li><a href="FFI/Struct.html#method-c-members">::members &mdash; FFI::Struct</a></li>
+    
+      <li><a href="FFI/IO.html#method-c-native_read">::native_read &mdash; FFI::IO</a></li>
+    
+      <li><a href="FFI/AutoPointer.html#method-c-native_type">::native_type &mdash; FFI::AutoPointer</a></li>
+    
+      <li><a href="FFI/Pointer.html#method-c-new">::new &mdash; FFI::Pointer</a></li>
+    
+      <li><a href="FFI/Enums.html#method-c-new">::new &mdash; FFI::Enums</a></li>
+    
+      <li><a href="FFI/StructGenerator/Field.html#method-c-new">::new &mdash; FFI::StructGenerator::Field</a></li>
+    
+      <li><a href="FFI/StructGenerator.html#method-c-new">::new &mdash; FFI::StructGenerator</a></li>
+    
+      <li><a href="FFI/VariadicInvoker.html#method-c-new">::new &mdash; FFI::VariadicInvoker</a></li>
+    
+      <li><a href="FFI/Generator/Task.html#method-c-new">::new &mdash; FFI::Generator::Task</a></li>
+    
+      <li><a href="FFI/Generator.html#method-c-new">::new &mdash; FFI::Generator</a></li>
+    
+      <li><a href="FFI/ConstGenerator/Constant.html#method-c-new">::new &mdash; FFI::ConstGenerator::Constant</a></li>
+    
+      <li><a href="FFI/ConstGenerator.html#method-c-new">::new &mdash; FFI::ConstGenerator</a></li>
+    
+      <li><a href="FFI/StructLayoutBuilder.html#method-c-new">::new &mdash; FFI::StructLayoutBuilder</a></li>
+    
+      <li><a href="FFI/Struct/ManagedStructConverter.html#method-c-new">::new &mdash; FFI::Struct::ManagedStructConverter</a></li>
+    
+      <li><a href="FFI/StructLayout/Mapped.html#method-c-new">::new &mdash; FFI::StructLayout::Mapped</a></li>
+    
+      <li><a href="FFI/ManagedStruct.html#method-c-new">::new &mdash; FFI::ManagedStruct</a></li>
+    
+      <li><a href="FFI/NotFoundError.html#method-c-new">::new &mdash; FFI::NotFoundError</a></li>
+    
+      <li><a href="FFI/FunctionType.html#method-c-new">::new &mdash; FFI::FunctionType</a></li>
+    
+      <li><a href="FFI/MemoryPointer.html#method-c-new">::new &mdash; FFI::MemoryPointer</a></li>
+    
+      <li><a href="FFI/AutoPointer/Releaser.html#method-c-new">::new &mdash; FFI::AutoPointer::Releaser</a></li>
+    
+      <li><a href="FFI/Struct/InlineArray.html#method-c-new">::new &mdash; FFI::Struct::InlineArray</a></li>
+    
+      <li><a href="FFI/StructByReference.html#method-c-new">::new &mdash; FFI::StructByReference</a></li>
+    
+      <li><a href="FFI/StructByValue.html#method-c-new">::new &mdash; FFI::StructByValue</a></li>
+    
+      <li><a href="FFI/StructLayout/Field.html#method-c-new">::new &mdash; FFI::StructLayout::Field</a></li>
+    
+      <li><a href="FFI/StructLayout.html#method-c-new">::new &mdash; FFI::StructLayout</a></li>
+    
+      <li><a href="FFI/Type.html#method-c-new">::new &mdash; FFI::Type</a></li>
+    
+      <li><a href="FFI/Enum.html#method-c-new">::new &mdash; FFI::Enum</a></li>
+    
+      <li><a href="FFI/Function.html#method-c-new">::new &mdash; FFI::Function</a></li>
+    
+      <li><a href="FFI/AutoPointer.html#method-c-new">::new &mdash; FFI::AutoPointer</a></li>
+    
+      <li><a href="FFI/Struct.html#method-c-offset_of">::offset_of &mdash; FFI::Struct</a></li>
+    
+      <li><a href="FFI/Struct.html#method-c-offsets">::offsets &mdash; FFI::Struct</a></li>
+    
+      <li><a href="FFI/ConstGenerator.html#method-c-options">::options &mdash; FFI::ConstGenerator</a></li>
+    
+      <li><a href="FFI/StructGenerator.html#method-c-options">::options &mdash; FFI::StructGenerator</a></li>
+    
+      <li><a href="FFI/ConstGenerator.html#method-c-options-3D">::options= &mdash; FFI::ConstGenerator</a></li>
+    
+      <li><a href="FFI/StructGenerator.html#method-c-options-3D">::options= &mdash; FFI::StructGenerator</a></li>
+    
+      <li><a href="FFI/Struct.html#method-c-out">::out &mdash; FFI::Struct</a></li>
+    
+      <li><a href="FFI/Struct.html#method-c-pack">::pack &mdash; FFI::Struct</a></li>
+    
+      <li><a href="FFI/Struct.html#method-c-packed">::packed &mdash; FFI::Struct</a></li>
+    
+      <li><a href="FFI/Struct.html#method-c-ptr">::ptr &mdash; FFI::Struct</a></li>
+    
+      <li><a href="FFI/Pointer.html#method-c-size">::size &mdash; FFI::Pointer</a></li>
+    
+      <li><a href="FFI/Struct.html#method-c-size">::size &mdash; FFI::Struct</a></li>
+    
+      <li><a href="FFI/Struct.html#method-c-size-3D">::size= &mdash; FFI::Struct</a></li>
+    
+      <li><a href="FFI.html#method-c-type_size">::type_size &mdash; FFI</a></li>
+    
+      <li><a href="FFI.html#method-c-typedef">::typedef &mdash; FFI</a></li>
+    
+      <li><a href="FFI/Platform.html#method-c-unix-3F">::unix? &mdash; FFI::Platform</a></li>
+    
+      <li><a href="FFI/Struct.html#method-c-val">::val &mdash; FFI::Struct</a></li>
+    
+      <li><a href="FFI/Platform.html#method-c-windows-3F">::windows? &mdash; FFI::Platform</a></li>
+    
+      <li><a href="FFI/Pointer.html#method-i-2B">#+ &mdash; FFI::Pointer</a></li>
+    
+      <li><a href="FFI/Enums.html#method-i-3C-3C">#<< &mdash; FFI::Enums</a></li>
+    
+      <li><a href="FFI/Pointer.html#method-i-3D-3D">#== &mdash; FFI::Pointer</a></li>
+    
+      <li><a href="FFI/Struct/InlineArray.html#method-i-5B-5D">#[] &mdash; FFI::Struct::InlineArray</a></li>
+    
+      <li><a href="FFI/Enum.html#method-i-5B-5D">#[] &mdash; FFI::Enum</a></li>
+    
+      <li><a href="FFI/StructLayout.html#method-i-5B-5D">#[] &mdash; FFI::StructLayout</a></li>
+    
+      <li><a href="FFI/ConstGenerator.html#method-i-5B-5D">#[] &mdash; FFI::ConstGenerator</a></li>
+    
+      <li><a href="FFI/Struct/InlineArray.html#method-i-5B-5D-3D">#[]= &mdash; FFI::Struct::InlineArray</a></li>
+    
+      <li><a href="FFI/Enums.html#method-i-__map_symbol">#__map_symbol &mdash; FFI::Enums</a></li>
+    
+      <li><a href="FFI/StructLayout.html#method-i-__union-21">#__union! &mdash; FFI::StructLayout</a></li>
+    
+      <li><a href="FFI/StructLayoutBuilder.html#method-i-add">#add &mdash; FFI::StructLayoutBuilder</a></li>
+    
+      <li><a href="FFI/StructLayoutBuilder.html#method-i-add_array">#add_array &mdash; FFI::StructLayoutBuilder</a></li>
+    
+      <li><a href="FFI/StructLayoutBuilder.html#method-i-add_field">#add_field &mdash; FFI::StructLayoutBuilder</a></li>
+    
+      <li><a href="FFI/StructLayoutBuilder.html#method-i-add_struct">#add_struct &mdash; FFI::StructLayoutBuilder</a></li>
+    
+      <li><a href="FFI/Pointer.html#method-i-address">#address &mdash; FFI::Pointer</a></li>
+    
+      <li><a href="FFI/Struct.html#method-i-align">#align &mdash; FFI::Struct</a></li>
+    
+      <li><a href="FFI/StructLayout/Field.html#method-i-alignment">#alignment &mdash; FFI::StructLayout::Field</a></li>
+    
+      <li><a href="FFI/Struct.html#method-i-alignment">#alignment &mdash; FFI::Struct</a></li>
+    
+      <li><a href="FFI/Type.html#method-i-alignment">#alignment &mdash; FFI::Type</a></li>
+    
+      <li><a href="FFI/StructLayoutBuilder.html#method-i-alignment-3D">#alignment= &mdash; FFI::StructLayoutBuilder</a></li>
+    
+      <li><a href="FFI/Function.html#method-i-attach">#attach &mdash; FFI::Function</a></li>
+    
+      <li><a href="FFI/VariadicInvoker.html#method-i-attach">#attach &mdash; FFI::VariadicInvoker</a></li>
+    
+      <li><a href="FFI/Library.html#method-i-attach_function">#attach_function &mdash; FFI::Library</a></li>
+    
+      <li><a href="FFI/Library.html#method-i-attach_variable">#attach_variable &mdash; FFI::Library</a></li>
+    
+      <li><a href="FFI/Function.html#method-i-autorelease">#autorelease &mdash; FFI::Function</a></li>
+    
+      <li><a href="FFI/AutoPointer.html#method-i-autorelease-3D">#autorelease= &mdash; FFI::AutoPointer</a></li>
+    
+      <li><a href="FFI/Pointer.html#method-i-autorelease-3D">#autorelease= &mdash; FFI::Pointer</a></li>
+    
+      <li><a href="FFI/Function.html#method-i-autorelease-3D">#autorelease= &mdash; FFI::Function</a></li>
+    
+      <li><a href="FFI/AutoPointer.html#method-i-autorelease-3F">#autorelease? &mdash; FFI::AutoPointer</a></li>
+    
+      <li><a href="FFI/Pointer.html#method-i-autorelease-3F">#autorelease? &mdash; FFI::Pointer</a></li>
+    
+      <li><a href="FFI/Function.html#method-i-autorelease-3F">#autorelease? &mdash; FFI::Function</a></li>
+    
+      <li><a href="FFI/StructLayoutBuilder.html#method-i-build">#build &mdash; FFI::StructLayoutBuilder</a></li>
+    
+      <li><a href="FFI/ConstGenerator.html#method-i-calculate">#calculate &mdash; FFI::ConstGenerator</a></li>
+    
+      <li><a href="FFI/StructGenerator.html#method-i-calculate">#calculate &mdash; FFI::StructGenerator</a></li>
+    
+      <li><a href="FFI/Function.html#method-i-call">#call &mdash; FFI::Function</a></li>
+    
+      <li><a href="FFI/AutoPointer/Releaser.html#method-i-call">#call &mdash; FFI::AutoPointer::Releaser</a></li>
+    
+      <li><a href="FFI/VariadicInvoker.html#method-i-call">#call &mdash; FFI::VariadicInvoker</a></li>
+    
+      <li><a href="FFI/Library.html#method-i-callback">#callback &mdash; FFI::Library</a></li>
+    
+      <li><a href="FFI/Struct.html#method-i-clear">#clear &mdash; FFI::Struct</a></li>
+    
+      <li><a href="FFI/ConstGenerator.html#method-i-const">#const &mdash; FFI::ConstGenerator</a></li>
+    
+      <li><a href="FFI/Generator.html#method-i-constants">#constants &mdash; FFI::Generator</a></li>
+    
+      <li><a href="FFI/ConstGenerator/Constant.html#method-i-converted_value">#converted_value &mdash; FFI::ConstGenerator::Constant</a></li>
+    
+      <li><a href="FFI/StructGenerator.html#method-i-dump_config">#dump_config &mdash; FFI::StructGenerator</a></li>
+    
+      <li><a href="FFI/ConstGenerator.html#method-i-dump_constants">#dump_constants &mdash; FFI::ConstGenerator</a></li>
+    
+      <li><a href="FFI/Struct/InlineArray.html#method-i-each">#each &mdash; FFI::Struct::InlineArray</a></li>
+    
+      <li><a href="FFI/Library.html#method-i-enum">#enum &mdash; FFI::Library</a></li>
+    
+      <li><a href="FFI/Library.html#method-i-enum_type">#enum_type &mdash; FFI::Library</a></li>
+    
+      <li><a href="FFI/Library.html#method-i-enum_value">#enum_value &mdash; FFI::Library</a></li>
+    
+      <li><a href="FFI/Library.html#method-i-ffi_convention">#ffi_convention &mdash; FFI::Library</a></li>
+    
+      <li><a href="FFI/Library.html#method-i-ffi_lib">#ffi_lib &mdash; FFI::Library</a></li>
+    
+      <li><a href="FFI/Library.html#method-i-ffi_lib_flags">#ffi_lib_flags &mdash; FFI::Library</a></li>
+    
+      <li><a href="FFI/Library.html#method-i-ffi_libraries">#ffi_libraries &mdash; FFI::Library</a></li>
+    
+      <li><a href="FFI/StructGenerator.html#method-i-field">#field &mdash; FFI::StructGenerator</a></li>
+    
+      <li><a href="FFI/StructLayout.html#method-i-fields">#fields &mdash; FFI::StructLayout</a></li>
+    
+      <li><a href="FFI/Enums.html#method-i-find">#find &mdash; FFI::Enums</a></li>
+    
+      <li><a href="FFI/Enum.html#method-i-find">#find &mdash; FFI::Enum</a></li>
+    
+      <li><a href="FFI/Library.html#method-i-find_type">#find_type &mdash; FFI::Library</a></li>
+    
+      <li><a href="FFI/StructGenerator.html#method-i-found-3F">#found? &mdash; FFI::StructGenerator</a></li>
+    
+      <li><a href="FFI/Pointer.html#method-i-free">#free &mdash; FFI::Pointer</a></li>
+    
+      <li><a href="FFI/AutoPointer/Releaser.html#method-i-free">#free &mdash; FFI::AutoPointer::Releaser</a></li>
+    
+      <li><a href="FFI/AutoPointer.html#method-i-free">#free &mdash; FFI::AutoPointer</a></li>
+    
+      <li><a href="FFI/Function.html#method-i-free">#free &mdash; FFI::Function</a></li>
+    
+      <li><a href="FFI/Enum.html#method-i-from_native">#from_native &mdash; FFI::Enum</a></li>
+    
+      <li><a href="FFI/StructByReference.html#method-i-from_native">#from_native &mdash; FFI::StructByReference</a></li>
+    
+      <li><a href="FFI/Struct/ManagedStructConverter.html#method-i-from_native">#from_native &mdash; FFI::Struct::ManagedStructConverter</a></li>
+    
+      <li><a href="FFI/Library.html#method-i-function_names">#function_names &mdash; FFI::Library</a></li>
+    
+      <li><a href="FFI/StructGenerator.html#method-i-generate_layout">#generate_layout &mdash; FFI::StructGenerator</a></li>
+    
+      <li><a href="FFI/StructLayout/Field.html#method-i-get">#get &mdash; FFI::StructLayout::Field</a></li>
+    
+      <li><a href="FFI/StructLayout/Mapped.html#method-i-get">#get &mdash; FFI::StructLayout::Mapped</a></li>
+    
+      <li><a href="FFI/StructLayout/Array.html#method-i-get">#get &mdash; FFI::StructLayout::Array</a></li>
+    
+      <li><a href="FFI/StructLayout/Enum.html#method-i-get">#get &mdash; FFI::StructLayout::Enum</a></li>
+    
+      <li><a href="FFI/StructLayout/InnerStruct.html#method-i-get">#get &mdash; FFI::StructLayout::InnerStruct</a></li>
+    
+      <li><a href="FFI/StructLayout/Function.html#method-i-get">#get &mdash; FFI::StructLayout::Function</a></li>
+    
+      <li><a href="FFI/StructGenerator.html#method-i-get_field">#get_field &mdash; FFI::StructGenerator</a></li>
+    
+      <li><a href="FFI/StructGenerator.html#method-i-include">#include &mdash; FFI::StructGenerator</a></li>
+    
+      <li><a href="FFI/ConstGenerator.html#method-i-include">#include &mdash; FFI::ConstGenerator</a></li>
+    
+      <li><a href="FFI/VariadicInvoker.html#method-i-init">#init &mdash; FFI::VariadicInvoker</a></li>
+    
+      <li><a href="FFI/Pointer.html#method-i-initialize_copy">#initialize_copy &mdash; FFI::Pointer</a></li>
+    
+      <li><a href="FFI/Function.html#method-i-initialize_copy">#initialize_copy &mdash; FFI::Function</a></li>
+    
+      <li><a href="FFI/Pointer.html#method-i-inspect">#inspect &mdash; FFI::Pointer</a></li>
+    
+      <li><a href="FFI/Type/Builtin.html#method-i-inspect">#inspect &mdash; FFI::Type::Builtin</a></li>
+    
+      <li><a href="FFI/Type.html#method-i-inspect">#inspect &mdash; FFI::Type</a></li>
+    
+      <li><a href="FFI/VariadicInvoker.html#method-i-invoke">#invoke &mdash; FFI::VariadicInvoker</a></li>
+    
+      <li><a href="FFI/StructByValue.html#method-i-layout">#layout &mdash; FFI::StructByValue</a></li>
+    
+      <li><a href="FFI/StructLayout.html#method-i-members">#members &mdash; FFI::StructLayout</a></li>
+    
+      <li><a href="FFI/Struct.html#method-i-members">#members &mdash; FFI::Struct</a></li>
+    
+      <li><a href="FFI/StructGenerator.html#method-i-name">#name &mdash; FFI::StructGenerator</a></li>
+    
+      <li><a href="FFI/StructLayout/Field.html#method-i-name">#name &mdash; FFI::StructLayout::Field</a></li>
+    
+      <li><a href="FFI/Enum.html#method-i-native_type">#native_type &mdash; FFI::Enum</a></li>
+    
+      <li><a href="FFI/StructByReference.html#method-i-native_type">#native_type &mdash; FFI::StructByReference</a></li>
+    
+      <li><a href="FFI/Pointer.html#method-i-null-3F">#null? &mdash; FFI::Pointer</a></li>
+    
+      <li><a href="FFI/StructLayout/Field.html#method-i-offset">#offset &mdash; FFI::StructLayout::Field</a></li>
+    
+      <li><a href="FFI/StructGenerator/Field.html#method-i-offset-3D">#offset= &mdash; FFI::StructGenerator::Field</a></li>
+    
+      <li><a href="FFI/Struct.html#method-i-offset_of">#offset_of &mdash; FFI::Struct</a></li>
+    
+      <li><a href="FFI/StructLayout.html#method-i-offset_of">#offset_of &mdash; FFI::StructLayout</a></li>
+    
+      <li><a href="FFI/StructLayout.html#method-i-offsets">#offsets &mdash; FFI::StructLayout</a></li>
+    
+      <li><a href="FFI/Struct.html#method-i-offsets">#offsets &mdash; FFI::Struct</a></li>
+    
+      <li><a href="FFI/Pointer.html#method-i-order">#order &mdash; FFI::Pointer</a></li>
+    
+      <li><a href="FFI/StructLayoutBuilder.html#method-i-packed-3D">#packed= &mdash; FFI::StructLayoutBuilder</a></li>
+    
+      <li><a href="FFI/FunctionType.html#method-i-param_types">#param_types &mdash; FFI::FunctionType</a></li>
+    
+      <li><a href="FFI/StructLayout/Mapped.html#method-i-put">#put &mdash; FFI::StructLayout::Mapped</a></li>
+    
+      <li><a href="FFI/StructLayout/InnerStruct.html#method-i-put">#put &mdash; FFI::StructLayout::InnerStruct</a></li>
+    
+      <li><a href="FFI/StructLayout/Field.html#method-i-put">#put &mdash; FFI::StructLayout::Field</a></li>
+    
+      <li><a href="FFI/StructLayout/Function.html#method-i-put">#put &mdash; FFI::StructLayout::Function</a></li>
+    
+      <li><a href="FFI/StructLayout/Enum.html#method-i-put">#put &mdash; FFI::StructLayout::Enum</a></li>
+    
+      <li><a href="FFI/StructLayout/Array.html#method-i-put">#put &mdash; FFI::StructLayout::Array</a></li>
+    
+      <li><a href="FFI/Pointer.html#method-i-read_array_of_type">#read_array_of_type &mdash; FFI::Pointer</a></li>
+    
+      <li><a href="FFI/Pointer.html#method-i-read_string">#read_string &mdash; FFI::Pointer</a></li>
+    
+      <li><a href="FFI/Pointer.html#method-i-read_string_length">#read_string_length &mdash; FFI::Pointer</a></li>
+    
+      <li><a href="FFI/Pointer.html#method-i-read_string_to_null">#read_string_to_null &mdash; FFI::Pointer</a></li>
+    
+      <li><a href="FFI/AutoPointer/CallableReleaser.html#method-i-release">#release &mdash; FFI::AutoPointer::CallableReleaser</a></li>
+    
+      <li><a href="FFI/AutoPointer/DefaultReleaser.html#method-i-release">#release &mdash; FFI::AutoPointer::DefaultReleaser</a></li>
+    
+      <li><a href="FFI/FunctionType.html#method-i-result_type">#result_type &mdash; FFI::FunctionType</a></li>
+    
+      <li><a href="FFI/ConstGenerator/Constant.html#method-i-ruby_name">#ruby_name &mdash; FFI::ConstGenerator::Constant</a></li>
+    
+      <li><a href="FFI/StructLayout/Field.html#method-i-size">#size &mdash; FFI::StructLayout::Field</a></li>
+    
+      <li><a href="FFI/Type.html#method-i-size">#size &mdash; FFI::Type</a></li>
+    
+      <li><a href="FFI/Struct/InlineArray.html#method-i-size">#size &mdash; FFI::Struct::InlineArray</a></li>
+    
+      <li><a href="FFI/Struct.html#method-i-size">#size &mdash; FFI::Struct</a></li>
+    
+      <li><a href="FFI/StructLayoutBuilder.html#method-i-size-3D">#size= &mdash; FFI::StructLayoutBuilder</a></li>
+    
+      <li><a href="FFI/Pointer.html#method-i-slice">#slice &mdash; FFI::Pointer</a></li>
+    
+      <li><a href="FFI/Generator.html#method-i-struct">#struct &mdash; FFI::Generator</a></li>
+    
+      <li><a href="FFI/StructByReference.html#method-i-struct_class">#struct_class &mdash; FFI::StructByReference</a></li>
+    
+      <li><a href="FFI/StructByValue.html#method-i-struct_class">#struct_class &mdash; FFI::StructByValue</a></li>
+    
+      <li><a href="FFI/Enum.html#method-i-symbol_map">#symbol_map &mdash; FFI::Enum</a></li>
+    
+      <li><a href="FFI/Enum.html#method-i-symbols">#symbols &mdash; FFI::Enum</a></li>
+    
+      <li><a href="FFI/Struct/InlineArray.html#method-i-to_a">#to_a &mdash; FFI::Struct::InlineArray</a></li>
+    
+      <li><a href="FFI/StructLayout.html#method-i-to_a">#to_a &mdash; FFI::StructLayout</a></li>
+    
+      <li><a href="FFI/StructGenerator/Field.html#method-i-to_config">#to_config &mdash; FFI::StructGenerator::Field</a></li>
+    
+      <li><a href="FFI/Enum.html#method-i-to_h">#to_h &mdash; FFI::Enum</a></li>
+    
+      <li><a href="FFI/Enum.html#method-i-to_hash">#to_hash &mdash; FFI::Enum</a></li>
+    
+      <li><a href="FFI/Pointer.html#method-i-to_i">#to_i &mdash; FFI::Pointer</a></li>
+    
+      <li><a href="FFI/Enum.html#method-i-to_native">#to_native &mdash; FFI::Enum</a></li>
+    
+      <li><a href="FFI/StructByReference.html#method-i-to_native">#to_native &mdash; FFI::StructByReference</a></li>
+    
+      <li><a href="FFI/Struct/InlineArray.html#method-i-to_ptr">#to_ptr &mdash; FFI::Struct::InlineArray</a></li>
+    
+      <li><a href="FFI/Struct.html#method-i-to_ptr">#to_ptr &mdash; FFI::Struct</a></li>
+    
+      <li><a href="FFI/ConstGenerator.html#method-i-to_ruby">#to_ruby &mdash; FFI::ConstGenerator</a></li>
+    
+      <li><a href="FFI/ConstGenerator/Constant.html#method-i-to_ruby">#to_ruby &mdash; FFI::ConstGenerator::Constant</a></li>
+    
+      <li><a href="FFI/Pointer.html#method-i-to_s">#to_s &mdash; FFI::Pointer</a></li>
+    
+      <li><a href="FFI/Generator.html#method-i-to_s">#to_s &mdash; FFI::Generator</a></li>
+    
+      <li><a href="FFI/StructLayout/Field.html#method-i-type">#type &mdash; FFI::StructLayout::Field</a></li>
+    
+      <li><a href="FFI/Pointer.html#method-i-type_size">#type_size &mdash; FFI::Pointer</a></li>
+    
+      <li><a href="FFI/Library.html#method-i-typedef">#typedef &mdash; FFI::Library</a></li>
+    
+      <li><a href="FFI/StructLayoutBuilder.html#method-i-union-3D">#union= &mdash; FFI::StructLayoutBuilder</a></li>
+    
+      <li><a href="FFI/StructLayoutBuilder.html#method-i-union-3F">#union? &mdash; FFI::StructLayoutBuilder</a></li>
+    
+      <li><a href="FFI/Struct.html#method-i-values">#values &mdash; FFI::Struct</a></li>
+    
+      <li><a href="FFI/Pointer.html#method-i-write_array_of_type">#write_array_of_type &mdash; FFI::Pointer</a></li>
+    
+      <li><a href="FFI/Pointer.html#method-i-write_string">#write_string &mdash; FFI::Pointer</a></li>
+    
+      <li><a href="FFI/Pointer.html#method-i-write_string_length">#write_string_length &mdash; FFI::Pointer</a></li>
+    
+  </ul>
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+</body>
+</html>

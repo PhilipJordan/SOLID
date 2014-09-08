@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="IBM437"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=IBM437" http-equiv="Content-Type" />
+
+  <title>Class: Selenium::WebDriver::Error::ElementNotVisibleError</title>
+
+  <link rel="stylesheet" href="../../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../../index.html">Home</a>
+          <a href="../../../index.html#classes">Classes</a>
+          <a href="../../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../../lib/selenium/webdriver/common/error_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/selenium/webdriver/common/error.rb">lib/selenium/webdriver/common/error.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="WebDriverError.html">Selenium::WebDriver::Error::WebDriverError</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../../Selenium.html">Selenium</a></li>
+        
+          <li><a href="../../../Selenium/Client.html">Selenium::Client</a></li>
+        
+          <li><a href="../../../Selenium/Client/Base.html">Selenium::Client::Base</a></li>
+        
+          <li><a href="../../../Selenium/Client/CommandError.html">Selenium::Client::CommandError</a></li>
+        
+          <li><a href="../../../Selenium/Client/Driver.html">Selenium::Client::Driver</a></li>
+        
+          <li><a href="../../../Selenium/Client/Extensions.html">Selenium::Client::Extensions</a></li>
+        
+          <li><a href="../../../Selenium/Client/GeneratedDriver.html">Selenium::Client::GeneratedDriver</a></li>
+        
+          <li><a href="../../../Selenium/Client/Idiomatic.html">Selenium::Client::Idiomatic</a></li>
+        
+          <li><a href="../../../Selenium/Client/JavascriptExpressionBuilder.html">Selenium::Client::JavascriptExpressionBuilder</a></li>
+        
+          <li><a href="../../../Selenium/Client/JavascriptFrameworks.html">Selenium::Client::JavascriptFrameworks</a></li>
+        
+          <li><a href="../../../Selenium/Client/JavascriptFrameworks/JQuery.html">Selenium::Client::JavascriptFrameworks::JQuery</a></li>
+        
+          <li><a href="../../../Selenium/Client/JavascriptFrameworks/Prototype.html">Selenium::Client::JavascriptFrameworks::Prototype</a></li>
+        
+          <li><a href="../../../Selenium/Client/Protocol.html">Selenium::Client::Protocol</a></li>
+        
+          <li><a href="../../../Selenium/Client/ProtocolError.html">Selenium::Client::ProtocolError</a></li>
+        
+          <li><a href="../../../Selenium/Client/SeleniumHelper.html">Selenium::Client::SeleniumHelper</a></li>
+        
+          <li><a href="../../../Selenium/Rake.html">Selenium::Rake</a></li>
+        
+          <li><a href="../../../Selenium/Rake/MissingJarFileError.html">Selenium::Rake::MissingJarFileError</a></li>
+        
+          <li><a href="../../../Selenium/Rake/ServerTask.html">Selenium::Rake::ServerTask</a></li>
+        
+          <li><a href="../../../Selenium/Server.html">Selenium::Server</a></li>
+        
+          <li><a href="../../../Selenium/Server/Error.html">Selenium::Server::Error</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver.html">Selenium::WebDriver</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/ActionBuilder.html">Selenium::WebDriver::ActionBuilder</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Alert.html">Selenium::WebDriver::Alert</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Android.html">Selenium::WebDriver::Android</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Android/Bridge.html">Selenium::WebDriver::Android::Bridge</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/BridgeHelper.html">Selenium::WebDriver::BridgeHelper</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Chrome.html">Selenium::WebDriver::Chrome</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Chrome/Bridge.html">Selenium::WebDriver::Chrome::Bridge</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Chrome/Profile.html">Selenium::WebDriver::Chrome::Profile</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Chrome/Service.html">Selenium::WebDriver::Chrome::Service</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Driver.html">Selenium::WebDriver::Driver</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/DriverExtensions.html">Selenium::WebDriver::DriverExtensions</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/DriverExtensions/HasBrowserConnection.html">Selenium::WebDriver::DriverExtensions::HasBrowserConnection</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/DriverExtensions/HasInputDevices.html">Selenium::WebDriver::DriverExtensions::HasInputDevices</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/DriverExtensions/HasLocation.html">Selenium::WebDriver::DriverExtensions::HasLocation</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/DriverExtensions/HasRemoteStatus.html">Selenium::WebDriver::DriverExtensions::HasRemoteStatus</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/DriverExtensions/HasSessionId.html">Selenium::WebDriver::DriverExtensions::HasSessionId</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/DriverExtensions/HasTouchScreen.html">Selenium::WebDriver::DriverExtensions::HasTouchScreen</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/DriverExtensions/HasWebStorage.html">Selenium::WebDriver::DriverExtensions::HasWebStorage</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/DriverExtensions/Rotatable.html">Selenium::WebDriver::DriverExtensions::Rotatable</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/DriverExtensions/TakesScreenshot.html">Selenium::WebDriver::DriverExtensions::TakesScreenshot</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/DriverExtensions/UploadsFiles.html">Selenium::WebDriver::DriverExtensions::UploadsFiles</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Element.html">Selenium::WebDriver::Element</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error.html">Selenium::WebDriver::Error</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/ElementNotVisibleError.html">Selenium::WebDriver::Error::ElementNotDisplayedError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/ElementNotSelectableError.html">Selenium::WebDriver::Error::ElementNotSelectableError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/ElementNotVisibleError.html">Selenium::WebDriver::Error::ElementNotVisibleError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/ExpectedError.html">Selenium::WebDriver::Error::ExpectedError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/IMEEngineActivationFailedError.html">Selenium::WebDriver::Error::IMEEngineActivationFailedError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/IMENotAvailableError.html">Selenium::WebDriver::Error::IMENotAvailableError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/IndexOutOfBoundsError.html">Selenium::WebDriver::Error::IndexOutOfBoundsError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/InvalidCookieDomainError.html">Selenium::WebDriver::Error::InvalidCookieDomainError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/InvalidElementCoordinatesError.html">Selenium::WebDriver::Error::InvalidElementCoordinatesError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/InvalidElementStateError.html">Selenium::WebDriver::Error::InvalidElementStateError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/InvalidSelectorError.html">Selenium::WebDriver::Error::InvalidSelectorError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/JavascriptError.html">Selenium::WebDriver::Error::JavascriptError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/MoveTargetOutOfBoundsError.html">Selenium::WebDriver::Error::MoveTargetOutOfBoundsError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/NoAlertPresentError.html">Selenium::WebDriver::Error::NoAlertOpenError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/NoAlertPresentError.html">Selenium::WebDriver::Error::NoAlertPresentError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/NoCollectionError.html">Selenium::WebDriver::Error::NoCollectionError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/NoScriptResultError.html">Selenium::WebDriver::Error::NoScriptResultError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/NoStringError.html">Selenium::WebDriver::Error::NoStringError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/NoStringLengthError.html">Selenium::WebDriver::Error::NoStringLengthError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/NoStringWrapperError.html">Selenium::WebDriver::Error::NoStringWrapperError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/NoSuchCollectionError.html">Selenium::WebDriver::Error::NoSuchCollectionError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/NoSuchDocumentError.html">Selenium::WebDriver::Error::NoSuchDocumentError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/NoSuchDriverError.html">Selenium::WebDriver::Error::NoSuchDriverError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/NoSuchElementError.html">Selenium::WebDriver::Error::NoSuchElementError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/NoSuchFrameError.html">Selenium::WebDriver::Error::NoSuchFrameError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/NoSuchWindowError.html">Selenium::WebDriver::Error::NoSuchWindowError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/NullPointerError.html">Selenium::WebDriver::Error::NullPointerError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/StaleElementReferenceError.html">Selenium::WebDriver::Error::ObsoleteElementError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/ScriptTimeOutError.html">Selenium::WebDriver::Error::ScriptTimeOutError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/ServerError.html">Selenium::WebDriver::Error::ServerError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/StaleElementReferenceError.html">Selenium::WebDriver::Error::StaleElementReferenceError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/TimeOutError.html">Selenium::WebDriver::Error::TimeOutError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/UnableToSetCookieError.html">Selenium::WebDriver::Error::UnableToSetCookieError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/JavascriptError.html">Selenium::WebDriver::Error::UnexpectedJavascriptError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/UnhandledAlertError.html">Selenium::WebDriver::Error::UnhandledAlertError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/UnknownError.html">Selenium::WebDriver::Error::UnhandledError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/UnknownCommandError.html">Selenium::WebDriver::Error::UnknownCommandError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/UnknownError.html">Selenium::WebDriver::Error::UnknownError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/UnsupportedOperationError.html">Selenium::WebDriver::Error::UnsupportedOperationError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/WebDriverError.html">Selenium::WebDriver::Error::WebDriverError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Error/XPathLookupError.html">Selenium::WebDriver::Error::XPathLookupError</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/FileReaper.html">Selenium::WebDriver::FileReaper</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Firefox.html">Selenium::WebDriver::Firefox</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Firefox/Binary.html">Selenium::WebDriver::Firefox::Binary</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Firefox/Bridge.html">Selenium::WebDriver::Firefox::Bridge</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Firefox/Extension.html">Selenium::WebDriver::Firefox::Extension</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Firefox/Launcher.html">Selenium::WebDriver::Firefox::Launcher</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Firefox/Profile.html">Selenium::WebDriver::Firefox::Profile</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Firefox/ProfilesIni.html">Selenium::WebDriver::Firefox::ProfilesIni</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Firefox/SocketLock.html">Selenium::WebDriver::Firefox::SocketLock</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Firefox/Util.html">Selenium::WebDriver::Firefox::Util</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/HTML5.html">Selenium::WebDriver::HTML5</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/HTML5/LocalStorage.html">Selenium::WebDriver::HTML5::LocalStorage</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/HTML5/SessionStorage.html">Selenium::WebDriver::HTML5::SessionStorage</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/HTML5/SharedWebStorage.html">Selenium::WebDriver::HTML5::SharedWebStorage</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/IE.html">Selenium::WebDriver::IE</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/IE/Bridge.html">Selenium::WebDriver::IE::Bridge</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/IE/Server.html">Selenium::WebDriver::IE::Server</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/IPhone.html">Selenium::WebDriver::IPhone</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/IPhone/Bridge.html">Selenium::WebDriver::IPhone::Bridge</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/JsonHelper.html">Selenium::WebDriver::JsonHelper</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Keyboard.html">Selenium::WebDriver::Keyboard</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Keys.html">Selenium::WebDriver::Keys</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/LogEntry.html">Selenium::WebDriver::LogEntry</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Logs.html">Selenium::WebDriver::Logs</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Mouse.html">Selenium::WebDriver::Mouse</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Navigation.html">Selenium::WebDriver::Navigation</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Opera.html">Selenium::WebDriver::Opera</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Opera/Bridge.html">Selenium::WebDriver::Opera::Bridge</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Opera/Service.html">Selenium::WebDriver::Opera::Service</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Options.html">Selenium::WebDriver::Options</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/PhantomJS.html">Selenium::WebDriver::PhantomJS</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/PhantomJS/Bridge.html">Selenium::WebDriver::PhantomJS::Bridge</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/PhantomJS/Service.html">Selenium::WebDriver::PhantomJS::Service</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Platform.html">Selenium::WebDriver::Platform</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/PortProber.html">Selenium::WebDriver::PortProber</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/ProfileHelper.html">Selenium::WebDriver::ProfileHelper</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/ProfileHelper/ClassMethods.html">Selenium::WebDriver::ProfileHelper::ClassMethods</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Proxy.html">Selenium::WebDriver::Proxy</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Remote.html">Selenium::WebDriver::Remote</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Remote/Bridge.html">Selenium::WebDriver::Remote::Bridge</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Remote/Capabilities.html">Selenium::WebDriver::Remote::Capabilities</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Remote/Http.html">Selenium::WebDriver::Remote::Http</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Remote/Http/Common.html">Selenium::WebDriver::Remote::Http::Common</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Remote/Http/Curb.html">Selenium::WebDriver::Remote::Http::Curb</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Remote/Http/Default.html">Selenium::WebDriver::Remote::Http::Default</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Remote/Http/Persistent.html">Selenium::WebDriver::Remote::Http::Persistent</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Remote/Response.html">Selenium::WebDriver::Remote::Response</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Safari.html">Selenium::WebDriver::Safari</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Safari/Bridge.html">Selenium::WebDriver::Safari::Bridge</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Safari/Browser.html">Selenium::WebDriver::Safari::Browser</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Safari/Extensions.html">Selenium::WebDriver::Safari::Extensions</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Safari/Extensions/Backup.html">Selenium::WebDriver::Safari::Extensions::Backup</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Safari/Options.html">Selenium::WebDriver::Safari::Options</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Safari/Server.html">Selenium::WebDriver::Safari::Server</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/SearchContext.html">Selenium::WebDriver::SearchContext</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/SocketPoller.html">Selenium::WebDriver::SocketPoller</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Support.html">Selenium::WebDriver::Support</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Support/AbstractEventListener.html">Selenium::WebDriver::Support::AbstractEventListener</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Support/BlockEventListener.html">Selenium::WebDriver::Support::BlockEventListener</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Support/Color.html">Selenium::WebDriver::Support::Color</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Support/EventFiringBridge.html">Selenium::WebDriver::Support::EventFiringBridge</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Support/Select.html">Selenium::WebDriver::Support::Select</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Support/Select/Escaper.html">Selenium::WebDriver::Support::Select::Escaper</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/TargetLocator.html">Selenium::WebDriver::TargetLocator</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Timeouts.html">Selenium::WebDriver::Timeouts</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/TouchActionBuilder.html">Selenium::WebDriver::TouchActionBuilder</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/TouchScreen.html">Selenium::WebDriver::TouchScreen</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Wait.html">Selenium::WebDriver::Wait</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Window.html">Selenium::WebDriver::Window</a></li>
+        
+          <li><a href="../../../Selenium/WebDriver/Zipper.html">Selenium::WebDriver::Zipper</a></li>
+        
+          <li><a href="../../../Base64.html">Base64</a></li>
+        
+          <li><a href="../../../Dir.html">Dir</a></li>
+        
+          <li><a href="../../../String.html">String</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Selenium::WebDriver::Error::ElementNotVisibleError</h1>
+
+    <div id="description" class="description">
+      
+<p>Raised to indicate that although an element is present on the DOM, it is
+not visible, and so is not able to be interacted with.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

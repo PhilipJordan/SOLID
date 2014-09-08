@@ -1,0 +1,17 @@
+{:ancestors{I"
+Array:EF[I"Diff::LCS;FI"Object;FI"Diff::LCS::Block;F[I"Object;FI" Diff::LCS::DefaultCallbacks;F[I"Object;FI"!Diff::LCS::SequenceCallbacks;F[@I"!Diff::LCS::BalancedCallbacks;F[@I"Diff::LCS::DiffCallbacks;F[I"Object;FI"$Diff::LCS::ContextDiffCallbacks;F[I"Diff::LCS::DiffCallbacks;FI"Diff::LCS::SDiffCallbacks;F[I"Object;FI"Diff::LCS::Change;F[I"Comparable;FI"Object;FI"Diff::LCS::ContextChange;F[I"Diff::LCS::Change;FI"Diff::LCS::HTMLDiff;F[I"Object;FI"#Diff::LCS::HTMLDiff::Callbacks;F[I"Object;FI"Diff::LCS::Hunk;F[I"Object;FI"String;F[@	I"Object;F:attributes{@[I"attr_reader changes;FI"attr_reader insert;FI"attr_reader remove;F@[I"attr_reader diffs;F@[I"attr_reader diffs;F@[I"attr_reader action;FI"attr_reader element;FI"attr_reader position;F@"[	I"attr_reader new_element;FI"attr_reader new_position;FI"attr_reader old_element;FI"attr_reader old_position;F@%[I"attr_reader options;F@([	I"attr_accessor match_class;FI"attr_accessor only_a_class;FI"attr_accessor only_b_class;FI"attr_accessor output;F@+[I"attr_accessor flag_context;FI"attr_reader blocks;FI"attr_reader end_new;FI"attr_reader end_old;FI"'attr_reader file_length_difference;FI"attr_reader start_new;FI"attr_reader start_old;F:class_methods{@[I"new;F@[	I"change;FI"discard_a;FI"discard_b;FI"
+match;F@[	@V@W@X@Y@[	@V@W@X@Y@[I"new;F@[I"new;F@[I"from_a;FI"new;FI"valid_action?;F@"[I"from_a;FI"new;FI"simplify;F@%[I"new;F@([I"new;F@+[I"new;FI"Diff::LCS;F[I"LCS;FI"callbacks_for;FI"	diff;FI"lcs;FI"
+patch;FI"patch!;FI"
+sdiff;FI"traverse_balanced;FI"traverse_sequences;FI"unpatch!;F:encodingIu:EncodingIBM437;F:instance_methods{@[
+I"changes;FI"diff_size;FI"insert;FI"op;FI"remove;F@[
+I"
+diffs;FI"discard_a;FI"discard_b;FI"finish;FI"
+match;F@[I"change;FI"discard_a;FI"discard_b;F@[
+I"change;FI"
+diffs;FI"discard_a;FI"discard_b;FI"
+match;F@[I"<=>;FI"==;FI"action;FI"adding?;FI"changed?;FI"deleting?;FI"element;FI"finished_a?;FI"finished_b?;FI"inspect;FI"position;FI"	to_a;FI"unchanged?;F@"[I"<=>;FI"==;FI"inspect;FI"new_element;FI"new_position;FI"old_element;FI"old_position;FI"	to_a;F@%[I"options;FI"run;F@([I"discard_a;FI"discard_b;FI"
+match;FI"match_class;FI"only_a_class;FI"only_b_class;FI"output;F@+[I"blocks;FI"	diff;FI"end_new;FI"end_old;FI"file_length_difference;FI"flag_context;FI"
+merge;FI"overlaps?;FI"start_new;FI"start_old;FI"unshift;FI"Diff::LCS;F[I"	diff;FI"lcs;FI"
+patch;FI"patch!;FI"patch_me;FI"
+sdiff;FI"traverse_balanced;FI"traverse_sequences;FI"unpatch;FI"unpatch!;FI"unpatch_me;F:modules[I"
+Array;FI"	Diff;F@	I"!Diff::LCS::BalancedCallbacks;FI"Diff::LCS::Block;F@$I"Diff::LCS::ContextChange;FI"$Diff::LCS::ContextDiffCallbacks;FI" Diff::LCS::DefaultCallbacks;F@I"Diff::LCS::HTMLDiff;FI"#Diff::LCS::HTMLDiff::Callbacks;FI"Diff::LCS::Hunk;FI"Diff::LCS::Ldiff;FI"Diff::LCS::SDiffCallbacks;FI"!Diff::LCS::SequenceCallbacks;FI"String;F

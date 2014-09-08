@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="IBM437"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=IBM437" http-equiv="Content-Type" />
+
+  <title>Class: ChildProcess::Windows::Handle</title>
+
+  <link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../lib/childprocess/windows/handle_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/childprocess/windows/handle.rb">lib/childprocess/windows/handle.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-c-open">::open</a></li>
+          
+          <li><a href="#method-i-close">#close</a></li>
+          
+          <li><a href="#method-i-exit_code">#exit_code</a></li>
+          
+          <li><a href="#method-i-send">#send</a></li>
+          
+          <li><a href="#method-i-wait">#wait</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../ChildProcess.html">ChildProcess</a></li>
+        
+          <li><a href="../../ChildProcess/AbstractIO.html">ChildProcess::AbstractIO</a></li>
+        
+          <li><a href="../../ChildProcess/AbstractProcess.html">ChildProcess::AbstractProcess</a></li>
+        
+          <li><a href="../../ChildProcess/Error.html">ChildProcess::Error</a></li>
+        
+          <li><a href="../../ChildProcess/InvalidEnvironmentVariable.html">ChildProcess::InvalidEnvironmentVariable</a></li>
+        
+          <li><a href="../../ChildProcess/JRuby.html">ChildProcess::JRuby</a></li>
+        
+          <li><a href="../../ChildProcess/JRuby/IO.html">ChildProcess::JRuby::IO</a></li>
+        
+          <li><a href="../../ChildProcess/JRuby/Process.html">ChildProcess::JRuby::Process</a></li>
+        
+          <li><a href="../../ChildProcess/JRuby/Pump.html">ChildProcess::JRuby::Pump</a></li>
+        
+          <li><a href="../../ChildProcess/LaunchError.html">ChildProcess::LaunchError</a></li>
+        
+          <li><a href="../../ChildProcess/MissingPlatformError.html">ChildProcess::MissingPlatformError</a></li>
+        
+          <li><a href="../../ChildProcess/SubclassResponsibility.html">ChildProcess::SubclassResponsibility</a></li>
+        
+          <li><a href="../../ChildProcess/TimeoutError.html">ChildProcess::TimeoutError</a></li>
+        
+          <li><a href="../../ChildProcess/Tools.html">ChildProcess::Tools</a></li>
+        
+          <li><a href="../../ChildProcess/Tools/Generator.html">ChildProcess::Tools::Generator</a></li>
+        
+          <li><a href="../../ChildProcess/Unix.html">ChildProcess::Unix</a></li>
+        
+          <li><a href="../../ChildProcess/Unix/ForkExecProcess.html">ChildProcess::Unix::ForkExecProcess</a></li>
+        
+          <li><a href="../../ChildProcess/Unix/IO.html">ChildProcess::Unix::IO</a></li>
+        
+          <li><a href="../../ChildProcess/Unix/Lib.html">ChildProcess::Unix::Lib</a></li>
+        
+          <li><a href="../../ChildProcess/Unix/Lib/Attrs.html">ChildProcess::Unix::Lib::Attrs</a></li>
+        
+          <li><a href="../../ChildProcess/Unix/Lib/FileActions.html">ChildProcess::Unix::Lib::FileActions</a></li>
+        
+          <li><a href="../../ChildProcess/Unix/Platform.html">ChildProcess::Unix::Platform</a></li>
+        
+          <li><a href="../../ChildProcess/Unix/PosixSpawnProcess.html">ChildProcess::Unix::PosixSpawnProcess</a></li>
+        
+          <li><a href="../../ChildProcess/Unix/PosixSpawnProcess/Argv.html">ChildProcess::Unix::PosixSpawnProcess::Argv</a></li>
+        
+          <li><a href="../../ChildProcess/Unix/PosixSpawnProcess/Envp.html">ChildProcess::Unix::PosixSpawnProcess::Envp</a></li>
+        
+          <li><a href="../../ChildProcess/Unix/Process.html">ChildProcess::Unix::Process</a></li>
+        
+          <li><a href="../../ChildProcess/Windows.html">ChildProcess::Windows</a></li>
+        
+          <li><a href="../../ChildProcess/Windows/Handle.html">ChildProcess::Windows::Handle</a></li>
+        
+          <li><a href="../../ChildProcess/Windows/IO.html">ChildProcess::Windows::IO</a></li>
+        
+          <li><a href="../../ChildProcess/Windows/IoCounters.html">ChildProcess::Windows::IoCounters</a></li>
+        
+          <li><a href="../../ChildProcess/Windows/JobObjectBasicLimitInformation.html">ChildProcess::Windows::JobObjectBasicLimitInformation</a></li>
+        
+          <li><a href="../../ChildProcess/Windows/JobObjectExtendedLimitInformation.html">ChildProcess::Windows::JobObjectExtendedLimitInformation</a></li>
+        
+          <li><a href="../../ChildProcess/Windows/Lib.html">ChildProcess::Windows::Lib</a></li>
+        
+          <li><a href="../../ChildProcess/Windows/Process.html">ChildProcess::Windows::Process</a></li>
+        
+          <li><a href="../../ChildProcess/Windows/Process/Job.html">ChildProcess::Windows::Process::Job</a></li>
+        
+          <li><a href="../../ChildProcess/Windows/ProcessBuilder.html">ChildProcess::Windows::ProcessBuilder</a></li>
+        
+          <li><a href="../../ChildProcess/Windows/ProcessInfo.html">ChildProcess::Windows::ProcessInfo</a></li>
+        
+          <li><a href="../../ChildProcess/Windows/SecurityAttributes.html">ChildProcess::Windows::SecurityAttributes</a></li>
+        
+          <li><a href="../../ChildProcess/Windows/StartupInfo.html">ChildProcess::Windows::StartupInfo</a></li>
+        
+          <li><a href="../../Java.html">Java</a></li>
+        
+          <li><a href="../../Java/JavaIo.html">Java::JavaIo</a></li>
+        
+          <li><a href="../../Java/JavaIo/FileDescriptor.html">Java::JavaIo::FileDescriptor</a></li>
+        
+          <li><a href="../../Java/SunNioCh.html">Java::SunNioCh</a></li>
+        
+          <li><a href="../../Java/SunNioCh/FileChannelImpl.html">Java::SunNioCh::FileChannelImpl</a></li>
+        
+          <li><a href="../../FFI.html">FFI</a></li>
+        
+          <li><a href="../../FFI/MemoryPointer.html">FFI::MemoryPointer</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">ChildProcess::Windows::Handle</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="pointer-attribute-method" class="method-detail">
+          <a name="pointer"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">pointer</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(pointer, pid)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/childprocess/windows/handle.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">pointer</span>, <span class="ruby-identifier">pid</span>)
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">pointer</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">Pointer</span>)
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;invalid handle: #{pointer.inspect}&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">pointer</span>.<span class="ruby-identifier">null?</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;handle is null: #{pointer.inspect}&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@pid</span>     = <span class="ruby-identifier">pid</span>
+  <span class="ruby-ivar">@pointer</span> = <span class="ruby-identifier">pointer</span>
+  <span class="ruby-ivar">@closed</span>  = <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+        <div id="open-method" class="method-detail ">
+          <a name="method-c-open"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">open</span><span
+              class="method-args">(pid, access = PROCESS_ALL_ACCESS)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="open-source">
+<pre>
+<span class="ruby-comment"># File lib/childprocess/windows/handle.rb, line 8</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">open</span>(<span class="ruby-identifier">pid</span>, <span class="ruby-identifier">access</span> = <span class="ruby-constant">PROCESS_ALL_ACCESS</span>)
+  <span class="ruby-identifier">handle</span> = <span class="ruby-constant">Lib</span>.<span class="ruby-identifier">open_process</span>(<span class="ruby-identifier">access</span>, <span class="ruby-keyword">false</span>, <span class="ruby-identifier">pid</span>)
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">handle</span>.<span class="ruby-identifier">null?</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>, <span class="ruby-constant">Lib</span>.<span class="ruby-identifier">last_error_message</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">h</span> = <span class="ruby-identifier">new</span>(<span class="ruby-identifier">handle</span>, <span class="ruby-identifier">pid</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">h</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-keyword">yield</span> <span class="ruby-identifier">h</span>
+  <span class="ruby-keyword">ensure</span>
+    <span class="ruby-identifier">h</span>.<span class="ruby-identifier">close</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- open-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- open-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="close-method" class="method-detail ">
+          <a name="method-i-close"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">close</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="close-source">
+<pre>
+<span class="ruby-comment"># File lib/childprocess/windows/handle.rb, line 78</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">close</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@closed</span>
+
+  <span class="ruby-constant">Lib</span>.<span class="ruby-identifier">close_handle</span>(<span class="ruby-ivar">@pointer</span>)
+  <span class="ruby-ivar">@closed</span> = <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- close-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- close-method -->
+
+      
+        <div id="exit_code-method" class="method-detail ">
+          <a name="method-i-exit_code"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">exit_code</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="exit_code-source">
+<pre>
+<span class="ruby-comment"># File lib/childprocess/windows/handle.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">exit_code</span>
+  <span class="ruby-identifier">code_pointer</span> = <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">MemoryPointer</span>.<span class="ruby-identifier">new</span> <span class="ruby-value">:ulong</span>
+  <span class="ruby-identifier">ok</span> = <span class="ruby-constant">Lib</span>.<span class="ruby-identifier">get_exit_code</span>(<span class="ruby-ivar">@pointer</span>, <span class="ruby-identifier">code_pointer</span>)
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">ok</span>
+    <span class="ruby-identifier">code_pointer</span>.<span class="ruby-identifier">get_ulong</span>(<span class="ruby-value">0</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">close</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>, <span class="ruby-constant">Lib</span>.<span class="ruby-identifier">last_error_message</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- exit_code-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- exit_code-method -->
+
+      
+        <div id="send-method" class="method-detail ">
+          <a name="method-i-send"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">send</span><span
+              class="method-args">(signal)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="send-source">
+<pre>
+<span class="ruby-comment"># File lib/childprocess/windows/handle.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">send</span>(<span class="ruby-identifier">signal</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">signal</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">exit_code</span> <span class="ruby-operator">==</span> <span class="ruby-constant">PROCESS_STILL_ALIVE</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">WIN_SIGINT</span>
+    <span class="ruby-constant">Lib</span>.<span class="ruby-identifier">generate_console_ctrl_event</span>(<span class="ruby-constant">CTRL_C_EVENT</span>, <span class="ruby-ivar">@pid</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">WIN_SIGBREAK</span>
+    <span class="ruby-constant">Lib</span>.<span class="ruby-identifier">generate_console_ctrl_event</span>(<span class="ruby-constant">CTRL_BREAK_EVENT</span>, <span class="ruby-ivar">@pid</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">WIN_SIGKILL</span>
+    <span class="ruby-identifier">ok</span> = <span class="ruby-constant">Lib</span>.<span class="ruby-identifier">terminate_process</span>(<span class="ruby-ivar">@pointer</span>, <span class="ruby-ivar">@pid</span>)
+    <span class="ruby-constant">Lib</span>.<span class="ruby-identifier">check_error</span> <span class="ruby-identifier">ok</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">thread_id</span>     = <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">MemoryPointer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:ulong</span>)
+    <span class="ruby-identifier">module_handle</span> = <span class="ruby-constant">Lib</span>.<span class="ruby-identifier">get_module_handle</span>(<span class="ruby-string">&quot;kernel32&quot;</span>)
+    <span class="ruby-identifier">proc_address</span>  = <span class="ruby-constant">Lib</span>.<span class="ruby-identifier">get_proc_address</span>(<span class="ruby-identifier">module_handle</span>, <span class="ruby-string">&quot;ExitProcess&quot;</span>)
+
+    <span class="ruby-identifier">thread</span> = <span class="ruby-constant">Lib</span>.<span class="ruby-identifier">create_remote_thread</span>(<span class="ruby-ivar">@pointer</span>, <span class="ruby-value">0</span>, <span class="ruby-value">0</span>, <span class="ruby-identifier">proc_address</span>, <span class="ruby-value">0</span>, <span class="ruby-value">0</span>, <span class="ruby-identifier">thread_id</span>)
+    <span class="ruby-identifier">check_error</span> <span class="ruby-identifier">thread</span>
+
+    <span class="ruby-constant">Lib</span>.<span class="ruby-identifier">wait_for_single_object</span>(<span class="ruby-identifier">thread</span>, <span class="ruby-value">5</span>)
+    <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- send-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- send-method -->
+
+      
+        <div id="wait-method" class="method-detail ">
+          <a name="method-i-wait"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">wait</span><span
+              class="method-args">(milliseconds = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="wait-source">
+<pre>
+<span class="ruby-comment"># File lib/childprocess/windows/handle.rb, line 85</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">wait</span>(<span class="ruby-identifier">milliseconds</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-constant">Lib</span>.<span class="ruby-identifier">wait_for_single_object</span>(<span class="ruby-ivar">@pointer</span>, <span class="ruby-identifier">milliseconds</span> <span class="ruby-operator">||</span> <span class="ruby-constant">INFINITE</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- wait-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- wait-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

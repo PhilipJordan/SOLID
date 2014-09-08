@@ -1,0 +1,64 @@
+{
+   "browser": {
+      "hung_plugin_detect_freq": 2000,
+      "plugin_message_response_timeout": 25000
+   },
+   "local_state": {
+      "multiple_profile_prefs_version": 7
+   },
+   "policy": {
+      "last_statistics_update": "13005950640388000"
+   },
+   "profile": {
+      "info_cache": {
+         "Default": {
+            "avatar_icon": "chrome://theme/IDR_PROFILE_AVATAR_0",
+            "background_apps": false,
+            "name": "First user",
+            "user_name": ""
+         }
+      },
+      "last_used": "Default"
+   },
+   "shutdown": {
+      "num_processes": 1,
+      "num_processes_slow": 0,
+      "type": 1
+   },
+   "uninstall_metrics": {
+      "installation_date2": "1361477039",
+      "launch_count": "1",
+      "page_load_count": "1"
+   },
+   "user_experience_metrics": {
+      "client_id": "AE6DC8F7-8BEF-4497-88D0-0CF4F4E81687",
+      "client_id_timestamp": "1361477039",
+      "low_entropy_source": 1312,
+      "num_bookmarks_in_other_bookmark_folder": 0,
+      "num_bookmarks_on_bookmark_bar": 1,
+      "num_folders_in_other_bookmark_folder": 0,
+      "num_folders_on_bookmark_bar": 0,
+      "session_id": 0,
+      "stability": {
+         "breakpad_registration_fail": 0,
+         "breakpad_registration_ok": 0,
+         "crash_count": 0,
+         "debugger_not_present": 1,
+         "debugger_present": 0,
+         "exited_cleanly": true,
+         "incomplete_session_end_count": 0,
+         "last_timestamp_sec": "1361477044",
+         "launch_count": 1,
+         "launch_time_sec": "1361477039",
+         "page_load_count": 1,
+         "renderer_crash_count": 0,
+         "renderer_hang_count": 0,
+         "session_end_completed": true,
+         "stats_buildtime": "1359129014",
+         "stats_version": "24.0.1312.57"
+      }
+   },
+   "was": {
+      "restarted": false
+   }
+}

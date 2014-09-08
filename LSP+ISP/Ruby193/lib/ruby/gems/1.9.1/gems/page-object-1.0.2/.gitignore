@@ -1,0 +1,7 @@
+Gemfile.lock
+.bundle
+*.swp
+.idea/
+pkg
+TAGS
+chromedriver.log

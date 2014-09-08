@@ -1,0 +1,125 @@
+﻿html {
+    font-family: 'Open Sans', sans-serif;
+    width: 99%;
+}
+
+html body{
+    background-color: #e6e8e8;
+}
+
+.div-header-title {
+    background-color: white;
+    border: 1px solid #dadddd;
+    border-radius: 3px;
+    width: 35%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+}
+
+#header-title {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.controlContainer {
+    /*border:1px solid #00FF00;*/
+}
+
+.mapContainer {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 10px;
+    clear: right;
+    background-color: white;
+    border: 1px solid #dadddd;
+    border-radius: 3px;
+}
+
+.terrainMap {
+    float: left;
+    display: inline-block;
+}
+
+    .terrainMap img {
+        float: left;
+        display: block;
+        padding: 0;
+        margin: 0;
+        width: 2%;
+        height: 2%;
+    }
+
+
+.controlPanel {
+    float: left;
+    display: inline-block;
+    background-color: white;
+    margin-top: 60px;
+    border: 1px solid #dadddd;
+    border-radius: 3px;
+}
+
+    .controlPanel .row {
+        text-align: center;
+    }
+
+    .controlPanel input[type="text"], span, select, textarea {
+        width: 90%;
+        padding: 5px;
+    }
+
+
+    .controlPanel ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        text-align: center;
+    }
+
+        .controlPanel ul li {
+            display: inline-block;
+            color: #fff;
+            background-color: #036;
+            padding: .2em 1em;
+            margin: 4px 1px;
+            border-radius: 10px;
+        }
+
+    td input {
+        height: 50px;
+        width: 50px;
+    }
+
+#table-control-panel {
+    margin: 30px auto;
+}
+
+#section-main {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #edf0f0;
+    border-radius: 3px;
+    border: 1px solid #DADDDD;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#controlPanel-header {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #DADDDD;
+}
+
+#MissionControl {
+    color: #2f323a;
+    font-size: 18px;
+}
+
+#sendCommands {
+    margin-bottom: 10px;
+}

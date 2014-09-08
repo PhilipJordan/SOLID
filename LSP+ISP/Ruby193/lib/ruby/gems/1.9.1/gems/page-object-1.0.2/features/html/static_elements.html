@@ -1,0 +1,206 @@
+<html>
+<head>
+    <title>Static Elements Page</title>
+</head>
+  <body>
+    <p id='p_id' name='p_name' class='p_class'>Static Elements Page</p>
+
+    <label for="text_field_id">Text Field</label>
+    <input id="text_field_id" name="text_field_name" class="text_field_class"
+           title="text_field_title" data-field="title" size="40" type="text"/>
+
+    <input id="hidden_field_id" name="hidden_field_name" class="hidden_field_class"
+           size="40" type="hidden" value="12345"/>
+
+    <label for="text_area_id">Text Area</label>
+    <textarea rows="2" cols="20" id="text_area_id" class="text_area_class" name="text_area_name"></textarea>
+
+    <label for="sel_list_id">Select List</label>
+    <select name="sel_list_name" id="sel_list_id" class="sel_list_class">
+      <option value="option1">Test 1</option>
+      <option value="option2">Test 2</option>
+      <option value="option3">Test/Test 3</option>
+    </select>
+
+    <select multiple="multiple" id="sel_list_multiple">
+      <option value="option1" selected="true">Test 1</option>
+      <option value="option2">Test 2</option>
+      <option value="option3" selected="true">Test 3</option>
+    </select>
+
+    <img src="planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap"/>
+    <map id ="map" name="planetmap">
+      <area id="area" name="area" class="area" shape="rect" coords="0,0,82,126" href="sun.html"/>
+      <area shape="circle" coords="90,58,3" href="mercur.html"/>
+      <area shape="circle" coords="124,58,8" href="venus.html"/>
+    </map>
+
+    <canvas id="canvas" name="canvas" class="canvas" width="200" height="100"></canvas>
+    <script type="text/javascript">
+      var c=document.getElementById("myCanvas");
+      var ctx=c.getContext("2d");
+      ctx.fillStyle="#FF0000";
+      ctx.fillRect(0,0,150,75);
+    </script>
+
+    <audio controls id="audio" name="audio" class="audio">
+      <source src="04-Death_Becomes_Fur.mp4"
+              type='audio/mp4'/>
+      <source src="04-Death_Becomes_Fur.oga"
+              type='audio/ogg; codecs=vorbis'/>
+      <p>Your user agent does not support the HTML5 Audio element.</p>
+    </audio>
+
+    <video width="320" height="240" controls="controls" id="video" name="video" class="video">
+      <source src="movie.mp4" type="video/mp4" />
+      <source src="movie.ogg" type="video/ogg" />
+      Your browser does not support the video tag.
+    </video>
+
+    <svg width="100" height="100" id="the_svg">
+      <circle cx="50" cy="50" r="40" fill="red" stroke="blue" stroke-width="5" />
+    </svg>
+
+    <a href="success.html" id="link_id" name="link_name" class="link_class" title="link_title">Google Search</a>
+
+    <label for="cb_id">Checkbox</label>
+    <input id="cb_id" name="cb_name" class="cb_class" type="checkbox" value="1"/>
+
+    <label for="milk_id">Radio</label>
+    <input type="radio" id="milk_id" name="milk_name" class="milk_class" value="Milk"> Milk <br/>
+    <input type="radio" id="butter_id" name="butter_name" class="butter_class" value="Butter">Butter
+
+    <br/>
+    <label>Radio Button Group</label>
+    <input type="radio" name="fav_cheese" value="ched">Cheddar</input>
+    <input type="radio" name="fav_cheese" value="emmen">Emmental</input>
+    <input type="radio" name="fav_cheese" value="muen">Muenster</input>
+    <br/>
+
+    <div id="div_id" name="div_name" class="div_class" title="div_title">
+        page-object rocks!
+    </div>
+    <div data-entity="test">
+      found using data-entity
+    </div>
+
+    <span id="span_id" name="span_name" class="span_class" title="span_title">
+      My alert
+    </span>
+
+    <label id="label_id" name="label_name" class="label_class">
+      page-object is the best!
+    </label>
+
+    <table id='table_id' name='table_name' class='table_class' border='1'>
+      <thead>
+        <tr>
+          <th>Table</th>
+          <th>Header</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Data1</td>
+          <td>Data2</td>
+        </tr>
+        <tr>
+          <td>Data3</td>
+          <td id='cell_id' name='cell_name' class='cell_class'>Data4</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table id='table_with_thead_id' border='1'>
+      <thead>
+        <tr>
+          <th>Col1</th>
+          <th>Col2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Data1</td>
+          <td>Data2</td>
+        </tr>
+        <tr>
+          <td>Data3</td>
+          <td>Data4</td>
+        </tr>
+        <tr>
+          <td>Data5</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <form method="get" action="success.html">
+        <input id='button_id' name='button_name' class='button_class' type="submit" value="Click Me"/>
+        <input id='button_image_id' type='image' src='images/submit.gif' alt='Submit'/>
+        <button type='button' id='btn_id' name='btn_name' class='btn_class'>Click Me Too</button>
+        <input value="Disabled" disabled="true" type ="submit"/>
+    </form>
+
+    <img src="images/circle.png" id="image_id" name="image_name" class="image_class", alt="image_alt">
+
+    <form id="form_id" class="form_class" name="form_name" action="/">
+    </form>
+
+    <label for="file_field_id">File Field</label>
+    <input type="file" name="file_field_name" id="file_field_id" class="file_field_class" title="file_field_title" />
+
+    <ul id="ul_id" name="ul_name" class="ul_class">
+        <li id="li_id" name="li_name" class="li_class">Item One</li>
+        <li>Item Two</li>
+        <li>Item Three</li>
+    </ul>
+
+    <ol id="ol_id" name="ol_name" class="ol_class">
+        <li>Number One</li>
+        <li>Number Two</li>
+        <li>Number Three</li>
+    </ol>
+
+    <a href="success.html">Hello</a>
+    <a href="success.html">Hello</a>
+    <a href="success.html">Hello</a>
+
+    <input id=alert_button type=button onclick="alert('I am an alert')" value=Alert>
+    <input id=alert_button_that_reloads type=button onclick="alert('I am an alert'); location.reload()" value="Alert that Reloads">
+    <input id=confirm_button type=button onclick="this.value = confirm('set the value')" value=Confirm>
+    <input id=confirm_button_that_reloads type=button onclick="if(confirm('set the value')) location.reload()" value="Confirm that Reloads">
+    <input id=prompt_button type=button onclick='this.value = prompt("enter your name", "John Doe")' value=Prompt>
+
+    <h1 id="h1_id" class="h1_class" name="h1_name">h1's are cool</h1>
+    <h2 id="h2_id" class="h2_class" name="h2_name">h2's are cool</h2>
+    <h3 id="h3_id" class="h3_class" name="h3_name">h3's are cool</h3>
+    <h4 id="h4_id" class="h4_class" name="h4_name">h4's are cool</h4>
+    <h5 id="h5_id" class="h5_class" name="h5_name">h5's are cool</h5>
+    <h6 id="h6_id" class="h6_class" name="h6_name">h6's are cool</h6>
+
+    <a href="success.html" target="_blank">New Window</a>
+    <a href="failure.html" target="_blank">Another New Window</a>
+
+    <input type="text" id="onfocus_text_field" onfocus="document.getElementById('onfocus_test').innerHTML = 'changed by onfocus event'"/>
+    <div id="onfocus_test"></div>
+
+  <div id="parent_div">
+    <a href="success.html" id="child">Success</a>
+  </div>
+
+  <article id='article_id'>HTML 5 Article</article>
+  <header id='header_id'>HTML 5 Header</header>
+  <footer id='footer_id'>HTML 5 Footer</footer>
+
+  <details id='details_id'>
+    <summary id='summary_id'>The summary</summary>
+    The details
+  </details>
+  
+  <figure id='figure_id'>
+    <img src="images/img_pulpit.jpg" alt="The Pulpit Rock" width="304" height="228">
+  </figure>
+
+  </body>
+</html>
+
+

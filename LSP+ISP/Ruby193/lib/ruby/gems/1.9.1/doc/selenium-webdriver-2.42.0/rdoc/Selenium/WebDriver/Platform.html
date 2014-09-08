@@ -1,0 +1,1385 @@
+<?xml version="1.0" encoding="IBM437"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=IBM437" http-equiv="Content-Type" />
+
+  <title>Module: Selenium::WebDriver::Platform</title>
+
+  <link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../lib/selenium/webdriver/common/platform_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/selenium/webdriver/common/platform.rb">lib/selenium/webdriver/common/platform.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-assert_executable">#assert_executable</a></li>
+          
+          <li><a href="#method-i-assert_file">#assert_file</a></li>
+          
+          <li><a href="#method-i-bitsize">#bitsize</a></li>
+          
+          <li><a href="#method-i-cygwin-3F">#cygwin?</a></li>
+          
+          <li><a href="#method-i-cygwin_path">#cygwin_path</a></li>
+          
+          <li><a href="#method-i-engine">#engine</a></li>
+          
+          <li><a href="#method-i-exit_hook">#exit_hook</a></li>
+          
+          <li><a href="#method-i-find_binary">#find_binary</a></li>
+          
+          <li><a href="#method-i-find_in_program_files">#find_in_program_files</a></li>
+          
+          <li><a href="#method-i-home">#home</a></li>
+          
+          <li><a href="#method-i-interfaces">#interfaces</a></li>
+          
+          <li><a href="#method-i-ip">#ip</a></li>
+          
+          <li><a href="#method-i-ironruby-3F">#ironruby?</a></li>
+          
+          <li><a href="#method-i-jruby-3F">#jruby?</a></li>
+          
+          <li><a href="#method-i-linux-3F">#linux?</a></li>
+          
+          <li><a href="#method-i-localhost">#localhost</a></li>
+          
+          <li><a href="#method-i-mac-3F">#mac?</a></li>
+          
+          <li><a href="#method-i-make_writable">#make_writable</a></li>
+          
+          <li><a href="#method-i-null_device">#null_device</a></li>
+          
+          <li><a href="#method-i-os">#os</a></li>
+          
+          <li><a href="#method-i-ruby187-3F">#ruby187?</a></li>
+          
+          <li><a href="#method-i-ruby19-3F">#ruby19?</a></li>
+          
+          <li><a href="#method-i-windows-3F">#windows?</a></li>
+          
+          <li><a href="#method-i-wrap_in_quotes_if_necessary">#wrap_in_quotes_if_necessary</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../Selenium.html">Selenium</a></li>
+        
+          <li><a href="../../Selenium/Client.html">Selenium::Client</a></li>
+        
+          <li><a href="../../Selenium/Client/Base.html">Selenium::Client::Base</a></li>
+        
+          <li><a href="../../Selenium/Client/CommandError.html">Selenium::Client::CommandError</a></li>
+        
+          <li><a href="../../Selenium/Client/Driver.html">Selenium::Client::Driver</a></li>
+        
+          <li><a href="../../Selenium/Client/Extensions.html">Selenium::Client::Extensions</a></li>
+        
+          <li><a href="../../Selenium/Client/GeneratedDriver.html">Selenium::Client::GeneratedDriver</a></li>
+        
+          <li><a href="../../Selenium/Client/Idiomatic.html">Selenium::Client::Idiomatic</a></li>
+        
+          <li><a href="../../Selenium/Client/JavascriptExpressionBuilder.html">Selenium::Client::JavascriptExpressionBuilder</a></li>
+        
+          <li><a href="../../Selenium/Client/JavascriptFrameworks.html">Selenium::Client::JavascriptFrameworks</a></li>
+        
+          <li><a href="../../Selenium/Client/JavascriptFrameworks/JQuery.html">Selenium::Client::JavascriptFrameworks::JQuery</a></li>
+        
+          <li><a href="../../Selenium/Client/JavascriptFrameworks/Prototype.html">Selenium::Client::JavascriptFrameworks::Prototype</a></li>
+        
+          <li><a href="../../Selenium/Client/Protocol.html">Selenium::Client::Protocol</a></li>
+        
+          <li><a href="../../Selenium/Client/ProtocolError.html">Selenium::Client::ProtocolError</a></li>
+        
+          <li><a href="../../Selenium/Client/SeleniumHelper.html">Selenium::Client::SeleniumHelper</a></li>
+        
+          <li><a href="../../Selenium/Rake.html">Selenium::Rake</a></li>
+        
+          <li><a href="../../Selenium/Rake/MissingJarFileError.html">Selenium::Rake::MissingJarFileError</a></li>
+        
+          <li><a href="../../Selenium/Rake/ServerTask.html">Selenium::Rake::ServerTask</a></li>
+        
+          <li><a href="../../Selenium/Server.html">Selenium::Server</a></li>
+        
+          <li><a href="../../Selenium/Server/Error.html">Selenium::Server::Error</a></li>
+        
+          <li><a href="../../Selenium/WebDriver.html">Selenium::WebDriver</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/ActionBuilder.html">Selenium::WebDriver::ActionBuilder</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Alert.html">Selenium::WebDriver::Alert</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Android.html">Selenium::WebDriver::Android</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Android/Bridge.html">Selenium::WebDriver::Android::Bridge</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/BridgeHelper.html">Selenium::WebDriver::BridgeHelper</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Chrome.html">Selenium::WebDriver::Chrome</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Chrome/Bridge.html">Selenium::WebDriver::Chrome::Bridge</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Chrome/Profile.html">Selenium::WebDriver::Chrome::Profile</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Chrome/Service.html">Selenium::WebDriver::Chrome::Service</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Driver.html">Selenium::WebDriver::Driver</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/DriverExtensions.html">Selenium::WebDriver::DriverExtensions</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/DriverExtensions/HasBrowserConnection.html">Selenium::WebDriver::DriverExtensions::HasBrowserConnection</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/DriverExtensions/HasInputDevices.html">Selenium::WebDriver::DriverExtensions::HasInputDevices</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/DriverExtensions/HasLocation.html">Selenium::WebDriver::DriverExtensions::HasLocation</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/DriverExtensions/HasRemoteStatus.html">Selenium::WebDriver::DriverExtensions::HasRemoteStatus</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/DriverExtensions/HasSessionId.html">Selenium::WebDriver::DriverExtensions::HasSessionId</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/DriverExtensions/HasTouchScreen.html">Selenium::WebDriver::DriverExtensions::HasTouchScreen</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/DriverExtensions/HasWebStorage.html">Selenium::WebDriver::DriverExtensions::HasWebStorage</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/DriverExtensions/Rotatable.html">Selenium::WebDriver::DriverExtensions::Rotatable</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/DriverExtensions/TakesScreenshot.html">Selenium::WebDriver::DriverExtensions::TakesScreenshot</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/DriverExtensions/UploadsFiles.html">Selenium::WebDriver::DriverExtensions::UploadsFiles</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Element.html">Selenium::WebDriver::Element</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error.html">Selenium::WebDriver::Error</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/ElementNotVisibleError.html">Selenium::WebDriver::Error::ElementNotDisplayedError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/ElementNotSelectableError.html">Selenium::WebDriver::Error::ElementNotSelectableError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/ElementNotVisibleError.html">Selenium::WebDriver::Error::ElementNotVisibleError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/ExpectedError.html">Selenium::WebDriver::Error::ExpectedError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/IMEEngineActivationFailedError.html">Selenium::WebDriver::Error::IMEEngineActivationFailedError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/IMENotAvailableError.html">Selenium::WebDriver::Error::IMENotAvailableError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/IndexOutOfBoundsError.html">Selenium::WebDriver::Error::IndexOutOfBoundsError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/InvalidCookieDomainError.html">Selenium::WebDriver::Error::InvalidCookieDomainError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/InvalidElementCoordinatesError.html">Selenium::WebDriver::Error::InvalidElementCoordinatesError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/InvalidElementStateError.html">Selenium::WebDriver::Error::InvalidElementStateError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/InvalidSelectorError.html">Selenium::WebDriver::Error::InvalidSelectorError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/JavascriptError.html">Selenium::WebDriver::Error::JavascriptError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/MoveTargetOutOfBoundsError.html">Selenium::WebDriver::Error::MoveTargetOutOfBoundsError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/NoAlertPresentError.html">Selenium::WebDriver::Error::NoAlertOpenError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/NoAlertPresentError.html">Selenium::WebDriver::Error::NoAlertPresentError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/NoCollectionError.html">Selenium::WebDriver::Error::NoCollectionError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/NoScriptResultError.html">Selenium::WebDriver::Error::NoScriptResultError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/NoStringError.html">Selenium::WebDriver::Error::NoStringError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/NoStringLengthError.html">Selenium::WebDriver::Error::NoStringLengthError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/NoStringWrapperError.html">Selenium::WebDriver::Error::NoStringWrapperError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/NoSuchCollectionError.html">Selenium::WebDriver::Error::NoSuchCollectionError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/NoSuchDocumentError.html">Selenium::WebDriver::Error::NoSuchDocumentError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/NoSuchDriverError.html">Selenium::WebDriver::Error::NoSuchDriverError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/NoSuchElementError.html">Selenium::WebDriver::Error::NoSuchElementError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/NoSuchFrameError.html">Selenium::WebDriver::Error::NoSuchFrameError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/NoSuchWindowError.html">Selenium::WebDriver::Error::NoSuchWindowError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/NullPointerError.html">Selenium::WebDriver::Error::NullPointerError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/StaleElementReferenceError.html">Selenium::WebDriver::Error::ObsoleteElementError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/ScriptTimeOutError.html">Selenium::WebDriver::Error::ScriptTimeOutError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/ServerError.html">Selenium::WebDriver::Error::ServerError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/StaleElementReferenceError.html">Selenium::WebDriver::Error::StaleElementReferenceError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/TimeOutError.html">Selenium::WebDriver::Error::TimeOutError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/UnableToSetCookieError.html">Selenium::WebDriver::Error::UnableToSetCookieError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/JavascriptError.html">Selenium::WebDriver::Error::UnexpectedJavascriptError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/UnhandledAlertError.html">Selenium::WebDriver::Error::UnhandledAlertError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/UnknownError.html">Selenium::WebDriver::Error::UnhandledError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/UnknownCommandError.html">Selenium::WebDriver::Error::UnknownCommandError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/UnknownError.html">Selenium::WebDriver::Error::UnknownError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/UnsupportedOperationError.html">Selenium::WebDriver::Error::UnsupportedOperationError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/WebDriverError.html">Selenium::WebDriver::Error::WebDriverError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Error/XPathLookupError.html">Selenium::WebDriver::Error::XPathLookupError</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/FileReaper.html">Selenium::WebDriver::FileReaper</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Firefox.html">Selenium::WebDriver::Firefox</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Firefox/Binary.html">Selenium::WebDriver::Firefox::Binary</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Firefox/Bridge.html">Selenium::WebDriver::Firefox::Bridge</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Firefox/Extension.html">Selenium::WebDriver::Firefox::Extension</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Firefox/Launcher.html">Selenium::WebDriver::Firefox::Launcher</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Firefox/Profile.html">Selenium::WebDriver::Firefox::Profile</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Firefox/ProfilesIni.html">Selenium::WebDriver::Firefox::ProfilesIni</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Firefox/SocketLock.html">Selenium::WebDriver::Firefox::SocketLock</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Firefox/Util.html">Selenium::WebDriver::Firefox::Util</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/HTML5.html">Selenium::WebDriver::HTML5</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/HTML5/LocalStorage.html">Selenium::WebDriver::HTML5::LocalStorage</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/HTML5/SessionStorage.html">Selenium::WebDriver::HTML5::SessionStorage</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/HTML5/SharedWebStorage.html">Selenium::WebDriver::HTML5::SharedWebStorage</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/IE.html">Selenium::WebDriver::IE</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/IE/Bridge.html">Selenium::WebDriver::IE::Bridge</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/IE/Server.html">Selenium::WebDriver::IE::Server</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/IPhone.html">Selenium::WebDriver::IPhone</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/IPhone/Bridge.html">Selenium::WebDriver::IPhone::Bridge</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/JsonHelper.html">Selenium::WebDriver::JsonHelper</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Keyboard.html">Selenium::WebDriver::Keyboard</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Keys.html">Selenium::WebDriver::Keys</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/LogEntry.html">Selenium::WebDriver::LogEntry</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Logs.html">Selenium::WebDriver::Logs</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Mouse.html">Selenium::WebDriver::Mouse</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Navigation.html">Selenium::WebDriver::Navigation</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Opera.html">Selenium::WebDriver::Opera</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Opera/Bridge.html">Selenium::WebDriver::Opera::Bridge</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Opera/Service.html">Selenium::WebDriver::Opera::Service</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Options.html">Selenium::WebDriver::Options</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/PhantomJS.html">Selenium::WebDriver::PhantomJS</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/PhantomJS/Bridge.html">Selenium::WebDriver::PhantomJS::Bridge</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/PhantomJS/Service.html">Selenium::WebDriver::PhantomJS::Service</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Platform.html">Selenium::WebDriver::Platform</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/PortProber.html">Selenium::WebDriver::PortProber</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/ProfileHelper.html">Selenium::WebDriver::ProfileHelper</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/ProfileHelper/ClassMethods.html">Selenium::WebDriver::ProfileHelper::ClassMethods</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Proxy.html">Selenium::WebDriver::Proxy</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Remote.html">Selenium::WebDriver::Remote</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Remote/Bridge.html">Selenium::WebDriver::Remote::Bridge</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Remote/Capabilities.html">Selenium::WebDriver::Remote::Capabilities</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Remote/Http.html">Selenium::WebDriver::Remote::Http</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Remote/Http/Common.html">Selenium::WebDriver::Remote::Http::Common</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Remote/Http/Curb.html">Selenium::WebDriver::Remote::Http::Curb</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Remote/Http/Default.html">Selenium::WebDriver::Remote::Http::Default</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Remote/Http/Persistent.html">Selenium::WebDriver::Remote::Http::Persistent</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Remote/Response.html">Selenium::WebDriver::Remote::Response</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Safari.html">Selenium::WebDriver::Safari</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Safari/Bridge.html">Selenium::WebDriver::Safari::Bridge</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Safari/Browser.html">Selenium::WebDriver::Safari::Browser</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Safari/Extensions.html">Selenium::WebDriver::Safari::Extensions</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Safari/Extensions/Backup.html">Selenium::WebDriver::Safari::Extensions::Backup</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Safari/Options.html">Selenium::WebDriver::Safari::Options</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Safari/Server.html">Selenium::WebDriver::Safari::Server</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/SearchContext.html">Selenium::WebDriver::SearchContext</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/SocketPoller.html">Selenium::WebDriver::SocketPoller</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Support.html">Selenium::WebDriver::Support</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Support/AbstractEventListener.html">Selenium::WebDriver::Support::AbstractEventListener</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Support/BlockEventListener.html">Selenium::WebDriver::Support::BlockEventListener</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Support/Color.html">Selenium::WebDriver::Support::Color</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Support/EventFiringBridge.html">Selenium::WebDriver::Support::EventFiringBridge</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Support/Select.html">Selenium::WebDriver::Support::Select</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Support/Select/Escaper.html">Selenium::WebDriver::Support::Select::Escaper</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/TargetLocator.html">Selenium::WebDriver::TargetLocator</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Timeouts.html">Selenium::WebDriver::Timeouts</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/TouchActionBuilder.html">Selenium::WebDriver::TouchActionBuilder</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/TouchScreen.html">Selenium::WebDriver::TouchScreen</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Wait.html">Selenium::WebDriver::Wait</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Window.html">Selenium::WebDriver::Window</a></li>
+        
+          <li><a href="../../Selenium/WebDriver/Zipper.html">Selenium::WebDriver::Zipper</a></li>
+        
+          <li><a href="../../Base64.html">Base64</a></li>
+        
+          <li><a href="../../Dir.html">Dir</a></li>
+        
+          <li><a href="../../String.html">String</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">Selenium::WebDriver::Platform</h1>
+
+    <div id="description" class="description">
+      
+<p>@api private</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="assert_executable-method" class="method-detail ">
+          <a name="method-i-assert_executable"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">assert_executable</span><span
+              class="method-args">(path)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="assert_executable-source">
+<pre>
+<span class="ruby-comment"># File lib/selenium/webdriver/common/platform.rb, line 122</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">assert_executable</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">assert_file</span>(<span class="ruby-identifier">path</span>)
+
+  <span class="ruby-keyword">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">executable?</span> <span class="ruby-identifier">path</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span><span class="ruby-operator">::</span><span class="ruby-constant">WebDriverError</span>, <span class="ruby-node">&quot;not executable: #{path.inspect}&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- assert_executable-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- assert_executable-method -->
+
+      
+        <div id="assert_file-method" class="method-detail ">
+          <a name="method-i-assert_file"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">assert_file</span><span
+              class="method-args">(path)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="assert_file-source">
+<pre>
+<span class="ruby-comment"># File lib/selenium/webdriver/common/platform.rb, line 116</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">assert_file</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-keyword">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">file?</span> <span class="ruby-identifier">path</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span><span class="ruby-operator">::</span><span class="ruby-constant">WebDriverError</span>, <span class="ruby-node">&quot;not a file: #{path.inspect}&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- assert_file-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- assert_file-method -->
+
+      
+        <div id="bitsize-method" class="method-detail ">
+          <a name="method-i-bitsize"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">bitsize</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="bitsize-source">
+<pre>
+<span class="ruby-comment"># File lib/selenium/webdriver/common/platform.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">bitsize</span>
+  <span class="ruby-ivar">@bitsize</span> <span class="ruby-operator">||=</span> (
+    <span class="ruby-keyword">if</span> <span class="ruby-keyword">defined?</span>(<span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">Platform</span><span class="ruby-operator">::</span><span class="ruby-constant">ADDRESS_SIZE</span>)
+      <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">Platform</span><span class="ruby-operator">::</span><span class="ruby-constant">ADDRESS_SIZE</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-keyword">defined?</span>(<span class="ruby-constant">FFI</span>)
+      <span class="ruby-constant">FFI</span>.<span class="ruby-identifier">type_size</span>(<span class="ruby-value">:pointer</span>) <span class="ruby-operator">==</span> <span class="ruby-value">4</span> <span class="ruby-operator">?</span> <span class="ruby-value">32</span> <span class="ruby-operator">:</span> <span class="ruby-value">64</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">jruby?</span>
+      <span class="ruby-constant">Integer</span>(<span class="ruby-constant">ENV_JAVA</span>[<span class="ruby-string">'sun.arch.data.model'</span>])
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-value">1</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">4</span> <span class="ruby-operator">?</span> <span class="ruby-value">32</span> <span class="ruby-operator">:</span> <span class="ruby-value">64</span>
+    <span class="ruby-keyword">end</span>
+  )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- bitsize-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- bitsize-method -->
+
+      
+        <div id="cygwin-3F-method" class="method-detail ">
+          <a name="method-i-cygwin-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">cygwin?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="cygwin-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/selenium/webdriver/common/platform.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">cygwin?</span>
+  <span class="ruby-operator">!</span><span class="ruby-operator">!</span>(<span class="ruby-constant">RUBY_PLATFORM</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/cygwin/</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- cygwin-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- cygwin-3F-method -->
+
+      
+        <div id="cygwin_path-method" class="method-detail ">
+          <a name="method-i-cygwin_path"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">cygwin_path</span><span
+              class="method-args">(path, opts = {})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="cygwin_path-source">
+<pre>
+<span class="ruby-comment"># File lib/selenium/webdriver/common/platform.rb, line 105</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">cygwin_path</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">opts</span> = {})
+  <span class="ruby-identifier">flags</span> = []
+  <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">flags</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;--#{k}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">v</span> }
+
+  <span class="ruby-node">`cygpath #{flags.join ' '} &quot;#{path}&quot;`</span>.<span class="ruby-identifier">strip</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- cygwin_path-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- cygwin_path-method -->
+
+      
+        <div id="engine-method" class="method-detail ">
+          <a name="method-i-engine"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">engine</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="engine-source">
+<pre>
+<span class="ruby-comment"># File lib/selenium/webdriver/common/platform.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">engine</span>
+  <span class="ruby-ivar">@engine</span> <span class="ruby-operator">||=</span> (
+    <span class="ruby-keyword">if</span> <span class="ruby-keyword">defined?</span> <span class="ruby-constant">RUBY_ENGINE</span>
+      <span class="ruby-constant">RUBY_ENGINE</span>.<span class="ruby-identifier">to_sym</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-value">:ruby</span>
+    <span class="ruby-keyword">end</span>
+  )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- engine-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- engine-method -->
+
+      
+        <div id="exit_hook-method" class="method-detail ">
+          <a name="method-i-exit_hook"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">exit_hook</span><span
+              class="method-args">(&blk)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="exit_hook-source">
+<pre>
+<span class="ruby-comment"># File lib/selenium/webdriver/common/platform.rb, line 130</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">exit_hook</span>(&amp;<span class="ruby-identifier">blk</span>)
+  <span class="ruby-identifier">pid</span> = <span class="ruby-constant">Process</span>.<span class="ruby-identifier">pid</span>
+
+  <span class="ruby-identifier">at_exit</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">yield</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">Process</span>.<span class="ruby-identifier">pid</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">pid</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- exit_hook-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- exit_hook-method -->
+
+      
+        <div id="find_binary-method" class="method-detail ">
+          <a name="method-i-find_binary"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">find_binary</span><span
+              class="method-args">(*binary_names)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="find_binary-source">
+<pre>
+<span class="ruby-comment"># File lib/selenium/webdriver/common/platform.rb, line 138</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">find_binary</span>(*<span class="ruby-identifier">binary_names</span>)
+  <span class="ruby-identifier">paths</span> = <span class="ruby-constant">ENV</span>[<span class="ruby-string">'PATH'</span>].<span class="ruby-identifier">split</span>(<span class="ruby-constant">File</span><span class="ruby-operator">::</span><span class="ruby-constant">PATH_SEPARATOR</span>)
+  <span class="ruby-identifier">binary_names</span>.<span class="ruby-identifier">map!</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;#{n}.exe&quot;</span> } <span class="ruby-keyword">if</span> <span class="ruby-identifier">windows?</span>
+
+  <span class="ruby-identifier">binary_names</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">binary_name</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">paths</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">exe</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">binary_name</span>)
+      <span class="ruby-keyword">return</span> <span class="ruby-identifier">exe</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">executable?</span>(<span class="ruby-identifier">exe</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- find_binary-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- find_binary-method -->
+
+      
+        <div id="find_in_program_files-method" class="method-detail ">
+          <a name="method-i-find_in_program_files"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">find_in_program_files</span><span
+              class="method-args">(*binary_names)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="find_in_program_files-source">
+<pre>
+<span class="ruby-comment"># File lib/selenium/webdriver/common/platform.rb, line 152</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">find_in_program_files</span>(*<span class="ruby-identifier">binary_names</span>)
+  <span class="ruby-identifier">paths</span> = [
+    <span class="ruby-constant">ENV</span>[<span class="ruby-string">'PROGRAMFILES'</span>] <span class="ruby-operator">||</span> <span class="ruby-string">&quot;\\Program Files&quot;</span>,
+    <span class="ruby-constant">ENV</span>[<span class="ruby-string">'ProgramFiles(x86)'</span>] <span class="ruby-operator">||</span> <span class="ruby-string">&quot;\\Program Files (x86)&quot;</span>
+  ]
+
+  <span class="ruby-identifier">paths</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">root</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">binary_names</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">exe</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">root</span>, <span class="ruby-identifier">name</span>)
+      <span class="ruby-keyword">return</span> <span class="ruby-identifier">exe</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">executable?</span>(<span class="ruby-identifier">exe</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- find_in_program_files-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- find_in_program_files-method -->
+
+      
+        <div id="home-method" class="method-detail ">
+          <a name="method-i-home"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">home</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="home-source">
+<pre>
+<span class="ruby-comment"># File lib/selenium/webdriver/common/platform.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">home</span>
+  <span class="ruby-comment"># jruby has an issue with ENV['HOME'] on Windows</span>
+  <span class="ruby-ivar">@home</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">jruby?</span> <span class="ruby-operator">?</span> <span class="ruby-constant">ENV_JAVA</span>[<span class="ruby-string">'user.home'</span>] <span class="ruby-operator">:</span> <span class="ruby-constant">ENV</span>[<span class="ruby-string">'HOME'</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- home-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- home-method -->
+
+      
+        <div id="interfaces-method" class="method-detail ">
+          <a name="method-i-interfaces"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">interfaces</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="interfaces-source">
+<pre>
+<span class="ruby-comment"># File lib/selenium/webdriver/common/platform.rb, line 194</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">interfaces</span>
+  <span class="ruby-identifier">interfaces</span> = <span class="ruby-constant">Socket</span>.<span class="ruby-identifier">getaddrinfo</span>(<span class="ruby-string">&quot;localhost&quot;</span>, <span class="ruby-value">8080</span>).<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-identifier">e</span>[<span class="ruby-value">3</span>] }
+  <span class="ruby-identifier">interfaces</span> <span class="ruby-operator">+=</span> [<span class="ruby-string">&quot;0.0.0.0&quot;</span>, <span class="ruby-constant">Platform</span>.<span class="ruby-identifier">ip</span>]
+
+  <span class="ruby-identifier">interfaces</span>.<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">uniq</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- interfaces-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- interfaces-method -->
+
+      
+        <div id="ip-method" class="method-detail ">
+          <a name="method-i-ip"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ip</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="ip-source">
+<pre>
+<span class="ruby-comment"># File lib/selenium/webdriver/common/platform.rb, line 178</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ip</span>
+  <span class="ruby-identifier">orig</span> = <span class="ruby-constant">Socket</span>.<span class="ruby-identifier">do_not_reverse_lookup</span>
+  <span class="ruby-constant">Socket</span>.<span class="ruby-identifier">do_not_reverse_lookup</span> = <span class="ruby-keyword">true</span>
+
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-constant">UDPSocket</span>.<span class="ruby-identifier">open</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">s</span>.<span class="ruby-identifier">connect</span> <span class="ruby-string">'8.8.8.8'</span>, <span class="ruby-value">53</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">addr</span>.<span class="ruby-identifier">last</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">ensure</span>
+    <span class="ruby-constant">Socket</span>.<span class="ruby-identifier">do_not_reverse_lookup</span> = <span class="ruby-identifier">orig</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">ENETUNREACH</span>, <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">EHOSTUNREACH</span>
+  <span class="ruby-comment"># no external ip</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- ip-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- ip-method -->
+
+      
+        <div id="ironruby-3F-method" class="method-detail ">
+          <a name="method-i-ironruby-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ironruby?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="ironruby-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/selenium/webdriver/common/platform.rb, line 63</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ironruby?</span>
+  <span class="ruby-identifier">engine</span> <span class="ruby-operator">==</span> <span class="ruby-value">:ironruby</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- ironruby-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- ironruby-3F-method -->
+
+      
+        <div id="jruby-3F-method" class="method-detail ">
+          <a name="method-i-jruby-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">jruby?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="jruby-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/selenium/webdriver/common/platform.rb, line 59</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">jruby?</span>
+  <span class="ruby-identifier">engine</span> <span class="ruby-operator">==</span> <span class="ruby-value">:jruby</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- jruby-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- jruby-3F-method -->
+
+      
+        <div id="linux-3F-method" class="method-detail ">
+          <a name="method-i-linux-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">linux?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="linux-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/selenium/webdriver/common/platform.rb, line 83</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">linux?</span>
+  <span class="ruby-identifier">os</span> <span class="ruby-operator">==</span> <span class="ruby-value">:linux</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- linux-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- linux-3F-method -->
+
+      
+        <div id="localhost-method" class="method-detail ">
+          <a name="method-i-localhost"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">localhost</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="localhost-source">
+<pre>
+<span class="ruby-comment"># File lib/selenium/webdriver/common/platform.rb, line 168</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">localhost</span>
+  <span class="ruby-identifier">info</span> = <span class="ruby-constant">Socket</span>.<span class="ruby-identifier">getaddrinfo</span> <span class="ruby-string">&quot;localhost&quot;</span>, <span class="ruby-value">80</span>, <span class="ruby-constant">Socket</span><span class="ruby-operator">::</span><span class="ruby-constant">AF_INET</span>, <span class="ruby-constant">Socket</span><span class="ruby-operator">::</span><span class="ruby-constant">SOCK_STREAM</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">info</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span><span class="ruby-operator">::</span><span class="ruby-constant">WebDriverError</span>, <span class="ruby-string">&quot;unable to translate 'localhost' for TCP + IPv4&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">info</span>[<span class="ruby-value">0</span>][<span class="ruby-value">3</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- localhost-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- localhost-method -->
+
+      
+        <div id="mac-3F-method" class="method-detail ">
+          <a name="method-i-mac-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">mac?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="mac-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/selenium/webdriver/common/platform.rb, line 79</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">mac?</span>
+  <span class="ruby-identifier">os</span> <span class="ruby-operator">==</span> <span class="ruby-value">:macosx</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- mac-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- mac-3F-method -->
+
+      
+        <div id="make_writable-method" class="method-detail ">
+          <a name="method-i-make_writable"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">make_writable</span><span
+              class="method-args">(file)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="make_writable-source">
+<pre>
+<span class="ruby-comment"># File lib/selenium/webdriver/common/platform.rb, line 112</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">make_writable</span>(<span class="ruby-identifier">file</span>)
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">chmod</span> <span class="ruby-value">0766</span>, <span class="ruby-identifier">file</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- make_writable-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- make_writable-method -->
+
+      
+        <div id="null_device-method" class="method-detail ">
+          <a name="method-i-null_device"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">null_device</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="null_device-source">
+<pre>
+<span class="ruby-comment"># File lib/selenium/webdriver/common/platform.rb, line 91</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">null_device</span>
+  <span class="ruby-ivar">@null_device</span> <span class="ruby-operator">||=</span> (
+    <span class="ruby-keyword">if</span> <span class="ruby-keyword">defined?</span>(<span class="ruby-constant">File</span><span class="ruby-operator">::</span><span class="ruby-constant">NULL</span>)
+      <span class="ruby-constant">File</span><span class="ruby-operator">::</span><span class="ruby-constant">NULL</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-constant">Platform</span>.<span class="ruby-identifier">windows?</span> <span class="ruby-operator">?</span> <span class="ruby-string">'NUL'</span> <span class="ruby-operator">:</span> <span class="ruby-string">'/dev/null'</span>
+    <span class="ruby-keyword">end</span>
+  )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- null_device-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- null_device-method -->
+
+      
+        <div id="os-method" class="method-detail ">
+          <a name="method-i-os"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">os</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="os-source">
+<pre>
+<span class="ruby-comment"># File lib/selenium/webdriver/common/platform.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">os</span>
+  <span class="ruby-ivar">@os</span> <span class="ruby-operator">||=</span> (
+    <span class="ruby-identifier">host_os</span> = <span class="ruby-constant">RbConfig</span><span class="ruby-operator">::</span><span class="ruby-constant">CONFIG</span>[<span class="ruby-string">'host_os'</span>]
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">host_os</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-regexp">/mswin|msys|mingw|cygwin|bccwin|wince|emc/</span>
+      <span class="ruby-value">:windows</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-regexp">/darwin|mac os/</span>
+      <span class="ruby-value">:macosx</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-regexp">/linux/</span>
+      <span class="ruby-value">:linux</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-regexp">/solaris|bsd/</span>
+      <span class="ruby-value">:unix</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span><span class="ruby-operator">::</span><span class="ruby-constant">WebDriverError</span>, <span class="ruby-node">&quot;unknown os: #{host_os.inspect}&quot;</span>
+    <span class="ruby-keyword">end</span>
+  )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- os-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- os-method -->
+
+      
+        <div id="ruby187-3F-method" class="method-detail ">
+          <a name="method-i-ruby187-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ruby187?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="ruby187-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/selenium/webdriver/common/platform.rb, line 67</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ruby187?</span>
+  <span class="ruby-operator">!</span><span class="ruby-operator">!</span>(<span class="ruby-constant">RUBY_VERSION</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^1\.8\.7/</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- ruby187-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- ruby187-3F-method -->
+
+      
+        <div id="ruby19-3F-method" class="method-detail ">
+          <a name="method-i-ruby19-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ruby19?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="ruby19-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/selenium/webdriver/common/platform.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ruby19?</span>
+  <span class="ruby-operator">!</span><span class="ruby-operator">!</span>(<span class="ruby-constant">RUBY_VERSION</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^1\.9/</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- ruby19-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- ruby19-3F-method -->
+
+      
+        <div id="windows-3F-method" class="method-detail ">
+          <a name="method-i-windows-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">windows?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="windows-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/selenium/webdriver/common/platform.rb, line 75</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">windows?</span>
+  <span class="ruby-identifier">os</span> <span class="ruby-operator">==</span> <span class="ruby-value">:windows</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- windows-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- windows-3F-method -->
+
+      
+        <div id="wrap_in_quotes_if_necessary-method" class="method-detail ">
+          <a name="method-i-wrap_in_quotes_if_necessary"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">wrap_in_quotes_if_necessary</span><span
+              class="method-args">(str)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="wrap_in_quotes_if_necessary-source">
+<pre>
+<span class="ruby-comment"># File lib/selenium/webdriver/common/platform.rb, line 101</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">wrap_in_quotes_if_necessary</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-identifier">windows?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">cygwin?</span> <span class="ruby-operator">?</span> <span class="ruby-node">%{&quot;#{str}&quot;}</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">str</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- wrap_in_quotes_if_necessary-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- wrap_in_quotes_if_necessary-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

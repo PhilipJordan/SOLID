@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="IBM437"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=IBM437" http-equiv="Content-Type" />
+
+  <title>Class: Faker::Internet</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/faker/internet_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/faker/internet.rb">lib/faker/internet.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Base</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-domain_name">::domain_name</a></li>
+          
+          <li><a href="#method-c-domain_suffix">::domain_suffix</a></li>
+          
+          <li><a href="#method-c-domain_word">::domain_word</a></li>
+          
+          <li><a href="#method-c-email">::email</a></li>
+          
+          <li><a href="#method-c-fix_umlauts">::fix_umlauts</a></li>
+          
+          <li><a href="#method-c-free_email">::free_email</a></li>
+          
+          <li><a href="#method-c-ip_v4_address">::ip_v4_address</a></li>
+          
+          <li><a href="#method-c-ip_v6_address">::ip_v6_address</a></li>
+          
+          <li><a href="#method-c-mac_address">::mac_address</a></li>
+          
+          <li><a href="#method-c-password">::password</a></li>
+          
+          <li><a href="#method-c-safe_email">::safe_email</a></li>
+          
+          <li><a href="#method-c-slug">::slug</a></li>
+          
+          <li><a href="#method-c-url">::url</a></li>
+          
+          <li><a href="#method-c-user_name">::user_name</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Faker.html">Faker</a></li>
+        
+          <li><a href="../Faker/Address.html">Faker::Address</a></li>
+        
+          <li><a href="../Faker/Avatar.html">Faker::Avatar</a></li>
+        
+          <li><a href="../Faker/Base.html">Faker::Base</a></li>
+        
+          <li><a href="../Faker/Bitcoin.html">Faker::Bitcoin</a></li>
+        
+          <li><a href="../Faker/Business.html">Faker::Business</a></li>
+        
+          <li><a href="../Faker/Code.html">Faker::Code</a></li>
+        
+          <li><a href="../Faker/Commerce.html">Faker::Commerce</a></li>
+        
+          <li><a href="../Faker/Company.html">Faker::Company</a></li>
+        
+          <li><a href="../Faker/Config.html">Faker::Config</a></li>
+        
+          <li><a href="../Faker/Date.html">Faker::Date</a></li>
+        
+          <li><a href="../Faker/Finance.html">Faker::Finance</a></li>
+        
+          <li><a href="../Faker/Hacker.html">Faker::Hacker</a></li>
+        
+          <li><a href="../Faker/Internet.html">Faker::Internet</a></li>
+        
+          <li><a href="../Faker/Lorem.html">Faker::Lorem</a></li>
+        
+          <li><a href="../Faker/Name.html">Faker::Name</a></li>
+        
+          <li><a href="../Faker/Number.html">Faker::Number</a></li>
+        
+          <li><a href="../Faker/PhoneNumber.html">Faker::PhoneNumber</a></li>
+        
+          <li><a href="../Faker/Team.html">Faker::Team</a></li>
+        
+          <li><a href="../Faker/Time.html">Faker::Time</a></li>
+        
+          <li><a href="../Array.html">Array</a></li>
+        
+          <li><a href="../Object.html">Object</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Faker::Internet</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="domain_name-method" class="method-detail ">
+          <a name="method-c-domain_name"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">domain_name</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="domain_name-source">
+<pre>
+<span class="ruby-comment"># File lib/faker/internet.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">domain_name</span>
+  [ <span class="ruby-identifier">fix_umlauts</span>(<span class="ruby-identifier">domain_word</span>), <span class="ruby-identifier">domain_suffix</span> ].<span class="ruby-identifier">join</span>(<span class="ruby-string">'.'</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- domain_name-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- domain_name-method -->
+
+      
+        <div id="domain_suffix-method" class="method-detail ">
+          <a name="method-c-domain_suffix"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">domain_suffix</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="domain_suffix-source">
+<pre>
+<span class="ruby-comment"># File lib/faker/internet.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">domain_suffix</span>
+  <span class="ruby-identifier">fetch</span>(<span class="ruby-string">'internet.domain_suffix'</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- domain_suffix-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- domain_suffix-method -->
+
+      
+        <div id="domain_word-method" class="method-detail ">
+          <a name="method-c-domain_word"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">domain_word</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="domain_word-source">
+<pre>
+<span class="ruby-comment"># File lib/faker/internet.rb, line 73</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">domain_word</span>
+  <span class="ruby-constant">Company</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">' '</span>).<span class="ruby-identifier">first</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/\W/</span>, <span class="ruby-string">''</span>).<span class="ruby-identifier">downcase</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- domain_word-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- domain_word-method -->
+
+      
+        <div id="email-method" class="method-detail ">
+          <a name="method-c-email"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">email</span><span
+              class="method-args">(name = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="email-source">
+<pre>
+<span class="ruby-comment"># File lib/faker/internet.rb, line 4</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">email</span>(<span class="ruby-identifier">name</span> = <span class="ruby-keyword">nil</span>)
+  [ <span class="ruby-identifier">user_name</span>(<span class="ruby-identifier">name</span>), <span class="ruby-identifier">domain_name</span> ].<span class="ruby-identifier">join</span>(<span class="ruby-string">'@'</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- email-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- email-method -->
+
+      
+        <div id="fix_umlauts-method" class="method-detail ">
+          <a name="method-c-fix_umlauts"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">fix_umlauts</span><span
+              class="method-args">(string)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="fix_umlauts-source">
+<pre>
+<span class="ruby-comment"># File lib/faker/internet.rb, line 62</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">fix_umlauts</span>(<span class="ruby-identifier">string</span>)
+  <span class="ruby-identifier">string</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/[äöüß]/</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">match</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">case</span> <span class="ruby-identifier">match</span>.<span class="ruby-identifier">downcase</span>
+          <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;ä&quot;</span> <span class="ruby-string">'ae'</span>
+          <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;ö&quot;</span> <span class="ruby-string">'oe'</span>
+          <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;ü&quot;</span> <span class="ruby-string">'ue'</span>
+          <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;ß&quot;</span> <span class="ruby-string">'ss'</span>
+      <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- fix_umlauts-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- fix_umlauts-method -->
+
+      
+        <div id="free_email-method" class="method-detail ">
+          <a name="method-c-free_email"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">free_email</span><span
+              class="method-args">(name = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="free_email-source">
+<pre>
+<span class="ruby-comment"># File lib/faker/internet.rb, line 8</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">free_email</span>(<span class="ruby-identifier">name</span> = <span class="ruby-keyword">nil</span>)
+  [ <span class="ruby-identifier">user_name</span>(<span class="ruby-identifier">name</span>), <span class="ruby-identifier">fetch</span>(<span class="ruby-string">'internet.free_email'</span>) ].<span class="ruby-identifier">join</span>(<span class="ruby-string">'@'</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- free_email-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- free_email-method -->
+
+      
+        <div id="ip_v4_address-method" class="method-detail ">
+          <a name="method-c-ip_v4_address"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ip_v4_address</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="ip_v4_address-source">
+<pre>
+<span class="ruby-comment"># File lib/faker/internet.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ip_v4_address</span>
+  <span class="ruby-identifier">ary</span> = (<span class="ruby-value">2</span><span class="ruby-operator">..</span><span class="ruby-value">254</span>).<span class="ruby-identifier">to_a</span>
+  [<span class="ruby-identifier">ary</span>.<span class="ruby-identifier">sample</span>,
+  <span class="ruby-identifier">ary</span>.<span class="ruby-identifier">sample</span>,
+  <span class="ruby-identifier">ary</span>.<span class="ruby-identifier">sample</span>,
+  <span class="ruby-identifier">ary</span>.<span class="ruby-identifier">sample</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">'.'</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- ip_v4_address-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- ip_v4_address-method -->
+
+      
+        <div id="ip_v6_address-method" class="method-detail ">
+          <a name="method-c-ip_v6_address"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ip_v6_address</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="ip_v6_address-source">
+<pre>
+<span class="ruby-comment"># File lib/faker/internet.rb, line 95</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ip_v6_address</span>
+  <span class="ruby-identifier">@@ip_v6_space</span> <span class="ruby-operator">||=</span> (<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">65535</span>).<span class="ruby-identifier">to_a</span>
+  <span class="ruby-identifier">container</span> = (<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">8</span>).<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">_</span><span class="ruby-operator">|</span> <span class="ruby-identifier">@@ip_v6_space</span>.<span class="ruby-identifier">sample</span> }
+  <span class="ruby-identifier">container</span>.<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span> <span class="ruby-identifier">n</span>.<span class="ruby-identifier">to_s</span>(<span class="ruby-value">16</span>) }.<span class="ruby-identifier">join</span>(<span class="ruby-string">':'</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- ip_v6_address-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- ip_v6_address-method -->
+
+      
+        <div id="mac_address-method" class="method-detail ">
+          <a name="method-c-mac_address"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">mac_address</span><span
+              class="method-args">(prefix='')</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="mac_address-source">
+<pre>
+<span class="ruby-comment"># File lib/faker/internet.rb, line 81</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">mac_address</span>(<span class="ruby-identifier">prefix</span>=<span class="ruby-string">''</span>)
+  <span class="ruby-identifier">prefix_digits</span> = <span class="ruby-identifier">prefix</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">':'</span>).<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">d</span><span class="ruby-operator">|</span> <span class="ruby-identifier">d</span>.<span class="ruby-identifier">to_i</span>(<span class="ruby-value">16</span>) }
+  <span class="ruby-identifier">address_digits</span> = (<span class="ruby-value">6</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">prefix_digits</span>.<span class="ruby-identifier">size</span>).<span class="ruby-identifier">times</span>.<span class="ruby-identifier">map</span>{ <span class="ruby-identifier">rand</span>(<span class="ruby-value">256</span>) }
+  (<span class="ruby-identifier">prefix_digits</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">address_digits</span>).<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">d</span><span class="ruby-operator">|</span> <span class="ruby-string">'%02x'</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">d</span> }.<span class="ruby-identifier">join</span>(<span class="ruby-string">':'</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- mac_address-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- mac_address-method -->
+
+      
+        <div id="password-method" class="method-detail ">
+          <a name="method-c-password"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">password</span><span
+              class="method-args">(min_length = 8, max_length = 16)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="password-source">
+<pre>
+<span class="ruby-comment"># File lib/faker/internet.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">password</span>(<span class="ruby-identifier">min_length</span> = <span class="ruby-value">8</span>, <span class="ruby-identifier">max_length</span> = <span class="ruby-value">16</span>)
+  <span class="ruby-identifier">temp</span> = <span class="ruby-constant">Lorem</span>.<span class="ruby-identifier">characters</span>(<span class="ruby-identifier">min_length</span>)
+  <span class="ruby-identifier">diff_length</span> = <span class="ruby-identifier">max_length</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">min_length</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">diff_length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">diff_rand</span> = <span class="ruby-identifier">rand</span>(<span class="ruby-identifier">diff_length</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>)
+    <span class="ruby-identifier">temp</span> <span class="ruby-operator">+=</span> <span class="ruby-constant">Lorem</span>.<span class="ruby-identifier">characters</span>(<span class="ruby-identifier">diff_rand</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">temp</span> = <span class="ruby-identifier">temp</span>[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-identifier">min_length</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">min_length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">temp</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- password-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- password-method -->
+
+      
+        <div id="safe_email-method" class="method-detail ">
+          <a name="method-c-safe_email"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">safe_email</span><span
+              class="method-args">(name = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="safe_email-source">
+<pre>
+<span class="ruby-comment"># File lib/faker/internet.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">safe_email</span>(<span class="ruby-identifier">name</span> = <span class="ruby-keyword">nil</span>)
+  [<span class="ruby-identifier">user_name</span>(<span class="ruby-identifier">name</span>), <span class="ruby-string">'example.'</span><span class="ruby-operator">+</span> <span class="ruby-node">]org com net]</span>.<span class="ruby-identifier">shuffle</span>.<span class="ruby-identifier">first</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">'@'</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- safe_email-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- safe_email-method -->
+
+      
+        <div id="slug-method" class="method-detail ">
+          <a name="method-c-slug"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">slug</span><span
+              class="method-args">(words = nil, glue = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="slug-source">
+<pre>
+<span class="ruby-comment"># File lib/faker/internet.rb, line 105</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">slug</span>(<span class="ruby-identifier">words</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">glue</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">glue</span> <span class="ruby-operator">||=</span> <span class="ruby-node">]- _ .]</span>.<span class="ruby-identifier">sample</span>
+  (<span class="ruby-identifier">words</span> <span class="ruby-operator">||</span> <span class="ruby-constant">Faker</span><span class="ruby-operator">::</span><span class="ruby-constant">Lorem</span><span class="ruby-operator">::</span><span class="ruby-identifier">words</span>(<span class="ruby-value">2</span>).<span class="ruby-identifier">join</span>(<span class="ruby-string">' '</span>)).<span class="ruby-identifier">gsub</span>(<span class="ruby-string">' '</span>, <span class="ruby-identifier">glue</span>).<span class="ruby-identifier">downcase</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- slug-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- slug-method -->
+
+      
+        <div id="url-method" class="method-detail ">
+          <a name="method-c-url"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">url</span><span
+              class="method-args">(host = domain_name, path = "/#{user_name}")</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="url-source">
+<pre>
+<span class="ruby-comment"># File lib/faker/internet.rb, line 101</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">url</span>(<span class="ruby-identifier">host</span> = <span class="ruby-identifier">domain_name</span>, <span class="ruby-identifier">path</span> = <span class="ruby-node">&quot;/#{user_name}&quot;</span>)
+  <span class="ruby-node">&quot;http://#{host}#{path}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- url-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- url-method -->
+
+      
+        <div id="user_name-method" class="method-detail ">
+          <a name="method-c-user_name"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">user_name</span><span
+              class="method-args">(specifier = nil, separators = %w(. _))</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="user_name-source">
+<pre>
+<span class="ruby-comment"># File lib/faker/internet.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">user_name</span>(<span class="ruby-identifier">specifier</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">separators</span> = <span class="ruby-node">%(. _)</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">specifier</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">String</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">specifier</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/\w+/</span>).<span class="ruby-identifier">shuffle</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">separators</span>.<span class="ruby-identifier">sample</span>).<span class="ruby-identifier">downcase</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">specifier</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">Integer</span>
+    <span class="ruby-identifier">tries</span> = <span class="ruby-value">0</span> <span class="ruby-comment"># Don't try forever in case we get something like 1_000_000.</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">result</span> = <span class="ruby-identifier">user_name</span> <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">separators</span>
+      <span class="ruby-identifier">tries</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword">end</span> <span class="ruby-keyword">while</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">specifier</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">tries</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">7</span>
+    <span class="ruby-keyword">until</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">specifier</span>
+      <span class="ruby-identifier">result</span> = <span class="ruby-identifier">result</span> * <span class="ruby-value">2</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">specifier</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">Range</span>
+    <span class="ruby-identifier">tries</span> = <span class="ruby-value">0</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">result</span> = <span class="ruby-identifier">user_name</span> <span class="ruby-identifier">specifier</span>.<span class="ruby-identifier">min</span>, <span class="ruby-identifier">separators</span>
+      <span class="ruby-identifier">tries</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword">end</span> <span class="ruby-keyword">while</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">specifier</span>.<span class="ruby-identifier">include?</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">length</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">tries</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">7</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>[<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">specifier</span>.<span class="ruby-identifier">max</span>]
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">fix_umlauts</span>([
+    <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span> { <span class="ruby-constant">Name</span>.<span class="ruby-identifier">first_name</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/\W/</span>, <span class="ruby-string">''</span>).<span class="ruby-identifier">downcase</span> },
+    <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span> {
+      [ <span class="ruby-constant">Name</span>.<span class="ruby-identifier">first_name</span>, <span class="ruby-constant">Name</span>.<span class="ruby-identifier">last_name</span> ].<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">n</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/\W/</span>, <span class="ruby-string">''</span>)
+      }.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">separators</span>.<span class="ruby-identifier">sample</span>).<span class="ruby-identifier">downcase</span> }
+  ].<span class="ruby-identifier">sample</span>.<span class="ruby-identifier">call</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- user_name-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- user_name-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+
