@@ -62,15 +62,14 @@ namespace CentralCommand.Controllers
         }
 
         [HttpPost]
-        public JsonResult UpdateObstacles(List<string> locations)
+        public JsonResult UpdateObstacles(List<ObstacleViewModel> inputs)
         {
-            if(locations == null)
+            if (inputs == null)
                 return Json(new MissionResponseViewModel { Success = false, Obstacles = new List<MapPositionViewModel>() });
 
-            var distinctLocations = (from location in locations 
-                       select location).Distinct().ToList<string>();
+            var distinctLocations = inputs.GroupBy(o => o.Coordinates).Select(g => g.Last()).Distinct();
 
-            foreach(var input in distinctLocations)
+            foreach (var input in distinctLocations)
             {
                 Obstacle obstacle = CreateObstacle(input);
                 Planet.AddObstacle(obstacle);
@@ -81,10 +80,14 @@ namespace CentralCommand.Controllers
             return Json(new MissionResponseViewModel { Success = true, Obstacles = updatedObstacles });
         }
 
-        private static Obstacle CreateObstacle(string input)
+        private Obstacle CreateObstacle(ObstacleViewModel input)
         {
-            var coordinates = input.Split('_');
+            var coordinates = input.Coordinates.Split('_');
             Point location = new Point(int.Parse(coordinates[0]), int.Parse(coordinates[1]));
+            if (input.Type.Equals("Alien", StringComparison.OrdinalIgnoreCase))
+            {
+                return new Alien(Planet, location);
+            }
             return new Obstacle(location);
         }
 
@@ -92,6 +95,12 @@ namespace CentralCommand.Controllers
         public JsonResult SendCommands(List<string> commands)
         {
             var oldCollection = Planet.Obstacles.ToList();
+            var removedObstacles = oldCollection.Where(o => o.GetType() == typeof(Alien)).Select(x =>
+                new MapPositionViewModel
+                {
+                    Location = x.Location.X + "_" + x.Location.Y,
+                    Image = "Ground.png"
+                }).ToList();
             var originalPosition = Vehicle.Location.X + "_" + Vehicle.Location.Y;
             var commandString = String.Join(",", commands);
 
@@ -101,14 +110,13 @@ namespace CentralCommand.Controllers
             var newCollection = Planet.Obstacles.ToList();
 
             var updatedObstacles = ConvertToViewModels(Planet.Obstacles);
-            var removedObstacles = oldCollection.Except(newCollection).Select(x =>
+            removedObstacles.AddRange(oldCollection.Except(newCollection).Select(x =>
                 new MapPositionViewModel
                 {
                     Location = x.Location.X + "_" + x.Location.Y,
                     Image = "Ground.png"
-                }).ToList();
+                }).ToList());
 
-            var rovers_new_position = Vehicle.Location.X + "_" + Vehicle.Location.Y;
             var roverNewPosition = Vehicle.Location.X + "_" + Vehicle.Location.Y;
             var roverFacing = GetFacingAsString(Vehicle.Facing);
 
@@ -127,7 +135,7 @@ namespace CentralCommand.Controllers
                 new MapPositionViewModel
                 {
                     Location = x.Location.X + "_" + x.Location.Y,
-                    Image = x.GetType() == typeof(Crater) ? "crater.jpg" : "rock.png"
+                    Image = x.GetType() == typeof(Crater) ? "crater.jpg" : x.GetType() == typeof(Alien) ? "alien.png" :"rock.png"
                 }).ToList();
         }
 

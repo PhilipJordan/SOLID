@@ -2,7 +2,7 @@
 {
     public class Obstacle
     {
-        public Point Location { get; private set; }
+        public Point Location { get; protected set; }
 
         public Obstacle(Point location)
         {

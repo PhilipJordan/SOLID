@@ -3,9 +3,9 @@
     width: 99%;
 }
 
-html body{
-    background-color: #e6e8e8;
-}
+    html body {
+        background-color: #e6e8e8;
+    }
 
 .div-header-title {
     background-color: white;
@@ -88,10 +88,14 @@ html body{
             border-radius: 10px;
         }
 
-    td input {
-        height: 50px;
-        width: 50px;
-    }
+            .controlPanel ul li.alien {
+                background-color: #b41a0e;
+            }
+
+td input {
+    height: 50px;
+    width: 50px;
+}
 
 #table-control-panel {
     margin: 30px auto;

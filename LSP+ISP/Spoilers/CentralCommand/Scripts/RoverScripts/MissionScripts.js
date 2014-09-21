@@ -5,13 +5,25 @@ function pagePrep() {
         var element = this;
         var location = element.id;
 
-        $("#newObstacles").append('<li>' + location + '</li>');
+        $("#newObstacles").append('<li class="rock">' + location + '</li>');
+    }).bind("contextmenu", function () {
+        var element = this;
+        var location = element.id;
+
+        $("#newObstacles").append('<li class="alien">' + location + '</li>');
+        return false; // Disable default context menu behavior
     });
 
     $("#addObstacles").click(function () {
         var element = $("#newObstacles");
         var itemsToSend = new Array();
-        var callback = function (index, element) { itemsToSend[index] = $(element).text(); };
+        var callback = function(index, element) {
+            var jqElement = $(element);
+            itemsToSend[index] = {
+                Coordinates: jqElement.text(),
+                Type: jqElement.attr('class')
+            };
+        };
 
         iterateListItems(callback, element);
         UpdateObstaclesOnServer(itemsToSend, obstacleUpdateSuccess, wtf);
@@ -54,8 +66,8 @@ function pagePrep() {
     function obstacleUpdateSuccess(result)
     {
         if (result.Success) {
-            $(result.Obstacles).each(updateMapLocation);
             $(result.RemovedObstacles).each(updateMapLocation);
+            $(result.Obstacles).each(updateMapLocation);
             emptyListElement($("#newObstacles"));
         }
         else { alert("Unable to update obstacles. Did you click on the map to add any?");}
@@ -108,7 +120,7 @@ function pagePrep() {
             type: 'post',
             datatype: 'json',
             url: "../Mission/UpdateObstacles",
-            data: JSON.stringify({ locations: itemsToSend }),
+            data: JSON.stringify(itemsToSend),
             contentType: 'application/json; charset=utf-8',
             cache: false,
             success: callback,

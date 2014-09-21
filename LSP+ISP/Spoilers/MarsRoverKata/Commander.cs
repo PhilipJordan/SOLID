@@ -1,10 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using MarsRoverKata.Commands;
 
 namespace MarsRoverKata
 {
     public class Commander
     {
+        public event EventHandler CommandExecuted;
+
         public List<ICommand> Commands { get; set; }
 
         public Commander()
@@ -26,10 +29,20 @@ namespace MarsRoverKata
         {
             foreach (var command in Commands)
             {
-                if (!command.Execute())
+                var success = command.Execute();
+                OnCommandExecuted();
+                if (!success)
                     return false;
             }
             return true;
+        }
+
+        private void OnCommandExecuted()
+        {
+            if (CommandExecuted != null)
+            {
+                CommandExecuted(this, EventArgs.Empty);
+            }
         }
     }
 }

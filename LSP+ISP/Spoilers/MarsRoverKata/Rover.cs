@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace MarsRoverKata
 {
-    public class Rover
+    public class Rover : IMovable
     {
         public Point Location { get; set; }
         public Direction Facing { get; set; }
