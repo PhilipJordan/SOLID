@@ -63,7 +63,7 @@ namespace MarsRoverKata
             string input = Console.ReadLine();
             while (!string.IsNullOrWhiteSpace(input))
             {
-                Obstacle obstacle = CreateObstacle(input);
+                IObstacle obstacle = CreateObstacle(input);
                 mars.AddObstacle(obstacle);
                 input = Console.ReadLine();
             }
@@ -77,7 +77,7 @@ namespace MarsRoverKata
             Console.WriteLine("Press [Enter] with no values when done.");
         }
 
-        private static Obstacle CreateObstacle(string input)
+        private static IObstacle CreateObstacle(string input)
         {
             string[] coordinates = input.Split(',');
             var location = new Point(int.Parse(coordinates[0]), int.Parse(coordinates[1]));

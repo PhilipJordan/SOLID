@@ -1,6 +1,6 @@
 ﻿namespace MarsRoverKata
 {
-    public class Obstacle
+    public class Obstacle : IObstacle
     {
         public Point Location { get; protected set; }
 

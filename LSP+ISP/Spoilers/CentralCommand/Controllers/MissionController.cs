@@ -73,7 +73,7 @@ namespace CentralCommand.Controllers
 
             foreach (var input in distinctLocations)
             {
-                Obstacle obstacle = CreateObstacle(input);
+                IObstacle obstacle = CreateObstacle(input);
                 Planet.AddObstacle(obstacle);
             }
 
@@ -82,7 +82,7 @@ namespace CentralCommand.Controllers
             return Json(new MissionResponseViewModel { Success = true, Obstacles = updatedObstacles });
         }
 
-        private Obstacle CreateObstacle(ObstacleViewModel input)
+        private IObstacle CreateObstacle(ObstacleViewModel input)
         {
             var coordinates = input.Coordinates.Split('_');
             Point location = new Point(int.Parse(coordinates[0]), int.Parse(coordinates[1]));
@@ -131,7 +131,7 @@ namespace CentralCommand.Controllers
                                                      });
         }
 
-        private List<MapPositionViewModel> ConvertToViewModels(IReadOnlyList<Obstacle> obstacles)
+        private List<MapPositionViewModel> ConvertToViewModels(IEnumerable<IObstacle> obstacles)
         {
             return obstacles.Select(x =>
                 new MapPositionViewModel

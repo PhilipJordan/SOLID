@@ -11,8 +11,8 @@ namespace MarsRoverKata
         public Size Bounds { get; private set; }
         public Point CenterOfThePlanet { get; private set; }
 
-        private readonly List<Obstacle> _obstacles;
-        public IReadOnlyList<Obstacle> Obstacles
+        private readonly List<IObstacle> _obstacles;
+        public IReadOnlyList<IObstacle> Obstacles
         {
             get { return _obstacles; }
         }
@@ -22,7 +22,7 @@ namespace MarsRoverKata
             AlienBehavior = new AlienBehavior();
             Bounds = new Size(50, 50);
             CenterOfThePlanet = new Point(Bounds.Width / 2, Bounds.Height / 2);
-            _obstacles = new List<Obstacle>();
+            _obstacles = new List<IObstacle>();
         }
 
         public void UpdateAliens()
@@ -33,12 +33,12 @@ namespace MarsRoverKata
             }
         }
 
-        public void AddObstacle(Obstacle obstacle)
+        public void AddObstacle(IObstacle obstacle)
         {
             _obstacles.Add(obstacle);
         }
 
-        public void RemoveObstacle(Obstacle obstacle)
+        public void RemoveObstacle(IObstacle obstacle)
         {
             _obstacles.Remove(obstacle);
         }
