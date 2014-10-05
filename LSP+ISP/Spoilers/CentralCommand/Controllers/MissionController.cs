@@ -41,12 +41,6 @@ namespace CentralCommand.Controllers
 
         public ActionResult Index()
         {
-            MissionManager = new MissionManager(new Rover(new Mars()));
-            return View();
-        }
-
-        public ActionResult Staging(MissionViewModel viewModel)
-        {
             var initialMap = new List<List<string>>();
             for (int i = 0; i < 50; i++)
             {
@@ -56,9 +50,17 @@ namespace CentralCommand.Controllers
                     initialMap.Add(GetRoverRow(Vehicle));
             }
             
-            viewModel.Map = initialMap;
+            var viewModel = new MissionViewModel
+            {
+                Map = initialMap
+            };
+            return View(viewModel);
+        }
 
-            return PartialView(viewModel);
+        public ActionResult Reset()
+        {
+            MissionManager = null;
+            return RedirectToAction("Index");
         }
 
         [HttpPost]
