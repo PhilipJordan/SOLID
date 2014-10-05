@@ -1,10 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 
 namespace MarsRoverKata
 {
     public class Mars 
     {
+        private AlienBehavior AlienBehavior { get; set; }
         public Size Bounds { get; private set; }
         public Point CenterOfThePlanet { get; private set; }
 
@@ -16,9 +19,18 @@ namespace MarsRoverKata
 
         public Mars()
         {
+            AlienBehavior = new AlienBehavior();
             Bounds = new Size(50, 50);
             CenterOfThePlanet = new Point(Bounds.Width / 2, Bounds.Height / 2);
             _obstacles = new List<Obstacle>();
+        }
+
+        public void UpdateAliens()
+        {
+            foreach (var alien in Obstacles.OfType<Alien>())
+            {
+                AlienBehavior.MoveAlien(alien);
+            }
         }
 
         public void AddObstacle(Obstacle obstacle)

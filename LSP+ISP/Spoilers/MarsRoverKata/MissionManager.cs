@@ -21,25 +21,7 @@ namespace MarsRoverKata
 
         private void UpdateAliens(object sender, EventArgs e)
         {
-            var random = new Random();
-            foreach (var alien in Planet.Obstacles.OfType<Alien>())
-            {
-                switch (random.Next(1, 4))
-                {
-                    case 1:
-                        new ForwardCommand(alien).Execute();
-                        break;
-                    case 2:
-                        new BackwardCommand(alien).Execute();
-                        break;
-                    case 3:
-                        new TurnLeftCommand(alien).Execute();
-                        break;
-                    case 4:
-                        new TurnRightCommand(alien).Execute();
-                        break;
-                }
-            }
+            Planet.UpdateAliens();
         }
 
         public string AcceptCommands(String commandString)

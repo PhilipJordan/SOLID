@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Alien.cs" />
+    <Compile Include="AlienBehavior.cs" />
     <Compile Include="Commander.cs" />
     <Compile Include="Commands\BackwardCommand.cs" />
     <Compile Include="Commands\FireMissileCommand.cs" />
