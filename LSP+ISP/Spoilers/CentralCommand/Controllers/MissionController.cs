@@ -97,7 +97,7 @@ namespace CentralCommand.Controllers
         public JsonResult SendCommands(List<string> commands)
         {
             var oldCollection = Planet.Obstacles.ToList();
-            var removedObstacles = oldCollection.Where(o => o.GetType() == typeof(Alien)).Select(x =>
+            var removedObstacles = oldCollection.OfType<IMovable>().Select(x =>
                 new MapPositionViewModel
                 {
                     Location = x.Location.X + "_" + x.Location.Y,

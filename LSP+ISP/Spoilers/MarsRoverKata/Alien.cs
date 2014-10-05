@@ -8,7 +8,7 @@ namespace MarsRoverKata
 {
     public class Alien : Obstacle, IMovable
     {
-        public Direction Facing { get; set; }
+        public Direction Facing { get; private set; }
 
         public Mars Mars { get; private set; }
         private static readonly Dictionary<Direction, Point> PositionalAdjustments = new Dictionary<Direction, Point>
