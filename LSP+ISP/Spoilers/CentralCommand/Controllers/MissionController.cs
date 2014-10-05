@@ -96,6 +96,10 @@ namespace CentralCommand.Controllers
         [HttpPost]
         public JsonResult SendCommands(List<string> commands)
         {
+            if (commands == null)
+            {
+                return Json(new MissionResponseViewModel {Success = false});
+            }
             var oldCollection = Planet.Obstacles.ToList();
             var removedObstacles = oldCollection.OfType<IMovable>().Select(x =>
                 new MapPositionViewModel
