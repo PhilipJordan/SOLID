@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MarsRoverKata.Commands;
+﻿using MarsRoverKata.Commands;
+using System;
 
 namespace MarsRoverKata
 {

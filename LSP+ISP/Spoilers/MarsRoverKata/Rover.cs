@@ -9,7 +9,7 @@ namespace MarsRoverKata
         private List<Projectile> Projectiles { get; set; }
 
         public Rover(Mars mars)
-            :this(mars, mars.CenterOfThePlanet)
+            : this(mars, mars.CenterOfThePlanet)
         { }
 
         public Rover(Mars mars, Point landingPoint)
