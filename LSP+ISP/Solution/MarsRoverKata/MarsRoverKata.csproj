@@ -60,7 +60,6 @@
     <Compile Include="Missile.cs" />
     <Compile Include="MissionManager.cs" />
     <Compile Include="Mortar.cs" />
-    <Compile Include="Movable.cs" />
     <Compile Include="Obstacle.cs" />
     <Compile Include="Point.cs" />
     <Compile Include="Program.cs" />

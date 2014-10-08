@@ -2,16 +2,16 @@
 {
     public class ForwardCommand : ICommand
     {
-        private IMovable Movable { get; set; }
+        private Rover Rover { get; set; }
 
-        public ForwardCommand(IMovable movable)
+        public ForwardCommand(Rover rover)
         {
-            Movable = movable;
+            Rover = rover;
         }
 
         public bool Execute()
         {
-            return Movable.MoveForward();
+            return Rover.MoveForward();
         }
     }
 }

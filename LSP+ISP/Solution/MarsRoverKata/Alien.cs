@@ -1,17 +1,20 @@
 ﻿
 namespace MarsRoverKata
 {
-    public class Alien : Movable, IObstacle
+    public class Alien : IObstacle
     {
         public Alien(Mars mars, Point location)
-            : base(mars)
         {
-            Location = location;
         }
 
-        public virtual bool IsDestructable
+        public Point Location
         {
-            get { return true; }
+            get { throw new System.NotImplementedException(); }
+        }
+
+        public bool IsDestructable
+        {
+            get { throw new System.NotImplementedException(); }
         }
     }
 }
