@@ -54,7 +54,6 @@
     <Compile Include="CrashException.cs" />
     <Compile Include="Crater.cs" />
     <Compile Include="Enumerations.cs" />
-    <Compile Include="IMovable.cs" />
     <Compile Include="IObstacle.cs" />
     <Compile Include="Mars.cs" />
     <Compile Include="Missile.cs" />

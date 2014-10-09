@@ -101,7 +101,7 @@ namespace CentralCommand.Controllers
                 return Json(new MissionResponseViewModel {Success = false});
             }
             var oldCollection = Planet.Obstacles.ToList();
-            var removedObstacles = oldCollection.OfType<IMovable>().Select(x =>
+            var removedObstacles = oldCollection.OfType<Alien>().Select(x =>
                 new MapPositionViewModel
                 {
                     Location = x.Location.X + "_" + x.Location.Y,
