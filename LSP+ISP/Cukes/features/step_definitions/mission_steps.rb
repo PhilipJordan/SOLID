@@ -1,5 +1,7 @@
                                                                         
-Given(/^the Mission page$/) do                                          
+Given(/^the Mission page$/) do 
+	#puts 'Given the Mission page'
+	#sleep 10
 	visit(MissionPage) 
 end                                                                     
                                                                         
@@ -11,7 +13,12 @@ Then(/^it will be (the rover)$/) do |name|
 	@map_image.should include name   
 end         
    
-When(/^I click on the map at ((\d+)x(\d+))$/) do |image_location, x, y|             
+
+		#When I click the add button
+		#Then 10x10 will display an obstacle   
+When(/^I click on the map at ((\d+)x(\d+))$/) do |image_location, x, y|  
+	#puts 'And I click on the map at 10x10'
+	#sleep 10
 	on(MissionPage).click_control_at image_location 
 end  
 

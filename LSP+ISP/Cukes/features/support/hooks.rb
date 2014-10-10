@@ -7,7 +7,7 @@ Before do
 end
 
 After do
-	browser.goto "#{$environment}/Mission/Index" 
+	browser.goto "#{$environment}" #/Mission/Index" 
 end
 
 at_exit do

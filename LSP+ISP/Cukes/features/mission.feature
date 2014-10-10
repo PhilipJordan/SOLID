@@ -15,7 +15,8 @@ Feature: Beginning the Mission
 		Given the Mission page
 		When I click the add button
 		Then an alert message with "Unable to update obstacles" should be shown
-   
+    
+	@testing
 	Scenario: Adding an Obstacle
 		Given the Mission page
 		And I click on the map at 10x10

@@ -3,7 +3,7 @@ class MissionPage
   include PageObject
   include RSpec::Matchers
   
-  page_url "#{$environment}/Mission/Staging" 
+  page_url "#{$environment}" #/Mission/Staging" 
   h3(:title, :id => "MissionControl")
   button(:addObstacles, :value => 'Add')
   button(:sendCommands, :id => 'sendCommands')
