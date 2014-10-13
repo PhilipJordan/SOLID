@@ -1,2 +1,0 @@
-U:RDoc::Attr[iI"detach:EFI")ChildProcess::AbstractProcess#detach;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"LSet this to true if you do not care about when or if the process quits.:encoding"IBM437:
-@file0FI")lib/childprocess/abstract_process.rb;@

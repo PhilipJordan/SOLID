@@ -1,2 +1,0 @@
-U:RDoc::Attr[iI"background?:EFI"+Selenium::Rake::ServerTask#background?;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"6Whether we should detach from the server process.:encoding"IBM437I"Default: true;@:
-@file0FI"%lib/selenium/rake/server_task.rb;@

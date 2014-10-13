@@ -1,2 +1,0 @@
-U:RDoc::Attr[iI"browser:EFI"PageObject#browser;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"k@return [Watir::Browser or Selenium::WebDriver::Driver] the platform browser passed to the constructor:encoding"IBM437:
-@file0FI"lib/page-object.rb;@

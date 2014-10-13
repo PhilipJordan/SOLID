@@ -1,2 +1,0 @@
-U:RDoc::Attr[iI"profile:EFI"!Cucumber::Rake::Task#profile;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"XDefine what profile to be used.  When used with cucumber_opts it is simply appended:encoding"IBM437I"7to it. Will be ignored when CUCUMBER_OPTS is used.;@:
-@file0FI"lib/cucumber/rake/task.rb;@

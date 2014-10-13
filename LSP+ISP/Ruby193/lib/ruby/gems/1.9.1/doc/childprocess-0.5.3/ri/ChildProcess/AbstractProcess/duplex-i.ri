@@ -1,2 +1,0 @@
-U:RDoc::Attr[iI"duplex:EFI")ChildProcess::AbstractProcess#duplex;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"SSet this to true if you want to write to the process' stdin (process.io.stdin):encoding"IBM437:
-@file0FI")lib/childprocess/abstract_process.rb;@

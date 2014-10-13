@@ -1,2 +1,0 @@
-U:RDoc::Attr[iI"flag_context:EFI"!Diff::LCS::Hunk#flag_context;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"MChange the "start" and "end" fields to note that context should be added:encoding"IBM437I"to this hunk.;@:
-@file0FI"lib/diff/lcs/hunk.rb;@

@@ -1,2 +1,0 @@
-U:RDoc::Attr[iI"comment:EFI"Zip::File#comment;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"1Returns the zip files comment, if it has one:encoding"IBM437:
-@file0FI"lib/zip/file.rb;@

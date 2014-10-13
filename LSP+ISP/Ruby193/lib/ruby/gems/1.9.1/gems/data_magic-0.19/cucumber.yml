@@ -1,2 +1,0 @@
-default: --no-source --color --format pretty
-focus: --no-source --color --format pretty --tags @focus

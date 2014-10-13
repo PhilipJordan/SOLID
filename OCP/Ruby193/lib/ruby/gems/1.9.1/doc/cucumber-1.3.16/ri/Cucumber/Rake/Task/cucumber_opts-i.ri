@@ -1,2 +1,0 @@
-U:RDoc::Attr[iI"cucumber_opts:EFI"'Cucumber::Rake::Task#cucumber_opts;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"oExtra options to pass to the cucumber binary. Can be overridden by the CUCUMBER_OPTS environment variable.:encoding"IBM437I"VIt's recommended to pass an Array, but if it's a String it will be #split by ' '.;@:
-@file0FI"lib/cucumber/rake/task.rb;@

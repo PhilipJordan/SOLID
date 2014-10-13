@@ -1,2 +1,0 @@
-U:RDoc::Attr[iI"platform:EFI"PageObject#platform;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"e@return [PageObject::WatirPageObject or PageObject::SeleniumPageObject] the platform page object:encoding"IBM437:
-@file0FI"lib/page-object.rb;@

@@ -1,2 +1,0 @@
-U:RDoc::Attr[iI"	fork:EFI"Cucumber::Rake::Task#fork;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"RWhether or not to fork a new ruby interpreter. Defaults to true. You may gain:encoding"IBM437I"Ssome startup speed if you set it to false, but this may also cause issues with;@I"your load path and gems.;@:
-@file0FI"lib/cucumber/rake/task.rb;@

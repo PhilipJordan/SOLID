@@ -1,5 +1,0 @@
-U:RDoc::Attr[iI"
-timer:EFI"Watir::Wait::timer;FI"W;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"@!attribute timer:encoding"IBM437o:RDoc::Markup::Verbatim;	[I"/Access Watir timer implementation in use.
-;FI"@see Timer
-;FI"@return [#wait];F:
-@file0TI" lib/watir-webdriver/wait.rb;@
