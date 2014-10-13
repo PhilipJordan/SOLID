@@ -1,20 +1,25 @@
 ﻿
 namespace MarsRoverKata
 {
-    public class Alien : IObstacle
+    public class Alien : Moveable, IObstacle
     {
+        Mars _mars;
+        Point location;
+
         public Alien(Mars mars, Point location)
         {
+            _mars = mars;
+            this.location = location;
         }
 
         public Point Location
         {
-            get { throw new System.NotImplementedException(); }
+            get { return location; }
         }
 
         public bool IsDestructable
         {
-            get { throw new System.NotImplementedException(); }
+            get { return true; }
         }
     }
 }

@@ -2,16 +2,16 @@
 {
     public class TurnRightCommand : ICommand
     {
-        private Rover Rover { get; set; }
+        private IMoveable Moveable { get; set; }
 
-        public TurnRightCommand(Rover rover)
+        public TurnRightCommand(IMoveable moveable)
         {
-            Rover = rover;
+            Moveable = moveable;
         }
 
         public bool Execute()
         {
-            return Rover.TurnRight();
+            return Moveable.TurnRight();
         }
     }
 }

@@ -7,7 +7,8 @@ Before do
 end
 
 After do
-	browser.goto "#{$environment}" #/Mission/Index" 
+	on(MissionPage).reset
+	#browser.goto "#{$environment}" #/Mission/Index" 
 end
 
 at_exit do

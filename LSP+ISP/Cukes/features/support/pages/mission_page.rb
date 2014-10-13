@@ -13,6 +13,7 @@ class MissionPage
   button(:turnLeft, :id => 'left')
   button(:fireMissile, :id => 'fireMissile')
   button(:fireMortar, :id => 'fireMortar')
+  link(:reset, :class => 'btn btn-link btn-danger')
   
   def get_alert_message_on_button_click 
 	
