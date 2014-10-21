@@ -15,9 +15,9 @@
 /x86/
 /build/
 /bld/
-/out/
 /[Bb]in/
 /[Oo]bj/
+/out/
 
 # MSTest test Results
 #[Tt]est[Rr]esult*/
@@ -56,6 +56,9 @@ dlldata.c
 *.pidb
 *.svclog
 *.scc
+
+# Java 
+*.class
 
 # Visual Studio profiler
 *.psess
