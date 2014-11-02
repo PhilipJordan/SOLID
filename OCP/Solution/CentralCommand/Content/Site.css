@@ -3,9 +3,9 @@
     width: 99%;
 }
 
-html body{
-    background-color: #e6e8e8;
-}
+    html body {
+        background-color: #e6e8e8;
+    }
 
 .div-header-title {
     background-color: white;
@@ -29,8 +29,8 @@ html body{
 }
 
 .mapContainer {
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     padding: 10px;
     clear: right;
     background-color: white;
@@ -57,7 +57,7 @@ html body{
     float: left;
     display: inline-block;
     background-color: white;
-    margin-top: 60px;
+    margin-top: 50px;
     border: 1px solid #dadddd;
     border-radius: 3px;
 }
@@ -88,10 +88,10 @@ html body{
             border-radius: 10px;
         }
 
-    td input {
-        height: 50px;
-        width: 50px;
-    }
+td input {
+    height: 50px;
+    width: 50px;
+}
 
 #table-control-panel {
     margin: 30px auto;

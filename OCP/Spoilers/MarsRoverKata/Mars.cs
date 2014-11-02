@@ -1,39 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MarsRoverKata
 {
     public class Mars 
     {
         public Size Bounds { get; private set; }
-        public Point CenterOfThePlanet { get; set; }
+        public Point CenterOfThePlanet { get; private set; }
 
-        private Point Position { get; set; }
-        private List<Obstacle> _Obstacles { get; set; }
+        private readonly List<Obstacle> _obstacles;
         public IReadOnlyList<Obstacle> Obstacles
         {
-            get { return _Obstacles; }
+            get { return _obstacles; }
         }
 
         public Mars()
         {
             Bounds = new Size(50, 50);
             CenterOfThePlanet = new Point(Bounds.Width / 2, Bounds.Height / 2);
-            _Obstacles = new List<Obstacle>();
+            _obstacles = new List<Obstacle>();
         }
 
         public void AddObstacle(Obstacle obstacle)
         {
-            _Obstacles.Add(obstacle);
+            _obstacles.Add(obstacle);
         }
 
         public void RemoveObstacle(Obstacle obstacle)
         {
-            _Obstacles.Remove(obstacle);
+            _obstacles.Remove(obstacle);
         }
 
         public Point CalculateFinalPosition(Point from, Point desired)
@@ -78,7 +73,7 @@ namespace MarsRoverKata
 
         public bool IsValidPosition(Point point)
         {
-            bool anyInstance = _Obstacles.Any(x => x.Location.Equals(point));
+            bool anyInstance = _obstacles.Any(x => x.Location.Equals(point));
 
             return !anyInstance;
         }

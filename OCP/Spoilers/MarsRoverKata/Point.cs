@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MarsRoverKata
 {
-    public class Point
+    public class Point : IEquatable<Point>
     {
         public int X { get; private set; }
         public int Y { get; private set; }
@@ -29,13 +25,40 @@ namespace MarsRoverKata
 
         public override bool Equals(object obj)
         {
-            Point other = obj as Point;
-            if (other == null)
+            var other = obj as Point;
+            return other != null && Equals(other);
+        }
+
+        public bool Equals(Point other)
+        {
+            if (ReferenceEquals(null, other))
             {
                 return false;
             }
+            if (ReferenceEquals(this, other))
+            {
+                return true;
+            }
 
-            return this.X == other.X && this.Y == other.Y;
+            return X == other.X && Y == other.Y;
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                return (X * 397) ^ Y;
+            }
+        }
+
+        public static bool operator ==(Point left, Point right)
+        {
+            return Equals(left, right);
+        }
+
+        public static bool operator !=(Point left, Point right)
+        {
+            return !Equals(left, right);
         }
     }
 }

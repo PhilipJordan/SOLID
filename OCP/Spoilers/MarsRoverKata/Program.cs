@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MarsRoverKata
 {
-    class Program
+    static class Program
     {
         static void Main(string[] args)
         {
@@ -83,8 +79,8 @@ namespace MarsRoverKata
 
         private static Obstacle CreateObstacle(string input)
         {
-            var coordinates = input.Split(',');
-            Point location = new Point(int.Parse(coordinates[0]), int.Parse(coordinates[1]));
+            string[] coordinates = input.Split(',');
+            var location = new Point(int.Parse(coordinates[0]), int.Parse(coordinates[1]));
             return new Obstacle(location);
         }
 

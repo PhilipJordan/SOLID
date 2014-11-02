@@ -45,11 +45,11 @@ namespace CentralCommand.Controllers
             for (int i = 0; i < 50; i++)
             {
                 if (i != Vehicle.Location.Y)
-                    initialMap.Add(GetGroundRow());   
+                    initialMap.Add(GetGroundRow());
                 else
                     initialMap.Add(GetRoverRow(Vehicle));
             }
-            
+
             var viewModel = new MissionViewModel
             {
                 Map = initialMap
