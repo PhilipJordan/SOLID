@@ -2,16 +2,16 @@
 {
     public class BackwardCommand : ICommand
     {
-        private IMoveable Moveable { get; set; }
+        private Rover Rover { get; set; }
 
-        public BackwardCommand(IMoveable moveable)
+        public BackwardCommand(Rover rover)
         {
-            Moveable = moveable;
+            Rover = rover;
         }
 
         public bool Execute()
         {
-            return Moveable.MoveBackward();
+            return Rover.MoveBackward();
         }
     }
 }

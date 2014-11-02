@@ -54,13 +54,11 @@
     <Compile Include="CrashException.cs" />
     <Compile Include="Crater.cs" />
     <Compile Include="Enumerations.cs" />
-    <Compile Include="IMoveable.cs" />
     <Compile Include="IObstacle.cs" />
     <Compile Include="Mars.cs" />
     <Compile Include="Missile.cs" />
     <Compile Include="MissionManager.cs" />
     <Compile Include="Mortar.cs" />
-    <Compile Include="Moveable.cs" />
     <Compile Include="Obstacle.cs" />
     <Compile Include="Point.cs" />
     <Compile Include="Program.cs" />
