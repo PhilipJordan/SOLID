@@ -8,10 +8,7 @@ namespace MarsRoverKata
 
         public Alien(Mars mars, Point location)
             : this(mars, location, new DoNothing())
-        {
-            
-            //IamHavior = new RandomActions(this);
-        }
+        {}
 
         public Alien(Mars mars, Point location, IBehavior behavior)
             : base(mars, location)

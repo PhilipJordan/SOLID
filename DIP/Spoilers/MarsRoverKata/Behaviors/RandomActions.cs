@@ -10,13 +10,11 @@ namespace MarsRoverKata.Behaviors
     public class RandomActions : IBehavior
     {
         private readonly Random _random;
-        //private Alien _alien;
         public Alien Parent { get; set; }
 
         public RandomActions(Alien alien)
         {
             _random = new Random();
-            //_alien = alien;
         }
 
         public void DoStuff()
