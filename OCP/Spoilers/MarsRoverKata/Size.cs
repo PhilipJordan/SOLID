@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MarsRoverKata
+﻿namespace MarsRoverKata
 {
     public class Size
     {
-        public int Width { get; set; }
-        public int Height { get; set; }
+        public int Width { get; private set; }
+        public int Height { get; private set; }
 
         public Size(int width, int height)
         {

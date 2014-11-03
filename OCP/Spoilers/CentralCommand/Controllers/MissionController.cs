@@ -41,36 +41,37 @@ namespace CentralCommand.Controllers
 
         public ActionResult Index()
         {
-            MissionManager = new MissionManager(new Rover(new Mars()));
-            return View();
-        }
-
-        public ActionResult Staging(MissionViewModel viewModel)
-        {
             var initialMap = new List<List<string>>();
             for (int i = 0; i < 50; i++)
             {
                 if (i != Vehicle.Location.Y)
-                    initialMap.Add(GetGroundRow());   
+                    initialMap.Add(GetGroundRow());
                 else
                     initialMap.Add(GetRoverRow(Vehicle));
             }
-            
-            viewModel.Map = initialMap;
 
-            return PartialView(viewModel);
+            var viewModel = new MissionViewModel
+            {
+                Map = initialMap
+            };
+            return View(viewModel);
+        }
+
+        public ActionResult Reset()
+        {
+            MissionManager = null;
+            return RedirectToAction("Index");
         }
 
         [HttpPost]
-        public JsonResult UpdateObstacles(List<string> locations)
+        public JsonResult UpdateObstacles(List<ObstacleViewModel> inputs)
         {
-            if(locations == null)
+            if (inputs == null)
                 return Json(new MissionResponseViewModel { Success = false, Obstacles = new List<MapPositionViewModel>() });
 
-            var distinctLocations = (from location in locations 
-                       select location).Distinct().ToList<string>();
+            var distinctLocations = inputs.GroupBy(o => o.Coordinates).Select(g => g.Last()).Distinct();
 
-            foreach(var input in distinctLocations)
+            foreach (var input in distinctLocations)
             {
                 Obstacle obstacle = CreateObstacle(input);
                 Planet.AddObstacle(obstacle);
@@ -81,9 +82,9 @@ namespace CentralCommand.Controllers
             return Json(new MissionResponseViewModel { Success = true, Obstacles = updatedObstacles });
         }
 
-        private static Obstacle CreateObstacle(string input)
+        private static Obstacle CreateObstacle(ObstacleViewModel input)
         {
-            var coordinates = input.Split('_');
+            var coordinates = input.Coordinates.Split('_');
             Point location = new Point(int.Parse(coordinates[0]), int.Parse(coordinates[1]));
             return new Obstacle(location);
         }
@@ -91,6 +92,10 @@ namespace CentralCommand.Controllers
         [HttpPost]
         public JsonResult SendCommands(List<string> commands)
         {
+            if (commands == null)
+            {
+                return Json(new MissionResponseViewModel {Success = false});
+            }
             var oldCollection = Planet.Obstacles.ToList();
             var originalPosition = Vehicle.Location.X + "_" + Vehicle.Location.Y;
             var commandString = String.Join(",", commands);
@@ -108,7 +113,6 @@ namespace CentralCommand.Controllers
                     Image = "Ground.png"
                 }).ToList();
 
-            var rovers_new_position = Vehicle.Location.X + "_" + Vehicle.Location.Y;
             var roverNewPosition = Vehicle.Location.X + "_" + Vehicle.Location.Y;
             var roverFacing = GetFacingAsString(Vehicle.Facing);
 
@@ -121,7 +125,7 @@ namespace CentralCommand.Controllers
                                                      });
         }
 
-        private List<MapPositionViewModel> ConvertToViewModels(IReadOnlyList<Obstacle> obstacles)
+        private List<MapPositionViewModel> ConvertToViewModels(IEnumerable<Obstacle> obstacles)
         {
             return obstacles.Select(x =>
                 new MapPositionViewModel

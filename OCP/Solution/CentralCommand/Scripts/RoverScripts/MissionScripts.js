@@ -5,13 +5,19 @@ function pagePrep() {
         var element = this;
         var location = element.id;
 
-        $("#newObstacles").append('<li>' + location + '</li>');
+        $("#newObstacles").append('<li class="rock">' + location + '</li>');
     });
 
     $("#addObstacles").click(function () {
         var element = $("#newObstacles");
         var itemsToSend = new Array();
-        var callback = function (index, element) { itemsToSend[index] = $(element).text(); };
+        var callback = function(index, element) {
+            var jqElement = $(element);
+            itemsToSend[index] = {
+                Coordinates: jqElement.text(),
+                Type: jqElement.attr('class')
+            };
+        };
 
         iterateListItems(callback, element);
         UpdateObstaclesOnServer(itemsToSend, obstacleUpdateSuccess, wtf);
@@ -108,7 +114,7 @@ function pagePrep() {
             type: 'post',
             datatype: 'json',
             url: "../Mission/UpdateObstacles",
-            data: JSON.stringify({ locations: itemsToSend }),
+            data: JSON.stringify(itemsToSend),
             contentType: 'application/json; charset=utf-8',
             cache: false,
             success: callback,

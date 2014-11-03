@@ -1,28 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using MarsRoverKata.Commands;
 
 namespace MarsRoverKata
 {
     public class MissionManager
     {
-        public Rover Rover;
-        public Mars Planet; 
-        private Commander commander;
+        public Rover Rover { get; private set; }
+        public Mars Planet { get; private set; } 
+        private readonly Commander _commander;
         
         public MissionManager(Rover rover)
         {
             Rover = rover;
             Planet = rover.Mars;
-            commander = new Commander();
+            _commander = new Commander();
         }
 
         public string AcceptCommands(String commandString)
         {
-            commander.Commands = new List<ICommand>();
+            _commander.Commands = new List<ICommand>();
 
             var commands = commandString.ToLower().ToCharArray();
             bool success = true;
@@ -37,17 +34,17 @@ namespace MarsRoverKata
         private bool AcceptCommand(bool success, Char command)
         {
             if (command.Equals('f'))
-                commander.Accept(new ForwardCommand(Rover));
+                _commander.Accept(new ForwardCommand(Rover));
             else if (command.Equals('b'))
-                commander.Accept(new BackwardCommand(Rover));
+                _commander.Accept(new BackwardCommand(Rover));
             else if (command.Equals('r'))
-                commander.Accept(new TurnRightCommand(Rover));
+                _commander.Accept(new TurnRightCommand(Rover));
             else if (command.Equals('l'))
-                commander.Accept(new TurnLeftCommand(Rover));
+                _commander.Accept(new TurnLeftCommand(Rover));
             else if (command.Equals('m'))
-                commander.Accept(new FireMissileCommand(Rover));
+                _commander.Accept(new FireMissileCommand(Rover));
             else if (command.Equals('g'))
-                commander.Accept(new FireMortarCommand(Rover));
+                _commander.Accept(new FireMortarCommand(Rover));
             else
                 success = false;
             return success;
@@ -55,7 +52,7 @@ namespace MarsRoverKata
 
         public string ExecuteMission()
         {
-            bool success = commander.ExecuteCommands();
+            bool success = _commander.ExecuteCommands();
 
             return success ? String.Empty : "An error occured while executing commands";
         }

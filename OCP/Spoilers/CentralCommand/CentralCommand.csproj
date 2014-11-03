@@ -153,6 +153,7 @@
     <Compile Include="Models\MissionResponseViewModel.cs" />
     <Compile Include="Models\MissionViewModel.cs" />
     <Compile Include="Models\MapPositionViewModel.cs" />
+    <Compile Include="Models\ObstacleViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -270,7 +271,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Mission\Staging.cshtml" />
     <Content Include="Views\Mission\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
