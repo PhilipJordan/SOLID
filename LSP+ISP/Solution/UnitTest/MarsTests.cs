@@ -578,7 +578,7 @@ namespace UnitTest
         protected override void arrangement()
         {
             base.arrangement();
-            mars = new Mars();
+            mars = new Mars(new Size(50, 50));
         }
     }
 

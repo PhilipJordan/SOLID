@@ -1,10 +1,9 @@
-﻿using System;
+﻿using CentralCommand.Models;
+using MarsRoverKata;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
-using CentralCommand.Models;
-using MarsRoverKata;
 
 namespace CentralCommand.Controllers
 {
@@ -42,7 +41,7 @@ namespace CentralCommand.Controllers
         public ActionResult Index()
         {
             var initialMap = new List<List<string>>();
-            for (int i = 0; i < 50; i++)
+            for (int i = 0; i < Planet.Bounds.Height; i++)
             {
                 if (i != Vehicle.Location.Y)
                     initialMap.Add(GetGroundRow());
@@ -156,7 +155,7 @@ namespace CentralCommand.Controllers
         {
             var result = new List<string>();
 
-            for (int i = 0; i < 50; i++)
+            for (int i = 0; i < Planet.Bounds.Width; i++)
             {
                 result.Add("Ground.png");
             }

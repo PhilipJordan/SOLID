@@ -15,8 +15,12 @@ namespace MarsRoverKata
         }
 
         public Mars()
+            : this(new Size(25, 25))
+        { }
+
+        public Mars(Size bounds)
         {
-            Bounds = new Size(50, 50);
+            Bounds = bounds;
             CenterOfThePlanet = new Point(Bounds.Width / 2, Bounds.Height / 2);
             _obstacles = new List<Obstacle>();
         }
