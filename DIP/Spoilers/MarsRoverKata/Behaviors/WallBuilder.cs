@@ -37,7 +37,7 @@ namespace MarsRoverKata.Behaviors
 
         private Direction pickDirection()
         { 
-            switch (RNG.Next(1, 4))
+            switch (RNG.Next(1, 5))
             {
                 case 1:
                     return Direction.North;
