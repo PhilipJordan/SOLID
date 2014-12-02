@@ -59,39 +59,13 @@ namespace CentralCommand.Controllers
 
             foreach (var input in distinctLocations)
             {
-                IObstacle obstacle = CreateObstacle(input);
-                MissionManager.Planet.AddObstacle(obstacle);
+                var coordinates = input.Coordinates.Split('_');
+                MissionManager.AddObstacle(int.Parse(coordinates[0]), int.Parse(coordinates[1]), input.Type, input.Behavior);
             }
 
             var updatedObstacles = ConvertToViewModels(MissionManager.Planet.Obstacles);
 
             return Json(new MissionResponseViewModel { Success = true, Obstacles = updatedObstacles });
-        }
-
-        private IObstacle CreateObstacle(ObstacleViewModel input)
-        {
-            var coordinates = input.Coordinates.Split('_');
-            Point location = new Point(int.Parse(coordinates[0]), int.Parse(coordinates[1]));
-            if (input.Type.Equals("Alien", StringComparison.OrdinalIgnoreCase))
-            {
-                IObstacle result = new Alien(MissionManager.Planet, location, new DoNothing()); 
-
-                if (input.Behavior.Equals("tracker", StringComparison.OrdinalIgnoreCase))
-                {
-                    result = new Alien(MissionManager.Planet, location, new Tracker(MissionManager.Rover));
-                }
-                else if (input.Behavior.Equals("wallbuilder", StringComparison.OrdinalIgnoreCase))
-                {
-                    result = new Alien(MissionManager.Planet, location, new WallBuilder(MissionManager.Planet));
-                }
-                else if (input.Behavior.Equals("shooter", StringComparison.OrdinalIgnoreCase))
-                {
-                    result = new Alien(MissionManager.Planet, location, new DoNothing());
-                }
-
-                return result;
-            }
-            return new Obstacle(location);
         }
 
         [HttpPost]

@@ -58,24 +58,13 @@ namespace CentralCommand.Controllers
 
             foreach (var input in distinctLocations)
             {
-                IObstacle obstacle = CreateObstacle(input);
-                MissionManager.Planet.AddObstacle(obstacle);
+                var coordinates = input.Coordinates.Split('_');
+                MissionManager.AddObstacle(int.Parse(coordinates[0]), int.Parse(coordinates[1]), input.Type);
             }
 
             var updatedObstacles = ConvertToViewModels(MissionManager.Planet.Obstacles);
 
             return Json(new MissionResponseViewModel { Success = true, Obstacles = updatedObstacles });
-        }
-
-        private IObstacle CreateObstacle(ObstacleViewModel input)
-        {
-            var coordinates = input.Coordinates.Split('_');
-            Point location = new Point(int.Parse(coordinates[0]), int.Parse(coordinates[1]));
-            if (input.Type.Equals("Alien", StringComparison.OrdinalIgnoreCase))
-            {
-                return new Alien(MissionManager.Planet, location);
-            }
-            return new Obstacle(location);
         }
 
         [HttpPost]
