@@ -1,0 +1,17 @@
+C:\github\SOLID\DIP\Spoilers\UnitTest\bin\Debug\UnitTest.dll
+C:\github\SOLID\DIP\Spoilers\UnitTest\bin\Debug\UnitTest.pdb
+C:\github\SOLID\DIP\Spoilers\UnitTest\bin\Debug\FluentAssertions.Core.dll
+C:\github\SOLID\DIP\Spoilers\UnitTest\bin\Debug\FluentAssertions.dll
+C:\github\SOLID\DIP\Spoilers\UnitTest\bin\Debug\MarsRoverKata.exe
+C:\github\SOLID\DIP\Spoilers\UnitTest\bin\Debug\Moq.dll
+C:\github\SOLID\DIP\Spoilers\UnitTest\bin\Debug\nunit.framework.dll
+C:\github\SOLID\DIP\Spoilers\UnitTest\bin\Debug\MarsRoverKata.pdb
+C:\github\SOLID\DIP\Spoilers\UnitTest\bin\Debug\FluentAssertions.pdb
+C:\github\SOLID\DIP\Spoilers\UnitTest\bin\Debug\FluentAssertions.xml
+C:\github\SOLID\DIP\Spoilers\UnitTest\bin\Debug\FluentAssertions.Core.pdb
+C:\github\SOLID\DIP\Spoilers\UnitTest\bin\Debug\FluentAssertions.Core.xml
+C:\github\SOLID\DIP\Spoilers\UnitTest\bin\Debug\Moq.xml
+C:\github\SOLID\DIP\Spoilers\UnitTest\bin\Debug\nunit.framework.xml
+C:\github\SOLID\DIP\Spoilers\UnitTest\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache
+C:\github\SOLID\DIP\Spoilers\UnitTest\obj\Debug\UnitTest.dll
+C:\github\SOLID\DIP\Spoilers\UnitTest\obj\Debug\UnitTest.pdb
