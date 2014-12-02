@@ -10,3 +10,9 @@ C:\github\SOLID\DIP\Spoilers\MarsRoverKata\bin\Debug\MarsRoverKata.pdb
 C:\github\SOLID\DIP\Spoilers\MarsRoverKata\obj\Debug\MarsRoverKata.csprojResolveAssemblyReference.cache
 C:\github\SOLID\DIP\Spoilers\MarsRoverKata\obj\Debug\MarsRoverKata.exe
 C:\github\SOLID\DIP\Spoilers\MarsRoverKata\obj\Debug\MarsRoverKata.pdb
+C:\Users\nmartin\Documents\GitHub\SOLID\DIP\Solution\MarsRoverKata\bin\Debug\MarsRoverKata.exe.config
+C:\Users\nmartin\Documents\GitHub\SOLID\DIP\Solution\MarsRoverKata\bin\Debug\MarsRoverKata.exe
+C:\Users\nmartin\Documents\GitHub\SOLID\DIP\Solution\MarsRoverKata\bin\Debug\MarsRoverKata.pdb
+C:\Users\nmartin\Documents\GitHub\SOLID\DIP\Solution\MarsRoverKata\obj\Debug\MarsRoverKata.csprojResolveAssemblyReference.cache
+C:\Users\nmartin\Documents\GitHub\SOLID\DIP\Solution\MarsRoverKata\obj\Debug\MarsRoverKata.exe
+C:\Users\nmartin\Documents\GitHub\SOLID\DIP\Solution\MarsRoverKata\obj\Debug\MarsRoverKata.pdb
