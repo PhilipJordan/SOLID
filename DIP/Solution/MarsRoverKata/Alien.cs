@@ -1,5 +1,5 @@
-﻿
-using MarsRoverKata.Behaviors;
+﻿using MarsRoverKata.Behaviors;
+
 namespace MarsRoverKata
 {
     public class Alien : Movable, IObstacle

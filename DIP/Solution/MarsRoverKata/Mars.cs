@@ -18,9 +18,13 @@ namespace MarsRoverKata
         }
 
         public Mars()
+            : this(new Size(25, 25))
+        { }
+
+        public Mars(Size bounds)
         {
+            Bounds = bounds;
             AlienBehavior = new AlienBehavior();
-            Bounds = new Size(50, 50);
             CenterOfThePlanet = new Point(Bounds.Width / 2, Bounds.Height / 2);
             _obstacles = new List<IObstacle>();
         }
@@ -28,11 +32,9 @@ namespace MarsRoverKata
         public void UpdateAliens()
         {
             var aliens = Obstacles.OfType<Alien>().ToList();
-
             foreach (var alien in aliens)
             {
                 alien.DoStuff();
-                //AlienBehavior.MoveAlien(alien);
             }
         }
 

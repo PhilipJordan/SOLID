@@ -9,8 +9,8 @@ function pagePrep() {
     }).bind("contextmenu", function (e) {
         var element = this;
         var location = element.id;
+
         openPopup(e, location);
-        //$("#newObstacles").append('<li class="alien">' + location + '</li>');
         return false; // Disable default context menu behavior
     });
 
@@ -151,7 +151,6 @@ function pagePrep() {
         $("#control-popup").css({ "opacity": "0.7" });
         $("#control-popup").css({ "top": e.pageY });
         $("#control-popup").css({ "left": e.pageX });
-        //alert(e.pageX + " " + e.pageY);
         $("#control-popup").fadeIn("slow");
         blar = location;
     }
