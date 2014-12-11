@@ -3,23 +3,7 @@
 @{
     Layout = "../Shared/_Layout.cshtml";
 }
-<style>
-    #control-popup 
-    {
-       border: 1px solid black;
-       width: 250px;
-       height: 50px;
-       display: none;
-       position: fixed;
-       _position:absolute; /* hack for internet explorer 6*/
-       top:0;
-       left:0;
-       z-index:1;
-       background: #ffffff;
-       padding: 10px;
-    }
 
-</style>
 <section id="section-main">
     <div class="controlContrainer">
         <div class="row">
@@ -28,11 +12,6 @@
                     <span id="MissionControl">Mission Control @Html.ActionLink("Reset", "Reset", null, new { @class = "btn btn-link btn-danger" })</span>
                 </div>
                 <ul id="newObstacles" class="lists"></ul>
-                @*<div class="row">
-                    <input type="checkbox" name="curious" value="1" /><span>Curious</span><br />
-                    <input type="checkbox" name="agressive" value="2" /><span>Agressive</span><br />
-                    <input type="checkbox" name="fearful" value="3" /><span>Fearful</span><br />
-                </div>*@
                 <div class="row">
                     <input id="addObstacles" class="missionButton btn btn-primary" type="submit" value="Add" />
                 </div>

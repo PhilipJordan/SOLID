@@ -56,5 +56,12 @@ namespace MarsRoverKata
 
             return success ? String.Empty : "An error occured while executing commands";
         }
+
+        public void AddObstacle(int x, int y)
+        {
+            Point location = new Point(x, y);
+            var obstacle = new Obstacle(location, true);
+            Planet.AddObstacle(obstacle);
+        }
     }
 }

@@ -225,14 +225,14 @@
     <Content Include="Content\bootstrap.css.map" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Images\backward.png" />
-    <Content Include="Images\crater.jpg" />
+    <Content Include="Images\Crater.png" />
     <Content Include="Images\down.png" />
     <Content Include="Images\forward.png" />
     <Content Include="Images\Ground.png" />
     <Content Include="Images\left.png" />
     <Content Include="Images\missileButton.jpg" />
     <Content Include="Images\mortarButton.PNG" />
-    <Content Include="Images\rock.png" />
+    <Content Include="Images\Obstacle.png" />
     <Content Include="Images\right.png" />
     <Content Include="Images\Rover-E.png" />
     <Content Include="Images\Rover-N.png" />

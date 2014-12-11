@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using MarsRoverKata.Behaviors;
 using MarsRoverKata.Commands;
 
 namespace MarsRoverKata
@@ -62,6 +63,35 @@ namespace MarsRoverKata
             bool success = _commander.ExecuteCommands();
 
             return success ? String.Empty : "An error occured while executing commands";
+        }
+
+        public void AddObstacle(int x, int y, string type, string behavior)
+        {
+            Point location = new Point(x, y);
+            var obstacle = CreateObstacle(location, type, behavior);
+            Planet.AddObstacle(obstacle);
+        }
+
+        private IObstacle CreateObstacle(Point location, string type, string behavior)
+        {
+            if (type.Equals("Alien", StringComparison.OrdinalIgnoreCase))
+            {
+                if (behavior.Equals("tracker", StringComparison.OrdinalIgnoreCase))
+                {
+                    return new Alien(Planet, location, new Tracker(Rover));
+                }
+                if (behavior.Equals("wallbuilder", StringComparison.OrdinalIgnoreCase))
+                {
+                    return new Alien(Planet, location, new WallBuilder(Planet));
+                }
+                if (behavior.Equals("shooter", StringComparison.OrdinalIgnoreCase))
+                {
+                    return new Alien(Planet, location, new DoNothing());
+                }
+
+                return new Alien(Planet, location, new DoNothing());
+            }
+            return new Obstacle(location);
         }
     }
 }

@@ -1,30 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using CentralCommand.Models;
+﻿using CentralCommand.Models;
 using MarsRoverKata;
 using MarsRoverKata.Behaviors;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web.Mvc;
 
 namespace CentralCommand.Controllers
 {
     public class MissionController : Controller
     {
-        private Rover Vehicle
-        {
-            get
-            {
-                return MissionManager.Rover;
-            }
-        }
-        private Mars Planet
-        {
-            get
-            {
-                return MissionManager.Planet;
-            }
-        }
         public MissionManager MissionManager
         {
             get
@@ -43,14 +28,14 @@ namespace CentralCommand.Controllers
         public ActionResult Index()
         {
             var initialMap = new List<List<string>>();
-            for (int i = 0; i < 50; i++)
+            for (int i = 0; i < MissionManager.Planet.Bounds.Height; i++)
             {
-                if (i != Vehicle.Location.Y)
-                    initialMap.Add(GetGroundRow());   
+                if (i != MissionManager.Rover.Location.Y)
+                    initialMap.Add(GetGroundRow());
                 else
-                    initialMap.Add(GetRoverRow(Vehicle));
+                    initialMap.Add(GetRoverRow(MissionManager.Rover));
             }
-            
+
             var viewModel = new MissionViewModel
             {
                 Map = initialMap
@@ -74,39 +59,13 @@ namespace CentralCommand.Controllers
 
             foreach (var input in distinctLocations)
             {
-                IObstacle obstacle = CreateObstacle(input);
-                Planet.AddObstacle(obstacle);
+                var coordinates = input.Coordinates.Split('_');
+                MissionManager.AddObstacle(int.Parse(coordinates[0]), int.Parse(coordinates[1]), input.Type, input.Behavior);
             }
 
-            var updatedObstacles = ConvertToViewModels(Planet.Obstacles);
+            var updatedObstacles = ConvertToViewModels(MissionManager.Planet.Obstacles);
 
             return Json(new MissionResponseViewModel { Success = true, Obstacles = updatedObstacles });
-        }
-
-        private IObstacle CreateObstacle(ObstacleViewModel input)
-        {
-            var coordinates = input.Coordinates.Split('_');
-            Point location = new Point(int.Parse(coordinates[0]), int.Parse(coordinates[1]));
-            if (input.Type.Equals("Alien", StringComparison.OrdinalIgnoreCase))
-            {
-                IObstacle result = new Alien(Planet, location, new DoNothing()); 
-
-                if (input.Behavior.Equals("tracker", StringComparison.OrdinalIgnoreCase))
-                {
-                    result = new Alien(Planet, location, new Tracker(Vehicle));
-                }
-                else if (input.Behavior.Equals("wallbuilder", StringComparison.OrdinalIgnoreCase))
-                {
-                    result = new Alien(Planet, location, new WallBuilder(Planet));
-                }
-                else if (input.Behavior.Equals("shooter", StringComparison.OrdinalIgnoreCase))
-                {
-                    result = new Alien(Planet, location, new DoNothing());
-                }
-
-                return result;
-            }
-            return new Obstacle(location);
         }
 
         [HttpPost]
@@ -116,22 +75,22 @@ namespace CentralCommand.Controllers
             {
                 return Json(new MissionResponseViewModel {Success = false});
             }
-            var oldCollection = Planet.Obstacles.ToList();
+            var oldCollection = MissionManager.Planet.Obstacles.ToList();
             var removedObstacles = oldCollection.OfType<IMovable>().Select(x =>
                 new MapPositionViewModel
                 {
                     Location = x.Location.X + "_" + x.Location.Y,
                     Image = "Ground.png"
                 }).ToList();
-            var originalPosition = Vehicle.Location.X + "_" + Vehicle.Location.Y;
+            var originalPosition = MissionManager.Rover.Location.X + "_" + MissionManager.Rover.Location.Y;
             var commandString = String.Join(",", commands);
 
             MissionManager.AcceptCommands(commandString);
             MissionManager.ExecuteMission();
 
-            var newCollection = Planet.Obstacles.ToList();
+            var newCollection = MissionManager.Planet.Obstacles.ToList();
 
-            var updatedObstacles = ConvertToViewModels(Planet.Obstacles);
+            var updatedObstacles = ConvertToViewModels(MissionManager.Planet.Obstacles);
             removedObstacles.AddRange(oldCollection.Except(newCollection).Select(x =>
                 new MapPositionViewModel
                 {
@@ -139,8 +98,8 @@ namespace CentralCommand.Controllers
                     Image = "Ground.png"
                 }).ToList());
 
-            var roverNewPosition = Vehicle.Location.X + "_" + Vehicle.Location.Y;
-            var roverFacing = GetFacingAsString(Vehicle.Facing);
+            var roverNewPosition = MissionManager.Rover.Location.X + "_" + MissionManager.Rover.Location.Y;
+            var roverFacing = GetFacingAsString(MissionManager.Rover.Facing);
 
             return Json(new MissionResponseViewModel {  Success = true, 
                                                         RoverLocation = roverNewPosition,
@@ -157,7 +116,7 @@ namespace CentralCommand.Controllers
                 new MapPositionViewModel
                 {
                     Location = x.Location.X + "_" + x.Location.Y,
-                    Image = x.GetType() == typeof(Crater) ? "crater.jpg" : x.GetType() == typeof(Alien) ? "alien.png" :"rock.png"
+                    Image = x.GetType().Name + ".png"
                 }).ToList();
         }
 
@@ -182,7 +141,7 @@ namespace CentralCommand.Controllers
         {
             var result = new List<string>();
 
-            for (int i = 0; i < 50; i++)
+            for (int i = 0; i < MissionManager.Planet.Bounds.Width; i++)
             {
                 result.Add("Ground.png");
             }

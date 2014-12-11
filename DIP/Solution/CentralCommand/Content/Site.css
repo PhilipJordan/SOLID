@@ -48,8 +48,8 @@
         display: block;
         padding: 0;
         margin: 0;
-        width: 2%;
-        height: 2%;
+        width: 4%;
+        height: 4%;
     }
 
 
@@ -126,4 +126,18 @@ td input {
 
 #sendCommands {
     margin-bottom: 10px;
+}
+
+#control-popup {
+    border: 1px solid black;
+    width: 250px;
+    height: 50px;
+    display: none;
+    position: fixed;
+    _position:absolute; /* hack for internet explorer 6*/
+    top:0;
+    left:0;
+    z-index:1;
+    background: #ffffff;
+    padding: 10px;
 }
