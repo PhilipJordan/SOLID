@@ -158,7 +158,6 @@ C:\github\SOLID\DIP\Solution\CentralCommand\bin\ATDD_and_MVC.pdb
 C:\github\SOLID\DIP\Solution\CentralCommand\bin\Antlr3.Runtime.dll
 C:\github\SOLID\DIP\Solution\CentralCommand\bin\EntityFramework.dll
 C:\github\SOLID\DIP\Solution\CentralCommand\bin\EntityFramework.SqlServer.dll
-C:\github\SOLID\DIP\Solution\CentralCommand\bin\MarsRoverKata.exe
 C:\github\SOLID\DIP\Solution\CentralCommand\bin\Microsoft.Data.Edm.dll
 C:\github\SOLID\DIP\Solution\CentralCommand\bin\Microsoft.Data.OData.dll
 C:\github\SOLID\DIP\Solution\CentralCommand\bin\Microsoft.Web.Infrastructure.dll
@@ -229,3 +228,4 @@ C:\github\SOLID\DIP\Solution\CentralCommand\bin\zh-Hant\System.Spatial.resources
 C:\github\SOLID\DIP\Solution\CentralCommand\obj\Debug\CentralCommand.csprojResolveAssemblyReference.cache
 C:\github\SOLID\DIP\Solution\CentralCommand\obj\Debug\ATDD_and_MVC.dll
 C:\github\SOLID\DIP\Solution\CentralCommand\obj\Debug\ATDD_and_MVC.pdb
+C:\github\SOLID\DIP\Solution\CentralCommand\bin\MarsRoverKata.dll
