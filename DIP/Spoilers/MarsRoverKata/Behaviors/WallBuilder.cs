@@ -21,17 +21,17 @@ namespace MarsRoverKata.Behaviors
             RNG = new Random();
         }
 
-        public void DoStuff()
+        public void ExecuteBehavior()
         {
             Parent.Facing = pickDirection();
             
             for (int i = 0; i < Speed; i++)
             {
                 var previousLocation = Parent.Location;
-                var moveSuccess = new ForwardCommand(Parent).Execute();
+                var moveSuccess = Parent.MoveForward(); //new ForwardCommand(Parent).Execute();
 
                 if(previousLocation != Parent.Location)
-                    Planet.AddObstacle(new Obstacle(previousLocation));
+                    Planet.AddObstacle(previousLocation); //new Obstacle(previousLocation));
             }
         }
 

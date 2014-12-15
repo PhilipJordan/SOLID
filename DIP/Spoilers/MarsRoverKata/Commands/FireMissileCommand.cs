@@ -11,7 +11,7 @@
 
         public bool Execute()
         {
-            return Rover.FireProjectile(typeof(Missile));
+            return Rover.FireMissle(); //Projectile(typeof(Missile));
         }
     }
 }

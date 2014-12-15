@@ -2,7 +2,7 @@
 
 namespace MarsRoverKata
 {
-    public class Alien : Movable, IObstacle
+    public class Alien : CombatMoveable, IObstacle
     {
         public IBehavior MyBehavior { get; set; }
 
@@ -19,7 +19,7 @@ namespace MarsRoverKata
 
         public virtual void DoStuff()
         {
-            MyBehavior.DoStuff();
+            MyBehavior.ExecuteBehavior();
         }
 
         public virtual bool IsDestructable

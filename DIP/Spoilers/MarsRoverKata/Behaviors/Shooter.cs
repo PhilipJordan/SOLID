@@ -1,5 +1,4 @@
-﻿using MarsRoverKata.Commands;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,36 +6,38 @@ using System.Threading.Tasks;
 
 namespace MarsRoverKata.Behaviors
 {
-    public class WallBuilder : IBehavior
+    public class Shooter : IBehavior
     {
-        private int Speed;
-        private Mars Planet; 
-        private readonly Random RNG;
         public Alien Parent { get; set; }
+        private int Speed;
+        private readonly Random RNG;
 
-        public WallBuilder(Mars planet)
+        public Shooter()
         {
-            Planet = planet;
             Speed = 3;
             RNG = new Random();
         }
 
-        public void DoStuff()
+        public void ExecuteBehavior()
         {
             Parent.Facing = pickDirection();
-            
+
             for (int i = 0; i < Speed; i++)
             {
-                var previousLocation = Parent.Location;
-                var moveSuccess = new ForwardCommand(Parent).Execute();
+                //var delta = Target.Location - Parent.Location;
 
-                if(previousLocation != Parent.Location)
-                    Planet.AddObstacle(new Obstacle(previousLocation));
+                //var targetDirection = directionToTarget(delta);
+
+                Parent.MoveForward(); // new ForwardCommand(Parent).Execute() : new TurnRightCommand(Parent).Execute();
             }
+
+            Parent.Facing = pickDirection();
+
+            Parent.FireMissle();
         }
 
         private Direction pickDirection()
-        { 
+        {
             switch (RNG.Next(1, 5))
             {
                 case 1:
@@ -51,5 +52,6 @@ namespace MarsRoverKata.Behaviors
 
             return Direction.North;
         }
+
     }
 }

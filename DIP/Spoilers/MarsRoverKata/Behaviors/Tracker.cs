@@ -13,13 +13,13 @@ namespace MarsRoverKata.Behaviors
         private int Speed;
         public Alien Parent { get; set; }
 
-        public Tracker(IMovable moveable)
+        public Tracker(IMovable thingToTrack)
         {
-            Target = moveable;
+            Target = thingToTrack;
             Speed = 3;
         }
 
-        public void DoStuff()
+        public void ExecuteBehavior()
         {
             for (int i = 0; i < Speed; i++)
             {
@@ -27,7 +27,7 @@ namespace MarsRoverKata.Behaviors
 
                 var targetDirection = directionToTarget(delta);
 
-                var success = Parent.Facing == targetDirection ? new ForwardCommand(Parent).Execute() : new TurnRightCommand(Parent).Execute();
+                var success = Parent.Facing == targetDirection ? Parent.MoveForward() : Parent.TurnRight(); // new ForwardCommand(Parent).Execute() : new TurnRightCommand(Parent).Execute();
             }
         }
 

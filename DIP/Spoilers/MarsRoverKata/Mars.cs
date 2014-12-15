@@ -38,6 +38,11 @@ namespace MarsRoverKata
             }
         }
 
+        public void AddObstacle(Point location)
+        {
+            _obstacles.Add(new Obstacle(location));
+        }
+
         public void AddObstacle(IObstacle obstacle)
         {
             _obstacles.Add(obstacle);

@@ -9,6 +9,6 @@ namespace MarsRoverKata.Behaviors
     public interface IBehavior
     {
         Alien Parent { get; set; }
-        void DoStuff();
+        void ExecuteBehavior();
     }
 }

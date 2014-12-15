@@ -9,7 +9,7 @@ namespace MarsRoverKata.Behaviors
     public class DoNothing : IBehavior
     {
         public Alien Parent { get; set; }
-        public void DoStuff()
+        public void ExecuteBehavior()
         {
             
         }
