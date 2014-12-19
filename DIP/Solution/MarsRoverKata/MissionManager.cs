@@ -86,7 +86,7 @@ namespace MarsRoverKata
                 }
                 if (behavior.Equals("shooter", StringComparison.OrdinalIgnoreCase))
                 {
-                    return new Alien(Planet, location, new Shooter());
+                    return new Alien(Planet, location, new DoNothing());
                 }
 
                 return new Alien(Planet, location, new DoNothing());

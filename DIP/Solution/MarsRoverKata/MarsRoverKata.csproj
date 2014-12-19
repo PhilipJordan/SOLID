@@ -48,7 +48,6 @@
     <Compile Include="AlienBehavior.cs" />
     <Compile Include="Behaviors\DoNothing.cs" />
     <Compile Include="Behaviors\IBehavior.cs" />
-    <Compile Include="Behaviors\Shooter.cs" />
     <Compile Include="Behaviors\WallBuilder.cs" />
     <Compile Include="Behaviors\Tracker.cs" />
     <Compile Include="CombatMoveable.cs" />
