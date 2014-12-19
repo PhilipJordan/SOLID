@@ -2,22 +2,15 @@
 
 import MarsRoverKata.Commands.ICommand;
 
+import java.beans.EventHandler;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Commander {
-    private List<ICommand> commands;
-
     // TODO: Implementation, functionality check
-    //public Event CommandExecuted = new Event<Void>();
+    public EventHandler CommandExecuted;
 
-    public List<ICommand> getCommands() {
-        return commands;
-    }
-
-    public void setCommands(List<ICommand> commands) {
-        this.commands = commands;
-    }
+    private List<ICommand> commands;
 
     public Commander() {
         commands = new ArrayList<ICommand>();
@@ -31,6 +24,14 @@ public class Commander {
         commands.add(command);
     }
 
+    public List<ICommand> getCommands() {
+        return commands;
+    }
+
+    public void setCommands(List<ICommand> commands) {
+        this.commands = commands;
+    }
+
     public boolean executeCommands() {
         for (ICommand command : commands) {
             boolean success = command.execute();
@@ -42,9 +43,8 @@ public class Commander {
     }
 
     private void onCommandExecuted() {
-        // TODO: EventHandler implementation
-//        if (CommandExecuted != null) {
-//            CommandExecuted(this, EventArgs.Empty);
-//        }
+        if (CommandExecuted != null) {
+            CommandExecuted.invoke(this, null, new Object[0]);
+        }
     }
 }
