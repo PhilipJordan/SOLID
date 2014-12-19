@@ -1,4 +1,4 @@
-﻿package MarsRoverKata;
+package MarsRoverKata;
 
 import MarsRoverKata.Commands.*;
 import com.google.common.collect.Iterables;
@@ -17,15 +17,15 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 @RunWith(MarsTests.class)
-@Suite.SuiteClasses({MarsTests.WhileWorkingWithObstacle.class, MarsTests.WhileWorkingWithMars.class,
-        MarsTests.WhileWorkingWithRover.class, MarsTests.WhileWorkingWithMissile.class})
+@Suite.SuiteClasses({MarsTests.WhileWorkingWithObstacle.class, MarsTests.WhileWorkingWithMars.class, MarsTests.WhileWorkingWithRover.class, MarsTests.WhileWorkingWithMissile.class, MarsTests.WhileWorkingWithMortar.class, MarsTests.WhileWorkingWithSingleTurnCommand.class, MarsTests.WhileWorkingWithSingleMoveCommand.class, MarsTests.WhileWorkingWithMultipleCommands.class
+})
 public class MarsTests extends Suite {
 
     public MarsTests(Class<?> klass, RunnerBuilder builder) throws InitializationError {
         super(klass, builder);
     }
 
-    class WhileWorkingWithObstacle extends GivenObstacle {
+    public static class WhileWorkingWithObstacle extends GivenObstacle {
         @Test
         public void WhenCalculatingObstructedFinalPosition_ThenLocationWillNotChange() {
             Point currentPosition = new Point(9, 10);
@@ -60,7 +60,7 @@ public class MarsTests extends Suite {
         }
     }
 
-    class WhileWorkingWithMars extends GivenMars {
+    public static class WhileWorkingWithMars extends GivenMars {
         @Test
         public void WhenMarsIsCreated_ThenSurfaceBoundsShouldBeDefined() {
             assertEquals(mars.getBounds().getHeight(), (50));
@@ -68,7 +68,7 @@ public class MarsTests extends Suite {
         }
     }
 
-    class WhileWorkingWithRover extends GivenRover {
+    public static class WhileWorkingWithRover extends GivenRover {
         @Test
         public void WhenRoverIsCreated_ThenLocationShouldBeTheCenterOfThePlanet() {
             Point expectedLocation = mars.getCenterOfThePlanet();
@@ -113,7 +113,7 @@ public class MarsTests extends Suite {
         }
     }
 
-    class WhileWorkingWithMissile extends GivenMissile {
+    public static class WhileWorkingWithMissile extends GivenMissile {
         @Test
         public void WhenMissileIsLaunched_AndNoObstaclesInTheWay_ThenANewObstacleCreated() {
             Point position = new Point(25, 25);
@@ -163,7 +163,7 @@ public class MarsTests extends Suite {
         }
     }
 
-    class WhileWorkingWithMortar extends GivenMortar {
+    public static class WhileWorkingWithMortar extends GivenMortar {
         @Test
         public void WhenMortarIsLaunched_AndNoObstaclesInTheLandingPostion_ThenANewObstacleCreated() {
             Point position = new Point(25, 25);
@@ -219,7 +219,7 @@ public class MarsTests extends Suite {
         }
     }
 
-    class WhileWorkingWithSingleTurnCommand extends GivenCommander {
+    public static class WhileWorkingWithSingleTurnCommand extends GivenCommander {
         @Test
         public void ThenItWillAcceptSingleCommand() {
             AddCommandToCommander(new ForwardCommand(rover));
@@ -301,7 +301,7 @@ public class MarsTests extends Suite {
 
     }
 
-    class WhileWorkingWithSingleMoveCommand extends GivenCommander {
+    public static class WhileWorkingWithSingleMoveCommand extends GivenCommander {
         @Test
         public void WhenRoverIsFacingNorthAndMovesForward_ThenRoverShouldMoveNorth() {
             setRoverFacing(Direction.North);
@@ -385,7 +385,7 @@ public class MarsTests extends Suite {
 
     }
 
-    class WhileWorkingWithMultipleCommands extends GivenCommander {
+    public static class WhileWorkingWithMultipleCommands extends GivenCommander {
         protected List<ICommand> listOfCommands;
 
         @Override
@@ -434,7 +434,7 @@ public class MarsTests extends Suite {
         }
     }
 
-    class GivenCommander extends GivenRover {
+    public static class GivenCommander extends GivenRover {
         protected Commander commander;
         protected ICommand command;
 
@@ -454,7 +454,7 @@ public class MarsTests extends Suite {
         }
     }
 
-    class GivenRover extends GivenObstacle {
+    public static class GivenRover extends GivenObstacle {
         protected Rover rover;
 
         @Override
@@ -472,7 +472,7 @@ public class MarsTests extends Suite {
         }
     }
 
-    class GivenMissile extends GivenObstacle {
+    public static class GivenMissile extends GivenObstacle {
         protected Missile missile;
 
         @Override
@@ -482,7 +482,7 @@ public class MarsTests extends Suite {
         }
     }
 
-    class GivenMortar extends GivenObstacle {
+    public static class GivenMortar extends GivenObstacle {
         protected Mortar mortar;
 
         @Override
@@ -492,7 +492,7 @@ public class MarsTests extends Suite {
         }
     }
 
-    class GivenObstacle extends GivenMars {
+    public static class GivenObstacle extends GivenMars {
         protected Obstacle obstacle;
         protected Point obstacleLocation;
 
@@ -506,7 +506,7 @@ public class MarsTests extends Suite {
         }
     }
 
-    class GivenMars extends Testbase {
+    public static class GivenMars extends Testbase {
         protected Mars mars;
 
         @Override
@@ -517,7 +517,7 @@ public class MarsTests extends Suite {
 
     }
 
-    class Testbase {
+    public static class Testbase {
         protected void arrangement() throws CrashException {
         }
 

@@ -1,4 +1,4 @@
-﻿package MarsRoverKata;
+package MarsRoverKata;
 
 public class Missile extends Projectile {
     public static final int range = 5;

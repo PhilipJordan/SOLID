@@ -1,4 +1,4 @@
-﻿package MarsRoverKata;
+package MarsRoverKata;
 
 import com.google.common.base.Equivalence;
 

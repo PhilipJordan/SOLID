@@ -1,4 +1,4 @@
-﻿package MarsRoverKata.Commands;
+package MarsRoverKata.Commands;
 
 import MarsRoverKata.Missile;
 import MarsRoverKata.Rover;

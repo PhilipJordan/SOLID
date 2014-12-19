@@ -1,4 +1,4 @@
-﻿package MarsRoverKata;
+package MarsRoverKata;
 
 public class Mortar extends Projectile {
     public static final int Range = 10;

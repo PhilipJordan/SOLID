@@ -1,4 +1,4 @@
-﻿package MarsRoverKata;
+package MarsRoverKata;
 
 public class Obstacle implements IObstacle {
     private Point location;

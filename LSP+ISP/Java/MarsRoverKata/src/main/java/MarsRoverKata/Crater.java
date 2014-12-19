@@ -1,4 +1,4 @@
-﻿package MarsRoverKata;
+package MarsRoverKata;
 
 public class Crater extends Obstacle {
     public Crater(Point location) {

@@ -1,4 +1,4 @@
-﻿package MarsRoverKata;
+package MarsRoverKata;
 
 import MarsRoverKata.Commands.*;
 import org.apache.commons.lang3.StringUtils;
