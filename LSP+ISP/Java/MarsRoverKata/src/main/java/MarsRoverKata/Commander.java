@@ -17,7 +17,7 @@ public class Commander {
     }
 
     public void accept(List<ICommand> commands) {
-        commands.addAll(commands);
+        this.commands.addAll(commands);
     }
 
     public void accept(ICommand command) {

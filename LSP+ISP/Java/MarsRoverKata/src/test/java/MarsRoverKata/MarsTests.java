@@ -521,10 +521,10 @@ public class MarsTests extends Suite {
         protected void arrangement() throws CrashException {
         }
 
-        protected void cleanup() {
+        protected void action() {
         }
 
-        protected void action() {
+        protected void cleanup() {
         }
 
         @Before
