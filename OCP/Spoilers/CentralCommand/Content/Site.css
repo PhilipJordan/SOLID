@@ -7,23 +7,6 @@
         background-color: #e6e8e8;
     }
 
-.div-header-title {
-    background-color: white;
-    border: 1px solid #dadddd;
-    border-radius: 3px;
-    width: 35%;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 20px;
-}
-
-#header-title {
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
 .controlContainer {
     /*border:1px solid #00FF00;*/
 }
