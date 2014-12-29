@@ -88,6 +88,14 @@ csx/
 
 # Windows Store app package directory
 AppPackages/
+
+SRP/C#/MarsRover/MarsRoverMunged/bin/
+SRP/C#/MarsRover/MarsRoverMunged/obj/
+SRP/Example/MarsRover/MarsRoverKata/bin/
+SRP/Example/MarsRover/MarsRoverKata/obj/
+SRP/Example/MarsRover/UnitTest/bin/
+SRP/Example/MarsRover/UnitTest/obj/
+
 OCP/Final/UnitTest/bin/
 OCP/Final/CentralCommand/bin/
 OCP/Final/CentralCommand/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
@@ -118,6 +126,10 @@ LSP+ISP/Exercise/UnitTest/bin/
 LSP+ISP/Exercise/MarsRoverKata/obj/
 LSP+ISP/Exercise/MarsRoverKata/bin/
 
+LSP+ISP/Java/.idea/workspace.xml
+LSP+ISP/Java/.idea/inspectionProfiles/profiles_settings.xml
+LSP+ISP/Java/.idea/encodings.xml
+
 DIP/Final/UnitTest/bin/
 DIP/Final/CentralCommand/bin/
 DIP/Final/CentralCommand/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
@@ -132,6 +144,3 @@ DIP/Exercise/CentralCommand/bin/
 DIP/Exercise/UnitTest/bin/
 DIP/Exercise/MarsRoverKata/obj/
 DIP/Exercise/MarsRoverKata/bin/
-LSP+ISP/Java/.idea/workspace.xml
-LSP+ISP/Java/.idea/inspectionProfiles/profiles_settings.xml
-LSP+ISP/Java/.idea/encodings.xml
