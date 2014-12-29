@@ -1,0 +1,6 @@
+C:\Users\adeitz\Documents\GitHub\SOLID\SRP Redux\Final\MarsRoverKata\obj\Debug\MarsRoverKata.csprojResolveAssemblyReference.cache
+C:\Users\adeitz\Documents\GitHub\SOLID\SRP Redux\Final\MarsRoverKata\bin\Debug\MarsRoverKata.dll.config
+C:\Users\adeitz\Documents\GitHub\SOLID\SRP Redux\Final\MarsRoverKata\bin\Debug\MarsRoverKata.dll
+C:\Users\adeitz\Documents\GitHub\SOLID\SRP Redux\Final\MarsRoverKata\bin\Debug\MarsRoverKata.pdb
+C:\Users\adeitz\Documents\GitHub\SOLID\SRP Redux\Final\MarsRoverKata\obj\Debug\MarsRoverKata.dll
+C:\Users\adeitz\Documents\GitHub\SOLID\SRP Redux\Final\MarsRoverKata\obj\Debug\MarsRoverKata.pdb
