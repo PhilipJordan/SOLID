@@ -1,0 +1,17 @@
+C:\Users\adeitz\Documents\GitHub\SOLID\SRP Redux\Final\UnitTest\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache
+C:\Users\adeitz\Documents\GitHub\SOLID\SRP Redux\Final\UnitTest\bin\Debug\UnitTest.dll
+C:\Users\adeitz\Documents\GitHub\SOLID\SRP Redux\Final\UnitTest\bin\Debug\UnitTest.pdb
+C:\Users\adeitz\Documents\GitHub\SOLID\SRP Redux\Final\UnitTest\bin\Debug\FluentAssertions.Core.dll
+C:\Users\adeitz\Documents\GitHub\SOLID\SRP Redux\Final\UnitTest\bin\Debug\FluentAssertions.dll
+C:\Users\adeitz\Documents\GitHub\SOLID\SRP Redux\Final\UnitTest\bin\Debug\MarsRoverKata.dll
+C:\Users\adeitz\Documents\GitHub\SOLID\SRP Redux\Final\UnitTest\bin\Debug\Moq.dll
+C:\Users\adeitz\Documents\GitHub\SOLID\SRP Redux\Final\UnitTest\bin\Debug\nunit.framework.dll
+C:\Users\adeitz\Documents\GitHub\SOLID\SRP Redux\Final\UnitTest\bin\Debug\MarsRoverKata.pdb
+C:\Users\adeitz\Documents\GitHub\SOLID\SRP Redux\Final\UnitTest\bin\Debug\FluentAssertions.pdb
+C:\Users\adeitz\Documents\GitHub\SOLID\SRP Redux\Final\UnitTest\bin\Debug\FluentAssertions.xml
+C:\Users\adeitz\Documents\GitHub\SOLID\SRP Redux\Final\UnitTest\bin\Debug\FluentAssertions.Core.pdb
+C:\Users\adeitz\Documents\GitHub\SOLID\SRP Redux\Final\UnitTest\bin\Debug\FluentAssertions.Core.xml
+C:\Users\adeitz\Documents\GitHub\SOLID\SRP Redux\Final\UnitTest\bin\Debug\Moq.xml
+C:\Users\adeitz\Documents\GitHub\SOLID\SRP Redux\Final\UnitTest\bin\Debug\nunit.framework.xml
+C:\Users\adeitz\Documents\GitHub\SOLID\SRP Redux\Final\UnitTest\obj\Debug\UnitTest.dll
+C:\Users\adeitz\Documents\GitHub\SOLID\SRP Redux\Final\UnitTest\obj\Debug\UnitTest.pdb
