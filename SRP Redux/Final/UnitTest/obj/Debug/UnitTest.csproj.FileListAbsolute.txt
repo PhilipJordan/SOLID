@@ -15,3 +15,10 @@ C:\Users\adeitz\Documents\GitHub\SOLID\SRP Redux\Final\UnitTest\bin\Debug\Moq.xm
 C:\Users\adeitz\Documents\GitHub\SOLID\SRP Redux\Final\UnitTest\bin\Debug\nunit.framework.xml
 C:\Users\adeitz\Documents\GitHub\SOLID\SRP Redux\Final\UnitTest\obj\Debug\UnitTest.dll
 C:\Users\adeitz\Documents\GitHub\SOLID\SRP Redux\Final\UnitTest\obj\Debug\UnitTest.pdb
+C:\Users\nmartin\Documents\GitHub\SOLID\SRP Redux\Final\UnitTest\bin\Debug\UnitTest.dll
+C:\Users\nmartin\Documents\GitHub\SOLID\SRP Redux\Final\UnitTest\bin\Debug\UnitTest.pdb
+C:\Users\nmartin\Documents\GitHub\SOLID\SRP Redux\Final\UnitTest\bin\Debug\MarsRoverKata.dll
+C:\Users\nmartin\Documents\GitHub\SOLID\SRP Redux\Final\UnitTest\bin\Debug\MarsRoverKata.pdb
+C:\Users\nmartin\Documents\GitHub\SOLID\SRP Redux\Final\UnitTest\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache
+C:\Users\nmartin\Documents\GitHub\SOLID\SRP Redux\Final\UnitTest\obj\Debug\UnitTest.dll
+C:\Users\nmartin\Documents\GitHub\SOLID\SRP Redux\Final\UnitTest\obj\Debug\UnitTest.pdb
