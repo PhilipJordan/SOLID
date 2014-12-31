@@ -39,7 +39,7 @@ namespace CentralCommand.Controllers
             {
                 Map = initialMap
             };
-            return View(viewModel);
+            return Json(viewModel, JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult Reset()

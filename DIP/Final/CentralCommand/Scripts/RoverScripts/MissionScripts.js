@@ -1,12 +1,28 @@
 ﻿
 function pagePrep() {
 
-    $(".terrainMap img").click(function () {
+    $.ajax({
+        url: '/Mission/Index',
+        success: function(data) {
+            var map = $('.terrainMap');
+            for (var rowIndex = data.Map.length - 1; rowIndex >= 0; rowIndex--)
+            {
+                var row = data.Map[rowIndex];
+                for (var columnIndex = 0; columnIndex < row.length; columnIndex++)
+                {
+                    var id = columnIndex + "_" + rowIndex;
+                    var imagePath = "/Images/" + row[columnIndex];
+                    map.append('<img id="' + id + '" class="mapImage" src="' + imagePath + '" alt="Image" />');
+                }
+            }
+        }
+    });
+
+    $(".terrainMap").on('click', 'img', function () {
         var element = this;
         var location = element.id;
-
         $("#newObstacles").append('<li class="rock" data-behavior="none">' + location + '</li>');
-    }).bind("contextmenu", function (e) {
+    }).on("contextmenu", 'img', function (e) {
         var element = this;
         var location = element.id;
 
@@ -47,20 +63,20 @@ function pagePrep() {
         SendCommandsToServer(itemsToSend, commandUpdateSuccess, wtf);
     });
 
-    $("#foo").click(function () {
-        $("#newObstacles").append('<li class="alien" data-behavior="tracker">' + blar + '</li>');
+    $("#alien-tracker").click(function () {
+        $("#newObstacles").append('<li class="alien" data-behavior="tracker">' + alienCoordinates + '</li>');
         closePopup();
 
     });
 
-    $("#bar").click(function () {
-        $("#newObstacles").append('<li class="alien" data-behavior="wallbuilder">' + blar + '</li>');
+    $("#alien-wallBuilder").click(function () {
+        $("#newObstacles").append('<li class="alien" data-behavior="wallbuilder">' + alienCoordinates + '</li>');
         closePopup();
 
     });
 
-    $("#fizz").click(function () {
-        $("#newObstacles").append('<li class="alien" data-behavior="shooter">' + blar + '</li>');
+    $("#alien-shooter").click(function () {
+        $("#newObstacles").append('<li class="alien" data-behavior="shooter">' + alienCoordinates + '</li>');
         closePopup();
 
     });
@@ -152,10 +168,10 @@ function pagePrep() {
         $("#control-popup").css({ "top": e.pageY });
         $("#control-popup").css({ "left": e.pageX });
         $("#control-popup").fadeIn("slow");
-        blar = location;
+        alienCoordinates = location;
     }
 
-    var blar;
+    var alienCoordinates;
 
     function closePopup() {
         $("#control-popup").fadeOut("fast");

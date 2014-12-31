@@ -1,7 +1,22 @@
 ﻿
 function pagePrep() {
 
-    $(".terrainMap img").click(function () {
+    $.ajax({
+        url: '/Mission/Index',
+        success: function (data) {
+            var map = $('.terrainMap');
+            for (var rowIndex = data.Map.length - 1; rowIndex >= 0; rowIndex--) {
+                var row = data.Map[rowIndex];
+                for (var columnIndex = 0; columnIndex < row.length; columnIndex++) {
+                    var id = columnIndex + "_" + rowIndex;
+                    var imagePath = "/Images/" + row[columnIndex];
+                    map.append('<img id="' + id + '" class="mapImage" src="' + imagePath + '" alt="Image" />');
+                }
+            }
+        }
+    });
+
+    $(".terrainMap").on('click', 'img', function () {
         var element = this;
         var location = element.id;
 

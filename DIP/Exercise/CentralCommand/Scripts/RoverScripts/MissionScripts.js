@@ -1,12 +1,26 @@
 ﻿
 function pagePrep() {
 
-    $(".terrainMap img").click(function () {
+    $.ajax({
+        url: '/Mission/Index',
+        success: function (data) {
+            var map = $('.terrainMap');
+            for (var rowIndex = data.Map.length - 1; rowIndex >= 0; rowIndex--) {
+                var row = data.Map[rowIndex];
+                for (var columnIndex = 0; columnIndex < row.length; columnIndex++) {
+                    var id = columnIndex + "_" + rowIndex;
+                    var imagePath = "/Images/" + row[columnIndex];
+                    map.append('<img id="' + id + '" class="mapImage" src="' + imagePath + '" alt="Image" />');
+                }
+            }
+        }
+    });
+
+    $(".terrainMap").on('click', 'img', function () {
         var element = this;
         var location = element.id;
-
         $("#newObstacles").append('<li class="rock" data-behavior="none">' + location + '</li>');
-    }).bind("contextmenu", function (e) {
+    }).on("contextmenu", 'img', function (e) {
         var element = this;
         var location = element.id;
 
@@ -17,7 +31,7 @@ function pagePrep() {
     $("#addObstacles").click(function () {
         var element = $("#newObstacles");
         var itemsToSend = new Array();
-        var callback = function(index, element) {
+        var callback = function (index, element) {
             var jqElement = $(element);
             itemsToSend[index] = {
                 Coordinates: jqElement.text(),
@@ -47,20 +61,20 @@ function pagePrep() {
         SendCommandsToServer(itemsToSend, commandUpdateSuccess, wtf);
     });
 
-    $("#foo").click(function () {
-        $("#newObstacles").append('<li class="alien" data-behavior="tracker">' + blar + '</li>');
+    $("#alien-tracker").click(function () {
+        $("#newObstacles").append('<li class="alien" data-behavior="tracker">' + alienCoordinates + '</li>');
         closePopup();
 
     });
 
-    $("#bar").click(function () {
-        $("#newObstacles").append('<li class="alien" data-behavior="wallbuilder">' + blar + '</li>');
+    $("#alien-wallBuilder").click(function () {
+        $("#newObstacles").append('<li class="alien" data-behavior="wallbuilder">' + alienCoordinates + '</li>');
         closePopup();
 
     });
 
-    $("#fizz").click(function () {
-        $("#newObstacles").append('<li class="alien" data-behavior="shooter">' + blar + '</li>');
+    $("#alien-shooter").click(function () {
+        $("#newObstacles").append('<li class="alien" data-behavior="shooter">' + alienCoordinates + '</li>');
         closePopup();
 
     });
@@ -82,45 +96,38 @@ function pagePrep() {
         else { alert("Unable to send commands. Did you enter any?"); }
     }
 
-    function obstacleUpdateSuccess(result)
-    {
+    function obstacleUpdateSuccess(result) {
         if (result.Success) {
             $(result.RemovedObstacles).each(updateMapLocation);
             $(result.Obstacles).each(updateMapLocation);
             emptyListElement($("#newObstacles"));
         }
-        else { alert("Unable to update obstacles. Did you click on the map to add any?");}
+        else { alert("Unable to update obstacles. Did you click on the map to add any?"); }
     }
 
-    function emptyListElement(element)
-    {
+    function emptyListElement(element) {
         element.empty();
     }
 
-    function setOldRoverLocationToGround(oldLocation)
-    {
+    function setOldRoverLocationToGround(oldLocation) {
         $("img[id='" + oldLocation + "']").attr('src', '/Images/Ground.png');
     }
 
-    function updateMapLocation(index, element)
-    {
+    function updateMapLocation(index, element) {
         $("img[id='" + element.Location + "']").attr('src', '/Images/' + element.Image);
     }
 
-    function wtf()
-    {
+    function wtf() {
         alert("Something went wrong with communicating to the server! WTF!");
     }
 
-    function iterateListItems(callback, element)
-    {
-        $("li", element).each(function(index, element){
+    function iterateListItems(callback, element) {
+        $("li", element).each(function (index, element) {
             callback(index, element);
         });
     }
 
-    function SendCommandsToServer(itemsToSend, callback, wtf)
-    {
+    function SendCommandsToServer(itemsToSend, callback, wtf) {
         $.ajax({
             type: 'post',
             datatype: 'json',
@@ -133,8 +140,7 @@ function pagePrep() {
         });
     }
 
-    function UpdateObstaclesOnServer(itemsToSend, callback, wtf)
-    {
+    function UpdateObstaclesOnServer(itemsToSend, callback, wtf) {
         $.ajax({
             type: 'post',
             datatype: 'json',
@@ -152,10 +158,10 @@ function pagePrep() {
         $("#control-popup").css({ "top": e.pageY });
         $("#control-popup").css({ "left": e.pageX });
         $("#control-popup").fadeIn("slow");
-        blar = location;
+        alienCoordinates = location;
     }
 
-    var blar;
+    var alienCoordinates;
 
     function closePopup() {
         $("#control-popup").fadeOut("fast");
