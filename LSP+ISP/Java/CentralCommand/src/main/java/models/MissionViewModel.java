@@ -1,23 +1,15 @@
 package models;
 
-public class MapPositionViewModel {
-    private String location;
+import java.util.List;
 
-    private String Image;
+public class MissionViewModel {
+    List<List<String>> map;
 
-    public String getLocation() {
-        return location;
+    public List<List<String>> getMap() {
+        return map;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
-    }
-
-    public String getImage() {
-        return Image;
-    }
-
-    public void setImage(String image) {
-        Image = image;
+    public void setMap(List<List<String>> map) {
+        this.map = map;
     }
 }
