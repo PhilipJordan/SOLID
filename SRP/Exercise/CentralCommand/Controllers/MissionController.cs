@@ -27,7 +27,7 @@ namespace CentralCommand.Controllers
         public ActionResult Index()
         {
             var initialMap = new List<List<string>>();
-            for (int i = 0; i < MissionManager.Rover.Bounds.Height; i++)
+            for (int i = 0; i < MissionManager.Bounds.Height; i++)
             {
                 if (i != MissionManager.Rover.Location.Y)
                     initialMap.Add(GetGroundRow());
@@ -62,7 +62,7 @@ namespace CentralCommand.Controllers
                 MissionManager.AddObstacle(int.Parse(coordinates[0]), int.Parse(coordinates[1]));
             }
 
-            var updatedObstacles = ConvertToViewModels(MissionManager.Rover.Obstacles);
+            var updatedObstacles = ConvertToViewModels(MissionManager.Obstacles);
 
             return Json(new MissionResponseViewModel { Success = true, Obstacles = updatedObstacles });
         }
@@ -72,18 +72,18 @@ namespace CentralCommand.Controllers
         {
             if (commands == null)
             {
-                return Json(new MissionResponseViewModel {Success = false});
+                return Json(new MissionResponseViewModel { Success = false });
             }
-            var oldCollection = MissionManager.Rover.Obstacles.ToList();
+            var oldCollection = MissionManager.Obstacles.ToList();
             var originalPosition = MissionManager.Rover.Location.X + "_" + MissionManager.Rover.Location.Y;
             var commandString = String.Join(",", commands);
 
             MissionManager.AcceptCommands(commandString);
             MissionManager.ExecuteMission();
 
-            var newCollection = MissionManager.Rover.Obstacles.ToList();
+            var newCollection = MissionManager.Obstacles.ToList();
 
-            var updatedObstacles = ConvertToViewModels(MissionManager.Rover.Obstacles);
+            var updatedObstacles = ConvertToViewModels(MissionManager.Obstacles);
             var removedObstacles = oldCollection.Except(newCollection).Select(x =>
                 new MapPositionViewModel
                 {
@@ -94,13 +94,15 @@ namespace CentralCommand.Controllers
             var roverNewPosition = MissionManager.Rover.Location.X + "_" + MissionManager.Rover.Location.Y;
             var roverFacing = GetFacingAsString(MissionManager.Rover.Facing);
 
-            return Json(new MissionResponseViewModel {  Success = true, 
-                                                        RoverLocation = roverNewPosition,
-                                                        PreviousRoverLocation = originalPosition,
-                                                        RoverFacing = roverFacing,
-                                                        Obstacles = updatedObstacles,
-                                                        RemovedObstacles = removedObstacles
-                                                     });
+            return Json(new MissionResponseViewModel
+            {
+                Success = true,
+                RoverLocation = roverNewPosition,
+                PreviousRoverLocation = originalPosition,
+                RoverFacing = roverFacing,
+                Obstacles = updatedObstacles,
+                RemovedObstacles = removedObstacles
+            });
         }
 
         private List<MapPositionViewModel> ConvertToViewModels(IEnumerable<Obstacle> obstacles)
@@ -116,7 +118,7 @@ namespace CentralCommand.Controllers
         private string GetFacingAsString(Direction roverFacing)
         {
             switch (roverFacing)
-            { 
+            {
                 case Direction.North:
                     return "N";
                 case Direction.East:
@@ -134,7 +136,7 @@ namespace CentralCommand.Controllers
         {
             var result = new List<string>();
 
-            for (int i = 0; i < MissionManager.Rover.Bounds.Width; i++)
+            for (int i = 0; i < MissionManager.Bounds.Width; i++)
             {
                 result.Add("Ground.png");
             }

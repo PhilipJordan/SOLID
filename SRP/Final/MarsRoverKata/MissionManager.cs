@@ -8,6 +8,8 @@ namespace MarsRoverKata
     {
         public Rover Rover { get; private set; }
         public Mars Planet { get; private set; }
+        public Size Bounds { get { return Planet.Bounds; } }
+        public IReadOnlyList<Obstacle> Obstacles { get { return Planet.Obstacles; } }
         private readonly Commander _commander;
         
         public MissionManager(Rover rover)
