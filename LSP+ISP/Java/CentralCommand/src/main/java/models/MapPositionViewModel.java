@@ -3,7 +3,7 @@ package models;
 public class MapPositionViewModel {
     private String location;
 
-    private String Image;
+    private String image;
 
     public String getLocation() {
         return location;
@@ -14,10 +14,10 @@ public class MapPositionViewModel {
     }
 
     public String getImage() {
-        return Image;
+        return image;
     }
 
     public void setImage(String image) {
-        Image = image;
+        this.image = image;
     }
 }
