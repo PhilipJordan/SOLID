@@ -1,5 +1,10 @@
 package controller;
 
+import MarsRoverKata.*;
+import com.google.common.base.Function;
+import com.google.common.collect.Lists;
+import models.MapPositionViewModel;
+import models.MissionViewModel;
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
@@ -12,7 +17,9 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.io.IOException;
 import java.net.URI;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
@@ -21,6 +28,23 @@ import java.util.concurrent.TimeUnit;
 public class MissionController {
     private static final int PORT = 53332;
     private static final URI BASE_URI = URI.create("http://localhost:" + PORT + "/");
+
+    private MissionManager missionManager;
+
+    public MissionManager getMissionManager() {
+        if (null == missionManager) {
+            try {
+                this.missionManager = new MissionManager(new Rover(new Mars()));
+            } catch (CrashException e) {
+                e.printStackTrace();
+            }
+        }
+        return missionManager;
+    }
+
+    public void setMissionManager(MissionManager missionManager) {
+        this.missionManager = missionManager;
+    }
 
     // The Java method will process HTTP GET requests
     @GET
@@ -50,8 +74,21 @@ public class MissionController {
     @GET
     @Path("/index")
     @Produces(MediaType.APPLICATION_JSON)
-    public String getIndex() {
-        return null;
+    public MissionViewModel getIndex() {
+        List<List<String>> initialMap = new ArrayList<>();
+        for (int i = 0; i < getMissionManager().getPlanet().getBounds().getHeight(); i++) {
+            if (i != getMissionManager().getRover().getLocation().getY()) {
+                initialMap.add(getGroundRow());
+            } else {
+                initialMap.add(getRoverRow(getMissionManager().getRover()));
+            }
+        }
+
+        MissionViewModel viewModel = new MissionViewModel();
+        viewModel.setMap(initialMap);
+
+        //return View(viewModel);
+        return viewModel;
     }
 
     // MAIN - execution starting point
@@ -68,5 +105,49 @@ public class MissionController {
         System.out.println("Stopping server");
         server.shutdown(0, TimeUnit.SECONDS);
         System.out.println("Server stopped");
+    }
+
+
+    private List<MapPositionViewModel> convertToViewModels(List<IObstacle> obstacles) {
+        return Lists.transform(obstacles, new Function<IObstacle, MapPositionViewModel>() {
+            @Override
+            public MapPositionViewModel apply(IObstacle input) {
+                MapPositionViewModel mapPositionViewModel = new MapPositionViewModel();
+                mapPositionViewModel.setLocation(input.getLocation().getX() + "_" + input.getLocation().getY());
+                mapPositionViewModel.setImage(input.getClass().getName() + ".png");
+                return mapPositionViewModel;
+            }
+        });
+    }
+
+    private String getFacingAsString(Direction roverFacing) {
+        switch (roverFacing) {
+            case North:
+                return "N";
+            case East:
+                return "E";
+            case South:
+                return "S";
+            case West:
+                return "W";
+        }
+        return "N";
+    }
+
+    private List<String> getGroundRow() {
+        List result = new ArrayList<String>();
+
+        for (int i = 0; i < getMissionManager().getPlanet().getBounds().getWidth(); i++) {
+            result.add("Ground.png");
+        }
+        return result;
+    }
+
+    private List<String> getRoverRow(Rover vehicle) {
+        List<String> result = getGroundRow();
+
+        int centerIndex = vehicle.getLocation().getX();
+        result.set(centerIndex, "Rover.png");
+        return result;
     }
 }

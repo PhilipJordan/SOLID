@@ -3,6 +3,7 @@ package MarsRoverKata;
 import MarsRoverKata.Commands.*;
 import org.apache.commons.lang3.StringUtils;
 
+import java.beans.EventHandler;
 import java.util.ArrayList;
 
 public class MissionManager {
@@ -24,13 +25,15 @@ public class MissionManager {
         this.rover = rover;
         Planet = rover.getMars();
         _commander = new Commander();
-        // _commander.CommandExecuted. += updateAliens;
+        //MissionManager MissionManager = EventHandler.create(this.getClass(), this, "updateAliens", "");
+        EventHandler eventHandler = new EventHandler(this, "updateAliens", null, null);
+        _commander.setEventHandler(eventHandler);
     }
 
-    // TODO: EventHandler implementation
-//    private void updateAliens(Object sender, EventArgs e) {
-//        Planet.UpdateAliens();
-//    }
+    //TODO: EventHandler implementation
+    private void updateAliens(Object sender) {
+        Planet.UpdateAliens();
+    }
 
     public String acceptCommands(String commandString) {
         _commander.setCommands(new ArrayList<ICommand>());

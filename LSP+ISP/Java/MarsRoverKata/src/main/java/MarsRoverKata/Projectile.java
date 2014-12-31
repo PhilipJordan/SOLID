@@ -79,7 +79,7 @@ public abstract class Projectile {
             public boolean apply(IObstacle input) {
                 return input.getLocation().equals(point);
             }
-        }));
+        }),null);
     }
 
     private void hitTarget(Point point) {

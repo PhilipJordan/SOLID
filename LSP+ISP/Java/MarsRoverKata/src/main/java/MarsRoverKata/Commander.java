@@ -3,12 +3,13 @@ package MarsRoverKata;
 import MarsRoverKata.Commands.ICommand;
 
 import java.beans.EventHandler;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Commander {
     // TODO: Implementation, functionality check
-    public EventHandler CommandExecuted;
+    private EventHandler commandExecuted;
 
     private List<ICommand> commands;
 
@@ -32,6 +33,14 @@ public class Commander {
         this.commands = commands;
     }
 
+    public void setEventHandler(EventHandler event) {
+        this.commandExecuted = event;
+    }
+
+    public EventHandler getCommandExecuted() {
+        return commandExecuted;
+    }
+
     public boolean executeCommands() {
         for (ICommand command : commands) {
             boolean success = command.execute();
@@ -43,8 +52,15 @@ public class Commander {
     }
 
     private void onCommandExecuted() {
-        if (CommandExecuted != null) {
-            CommandExecuted.invoke(this, null, new Object[0]);
+        if (commandExecuted != null) {
+            try {
+                Method method = commandExecuted.getTarget().getClass().getMethod(commandExecuted.getAction(), Object[].class);
+                Object[] arguments = new Object[0];
+                commandExecuted.invoke(commandExecuted.getTarget(), method, arguments);
+            } catch (NoSuchMethodException nsme) {
+                System.err.println("Error invoking commandExecuted: " + nsme);
+            }
         }
     }
+
 }
