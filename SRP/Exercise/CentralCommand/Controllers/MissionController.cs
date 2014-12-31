@@ -45,7 +45,7 @@ namespace CentralCommand.Controllers
         public ActionResult Reset()
         {
             MissionManager = null;
-            return RedirectToAction("Index");
+            return Redirect("/index.html");
         }
 
         [HttpPost]
