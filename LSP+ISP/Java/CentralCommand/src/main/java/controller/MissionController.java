@@ -5,7 +5,9 @@ import com.google.common.base.Function;
 import com.google.common.collect.Lists;
 import models.MapPositionViewModel;
 import models.MissionViewModel;
+import org.glassfish.grizzly.http.server.HttpHandler;
 import org.glassfish.grizzly.http.server.HttpServer;
+import org.glassfish.grizzly.http.server.StaticHttpHandler;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
 
@@ -24,10 +26,11 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 // The Java class will be hosted at the URI path "/r"
-@Path("/r")
+@Path("/")
 public class MissionController {
     private static final int PORT = 53332;
-    private static final URI BASE_URI = URI.create("http://localhost:" + PORT + "/");
+    private static final URI BASE_URI = URI.create("http://localhost:" + PORT + "/Mission");
+    private static String defaultDocRoot;
 
     private MissionManager missionManager;
 
@@ -51,7 +54,7 @@ public class MissionController {
     // The Java method will produce content identified by a specified MIME Media type
     @Produces(MediaType.APPLICATION_JSON)
     // Path determines the path, which is /r/example for this case
-    @Path("/example")
+    @Path("/Example")
     public Response getExampleMessage() {
         Map<String, Integer> testMap = new HashMap<String, Integer>();
         testMap.put("One", 1);
@@ -64,17 +67,18 @@ public class MissionController {
 
     @GET
     // The Java method will be hosted at the URI path "/r/reset"-
-    @Path("/reset")
+    @Path("/Reset")
     @Produces(MediaType.APPLICATION_JSON)
     public String getReset() {
+
         // TODO: Reset
-        return "Reset";
+        return defaultDocRoot;
     }
 
     @GET
-    @Path("/index")
+    @Path("/Index")
     @Produces(MediaType.APPLICATION_JSON)
-    public MissionViewModel getIndex() {
+    public Response getIndex() {
         List<List<String>> initialMap = new ArrayList<>();
         for (int i = 0; i < getMissionManager().getPlanet().getBounds().getHeight(); i++) {
             if (i != getMissionManager().getRover().getLocation().getY()) {
@@ -87,26 +91,26 @@ public class MissionController {
         MissionViewModel viewModel = new MissionViewModel();
         viewModel.setMap(initialMap);
 
-        //return View(viewModel);
-        return viewModel;
+        return Response.ok(viewModel).build();
     }
 
     // MAIN - execution starting point
     public static void main(String[] args) throws IOException {
         final ResourceConfig resourceConfig = new ResourceConfig(MissionController.class);
         final HttpServer server = GrizzlyHttpServerFactory.createHttpServer(BASE_URI, resourceConfig);
-
+        StaticHttpHandler httpHandler = new StaticHttpHandler("CentralCommand/src/main/webapp");
+        defaultDocRoot = httpHandler.getDefaultDocRoot().getCanonicalPath();
+        server.getServerConfiguration().addHttpHandler(httpHandler, "/");
         server.start();
 
         System.out.println("Server running");
-        System.out.println("URL (example): http://localhost:" + PORT + "/r/example");
+        System.out.println("URL (example): http://localhost:" + PORT + "/Mission/Example");
         System.out.println("Hit return to stop...");
         System.in.read();
         System.out.println("Stopping server");
         server.shutdown(0, TimeUnit.SECONDS);
         System.out.println("Server stopped");
     }
-
 
     private List<MapPositionViewModel> convertToViewModels(List<IObstacle> obstacles) {
         return Lists.transform(obstacles, new Function<IObstacle, MapPositionViewModel>() {
