@@ -135,7 +135,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
-    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Images\backward.png" />
     <Content Include="Images\Crater.png" />
     <Content Include="Images\down.png" />
