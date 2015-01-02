@@ -5,8 +5,8 @@ function pagePrep() {
         url: '/Mission/Index',
         success: function (data) {
             var map = $('.terrainMap');
-            for (var rowIndex = data.Map.length - 1; rowIndex >= 0; rowIndex--) {
-                var row = data.Map[rowIndex];
+            for (var rowIndex = data.map.length - 1; rowIndex >= 0; rowIndex--) {
+                var row = data.map[rowIndex];
                 for (var columnIndex = 0; columnIndex < row.length; columnIndex++) {
                     var id = columnIndex + "_" + rowIndex;
                     var imagePath = "/Images/" + row[columnIndex];
@@ -62,10 +62,10 @@ function pagePrep() {
     });
 
     function commandUpdateSuccess(result) {
-        if (result.Success) {
-            var locationToUpdate = result.RoverLocation;
-            var oldRoverLocation = result.PreviousRoverLocation;
-            var roverFacing = result.RoverFacing;
+        if (result.success) {
+            var locationToUpdate = result.roverLocation;
+            var oldRoverLocation = result.previousRoverLocation;
+            var roverFacing = result.roverFacing;
 
             setOldRoverLocationToGround(oldRoverLocation);
 
@@ -80,9 +80,9 @@ function pagePrep() {
 
     function obstacleUpdateSuccess(result)
     {
-        if (result.Success) {
-            $(result.RemovedObstacles).each(updateMapLocation);
-            $(result.Obstacles).each(updateMapLocation);
+        if (result.success) {
+            $(result.removedObstacles).each(updateMapLocation);
+            $(result.obstacles).each(updateMapLocation);
             emptyListElement($("#newObstacles"));
         }
         else { alert("Unable to update obstacles. Did you click on the map to add any?");}
@@ -100,7 +100,7 @@ function pagePrep() {
 
     function updateMapLocation(index, element)
     {
-        $("img[id='" + element.Location + "']").attr('src', '/Images/' + element.Image);
+        $("img[id='" + element.location + "']").attr('src', '/Images/' + element.image);
     }
 
     function wtf()

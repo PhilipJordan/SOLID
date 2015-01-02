@@ -132,6 +132,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="JsonDotNetResult.cs" />
     <Compile Include="Models\MissionResponseViewModel.cs" />
     <Compile Include="Models\MissionViewModel.cs" />
     <Compile Include="Models\MapPositionViewModel.cs" />
