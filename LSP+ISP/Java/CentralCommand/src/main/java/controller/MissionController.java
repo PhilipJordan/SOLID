@@ -94,24 +94,6 @@ public class MissionController {
         return Response.ok(viewModel).build();
     }
 
-    // MAIN - execution starting point
-    public static void main(String[] args) throws IOException {
-        final ResourceConfig resourceConfig = new ResourceConfig(MissionController.class);
-        final HttpServer server = GrizzlyHttpServerFactory.createHttpServer(BASE_URI, resourceConfig);
-        StaticHttpHandler httpHandler = new StaticHttpHandler("CentralCommand/src/main/webapp");
-        defaultDocRoot = httpHandler.getDefaultDocRoot().getCanonicalPath();
-        server.getServerConfiguration().addHttpHandler(httpHandler, "/");
-        server.start();
-
-        System.out.println("Server running");
-        System.out.println("URL (example): http://localhost:" + PORT + "/Mission/Example");
-        System.out.println("Hit return to stop...");
-        System.in.read();
-        System.out.println("Stopping server");
-        server.shutdown(0, TimeUnit.SECONDS);
-        System.out.println("Server stopped");
-    }
-
     private List<MapPositionViewModel> convertToViewModels(List<IObstacle> obstacles) {
         return Lists.transform(obstacles, new Function<IObstacle, MapPositionViewModel>() {
             @Override
@@ -153,5 +135,23 @@ public class MissionController {
         int centerIndex = vehicle.getLocation().getX();
         result.set(centerIndex, "Rover.png");
         return result;
+    }
+
+    // MAIN - execution starting point
+    public static void main(String[] args) throws IOException {
+        final ResourceConfig resourceConfig = new ResourceConfig(MissionController.class);
+        final HttpServer server = GrizzlyHttpServerFactory.createHttpServer(BASE_URI, resourceConfig);
+        StaticHttpHandler httpHandler = new StaticHttpHandler("CentralCommand/src/main/webapp");
+        defaultDocRoot = httpHandler.getDefaultDocRoot().getCanonicalPath();
+        server.getServerConfiguration().addHttpHandler(httpHandler, "/");
+        server.start();
+
+        System.out.println("Server running");
+        System.out.println("URL (example): http://localhost:" + PORT + "/Mission/Example");
+        System.out.println("Hit return to stop...");
+        System.in.read();
+        System.out.println("Stopping server");
+        server.shutdown(0, TimeUnit.SECONDS);
+        System.out.println("Server stopped");
     }
 }
