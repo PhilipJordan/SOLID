@@ -36,14 +36,14 @@ function pagePrep() {
         var callback = function(index, element) {
             var jqElement = $(element);
             itemsToSend[index] = {
-                Coordinates: jqElement.text(),
-                Type: jqElement.attr('class'),
-                Behavior: jqElement.data('behavior')
+                coordinates: jqElement.text(),
+                type: jqElement.attr('class'),
+                behavior: jqElement.data('behavior')
             };
         };
 
         iterateListItems(callback, element);
-        UpdateObstaclesOnServer(itemsToSend, obstacleUpdateSuccess, wtf);
+        updateObstaclesOnServer(itemsToSend, obstacleUpdateSuccess, wtf);
     });
 
     $("input[type='image']").click(function () {
@@ -60,7 +60,7 @@ function pagePrep() {
         var callback = function (index, element) { itemsToSend[index] = $(element).data('field'); };
 
         iterateListItems(callback, element);
-        SendCommandsToServer(itemsToSend, commandUpdateSuccess, wtf);
+        sendCommandsToServer(itemsToSend, commandUpdateSuccess, wtf);
     });
 
     $("#alien-tracker").click(function () {
@@ -135,7 +135,7 @@ function pagePrep() {
         });
     }
 
-    function SendCommandsToServer(itemsToSend, callback, wtf)
+    function sendCommandsToServer(itemsToSend, callback, wtf)
     {
         $.ajax({
             type: 'post',
@@ -149,7 +149,7 @@ function pagePrep() {
         });
     }
 
-    function UpdateObstaclesOnServer(itemsToSend, callback, wtf)
+    function updateObstaclesOnServer(itemsToSend, callback, wtf)
     {
         $.ajax({
             type: 'post',
