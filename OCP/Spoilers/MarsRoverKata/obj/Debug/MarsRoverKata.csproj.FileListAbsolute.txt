@@ -1,0 +1,6 @@
+C:\github\SOLID\OCP\Spoilers\MarsRoverKata\bin\Debug\MarsRoverKata.exe.config
+C:\github\SOLID\OCP\Spoilers\MarsRoverKata\bin\Debug\MarsRoverKata.exe
+C:\github\SOLID\OCP\Spoilers\MarsRoverKata\bin\Debug\MarsRoverKata.pdb
+C:\github\SOLID\OCP\Spoilers\MarsRoverKata\obj\Debug\MarsRoverKata.csprojResolveAssemblyReference.cache
+C:\github\SOLID\OCP\Spoilers\MarsRoverKata\obj\Debug\MarsRoverKata.exe
+C:\github\SOLID\OCP\Spoilers\MarsRoverKata\obj\Debug\MarsRoverKata.pdb
