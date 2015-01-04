@@ -2,16 +2,20 @@ package controller;
 
 import MarsRoverKata.*;
 import com.google.common.base.Function;
+import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Lists;
+import com.google.common.collect.Ordering;
 import models.MapPositionViewModel;
+import models.MissionResponseViewModel;
 import models.MissionViewModel;
-import org.glassfish.grizzly.http.server.HttpHandler;
+import models.ObstacleViewModel;
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.grizzly.http.server.StaticHttpHandler;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
 
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.GenericEntity;
@@ -66,16 +70,6 @@ public class MissionController {
     }
 
     @GET
-    // The Java method will be hosted at the URI path "/r/reset"-
-    @Path("/Reset")
-    @Produces(MediaType.APPLICATION_JSON)
-    public String getReset() {
-
-        // TODO: Reset
-        return defaultDocRoot;
-    }
-
-    @GET
     @Path("/Index")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getIndex() {
@@ -94,13 +88,53 @@ public class MissionController {
         return Response.ok(viewModel).build();
     }
 
+    @GET
+    // The Java method will be hosted at the URI path "/r/reset"-
+    @Path("/Reset")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getReset() {
+        setMissionManager(null);
+        return Response.temporaryRedirect(URI.create("/")).build();
+    }
+
+    @POST
+    // The Java method will be hosted at the URI path "/r/reset"-
+    @Path("/UpdateObstacles")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response updateObstacles(List<ObstacleViewModel> inputs) {
+        if (inputs == null) {
+            return Response.ok(new ArrayList<MapPositionViewModel>()).build();
+        }
+
+        Ordering<ObstacleViewModel> o = new Ordering<ObstacleViewModel>() {
+            @Override
+            public int compare(ObstacleViewModel left, ObstacleViewModel right) {
+                return left.getCoordinates().compareTo(right.getCoordinates());
+            }
+        };
+
+        List<ObstacleViewModel> distinctLocations = ImmutableSet.copyOf(o.sortedCopy(inputs)).asList();
+
+        for (ObstacleViewModel input : distinctLocations) {
+            String[] coordinates = input.getCoordinates().split("_");
+            getMissionManager().addObstacle(Integer.parseInt(coordinates[0]), Integer.parseInt(coordinates[1]), input.getType());
+        }
+
+        final List<MapPositionViewModel> updatedObstacles = convertToViewModels(getMissionManager().getPlanet().getObstacles());
+
+        return Response.ok(new MissionResponseViewModel() {{
+            setSuccess(true);
+            setObstacles(updatedObstacles);
+        }}).build();
+    }
+
     private List<MapPositionViewModel> convertToViewModels(List<IObstacle> obstacles) {
         return Lists.transform(obstacles, new Function<IObstacle, MapPositionViewModel>() {
             @Override
             public MapPositionViewModel apply(IObstacle input) {
                 MapPositionViewModel mapPositionViewModel = new MapPositionViewModel();
                 mapPositionViewModel.setLocation(input.getLocation().getX() + "_" + input.getLocation().getY());
-                mapPositionViewModel.setImage(input.getClass().getName() + ".png");
+                mapPositionViewModel.setImage(input.getClass().getSimpleName() + ".png");
                 return mapPositionViewModel;
             }
         });

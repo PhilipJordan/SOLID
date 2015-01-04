@@ -41,13 +41,13 @@ public class MissionManager {
         char[] commands = commandString.toLowerCase().toCharArray();
         boolean success = true;
         for (char command : commands) {
-            success = AcceptCommand(success, command);
+            success = acceptCommand(success, command);
         }
 
         return success ? StringUtils.EMPTY : "Some invalid commands were found!!!";
     }
 
-    private boolean AcceptCommand(boolean success, char command) {
+    private boolean acceptCommand(boolean success, char command) {
         if (command == 'f')
             _commander.accept(new ForwardCommand(rover));
         else if (command == 'b')
@@ -65,18 +65,18 @@ public class MissionManager {
         return success;
     }
 
-    public String ExecuteMission() {
+    public String executeMission() {
         boolean success = _commander.executeCommands();
         return success ? StringUtils.EMPTY : "An error occured while executing commands";
     }
 
-    public void AddObstacle(int x, int y, String type) {
+    public void addObstacle(int x, int y, String type) {
         Point location = new Point(x, y);
-        IObstacle obstacle = CreateObstacle(location, type);
+        IObstacle obstacle = createObstacle(location, type);
         Planet.addObstacle(obstacle);
     }
 
-    private IObstacle CreateObstacle(Point location, String type) {
+    private IObstacle createObstacle(Point location, String type) {
         if (type.equalsIgnoreCase("Alien")) {
             return new Alien(Planet, location);
         }

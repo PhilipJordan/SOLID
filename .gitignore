@@ -6,6 +6,12 @@
 *.user
 *.sln.docstates
 
+workspace.xml
+profiles_settings.xml
+encodings.xml
+vcs.xml
+
+
 # Build results
 /[Dd]ebug/
 /[Dd]ebugPublic/
@@ -125,10 +131,6 @@ LSP+ISP/C#_Exercise/MarsRoverKata/bin/
 LSP+ISP/C#_Exercise/MarsRoverKata/obj/
 LSP+ISP/C#_Exercise/UnitTest/bin/
 LSP+ISP/C#_Exercise/UnitTest/obj/
-
-LSP+ISP/Java/.idea/workspace.xml
-LSP+ISP/Java/.idea/inspectionProfiles/profiles_settings.xml
-LSP+ISP/Java/.idea/encodings.xml
 
 DIP/C#_Final/CentralCommand/bin/
 DIP/C#_Final/CentralCommand/obj/
