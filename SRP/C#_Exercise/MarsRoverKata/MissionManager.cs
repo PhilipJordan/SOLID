@@ -7,9 +7,9 @@ namespace MarsRoverKata
     public class MissionManager
     {
         public Rover Rover { get; private set; }
-        private readonly Commander _commander;
         public Size Bounds { get { return Rover.Bounds; } }
         public IReadOnlyList<Obstacle> Obstacles { get { return Rover.Obstacles; } }
+        private readonly Commander _commander;
         
         public MissionManager(Rover rover)
         {
@@ -55,7 +55,9 @@ namespace MarsRoverKata
 
         public void AddObstacle(int x, int y)
         {
-            Rover.AddObstacle(x, y);
+            Point location = new Point(x, y);
+            var obstacle = new Obstacle(location);
+            Rover.AddObstacle(obstacle);
         }
     }
 }

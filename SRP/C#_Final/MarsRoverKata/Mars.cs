@@ -30,11 +30,6 @@ namespace MarsRoverKata
             _obstacles.Add(obstacle);
         }
 
-        public void RemoveObstacle(Obstacle obstacle)
-        {
-            _obstacles.Remove(obstacle);
-        }
-
         public Point CalculateFinalPosition(Point from, Point desired)
         {
             Point newDestination = desired;

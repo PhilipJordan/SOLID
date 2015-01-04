@@ -102,10 +102,8 @@ namespace MarsRoverKata
             return true;
         }
 
-        public void AddObstacle(int x, int y)
+        public void AddObstacle(Obstacle obstacle)
         {
-            Point location = new Point(x, y);
-            var obstacle = new Obstacle(location);
             _obstacles.Add(obstacle);
         }
 

@@ -73,7 +73,7 @@ namespace CentralCommand.Controllers
         {
             if (commands == null)
             {
-                return Json(new MissionResponseViewModel {Success = false});
+                return Json(new MissionResponseViewModel { Success = false });
             }
             var oldCollection = MissionManager.Obstacles.ToList();
             var originalPosition = MissionManager.Rover.Location.X + "_" + MissionManager.Rover.Location.Y;
@@ -95,13 +95,15 @@ namespace CentralCommand.Controllers
             var roverNewPosition = MissionManager.Rover.Location.X + "_" + MissionManager.Rover.Location.Y;
             var roverFacing = GetFacingAsString(MissionManager.Rover.Facing);
 
-            return Json(new MissionResponseViewModel {  Success = true, 
-                                                        RoverLocation = roverNewPosition,
-                                                        PreviousRoverLocation = originalPosition,
-                                                        RoverFacing = roverFacing,
-                                                        Obstacles = updatedObstacles,
-                                                        RemovedObstacles = removedObstacles
-                                                     });
+            return Json(new MissionResponseViewModel
+            {
+                Success = true,
+                RoverLocation = roverNewPosition,
+                PreviousRoverLocation = originalPosition,
+                RoverFacing = roverFacing,
+                Obstacles = updatedObstacles,
+                RemovedObstacles = removedObstacles
+            });
         }
 
         private List<MapPositionViewModel> ConvertToViewModels(IEnumerable<Obstacle> obstacles)
@@ -117,7 +119,7 @@ namespace CentralCommand.Controllers
         private string GetFacingAsString(Direction roverFacing)
         {
             switch (roverFacing)
-            { 
+            {
                 case Direction.North:
                     return "N";
                 case Direction.East:
