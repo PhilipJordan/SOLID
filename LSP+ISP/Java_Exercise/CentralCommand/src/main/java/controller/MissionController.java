@@ -7,10 +7,7 @@ import com.google.common.collect.Collections2;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Ordering;
-import models.MapPositionViewModel;
-import models.MissionResponseViewModel;
-import models.MissionViewModel;
-import models.ObstacleViewModel;
+import models.*;
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.grizzly.http.server.StaticHttpHandler;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
@@ -38,12 +35,12 @@ public class MissionController {
     private static final URI BASE_URI = URI.create("http://localhost:" + PORT + "/Mission");
     private static String defaultDocRoot;
 
-    private MissionManager missionManager;
+    private static MissionManager missionManager;
 
-    public MissionManager getMissionManager() {
+    public static MissionManager getMissionManager() {
         if (null == missionManager) {
             try {
-                this.missionManager = new MissionManager(new Rover(new Mars()));
+                missionManager = new MissionManager(new Rover(new Mars()));
             } catch (CrashException e) {
                 e.printStackTrace();
             }
@@ -51,9 +48,7 @@ public class MissionController {
         return missionManager;
     }
 
-    public void setMissionManager(MissionManager missionManager) {
-        this.missionManager = missionManager;
-    }
+    public static void setMissionManager(MissionManager missionManager) { MissionController.missionManager = missionManager; }
 
     // The Java method will process HTTP GET requests
     @GET
@@ -136,7 +131,8 @@ public class MissionController {
     @POST
     @Path("/SendCommands")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response sendCommands(List<String> commands) {
+    public Response sendCommands(CommandsViewModel input) {
+        List<String> commands = input.getCommands();
         if (commands == null) {
             return Response.ok(new MissionResponseViewModel() {
                 {
@@ -189,7 +185,7 @@ public class MissionController {
                 ));
 
         final String roverNewPosition = getMissionManager().getRover().getLocation().getX() + "_" + getMissionManager().getRover().getLocation().getY();
-        final String roverFacing = getMissionManager().getRover().getFacing().name();
+        final String roverFacing = getFacingAsString(getMissionManager().getRover().getFacing());
 
         return Response.ok(new MissionResponseViewModel() {{
             setSuccess(true);

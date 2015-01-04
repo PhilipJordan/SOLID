@@ -14,4 +14,3 @@ public class Alien implements IObstacle {
         throw new NotImplementedException();
     }
 }
-
