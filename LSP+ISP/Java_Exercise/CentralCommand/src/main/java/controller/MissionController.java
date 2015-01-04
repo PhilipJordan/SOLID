@@ -2,6 +2,8 @@ package controller;
 
 import MarsRoverKata.*;
 import com.google.common.base.Function;
+import com.google.common.base.Predicate;
+import com.google.common.collect.Collections2;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Ordering;
@@ -103,7 +105,10 @@ public class MissionController {
     @Produces(MediaType.APPLICATION_JSON)
     public Response updateObstacles(List<ObstacleViewModel> inputs) {
         if (inputs == null) {
-            return Response.ok(new ArrayList<MapPositionViewModel>()).build();
+            return Response.ok(new MissionResponseViewModel() {{
+                setSuccess(false);
+                setObstacles(new ArrayList<MapPositionViewModel>());
+            }}).build();
         }
 
         Ordering<ObstacleViewModel> o = new Ordering<ObstacleViewModel>() {
@@ -125,6 +130,74 @@ public class MissionController {
         return Response.ok(new MissionResponseViewModel() {{
             setSuccess(true);
             setObstacles(updatedObstacles);
+        }}).build();
+    }
+
+    @POST
+    @Path("/SendCommands")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response sendCommands(List<String> commands) {
+        if (commands == null) {
+            return Response.ok(new MissionResponseViewModel() {
+                {
+                    setSuccess(false);
+                }
+            }).build();
+        }
+
+        List<IObstacle> oldCollection = getMissionManager().getPlanet().getObstacles();
+
+        final List<MapPositionViewModel> removedObstacles = Lists.newArrayList(Collections2.transform(Collections2.filter(oldCollection, new Predicate<IObstacle>() {
+            @Override
+            public boolean apply(final IObstacle input) {
+                return input instanceof Alien;
+            }
+        }), new Function<IObstacle, MapPositionViewModel>() {
+            @Override
+            public MapPositionViewModel apply(final IObstacle input) {
+                return new MapPositionViewModel() {{
+                    setLocation(input.getLocation().getX() + "_" + input.getLocation().getY());
+                    setImage("Ground.png");
+                }};
+            }
+        }));
+
+        final String originalPosition = getMissionManager().getRover().getLocation().getX() + "_" + getMissionManager().getRover().getLocation().getY();
+        String commandString = String.join(",", commands);
+
+        getMissionManager().acceptCommands(commandString);
+        getMissionManager().executeMission();
+
+        final List<IObstacle> newCollection = getMissionManager().getPlanet().getObstacles();
+        final List<MapPositionViewModel> updatedObstacles = convertToViewModels(getMissionManager().getPlanet().getObstacles());
+
+        removedObstacles.addAll(
+                Collections2.transform(Collections2.filter(oldCollection, new Predicate<IObstacle>() {
+                            @Override
+                            public boolean apply(final IObstacle input) {
+                                return !newCollection.contains(input);
+                            }
+                        }), new Function<IObstacle, MapPositionViewModel>() {
+                            @Override
+                            public MapPositionViewModel apply(final IObstacle input) {
+                                return new MapPositionViewModel() {{
+                                    setLocation(input.getLocation().getX() + "_" + input.getLocation().getY());
+                                    setImage("Ground.png");
+                                }};
+                            }
+                        }
+                ));
+
+        final String roverNewPosition = getMissionManager().getRover().getLocation().getX() + "_" + getMissionManager().getRover().getLocation().getY();
+        final String roverFacing = getMissionManager().getRover().getFacing().name();
+
+        return Response.ok(new MissionResponseViewModel() {{
+            setSuccess(true);
+            setRoverLocation(roverNewPosition);
+            setPreviousRoverLocation(originalPosition);
+            setRoverFacing(roverFacing);
+            setObstacles(updatedObstacles);
+            setRemovedObstacles(removedObstacles);
         }}).build();
     }
 
