@@ -45,7 +45,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Alien.cs" />
-    <Compile Include="AlienBehavior.cs" />
     <Compile Include="Behaviors\DoNothing.cs" />
     <Compile Include="Behaviors\IBehavior.cs" />
     <Compile Include="Behaviors\Shooter.cs" />
