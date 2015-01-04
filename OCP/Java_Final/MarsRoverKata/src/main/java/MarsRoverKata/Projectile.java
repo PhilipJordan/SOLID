@@ -73,31 +73,31 @@ public abstract class Projectile {
         return newDestination;
     }
 
-    protected IObstacle findObstacle(final Point point) {
-        return Iterables.getOnlyElement(Collections2.filter(mars.getObstacles(), new Predicate<IObstacle>() {
+    protected Obstacle findObstacle(final Point point) {
+        return Iterables.getOnlyElement(Collections2.filter(mars.getObstacles(), new Predicate<Obstacle>() {
             @Override
-            public boolean apply(IObstacle input) {
+            public boolean apply(Obstacle input) {
                 return input.getLocation().equals(point);
             }
         }),null);
     }
 
     private void hitTarget(Point point) {
-        IObstacle obstacle = findObstacle(point);
+        Obstacle obstacle = findObstacle(point);
 
         if (obstacle != null && obstacle.isDestructable()) {
-            dstroyObstacle(obstacle);
+            destroyObstacle(obstacle);
         } else if (obstacle == null) {
             createObstacle(point);
         }
     }
 
-    protected void dstroyObstacle(IObstacle obstacle) {
+    protected void destroyObstacle(Obstacle obstacle) {
         mars.removeObstacle(obstacle);
     }
 
     protected void createObstacle(Point point) {
-        IObstacle obstacle = new Crater(point);
+        Obstacle obstacle = new Crater(point);
         mars.addObstacle(obstacle);
     }
 }

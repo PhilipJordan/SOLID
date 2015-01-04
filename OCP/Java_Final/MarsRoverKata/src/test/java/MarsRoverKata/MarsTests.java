@@ -121,7 +121,7 @@ public class MarsTests extends Suite {
             int expectedCount = mars.getObstacles().size() + 1;
 
             missile.launch(Direction.South, position);
-            IObstacle actualObstacle = Iterables.getLast(mars.getObstacles(), null);
+            Obstacle actualObstacle = Iterables.getLast(mars.getObstacles(), null);
 
             assertEquals(mars.getObstacles().size(), expectedCount);
             assertEquals(actualObstacle.getLocation(), expectedObstaclePosition);
@@ -155,7 +155,7 @@ public class MarsTests extends Suite {
             int expectedCount = mars.getObstacles().size() + 1;
 
             missile.launch(Direction.South, position);
-            IObstacle actualObstacle = Iterables.getLast(mars.getObstacles(), null);
+            Obstacle actualObstacle = Iterables.getLast(mars.getObstacles(), null);
 
             assertEquals(mars.getObstacles().size(), expectedCount);
             assertEquals(actualObstacle.getLocation(), expectedObstaclePosition);
@@ -171,7 +171,7 @@ public class MarsTests extends Suite {
             int expectedCount = mars.getObstacles().size() + 1;
 
             mortar.launch(Direction.South, position);
-            IObstacle actualObstacle = Iterables.getLast(mars.getObstacles(), null);
+            Obstacle actualObstacle = Iterables.getLast(mars.getObstacles(), null);
 
             assertEquals(mars.getObstacles().size(), expectedCount);
             assertEquals(actualObstacle.getLocation(), expectedObstaclePosition);
@@ -185,7 +185,7 @@ public class MarsTests extends Suite {
             int expectedCount = mars.getObstacles().size() + 1;
 
             mortar.launch(Direction.South, position);
-            IObstacle actualObstacle = Iterables.getLast(mars.getObstacles(), null);
+            Obstacle actualObstacle = Iterables.getLast(mars.getObstacles(), null);
 
             assertEquals(mars.getObstacles().size(), expectedCount);
             assertEquals(actualObstacle.getLocation(), expectedObstaclePosition);
@@ -199,7 +199,7 @@ public class MarsTests extends Suite {
             int expectedCount = mars.getObstacles().size() - 1;
 
             mortar.launch(Direction.South, position);
-            IObstacle actualObstacle = Iterables.getLast(mars.getObstacles(), null);
+            Obstacle actualObstacle = Iterables.getLast(mars.getObstacles(), null);
             assertEquals(mars.getObstacles().size(), expectedCount);
         }
 
@@ -211,7 +211,7 @@ public class MarsTests extends Suite {
 
             mortar.launch(Direction.South, position);
 
-            IObstacle actualObstacle = Iterables.getLast(mars.getObstacles(), null);
+            Obstacle actualObstacle = Iterables.getLast(mars.getObstacles(), null);
 
             assertEquals(mars.getObstacles().size(), (expectedCount));
             assertEquals(actualObstacle.getLocation(), (expectedObstaclePosition));

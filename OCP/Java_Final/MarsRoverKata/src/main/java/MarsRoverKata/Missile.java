@@ -18,7 +18,7 @@ public class Missile extends Projectile {
         Point newDestination = desired;
         newDestination = calculatePositionY(desired, newDestination);
         newDestination = calculatePositionX(desired, newDestination);
-        IObstacle obstacle = findObstacle(newDestination);
+        Obstacle obstacle = findObstacle(newDestination);
 
         return obstacle != null && obstacle.isDestructable();
     }

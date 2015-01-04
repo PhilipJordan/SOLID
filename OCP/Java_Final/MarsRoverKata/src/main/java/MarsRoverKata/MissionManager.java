@@ -25,9 +25,6 @@ public class MissionManager {
         this.rover = rover;
         planet = rover.getMars();
         _commander = new Commander();
-        //MissionManager MissionManager = EventHandler.create(this.getClass(), this, "updateAliens", "");
-        EventHandler eventHandler = new EventHandler(this, "updateAliens", null, null);
-        _commander.setEventHandler(eventHandler);
     }
 
     public String acceptCommands(String commandString) {
@@ -67,11 +64,11 @@ public class MissionManager {
 
     public void addObstacle(int x, int y, String type) {
         Point location = new Point(x, y);
-        IObstacle obstacle = createObstacle(location, type);
+        Obstacle obstacle = createObstacle(location, type);
         getPlanet().addObstacle(obstacle);
     }
 
-    private IObstacle createObstacle(Point location, String type) {
+    private Obstacle createObstacle(Point location, String type) {
         return new Obstacle(location);
     }
 }

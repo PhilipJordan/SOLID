@@ -11,9 +11,9 @@ public class Mars {
     private Size bounds; // get
     private Point centerOfThePlanet; // get
 
-    private final List<IObstacle> obstacles;
+    private final List<Obstacle> obstacles;
 
-    public List<IObstacle> getObstacles() {
+    public List<Obstacle> getObstacles() {
         return obstacles;
     }
 
@@ -24,7 +24,7 @@ public class Mars {
     public Mars(Size bounds) {
         this.bounds = bounds;
         centerOfThePlanet = new Point(this.bounds.getWidth() / 2, this.bounds.getHeight() / 2);
-        obstacles = new ArrayList<IObstacle>();
+        obstacles = new ArrayList<Obstacle>();
     }
 
     public Size getBounds() {
@@ -35,11 +35,11 @@ public class Mars {
         return centerOfThePlanet;
     }
 
-    public void addObstacle(IObstacle obstacle) {
+    public void addObstacle(Obstacle obstacle) {
         obstacles.add(obstacle);
     }
 
-    public void removeObstacle(IObstacle obstacle) {
+    public void removeObstacle(Obstacle obstacle) {
         obstacles.remove(obstacle);
     }
 
@@ -76,9 +76,9 @@ public class Mars {
     }
 
     public boolean isValidPosition(final Point point) {
-        boolean anyInstance = Iterables.any(obstacles, new Predicate<IObstacle>() {
+        boolean anyInstance = Iterables.any(obstacles, new Predicate<Obstacle>() {
             @Override
-            public boolean apply(IObstacle input) {
+            public boolean apply(Obstacle input) {
                 return input.getLocation().equals(point);
             }
         });
