@@ -47,7 +47,7 @@ public class Rover extends Movable {
             public boolean apply(Projectile input) {
                 return (input.getClass().isAssignableFrom(type));
             }
-        }), 1, null);
+        }), 0, null);
         // projectiles.FirstOrDefault(p = > p.GetType() == t);
         if (projectileToFire == null) {
             return false;
