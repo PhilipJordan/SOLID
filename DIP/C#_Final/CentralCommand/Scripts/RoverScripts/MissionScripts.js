@@ -3,13 +3,11 @@ function pagePrep() {
 
     $.ajax({
         url: '/Mission/Index',
-        success: function(data) {
+        success: function (data) {
             var map = $('.terrainMap');
-            for (var rowIndex = data.map.length - 1; rowIndex >= 0; rowIndex--)
-            {
+            for (var rowIndex = data.map.length - 1; rowIndex >= 0; rowIndex--) {
                 var row = data.map[rowIndex];
-                for (var columnIndex = 0; columnIndex < row.length; columnIndex++)
-                {
+                for (var columnIndex = 0; columnIndex < row.length; columnIndex++) {
                     var id = columnIndex + "_" + rowIndex;
                     var imagePath = "/Images/" + row[columnIndex];
                     map.append('<img id="' + id + '" class="mapImage" src="' + imagePath + '" alt="Image" />');
@@ -33,7 +31,7 @@ function pagePrep() {
     $("#addObstacles").click(function () {
         var element = $("#newObstacles");
         var itemsToSend = new Array();
-        var callback = function(index, element) {
+        var callback = function (index, element) {
             var jqElement = $(element);
             itemsToSend[index] = {
                 coordinates: jqElement.text(),
@@ -98,45 +96,38 @@ function pagePrep() {
         else { alert("Unable to send commands. Did you enter any?"); }
     }
 
-    function obstacleUpdateSuccess(result)
-    {
+    function obstacleUpdateSuccess(result) {
         if (result.success) {
             $(result.removedObstacles).each(updateMapLocation);
             $(result.obstacles).each(updateMapLocation);
             emptyListElement($("#newObstacles"));
         }
-        else { alert("Unable to update obstacles. Did you click on the map to add any?");}
+        else { alert("Unable to update obstacles. Did you click on the map to add any?"); }
     }
 
-    function emptyListElement(element)
-    {
+    function emptyListElement(element) {
         element.empty();
     }
 
-    function setOldRoverLocationToGround(oldLocation)
-    {
+    function setOldRoverLocationToGround(oldLocation) {
         $("img[id='" + oldLocation + "']").attr('src', '/Images/Ground.png');
     }
 
-    function updateMapLocation(index, element)
-    {
+    function updateMapLocation(index, element) {
         $("img[id='" + element.location + "']").attr('src', '/Images/' + element.image);
     }
 
-    function wtf()
-    {
+    function wtf() {
         alert("Something went wrong with communicating to the server! WTF!");
     }
 
-    function iterateListItems(callback, element)
-    {
-        $("li", element).each(function(index, element){
+    function iterateListItems(callback, element) {
+        $("li", element).each(function (index, element) {
             callback(index, element);
         });
     }
 
-    function sendCommandsToServer(itemsToSend, callback, wtf)
-    {
+    function sendCommandsToServer(itemsToSend, callback, wtf) {
         $.ajax({
             type: 'post',
             datatype: 'json',
@@ -149,8 +140,7 @@ function pagePrep() {
         });
     }
 
-    function updateObstaclesOnServer(itemsToSend, callback, wtf)
-    {
+    function updateObstaclesOnServer(itemsToSend, callback, wtf) {
         $.ajax({
             type: 'post',
             datatype: 'json',

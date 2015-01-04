@@ -32,11 +32,11 @@ namespace CentralCommand.Controllers
             for (int i = 0; i < MissionManager.Planet.Bounds.Height; i++)
             {
                 if (i != MissionManager.Rover.Location.Y)
-                    initialMap.Add(GetGroundRow());   
+                    initialMap.Add(GetGroundRow());
                 else
                     initialMap.Add(GetRoverRow(MissionManager.Rover));
             }
-            
+
             var viewModel = new MissionViewModel
             {
                 Map = initialMap
