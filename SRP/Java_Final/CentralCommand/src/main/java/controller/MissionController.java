@@ -117,7 +117,7 @@ public class MissionController {
 
         for (ObstacleViewModel input : distinctLocations) {
             String[] coordinates = input.getCoordinates().split("_");
-            getMissionManager().addObstacle(Integer.parseInt(coordinates[0]), Integer.parseInt(coordinates[1]), input.getType());
+            getMissionManager().addObstacle(Integer.parseInt(coordinates[0]), Integer.parseInt(coordinates[1]));
         }
 
         final List<MapPositionViewModel> updatedObstacles = convertToViewModels(getMissionManager().getObstacles());

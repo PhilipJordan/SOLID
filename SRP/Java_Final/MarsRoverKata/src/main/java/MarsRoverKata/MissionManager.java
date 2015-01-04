@@ -62,14 +62,10 @@ public class MissionManager {
         return success ? StringUtils.EMPTY : "An error occured while executing commands";
     }
 
-    public void addObstacle(int x, int y, String type) {
+    public void addObstacle(int x, int y) {
         Point location = new Point(x, y);
-        Obstacle obstacle = createObstacle(location, type);
+        Obstacle obstacle = new Obstacle(location);
         getPlanet().addObstacle(obstacle);
-    }
-
-    private Obstacle createObstacle(Point location, String type) {
-        return new Obstacle(location);
     }
 }
 
