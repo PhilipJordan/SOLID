@@ -177,7 +177,6 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Mission\Index.cshtml" />
     <Content Include="Scripts\jquery-1.9.0.min.map" />
   </ItemGroup>
   <ItemGroup>
