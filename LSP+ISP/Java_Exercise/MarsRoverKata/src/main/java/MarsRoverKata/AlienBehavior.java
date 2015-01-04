@@ -9,20 +9,19 @@ public class AlienBehavior {
         this.random = new Random();
     }
 
-    public void MoveAlien(Alien alien) {
-        //switch (random.Next(1, 4))
-        //{
-        //    case 1:
+    public void moveAlien(Alien alien) {
+        //switch (random.nextInt(4)) {
+        //    case 0:
         //        new ForwardCommand(alien).execute();
         //        break;
-        //    case 2:
+        //    case 1:
         //        new BackwardCommand(alien).execute();
         //        break;
-        //    case 3:
+        //    case 2:
         //        new TurnLeftCommand(alien).execute();
         //        MoveAlien(alien);
         //        break;
-        //    case 4:
+        //    case 3:
         //        new TurnRightCommand(alien).execute();
         //        MoveAlien(alien);
         //        break;

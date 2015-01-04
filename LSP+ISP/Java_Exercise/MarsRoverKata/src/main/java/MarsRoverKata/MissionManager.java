@@ -13,17 +13,17 @@ public class MissionManager {
         return rover;
     }
 
-    public Mars Planet;
+    public Mars planet;
 
     public Mars getPlanet() {
-        return Planet;
+        return planet;
     }
 
     private final Commander _commander;
 
     public MissionManager(Rover rover) {
         this.rover = rover;
-        Planet = rover.getMars();
+        planet = rover.getMars();
         _commander = new Commander();
         //MissionManager MissionManager = EventHandler.create(this.getClass(), this, "updateAliens", "");
         EventHandler eventHandler = new EventHandler(this, "updateAliens", null, null);
@@ -31,8 +31,8 @@ public class MissionManager {
     }
 
     //TODO: EventHandler implementation
-    private void updateAliens(Object sender) {
-        Planet.UpdateAliens();
+    public void updateAliens() {
+        getPlanet().updateAliens();
     }
 
     public String acceptCommands(String commandString) {
@@ -73,12 +73,12 @@ public class MissionManager {
     public void addObstacle(int x, int y, String type) {
         Point location = new Point(x, y);
         IObstacle obstacle = createObstacle(location, type);
-        Planet.addObstacle(obstacle);
+        getPlanet().addObstacle(obstacle);
     }
 
     private IObstacle createObstacle(Point location, String type) {
         if (type.equalsIgnoreCase("Alien")) {
-            return new Alien(Planet, location);
+            return new Alien(getPlanet(), location);
         }
         return new Obstacle(location);
     }

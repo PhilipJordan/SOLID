@@ -11,9 +11,6 @@ import java.util.Map;
 
 public class Rover {
     private List<Projectile> projectiles;
-    private Point location;
-    private Direction facing;
-    private Mars mars;
 
     public Rover(Mars mars) throws CrashException {
         this(mars, mars.getCenterOfThePlanet());
@@ -35,7 +32,7 @@ public class Rover {
     }
 
     private void landOnMars(Point landingPoint) throws CrashException {
-        if (!mars.isValidPosition(landingPoint)) {
+        if (!getMars().isValidPosition(landingPoint)) {
             throw new CrashException("Doh! We tried to land on something other than the planet and the rover was destroyed!!!");
         }
         setLocation(landingPoint);
@@ -61,6 +58,10 @@ public class Rover {
     }
 
     // Movement-related code start
+
+    private Point location;
+    private Direction facing;
+    private Mars mars;
 
     public Direction getFacing() {
         return facing;

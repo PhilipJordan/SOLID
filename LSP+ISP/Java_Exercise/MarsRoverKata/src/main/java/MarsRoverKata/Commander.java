@@ -54,11 +54,10 @@ public class Commander {
     private void onCommandExecuted() {
         if (commandExecuted != null) {
             try {
-                Method method = commandExecuted.getTarget().getClass().getMethod(commandExecuted.getAction(), Object[].class);
-                Object[] arguments = new Object[0];
-                commandExecuted.invoke(commandExecuted.getTarget(), method, arguments);
-            } catch (NoSuchMethodException nsme) {
-                System.err.println("Error invoking commandExecuted: " + nsme);
+                Method method = commandExecuted.getTarget().getClass().getMethod(commandExecuted.getAction());
+                commandExecuted.invoke(commandExecuted.getTarget(), method, null);
+            } catch (NoSuchMethodException name) {
+                System.err.println("Error invoking commandExecuted: " + name);
             }
         }
     }

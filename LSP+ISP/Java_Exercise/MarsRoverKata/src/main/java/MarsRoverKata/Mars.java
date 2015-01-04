@@ -45,14 +45,14 @@ public class Mars {
         return centerOfThePlanet;
     }
 
-    public void UpdateAliens() {
+    public void updateAliens() {
         for (IObstacle alien : Collections2.filter(getObstacles(), new Predicate<IObstacle>() {
             @Override
             public boolean apply(IObstacle input) {
                 return input instanceof Alien;
             }
         })) {
-            alienBehavior.MoveAlien((Alien) alien);
+            alienBehavior.moveAlien((Alien) alien);
         }
     }
 
