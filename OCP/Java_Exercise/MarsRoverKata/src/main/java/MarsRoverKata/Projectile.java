@@ -37,7 +37,6 @@ public class Projectile {
         boolean collidedWithTarget = false;
         int moveIndex = 0;
         Point target = location;
-        int blah = getMaxRange();
         while (!collidedWithTarget && moveIndex < getMaxRange()) {
             Point desiredPosition = createDesiredPosition(1, facing, target);
             target = calculateProjectileFinalPosition(target, desiredPosition);
@@ -65,7 +64,7 @@ public class Projectile {
             Point newDestination = desired;
             newDestination = calculatePositionY(desired, newDestination);
             newDestination = calculatePositionX(desired, newDestination);
-            IObstacle obstacle = findObstacle(newDestination);
+            Obstacle obstacle = findObstacle(newDestination);
 
             return obstacle != null && obstacle.isDestructable();
         }
@@ -92,17 +91,17 @@ public class Projectile {
         return newDestination;
     }
 
-    protected IObstacle findObstacle(final Point point) {
-        return Iterables.getOnlyElement(Collections2.filter(mars.getObstacles(), new Predicate<IObstacle>() {
+    protected Obstacle findObstacle(final Point point) {
+        return Iterables.getOnlyElement(Collections2.filter(mars.getObstacles(), new Predicate<Obstacle>() {
             @Override
-            public boolean apply(IObstacle input) {
+            public boolean apply(Obstacle input) {
                 return input.getLocation().equals(point);
             }
         }),null);
     }
 
     private void hitTarget(Point point) {
-        IObstacle obstacle = findObstacle(point);
+        Obstacle obstacle = findObstacle(point);
 
         if (obstacle != null && obstacle.isDestructable()) {
             destroyObstacle(obstacle);
@@ -111,12 +110,12 @@ public class Projectile {
         }
     }
 
-    private void destroyObstacle(IObstacle obstacle) {
+    private void destroyObstacle(Obstacle obstacle) {
         mars.removeObstacle(obstacle);
     }
 
     private void createObstacle(Point point) {
-        IObstacle obstacle = new Crater(point);
+        Obstacle obstacle = new Obstacle(point, false);
         mars.addObstacle(obstacle);
     }
 }

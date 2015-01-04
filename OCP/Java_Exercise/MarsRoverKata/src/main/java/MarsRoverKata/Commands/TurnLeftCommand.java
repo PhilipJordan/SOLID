@@ -13,7 +13,7 @@ public class TurnLeftCommand implements ICommand {
         this.rover = rover;
     }
 
-    public TurnLeftCommand(Rover movable) {
+    public TurnLeftCommand(Rover rover) {
         this.rover = rover;
     }
 

@@ -1,7 +1,8 @@
 package MarsRoverKata;
 
-public class Obstacle implements IObstacle {
+public class Obstacle {
     private Point location;
+    private boolean isDestructable;
 
     protected void setLocation(Point location) {
         this.location = location;
@@ -11,11 +12,12 @@ public class Obstacle implements IObstacle {
         return location;
     }
 
-    public Obstacle(Point location) {
+    public Obstacle(Point location, boolean isDestructable) {
         this.location = location;
+        this.isDestructable = isDestructable;
     }
 
     public boolean isDestructable() {
-        return true;
+        return this.isDestructable;
     }
 }

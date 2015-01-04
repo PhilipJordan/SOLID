@@ -141,16 +141,16 @@ public class MissionController {
             }).build();
         }
 
-        List<IObstacle> oldCollection = getMissionManager().getPlanet().getObstacles();
+        List<Obstacle> oldCollection = getMissionManager().getPlanet().getObstacles();
 
-        final List<MapPositionViewModel> removedObstacles = Lists.newArrayList(Collections2.transform(Collections2.filter(oldCollection, new Predicate<IObstacle>() {
+        final List<MapPositionViewModel> removedObstacles = Lists.newArrayList(Collections2.transform(Collections2.filter(oldCollection, new Predicate<Obstacle>() {
             @Override
-            public boolean apply(final IObstacle input) {
+            public boolean apply(final Obstacle input) {
                 return input instanceof Obstacle;
             }
-        }), new Function<IObstacle, MapPositionViewModel>() {
+        }), new Function<Obstacle, MapPositionViewModel>() {
             @Override
-            public MapPositionViewModel apply(final IObstacle input) {
+            public MapPositionViewModel apply(final Obstacle input) {
                 return new MapPositionViewModel() {{
                     setLocation(input.getLocation().getX() + "_" + input.getLocation().getY());
                     setImage("Ground.png");
@@ -164,18 +164,18 @@ public class MissionController {
         getMissionManager().acceptCommands(commandString);
         getMissionManager().executeMission();
 
-        final List<IObstacle> newCollection = getMissionManager().getPlanet().getObstacles();
+        final List<Obstacle> newCollection = getMissionManager().getPlanet().getObstacles();
         final List<MapPositionViewModel> updatedObstacles = convertToViewModels(getMissionManager().getPlanet().getObstacles());
 
         removedObstacles.addAll(
-                Collections2.transform(Collections2.filter(oldCollection, new Predicate<IObstacle>() {
+                Collections2.transform(Collections2.filter(oldCollection, new Predicate<Obstacle>() {
                             @Override
-                            public boolean apply(final IObstacle input) {
+                            public boolean apply(final Obstacle input) {
                                 return !newCollection.contains(input);
                             }
-                        }), new Function<IObstacle, MapPositionViewModel>() {
+                        }), new Function<Obstacle, MapPositionViewModel>() {
                             @Override
-                            public MapPositionViewModel apply(final IObstacle input) {
+                            public MapPositionViewModel apply(final Obstacle input) {
                                 return new MapPositionViewModel() {{
                                     setLocation(input.getLocation().getX() + "_" + input.getLocation().getY());
                                     setImage("Ground.png");
@@ -197,10 +197,10 @@ public class MissionController {
         }}).build();
     }
 
-    private List<MapPositionViewModel> convertToViewModels(List<IObstacle> obstacles) {
-        return Lists.transform(obstacles, new Function<IObstacle, MapPositionViewModel>() {
+    private List<MapPositionViewModel> convertToViewModels(List<Obstacle> obstacles) {
+        return Lists.transform(obstacles, new Function<Obstacle, MapPositionViewModel>() {
             @Override
-            public MapPositionViewModel apply(IObstacle input) {
+            public MapPositionViewModel apply(Obstacle input) {
                 MapPositionViewModel mapPositionViewModel = new MapPositionViewModel();
                 mapPositionViewModel.setLocation(input.getLocation().getX() + "_" + input.getLocation().getY());
                 mapPositionViewModel.setImage(input.getClass().getSimpleName() + ".png");
