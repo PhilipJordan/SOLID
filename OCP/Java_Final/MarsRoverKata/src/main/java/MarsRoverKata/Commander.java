@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Commander {
-    // TODO: Implementation, functionality check
     private List<ICommand> commands;
 
     public Commander() {

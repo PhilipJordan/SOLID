@@ -25,12 +25,10 @@ public class MissionManager {
         this.rover = rover;
         planet = rover.getMars();
         _commander = new Commander();
-        //MissionManager MissionManager = EventHandler.create(this.getClass(), this, "updateAliens", "");
         EventHandler eventHandler = new EventHandler(this, "updateAliens", null, null);
         _commander.setEventHandler(eventHandler);
     }
 
-    //TODO: EventHandler implementation
     public void updateAliens() {
         getPlanet().updateAliens();
     }

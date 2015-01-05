@@ -40,15 +40,12 @@ public class Rover extends Movable {
     }
 
     public boolean fireProjectile(final Class<? extends Projectile> type) {
-        // TODO: find equivalent getType
-        //Projectile projectileToFire = null;
         Projectile projectileToFire = Iterables.get(Collections2.filter(projectiles, new Predicate<Projectile>() {
             @Override
             public boolean apply(Projectile input) {
                 return (input.getClass().isAssignableFrom(type));
             }
         }), 1, null);
-        // projectiles.FirstOrDefault(p = > p.GetType() == t);
         if (projectileToFire == null) {
             return false;
         }

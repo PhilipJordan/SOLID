@@ -66,15 +66,12 @@ public class Rover {
     }
 
     public boolean fireProjectile(final boolean isMortar) {
-        // TODO: find equivalent getType
-        //Projectile projectileToFire = null;
         Projectile projectileToFire = Iterables.get(Collections2.filter(projectiles, new Predicate<Projectile>() {
             @Override
             public boolean apply(Projectile input) {
                 return (input.IsMortar == isMortar);
             }
         }), 1, null);
-        // projectiles.FirstOrDefault(p = > p.GetType() == t);
         if (projectileToFire == null) {
             return false;
         }
