@@ -8,6 +8,7 @@ import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Ordering;
 import models.*;
+import org.apache.commons.lang3.StringUtils;
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.grizzly.http.server.StaticHttpHandler;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
@@ -159,7 +160,7 @@ public class MissionController {
         }));
 
         final String originalPosition = getMissionManager().getRover().getLocation().getX() + "_" + getMissionManager().getRover().getLocation().getY();
-        String commandString = String.join(",", commands);
+        String commandString = StringUtils.join(commands, ",");
 
         getMissionManager().acceptCommands(commandString);
         getMissionManager().executeMission();
