@@ -95,6 +95,9 @@ csx/
 # Windows Store app package directory
 AppPackages/
 
+Kata/C#/MarsRover/MarsRoverMunged/bin/
+Kata/C#/MarsRover/MarsRoverMunged/obj/
+
 SRP/C#_Final/CentralCommand/bin/
 SRP/C#_Final/CentralCommand/obj/
 SRP/C#_Final/MarsRoverKata/bin/
